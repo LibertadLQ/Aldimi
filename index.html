@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/registro.css">
+  <title>ALDIMI</title>
+</head>
+<body>
+
+  <aside id="panel-izquierdo">
+
+    <div id="marca">
+      <span>ALDIMI</span>
+      <h1>Divina Misericordia</h1>
+      <p>Sistema inteligente de gestión integral para niños con cáncer en situación de vulnerabilidad.</p>
+    </div>
+
+    <div id="pie-panel">
+      <div id="ods-tags">
+        <span>ODS 3 · Salud y Bienestar</span>
+        <span>ODS 10 · Igualdad</span>
+        <span>IA + OCR + NLP</span>
+      </div>
+      <p>Asociación de Voluntariado de Infancia y Familia · Desde 2004</p>
+    </div>
+
+  </aside>
+
+
+  <main id="panel-derecho">
+
+    <div id="tabs">
+      <button onclick="switchTab('login')">Iniciar sesión</button>
+      <button onclick="switchTab('registro')">Registrarse</button>
+    </div>
+
+    <div id="alerta-global"></div>
+
+
+    <!-- FORMULARIO: INICIAR SESIÓN -->
+    <section id="panel-login">
+
+      <h2>Bienvenido</h2>
+      <p>Ingresa tus credenciales para continuar</p>
+
+      <div>
+        <label for="login-email">Correo electrónico</label>
+        <input type="email" id="login-email"/>
+        <p id="error-login-email">Ingresa un correo válido.</p>
+      </div>
+
+      <div>
+        <label for="login-pass">Contraseña</label>
+        <input type="password" id="login-pass" placeholder="••••••••" />
+        <button type="button" onclick="togglePass('login-pass')">Mostrar</button>
+        <p id="error-login-pass">La contraseña es obligatoria.</p>
+      </div>
+
+      <button type="button" onclick="handleLogin()">Ingresar al sistema</button>
+
+      <p>¿No tienes cuenta? <a href="#" onclick="switchTab('registro')">Regístrate aquí</a></p>
+
+    </section>
+
+
+    <!-- FORMULARIO: REGISTRO -->
+    <section id="panel-registro">
+
+      <h2>Crear cuenta</h2>
+      <p>Completa los datos para unirte al equipo</p>
+
+      <!-- Fila: Nombres y Apellidos -->
+      <div class="fila-dos">
+        <div>
+          <label for="reg-nombre">Nombres</label>
+          <input type="text" id="reg-nombre"/>
+          <p id="error-reg-nombre">Campo obligatorio.</p>
+        </div>
+        <div>
+          <label for="reg-apellido">Apellidos</label>
+          <input type="text" id="reg-apellido" />
+          <p id="error-reg-apellido">Campo obligatorio.</p>
+        </div>
+      </div>
+
+      <!-- Campo: Correo -->
+      <div>
+        <label for="reg-email">Correo electrónico</label>
+        <input type="email" id="reg-email" />
+        <p id="error-reg-email">Ingresa un correo válido.</p>
+      </div>
+
+      <!-- Selector de Rol -->
+      <div class="campo-rol">
+        <label>Rol en el sistema</label>
+        <div class="opciones-rol">
+          <div>
+            <input type="radio" name="rol" id="rol-voluntario" value="voluntario" checked />
+            <label for="rol-voluntario">Voluntario</label>
+          </div>
+          <div>
+            <input type="radio" name="rol" id="rol-admin" value="admin" />
+            <label for="rol-admin">Administrador</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Campo: Contraseña -->
+      <div>
+        <label for="reg-pass">Contraseña</label>
+        <input type="password" id="reg-pass" placeholder="Mínimo 8 caracteres" />
+        <button type="button" onclick="togglePass('reg-pass')">Mostrar</button>
+        <p id="error-reg-pass">Mínimo 8 caracteres.</p>
+      </div>
+
+      <!-- Campo: Confirmar contraseña -->
+      <div>
+        <label for="reg-pass2">Confirmar contraseña</label>
+        <input type="password" id="reg-pass2" placeholder="Repite la contraseña" />
+        <button type="button" onclick="togglePass('reg-pass2')">Mostrar</button>
+        <p id="error-reg-pass2">Las contraseñas no coinciden.</p>
+      </div>
+
+      <button type="button" onclick="handleRegistro()">Crear cuenta</button>
+
+      <p>¿Ya tienes cuenta? <a href="#" onclick="switchTab('login')">Inicia sesión</a></p>
+
+    </section>
+
+  </main>
+  <script src="js/registro.js"></script>
+
+</body>
+</html>
