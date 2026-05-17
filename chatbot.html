@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ALDIMI — Dashboard</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/chatbot.css" /> 
+  <link rel="stylesheet" href="css/chatbot.css" />
 </head>
 <body>
   <div id="app">
@@ -50,10 +50,9 @@
 
     <main id="contenido">
 
-     <!-- Inicio -->
+      <!-- ── Inicio ── -->
       <section id="seccion-inicio" class="seccion activa">
 
-        <!-- Encabezado -->
         <div class="seccion-header">
           <div>
             <h1 id="saludo-usuario">Bienvenido, Administrador</h1>
@@ -62,7 +61,6 @@
           <span id="fecha-hoy"></span>
         </div>
 
-        <!-- Tarjetas de estadísticas -->
         <div id="stats-grid">
 
           <div class="stat-card">
@@ -89,17 +87,8 @@
             </div>
           </div>
 
-          <div class="stat-card alerta">
-            <span class="stat-icono">⚠️</span>
-            <div>
-              <p class="stat-numero" id="stat-alertas">0</p>
-              <p class="stat-label">Alertas pendientes</p>
-            </div>
-          </div>
-
         </div>
 
-        <!-- Accesos rápidos -->
         <div id="accesos-rapidos">
           <h2>Accesos rápidos</h2>
           <div id="accesos-grid">
@@ -122,35 +111,35 @@
         </div>
 
       </section>
-         <!-- Chatbot -->
+
+      <!-- ── Chatbot ── -->
       <section id="seccion-chatbot" class="seccion">
 
-        <!-- Encabezado -->
         <div class="seccion-header">
           <div>
             <h1>Asistente Virtual</h1>
-            <p class="seccion-desc">Consulta sobre horarios, pacientes, donaciones y más</p>
+            <p class="seccion-desc">Consulta sobre horarios, pacientes, donaciones y expedientes</p>
           </div>
           <button id="btn-limpiar-chat" onclick="limpiarChat()">Limpiar chat</button>
         </div>
 
-        <!-- Ventana del chat -->
         <div id="chat-contenedor">
 
           <!-- Mensajes -->
           <div id="chat-mensajes">
 
-            <!-- Mensaje inicial del bot (se genera con JS) -->
+            <!-- Mensaje de bienvenida -->
             <div class="mensaje bot" id="mensaje-bienvenida">
-              <div class="mensaje-avatar">🤖</div>
+              <div class="mensaje-avatar">
+                  <img src="img/eva_chtb.jpg" alt="ALDIMI bot" />
+              </div>
               <div class="mensaje-burbuja">
                 <p>¡Hola! Soy el asistente virtual de ALDIMI. Puedo ayudarte con:</p>
                 <ul>
-                  <li>📅 Horarios de atención</li>
-                  <li>👤 Registro de pacientes</li>
-                  <li>❤️ Donaciones</li>
-                  <li>📋 Expedientes</li>
-                  <li>🔔 Alertas pendientes</li>
+                  <li>Horarios de atención</li>
+                  <li>Registro de pacientes</li>
+                  <li>Donaciones</li>
+                  <li>Reporte de expedientes</li>
                 </ul>
                 <p>¿En qué te puedo ayudar?</p>
               </div>
@@ -163,7 +152,7 @@
             <button class="sugerencia-btn" onclick="enviarSugerencia(this)">¿Cuál es el horario?</button>
             <button class="sugerencia-btn" onclick="enviarSugerencia(this)">Quiero donar</button>
             <button class="sugerencia-btn" onclick="enviarSugerencia(this)">Registrar paciente</button>
-            <button class="sugerencia-btn" onclick="enviarSugerencia(this)">Ver alertas</button>
+            <button class="sugerencia-btn" onclick="enviarSugerencia(this)">Reporte de expediente</button>
           </div>
 
           <!-- Input del chat -->
@@ -180,10 +169,10 @@
         </div>
 
       </section>
-         <!-- OCR -->
+
+      <!-- ── OCR ── -->
       <section id="seccion-ocr" class="seccion">
 
-        <!-- Encabezado -->
         <div class="seccion-header">
           <div>
             <h1>Leer Documento</h1>
@@ -198,7 +187,6 @@
 
             <h2>Subir documento</h2>
 
-            <!-- Zona de arrastre / clic -->
             <div id="zona-subir"
               onclick="document.getElementById('input-imagen').click()"
               ondragover="event.preventDefault(); this.classList.add('arrastrando')"
@@ -209,7 +197,6 @@
               <p id="zona-texto-principal">Haz clic o arrastra una imagen aquí</p>
               <p id="zona-texto-secundario">JPG, PNG — Máximo 5MB</p>
 
-              <!-- Input oculto -->
               <input
                 type="file"
                 id="input-imagen"
@@ -219,60 +206,49 @@
               />
             </div>
 
-            <!-- Vista previa de la imagen -->
             <div id="preview-contenedor">
               <p id="preview-nombre-archivo"></p>
               <img id="preview-imagen" alt="Vista previa del documento" />
             </div>
 
-            <!-- Tipo de documento detectado -->
             <div id="tipo-documento-contenedor">
               <p>Tipo detectado:</p>
               <span id="tipo-documento-badge"></span>
             </div>
 
-            <!-- Botón procesar -->
             <button id="btn-procesar-ocr" onclick="procesarOCR()">
               Extraer datos
             </button>
 
-            <!-- Botón limpiar -->
             <button id="btn-limpiar-ocr" onclick="limpiarOCR()">
               Limpiar
             </button>
 
           </div>
 
-
           <!-- Panel derecho: resultados -->
           <div id="ocr-panel-resultado">
 
             <h2>Datos extraídos</h2>
 
-            <!-- Estado inicial: esperando imagen -->
             <div id="ocr-estado-vacio">
               <span>📋</span>
               <p>Los datos aparecerán aquí después de procesar el documento</p>
             </div>
 
-            <!-- Estado: procesando (spinner) -->
             <div id="ocr-estado-procesando">
               <div id="ocr-spinner"></div>
               <p>Analizando documento...</p>
             </div>
 
-            <!-- Estado: resultado exitoso -->
             <div id="ocr-estado-resultado">
 
-              <!-- Campos extraídos (se llenan dinámicamente con JS) -->
               <div id="ocr-campos"></div>
 
-              <!-- Observación del análisis -->
               <div id="ocr-observacion">
                 <p id="ocr-observacion-texto"></p>
               </div>
 
-              <!-- Botones de acción -->
               <div id="ocr-acciones">
                 <button id="btn-guardar-ocr" onclick="guardarDatos()">
                   Guardar en sistema
@@ -284,7 +260,6 @@
 
             </div>
 
-            <!-- Estado: error -->
             <div id="ocr-estado-error">
               <span>❌</span>
               <p id="ocr-error-texto">No se pudo procesar el documento.</p>
@@ -297,10 +272,8 @@
 
       </section>
 
-
     </main>
   </div>
-
 
   <!-- Scripts -->
   <script src="js/chatbot.js"></script>
