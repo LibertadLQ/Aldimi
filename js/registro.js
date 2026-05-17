@@ -1,3 +1,5 @@
+const CODIGO_ADMIN = 'ALDIMI2024';
+
 const USUARIOS_DEFAULT = {
   'admin@aldimi.org':      { pass: 'admin123',  rol: 'admin',      nombre: 'Administrador' },
   'voluntario@aldimi.org': { pass: 'vol123',    rol: 'voluntario', nombre: 'María Pérez'   }
@@ -39,24 +41,87 @@ function limpiarErrores(ids) {
   ids.forEach(({ error, input }) => mostrarError(error, input, false));
 }
 
+// Botón mostrar/ocultar contraseña con íconos SVG
 function togglePass(inputId) {
   const inp = document.getElementById(inputId);
-  const btn = inp.nextElementSibling;
-  if (inp.type === 'password') {
-    inp.type = 'text';
-    btn.textContent = 'Ocultar';
-  } else {
-    inp.type = 'password';
-    btn.textContent = 'Mostrar';
+  const isPassword = inp.type === 'password';
+  inp.type = isPassword ? 'text' : 'password';
+
+  // Mapear inputId a los ids de los íconos correspondientes
+  const sufijo = inputId === 'login-pass'  ? 'login-pass'
+               : inputId === 'reg-pass'    ? 'reg-pass'
+               : inputId === 'reg-pass2'   ? 'reg-pass2'
+               : null;
+
+  if (sufijo) {
+    document.getElementById(`icon-show-${sufijo}`).style.display = isPassword ? 'none' : '';
+    document.getElementById(`icon-hide-${sufijo}`).style.display = isPassword ? ''     : 'none';
   }
 }
-
 
 function esEmailValido(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-//LOGIN
+// Rol condicional: muestra/oculta el campo de código admin
+function onRolChange() {
+  const rol = document.querySelector('input[name="rol"]:checked')?.value;
+  const campo = document.getElementById('campo-codigo-admin');
+  const input = document.getElementById('reg-codigo-admin');
+
+  if (rol === 'admin') {
+    campo.style.display = 'block';
+  } else {
+    campo.style.display = 'none';
+    input.value = '';
+    mostrarError('error-reg-codigo-admin', 'reg-codigo-admin', false);
+  }
+}
+
+// Barra de fortaleza de contraseña
+function calcularFortaleza(pass) {
+  let score = 0;
+  if (pass.length >= 8)                        score++;
+  if (pass.length >= 12)                       score++;
+  if (/[A-Z]/.test(pass) && /[a-z]/.test(pass)) score++;
+  if (/[0-9]/.test(pass))                      score++;
+  if (/[^A-Za-z0-9]/.test(pass))              score++;
+
+  if (score <= 1) return { nivel: 1, texto: 'Débil' };
+  if (score === 2) return { nivel: 2, texto: 'Regular' };
+  if (score === 3) return { nivel: 3, texto: 'Buena' };
+  return { nivel: 4, texto: 'Fuerte' };
+}
+
+function actualizarFortaleza() {
+  const pass = document.getElementById('reg-pass').value;
+  const wrap = document.getElementById('fortaleza-wrap');
+  const barra = document.getElementById('fortaleza-barra');
+  const label = document.getElementById('fortaleza-label');
+
+  if (!pass) {
+    wrap.className = '';
+    barra.className = '';
+    label.textContent = '';
+    return;
+  }
+
+  const { nivel, texto } = calcularFortaleza(pass);
+  wrap.className = 'visible';
+  barra.className = `fortaleza-${nivel}`;
+  label.textContent = texto;
+}
+
+// Estado de carga en botones
+function setBtnCargando(btnSelector, cargando, textoOriginal) {
+  const btn = document.querySelector(btnSelector);
+  if (!btn) return;
+  btn.disabled = cargando;
+  btn.textContent = cargando ? 'Cargando...' : textoOriginal;
+}
+
+
+// ── LOGIN ──
 function handleLogin() {
   ocultarAlerta();
 
@@ -82,27 +147,33 @@ function handleLogin() {
 
   if (hayError) return;
 
-  const usuario = USUARIOS[email];
+  setBtnCargando('button[onclick="handleLogin()"]', true, 'Ingresar al sistema');
 
-  if (usuario && usuario.pass === pass) {
-    localStorage.setItem('aldimi_usuario', JSON.stringify({
-      email,
-      nombre: usuario.nombre,
-      rol:    usuario.rol,
-    }));
+  // Simula latencia de red (quitar el setTimeout si hay backend real)
+  setTimeout(() => {
+    const usuario = USUARIOS[email];
 
-    mostrarAlerta('exito', `Bienvenido, ${usuario.nombre}. Redirigiendo...`);
-    setTimeout(() => { window.location.href = 'chatbot.html'; }, 800);
+    if (usuario && usuario.pass === pass) {
+      localStorage.setItem('aldimi_usuario', JSON.stringify({
+        email,
+        nombre: usuario.nombre,
+        rol:    usuario.rol,
+      }));
 
-  } else {
-    mostrarAlerta('error', 'Correo o contraseña incorrectos.');
-    mostrarError('error-login-email', 'login-email', true);
-    mostrarError('error-login-pass',  'login-pass',  true);
-  }
+      mostrarAlerta('exito', `Bienvenido, ${usuario.nombre}. Redirigiendo...`);
+      setTimeout(() => { window.location.href = 'chatbot.html'; }, 800);
+
+    } else {
+      setBtnCargando('button[onclick="handleLogin()"]', false, 'Ingresar al sistema');
+      mostrarAlerta('error', 'Correo o contraseña incorrectos.');
+      mostrarError('error-login-email', 'login-email', true);
+      mostrarError('error-login-pass',  'login-pass',  true);
+    }
+  }, 600);
 }
 
 
-//REGISTRO
+// ── REGISTRO ──
 function handleRegistro() {
   ocultarAlerta();
 
@@ -112,14 +183,17 @@ function handleRegistro() {
   const pass     = document.getElementById('reg-pass').value;
   const pass2    = document.getElementById('reg-pass2').value;
   const rol      = document.querySelector('input[name="rol"]:checked')?.value;
+  const codigo   = document.getElementById('reg-codigo-admin').value.trim();
 
-  limpiarErrores([
+  const camposBase = [
     { error: 'error-reg-nombre',   input: 'reg-nombre'   },
     { error: 'error-reg-apellido', input: 'reg-apellido' },
     { error: 'error-reg-email',    input: 'reg-email'    },
     { error: 'error-reg-pass',     input: 'reg-pass'     },
     { error: 'error-reg-pass2',    input: 'reg-pass2'    },
-  ]);
+    { error: 'error-reg-codigo-admin', input: 'reg-codigo-admin' },
+  ];
+  limpiarErrores(camposBase);
 
   let hayError = false;
 
@@ -148,6 +222,12 @@ function handleRegistro() {
     hayError = true;
   }
 
+  // Validar código si el rol es admin
+  if (rol === 'admin' && codigo !== CODIGO_ADMIN) {
+    mostrarError('error-reg-codigo-admin', 'reg-codigo-admin', true);
+    hayError = true;
+  }
+
   if (hayError) return;
 
   if (USUARIOS[email]) {
@@ -156,24 +236,32 @@ function handleRegistro() {
     return;
   }
 
-  USUARIOS[email] = {
-    pass,
-    rol,
-    nombre: nombre + ' ' + apellido,
-  };
+  setBtnCargando('button[onclick="handleRegistro()"]', true, 'Crear cuenta');
 
-  localStorage.setItem('aldimi_usuarios', JSON.stringify(USUARIOS));
+  setTimeout(() => {
+    USUARIOS[email] = {
+      pass,
+      rol,
+      nombre: nombre + ' ' + apellido,
+    };
 
-  mostrarAlerta('exito', `Cuenta creada para ${nombre}. Ahora puedes iniciar sesión.`);
+    localStorage.setItem('aldimi_usuarios', JSON.stringify(USUARIOS));
 
-  document.getElementById('reg-nombre').value   = '';
-  document.getElementById('reg-apellido').value = '';
-  document.getElementById('reg-email').value    = '';
-  document.getElementById('reg-pass').value     = '';
-  document.getElementById('reg-pass2').value    = '';
+    mostrarAlerta('exito', `Cuenta creada para ${nombre}. Ahora puedes iniciar sesión.`);
 
-  setTimeout(() => switchTab('login'), 1200);
+    document.getElementById('reg-nombre').value   = '';
+    document.getElementById('reg-apellido').value = '';
+    document.getElementById('reg-email').value    = '';
+    document.getElementById('reg-pass').value     = '';
+    document.getElementById('reg-pass2').value    = '';
+    document.getElementById('reg-codigo-admin').value = '';
+    actualizarFortaleza();
+
+    setBtnCargando('button[onclick="handleRegistro()"]', false, 'Crear cuenta');
+    setTimeout(() => switchTab('login'), 1200);
+  }, 600);
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
   switchTab('login');

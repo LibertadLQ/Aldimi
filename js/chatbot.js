@@ -212,7 +212,7 @@ function mostrarTyping() {
 
   const avatar = document.createElement('div');
   avatar.className = 'mensaje-avatar';
-  avatar.textContent = '🤖';
+  avatar.textContent = '👾';
 
   const burbuja = document.createElement('div');
   burbuja.className = 'mensaje-burbuja';
@@ -265,7 +265,7 @@ const OCR_SIMULADO = {
       { label: 'Fecha Nac.',   valor: '12/03/2015'    },
       { label: 'Lugar Nac.',   valor: 'CUSCO'         },
     ],
-    observacion: '✓ Documento identificado como DNI. Datos extraídos con alta confianza.',
+    observacion: '✓ Documento identificado como DNI. Verifique los datos antes de guardar.',
   },
   RECETA: {
     tipo: 'Documento Médico',
