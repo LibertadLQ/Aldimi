@@ -3852,11 +3852,11 @@ def ejecutar_pipeline_drive(max_dni=MAX_IMAGES, max_lab=MAX_IMAGES, verbose=True
 
     print(f'\n{"═"*60}')
     print(f'  ALDIMI 2.0 — Pipeline Drive')
-    print(f"  Límite: {max_dni if max_dni is not None else 'sin límite'} DNIs | {max_lab if max_lab is not None else 'sin límite'} Informes de Lab")
+    print(f"  Límite: {max_dni if max_dni is not None else "sin límite"} DNIs | {max_lab if max_lab is not None else "sin límite"} Informes de Lab")
     print(f'{"═"*60}')
 
     # PASO 1: Procesar DNI_ALDIMI
-    print(f'\n📄 PASO 1: Procesando DNI_ALDIMI (límite: {max_dni if max_dni is not None else 'sin límite'})...')
+    print(f'\n📄 PASO 1: Procesando DNI_ALDIMI (límite: {max_dni if max_dni is not None else "sin límite"})...')
     rutas_dni = listar_imagenes(DNI_FOLDER, limite=max_dni)
 
     if not rutas_dni:
@@ -3932,7 +3932,7 @@ def ejecutar_pipeline_drive(max_dni=MAX_IMAGES, max_lab=MAX_IMAGES, verbose=True
     print(f'  📊 DNIs procesados: {len(dni_dict)}')
 
     # PASO 2: Procesar LAB_ALDIMI
-    print(f'\n🧪 PASO 2: Procesando LAB_ALDIMI (límite: {max_lab if max_lab is not None else 'sin límite'})...')
+    print(f'\n🧪 PASO 2: Procesando LAB_ALDIMI (límite: {max_lab if max_lab is not None else "sin límite"})...')
     rutas_lab = listar_imagenes(LAB_FOLDER, limite=max_lab)
 
     if not rutas_lab:
@@ -4005,7 +4005,7 @@ def ejecutar_pipeline_drive(max_dni=MAX_IMAGES, max_lab=MAX_IMAGES, verbose=True
 
     return _BD
 
-print(f' Pipeline Drive cargado. MAX_IMAGES = {MAX_IMAGES if MAX_IMAGES is not None else 'sin límite'}')
+print(f' Pipeline Drive cargado. MAX_IMAGES = {MAX_IMAGES if MAX_IMAGES is not None else "sin límite"}')
 
 """## SECCIÓN 6 - Gestion de usuarions (Integration developer)"""
 
