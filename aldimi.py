@@ -3852,7 +3852,9 @@ def ejecutar_pipeline_drive(max_dni=MAX_IMAGES, max_lab=MAX_IMAGES, verbose=True
 
     print(f'\n{"═"*60}')
     print(f'  ALDIMI 2.0 — Pipeline Drive')
-    print(f"  Límite: {max_dni if max_dni is not None else "sin límite"} DNIs | {max_lab if max_lab is not None else "sin límite"} Informes de Lab")
+    limite_dni = "sin límite" if max_dni is None else str(max_dni)
+    limite_lab = "sin límite" if max_lab is None else str(max_lab)
+    print(f'  Límite: {limite_dni} DNIs | {limite_lab} Informes de Lab')
     print(f'{"═"*60}')
 
     # PASO 1: Procesar DNI_ALDIMI
