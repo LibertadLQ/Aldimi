@@ -3614,7 +3614,7 @@ def listar_imagenes(carpeta, limite=MAX_IMAGES):
     rutas = sorted(set(rutas))
     if limite is not None:
         rutas = rutas[:limite]
-    print(f'  📂 {os.path.basename(carpeta)}: {len(rutas)} imagen(es) a procesar (límite={limite if limite is not None else 'sin límite'})')
+    print(f'  📂 {os.path.basename(carpeta)}: {len(rutas)} imagen(es) a procesar (límite={limite if limite is not None else "sin límite"})')
     return rutas
 
 
