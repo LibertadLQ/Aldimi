@@ -6000,4 +6000,5 @@ def main():
 
 
 # Ejecutar sistema completo
-main()
+if __name__ == "__main__":
+    main()
