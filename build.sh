@@ -20,4 +20,4 @@ python -m nltk.downloader punkt punkt_tab stopwords
 # 4) Pre-descargar los modelos de EasyOCR durante el build (no en la
 #    primera petición real), para que el primer usuario no tenga que
 #    esperar la descarga ni se dispare un pico de memoria en caliente.
-python -c "import easyocr; easyocr.Reader(['es','en'], gpu=False, verbose=False); print('EasyOCR modelos descargados')"
+python -c "import easyocr; easyocr.Reader(['es'], gpu=False, verbose=False); print('EasyOCR modelos descargados')"

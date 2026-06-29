@@ -286,7 +286,7 @@ def _get_reader():
     global _easyocr_reader
     if _easyocr_reader is None and _EASYOCR_OK:
         try:
-            _easyocr_reader = _easyocr_lib.Reader(['es', 'en'], gpu=False, verbose=False)
+            _easyocr_reader = _easyocr_lib.Reader(['es'], gpu=False, verbose=False)
             print('EasyOCR reader inicializado')
         except Exception as e:
             print(f'Error inicializando EasyOCR: {e}')
