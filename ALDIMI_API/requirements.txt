@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pillow
+opencv-python-headless
+easyocr
+pytesseract
+torch
+torchvision
+nltk
+spacy
+bcrypt
+pytest
