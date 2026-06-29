@@ -279,28 +279,30 @@ def chatbot_response_nlp(msg):
 
 # ── OCR ───────────────────────────────────────────────────────────────────────
 
-def _extraer_texto_imagen(ruta):
-    """Extrae texto de una imagen usando Tesseract o EasyOCR."""
-    texto = ''
-    if _TESSERACT_OK and _PIL_Image:
-        try:
-            img = _PIL_Image.open(ruta)
-            for cfg in ['--psm 6 --oem 3', '--psm 4 --oem 3', '--psm 3 --oem 3']:
-                t = pytesseract.image_to_string(img, lang=OCR_LANG, config=cfg).strip()
-                if t and len(t) > len(texto):
-                    texto = t
-        except Exception as e:
-            _log.warning(f'Tesseract error: {e}')
+_easyocr_reader = None
 
-    if not texto and _EASYOCR_OK:
+def _get_reader():
+    """Retorna el reader de EasyOCR (singleton para no recargarlo cada vez)."""
+    global _easyocr_reader
+    if _easyocr_reader is None and _EASYOCR_OK:
         try:
-            reader = _easyocr_lib.Reader(['es', 'en'], gpu=False, verbose=False)
-            results = reader.readtext(ruta)
+            _easyocr_reader = _easyocr_lib.Reader(['es', 'en'], gpu=False, verbose=False)
+            print('EasyOCR reader inicializado')
+        except Exception as e:
+            print(f'Error inicializando EasyOCR: {e}')
+    return _easyocr_reader
+
+def _extraer_texto_imagen(ruta):
+    """Extrae texto de una imagen usando EasyOCR."""
+    texto = ''
+    reader = _get_reader()
+    if reader:
+        try:
+            results = reader.readtext(ruta, detail=1)
             lines = [t for _, t, c in results if c >= 0.3]
             texto = '\n'.join(lines)
         except Exception as e:
             _log.warning(f'EasyOCR error: {e}')
-
     return texto
 
 def clasificar_documento(texto):
@@ -468,6 +470,85 @@ def guardar_bd():
             json.dump({'pacientes': _BD}, f, ensure_ascii=False, indent=2)
     except Exception as e:
         print(f'Error guardando BD: {e}')
+
+def registrar_paciente(ciu, dni_data=None, lab_data=None):
+    """
+    Crea o actualiza el registro de un paciente en la BD en memoria,
+    y persiste el cambio a disco (JSON).
+
+    ciu       : código único del paciente (CIU), siempre en mayúsculas.
+    dni_data  : dict devuelto por procesar_imagen_dni (puede ser None).
+    lab_data  : dict devuelto por procesar_imagen_lab (puede ser None).
+
+    Si el paciente ya existe, se actualizan los campos provistos sin
+    borrar los que ya tenía (ej: agregar un lab nuevo sin perder el DNI).
+    Retorna el registro completo ya guardado.
+    """
+    ciu = str(ciu).upper().strip()
+    if not ciu:
+        raise ValueError('CIU vacío: no se puede registrar el paciente')
+
+    registro = _BD.get(ciu, {
+        'ciu': ciu,
+        'datos_personales': {},
+        'informe_laboratorio': None,
+        'historial_laboratorio': [],
+        'alertas_clinicas': [],
+        'creado_en': datetime.datetime.now().isoformat(),
+    })
+
+    if dni_data:
+        registro['datos_personales'] = {
+            'nombres': dni_data.get('nombres', ''),
+            'apellidos': dni_data.get('apellidos', ''),
+            'fecha_nacimiento': dni_data.get('fecha_nacimiento', ''),
+            'tipo_dni': dni_data.get('tipo_dni', ''),
+        }
+
+    if lab_data:
+        registro['informe_laboratorio'] = lab_data
+        registro['historial_laboratorio'].append(lab_data)
+        nuevas_alertas = lab_data.get('alertas_detectadas', [])
+        if nuevas_alertas:
+            registro['alertas_clinicas'].extend(nuevas_alertas)
+
+    registro['actualizado_en'] = datetime.datetime.now().isoformat()
+
+    _BD[ciu] = registro
+    guardar_bd()
+    return registro
+
+
+def listar_pacientes():
+    """Retorna un resumen liviano de todos los pacientes en la BD."""
+    resultado = []
+    for ciu, reg in _BD.items():
+        dp = reg.get('datos_personales', {})
+        resultado.append({
+            'ciu': ciu,
+            'nombres': dp.get('nombres', ''),
+            'apellidos': dp.get('apellidos', ''),
+            'tiene_laboratorio': reg.get('informe_laboratorio') is not None,
+            'num_alertas': len(reg.get('alertas_clinicas', [])),
+        })
+    return resultado
+
+
+def listar_alertas():
+    """Retorna todos los pacientes que tienen al menos una alerta clínica."""
+    resultado = []
+    for ciu, reg in _BD.items():
+        alertas = reg.get('alertas_clinicas', [])
+        if alertas:
+            dp = reg.get('datos_personales', {})
+            resultado.append({
+                'ciu': ciu,
+                'nombres': dp.get('nombres', ''),
+                'apellidos': dp.get('apellidos', ''),
+                'alertas': alertas,
+            })
+    return resultado
+
 
 # Cargar BD al importar
 cargar_bd()

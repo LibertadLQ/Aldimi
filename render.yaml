@@ -2,11 +2,7 @@ services:
   - type: web
     name: aldimi-api
     runtime: python
-    buildCommand: |
-      pip install -r requirements.txt
-      apt-get install -y tesseract-ocr tesseract-ocr-spa tesseract-ocr-eng || true
-      python -m spacy download es_core_news_sm || true
-      python -m nltk.downloader punkt stopwords || true
+    buildCommand: bash build.sh
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: ALDIMI_DB_PATH

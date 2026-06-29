@@ -69,6 +69,29 @@ async def ocr_lab(imagen: UploadFile = File(...), ciu: str = ""):
         try: os.remove(ruta_tmp)
         except: pass
 
+class RegistroBody(BaseModel):
+    ciu: str
+    dni_data: dict | None = None
+    lab_data: dict | None = None
+
+@app.post("/registro")
+def registro(body: RegistroBody):
+    """
+    Guarda en la base de datos los datos ya extraídos por /ocr/dni y/o /ocr/lab.
+    El frontend primero llama a /ocr/dni (y opcionalmente /ocr/lab), muestra
+    los datos para que el usuario los confirme/corrija, y solo entonces llama
+    aquí para persistirlos.
+    """
+    try:
+        registro_guardado = aldimi.registrar_paciente(
+            ciu=body.ciu, dni_data=body.dni_data, lab_data=body.lab_data
+        )
+        return {"ok": True, "registro": registro_guardado}
+    except ValueError as e:
+        raise HTTPException(400, str(e))
+    except Exception as e:
+        raise HTTPException(500, f"Error al registrar paciente: {e}")
+
 @app.get("/expediente/{ciu}")
 def expediente(ciu: str):
     bd = aldimi._BD
@@ -85,3 +108,13 @@ def expediente(ciu: str):
         "alertas_clinicas": reg.get("alertas_clinicas", []),
         "tiene_laboratorio": reg.get("informe_laboratorio") is not None,
     }
+
+@app.get("/pacientes")
+def pacientes():
+    """Lista resumida de todos los pacientes registrados (para tablas en el frontend)."""
+    return {"ok": True, "pacientes": aldimi.listar_pacientes()}
+
+@app.get("/alertas")
+def alertas():
+    """Lista de pacientes con alertas clínicas activas (conecta con la intención ALERTA del chatbot)."""
+    return {"ok": True, "alertas": aldimi.listar_alertas()}

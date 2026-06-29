@@ -1,10 +1,12 @@
+// ── URL de la API ─────────────────────────────────────────────────────────────
+const API_URL = 'https://aldimi-api.onrender.com';
+
 document.addEventListener('DOMContentLoaded', () => {
   cargarUsuario();
   mostrarFecha();
   mostrarSeccion('inicio');
   mostrarEstadoOCR('vacio');
 });
-
 
 /* ── Sesión ── */
 function cargarUsuario() {
@@ -56,94 +58,13 @@ function mostrarSeccion(nombre) {
   if (btn) btn.classList.add('activo');
 }
 
-//CHATBOT
+// ══════════════════════════════════════════════════════════════════════════════
+// CHATBOT — conectado a la API real
+// ══════════════════════════════════════════════════════════════════════════════
 
-/* ── Estado conversacional ── */
-let estadoBot      = 'idle'; // 'idle' | 'esperando_dni' | 'esperando_lab'
+let estadoBot      = 'idle';
 let pacienteActual = null;
 
-/* ── Base de datos simulada de pacientes ── */
-const PACIENTES_DB = {
-  '45678912': {
-    nombre:      'Juan Carlos Pérez Mamani',
-    edad:        9,
-    tutor:       'María Mamani Quispe',
-    diagnostico: 'Leucemia linfoblástica aguda (LLA)',
-    ciclo:       'Ciclo 3 — Consolidación',
-    ingreso:     '14/01/2025',
-    lab: [
-      { test: 'Hemoglobina',  val: '10.2 g/dL',    ref: '12–16 g/dL',          ok: false },
-      { test: 'Leucocitos',   val: '3,200 /µL',     ref: '4,000–11,000 /µL',    ok: false },
-      { test: 'Plaquetas',    val: '180,000 /µL',   ref: '150,000–400,000 /µL', ok: true  },
-      { test: 'Creatinina',   val: '0.6 mg/dL',     ref: '0.5–1.2 mg/dL',       ok: true  },
-      { test: 'TGO (AST)',    val: '38 U/L',         ref: '10–40 U/L',           ok: true  },
-      { test: 'TGP (ALT)',    val: '52 U/L',         ref: '7–56 U/L',            ok: true  },
-    ],
-  },
-  '72345678': {
-    nombre:      'Lucía Quispe Torres',
-    edad:        7,
-    tutor:       'Roberto Quispe Condori',
-    diagnostico: 'Tumor de Wilms (nefroblastoma)',
-    ciclo:       'Post-cirugía — Quimioterapia adyuvante',
-    ingreso:     '03/03/2025',
-    lab: [
-      { test: 'Hemoglobina',  val: '11.8 g/dL',    ref: '12–16 g/dL',          ok: false },
-      { test: 'Leucocitos',   val: '6,100 /µL',     ref: '4,000–11,000 /µL',    ok: true  },
-      { test: 'Plaquetas',    val: '220,000 /µL',   ref: '150,000–400,000 /µL', ok: true  },
-      { test: 'Creatinina',   val: '0.9 mg/dL',     ref: '0.5–1.2 mg/dL',       ok: true  },
-      { test: 'TGO (AST)',    val: '44 U/L',         ref: '10–40 U/L',           ok: false },
-      { test: 'TGP (ALT)',    val: '30 U/L',         ref: '7–56 U/L',            ok: true  },
-    ],
-  },
-};
-
-/* ── Respuestas fijas para intenciones simples ── */
-const RESPUESTAS_BOT = {
-  HORARIO: {
-    palabras: ['horario','hora','visita','apertura','cierre','atiende','abren','abierto','cuando'],
-    respuesta: 'El horario de visitas del Albergue ALDIMI es:\n\n• Lunes a Sábado: 9:00 a.m. a 6:00 p.m.\n\n¿Desea información sobre algún otro servicio?',
-  },
-  REGISTRO: {
-    palabras: ['registrar','registro','ingreso','documentos','admisión','admision','paciente','inscribir','nuevo'],
-    respuesta: 'Para registrar un paciente necesitas:\n\n• DNI del paciente y del apoderado\n• Diagnóstico médico actualizado\n• Documento de pobreza (si aplica)\n\nPuedes usar el módulo "Leer Documento" para digitalizar el DNI automáticamente.',
-  },
-  DONACION: {
-    palabras: ['donar','donación','donacion','donaciones','ropa','yape','apoyo','transferencia','cuenta','ayuda','plin'],
-    respuesta: '¡Gracias por querer apoyar a ALDIMI!\n\nPuedes donar mediante:\n• Yape / Plin: 999-000-111\n• Transferencia bancaria: Cta. 123-456789\n• Donación de ropa y útiles: sede central\n\n¿Deseas más información?',
-  },
-  EMOCIONAL: {
-    palabras: ['deprimido','ansiedad','triste','no quiero vivir','desesperado','llora','asustado','sin salida','suicidio'],
-    respuesta: 'Se ha detectado una posible situación de riesgo emocional.\n\nSe registrará una alerta para el equipo de soporte psicosocial. El personal evaluará el caso a la brevedad.\n\n¿Puede indicar el ID del paciente para asociar la alerta?',
-  },
-};
-
-/* ── Detectar intención simple ── */
-function detectarIntencionSimple(mensaje) {
-  const lower = mensaje.toLowerCase();
-  let mejorIntencion = null;
-  let mejorPuntaje   = 0;
-
-  for (const [intencion, datos] of Object.entries(RESPUESTAS_BOT)) {
-    const coincidencias = datos.palabras.filter(p => lower.includes(p)).length;
-    const puntaje       = coincidencias / datos.palabras.length;
-    if (puntaje > mejorPuntaje) {
-      mejorPuntaje   = puntaje;
-      mejorIntencion = intencion;
-    }
-  }
-
-  if (mejorPuntaje < 0.05) return null;
-  return mejorIntencion;
-}
-
-/* ── Detectar si el usuario quiere un expediente ── */
-function esIntentExpediente(lower) {
-  const palabras = ['expediente','reporte','historial','buscar paciente','consultar paciente','ver paciente','datos del paciente'];
-  return palabras.some(p => lower.includes(p));
-}
-
-/* ── Enviar mensaje del usuario ── */
 function enviarMensaje() {
   const input   = document.getElementById('chat-input');
   const mensaje = input.value.trim();
@@ -156,119 +77,34 @@ function enviarMensaje() {
   document.getElementById('btn-enviar-chat').disabled = true;
 
   const typingId = mostrarTyping();
-  const delay    = 800 + Math.random() * 600;
 
-  setTimeout(() => {
-    quitarTyping(typingId);
-    responderBot(mensaje);
-    input.disabled = false;
-    document.getElementById('btn-enviar-chat').disabled = false;
-    input.focus();
-  }, delay);
-}
+  // Llamada real a la API
+  fetch(`${API_URL}/chat`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ mensaje }),
+  })
+    .then(r => r.json())
+    .then(data => {
+      quitarTyping(typingId);
+      agregarMensaje(data.respuesta, 'bot');
 
-/* ── Lógica principal del bot ── */
-function responderBot(mensaje) {
-  const lower = mensaje.toLowerCase().trim();
-
-  /* ── Estado: esperando DNI ── */
-  if (estadoBot === 'esperando_dni') {
-    const dni = mensaje.replace(/\s/g, '');
-
-    if (/^\d{8}$/.test(dni) && PACIENTES_DB[dni]) {
-      const p        = PACIENTES_DB[dni];
-      pacienteActual = p;
-      estadoBot      = 'esperando_lab';
-
+      // Actualizar contador de consultas
+      const statConsultas = document.getElementById('stat-consultas');
+      if (statConsultas) statConsultas.textContent = parseInt(statConsultas.textContent || 0) + 1;
+    })
+    .catch(() => {
+      quitarTyping(typingId);
       agregarMensaje(
-        `Paciente encontrado\n\n` +
-        `Nombre: ${p.nombre}\n` +
-        `Edad: ${p.edad} años\n` +
-        `Tutor / Apoderado: ${p.tutor}\n` +
-        `Diagnóstico: ${p.diagnostico}\n` +
-        `Estado de tratamiento: ${p.ciclo}\n` +
-        `Fecha de ingreso: ${p.ingreso}\n\n` +
-        `¿Deseas ver el reporte de laboratorio más reciente?\nResponde sí o no.`,
+        'Lo siento, no pude conectarme al servidor. Por favor intenta en unos segundos.',
         'bot'
       );
-
-    } else if (/^\d{8}$/.test(dni)) {
-      agregarMensaje(
-        ` No encontré ningún paciente con DNI ${dni}.\n\nVerifica el número e intenta nuevamente.`,
-        'bot'
-      );
-
-    } else {
-      agregarMensaje(
-        `Por favor ingresa un DNI válido de 8 dígitos. Ejemplo: 45678912`,
-        'bot'
-      );
-    }
-    return;
-  }
-
-  /* ── Estado: esperando respuesta sobre laboratorio ── */
-  if (estadoBot === 'esperando_lab') {
-
-    if (/s[ií]|^si$|quiero|ver|muestra|mostrar|sí/.test(lower)) {
-      estadoBot = 'idle';
-      const p   = pacienteActual;
-
-      let textoLab =
-        `Reporte de laboratorio — ${p.nombre}\n` +
-        `Resultados más recientes\n\n`;
-
-      p.lab.forEach(l => {
-        const icono = l.ok ? '✅' : '⚠️';
-        textoLab += `${icono} ${l.test}: ${l.val}   (ref: ${l.ref})\n`;
-      });
-
-      textoLab +=
-        `\n──────────────────\n` +
-        `¿Deseas consultar otro expediente o necesitas algo más?`;
-
-      agregarMensaje(textoLab, 'bot');
-
-    } else if (/^no\b/.test(lower)) {
-      estadoBot = 'idle';
-      agregarMensaje(
-        `De acuerdo. ¿Hay algo más en lo que pueda ayudarte?`,
-        'bot'
-      );
-
-    } else {
-      agregarMensaje(
-        `Por favor responde sí para ver el reporte de laboratorio, o no para continuar.`,
-        'bot'
-      );
-    }
-    return;
-  }
-
-  /* ── Estado idle: detección de intención ── */
-
-  // Expediente / reporte — inicia flujo conversacional
-  if (esIntentExpediente(lower)) {
-    estadoBot = 'esperando_dni';
-    agregarMensaje(
-      `Para generar el reporte de expediente necesito identificar al paciente.\n\n¿Cuál es el número de DNI del paciente?`,
-      'bot'
-    );
-    return;
-  }
-
-  // Intenciones simples (horario, registro, donación, emocional)
-  const intencion = detectarIntencionSimple(mensaje);
-  if (intencion) {
-    agregarMensaje(RESPUESTAS_BOT[intencion].respuesta, 'bot');
-    return;
-  }
-
-  // Fallback
-  agregarMensaje(
-    `No pude comprender tu mensaje. ¿Podrías reformularlo?\n\nPuedo ayudarte con:\n• Horarios de atención\n• Registro de pacientes\n• Donaciones\n• Reporte de expediente`,
-    'bot'
-  );
+    })
+    .finally(() => {
+      input.disabled = false;
+      document.getElementById('btn-enviar-chat').disabled = false;
+      input.focus();
+    });
 }
 
 /* ── Agregar burbuja al chat ── */
@@ -282,16 +118,16 @@ function agregarMensaje(texto, tipo) {
   const div = document.createElement('div');
   div.className = `mensaje ${tipo}`;
 
-  const avatar       = document.createElement('div');
-  avatar.className   = 'mensaje-avatar';
+  const avatar     = document.createElement('div');
+  avatar.className = 'mensaje-avatar';
   if (tipo === 'bot') {
-  avatar.innerHTML = '<img src="img/eva_chtb.jpg" alt="ALDIMI bot" />';
+    avatar.innerHTML = '<img src="img/eva_chtb.jpg" alt="ALDIMI bot" />';
   } else {
-  avatar.textContent = iniciales;
+    avatar.textContent = iniciales;
   }
 
-  const burbuja       = document.createElement('div');
-  burbuja.className   = 'mensaje-burbuja';
+  const burbuja     = document.createElement('div');
+  burbuja.className = 'mensaje-burbuja';
 
   const html = texto
     .replace(/&/g, '&amp;')
@@ -318,12 +154,12 @@ function mostrarTyping() {
   const contenedor = document.getElementById('chat-mensajes');
   const id         = 'typing-' + Date.now();
 
-  const div    = document.createElement('div');
+  const div     = document.createElement('div');
   div.className = 'mensaje bot mensaje-typing';
   div.id        = id;
 
-  const avatar       = document.createElement('div');
-  avatar.className   = 'mensaje-avatar';
+  const avatar     = document.createElement('div');
+  avatar.className = 'mensaje-avatar';
   avatar.innerHTML = '<img src="img/eva_chtb.jpg" alt="ALDIMI bot" />';
 
   const burbuja     = document.createElement('div');
@@ -360,72 +196,17 @@ function limpiarChat() {
   const bienvenida = document.getElementById('mensaje-bienvenida');
   contenedor.innerHTML = '';
   if (bienvenida) contenedor.appendChild(bienvenida);
-
-  // Resetear estado conversacional
   estadoBot      = 'idle';
   pacienteActual = null;
 }
 
-//OCR
-
-const OCR_SIMULADO = {
-  DNI: {
-    tipo: 'DNI',
-    secciones: [
-      {
-        titulo: 'Datos del documento',
-        campos: [
-          { label: 'Nombres',      valor: 'JUAN CARLOS'  },
-          { label: 'Apellidos',    valor: 'PÉREZ MAMANI' },
-          { label: 'DNI',          valor: '45678912'     },
-          { label: 'Fecha Nac.',   valor: '12/03/2015'   },
-          { label: 'Lugar Nac.',   valor: 'CUSCO'        },
-        ],
-      },
-    ],
-    observacion: '✓ Documento identificado como DNI. Verifique los datos antes de guardar.',
-  },
-  HEMOGRAMA: {
-    tipo: 'Reporte de Laboratorio',
-    secciones: [
-      {
-        titulo: 'Datos del paciente',
-        campos: [
-          { label: 'Nombre',  valor: 'HUERTA DÍAZ RICHARD JOHNATAN' },
-          { label: 'Edad',    valor: '35 Años'                      },
-          { label: 'Sexo',    valor: 'Masculino'                    },
-          { label: 'DNI',     valor: '44885622'                     },
-        ],
-      },
-      {
-        titulo: 'Información del examen',
-        campos: [
-          { label: 'Examen',          valor: 'HEMOGRAMA'           },
-          { label: 'Fecha de muestra', valor: '11/04/2023'         },
-          { label: 'Cliente',          valor: 'CLÍNICA SAN GABRIEL' },
-          { label: 'Médico',           valor: 'CLÍNICA JESÚS DEL NORTE' },
-        ],
-      },
-      {
-        titulo: 'Resultados',
-        esResultados: true,
-        campos: [
-          { label: 'Hemoglobina',              valor: '14.6 g/dL',      ref: '12.3 – 18.3',  ok: true  },
-          { label: 'Hematocrito',              valor: '42.6 %',          ref: '39 – 52',      ok: true  },
-          { label: 'Hematíes',                 valor: '5.18 ×10⁶/µL',   ref: '4.5 – 5.5',   ok: true  },
-          { label: 'Leucocitos Totales',       valor: '4.7 ×10³/µL',    ref: '4.5 – 11',    ok: true  },
-          { label: 'Linfocitos (%)',            valor: '42 %',            ref: '24 – 44',     ok: true  },
-          { label: 'Neutrófilos Segmentados (%)', valor: '40 %',         ref: '35 – 66',     ok: true  },
-          { label: 'Eosinófilos (%)',           valor: '8 %',             ref: '0 – 3',       ok: false, nota: 'Ligeramente elevado' },
-          { label: 'Monocitos (%)',             valor: '9 %',             ref: '3 – 6',       ok: false, nota: 'Elevado'             },
-        ],
-      },
-    ],
-    observacion: '⚠️ Los eosinófilos y monocitos están ligeramente por encima del valor de referencia. Se recomienda seguimiento médico.',
-  },
-};
+// ══════════════════════════════════════════════════════════════════════════════
+// OCR — conectado a la API real
+// ══════════════════════════════════════════════════════════════════════════════
 
 let archivoActual = null;
+let ultimoResultadoOCR = null;   // datos crudos devueltos por la API (no lo que se ve en pantalla)
+let ultimoTipoOCR       = null;  // 'dni' | 'lab'
 
 function cargarImagen(evento) {
   const archivo = evento.target.files[0];
@@ -439,17 +220,14 @@ function soltarArchivo(evento) {
   const archivo = evento.dataTransfer.files[0];
   if (!archivo) return;
 
-  const tiposPermitidos = ['image/jpeg', 'image/png'];
-  if (!tiposPermitidos.includes(archivo.type)) {
+  if (!['image/jpeg', 'image/png'].includes(archivo.type)) {
     alert('Solo se permiten imágenes JPG o PNG.');
     return;
   }
-
   if (archivo.size > 5 * 1024 * 1024) {
     alert('La imagen supera los 5MB permitidos.');
     return;
   }
-
   procesarArchivo(archivo);
 }
 
@@ -458,8 +236,8 @@ function procesarArchivo(archivo) {
 
   document.getElementById('preview-nombre-archivo').textContent = archivo.name;
 
-  const reader    = new FileReader();
-  reader.onload   = (e) => {
+  const reader  = new FileReader();
+  reader.onload = (e) => {
     const img = document.getElementById('preview-imagen');
     img.src   = e.target.result;
     document.getElementById('preview-contenedor').classList.add('visible');
@@ -467,12 +245,9 @@ function procesarArchivo(archivo) {
   reader.readAsDataURL(archivo);
 
   const nombre = archivo.name.toLowerCase();
-  let tipo     = 'Documento';
-  if (nombre.includes('dni') || nombre.includes('identidad')) {
-    tipo = 'DNI';
-  } else if (nombre.includes('receta') || nombre.includes('medic') || nombre.includes('lab')) {
-    tipo = 'Documento Médico';
-  }
+  let tipo = 'Documento';
+  if (nombre.includes('dni') || nombre.includes('identidad')) tipo = 'DNI';
+  else if (nombre.includes('lab') || nombre.includes('medic') || nombre.includes('receta')) tipo = 'Documento Médico';
 
   document.getElementById('tipo-documento-badge').textContent = tipo;
   document.getElementById('tipo-documento-contenedor').classList.add('visible');
@@ -482,27 +257,113 @@ function procesarArchivo(archivo) {
   mostrarEstadoOCR('vacio');
 }
 
-function procesarOCR() {
+/* ── Procesar OCR — llama a la API real ── */
+async function procesarOCR() {
   if (!archivoActual) return;
 
   const btnProcesar      = document.getElementById('btn-procesar-ocr');
   btnProcesar.textContent = 'Procesando...';
   btnProcesar.disabled    = true;
-
   mostrarEstadoOCR('procesando');
 
-  const delay = 1500 + Math.random() * 1000;
-  setTimeout(() => {
+  const nombre   = archivoActual.name.toLowerCase();
+  const esDNI    = nombre.includes('dni') || nombre.includes('identidad');
+
+  // Para informes de laboratorio se necesita el CIU del paciente para asociarlo.
+  // Si ya tenemos un paciente activo (por ejemplo, recién se procesó su DNI),
+  // se usa ese CIU sin volver a preguntar.
+  let ciuParaLab = '';
+  if (!esDNI) {
+    ciuParaLab = pacienteActual || prompt('Ingrese el CIU del paciente para asociar este informe:', '') || '';
+    if (!ciuParaLab) {
+      btnProcesar.textContent = 'Extraer datos';
+      btnProcesar.disabled    = false;
+      mostrarEstadoOCR('vacio');
+      return;
+    }
+  }
+
+  const endpoint = esDNI ? `${API_URL}/ocr/dni` : `${API_URL}/ocr/lab`;
+
+  const formData = new FormData();
+  formData.append('imagen', archivoActual);
+  if (!esDNI) formData.append('ciu', ciuParaLab);
+
+  try {
+    const resp = await fetch(endpoint, { method: 'POST', body: formData });
+    const data = await resp.json();
+
     btnProcesar.textContent = 'Extraer datos';
     btnProcesar.disabled    = false;
 
-    const nombre = archivoActual.name.toLowerCase();
-    const datos  = (nombre.includes('dni') || nombre.includes('identidad'))
-      ? OCR_SIMULADO.DNI
-      : OCR_SIMULADO.HEMOGRAMA;
+    if (!data.ok) {
+      document.getElementById('ocr-error-texto').textContent =
+        data.mensaje || 'No se pudo procesar el documento.';
+      mostrarEstadoOCR('error');
+      return;
+    }
 
-    mostrarResultadoOCR(datos);
-  }, delay);
+    // Guardar los datos crudos (no solo lo que se muestra) para poder
+    // enviarlos tal cual a /registro cuando el usuario presione "Guardar".
+    ultimoResultadoOCR = data;
+    ultimoTipoOCR      = esDNI ? 'dni' : 'lab';
+    if (esDNI && data.ciu) pacienteActual = data.ciu;
+    if (!esDNI) pacienteActual = ciuParaLab;
+
+    // Mostrar resultados según tipo
+    if (esDNI) {
+      mostrarResultadoOCR({
+        tipo: 'DNI',
+        secciones: [{
+          titulo: 'Datos del documento',
+          campos: [
+            { label: 'Nombres',    valor: data.nombres   || 'No detectado' },
+            { label: 'Apellidos',  valor: data.apellidos || 'No detectado' },
+            { label: 'CIU / DNI',  valor: data.ciu       || 'No detectado' },
+            { label: 'Fecha Nac.', valor: data.fecha_nacimiento || 'No detectado' },
+            { label: 'Tipo',       valor: data.tipo_dni  || 'No detectado' },
+          ],
+        }],
+        observacion: '✓ Documento procesado con OCR. Verifique los datos antes de guardar.',
+      });
+    } else {
+      // Informe de laboratorio
+      const campos = (data.pruebas || []).map(p => ({
+        label: p.nombre,
+        valor: `${p.valor} ${p.unidad || ''}`.trim(),
+        ref:   p.referencia || '—',
+        ok:    !p.flag || p.flag === '',
+        nota:  p.flag === 'H' ? 'Elevado' : p.flag === 'L' ? 'Bajo' : '',
+      }));
+
+      mostrarResultadoOCR({
+        tipo: 'Reporte de Laboratorio',
+        secciones: [
+          {
+            titulo: 'Resultados',
+            esResultados: true,
+            campos: campos.length > 0 ? campos : [
+              { label: 'Resultado', valor: data.resumen || 'Sin datos numéricos detectados', ref: '—', ok: true }
+            ],
+          },
+        ],
+        observacion: data.alertas && data.alertas.length > 0
+          ? `⚠️ Se detectaron ${data.alertas.length} valor(es) fuera de rango. Consulte con el médico.`
+          : '✓ Informe procesado. Todos los valores dentro del rango normal.',
+      });
+    }
+
+    // Actualizar contador
+    const statDocs = document.getElementById('stat-documentos');
+    if (statDocs) statDocs.textContent = parseInt(statDocs.textContent || 0) + 1;
+
+  } catch (err) {
+    btnProcesar.textContent = 'Extraer datos';
+    btnProcesar.disabled    = false;
+    document.getElementById('ocr-error-texto').textContent =
+      'Error de conexión con el servidor. Intenta de nuevo.';
+    mostrarEstadoOCR('error');
+  }
 }
 
 function mostrarResultadoOCR(datos) {
@@ -510,32 +371,29 @@ function mostrarResultadoOCR(datos) {
   contenedorCampos.innerHTML = '';
 
   datos.secciones.forEach(seccion => {
-    // Título de sección
     const titulo       = document.createElement('p');
     titulo.className   = 'ocr-seccion-titulo';
     titulo.textContent = seccion.titulo;
     contenedorCampos.appendChild(titulo);
 
     if (seccion.esResultados) {
-      // Tabla de resultados con estado visual
       seccion.campos.forEach(campo => {
-        const div       = document.createElement('div');
-        div.className   = 'ocr-campo ocr-resultado' + (campo.ok ? '' : ' ocr-resultado--alt');
+        const div     = document.createElement('div');
+        div.className = 'ocr-campo ocr-resultado' + (campo.ok ? '' : ' ocr-resultado--alt');
 
-        // Fila superior: label + valor + badge estado
-        const fila      = document.createElement('div');
-        fila.className  = 'ocr-resultado-fila';
+        const fila     = document.createElement('div');
+        fila.className = 'ocr-resultado-fila';
 
-        const label         = document.createElement('label');
-        label.textContent   = campo.label;
+        const label       = document.createElement('label');
+        label.textContent = campo.label;
 
-        const input         = document.createElement('input');
-        input.type          = 'text';
-        input.value         = campo.valor;
-        input.readOnly      = true;
+        const input    = document.createElement('input');
+        input.type     = 'text';
+        input.value    = campo.valor;
+        input.readOnly = true;
 
-        const badge         = document.createElement('span');
-        badge.className     = 'ocr-resultado-badge ' + (campo.ok ? 'badge-ok' : 'badge-alt');
+        const badge       = document.createElement('span');
+        badge.className   = 'ocr-resultado-badge ' + (campo.ok ? 'badge-ok' : 'badge-alt');
         badge.textContent = campo.ok ? 'Normal' : (campo.nota || 'Fuera de rango');
 
         fila.appendChild(label);
@@ -543,7 +401,6 @@ function mostrarResultadoOCR(datos) {
         fila.appendChild(badge);
         div.appendChild(fila);
 
-        // Referencia
         const ref       = document.createElement('span');
         ref.className   = 'ocr-resultado-ref';
         ref.textContent = 'Ref: ' + campo.ref;
@@ -551,20 +408,18 @@ function mostrarResultadoOCR(datos) {
 
         contenedorCampos.appendChild(div);
       });
-
     } else {
-      // Campos normales
       seccion.campos.forEach(campo => {
-        const div         = document.createElement('div');
-        div.className     = 'ocr-campo';
+        const div     = document.createElement('div');
+        div.className = 'ocr-campo';
 
         const label       = document.createElement('label');
         label.textContent = campo.label;
 
-        const input       = document.createElement('input');
-        input.type        = 'text';
-        input.value       = campo.valor;
-        input.readOnly    = true;
+        const input    = document.createElement('input');
+        input.type     = 'text';
+        input.value    = campo.valor;
+        input.readOnly = true;
 
         div.appendChild(label);
         div.appendChild(input);
@@ -590,33 +445,103 @@ function habilitarEdicion() {
   document.getElementById('btn-editar-ocr').disabled    = true;
 }
 
-function guardarDatos() {
-  const campos = document.querySelectorAll('#ocr-campos .ocr-campo');
-  const datos  = {};
+async function guardarDatos() {
+  if (!ultimoResultadoOCR || !ultimoTipoOCR) {
+    alert('No hay datos para guardar. Procese un documento primero.');
+    return;
+  }
 
-  campos.forEach(campo => {
-    const key   = campo.querySelector('label').textContent;
-    const val   = campo.querySelector('input').value;
-    datos[key]  = val;
+  // Si el usuario habilitó edición manual, se toman los valores actuales
+  // de los inputs (por si corrigió algo a mano) en vez de los datos crudos.
+  const inputsEditados = {};
+  document.querySelectorAll('#ocr-campos .ocr-campo').forEach(campo => {
+    const label = campo.querySelector('label');
+    const input = campo.querySelector('input');
+    if (label && input) inputsEditados[label.textContent] = input.value;
   });
 
-  console.log('Datos a guardar:', datos);
+  const btnGuardar = document.getElementById('btn-guardar-ocr');
+  btnGuardar.textContent = 'Guardando...';
+  btnGuardar.disabled    = true;
 
-  const statDocs = document.getElementById('stat-documentos');
-  if (statDocs) statDocs.textContent = parseInt(statDocs.textContent) + 1;
+  let body;
+  if (ultimoTipoOCR === 'dni') {
+    const ciu = inputsEditados['CIU / DNI'] || ultimoResultadoOCR.ciu;
+    if (!ciu) {
+      alert('No se detectó un CIU/DNI válido. Verifique el documento o edítelo manualmente.');
+      btnGuardar.textContent = 'Guardar en sistema';
+      btnGuardar.disabled    = false;
+      return;
+    }
+    body = {
+      ciu: ciu,
+      dni_data: {
+        ciu:              ciu,
+        tipo_dni:         inputsEditados['Tipo'] || ultimoResultadoOCR.tipo_dni,
+        nombres:          inputsEditados['Nombres']    || ultimoResultadoOCR.nombres,
+        apellidos:        inputsEditados['Apellidos']  || ultimoResultadoOCR.apellidos,
+        fecha_nacimiento: inputsEditados['Fecha Nac.'] || ultimoResultadoOCR.fecha_nacimiento,
+      },
+    };
+  } else {
+    if (!pacienteActual) {
+      alert('No hay un CIU de paciente asociado a este informe.');
+      btnGuardar.textContent = 'Guardar en sistema';
+      btnGuardar.disabled    = false;
+      return;
+    }
+    body = {
+      ciu: pacienteActual,
+      lab_data: {
+        tipo_informe:        ultimoResultadoOCR.tipo_informe || 'LAB_REPORT',
+        tipo_analisis:       ultimoResultadoOCR.tipo_analisis || 'Análisis de Laboratorio',
+        pruebas:             ultimoResultadoOCR.pruebas || [],
+        alertas_detectadas:  ultimoResultadoOCR.alertas || [],
+      },
+    };
+  }
 
-  alert('✓ Datos guardados correctamente en el sistema.');
-  limpiarOCR();
+  try {
+    const resp = await fetch(`${API_URL}/registro`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    const data = await resp.json();
+
+    btnGuardar.textContent = 'Guardar en sistema';
+    btnGuardar.disabled    = false;
+
+    if (!resp.ok || !data.ok) {
+      alert('No se pudo guardar: ' + (data.detail || data.mensaje || 'Error desconocido'));
+      return;
+    }
+
+    const statDocs = document.getElementById('stat-documentos');
+    if (statDocs) statDocs.textContent = parseInt(statDocs.textContent || 0) + 1;
+    const statPacientes = document.getElementById('stat-pacientes');
+    if (statPacientes) statPacientes.textContent = parseInt(statPacientes.textContent || 0) + 1;
+
+    alert('✓ Datos guardados correctamente en el sistema (CIU: ' + body.ciu + ').');
+    limpiarOCR();
+
+  } catch (err) {
+    btnGuardar.textContent = 'Guardar en sistema';
+    btnGuardar.disabled    = false;
+    alert('Error de conexión al guardar. Intenta de nuevo.');
+  }
 }
 
 function limpiarOCR() {
-  archivoActual = null;
+  archivoActual      = null;
+  ultimoResultadoOCR = null;
+  ultimoTipoOCR      = null;
 
   const inputImg = document.getElementById('input-imagen');
   if (inputImg) inputImg.value = '';
 
   document.getElementById('preview-contenedor').classList.remove('visible');
-  document.getElementById('preview-imagen').src             = '';
+  document.getElementById('preview-imagen').src              = '';
   document.getElementById('preview-nombre-archivo').textContent = '';
 
   document.getElementById('tipo-documento-contenedor').classList.remove('visible');
