@@ -1,7 +1,9 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-import tempfile, os, threading
+import tempfile, os
+
+import aldimi_web as aldimi
 
 app = FastAPI(title="ALDIMI 2.0 API")
 
@@ -12,85 +14,36 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Importar aldimi en segundo plano para no bloquear el arranque
-_aldimi = None
-_aldimi_error = None
-_aldimi_listo = False
-
-def _cargar_aldimi():
-    global _aldimi, _aldimi_error, _aldimi_listo
-    try:
-        import aldimi as _mod
-        _aldimi = _mod
-        print("aldimi.py cargado correctamente")
-    except Exception as e:
-        _aldimi_error = str(e)
-        print(f"Error cargando aldimi.py: {e}")
-    finally:
-        _aldimi_listo = True
-
-# Cargar en hilo separado al arrancar
-threading.Thread(target=_cargar_aldimi, daemon=True).start()
-
 class MensajeChat(BaseModel):
     mensaje: str
 
-class RespuestaChat(BaseModel):
-    respuesta: str
-    intencion: str = ""
-    confianza: float = 0.0
-
 @app.get("/")
 def raiz():
-    return {"estado": "ALDIMI 2.0 API corriendo", "aldimi_cargado": _aldimi is not None}
+    return {"estado": "ALDIMI 2.0 API corriendo", "pacientes_en_bd": len(aldimi._BD)}
 
 @app.get("/health")
 def health():
-    return {
-        "ok": True,
-        "aldimi_cargado": _aldimi is not None,
-        "aldimi_listo": _aldimi_listo,
-        "error": _aldimi_error
-    }
+    return {"ok": True, "pacientes_en_bd": len(aldimi._BD)}
 
-@app.post("/chat", response_model=RespuestaChat)
+@app.post("/chat")
 def chat(body: MensajeChat):
-    if _aldimi is None:
-        if not _aldimi_listo:
-            raise HTTPException(503, "Sistema cargando, intente en unos segundos...")
-        raise HTTPException(503, f"Error en módulo ALDIMI: {_aldimi_error}")
     try:
-        intent, confianza, respuesta = _aldimi.chatbot_response_nlp(body.mensaje)
-        return RespuestaChat(respuesta=respuesta, intencion=intent, confianza=confianza)
+        intent, confianza, respuesta = aldimi.chatbot_response_nlp(body.mensaje)
+        return {"respuesta": respuesta, "intencion": intent, "confianza": confianza}
     except Exception as e:
         raise HTTPException(500, f"Error en NLP: {e}")
 
 @app.post("/ocr/dni")
 async def ocr_dni(imagen: UploadFile = File(...)):
-    if _aldimi is None:
-        raise HTTPException(503, "Módulo ALDIMI no disponible")
     sufijo = os.path.splitext(imagen.filename or ".png")[1] or ".png"
     with tempfile.NamedTemporaryFile(delete=False, suffix=sufijo) as tmp:
         tmp.write(await imagen.read())
         ruta_tmp = tmp.name
     try:
-        fn = getattr(_aldimi, "procesar_imagen_dni_v2",
-                     getattr(_aldimi, "procesar_imagen_dni", None))
-        if fn is None:
-            raise HTTPException(500, "Función OCR de DNI no encontrada")
-        datos = fn(ruta_tmp)
+        datos = aldimi.procesar_imagen_dni(ruta_tmp)
         if datos is None:
             return {"ok": False, "mensaje": "No se pudo extraer información del DNI"}
-        return {
-            "ok": True,
-            "ciu": datos.get("ciu", ""),
-            "nombres": datos.get("nombres", ""),
-            "apellidos": datos.get("apellidos", ""),
-            "fecha_nacimiento": datos.get("fecha_nacimiento", ""),
-            "tipo_dni": datos.get("tipo_dni", ""),
-        }
-    except HTTPException:
-        raise
+        return {"ok": True, **datos}
     except Exception as e:
         raise HTTPException(500, f"Error en OCR DNI: {e}")
     finally:
@@ -99,33 +52,17 @@ async def ocr_dni(imagen: UploadFile = File(...)):
 
 @app.post("/ocr/lab")
 async def ocr_lab(imagen: UploadFile = File(...), ciu: str = ""):
-    if _aldimi is None:
-        raise HTTPException(503, "Módulo ALDIMI no disponible")
     sufijo = os.path.splitext(imagen.filename or ".png")[1] or ".png"
     with tempfile.NamedTemporaryFile(delete=False, suffix=sufijo) as tmp:
         tmp.write(await imagen.read())
         ruta_tmp = tmp.name
     try:
-        fn = getattr(_aldimi, "procesar_imagen_lab", None)
-        if fn is None:
-            raise HTTPException(500, "Función OCR de laboratorio no encontrada")
-        lab = fn(ruta_tmp, ciu_hint=ciu)
+        lab = aldimi.procesar_imagen_lab(ruta_tmp, ciu_hint=ciu)
         if not lab:
             return {"ok": False, "mensaje": "No se pudo extraer información del informe"}
-        resumen = ""
-        fmt = getattr(_aldimi, "_fmt_lab_resultado", None)
-        if fmt:
-            resumen = fmt(lab, ciu=ciu)
-        return {
-            "ok": True,
-            "tipo_informe": lab.get("tipo_informe", ""),
-            "tipo_analisis": lab.get("tipo_analisis", ""),
-            "pruebas": lab.get("pruebas", []),
-            "alertas": lab.get("alertas_detectadas", []),
-            "resumen": resumen,
-        }
-    except HTTPException:
-        raise
+        resumen = aldimi._fmt_lab_resultado(lab, ciu=ciu)
+        return {"ok": True, "resumen": resumen, "pruebas": lab.get("pruebas", []),
+                "alertas": lab.get("alertas_detectadas", [])}
     except Exception as e:
         raise HTTPException(500, f"Error en OCR Lab: {e}")
     finally:
@@ -134,23 +71,17 @@ async def ocr_lab(imagen: UploadFile = File(...), ciu: str = ""):
 
 @app.get("/expediente/{ciu}")
 def expediente(ciu: str):
-    if _aldimi is None:
-        raise HTTPException(503, "Módulo ALDIMI no disponible")
-    try:
-        bd = getattr(_aldimi, "_BD", {})
-        if ciu.upper() not in bd:
-            return {"ok": False, "mensaje": "Paciente no encontrado"}
-        reg = bd[ciu.upper()]
-        dp = reg.get("datos_personales", {})
-        return {
-            "ok": True,
-            "ciu": ciu.upper(),
-            "nombres": dp.get("nombres", reg.get("nombres", "")),
-            "apellidos": dp.get("apellidos", reg.get("apellidos", "")),
-            "fecha_nacimiento": dp.get("fecha_nacimiento", ""),
-            "estado": reg.get("metadata", {}).get("estado", ""),
-            "alertas_clinicas": reg.get("alertas_clinicas", []),
-            "tiene_laboratorio": reg.get("informe_laboratorio") is not None,
-        }
-    except Exception as e:
-        raise HTTPException(500, f"Error: {e}")
+    bd = aldimi._BD
+    if ciu.upper() not in bd:
+        return {"ok": False, "mensaje": "Paciente no encontrado"}
+    reg = bd[ciu.upper()]
+    dp = reg.get("datos_personales", {})
+    return {
+        "ok": True,
+        "ciu": ciu.upper(),
+        "nombres": dp.get("nombres", reg.get("nombres", "")),
+        "apellidos": dp.get("apellidos", reg.get("apellidos", "")),
+        "fecha_nacimiento": dp.get("fecha_nacimiento", ""),
+        "alertas_clinicas": reg.get("alertas_clinicas", []),
+        "tiene_laboratorio": reg.get("informe_laboratorio") is not None,
+    }
