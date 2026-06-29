@@ -10,4 +10,3 @@ pytesseract
 easyocr
 nltk
 bcrypt
-spacy
