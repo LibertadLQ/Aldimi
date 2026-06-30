@@ -1,6 +1,6 @@
 // ── URL de la API ─────────────────────────────────────────────────────────────
 const API_URL = 'https://aldimi-api.onrender.com';
-
+const API_URL_OCR = 'http://127.0.0.1:8000'; 
 document.addEventListener('DOMContentLoaded', () => {
   cargarUsuario();
   mostrarFecha();
@@ -283,7 +283,7 @@ async function procesarOCR() {
     }
   }
 
-  const endpoint = esDNI ? `${API_URL}/ocr/dni` : `${API_URL}/ocr/lab`;
+  const endpoint = esDNI ? `${API_URL_OCR}/ocr/dni` : `${API_URL_OCR}/ocr/lab`;
 
   const formData = new FormData();
   formData.append('imagen', archivoActual);
