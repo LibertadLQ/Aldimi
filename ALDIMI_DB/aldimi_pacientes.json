@@ -1,0 +1,453 @@
+{
+  "sesion": {
+    "ultima_actualizacion": "2026-06-29T02:32:44.383582",
+    "archivo": "aldimi_pacientes.json"
+  },
+  "pacientes": {
+    "W412599": {
+      "ciu": "W412599",
+      "metadata": {
+        "ciu": "W412599",
+        "tipo_dni": "DNI_USA",
+        "estado": "completo",
+        "timestamp": "2026-06-29T02:32:44.382344"
+      },
+      "datos_personales": {
+        "nombres": "ALEJANDRO",
+        "apellidos": "RIOS E",
+        "fecha_nacimiento": "12/26/1991",
+        "imagen_dni": "/content/drive/MyDrive/DNI_ALDIMI/generated.photos_v3_0025056.png"
+      },
+      "informe_laboratorio": {
+        "ciu_paciente": "W412599",
+        "laboratorio": "NN DIAGNOSTIC",
+        "tipo_informe": "INFORME_MEDICO",
+        "tipo_analisis": "CRP",
+        "imagen_lab": "/content/drive/MyDrive/LAB_ALDIMI/AHD-0425-PA-0007719_E-REPORTS_250427_2032@E.pdf_page_4.png",
+        "pruebas": [
+          {
+            "nombre": "F Ff",
+            "valor_txt": "8-80",
+            "tipo_dato": "rango",
+            "referencia": "8-80."
+          },
+          {
+            "nombre": "Anno",
+            "valor": 4.0,
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "Centre /",
+            "valor": 1.1247,
+            "tipo_dato": "numerico",
+            "unidad": "LABORATORY"
+          },
+          {
+            "nombre": "Time",
+            "valor": 8.0,
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "Mr.",
+            "valor_txt": "Dr. BHAVESH CHAUHAN MD PS o",
+            "tipo_dato": "texto"
+          },
+          {
+            "nombre": "C-Reactive Protein (CRP)",
+            "valor": 267.8,
+            "tipo_dato": "numerico",
+            "unidad": "mg/L",
+            "flag": "H",
+            "referencia": "0-5"
+          },
+          {
+            "nombre": "Lt A",
+            "valor": 8.0,
+            "tipo_dato": "numerico"
+          }
+        ],
+        "parametros_clinicos": [
+          {
+            "nombre": "F Ff",
+            "valor_txt": "8-80",
+            "tipo_dato": "rango",
+            "referencia": "8-80."
+          },
+          {
+            "nombre": "Anno",
+            "valor": 4.0,
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "Centre /",
+            "valor": 1.1247,
+            "tipo_dato": "numerico",
+            "unidad": "LABORATORY"
+          },
+          {
+            "nombre": "Time",
+            "valor": 8.0,
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "C-Reactive Protein (CRP)",
+            "valor": 267.8,
+            "tipo_dato": "numerico",
+            "unidad": "mg/L",
+            "flag": "H",
+            "referencia": "0-5"
+          },
+          {
+            "nombre": "Lt A",
+            "valor": 8.0,
+            "tipo_dato": "numerico"
+          }
+        ],
+        "rangos_referencia": [
+          {
+            "poblacion": "New born up to 3 weeks",
+            "valor": "< 4.1 mg/L"
+          },
+          {
+            "poblacion": "Infants and children",
+            "valor": "<2.8 mg/L"
+          }
+        ],
+        "metodo": "Immunoturbidimetric",
+        "campos_textuales": [
+          {
+            "etiqueta": "Mr.",
+            "texto": "Dr. BHAVESH CHAUHAN MD PS o"
+          }
+        ],
+        "alertas_detectadas": [
+          {
+            "prueba": "C-Reactive Protein (CRP)",
+            "valor": 267.8,
+            "tipo": "ALTO [H]",
+            "unidad": "mg/L",
+            "referencia": "0-5"
+          }
+        ]
+      },
+      "alertas_clinicas": [
+        {
+          "prueba": "C-Reactive Protein (CRP)",
+          "valor": 267.8,
+          "tipo": "ALTO [H]",
+          "unidad": "mg/L",
+          "referencia": "0-5"
+        }
+      ],
+      "nombres": "NO_DETECTADO",
+      "apellidos": "NO_DETECTADO",
+      "fecha_nacimiento": "NO_DETECTADO"
+    },
+    "74747580": {
+      "ciu": "74747580",
+      "metadata": {
+        "ciu": "74747580",
+        "tipo_dni": "DNI_PERU_NUEVO",
+        "estado": "solo_dni",
+        "timestamp": "2026-06-28T17:10:50.157792"
+      },
+      "datos_personales": {
+        "nombres": "JUAN FELIPE",
+        "apellidos": "GRANADOS ALLENDE",
+        "fecha_nacimiento": "12/09/2004",
+        "imagen_dni": "Captura de pantalla 2026-06-28 120036.png"
+      },
+      "informe_laboratorio": null,
+      "alertas_clinicas": [],
+      "nombres": "NO_DETECTADO",
+      "apellidos": "NO_DETECTADO",
+      "fecha_nacimiento": "NO_DETECTADO"
+    },
+    "42951703": {
+      "ciu": "42951703",
+      "metadata": {
+        "ciu": "42951703",
+        "tipo_dni": "DNI_PERU_CLASICO",
+        "estado": "completo",
+        "timestamp": "2026-06-28T17:17:32.292052"
+      },
+      "datos_personales": {
+        "nombres": "ASENCION TIMONEL",
+        "apellidos": "ALLENDE ABARCA",
+        "fecha_nacimiento": "08/15/1951",
+        "imagen_dni": "Captura de pantalla 2026-06-28 121039.png"
+      },
+      "informe_laboratorio": {
+        "ciu_paciente": "42951703",
+        "laboratorio": "CCV LAB",
+        "tipo_informe": "LAB_NUMERICO",
+        "tipo_analisis": "Hemograma Automatizado",
+        "pruebas": [
+          {
+            "nombre": "HEMATÍES",
+            "valor": 5.02,
+            "unidad": "x10^6/uL",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "LEUCOCITOS",
+            "valor": 5.19,
+            "unidad": "x10^3/uL",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "PLAQUETAS",
+            "valor": 158.0,
+            "unidad": "x10^3/uL",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "HEMOGLOBINA",
+            "valor": 14.4,
+            "unidad": "g/dL",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "HEMATOCRITO",
+            "valor": 44.4,
+            "unidad": "%",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "VCM",
+            "valor": 88.5,
+            "unidad": "fL",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "HCM",
+            "valor": 28.7,
+            "unidad": "pg",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "CHCM",
+            "valor": 32.4,
+            "unidad": "g/dL",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "RDW-SD",
+            "valor": 42.2,
+            "unidad": "fL",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "RDW-CV",
+            "valor": 14.1,
+            "unidad": "%",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "SEGMENTADOS",
+            "valor": 61.0,
+            "unidad": "%",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "LINFOCITOS",
+            "valor": 30.0,
+            "unidad": "%",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "MONOCITOS",
+            "valor": 6.0,
+            "unidad": "%",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "EOSINÓFILOS",
+            "valor": 3.0,
+            "unidad": "%",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "RATIO NEUTRÓFILOS/LINFOCITOS",
+            "valor": 2.03,
+            "unidad": "",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "EOSINÓFILOS ABS",
+            "valor": 0.16,
+            "unidad": "x10^3/uL",
+            "tipo_dato": "numerico"
+          }
+        ],
+        "parametros_clinicos": [
+          {
+            "nombre": "HEMATÍES",
+            "valor": 5.02,
+            "unidad": "x10^6/uL",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "LEUCOCITOS",
+            "valor": 5.19,
+            "unidad": "x10^3/uL",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "PLAQUETAS",
+            "valor": 158.0,
+            "unidad": "x10^3/uL",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "HEMOGLOBINA",
+            "valor": 14.4,
+            "unidad": "g/dL",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "HEMATOCRITO",
+            "valor": 44.4,
+            "unidad": "%",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "VCM",
+            "valor": 88.5,
+            "unidad": "fL",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "HCM",
+            "valor": 28.7,
+            "unidad": "pg",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "CHCM",
+            "valor": 32.4,
+            "unidad": "g/dL",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "RDW-SD",
+            "valor": 42.2,
+            "unidad": "fL",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "RDW-CV",
+            "valor": 14.1,
+            "unidad": "%",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "SEGMENTADOS",
+            "valor": 61.0,
+            "unidad": "%",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "LINFOCITOS",
+            "valor": 30.0,
+            "unidad": "%",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "MONOCITOS",
+            "valor": 6.0,
+            "unidad": "%",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "EOSINÓFILOS",
+            "valor": 3.0,
+            "unidad": "%",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "RATIO NEUTRÓFILOS/LINFOCITOS",
+            "valor": 2.03,
+            "unidad": "",
+            "tipo_dato": "numerico"
+          },
+          {
+            "nombre": "EOSINÓFILOS ABS",
+            "valor": 0.16,
+            "unidad": "x10^3/uL",
+            "tipo_dato": "numerico"
+          }
+        ],
+        "rangos_referencia": [],
+        "alertas_detectadas": []
+      },
+      "alertas_clinicas": [],
+      "nombres": "NO_DETECTADO",
+      "apellidos": "NO_DETECTADO",
+      "fecha_nacimiento": "NO_DETECTADO"
+    }
+  },
+  "alertas_clinicas": [
+    {
+      "prueba": "C-Reactive Protein (CRP)",
+      "valor": 267.8,
+      "tipo": "ALTO [H]",
+      "unidad": "mg/L",
+      "referencia": "0-5",
+      "ciu_paciente": "W412599"
+    },
+    {
+      "prueba": "C-Reactive Protein (CRP)",
+      "valor": 267.8,
+      "tipo": "ALTO [H]",
+      "unidad": "mg/L",
+      "referencia": "0-5",
+      "ciu_paciente": "W412599"
+    }
+  ],
+  "extra": {
+    "documentos_ocr": [
+      {
+        "timestamp": "2026-06-28T17:02:37.444957",
+        "ruta": "Captura de pantalla 2026-06-28 120036.png",
+        "origen": "registro",
+        "resultado": "registro_paciente",
+        "tipo_documento": "DNI_PERU",
+        "texto_ocr": "ha REPUBLICA DEL PERU PRI cul\nSU Documento naciona, oe mwenmioao 2 74747580-1\nPrimer Apellido\n+ GRANADOS a\nSegunde Apellido\n> — ma\n1 Prancmbres DA\n_ JUAN FELIPE\n3\n$  SZ9D1O PER 09 422008\nEstado Civil fecha de Emisión\nSOLTERO 09032023\nLp N\"de Tarjeta + Fecha de Caducidad\n0201698550 09.03 2031"
+      },
+      {
+        "timestamp": "2026-06-28T17:13:17.599193",
+        "ruta": "Captura de pantalla 2026-06-28 121039.png",
+        "origen": "registro",
+        "resultado": "registro_paciente",
+        "tipo_documento": "DNI_PERU",
+        "texto_ocr": "GR documenronacionatoeientoad« 42991703-1\n— Primer Apellido\nE a ALLENDE 3\n4 y Segundo Apellido a’\nY an\nSS ABARCA rea\nE E ó Prenombres E\n4 == ASENCION TIMONEL\ne FA\nSl 3 Sexo Nacionalidad Fecha de Nacimiento\na ; 3892032 Mm PER 15081951\nEstado Civil Fecha de Emisión\nlA CASADO 15 09 2022\nee N°de Tarjeta Fecha de Caducidad\n0201141554 NO CADUCA"
+      }
+    ],
+    "eventos": [
+      {
+        "timestamp": "2026-06-28T17:02:37.457311",
+        "tipo": "registro_paciente",
+        "ciu": "74747580",
+        "ruta": "Captura de pantalla 2026-06-28 120036.png",
+        "tipo_documento": "DNI_PERU",
+        "estado": "iniciado",
+        "nota": "Registro de paciente iniciado a través del chatbot."
+      },
+      {
+        "timestamp": "2026-06-28T17:13:17.611489",
+        "tipo": "registro_paciente",
+        "ciu": "42951703",
+        "ruta": "Captura de pantalla 2026-06-28 121039.png",
+        "tipo_documento": "DNI_PERU",
+        "estado": "iniciado",
+        "nota": "Registro de paciente iniciado a través del chatbot."
+      }
+    ],
+    "analisis_total": {
+      "dni_total": 230,
+      "lab_total": 230,
+      "total_imagenes": 460
+    }
+  }
+}
