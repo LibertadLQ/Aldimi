@@ -3,9 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import tempfile, os
 
-# separar responsabilidades: NLP y CNN en módulos dedicados
-from nlp import chatbot_response_nlp, registrar_paciente, listar_pacientes, listar_alertas, _fmt_lab_resultado, _BD
-from cnn import procesar_imagen_dni, procesar_imagen_lab
+import aldimi_web as aldimi
 
 app = FastAPI(title="ALDIMI 2.0 API")
 
@@ -21,16 +19,16 @@ class MensajeChat(BaseModel):
 
 @app.get("/")
 def raiz():
-    return {"estado": "ALDIMI 2.0 API corriendo", "pacientes_en_bd": len(_BD)}
+    return {"estado": "ALDIMI 2.0 API corriendo", "pacientes_en_bd": len(aldimi._BD)}
 
 @app.get("/health")
 def health():
-    return {"ok": True, "pacientes_en_bd": len(_BD)}
+    return {"ok": True, "pacientes_en_bd": len(aldimi._BD)}
 
 @app.post("/chat")
 def chat(body: MensajeChat):
     try:
-        intent, confianza, respuesta = chatbot_response_nlp(body.mensaje)
+        intent, confianza, respuesta = aldimi.chatbot_response_nlp(body.mensaje)
         return {"respuesta": respuesta, "intencion": intent, "confianza": confianza}
     except Exception as e:
         raise HTTPException(500, f"Error en NLP: {e}")
@@ -42,7 +40,7 @@ async def ocr_dni(imagen: UploadFile = File(...)):
         tmp.write(await imagen.read())
         ruta_tmp = tmp.name
     try:
-        datos = procesar_imagen_dni(ruta_tmp)
+        datos = aldimi.procesar_imagen_dni(ruta_tmp)
         if datos is None:
             return {"ok": False, "mensaje": "No se pudo extraer información del DNI"}
         return {"ok": True, **datos}
@@ -59,10 +57,10 @@ async def ocr_lab(imagen: UploadFile = File(...), ciu: str = ""):
         tmp.write(await imagen.read())
         ruta_tmp = tmp.name
     try:
-        lab = procesar_imagen_lab(ruta_tmp, ciu_hint=ciu)
+        lab = aldimi.procesar_imagen_lab(ruta_tmp, ciu_hint=ciu)
         if not lab:
             return {"ok": False, "mensaje": "No se pudo extraer información del informe"}
-        resumen = _fmt_lab_resultado(lab, ciu=ciu)
+        resumen = aldimi._fmt_lab_resultado(lab, ciu=ciu)
         return {"ok": True, "resumen": resumen, "pruebas": lab.get("pruebas", []),
                 "alertas": lab.get("alertas_detectadas", [])}
     except Exception as e:
@@ -85,7 +83,7 @@ def registro(body: RegistroBody):
     aquí para persistirlos.
     """
     try:
-        registro_guardado = registrar_paciente(
+        registro_guardado = aldimi.registrar_paciente(
             ciu=body.ciu, dni_data=body.dni_data, lab_data=body.lab_data
         )
         return {"ok": True, "registro": registro_guardado}
@@ -96,7 +94,7 @@ def registro(body: RegistroBody):
 
 @app.get("/expediente/{ciu}")
 def expediente(ciu: str):
-    bd = _BD
+    bd = aldimi._BD
     if ciu.upper() not in bd:
         return {"ok": False, "mensaje": "Paciente no encontrado"}
     reg = bd[ciu.upper()]
@@ -114,9 +112,9 @@ def expediente(ciu: str):
 @app.get("/pacientes")
 def pacientes():
     """Lista resumida de todos los pacientes registrados (para tablas en el frontend)."""
-    return {"ok": True, "pacientes": listar_pacientes()}
+    return {"ok": True, "pacientes": aldimi.listar_pacientes()}
 
 @app.get("/alertas")
 def alertas():
     """Lista de pacientes con alertas clínicas activas (conecta con la intención ALERTA del chatbot)."""
-    return {"ok": True, "alertas": listar_alertas()}
+    return {"ok": True, "alertas": aldimi.listar_alertas()}

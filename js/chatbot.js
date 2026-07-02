@@ -1,8 +1,6 @@
 // ── URL de la API ─────────────────────────────────────────────────────────────
-// En localhost usa la API local, en producción usa Render
-const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-const API_URL = isLocal ? 'http://127.0.0.1:8000' : 'https://aldimi-api.onrender.com';
-const API_URL_OCR = 'http://127.0.0.1:8000'; // OCR siempre local (contiene Tesseract) 
+const API_URL = 'https://aldimi-api.onrender.com';
+const API_URL_OCR = 'http://127.0.0.1:8000'; 
 document.addEventListener('DOMContentLoaded', () => {
   cargarUsuario();
   mostrarFecha();
