@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import tempfile, os
 
-import aldimi_web_local as aldimi
+import aldimi
 
 app = FastAPI(title="ALDIMI 2.0 API")
 

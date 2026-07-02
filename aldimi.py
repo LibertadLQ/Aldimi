@@ -334,6 +334,23 @@ def _get_reader():
             print(f'✗ Error inicializando EasyOCR: {e}')
     return _easyocr_reader
 
+def _preprocess_for_tesseract(ruta):
+    if not _PIL_Image:
+        return None
+    try:
+        img = _PIL_Image.open(ruta).convert('L')
+        img = img.resize((img.width * 2, img.height * 2), _PIL_Image.LANCZOS)
+        if cv2 is not None:
+            arr = np.array(img)
+            arr = cv2.GaussianBlur(arr, (3, 3), 0)
+            _, arr = cv2.threshold(arr, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+            img = _PIL_Image.fromarray(arr)
+        return img
+    except Exception as e:
+        _log.warning(f'OCR preprocess error: {e}')
+        return None
+
+
 def _extraer_texto_imagen(ruta):
     """
     Extrae texto de una imagen.
@@ -342,22 +359,46 @@ def _extraer_texto_imagen(ruta):
     """
     texto = ''
 
-    # ── Intento 1: Tesseract (solo en desarrollo) ───────────────────────────
-    if _USE_TESSERACT and _TESSERACT_OK and _PIL_Image:
+    def extraer_con_tesseract(imagen):
         try:
-            from PIL import Image as _PILImg
-            img_pil = _PILImg.open(ruta)
             texto_tess = pytesseract.image_to_string(
-                img_pil, lang='spa+eng',
+                imagen, lang='spa+eng',
                 config='--psm 6 --oem 3'
             )
-            if texto_tess and len(texto_tess.strip()) > 15:
+            if texto_tess and len(texto_tess.strip()) > 10:
                 print(f'✓ Tesseract extrajo {len(texto_tess)} chars')
                 return texto_tess.strip()
         except Exception as e:
             _log.warning(f'Tesseract error: {e}')
+        return ''
 
-    # ── Intento 2: EasyOCR (siempre disponible como respaldo) ───────────────
+    if _USE_TESSERACT and _TESSERACT_OK and _PIL_Image:
+        try:
+            img_pil = _PIL_Image.open(ruta)
+            texto = extraer_con_tesseract(img_pil)
+            if texto:
+                return texto
+
+            img_pre = _preprocess_for_tesseract(ruta)
+            if img_pre:
+                texto = extraer_con_tesseract(img_pre)
+                if texto:
+                    return texto
+
+            # Intento extra usando un modo diferente de Tesseract
+            try:
+                texto_tess = pytesseract.image_to_string(
+                    img_pil, lang='spa+eng',
+                    config='--psm 11 --oem 3'
+                )
+                if texto_tess and len(texto_tess.strip()) > 10:
+                    print(f'✓ Tesseract alt-mode extrajo {len(texto_tess)} chars')
+                    return texto_tess.strip()
+            except Exception as e:
+                _log.warning(f'Tesseract alt-mode error: {e}')
+        except Exception as e:
+            _log.warning(f'Tesseract pipeline error: {e}')
+
     reader = _get_reader()
     if reader:
         try:
@@ -366,10 +407,27 @@ def _extraer_texto_imagen(ruta):
             texto = '\n'.join(lines)
             if texto:
                 print(f'✓ EasyOCR extrajo {len(texto)} chars')
+                return texto
         except Exception as e:
             _log.warning(f'EasyOCR error: {e}')
 
+    # Último recurso: intentar Tesseract en escala de grises si no hay EasyOCR
+    if _PIL_Image and _TESSERACT_OK:
+        img_pre = _preprocess_for_tesseract(ruta)
+        if img_pre:
+            try:
+                texto_tess = pytesseract.image_to_string(
+                    img_pre, lang='spa+eng',
+                    config='--psm 11 --oem 3'
+                )
+                if texto_tess and len(texto_tess.strip()) > 10:
+                    print(f'✓ Tesseract fallback extrajo {len(texto_tess)} chars')
+                    return texto_tess.strip()
+            except Exception as e:
+                _log.warning(f'Tesseract fallback error: {e}')
+
     return texto
+
 
 def clasificar_documento(texto):
     t = texto.upper()
