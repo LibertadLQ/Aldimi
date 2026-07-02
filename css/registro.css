@@ -1,0 +1,560 @@
+/* ── Variables globales ── */
+:root {
+  --cream:      #F7F4EE;
+  --ink:        #1A1A18;
+  --ink-mid:    #4A4A45;
+  --ink-soft:   #8A8A82;
+  --teal:       #0F6E56;
+  --teal-lt:    #E1F5EE;
+  --teal-mid:   #1D9E75;
+  --red:        #A32D2D;
+  --border:     rgba(26,26,24,0.12);
+  --radius:     12px;
+}
+
+/* ── Reset base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+}
+
+#panel-izquierdo {
+  width: 42%;
+  background: var(--teal);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem 3.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#panel-izquierdo::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+}
+
+#panel-izquierdo::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+}
+
+#marca {
+  position: relative;
+  z-index: 1;
+}
+
+#marca > span {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.9);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 100px;
+  margin-bottom: 1.2rem;
+}
+
+#marca h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 3rem;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+#marca p {
+  color: rgba(255,255,255,0.65);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 260px;
+  margin-top: 1rem;
+}
+
+#pie-panel {
+  position: relative;
+  z-index: 1;
+}
+
+#ods-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+#ods-tags span {
+  background: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.8);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 100px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+#pie-panel > p {
+  color: rgba(255,255,255,0.4);
+  font-size: 11px;
+  margin-top: 1rem;
+}
+
+#panel-derecho {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+}
+
+#panel-derecho > * {
+  width: 100%;
+  max-width: 420px;
+}
+
+
+/* ── Tabs ── */
+#tabs {
+  display: flex;
+  background: rgba(26,26,24,0.06);
+  border-radius: 10px;
+  padding: 4px;
+  margin-bottom: 1.5rem;
+}
+
+#tabs button {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 9px 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#tabs button.active {
+  background: #fff;
+  color: var(--ink);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+
+/* ── Alerta global ── */
+#alerta-global {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 420px;
+}
+
+#alerta-global.exito {
+  display: flex;
+  background: var(--teal-lt);
+  color: var(--teal);
+  border: 1px solid rgba(15,110,86,0.2);
+}
+
+#alerta-global.error {
+  display: flex;
+  background: #FCEBEB;
+  color: var(--red);
+  border: 1px solid rgba(163,45,45,0.2);
+}
+
+
+/* ── Secciones de formulario ── */
+#panel-login,
+#panel-registro {
+  display: none;
+  width: 100%;
+  max-width: 420px;
+}
+
+#panel-login.activo,
+#panel-registro.activo {
+  display: block;
+}
+
+#panel-login h2,
+#panel-registro h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.9rem;
+  color: var(--ink);
+  margin-bottom: 0.3rem;
+  line-height: 1.2;
+}
+
+#panel-login > p,
+#panel-registro > p {
+  color: var(--ink-soft);
+  font-size: 14px;
+  margin-bottom: 1.5rem;
+}
+
+
+/* ── Campos del formulario ── */
+
+#panel-login > div,
+#panel-registro > div {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-mid);
+  margin-bottom: 6px;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 9px;
+  padding: 11px 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="email"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: var(--teal-mid);
+  box-shadow: 0 0 0 3px rgba(29,158,117,0.12);
+}
+
+input.error {
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgba(163,45,45,0.1);
+}
+
+/* Mensajes de error por campo */
+#error-login-email,
+#error-login-pass,
+#error-reg-nombre,
+#error-reg-apellido,
+#error-reg-email,
+#error-reg-pass,
+#error-reg-pass2,
+#error-reg-codigo-admin {
+  display: none;
+  color: var(--red);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+#error-login-email.visible,
+#error-login-pass.visible,
+#error-reg-nombre.visible,
+#error-reg-apellido.visible,
+#error-reg-email.visible,
+#error-reg-pass.visible,
+#error-reg-pass2.visible,
+#error-reg-codigo-admin.visible {
+  display: block;
+}
+
+
+/* ── Fila de dos columnas (Nombres / Apellidos) ── */
+#panel-registro .fila-dos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+#panel-registro .fila-dos > div {
+  margin-bottom: 0;
+}
+
+
+/* ── Radios de Rol ── */
+#panel-registro .campo-rol {
+  margin-bottom: 1rem;
+}
+
+#panel-registro .campo-rol > label {
+  margin-bottom: 8px;
+}
+
+#panel-registro .campo-rol .opciones-rol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 0;
+}
+
+#panel-registro .campo-rol .opciones-rol > div {
+  position: relative;
+}
+
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+input[type="radio"] + label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border: 1.5px solid var(--border);
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--ink-mid);
+  background: #fff;
+  transition: all 0.15s;
+  margin: 0;
+}
+
+input[type="radio"] + label svg {
+  flex-shrink: 0;
+  opacity: 0.5;
+  transition: opacity 0.15s;
+}
+
+input[type="radio"]:checked + label {
+  border-color: var(--teal-mid);
+  background: var(--teal-lt);
+  color: var(--teal);
+  font-weight: 500;
+}
+
+input[type="radio"]:checked + label svg {
+  opacity: 1;
+  color: var(--teal);
+}
+
+
+/* ── Código de administrador condicional ── */
+#campo-codigo-admin {
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ── Wrapper input + botón mostrar/ocultar ── */
+.input-password-wrap {
+  position: relative;
+}
+
+.input-password-wrap input[type="password"],
+.input-password-wrap input[type="text"] {
+  padding-right: 44px;
+}
+
+.btn-toggle-pass {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--ink-soft);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s;
+  line-height: 1;
+}
+
+.btn-toggle-pass:hover {
+  color: var(--teal);
+}
+
+
+/* ── Barra de fortaleza de contraseña ── */
+#fortaleza-wrap {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+#fortaleza-wrap.visible {
+  display: flex;
+}
+
+#fortaleza-barra {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+}
+
+#fortaleza-barra span {
+  flex: 1;
+  height: 4px;
+  border-radius: 100px;
+  background: rgba(26,26,24,0.1);
+  transition: background 0.25s;
+}
+
+#fortaleza-label {
+  font-size: 11px;
+  font-weight: 500;
+  min-width: 48px;
+  text-align: right;
+}
+
+/* estados de fortaleza */
+.fortaleza-1 #fortaleza-seg1                              { background: #A32D2D; }
+.fortaleza-2 #fortaleza-seg1, .fortaleza-2 #fortaleza-seg2 { background: #C87D2A; }
+.fortaleza-3 #fortaleza-seg1, .fortaleza-3 #fortaleza-seg2, .fortaleza-3 #fortaleza-seg3 { background: #1D9E75; }
+.fortaleza-4 #fortaleza-seg1, .fortaleza-4 #fortaleza-seg2,
+.fortaleza-4 #fortaleza-seg3, .fortaleza-4 #fortaleza-seg4 { background: #0F6E56; }
+
+.fortaleza-1 #fortaleza-label { color: #A32D2D; }
+.fortaleza-2 #fortaleza-label { color: #C87D2A; }
+.fortaleza-3 #fortaleza-label { color: #1D9E75; }
+.fortaleza-4 #fortaleza-label { color: #0F6E56; }
+
+
+/* ── Enlace olvidé contraseña ── */
+.olvide-pass {
+  text-align: right;
+  margin-top: -4px;
+  margin-bottom: 1rem !important;
+}
+
+.olvide-pass a {
+  font-size: 12px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.olvide-pass a:hover {
+  color: var(--teal);
+}
+
+
+/* ── Botón principal ── */
+#panel-login > button[onclick="handleLogin()"],
+#panel-registro > button[onclick="handleRegistro()"] {
+  width: 100%;
+  background: var(--teal);
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  padding: 13px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s, transform 0.1s, opacity 0.2s;
+}
+
+#panel-login > button[onclick="handleLogin()"]:hover,
+#panel-registro > button[onclick="handleRegistro()"]:hover {
+  background: #0b5542;
+}
+
+#panel-login > button[onclick="handleLogin()"]:active,
+#panel-registro > button[onclick="handleRegistro()"]:active {
+  transform: scale(0.99);
+}
+
+#panel-login > button[onclick="handleLogin()"]:disabled,
+#panel-registro > button[onclick="handleRegistro()"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* ── Links finales ── */
+#panel-login > p:last-child,
+#panel-registro > p:last-child {
+  text-align: center;
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-top: 1.2rem;
+  margin-bottom: 0;
+}
+
+#panel-login a,
+#panel-registro a {
+  color: var(--teal);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#panel-login a:hover,
+#panel-registro a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 700px) {
+  body {
+    flex-direction: column;
+  }
+
+  #panel-izquierdo {
+    width: 100%;
+    padding: 2rem;
+    min-height: 180px;
+  }
+
+  #marca h1 {
+    font-size: 2rem;
+  }
+
+  #pie-panel {
+    display: none;
+  }
+
+  #panel-derecho {
+    padding: 2rem 1.25rem;
+    justify-content: flex-start;
+    padding-top: 2rem;
+  }
+}
