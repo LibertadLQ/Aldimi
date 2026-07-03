@@ -353,17 +353,15 @@ body {
   color: var(--ink);
 }
 
-#chat-contenedor{
-    background:#fff;
-    border:.5px solid var(--border);
-    border-radius:var(--radius-lg);
-    display:flex;
-    flex-direction:column;
-
-    height:calc(100vh - 120px);
-    min-height:650px;
-
-    overflow:hidden;
+#chat-contenedor {
+  background: #fff;
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 220px);
+  min-height: 650px;
+  overflow: hidden;
 }
 
 #chat-mensajes {
