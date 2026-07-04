@@ -10,5 +10,17 @@
     "alertas_clinicas": [],
     "creado_en": "2026-07-03T03:51:55.907829",
     "actualizado_en": "2026-07-03T03:51:55.907829"
+  },
+  "42951703": {
+    "ciu": "42951703",
+    "datos_personales": {
+      "nombres": "ASENCION TIMONEL",
+      "apellidos": "ALLENDE ABARCA",
+      "fecha_nacimiento": "08/15/1951"
+    },
+    "informes_laboratorio": [],
+    "alertas_clinicas": [],
+    "creado_en": "2026-07-03T22:04:08.823555",
+    "actualizado_en": "2026-07-03T22:04:08.823581"
   }
 }

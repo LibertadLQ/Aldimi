@@ -49,6 +49,7 @@ KNOWLEDGE_BASE = {
         "si el escaneo salió mal.\n"
         "   4. Confirme para guardar el registro.\n"
         "Repita el mismo proceso con el informe de laboratorio cuando lo tenga."
+        "¿Desea información sobre algún otro servicio?"
     ),
     "DONACION": (
         "Canales de donación del Albergue ALDIMI:\n"
@@ -57,18 +58,21 @@ KNOWLEDGE_BASE = {
         "   • Interbank: 200-3456789-012\n"
         "   • En especie: Ropa, alimentos, medicamentos (lunes a sábado 9am-5pm).\n"
         "   • Voluntariado: coordinacion@aldimi.org"
+        "¿Desea información sobre algún otro servicio?"
     ),
     "EXPEDIENTE": (
         "Para consultar el expediente, indique el CIU del paciente.\n"
         "   Formato Perú: 8 dígitos (ej: 42951703)\n"
         "   Formato USA : letra + 6 dígitos (ej: W839927)\n"
         "Podrá ver: datos personales, análisis clínicos y alertas detectadas."
+        
     ),
     "ALERTA": (
         "Se ha detectado una situación de riesgo emocional.\n"
         "Se registrará una alerta para el equipo de soporte psicosocial.\n"
         "El personal evaluará el caso a la brevedad.\n"
         "En emergencias llame al número de guardia 24/7."
+        "¿Desea información sobre algún otro servicio?"
     ),
     "REGLAMENTO": (
         "Reglamento del Albergue ALDIMI:\n"
@@ -78,6 +82,7 @@ KNOWLEDGE_BASE = {
         "   ALIMENTACIÓN: desayuno, almuerzo y cena incluidos.\n"
         "   PROHIBIDO: alcohol, cigarrillos, visitas no autorizadas.\n"
         "   VISITAS: Solo familiares directos, sábados 3pm-5pm."
+        "¿Desea información sobre algún otro servicio?"
     ),
     "SERVICIOS": (
         "Servicios del Albergue ALDIMI:\n"
@@ -87,6 +92,7 @@ KNOWLEDGE_BASE = {
         "   Gestión de citas médicas en hospitales de referencia.\n"
         "   Lavandería 2 veces por semana.\n"
         "   Acceso a internet y sala de esparcimiento."
+        "¿Desea información sobre algún otro servicio?"
     ),
     "REQUISITOS": (
         "Requisitos para ingresar al Albergue ALDIMI:\n"
@@ -95,6 +101,7 @@ KNOWLEDGE_BASE = {
         "   Carta de referencia del hospital tratante.\n"
         "   No contar con familiares en Lima que brinden alojamiento.\n"
         "   Llenar formulario de admisión al ingreso."
+        "¿Desea información sobre algún otro servicio?"
     ),
     "VISITAS": (
         "Política de visitas del Albergue ALDIMI:\n"
@@ -102,11 +109,12 @@ KNOWLEDGE_BASE = {
         "   • Horario: sábados 3pm-5pm.\n"
         "   • Niños menores de 12 años no ingresan a habitaciones.\n"
         "   • Toda visita debe registrarse en recepción con DNI."
+        "¿Desea información sobre algún otro servicio?"
     ),
     "FALLBACK": (
         "No pude entender su consulta. Puede escribir:\n"
-        "   horario | registro | donaciones | expedientes\n"
-        "   alertas | reglamento | servicios | requisitos | visitas"
+        "   horario | donaciones | expedientes | alertas\n"
+        "   reglamento | servicios | requisitos | visitas"
     ),
 }
 
