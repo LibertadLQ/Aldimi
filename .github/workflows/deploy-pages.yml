@@ -1,0 +1,30 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # If your site needs a build step, add it here (e.g., npm install && npm run build)
+      # - name: Build
+      #   run: |
+      #     npm ci
+      #     npm run build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: './' # Ajusta la ruta a la carpeta con los archivos estáticos (ej. build/ o docs/)
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
