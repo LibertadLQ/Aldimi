@@ -1,6 +1,6 @@
 {
   "sesion": {
-    "ultima_actualizacion": "2026-07-05T05:17:24.552229",
+    "ultima_actualizacion": "2026-07-05T09:47:35.170019",
     "archivo": "aldimi_pacientes.json"
   },
   "pacientes": {
@@ -85,6 +85,98 @@
           "pruebas": [],
           "alertas_detectadas": [],
           "registrado_en": "2026-07-05T05:17:24.544982"
+        },
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:17:32.704453"
+        },
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:17:58.978172"
+        },
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:18:30.105255"
+        },
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:19:41.707602"
+        },
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:19:49.798467"
+        },
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:19:57.750886"
+        },
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:22:04.417957"
+        },
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:22:28.981888"
+        },
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:22:50.569886"
+        },
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:23:26.705462"
+        },
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:24:17.972155"
+        },
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:24:53.774805"
+        },
+        {
+          "pruebas": [
+            {
+              "nombre": "W.B.C.Count",
+              "valor": 12000.0,
+              "unidad": "",
+              "flag": "",
+              "referencia": "4000-10000"
+            },
+            {
+              "nombre": "Eosinophils",
+              "valor": 0.4,
+              "unidad": "%",
+              "flag": "",
+              "referencia": "1.0-6.0"
+            },
+            {
+              "nombre": "Haematocrit",
+              "valor": 20.4,
+              "unidad": "%",
+              "flag": "",
+              "referencia": "40-50"
+            }
+          ],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:25:44.479234"
+        },
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:25:53.256201"
         }
       ],
       "alertas_clinicas": [],
@@ -293,10 +385,256 @@
             "alertas_detectadas": []
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:17:32.704453",
+          "timestamp": "2026-07-05T05:17:32.704453",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055511_Q-ROHIT4854000111zon_250427_1412@F.pdf_page_23.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "ap OSCAR SUPER SPECIALITY HOSPITAL @\nate & TRAUMA CENTRE ans\nIpp. Civil Hospital, Sonipat | Mob : as\nTransaction No. : 42463 I\nvent Cll ij\nPatient Civ: WA75134 0 aa : 4854\nDoctor Name : DR.SIDDHARTH SHARMA Reporting Date\nTest Name : URINGR/M\nCOMPONENT RESULTS UNITS REFF.RANGE\nAPPEARANCE YELLOW'SH -\nPH 75 5-8\nSPECIFIC GRAVITY 1,025 1.003 ~ 1.03\nHEMILA AAM ON\nUROBILNOGEN NIL 25\nPROTEIN NIL =\nBLOOD NIL =\nKETONE NIL -\nIGLUCOSE NIL\nMICROPIC INATION\nRBC (PER HPF) NIL HPF me\nWWBCIPUS CELLS (PER HPF) 10-12 HPF 0-4\nEPTIHELIAL CELLS JPER HPF) 78 -\nCASTS (PER HPF) NIL\nCRYSTALS (PER HAF) Nil ~\nAMORPHHOUS (PER HPF) NIL -\nOTHER NiL “\n*eeee END OF REPORT eens\nDr. isd\nMBBS, M. thology)\nRegd. No. /R/21938\n' ot + Pre,\nFy, LS SOX,\n9 \\ ~t 8 c\nis \\fn =} harma\n> SY, Consultant Wedicine\n| eon * Regd. No- 96954\n4 ;\nCBC, Thyroid, Kidney Function Test, Liver Function Test, Lipid Profile, Blood Sugar, LH, FSH, Prolactin, B-HCG, TORCH, CA-125, CEA, PSA\n30/4D Doppler Ultrasound, H.S.G. IVP, Barium Studies, Digital X-Ray, Multi Slice Spiral CT Scan, E.C.6.,\n.E.G.-21 Channels EMG NCV VEP B.E.RA. PFT & Comprehensive Health Check-ups etc.\n3D/4D Ultrasound, Color Doppler, CT-Scan, Digital X-Ray & Computerised Lab\n| NOT FOR MEDICO LEGAL PURPOSE wat te Afra 24 de sore FI",
+          "campos": {
+            "ciu": null,
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:17:58.978172",
+          "timestamp": "2026-07-05T05:17:58.978172",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055868_F-DOCUMENTAMRITPAL_250423_1639@G.pdf_page_19.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "_, NAVEEN DINGNOSTICLABORATORY: / = o™\n— Y Q-GI-1001-066¢ .\nFULLY AUTOMATED COMPUTERISED LAB.:/ °\\ WP (180.9001\n= a ||\nMMMM = DEEPAK SHARMA vt, 5 : :31 PM\n’ t : :\nSerial No : 40185 an ate 21/04/2025 06:01 PM\n= oe\nTest ee ee\n|\na : a lg Ce ee ==\nBlood Sugar Random 93.0 mg/dl “,80-150 ———\n2\nHAEMOGRAM ON CELL COUNTER Sat\n— = - cucu“ a\nAEs Lo <a.\nnt 4.3L milvemm 4.5 - 6.5\nPCV 35.8 L % 36 - 52\nhee! 82.7 fL 80.0 - 96.0\nMCH 26.6.L pgms #0 - 32.0\nMC\nHC 32.f % 31.5 -34.5\nWBC Count ' .\nTotal WBC count , 3\nIMPEDANCE ol 17100 H /emm Ae 10000\n: . aes ar amine\nDifferential count ED\nNeutrophil 78.0 H % 40-70 bie\nLymphocytes 23,0° i % 20 - 45 2\n; Eosinophils 1.0 % 00 - 06\nMonocytes 1.0 % 00 - 08\nPlatelet Count 197000° /cmm -150000 - 450000\nPeripheral Smear Examination -\nInterpretation :\nhence as per [\ndifferential leucocyte counts are reported as absolute number of each cell type per unit\nvolume of blood.\nSERUMELECTROLYIES. ie eee\nSerum Sodium 139.6 Meq/L 195 - 155\nby ISE (JON SELECTIVE ELECTRODE)\nCalcium lonized 4.62 mg/dL 4.§-5.3\nby ISE (JON SELECTIVE ELECTRODE) ° é\nSerum Potassium 3.79 Mea/L 3.5 - 5.6 :\nby ISE ( ION SELECTIVE ELECTRODE) ¢\nSEPM tint clu: 201672 102.8 Meq/L * 99-108 4\nInstrument Used ECS-2000 SM Diagnostic °,\nee\nRENAL FUNCTION TEST :\nBlood Urea RYE 2 mg/dl 10 to 40\nby SPEC TROPHOTOMETRY . :\n°\n: *Routine Service 24hrs\nic I Only Professional Opinion, N of ; : = 5",
+          "campos": {
+            "ciu": null,
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:18:30.105255",
+          "timestamp": "2026-07-05T05:18:30.105255",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056008_ASHISH BAGDIYA CN GUR0425PA0056008_27-04-2025_0517-33_PM@E.pdf_page_45.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "Ze &\nye Vishesh Jupiter Hospital\nMc-4219 Patient First\nHematology Result No. fF ttsSCiSY\n—.SSSSSSSSSSSSSSSSSSSSSSSSSSSSS SU NO. |\na es ee :\na PT a\na : WHOLE BLOOD (K2 EDTA) Received On — / 09:25:42 AM\nReferred By = : Dr. ANIRUDDHA VYAS. potient clu: orted On HS 10:04:30 am\nMRNo. /IP No. : 183659 / 46320\nBed No. 2908 Ward No. : 9th Floor - Sing\nPre-Cath Profile\nComplete Blood Count\nHemoglobin Cyanide free 16.0 g/dL 13.00 - 17.00\nRed Cell Count Flowcytometry 5.13 10*6/ul 4.50 - 5.50\nHematocrit Calculated 47.7 % 40.00 - 50.00\no MCV Calculated 93.1 fl 83.00 - 101.00\nMCH Calculated 31.3 pg 27.00 - 32.00\nMCHC Calculated 33.6 g/dL 31.50 - 34.50\nRDW Calculated 13.2 % 11.50 - 14.50\nWBC Count\nWBC Count Flowcytometry 5.31 10°3/uL 4.00 - 10.00\nDiff. WBC Count\nNeutrophils Flowcytometry 54 % 40.00 - 80.00\nLymphocytes Flowcytometry 41 % 20.00 - 40,00\nMonocytes Flowcytometry 03 % 2.00 - 10.00\nEosinophils Flowcytometry 02 % 1.00 - 6.00\nBasophils Flowcytometry 00 % 0.00 - 2.00\nAbsolute Neutrophils Calculated 2.87 10%3/uL 2.00 - 7.00\nAbsolute Lymphocytes Calculated 2.18 10°3/uL 1.00 - 3.00\nAbsolute Monocytes Calculated 0.16 10°3/uL 0.20 - 1.00\no Absolute Eosinophils Calculated 0.11 1043/uL 0.00 - 0.50\nAbsolute Basophils Calculated 0.00 103/uL 0.00 - 0.10\nPLAT, COUNT\nPlatelet Count Flowcytometry 197 10%3/uL 150.00 - 410.00\na es\nPre-Cath Profile :\nUseth=\ni\nChecked By HEUsua SETHI\npinky verma DCP Reg No-MP6418\nPartial Reproduction of Report not permitted. This report relates to sample received by the laboratory.\nPrinted By : MANIS01374\nRound the clock W t t t",
+          "campos": {
+            "ciu": null,
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:19:41.707602",
+          "timestamp": "2026-07-05T05:19:41.707602",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056422_CASHLESS CLAIM FILE GAURAB PATHAK_0001_compressed_27-04-2025_0804-45_PM@E.pdf_page_37.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "4 hy spiro labs\nPotient ClU: W126571 Collected : 24/Apr/2025 06:23PM\nyey Serer . eee Received + 24/Apr/2025 06:23PM\nVisit [D : SP11917 Reported : 24/Apr/2025 06:51PM\nUHID/No a: —t—SYT Status : Final Report\nRef, BY ; Dr. DR KUNAL Client Code : O01\n|Pane! Name + MEDLIX HOSPITAL Barcode No 10001965 |\nDEPARTMENT OF SEROLOGY\nTest Name Result Unit Bio. Ref_ Range\nSCRUB TYPHUS -igMiigGligA\nSample Type > SERUM\nScrub Typhus IgM NEGATIVE NEGATIVE—POSITIVE\nFLAPID IMIMUNOCFIROMA TOGRAPHIC ASSAY\nScrub Typhus IgG NEGATIVE NEGATIVE-POSITIVE\nRAPID IMMUNL CHROMATOGRAPHIC ASSAY\na i\n* End Of Report ***\n. |\n[ES joes ep =\ni yet iy\nLie Wwe Des ——\nPe Dr, Pankaj Sharma\n(Microbiologist)\nNOTE: This document is nat valid for medino- \" 5 we - ws\nas Neiticioh eacinaaendiaas jino-tegal purpose © 0124-16 70882\nF the reaumt are alarming or unexpected. ES customercaredesperotab.in\nYou are Kindly requested 10}\nWishing you a speedy’\nOn: i eee",
+          "campos": {
+            "ciu": null,
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:19:49.798467",
+          "timestamp": "2026-07-05T05:19:49.798467",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056422_CASHLESS CLAIM FILE GAURAB PATHAK_0001_compressed_27-04-2025_0804-45_PM@E.pdf_page_45.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "4 spirolabs\na) Le eae Repert Pager 4 |\n\\PatlentName : Mr. GAURAV PATHAK IPDNo. =: 194/1PD25HO labNo. ;2361/LAB25HO\nheer: Svs to Da aeacos\niRefd. By : Dr. Kunal Shrimal Speciman . BLOOD\nPatient ClU: W259192 rust\nsample 252303\nTEST NAME RESULT UNIT RANGE LEVEL\nHAEMATOLOGY\nHeamoglobin 12.40 ged 11.00 - 16.00 WNI\nTOTAL LEUCOCYTIC COUNT (TLC) 14.00 1o°3/uL 4.00- 11.00 {\nNeutrophils Counnt $2.00 % 50-70 High\nLymphocytes Count 14.00 % 20-40 Low\nEosinophils Count 2,00 % 1-6 WNL\nMonocytes Count 2,00 % 1-6 WNL\nBasophils Count 0.00 % 0-1 WNL\nR.B.C Count 4%) million/uL 3.50 - $50 WNI\nPCV/HCT 37,20 % 35.00 - 45.00 WNI\nMCV(Mean Corpuseular Volume ) 73,92 iL 75.00 ~ LO0,00 WNI\nMCH(Mean Corpuscular Haemoglobin ) 25,31 pz 27.00 - 34.00 Low\nMCHC(Mean Corpuscular HB Concentration) 33.33 gnvdl 32.00 - 36.00 WNL\nPlatelets Count 222 lakh/cuwnn 150,00 - 450,00 WNL\nTests done on Automated Five Part Cell Counter. (WBC, RBC,Plutelet count by impedance method, colorimetric method for\nHemoglobin, WBC differential by Now cytometry using laser technology other parameters are calculated), AL Abnormal\nHacmograms are reviewed confirmed microscopically.\nTests done on Automated Five Part Cell Counter. (WBC, RBC,Plateles count by impedance method, colorimetric method for\nHemoglobin, WBC differential by flow cytometry using laser technology other parameters are calculated). All Abaormal\nHacmograms are reviewed confirmed microscopxally.\n»~End of Report---\n‘ f\nOr. Swat Sucharita Giri\nPrepared By :LAB MBBS MD (PATHOLOGY)\nRG NO. 46822\nNOTE: This document is not vaid for medico-lecal purpose Ss\nAl reports are corelated Cinicaly\nI the cesuk are alarming ot |\nwi\netyng ou a epee @ Pot No. 1.2. Kicti Nagar, znd Floor, Sector-15-1, Jara Road Gurugram, Haryars",
+          "campos": {
+            "ciu": null,
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:19:57.750886",
+          "timestamp": "2026-07-05T05:19:57.750886",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056519_discharge virendra_11zon_28-04-2025_1115-27_AM.pdf_page_14.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "N W A Unit of Omsans Diagnostic Group E>,\nUSG, CT SCAN, X-RAY & PATHOLOGY th 4 Cas\n© —s >\nN TARAKHA\nSAR MUNDIYA CHAURAHA, BAJPUR263 401 (U.S. NAGAR) UT\nBILL No, eithv ets SKH/03530\nPatient ClU: WO26662 Sample |\ncc r\nRef.Doctor Or, RAVEENA Report Date |\n| YY Barcode No\nINVESTIGATION| RESULT UNIT\nZS\nHEMATOLOGY\nCBC - COMPLETE HEMOGRAM ....\n| HB% (HAEMOGLOBIN) 88% e/dt 12.5-16\nTic 24700 cellsfcumm 4000-11000\nRac 4.0 % 46-6\nPCy 30.8 % es\nMCV 74,2 fi 82-98\nMCH 23.9 Pe 26-34\nMCHC 38.0 em/dl 30-36\nPLATELET COUNT 1.89 0\nDLC\nNEUTROPHILS 70 x 30-70\nLYMPHOCYTES 23 x 20-45\nSINOPHILS 03 % 0-6\npee oes 04 % 2-7\nBASOPHILS 0 Li 0-2\nThis report is for persual of doctors only, not for medico legal casos. Treen\nThis is only professional opinion, It may kindly be corrolated Clinically,\nif the result{s] of the investgtaion(s] is/are unexpected , the patient/consultant is adviced to\n_ Oe yur\nIDUL MANAN ANSARI\not MLT ae G CHOUFIAN\nMBBS, MD ( PATH)\nCONSULTANT PATHOLOGIST\nAe Tre CT aan | ONO, hare, fp uluaeound | Pregnancy Color Doppler |\nby tA ! 30-tv8 1\nDiacialmer : This le a prctesslonal opinion for clinicians help and not a finan Hormonal Studlecs USC Guided\nsuggested if kraginghaboratory fincings do not correlate with circa Siagnonis, Ai) eee ACT ping\nYour teecbock will be appreciated. No compensation haiiy sansa! oa008 Ciscropencies die wYP*cedure have Not Valid Fes, Bloch eemmmleeseed\nreports and ee soa, SPTed for come! SOON opie\n(C Scanned with OKEN Scanner\n14",
+          "campos": {
+            "ciu": null,
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:22:04.417957",
+          "timestamp": "2026-07-05T05:22:04.417957",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057918_F-KYC_PC_KARUNA_1_250427_1321@G.pdf_page_41.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "| care you can trust™\n\\\\\\\\\\\\\\\\\\ SITARAM BHARTIA\nInstitute of Science & Research\nLABORATORY INVESTIGATION REPORT\nPotient CU: W288878 a\nUHId + SBID.325941 a\nEpisode rIP || : 1515162\nRef. Doctor Dr. Medicine Unit /Pradeep Narayan Chauhan i\n— = —\nBiochemistry\nSample No [a Collection Date I 09:51 Ack Date RG 20:02 Report Date 22:37\nHbAic\nSample Type- Whole blood EDTA\nHbAic 6.1 & (H) % <5.7\nMethod - HPLC\nResult A1C\nNormal less than 5.7 %\nPrediabetes 5.7 % to 6.4 %\nDiabetes 6.5 % or higher\nInterpretations:\n1. HDbAIC has been endorsed by clinical groups and American Diabetes Association guidelines 2017 for\ndiagnosing diabetes using a cut off point of 6.5%\n2. Low glycated haemoglobin in a non diabetic individual is often associated with systemic inflammatory\ndiseases, chronic anaemia (especially severe iron deficiency and haemolytic), chronic renal failure and liver\ndiseases. Clinical correlation suggested.\n3. In known diabetic patients, following values can be considered as a tool for monitoring the glycemic control.\nExcellent control-6-7 %\nFair to Good control — 7-8 %\nUnsatisfactory control — 8 to 10 %\nPoor Control — More than 10 %\nClinical Pathology\nSample No _07E0095085 Collection Date mm. Ack Date || 15:03 Report Date || 15:37\nUrine RE and ME (Routine and Microscopic)\nSample Type- Urine\nGross Examination\nColour Pale Yellow Pale Yellow\nMethod - Visual/Gross examination\nPrint DateTime: FY (es\nS GE)\nRee\nes\n7“\nMc.2753",
+          "campos": {
+            "ciu": null,
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:22:28.981888",
+          "timestamp": "2026-07-05T05:22:28.981888",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057991_F-EchsDept27042025162653392807_250427_1637@G.pdf_page_10.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "Z Lal Pathlats @)  paeigian INSTITUTE OF MEDICAL SCIENCES\nAy ae Cae ae mem Ct i,\nCp thik eck deta chet Pr sat Plantae Ty tnt Parntas Dr tat Pastas De tat Parktaks Dn stat Parkas EMP cectats Dy Lat Pathaks Ta stat Pachslehs Oe at Parastahs Dy stot Parktaks Dec\nBNR OS) Sa) lip lalla liea ne teeny emnay amis) aight Seige <a\noc euBONQ ah oie, ABSBOT STO mo en ne oy ADR ess oe = AB Var, ie\not Frat cot, Pe RUSIZ025 ~3:46:00AM ~, Oy fel Paint m Reported. 2 27/412025. 7;03:36AM. 7\nDs Lat PANO Sats PR! Dephtads De tat Pak Pokies > Report Status og. Final: = oy Sor Pas f ' Pi :\nos Penna at fen, = MOUL TOWD, FSSA R12 no ans on > un, 10 Sind Institute of Medical Scienites, \"—\" “=\nCorporat patient ClU: W167770 :\nTest Report\n) Test Results Units Bio. Ref. Interval\ni DOT/ SALMONELLA TYPHI IgM Negative f\nIs | | mmi romatogra| —_\n) Interpfetation\nReagtive Indicates presence of IgM antibodies against Salmonella typhi.\n| SSS MRSS iol wawene anrenssiveen eeneeece neevae enue iteness coe ran cea eeee\n| NonfReactive | Indicates absence of Igm antibodies against Salmonella typhi.\n|\nNote:\n| 1. Its positivity in serum indicates ongoing or recent infection by Salmonella typhi and the diagnosis\n) should be confirmed by gold standard test such as Blood culture prior to start of antibiotics. >\n2.IgM antibodies are typically detectable 5-7 days post symptom onset, peaking in 2nd week and\n| frequently remain elevated for 2-4 months following infection.\n| 3.False positive results may be due to cross reactivity with other Salmoriella spp., Dengue virus\ninfection & in patients with high levels of Rheumatoid factor.\n| 4. False negative reaction may be due to processing of sample collected early in the course of\n| disease, antibiotic treatment during 1st week and immunosuppression.\n5. Test conducted on serum.\nUse\ni * | To diagnose infection due to Salmonella typhi (Enteric fever). \"\nif\n|\nA Page 3018\nee =\nif Test alarming or unexpected, client j i |\n; Tel: 011-4988-5050, Fax:",
+          "campos": {
+            "ciu": null,
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:22:50.569886",
+          "timestamp": "2026-07-05T05:22:50.569886",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0058035_F-PKJosephcasesheetreports_250427_1808@G.pdf_page_14.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "Sli,\nS| PRASHANTH\nSUPERSPECIALITY\nHOSPITALS\n—_ a\n: Dr. PARIMUTHUKUMAR . ’ \\\nLab No : 500068017 | _\nSample Requested At : NNN 20:14:34 Ward : 7th FLOOR WARD/716\nSample Collected At : 21:36:48\nSample Received At : NNN 21:37:45 || 7,\nReported At : MM 21:56:57 |\nAuthorized At : 21:57:09 Madhavaram Milk\n‘ Colon\nBIOCHEMISTRY ¥\nwe\nQprerameter Result Units Biological Reference Methodology\n} Range\nCRP 112.37 mg/l <5 Particle-enhanced\nPatient ClU: WO20934\nassay\n*** End Of Report ***\nop\nSeen By Doctor Authorized By\nVerified By Dr. Arthi MD\nVENKATESAN D Consultant Pathologist\nTT\nA Unit of PRASHANTH FERTILITY RESEARCH CENTRE PVT. LTD.\nOld Survey No. 1354, Re-Survey Nos. 1354/1B, T.S. Nos. a/4 & 1/5,\nmina Ain AR lawaharlal Nehru Road (900 ft Innar Din ~ Dea ita AL -:  aAnannn",
+          "campos": {
+            "ciu": null,
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:23:26.705462",
+          "timestamp": "2026-07-05T05:23:26.705462",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\HYD-0425-PA-0007281_Q-QUERYREPLYOFPT.GTSRINIVASARAO_250427_0957@F.pdf_page_9.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "J y DIAGNOSTICS & SPECIALITY LABORATORY\nPy é D. No. : 1-76/1/B/4, Ganga Enclave, Petbasheerabad, Medchal Road, Secunderabad - 67,\n— Ph. No, a\n‘Patient ClU: W153507 FY\n| eT Sy a. : 18-Apr-2025 07:48:03 PIA\n: : CollectedOn  : 18-Apr-2025 07:48:03 PIA\nHr. PRAVEEN Reporting On: 19-Apr-2025 06:42:18 PrA\nBIOCHEMISTR\n[Test a\n’ RANDOM BLOOD : 138 me/dl - 180, Method : God-Pod  -\nBLOOD UREA : 30 me/dl 15-50 Method : GLDH, Initial Rate .\n“+ SERUM CREATININE > 4a me/dl 0.6 - 1.5 Method : Jaffe's, Initial Rate\n' Note: Please Correlate Clinically if necessary kindly discuss. uly\n------—---END OF REPORT---—-------\nTea Dr-B.bheeshma 40 Patn\nFOCUSED ON QUALITY Constant Fotis\nCUSS\n: FOR CLINICAL CORRELATION IF THERE IS NEED KINDLY DIS\n____ FORCLINICAL CORRELATION IF THERE IS NEED KINDLY DISCUSS\nROOF\nFACILITIES AVAILABLE ROUND THE CLOCK UNDER ONE ae",
+          "campos": {
+            "ciu": null,
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:24:17.972155",
+          "timestamp": "2026-07-05T05:24:17.972155",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\JPR-0425-PA-0005068_E-AnnuFinal_250427_1502@E.pdf_page_19.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "___ FULLY COMPUTERISED & AUTOMATED\n__* PATHOLOGY * X-RAY * STRESS TEST * TMT ¢ ECG * 2D ECHO\nPatient Clu: W705269 Reg.Date 24.04 2g Se\nPate i —\nRef yl MSNH Dos / m7\nCons. Dr Gender : FEMALE\nCollected at MAIN LAB {HHI li || \\|| |||] | Mob No.\nWIDAL TEST\nTest Description Observed Value Biological Reference Interval\nAgglutination Against\nS.typhi O Antigen 1:80 No Agglutination\nS.typhi H Antigen 1 :320 No Agglutination\nS. paratyphi A(H) Antigen No Agglutination No Agglutination\nS. paratyphi B(H) Antigen No Agglutination No Agglutination\nMethod : Tube Agglutination using serum sample.\nThe test is put up with doubling dilutions of serum from 1:40 to 1:320.\nRepeat testing with Increasing titre is suggestive of infection with\nSalmonella species.\nLimitations: The test may be negative in the first week of fever with\nSalmonella infection. Anamnestic responce may be seen in viral infections.\nPreviously vaccinated individuals will show a positive test. Positive\nresult will also seen in patients who have suffered from salmonella\ninfection in the recent past.\n«+e END OF REPORT ----\nid Dr. Shubhangi Pawar\nChe€Ked by: M.D.(Path)\nD'Wing, 1st & 2nd Floor, Sai Shrushti Building, Adj.Shangrila Biscuit Company,\nOpp. Bharat Petrol Pump, L.B.S.Marg, Bhandup (W), Mumbai - 400078.\nad NO.: /",
+          "campos": {
+            "ciu": null,
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:24:53.774805",
+          "timestamp": "2026-07-05T05:24:53.774805",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\KOL-0425-PA-0004068_E-1745819838697ANKURSAXENAFINALBILLconverted_250428_1144@E.pdf_page_16.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "Oo\nKD Hospital\ngyn desea aie\nDEPARTMENT OF BIOCHEMISTRY\n™_ ee\nroe eee mes =~ --913 SR by : Dr.ARCHANA JADEJA MD Medicine\nBill Date :25-Apr-25 11:26am Report Date : 25-Apr-25 12:18 pm\nCollection Date : (RR) 11:26:07 Received Date : MJ 12:16:59\nLIVER FUNCTION TEST WITH PROTEINS\nParameter Specimen Results Biological Reference Method\nIntervals\nTotal Bilirubin Serum 0.955 0- 1.4 mo/dl Diazo Method\nDirect Bilirubin 0.311 <= 0,30 mg/dl Diazo end point\nIndirect Bilirubin 0,644 0.0 - 0.8 mg/dl Calculation\nAlkaline Phosphatase 65.0 40-129 U/L 4-PNPP/Amp kinetic\nSGPT/ALT 57.0 5.0- 41.0 U/L IFCC without P5P\nSGOT/AST 56.0 5.0- 40.0 U/L IFCC without PSP\nGamma GT 60.0 8-61 U/L IFCC method, Kinetic\nTotal Protein 6.8 6.4 - 8.3 gm/dl Biuret\nAlbumin 4.5 3.5 - 5.0 gm/d! BCP Dye Binding\nGlobulin 23 2.0- 3.5 gmi/di Calculation\nA/G Ratio 1:957 0.9- 2.1\nNOTE:\n*** End Of Report ***\nSuggested Clinical Correlation * If neccessary, Please sh\ndiscuss f way — F\n: f j jigaila! ital\nBy ss iste sted rc Sem duipias mae\nVarn Bip'ss 2a Kae ? VOishnedeui Circle,\nTest results related only to the item tested, ty ay. S. G. Highway, Ahmedabad - 382421\nAUnit of No part of the report can be reproduced without written MC-3264 Dr. MASUM BHAVSAR, MBBS, MD\nnICOF: permission of the laboratory.\nShri Harihar Maharaj consul FARH PS FRRESE A 0000\nCharitab be-Reeest_AAA_$_$__$_?_@$?_@_~__— ti edhospitalcoin\nPrinted By : 2672 Printed On ; 25-Apr-2025 11:16:04 PM system [iin",
+          "campos": {
+            "ciu": null,
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:25:44.479234",
+          "timestamp": "2026-07-05T05:25:44.479234",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0125-PA-0001141_W2500438UNADKAT ASHWIN_27-04-2025_1002-19_AM.pdf_page_91.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "me\n=|= Grant Medical Foundation f @ :\ns s ; 5\n= pe Ruby Hall Clinic us!\nAnowarl\n59/6, Azad Nagar, Wanowarie, Pune - 411 040 (INDIA). Tel. : 020 - 66494982 / 83 / 84 Fax : 020 - 66494939\npakielit Nanla!O-WANQHahERAPLOM Kee —— 1 es\na CE Received Date + SMos:00 am\nLabNo/Result No | Release Date ' ER 09:00 am |\nReferred By Dr. —* IGNATIUS AVINASH Specimen ? WHOLE BLOOD me ate |\nWard / Bed * PVT-6TH/607 oe\nPassport No 5 ma oe\nDEPARTMENT OF LABORATORY potent clu: 953923\nInvestigation Result Units Biological Reference Interval\nHaemogram Report\nW.B.C.Count :12000 /ul 4000-10000\n* Method : Coulter Principle\nDifferential Count\nNeutrophils > 78.3 % 40-80\nMethod : OPTICAL/IMPEDENCE\nLymphocytes 13.7 % 20 - 40\nMethod : OPTICAL/IMPEDENCE |\nMonocytes 17.4 % 2-10\nMethod ; OPTICAL/IMPEDENCE\nEosinophils :0.4 % 1.0-6.0\nMethod : OPTICAL/IMPEDENCE\nBasophils 70.2 % 0.0-1.0\nMethod : OPTICAL/IMPEDENCE\nAbsolute Neutrophil Count 39.36 x103cells/ul 2-7\nMethod ; Calculated\nAbsolute Lymphocyte Count 21.64 x103cells/ul 1-3\nMethod : Calculated\nAbsolute Monocyte Count 20.88 x103cells/ul 0.2-1.0\nMethod : Calculated\nerr Eosinophil Count 0.05 x103cells/ul 0.02-0.5\nMethod : Calculated\nAbsolute Basophil Count :0.03 x103cells/ul 0.02 - 0.1\nMethod : Calculated\nR.B.C Count 22.0 million/ul 4.5-5.5\nMethod : Coulter Principle\nHaemoglobin 16.7 g/dl 13-17\nMethod : Photometric Measurement\nHaematocrit :20.4 % 40-50\nMethod : Calculated\nMCV 399.3 fl 83-101\nMethod : Derived from RBC Histogram\nMCH 132.8 pg 27-32\nMethod : Calculated\nMCHC 233.0 g/dl 31.5-34.5\nMethod : Calculated\nRDW 718.7 % 11.6-14\nMethod : Derived from RBC Histogram\nPlatelet Count 744 x103/ul 150-410\nMethod : Coulter Principle\nPrinted By : WICU2 Printed On: MMM: 1:05:32\nio",
+          "campos": {
+            "ciu": null,
+            "pruebas": [
+              {
+                "nombre": "W.B.C.Count",
+                "valor": 12000.0,
+                "unidad": "",
+                "flag": "",
+                "referencia": "4000-10000"
+              },
+              {
+                "nombre": "Eosinophils",
+                "valor": 0.4,
+                "unidad": "%",
+                "flag": "",
+                "referencia": "1.0-6.0"
+              },
+              {
+                "nombre": "Haematocrit",
+                "valor": 20.4,
+                "unidad": "%",
+                "flag": "",
+                "referencia": "40-50"
+              }
+            ],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:25:53.256201",
+          "timestamp": "2026-07-05T05:25:53.256201",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0425-PA-0003769_E-BodakheParvatiReports_250427_1201@E.pdf_page_2.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "(i TS Se ation C1: waso198 | Research Pvt. Lid.\n‘ V4 viray Estate, Tarakpur Road, Ahmednagar- 414003\nomit Ph: 2775700 | Mob :\nSU ee\ni} ye\n1D: RR order ff. 28919 Accepted on: SNN07:04 AM\n; Dt. RAHUL DHOOT Report Date : 0:07AM\nWard ; A/ Room No- 916/ SEMI SPECIAL 9th Sample Type ; EDTA whole blood\nHAEMATOLOGY\nINVESTIGATION RESULT UNIT RANGE METHOD\nCOMPLETE BLOOD COUNT\n(CBC)\nHAEMOGLOBIN 12.6 gm/di 12-15 Cyanide-tree hemoglobin\nWBC COLINT. 9050 /cumm 4000 - 10500 Laser scuttering(FOM)\nPLATELET COUNT, 141 lac/cumm 15-41 Laser scattering(FOM)\nRBC COUNT 4.52 million/cum 3.8- 4.8 |\nm\nHCT 39.0 % 36 - 46 Laser seattering(FOM)\nMCV 86.4 fL 83-101 Calculated\nMCH 28.0 pg 27 - 32 Caleulated\nMCHC 32.4 gm/dl 31,5 - 34.5 Cateulated\nCHCM 33.6 gm/dl 29 - 34 Calculated\nCH 28.9 pg 24-35 Calculated\nRDW-CV 14.9 H % 11.6 - 14 Calculated\nHiDWw 2S5 g/dl 2.2-3,2 Caleulated\nMPV 8.0 fl 8-12 Caleulated\nRoutine WBC Difterential Peroxidase\nNEUTROPHILLS 79.9 % 40 - 80\nLYMPHOCYTES 11.2 % 20-40\nEOSINOPHILLS 2,2 % 0-6\nMONOCYTES 4.9 % 2-10\nBASOPHILLS 0.2 % 0-2\nLUC 1.7 % 0-3\nPerformed On : SIEMENS ADVIA 2120 2\nNote; All abnormal critical CBC's are reviewed contimed microscopically\nEND OF REPORT\nMr. SAYYAD ASIF RASHID Dr. SAHTL NISAR SHAIKH\nPREPARED BY MBBS, MD Pathology\nPatient ClU:\nScan the QR code to download your e-report\nMRS. BODAKHE PARVATI RAMESH /MRN-250400912/67Yr/Female Twi Pheegn tr Le Re\nIPD,-25-26-751 / 128919 mea",
+          "campos": {
+            "ciu": null,
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T03:11:32.785160",
-      "actualizado_en": "2026-07-05T05:17:24.544982"
+      "actualizado_en": "2026-07-05T05:25:53.256201"
     },
     "W499485": {
       "ciu": "W499485",
@@ -431,8 +769,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-05T05:13:00.380295",
-          "timestamp": "2026-07-05T05:13:00.380295",
+          "id": "ocr_2026-07-05T09:47:15.414104",
+          "timestamp": "2026-07-05T09:47:15.414104",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053408_Q-SATISHKUMAR19.04.20250001compressed_250427_1052@F.pdf_page_37.png",
           "archivo_copia": null,
@@ -448,7 +786,7 @@
         }
       ],
       "creado_en": "2026-07-05T03:12:29.171297",
-      "actualizado_en": "2026-07-05T05:13:00.380295"
+      "actualizado_en": "2026-07-05T09:47:15.414104"
     },
     "W668239": {
       "ciu": "W668239",
@@ -524,8 +862,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-05T05:13:08.384398",
-          "timestamp": "2026-07-05T05:13:08.384398",
+          "id": "ocr_2026-07-05T09:47:24.746354",
+          "timestamp": "2026-07-05T09:47:24.746354",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053434_Q-PREETI4837000111zon_250427_1314@F.pdf_page_35.png",
           "archivo_copia": null,
@@ -541,7 +879,7 @@
         }
       ],
       "creado_en": "2026-07-05T03:28:25.343389",
-      "actualizado_en": "2026-07-05T05:13:08.384398"
+      "actualizado_en": "2026-07-05T09:47:24.746354"
     },
     "W290166": {
       "ciu": "W290166",
@@ -577,8 +915,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-05T05:12:44.562644",
-          "timestamp": "2026-07-05T05:12:44.562644",
+          "id": "ocr_2026-07-05T09:46:58.471126",
+          "timestamp": "2026-07-05T09:46:58.471126",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053405_Q-RANJANADEVI21.04.20250001compressed_250427_1041@F.pdf_page_46.png",
           "archivo_copia": null,
@@ -594,7 +932,7 @@
         }
       ],
       "creado_en": "2026-07-05T04:49:50.757861",
-      "actualizado_en": "2026-07-05T05:12:44.562644"
+      "actualizado_en": "2026-07-05T09:46:58.471126"
     },
     "W718295": {
       "ciu": "W718295",
@@ -630,8 +968,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-05T05:12:52.288936",
-          "timestamp": "2026-07-05T05:12:52.288936",
+          "id": "ocr_2026-07-05T09:47:06.259255",
+          "timestamp": "2026-07-05T09:47:06.259255",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053408_Q-SATISHKUMAR19.04.20250001compressed_250427_1052@F.pdf_page_30.png",
           "archivo_copia": null,
@@ -647,7 +985,7 @@
         }
       ],
       "creado_en": "2026-07-05T04:49:53.442212",
-      "actualizado_en": "2026-07-05T05:12:52.288936"
+      "actualizado_en": "2026-07-05T09:47:06.259255"
     },
     "W533568": {
       "ciu": "W533568",
@@ -698,8 +1036,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-05T05:13:17.898090",
-          "timestamp": "2026-07-05T05:13:17.898090",
+          "id": "ocr_2026-07-05T09:47:35.158586",
+          "timestamp": "2026-07-05T09:47:35.158586",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053434_Q-PREETI4837000111zon_250427_1314@F.pdf_page_38.png",
           "archivo_copia": null,
@@ -730,7 +1068,7 @@
         }
       ],
       "creado_en": "2026-07-05T04:50:01.853381",
-      "actualizado_en": "2026-07-05T05:13:17.898090"
+      "actualizado_en": "2026-07-05T09:47:35.158586"
     },
     "W196188": {
       "ciu": "W196188",
@@ -1860,7 +2198,13 @@
         "apellidos": "BRYANT",
         "fecha_nacimiento": "02/08/1996"
       },
-      "informes_laboratorio": [],
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:17:40.304571"
+        }
+      ],
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
@@ -1878,10 +2222,26 @@
             "fecha_nacimiento": "02/08/1996"
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:17:40.304571",
+          "timestamp": "2026-07-05T05:17:40.304571",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055511_Q-ROHIT4854000111zon_250427_1412@F.pdf_page_31.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "ET ee\n/a\\ OBCAR SUPER SPECIALITY HOSPITAL\nes) & TRAUMA CENTRE “\npp. Civil Hospital, Sonipat | Mob : x\nTransactibn No. : 42463 |\nPatient CIU: W180109 Date: ™\nMIVUne NB, z FY :\nDoctor Npme : asians Reporting Date :\n7\nTest Nafie: HBSAG\nCOMPONENT\nAUSTRALIA ANTIGEN RESULTS UNITS REFF.RANGE\nDr. GURLEEN GILL\nMBBS, ¥% thology)\nRegd. No- /R/21938\nPathologist/Technologist\n+eeeHEND OF REPORT*****\nha! nos an\nGE SON, Dr. Siddhadh Sharma\nsi BE \\ey ABBS.MD 7\nah. S Js Consultant Metiicine\nMp BS Regd. No- 90554\n: >\nCBC, Thyroid, Kidney Function Test, Liver Function Test, Lipid Profile, Blood Sugar, LH, FSH, Prolactin, B-HCG, TORCH, CA-125, CEA, PSA\n30/40 C Doppler Ultrasound, H.S.G. IVP, Barium Studies, Digital X-Ray, Multi Slice Spiral CT Scan, E.C.6.,\nE.E.6.-21 Channels EMG NCV VEP B.E.RA. PFT & Comprehensive Health Check-ups etc.\n3D/4D Ultrasound, Color Doppler, CT-Scan, Digital X-Ray & Computerised Lab\nNOT FOR MEDICO LEGAL PURPOSE aat tee afrar 24 de sores FI",
+          "campos": {
+            "ciu": "W180109",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T04:51:17.109129",
-      "actualizado_en": "2026-07-05T04:51:17.100154"
+      "actualizado_en": "2026-07-05T05:17:40.304571"
     },
     "W448325": {
       "ciu": "W448325",
@@ -1891,7 +2251,13 @@
         "apellidos": "REYES",
         "fecha_nacimiento": "05/18/1993"
       },
-      "informes_laboratorio": [],
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:17:48.671155"
+        }
+      ],
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
@@ -1909,10 +2275,26 @@
             "fecha_nacimiento": "05/18/1993"
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:17:48.671155",
+          "timestamp": "2026-07-05T05:17:48.671155",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055576_Q-kailashfnalbill_250427_1333@F.pdf_page_37.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "‘J\n4 Shree Pathlab\nNN\nfe— “THINK OF WELLNESS, THINK OF SHREE PATH LAB”\nOPP. GOVT. GIRLS SCHOOL, CIRCULAR ROAD, REWARI-123401 (HR.)\nFe : 01274-222109\nWebsite : www.shreepathlab.com .\nPatient CIU: W448325\nReferred By -Vedanta hospital mn\nReported on\nBLODD CULTURE — 12 DRUGS\nOrganism Isolated Actinobacter sp.\nAntibiotic .\n| St [Name Of Antibiotics Sensitivity\n| 1 |MEROPENAM + SULBACTUM Sensitive(+#+4)\n| 2 [CoTrimaxazole SS«*diRsis tant’ ==\n| 3 [Cephalexin SSS=«*dResistant™ SSS\n| 4 |CEFOPARZONE Sensitive(#) CS L\n| 5 [Levofloxacin «dS sitive (#) SSS\n| 6 |Ciprofoxacin SSS~«*dResistant SSS\nMetronidazole Resistant\n| 10 [CLARITHROMYCIN Sensitive(####)\n| 11 |LINCOMYCIN, —«dResistant =O\n| 12 |GENTAMICIN, SS=«*diResistant. SSS\nComment: . .\nAntibiotic or antifungal therapy initiated before the specimen is taken may produce false-negative results. Obtain the culture before\nstarting these therapy for the most accurate identification of the causative bacteria and the best clinicai results. Interpretation of culture\nreports must be made according to the particular clinical scenario. Antimicrobial sensitivity testing requests would be acceptable if\nProvided within 6 hrs of the release of Primary culture/identification report.\nCZ\nDr. Kamal Kant\nM.B.B.S., M.D.\nDMC - 58274 P\nShree Path Lab (Le\nMN AKANKSHA GUPTA _ HN KAMAL KANT\nConsultant Pathologist 7 3 j Consultant Pathologist\nThe reported result are for information and interpretation of the referring doctor or such other medical professionals who\nunderstands reporting units, reference ranges and limitations of technologies. NOT VALID FOR MEDICOLEGAL PURPOSE.",
+          "campos": {
+            "ciu": "W448325",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T04:51:20.092689",
-      "actualizado_en": "2026-07-05T04:51:20.088575"
+      "actualizado_en": "2026-07-05T05:17:48.671155"
     },
     "W201672": {
       "ciu": "W201672",
@@ -1984,7 +2366,13 @@
         "apellidos": "CAMPOS",
         "fecha_nacimiento": "02/04/1991"
       },
-      "informes_laboratorio": [],
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:18:14.040334"
+        }
+      ],
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
@@ -2002,10 +2390,26 @@
             "fecha_nacimiento": "02/04/1991"
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:18:14.040334",
+          "timestamp": "2026-07-05T05:18:14.040334",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055942_IV REPORTS_27-04-2025_1102-25_AM@E.pdf_page_4.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": ", —— (COMPUTERISED PATHOLOGICAL LABORATORY)\n| > 471, School Road, Kolkata- 51 (Near Uttarayan School), © : 2514-9592 (Lab.)\nFall SRS Ee SR i i OE RS ET SR A i ANE AR RRO O SIT, TRE A!\nSarat Bose Road, Kolkata- 81, © : 2514-3858, Mob.: [I [iii\na\nPatient CIU: W337392\nPatient APR /¥8Y\nRefering By Dr. Rakhi Sanyal (Dutta Sarma\nDEPARTMENT OF SEROLOGY\nVAM RESULT UNIT NORMAL RANGE\nC-REACTIVE PROTIEN (CRP) 20.90 mg/L 0-6.0 mg/L\nSpecimen : Serum\nMethod : Turbidimetry\nNote :- CRP is an acute - phase protein in normal serum , which increases significantly after most forms of tissue injuries ,\nbacterial and virus infections, inflammation and malignant neoplasia . During tissue necrosis and inflammation resulting\nfrom microbial infections, the CRP concentration can rise up to 300mg/L in 12-24hours\nBlood drawn at outside.\nN.B:- All reference ranges are\nprovided along with the\nees Ort ---===---\nOle caste\nhecked By . ne\nms ee Beiet Su\nLab./Outside Consultant Biochemist Pathologist th Charge Consultant Microbiologist\nDr. Bilas Kumar Sarkar Dr. Subrata Pal Dr. Arpita Neogi\nMD (Biochemistry) Consultant Pathologist MD (Microbiology)\nMD (Cal)",
+          "campos": {
+            "ciu": "W337392",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T04:51:27.796536",
-      "actualizado_en": "2026-07-05T04:51:27.793129"
+      "actualizado_en": "2026-07-05T05:18:14.040334"
     },
     "W883738": {
       "ciu": "W883738",
@@ -2015,7 +2419,13 @@
         "apellidos": "ONG",
         "fecha_nacimiento": "05/15/2002"
       },
-      "informes_laboratorio": [],
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:18:21.915653"
+        }
+      ],
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
@@ -2033,10 +2443,26 @@
             "fecha_nacimiento": "05/15/2002"
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:18:21.915653",
+          "timestamp": "2026-07-05T05:18:21.915653",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055942_IV_REPORTS_27-04-2025_1112-47_AM@E.pdf_page_1.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "~— PARAMEDICAL CENTRE\nom T=.\nlp 471, School Road, Kolkata- 51 (Near Uttarayan School), © : 2514-9592 (Lab.)\nan ieee ial ecemuaniuiniinaiaamamisemne dat eee ee ae\nare Ce\n} Sarat Bose Road, Kolkata- 81, © : 2514-3858, Mob.:\na\nPict i i i aE\n. Gender [x Receiving Date [J09:50\nPatient CIU: W883738\nHwienny wy wi. mani Vanya: Wuua varias Reg. il Hi Date Of Report [NNN 18:15\nDEPARTMENT OF CLINICAL PATHOLOGY (URINE\nAM RESULT UNIT\nPHYSICAL EXAMINATION\nQuantity 30 ml\nColour Light Straw\nAppearance Clear\nDeposit Absent\nSpecific Gravity 1.015 .\nCHEMICAL EXAMINATION\nReaction ‘ Acidic\nProtein (Alb) Present(+)\nSugar Absent\nKetone bodies /\nPH !\nChyle /\nBlood Absent.\nBile Salt Absent\nBile Pigment Absent\nPhosphates Absent\nNitrite Absent\nMICROSCOPICAL EXAMINATION oe\nPus Cells 0-1 /E.LPLF\nR.B.C 0-1 1H.PF vee\nEpithelial Cells Few\nCasts Absent\nCrystals Absent\nYeast Cell Absent\nParasite Absent\nMicro-organisms Few\nOthers /\nZL\nN.B:- Alll referencé ranges ime ee\nprovided along with the\nyd secweee-= TNE ort ---------\nTar gah\nger iae ey .\nphecked By - RS\nLab./Outside Consultant Biochemist Pathologist in Charge Consultant Microbiologist\nDr. Bilas Kumar Sarkar Dr. Subrata Pal Dr. Arpita Neogi\nMD (Biochemistry) Consultant Pathologist MD (Microbiology)\nMD (Cal)",
+          "campos": {
+            "ciu": "W883738",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T04:51:30.166581",
-      "actualizado_en": "2026-07-05T04:51:30.161791"
+      "actualizado_en": "2026-07-05T05:18:21.915653"
     },
     "W756832": {
       "ciu": "W756832",
@@ -2077,7 +2503,13 @@
         "apellidos": "CAMPOS",
         "fecha_nacimiento": "12/31/1991"
       },
-      "informes_laboratorio": [],
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:18:39.668516"
+        }
+      ],
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
@@ -2095,10 +2527,26 @@
             "fecha_nacimiento": "12/31/1991"
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:18:39.668516",
+          "timestamp": "2026-07-05T05:18:39.668516",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056064_F-PARINALEPCHAPA_250423_2059@G.pdf_page_16.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "Aakash Healthcare Aakash Pathlab th E\nSuper Speciality Hospital - Se al\n—_—__ We care, He cures ——— Crtharsinwnscs yy Cnbedrmestioce\nLABORATORY INVESTIGATION REPORT\nPatient CIU: W597252 7 ee\nUHID : AHDW.409773 | ‘I «8:50\nEpisode : IP || :129094/ L648\nRef, Doctor : Dr. Int. Med, -1 (Dr Vikramjeet/Dr Saroj /Dr Facility : Aakash Healthcare Delhi\nAnugrah)\nLymphocytes 16.20 v (L) % 25-45\nMethod - EDTA Whole Blood, Fluorescence Flow Cytometry\nEosinophils 0.40 % 0-6\nMethod - Fluorescence Flow Cytometry\nMonocytes 8.60 % 2-10\nMethod - EDTA Whole Blood, Fluorescence Flow Cytometry\nBasophils 0.30 ¥ (L) % 1-2\nMethod - EDTA Whale Blood, Fluorescence Flow Cytometry\nAbsolute Neutrophil Count 4.74 x10%3/ul 2-7\nMethod - EDTA Whole Blood, Calculated/Filuorescence\nAbsolute Lymphocyte Count 1,03 x1043/ul ixy\nMethod - EDTA Whole Blood, Calculated/Fiuorescence >\nAbsolute Monocytes Count 0.55 © PS *y1043/ul 0.2-4\nMethod - EDTA Whole Blood, Calculated/Fluorescence ft bt\nFlowCytometry. < X : z\nAbsolute Eosinophil Count 003 Sey x1043/ul 0.02 - 0.5\nMethod - EDTA Whole Blood, Calculated/Fluorescence eo ¢ }”\nFlowCytometry. .% er\nAbsolute Basophils Count 6 2 \\Y x1043/ul 0.02 - 0.1\nMethod - EDTA Whole Blood, Calculated/Fluorescence % 4\nFlowCytometry. ‘\nReport Provisionally Released By - Kapil PM)\n7], 7 an 3 Pea ER SSS SS Se\n7 a\n®\n»\nCEE\n(ms",
+          "campos": {
+            "ciu": "W597252",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T04:51:35.283151",
-      "actualizado_en": "2026-07-05T04:51:35.272678"
+      "actualizado_en": "2026-07-05T05:18:39.668516"
     },
     "W597281": {
       "ciu": "W597281",
@@ -2108,7 +2556,13 @@
         "apellidos": "LEE",
         "fecha_nacimiento": "04/30/1993"
       },
-      "informes_laboratorio": [],
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:18:49.065715"
+        }
+      ],
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
@@ -2126,10 +2580,26 @@
             "fecha_nacimiento": "04/30/1993"
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:18:49.065715",
+          "timestamp": "2026-07-05T05:18:49.065715",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056064_Q-PARINALEPCHAQR_250424_1328@F.pdf_page_8.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "Aakash Healthcare Aakash Pathlab\nSuper Special Hospital toa Ph} . L\ngeal iicayr Moers paca nav\nLABORATORY INVESTIGATION REPORT\nPatient CIU: W597281 Age/Sex $24 Year(s)/Female\nuniv + AHDW.409773 Order Date 3 23/04/2025 18:50\nEpisode : PP IP/Bed + 129094 / L 648\nRef. Doctor : Dr. Int. Med. -1 (Dr Vikramjeet/Dr Saroj /Dr Facility : Aakash Healthcare Delhi\nAnugrah)\nSerology |\nWIDAL (Slide Test)\nSalmonella Typhi 'O' Ag 1:320 Dilution\nSalmonella Typhi 'H' Ag / 1:20 Dilution\nSalmonella Paratyphi 'AH' Ag < 1: 20 Dilution\nSalmonella Paratyphi 'BH' Ag < 1: 20 Dilution\nMethod : Slide Agglutination.\nInterpretation of the test results:-\nAn absolute agglutination titre of = 1:80 for TO and /or = 1:76Q for TH/ AH/ BH is n6rmally considered significant. Arising titre\nin case of a test repeated after few days is also significant and suggestive Of enteric fever. In enteric fever, antibodies usually\nappear in patient's blood after 6th day of fever. Sera for normal individuals may agglutinate these antigens in dilutions up to\n1:80. In individuals who have received TAB vaccine, moderate rise in H antibodies may be seen. |\nInterpretation of Widal test must be seen in light of clinical picture.\nThis test measures somatic O and flagellar H antibodies against Typhoid and Paratyphoid bacilli. The\nagglutinins usually appear at the end of the first week of infection and increase steadily till third / fourth week after which the\ndecline starts, A positive Widal test may occur because of typhoid vaccination or pi i i i\nautoimmune diseases. Non specific febrile disease may cause this titre to i\nfalsely negative in cases of Enteric fever treated with antibiotics in the early|\nweek after infection is Blood Culture.\na Eri OF Reet: Me\nfou Ahn\nDr.Disha Bhatia, MBBS, MD\nMicrobiology\nAssociate Consultant\nRegNo: DMC/R/8239\nCaS\n20s\nPage 1 of 1\n|\n|\n,",
+          "campos": {
+            "ciu": "W597281",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T04:51:38.388583",
-      "actualizado_en": "2026-07-05T04:51:38.384742"
+      "actualizado_en": "2026-07-05T05:18:49.065715"
     },
     "W191877": {
       "ciu": "W191877",
@@ -2139,7 +2609,13 @@
         "apellidos": "VARGAS",
         "fecha_nacimiento": "05/07/1995"
       },
-      "informes_laboratorio": [],
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:18:57.555822"
+        }
+      ],
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
@@ -2157,10 +2633,26 @@
             "fecha_nacimiento": "05/07/1995"
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:18:57.555822",
+          "timestamp": "2026-07-05T05:18:57.555822",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056087_E-SIVASUM_250427_1015@E.pdf_page_13.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "Page: 13/15\nI b 7a\nSRI RAMACHANDRA HOSPITAL ) eae\nSri Ramachandra Medical College & Research Institute See atte\nINVESTIGATION REPORT Me- 2540 FER ti iy\nry rd\n(erarbesiene\nPatient CIU: W191877 Ward : E6 Bed: 6518\nMR SIVASANKARAN JAYAGOPAL Referring Doctor\nSURENDRAN P (G.SUR)\nPLOT NO 161, MADHURAM NAGAR, 2ND\nRUREET  TYYAPANTHANGAL/CHENNAT, TAMILNADU,IN Department\nGENERAL SURGERY\nPatient 1D | 6 RE ——\nReq No: 019324497 HE : EE) ©°4:20:00 Reported :J 11:19:22\nDESCRIPTION\nMicrobiology Result\nNature of Specimen : CULTURE-URINE\nMicroscopy : FEW PUS CELLS, NO ORGANISM\nResult : NO GROWTH IN CULTURE\nee\nTESSA ANTONY DR\nASSISTANT PROFESSOR\nAll investigations have their limitations which are imposed by the limits of sensitivity and specificity of individual assay procedures as well as the quality of the specimen received by laboratory. Isolated laboratory investigations never\nconfirm the final diagnosis of the disease. They only help in arriving at a diagnosis in conjunct ion with clinical presentation and other related investigations. The contents of this report may be used for statistical analysis and reseach\nprampose in iis insti PARTIAL REPRODUCTION OF THIS REPORT IS NOT PERMITTED\nElectronically signed & released. No Signature required\nNo.1,Ramachandra Nagar,Porur,Chennai-600 116 Ph :044 45928500 Ext.227 , 569\nME 18:57:00",
+          "campos": {
+            "ciu": "W191877",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T04:51:39.371443",
-      "actualizado_en": "2026-07-05T04:51:39.367566"
+      "actualizado_en": "2026-07-05T05:18:57.555822"
     },
     "W390807": {
       "ciu": "W390807",
@@ -2170,7 +2662,13 @@
         "apellidos": "NELSON",
         "fecha_nacimiento": "09/09/2001"
       },
-      "informes_laboratorio": [],
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:19:06.126466"
+        }
+      ],
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
@@ -2188,10 +2686,26 @@
             "fecha_nacimiento": "09/09/2001"
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:19:06.126466",
+          "timestamp": "2026-07-05T05:19:06.126466",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056189_Q-rahulfinalbill_250427_1335@F.pdf_page_32.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "J\n4 Shz2ee Q-athLag\nNS\nfee “THINK OF WELLNESS, THINK OF SHREE PATH LAB”\nOPP. GOVT. Ss IRCULA AD, REWARI-123401 (HR.)\nPH.: Tel. : 01274-222109 :\nWeb! : WWW.S! .C\nPatient CIU: W390807\nReferred By Vedanta hospital ; a\nReported iim\nSPUTUM CULTURE — 12 DRUGS ‘\nOrganism Isolated Actinobacter sp.\nAntibiotic\n| 1 |MEROPENAM + SULBAGTUM Sensitive(+++4) SS\nPpa ree\n|__3 [Cephalexin Resistant SSS\n| 4 |CEFOPARZONE : Sensitive (¥) SS\n| 5 [Levofloxacin Sensitive.(+)\nrj eect ee —\n|__6 _|Ciprofoxacin Resistant\n|__7 [Metronidazole Resistant SSS\n| 10 [CLARITHROMYCIN Sensitive (HHH) SSCS\nComment :\nAntibiotic or antifungal therapy initiated before the specimen is taken may produce false-negative results. Obtain the culture before\nstarting these therapy for the most accurate identification of the causative bacteria and the best clinical results. Interpretation of culture\nreports must be made according to the particular clinical scenario. Antimicrobial Sensitivity testing requests would be acceptable if\nProvided within 6 hrs of the release of Primary culturefidentification report.\nDr. Kamal Kant\nM.B.B.S., M.D. ;\n- DMC - S827\"\nShree Path Lab\nR. AKANKSHA GUPTA | cama? KANT\nConsultant Pathologist 3 | Consultant Pathologist\nhe reported result are for information and interpretation of the referring doctor or such other medical professionals who\nderstands reporting units, reference ranges and limitations of technologies. NOT VALID FOR MEDICOLEGAL PURPOSE.",
+          "campos": {
+            "ciu": "W390807",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T04:51:41.888323",
-      "actualizado_en": "2026-07-05T04:51:41.884413"
+      "actualizado_en": "2026-07-05T05:19:06.126466"
     },
     "W958991": {
       "ciu": "W958991",
@@ -2201,7 +2715,13 @@
         "apellidos": "FOWLER",
         "fecha_nacimiento": "07/12/1992"
       },
-      "informes_laboratorio": [],
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:19:14.240297"
+        }
+      ],
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
@@ -2219,10 +2739,26 @@
             "fecha_nacimiento": "07/12/1992"
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:19:14.240297",
+          "timestamp": "2026-07-05T05:19:14.240297",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056282_F-KYC_PC_SHANAZ_1_250424_1254@G.pdf_page_11.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "iC Department of Pathology AA, uae boiany, Berton\nANAND HOSPITAL Ph: +91-121-2792000, 4\nFax : +91-121-4|\n4x)\nPoe : AN ISO 9001 ; 2008 CERTIFIED |www.anandhospital.com\nAnand Hospital\nmemes §=We Believe in Caring, not just Curing...\nIDO\n\" | Provisional Report\nLab No | tits—izd Patient CIU: W958991\nPe es\nfi —\n|\nDetail : UHID: a No: IP90235757 Ward: EMERGENCY Bed No: 0\nFC\n— | ee\nABG oe Blood Gas) *\n(T) 37.00\n\nFO2(I) 45.00 %\n\nBLOOD GAS VALUES (37 c)\n\npH 7.46 H 7.35 - 7.45\n\npco2 29.50 mmHg L 32-45\n\npo2 119.00 mmHg H 83 - 108\n\nTemperature Corrected Values\n\npH(T) 7.46\n\npco2(T) 29.50 mmHg\n\npO2(T) 119.00 mmHg\n\nOximetry Values\n\nctHB 8.10 9/ dl E 12.0 - 16.0\n\nsO2 96.20 % N 95 - 99\n\nFO2Hb 95.30 % N 90 - 98\n\nFCOHb 0.10 % C 0.5 - 5.0\n\nFHHb 3.80 % N 0.5 - 5.0\n\nFMetHb 0.80 % N 0.5-5.0\n\nElectrolyte Values\n\ncNa+ 134.00 mmol/L L 136 - 146\n\ncK+ 3.70 mmol/L N 3.40 - 4.50\n\ncCa+ 4.58 mg/ di tL 4.61 - 5.17\n\ncCL 108.00 mmol/L H 98 - 106\n\nMetabolite Values\n\ncGlu 269 mg/ dl H 70 - 105\n\ncLac 3.4 mmol/L H 0.5- 1.5\n\nAcid Base Status\n\ncHCO3(P)c 20.90 mmol/L L 21-28\nCHCO3(P,st)c 22.80 mmol/L\nABE -1.90 mmol/ L\nSBE -2.30 mmol/L\nCalculated Values\nctCO2(B)c 44.10 Vol%\nctCO2(P}c 48.90 Vol%\nHet 25.30 % L 27 - 54\nPH(st)c 7.37\npo2(A-a)e 156.80 mmHg",
+          "campos": {
+            "ciu": "W958991",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T04:51:44.580977",
-      "actualizado_en": "2026-07-05T04:51:44.572135"
+      "actualizado_en": "2026-07-05T05:19:14.240297"
     },
     "W675734": {
       "ciu": "W675734",
@@ -2232,7 +2768,13 @@
         "apellidos": "KUMAR",
         "fecha_nacimiento": "07/01/2000"
       },
-      "informes_laboratorio": [],
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:19:24.015849"
+        }
+      ],
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
@@ -2250,10 +2792,26 @@
             "fecha_nacimiento": "07/01/2000"
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:19:24.015849",
+          "timestamp": "2026-07-05T05:19:24.015849",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056304_GUR0425PA0056304_FB_27-04-2025_0538-54_PM.pdf_page_10.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "DISCHARGE SUMMARY\nie MR oo eee ee\nPatient CIU: W675734 6100140281\nVOC Ol a\nCompany —_: VIDAL HEALTH NS\nSponsor + ZUNO GENERAL INSU LI {MA}\nBed No : ‘ 01:24 PM\nSpe Ciaity :\n|\nIRINE ROUTINE AND MICROSCOPY\nfest Met pt hichat Sho and Microscop\nSpecimen: Urine | LE LL TT\nNed team ee sical Examination:\nLs, ie a ala ta A Sa 7 ha\na iad sellin Pale Yellow\nee ee ll\nChemical Examination:\nSpecific Gravity: simi\nReducing Sugar: ‘5 A a TTR\nPus Cells | hil LAE LTE\nEpithelial Cells: 2 eR PY SEE\n[Ho aS | Lr\nAe | Sev\nPROTHROMBIN TIME AND INR\nPROTHROMBIN TIME 34 [Sec _(10.1-14.7)\nPROTHROMBIN CONTROL i a\nBLOOD GROUP ABO RH B'= POSITIVE\nBC (COMPLETE BLOOD COUNT\naS EE\n[eee] EE) - 11000\nAS __—*ka0-40)\nEosinophils Ze a Sa\n05 | Sa\nRBC COUNT B65 _[ioremuL f4.2-5.4)\nES Se |\nrE B48 \\gdc (92-36)\nPacked cell volume B42 De _K37-47) Ss\n; fs STONE UROLOGY & LAPAROSCOPY HOSPITAL,\n“12, East of Kailash, New Delhis410088",
+          "campos": {
+            "ciu": "W675734",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T04:51:47.056233",
-      "actualizado_en": "2026-07-05T04:51:47.052616"
+      "actualizado_en": "2026-07-05T05:19:24.015849"
     },
     "W570466": {
       "ciu": "W570466",
@@ -2263,7 +2821,13 @@
         "apellidos": "FLORES",
         "fecha_nacimiento": "09/11/1991"
       },
-      "informes_laboratorio": [],
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:19:34.802942"
+        }
+      ],
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
@@ -2281,10 +2845,26 @@
             "fecha_nacimiento": "09/11/1991"
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:19:34.802942",
+          "timestamp": "2026-07-05T05:19:34.802942",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056304_GUR0425PA0056304_FB_27-04-2025_0711-07_PM@F.pdf_page_9.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "DISCHARGE SUMMARY\n\nPatient CIU: W570466\n\nVOCTOr ay\n\nCompany ; VIDAL HEALTH INS. TPA (NON GIPSA)\n\nSponsor : ZUNO GENERAL INSURANCE LIMITED {MA}\n\nBed No 1203 : ‘ 01:24 PM\n\n| = - FE.\nCBC (COMPLETE BLOOD COUNT) Od\nCE ee |) a a\nif ie\nOS a ees LN a\nEe ae ae SS Gas\nCO aa ee: A a ° ae\nPRBC COUNT BD ONG 42-54)\n[oo eS a\nLC a | a as\n[Plateletcount. 00 OSH SO 450)\n(IR ore EEE RET SE =\nSerum Sodium mmol 136-145)\nSerum Potassium mmo 3.55.1)\nSerum Chloride 0G mol/L 98-107)\nLL LE LSE ERE TGR\nCOS | Se a eS\nLS STS SS SR) aS\nOC | is SS SS Se\n[Alkaline Phosphatase I 111)\nLOOT ll\nee; ae | aa eS |\nER SG RE | RS\ncalle SE RT STORM IBS Cali aaa,\nCl a. a eS ae\nBS ES\nCC A ea\nDa Til nee alphas ecreetill\nFe ia ec mene t-pain ha\n\n2G STONE UROLOGY & LAPAROSCOPY HOSPITAL\nF-12, East of Kailash, New Delhi-110065\nfad",
+          "campos": {
+            "ciu": "W570466",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T04:51:49.266358",
-      "actualizado_en": "2026-07-05T04:51:49.262275"
+      "actualizado_en": "2026-07-05T05:19:34.802942"
     },
     "W126571": {
       "ciu": "W126571",
@@ -2387,7 +2967,13 @@
         "apellidos": "PATEL",
         "fecha_nacimiento": "05/28/1999"
       },
-      "informes_laboratorio": [],
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:20:06.161559"
+        }
+      ],
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
@@ -2405,10 +2991,26 @@
             "fecha_nacimiento": "05/28/1999"
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:20:06.161559",
+          "timestamp": "2026-07-05T05:20:06.161559",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056519_discharge virendra_11zon_28-04-2025_1115-27_AM@G.pdf_page_10.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "SSS Se errr\nNZ A Unit of Omsans Diagnostic Group\nUSG, CT SCAN, X-RAY & PATHOLOGY bcd 2\nNEAR MUNDIYA CH © HAND\nAURAHA, BAJPUR-263 401 (U.S. NAGAR) UTTARAK\nBILL No, 1P/o1834 Patient CIU: W722348 —\nYL | |\nDr, RAVEENA Report Date | |\nwens No. fF Barcode No\nHEMATOLOGY\nCBC - COMPLETE HEMOGRAM ... 48\nHB% (HAEMOGLOBIN) 10.7 —— e/dt iL.5-\nTLC 9900 —— cells/cumm 4000-11000\nREC 4.9 % 4.6-6\ney 37.4 % 35-45\nMCV 82.9 fl 82-98\nMCH 28.2 PE 26-34\nMCHC 34.7 gm/dl 30-36\nPLATELET COUNT 2,33. i)\npLC ;\nNEUTROPHILS 46 re 30-70\nBy nerocrtes 42 r 20-45\nEOSINOPHILS 05 e 0-6\nMONOCYTES 06 s 2-7\nBASOPHILS o1 . 0-2\neae saree NUN HEI 04: Cott plete ---2s nna oa ennccccceeeeeese eee:\nEar is for persual of doctors only, not for medico legal cases. asa\nre (ety professional opinion, It may kindly be correlated clinically,\nd, the patient/consultant is ad\nthe result{s) of the investgtaion{s) is/are unexpecte is adviced to contact Laborato:\nor a recheck. ry Immediately\ncglinaca :\nABDULMIANAN ANSARI oR. ANUAAME aA\nBsc MLT MBBS, MD ( PATH)\nCONSULTANT PATHOLOGIST\nPoy carnachays W100 | Barun Sason | ctopemalcgmeiceern | RenaiVereess Vein |\nfect Facility Available Call - 9259780080 nyt 0 '\n'\nsleimer : This is @ protessional opinion for cfnician' yao |\njared ¢ magngasraery tnd Go Mt corte wih cca tna, SU°O8S AN Semone Studs Foret UG Gilded -FMACI Taping -\n\"feadbeck will be appreciated No compensation liabity stands, we mmot: O8CrOpancien yee PFOCOCutD hay NOt Valid Cen etree hn\nSOND discourage sety [> \\2¢hNIcal or their own jj Hthcoo Legal Pur\nerPretION of reports ANOU be reported for Sones ees OPTION ke\n——_——— 8d self medication. Correction within seven days.\n(C Scanned with OKEN Scanner\n10",
+          "campos": {
+            "ciu": "W722348",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T04:51:57.776716",
-      "actualizado_en": "2026-07-05T04:51:57.772833"
+      "actualizado_en": "2026-07-05T05:20:06.161559"
     },
     "W122053": {
       "ciu": "W122053",
@@ -2418,7 +3020,13 @@
         "apellidos": "THAKUR",
         "fecha_nacimiento": "10/14/2000"
       },
-      "informes_laboratorio": [],
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:20:14.227377"
+        }
+      ],
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
@@ -2436,10 +3044,26 @@
             "fecha_nacimiento": "10/14/2000"
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:20:14.227377",
+          "timestamp": "2026-07-05T05:20:14.227377",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056519_discharge virendra_11zon_28-04-2025_1132-57_AM@G.pdf_page_13.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "WA A Unit of Omsans Diagnostic Group LP\nUSG, CT SCAN, X-RAY & PATHOLOGY b a8 4\nTEED\nNEAR MUNDIYA c © AKHAND\nHAURAHA, BAJPUR-263 401 (U.S. NAGAR) UTTAR\nBILL\nNo, 1P/01834\nPatientName — ir VIRENDER Patient CIU: W122053\nAge § Sample Cou.vare a\nsai 31 Years Male\nRef.Doctor\nea, i report oote ND\n: 7289865111 Barcode No\nHEMATOLOGY\neas 484 mm/bhr 10-15\nCBC - COMPLETE HEMOGRAM ...\n89% (HAEMOGLOBIN) oa g/dt 115-16\nLas 195004 cells/cumm 4000-11000\nRBC 4.3 % 4.6-6\nPcv 32.9 % 35-45\nMCV 77.5 fi 82-98\nMCH 24.8 pg 26-34\nMCHC 37.3 am/dl 30-36\nPLATELET COUNT 199 0\nDLC 7\nNEUTROPHILS 63 % 30-70\nLYMPHOCYTES 23 “4 20-45\n<i NOPHILS 04 * 0-6\nocr 04 = 2-7\nBASOPHILS 0 od 0-2\n—ceaserssererersesannstunncntenaeenssnererestesrersneserse RPM COM pI ete -++++--reenerenrsceeseerereeteneceneeerenen on pssst\n3 AC | of doctors only, not for medico legal cases.\niad sepa ptr arene opinion. It may kindly be correlated clinically.\npho eat) of the investgtaion[s] is/are unexpected , the pationt/consultant is adviced ‘oe\nie\nora recheck.\ncnc Pape —fnasseef\nOR. A\nANAN ANSARI 1G CHOUHAN\npec ia MBBS, MD (PATH )\n5 CONSULTANT PATHOLOGIST\nLevel (T Ultrasound | Cotor Doppler | RenalVaricose Vein t\n‘ast Type CT Sean | 30D, eT arta Oaudiee | ' 1 Hematology | Doppler | Sonomammography 1 3D.TVB Guided FNACTaping\nHome Cons Mressionel opnion for clic’ help and not a tna! diagnosis. All machines) Not Valid €or Medics Legal Purpose\nDisclaimer: This s & ‘ndings do not covretaie with clinical findings. Discrapancies procedure have their own \"\nitimagingtaboratory Be Compensation lability siands. We us to tochnical or limitations. Re-sxaminaton and second opinion ts\nsuogesieg ei be appreciated. Strongly Giscourege seit interpre Fro ould be reported for correction within seven days.\nC Scanned with OKEN Scanner\n13",
+          "campos": {
+            "ciu": "W122053",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T04:51:58.547586",
-      "actualizado_en": "2026-07-05T04:51:58.543741"
+      "actualizado_en": "2026-07-05T05:20:14.227377"
     },
     "W535945": {
       "ciu": "W535945",
@@ -2449,7 +3073,13 @@
         "apellidos": "FLORES",
         "fecha_nacimiento": "03/10/2000"
       },
-      "informes_laboratorio": [],
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:20:23.283645"
+        }
+      ],
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
@@ -2467,10 +3097,26 @@
             "fecha_nacimiento": "03/10/2000"
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:20:23.283645",
+          "timestamp": "2026-07-05T05:20:23.283645",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056519_preauth virender _24-04-2025_0447-58_PM@G.pdf_page_12.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "Bee SCAN, XRAY & PATHOLOGY Jame faze ots\naera aaeaier cmmpes ed , BAUPUR-263 4 . eyes bh sat\nSe se ) UTTARAKHAND\nee ee\nOo | CoE eee Patient CIU: W535945 coud\nCd, na ecenniae a Sample Coll,Date eal\nes Male Ses\ntg al Report Date P|\nes fae mee PEB9SES1L1 Barcode No\ni - - INVESTIGATION NAMETS| RESULT i UNIT BIOLOGICAL REFERENCE RANGE\nfae 29.2 me/dl 10-45\nfe SERUM CREATININE : i its ie me/dl 0.7-1.7\nSERUM URIC ACID g 3.6 me/al 372\n\n_ SERUM SODIUM 128 mEq/L 135-155\nPOTASSIUM 3.2 4 mEq/L 3.555 ;\nCALCIUM 6.4 me/dl 6-10.2\nUFT-ALIVER FUNCTION TEST\nSERUM BILIRUBIN (TOTAL) 09 me/dl 0.2-2\nSERUM BILIRUBIN (DIRECT) 0.2 me/dl 0-0.5\nSERUM BILIRUBIN (INDIRECT) 1.0 me/dl 0-2\nSGOT SERUM 74 f\\ me/dl 0-35\nSGPT SERUM 30 + me/dl 0-45\nALKALINE PHOSPHATASE 142 me/dl 45-130\nTOTAL PROTEIN 6.6 me/dl 6-8.3\nSERUM ALBUMIN 7a g/dl 3-55\nSERUM GLOBUUN 2.9 me/dl 2.53.5\nSEROLOGY\nVIRAL MARKAR\nHIVI& EH NEGATIVE units NEGATIVE\nROY NEGATIVE units NEGATIVE 5)\nHBSAG NEGATIVE ng\\dl NEGATIVE =)\n“ry ci Pinas eo  ncnc ioe eee a become een eRe\nee re or FF-eitrasoo f+ pregnaney Cats? BGI A RONTREDP sin Doppler | Sonomammeg ;\n~All Bod) ‘Digital X-Rays |1VU | HSG | Barium Studies | Hist PologyIBl cos in Doppler | Sonomammography | 3D-TVS | USG Guided FNAC/Taping\nHome Collection Facility Available Call: ——————— ian tia em ac\nDisclaimer : This is a profe “ — ot Valid For Medica Lagal Purposq\nsuggested (slavatrleaesne) Sige ail eliedas Lesamed slid dine si ee Ciel edie facies en have their own limitations, Re-examination and second opinion\nYour feedback will be appreciated. No compensation liability stands. ee, beg\n12",
+          "campos": {
+            "ciu": "W535945",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T04:52:01.376805",
-      "actualizado_en": "2026-07-05T04:52:01.368265"
+      "actualizado_en": "2026-07-05T05:20:23.283645"
     },
     "W76997": {
       "ciu": "W76997",
@@ -2511,7 +3157,13 @@
         "apellidos": "CHUA",
         "fecha_nacimiento": "12/26/2000"
       },
-      "informes_laboratorio": [],
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:20:38.251293"
+        }
+      ],
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
@@ -2529,10 +3181,26 @@
             "fecha_nacimiento": "12/26/2000"
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:20:38.251293",
+          "timestamp": "2026-07-05T05:20:38.251293",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056644_Q-REPORT_250428_1140@F.pdf_page_6.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "———\nPatient CIU: W340582 mz _\na a mz |\nHs =) Dr. Sanjeev Goyal Requisitions ‘ |\nReq.No 2567546 Reported on a\nPatient Type OPD\nBIOCHEMISTRY ee ee on\nKFT(KIDNEY FUNCTION TEST)/RFT/Renal Profile\nSpecimen Type : Serum BIOLOGICAL\nTEST 7 i a ee ee\nSerum Urea 25.84 mg/dl 13-45 UreaseGLDH\nSerum Creatinine 0.94 mg/dL 0.6-1.4 Modified\nJAFFEs\nSerum Uric Acid 4.67 mg/dl 3.57.2 Uricase Trinder,\nEnd Point (Toos)\nSerum Sodium 136.0 meq/1 135 - 155 ISE Indirect\nSerum Potassium 4.20 meq/l 3.5-5.6 ISE Indirect\n“Results of these tests should always be interpreted in conjunction with patients medical history, clinical presentation and other findings.\n-*** End of Report ****\nPlease Correlate With Clinical Findings\nope *\nDr. (REMBREK JINDALA L\nM.D (Pathology)\nHN BATHOLOcisT\nSultanpur Chowk, Nr. Dhulkot Barrier, Ambala Chandigarh Expy, Ambala, Haryana 134003 Ph. i 2 Toll Free : iy\nthe health care providers the health care providers",
+          "campos": {
+            "ciu": "W340582",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T04:52:07.943666",
-      "actualizado_en": "2026-07-05T04:52:07.938573"
+      "actualizado_en": "2026-07-05T05:20:38.251293"
     },
     "W783479": {
       "ciu": "W783479",
@@ -2542,7 +3210,21 @@
         "apellidos": "SATO",
         "fecha_nacimiento": "12/26/2003"
       },
-      "informes_laboratorio": [],
+      "informes_laboratorio": [
+        {
+          "pruebas": [
+            {
+              "nombre": "Req.No",
+              "valor": 2567545.0,
+              "unidad": "Reported",
+              "flag": "",
+              "referencia": ""
+            }
+          ],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:20:45.457706"
+        }
+      ],
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
@@ -2560,10 +3242,34 @@
             "fecha_nacimiento": "12/26/2003"
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:20:45.457706",
+          "timestamp": "2026-07-05T05:20:45.457706",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056644_Q-REPORT_250428_1140@F.pdf_page_9.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "Healing Touch Hospital\n\nPatient CIU: W783479 = =\n\n——— — || :\n\nHa Dr. Sanjeev Goyal Requisitions : i\n\nReq.No : 2567545 Reported on : a\n\nPatient Type oPpD\n\n'GEINIGAD PATHOLOGY\nPUS CELLS - URINE 2-3 /HPF 0-5\nRed blood cells Nil /hpf NIL\nEpithelial Cells - Urine 1-2 /HPF 0-5\nCasts NIL NIL Microscopic\nCrystals, NIL NIL Microscopic\nMicro-organisims NIL NIL\nAlbumin:\n1+(30mg/dl)\n2+(100mg/dl)\n3+(300mg/dI)\n4+(>2000mg/dl)\nGlucose:\n1+(100mg/dl)\n2+(250mg/dl)\n3+(500mg/dl)\n4+(1000mg/dl)\nKETONE\nTRACE (0.5mmoll)\n1+1.5 (1.5mmoll/)\n2+ 4.0 (1.5mmol/l)\n3+ (8.0mmol/!)\nKEN OF Report OOOOSOC™~—SOSSSC~S~S\nPlease Correlate With Clinical Findings\nwpe %\nOr. MEHAK TD AL\nHN O14367,.---\nPATHOLOGIST\nSultanpur Chowk, Nr. Dhulkot Barrier, Ambala Chandigarh Expy, Ambala, Haryana 134003 Ph J i! Toll Free : a”\nthe health care providers the health care providers",
+          "campos": {
+            "ciu": "W783479",
+            "pruebas": [
+              {
+                "nombre": "Req.No",
+                "valor": 2567545.0,
+                "unidad": "Reported",
+                "flag": "",
+                "referencia": ""
+              }
+            ],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T04:52:11.408727",
-      "actualizado_en": "2026-07-05T04:52:11.396279"
+      "actualizado_en": "2026-07-05T05:20:45.457706"
     },
     "W672757": {
       "ciu": "W672757",
@@ -2573,7 +3279,13 @@
         "apellidos": "HOWARD",
         "fecha_nacimiento": "04/01/1991"
       },
-      "informes_laboratorio": [],
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:20:52.335074"
+        }
+      ],
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
@@ -2591,10 +3303,26 @@
             "fecha_nacimiento": "04/01/1991"
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:20:52.335074",
+          "timestamp": "2026-07-05T05:20:52.335074",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056853_E-CHITRAKSHIFINALBILLDISCHARGESUMMARY_250427_1048@E.pdf_page_4.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "OF MEDICAL SCIENCES (P) LTD; i Y — © 4 Dano st0s\nViabalt corm adtcainaiute cer\nNABH\nH-2021-0773\n. Department of ;\n| ee\n| a ee ee\n| : 154091 Reporting Date: = 11.32.51 Pm\nPatient CIU: W672757 Consultant Doctor : Dr.NAVDEEP SINGLA\nIP No. 1112907\na\nBLOOD SUGAR RANDOM\nInvestigation Result Units Biological Reference Interval\nBLOOD SUGAR RANDOM -\nBLOOD SUGAR RANDOM 85 mg/dl 70 - 140\nICAL\nCS SC8\nof _, fa)\nfi - Myst\ne 3 = Dr.MEGHA KESHARWANI\ne a im r.\nB\\ FaimsS Sf MBBS, MD-Pathology\nts SS Reg No :15162\ney Cr 9g\nAHAD URES PATHOLOGIST\n++ END OF THE REPORT *****\nDelhi-Rohtak Road, Opp. Metro Pillar No. 792, Bahadurgarh, Haryana-124507 (India)\nUser: VIPIN pci , , a a",
+          "campos": {
+            "ciu": "W672757",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T04:52:15.768941",
-      "actualizado_en": "2026-07-05T04:52:15.762795"
+      "actualizado_en": "2026-07-05T05:20:52.335074"
     },
     "W131948": {
       "ciu": "W131948",
@@ -2626,6 +3354,1572 @@
       ],
       "creado_en": "2026-07-05T04:52:19.013033",
       "actualizado_en": "2026-07-05T04:52:19.006267"
+    },
+    "W769971": {
+      "ciu": "W769971",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:20:31.228177"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:20:31.228177",
+          "timestamp": "2026-07-05T05:20:31.228177",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056568_E-REPORTS_250427_1436@E.pdf_page_1.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "——— -. - == = ———=— . => SS ea —\nma) DEV NANDINI HOSPITAL\n(EY) ee\nSS a ae\na a:\n- a:\nBy : Dr. VIMLESH SHARMA MS, FICS, ICMCHReceived On : HR 17:26:28\ntype: BLOOD EDTA\nInvestigation 2 CBE\nTest | | BiologicdfRef Interval\nHAEMATOLOGY\ncBC\na HAEMOGLOBIN (HB)* 10.8 gm/dl 12.0-15.0\nTOTAL LEUCOCYTIC COUNT (TLC)* 12600 /cmm 4000 - 11000\nMethod: ELECTRICAL IMPEDANCE\nDIFFERENTIAL LEUCOCYTE COUNT\nNEUTROPHIL* 79 % 40-75\nLYMPHOCYTE* 18 % 20-40\nEOSINOPHIL* 01 % 00 - 08\nMONOCYTE* 02 % 00-10\nBASOout * % 00-01\nMetho Patient CIU: W769971\nGENERAL BLOOD PICTURE*\n(Method: MICROSCOPIC\nRBC'S are normocytic and normochromic with mild anisocytosis.\nWBC SERIES: No immature cell seen. ‘\nPlatelets are normal. No haemoparasite/ immature cells seen.\n€ PLATELET COUNT* 1.55 Lakh/cmm 1.50 - 4.10\nMethod: ELECTRICAL IMPEDANCE\nR BC (Red Blood Cells)* 4.10 Millions/emm 3.80 - 4.80\nMethod: ELECTRICAL IMPEDANCE\nP.CV / HAEMATOCRIT* 31.5 % 35.0 - 46.0\n(Method: CALCULATED\nMCV * 81.2 fl 78.0 - 100.0\nMethod: CALCULATED\nMCH* 27.6 picogram 25.0 - 35.0\nMethod: CALCULATED\nMCHC* 30.6 gm/dl 31.0 - 37.0\nMethod: CALCULATED\nchedked By :- ASIF or\nPrintéd By :- One tu el\nEten,\nBE SSoRe\nContinuos Quality improvement = Page No: 1 of 2 r SHIV KUMAR\npoy ILAC aa}: MBBS MD M.LAP\n120 cores sansa EQAS MLA.C., M.LS.H.IM",
+          "campos": {
+            "ciu": "W769971",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:20:31.236599",
+      "actualizado_en": "2026-07-05T05:20:31.228177"
+    },
+    "W993405": {
+      "ciu": "W993405",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:21:14.462930"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:21:14.462930",
+          "timestamp": "2026-07-05T05:21:14.462930",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057759_Q-RAJINDERKUMARPHANDAQR_250427_1311@F.pdf_page_28.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": ", f=. ;\nXS :\nAakash Healthcare | Aakast é } 4\nSuper Speciality Hospital i fee Ery\nLABORATORY INVESTIGATION REPORT\nsic TT a _|\nPatient CIU: W993405 ee |\nepioves oer IP NO 2127101\nRef, Doctor : Dr. Gastro Urrt (Dr, Shaved f Dr.Ekent) Facility : Agkash Heaithcare Delhi\nSk a\nChemical Examination\nUrobdilinegen, Negative Negelve\nMethod « Ehriich reaction\n5 Bilirubin. Negative Negative\nAcetone/etone. Negative Negative |\nBlood. Absent Absent\nMethod » totsmethpibennatine ‘curiae hydroperonite\nUrine Albumin. is Ni\nNitrites, Negative Neoat:v«\nMethod - Gness Test\nLeuckocytes. Absent Absert\nMethod « Esterases |\nUrine Suar. Nil Nil\nMethod  Glicose Oxidase, Percuictase/Benedict's Fest |\nSpecific Gravity. 1,005 1.010 - 2,039 |\nMethod - JON Exchange |\n: oH 6.0 ‘ 1.0 - 7.5\nMethod - Double Indicator\nMicroscopic Examination\nPus ceils o1 HOF -5/ HPF\nRBC Nil JHIPE Absent\nMethod - Light Miovscasy\nEpithelial Colis 1 foe 1-2/H2\nMethod + tight Aicrascapy\nCast Absent Absent\nCrystal Agsent Absan\nBacteria, Sksent\nP-irt DateTime: 27/04;2025 ex ei\n1c 2008\nPage 2 of 8",
+          "campos": {
+            "ciu": "W993405",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:21:14.471665",
+      "actualizado_en": "2026-07-05T05:21:14.462930"
+    },
+    "W806791": {
+      "ciu": "W806791",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:21:21.888367"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:21:21.888367",
+          "timestamp": "2026-07-05T05:21:21.888367",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057759_Q-RAJINDERKUMARPHANDAQR_250427_1311@F.pdf_page_41.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "fs\nSuper Speciality Hospital\nLABORATORY INVESTIGATION REPORT\nGo eee EEO = —\n| Pate i TT. ee\nPatient CIU: W806791 ia 25/03/2025\nepiewus var 1P NO 127101 |\nRef, Doctor ? Dr. Gastro Unit {Dr, Sharad / Dr.Ekant) Facility F Aaaish Healtheu-e Det\n—_ —— eee = = —— =\nBiochemistry\nName Resuk Unit Ref.Rar\nSample No Fe Collection Date 26/53/25 04:54 Ack 30 26/03/2025 07:45 Resort Dare 25. 29:27\nLiver Function Test ( LFT )\nTotal 8 lirubir 2.41 a (nH) me/dl f :\nDirect 3 lirubir 1.08 a (H} mo/dl 0-5,\nMethod » Serum, Diago Methoe\nIndirect Bilirubin 1.33 a (H re e-\nMethod + Cotcestatent\nAlkaline Phosphatase 131 4 (H. J +129\nGamma GT 2! ut §-£]\nAlbumia 2.92 ¥ iL) ald 97 - 4,\nGlobulin 3.49 gyal _<3\nMethad - Catcutatedt\nA:G Ratk 0.84 ¥ «L} ! 2\nMethod + Calculated \\\nTotal Protein 6.41 gid é\nSGPT/ALT 24.3 Ji as\nSGOT/AST 40 a (H) ui} 35\nMethod « FCC Wand Pyridcas! Prasat]\n|\nExpected Values\nCord Blood <2 mg/dl\nO-Iaay 10-8 mg/c\nf-2day 6.0 - 12.8 mg/di |\n3-5 day 19.0 - $4.8 mg/at\nPrint DateTime: 27/0452024 f shear , |\nbelle Se |\nSE\nwe 2008\nLL ee |",
+          "campos": {
+            "ciu": "W806791",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:21:21.896811",
+      "actualizado_en": "2026-07-05T05:21:21.888367"
+    },
+    "W628784": {
+      "ciu": "W628784",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:21:28.553901"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:21:28.553901",
+          "timestamp": "2026-07-05T05:21:28.553901",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057805_E-gauravqewr_250427_1916@E.pdf_page_21.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "8) ee\nat ner\n‘ ‘ Sor, %\nrage tapas\nLaboratory Investigation Report\nPatient CIU: W628784 Centre\na Collection Date/Time : 27/Apr/2025 10:30AM\n: Dr.Meenakshi Jain Reporting Date/Time : 27/Apr/2025 12:58PM\nClinical Biochemistr\nTest| | | Bio Ref Interva\nUrine a :\nUrinary Potassium (Spot) 10.75 mmol/l\nISE Indirect\nComment Ref Ranges :-\nMale\n< 40 years: 11 - 80\n= 40 years: 17 - 99\nFemale\n< 40 years: 17 - 145\n= 40 years: 22 - 164\nKindly correlate with clinical findings\n* End Of Report ***\nBe si MB ide Resultsfifollow:\nOr. Preeti Tull, M.D. | as\nAssociate Director & Quatity\nTest Performed at :969 - Max Lab RG Square Mall, Patpargenj, 108A, [P Ext, [.P.Extension, Patparganj, Delhi, 11 |\nBooking Centre :5574 - Max Hospital, Patparganj, 3rd Floor, RG Mall, IP Extension, Patpargan} Delhi\nThe authenticity of the report can be verified by scanning the Q R Code on top of they",
+          "campos": {
+            "ciu": "W628784",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:21:28.562341",
+      "actualizado_en": "2026-07-05T05:21:28.553901"
+    },
+    "W989651": {
+      "ciu": "W989651",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:21:35.801436"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:21:35.801436",
+          "timestamp": "2026-07-05T05:21:35.801436",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057813_Shivani Preautharization request_26-04-2025_0924-28_PM@G.pdf_page_7.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "1 ; | i Ly | FT. |\nT AS HOSPITA\nA Unit of RINSE Marketing Pvt. Ltd. )\nPATHOLOGY\nPatient CIU: W989651 ian ia\nes ee a\nMN MMs«:sTEUAS HOSPITAL > iam\ni A A an\nINVESTIGATIONS VALUE Unit REF.RANGE\nBIOCHEMISTRY\nKFT(KIDNEY FUNCTION TEST)\nBLOOD UREA 8 mg/dl 11-40\nBLOOD UREA NITROGEN(BUN) 4 23% mg/dl 5-20\nSERUM CREATININE 1.0 me/dl 0.7-1.4\nSERUM URIC ACID i 25 mg/dl 3.2-7.0\nSERUM ELECTROLYTE\nSODIUM(Na)+ de A mEq/L 135-155\nPotassium (K) 27 mEq/L 31555\nCHLORIDE(CI)+ 1 4 mEq/L 98-108\nLec fice DRV UT PRAKASH\nMD(M Biology)\n/ Re -40221\nKP-70, Malahi Pakri, 90-Ft. Road, Metro Pillar No.-18, Kankarbagh, Patna-20, Mob.",
+          "campos": {
+            "ciu": "W989651",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:21:35.810158",
+      "actualizado_en": "2026-07-05T05:21:35.801436"
+    },
+    "W536067": {
+      "ciu": "W536067",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:21:43.199171"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:21:43.199171",
+          "timestamp": "2026-07-05T05:21:43.199171",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057825_Akshaya Kumar Preauth (1)_27-04-2025_0857-23_AM@G.pdf_page_17.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "ip UNIQUE PATH LAB\nye Cau Hine\n\"7 (A Unit of Apex Hospital)\nASSURANC P\nA iia as\nCS : Mob.\nlah Ron Na TT Date / Time : i\nPatient CIU: W536067\n° Mark Hospital Collection Time z\nL | 1\n> UAB Reporting Dato timo =:\nRec. No. > 394/25\nInvestigation Value Units Biological Ref Interval\nCRYSTALS None Seen None Seen\nCASTS None Seen None Seen\nOTHERS Nil Nil\nImmuno Biochemistry\nCRP (C Regefive Protein)\\Quantitative\nCRP QUANTITATIVE 20.6 High mg/L 0.0 -6.0\nTurbidimetric\nA C-reactive protein (CRP), a type of acute phase protein, is used to identify inflammation or infection\nin the body. CRP is an early indicator of these problems and its levels can rise quickly.\nViral Marker(Hiv,Hcv,Hbsaq)\nHIV (AIDS ) TRI-DOT | & I! Negative Negative\nCard method\nRapid Card HBSAg Negative Negative\ncard method\nHCV Negative Negative\ncard method\nSerology\nAuthenticated By\nDr S TA BHAR\n88S, DCP\nDRoSavita Bharti:}) 5/69) 5)\nMBBS.QCP \\) 5\nConsultant Pathology\nReg. No. : 49058\n* Clinic Correlation is Neccessary for the Final Diagnosis\nif Result are Unexpected, “|\n: Home Collection Facility Available\nNot For Medico Legal Purpose seal\n~_\nScanned with CamScanner",
+          "campos": {
+            "ciu": "W536067",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:21:43.207570",
+      "actualizado_en": "2026-07-05T05:21:43.199171"
+    },
+    "W146378": {
+      "ciu": "W146378",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:21:50.166345"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:21:50.166345",
+          "timestamp": "2026-07-05T05:21:50.166345",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057914_Q-AdditionalDocument_250427_1443@F.pdf_page_15.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "(+) Anb (a) ne\n/ bam nbu Hospital (G))\ny AAO. (Multi Speciality) ys\n|\nMr ANANTHRAG S ,\n75 Y/Male : ff\nran equested on : —nn/ 16:4\nReferred by: Specimen Collected on A | 16:47\nDr SENTHILKUMAR R MD,PDCC IAA VTE WK NT BPs on * [yea\nSODIUM - SERUM 136 130 - 148 mEq/L\nPOTASSIUM SERUM 5.0 3.5-5 mEq/L\nBICARBONATE SERUM 20 22 - 26 mEq/L\nPatient CIU: W146378 96 - 108 mEq/L\n- - End of Report =\nRESULT ENTERED BY : LABV1\nRESULT VERIFIED BY : LABV1\nFINAL REPORT\n,.\n|\n|\n|\nSE ——r\n4&5, Lakshmi Vilas Street, Kumbakonam - 612 001, Thanjavur District.\nEne",
+          "campos": {
+            "ciu": "W146378",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:21:50.175233",
+      "actualizado_en": "2026-07-05T05:21:50.166345"
+    },
+    "W310318": {
+      "ciu": "W310318",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:21:57.043361"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:21:57.043361",
+          "timestamp": "2026-07-05T05:21:57.043361",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057918_F-KYC_PC_KARUNA_1_250427_1321@G.pdf_page_29.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "| care you can trust™\n\n\\\\\\\\\\\\\\\\\\ SITARAM BHARTIA\n\nInstitute of Science & Research\nLABORATORY INVESTIGATION REPORT\n\nPatient CIU: W310318 OO\n\nEpisode =P IP NO + 1515162\n\nRef. Doctor Dr. Medicine Unit /Pradeep Narayan Chauhan hl\n\n— =\n\nBiochemistry\nSample No [i Collection Date mm: Ack Date || 10:02 Report Date || 12:37\nProcalcitonin -PCT\nSample Type- Serum\nProcalcitonin -PCT < 0.05 ng/ml 0- 0.05\nMethod - Fluorescence Immunoassay\nInterpretation:-\n<0.05ng/ml - Normal Value\n0.05 - 0.49ng/ml_ - Minor or no significant systemic inflammatory response. Local inflammation and local\ninfection are possible\n0.5 - 1.9 ng/ml - Significant but moderate systemic inflammatory response. Infection is possible, but various\nconditions are known to induce PCT as well (Severe trauma, major surgery,cardiogenic\nshock)\n2.0-9.91ng/ml - Severe systemic inflammatory response. Most likely due to infection (sepsis) unless other\ncauses are known (see above)\nHigh risk for developing organ dysfunction.\n=/>10.0 ng/ml Important systemic inflammatory response almost exclusively due to severe bacterial sepsis\nor septic shock. Frequently associated with organ dysfunction.\nClinical correlation/ confirmation with other method is recommended)\nPrint DateTime: FY",
+          "campos": {
+            "ciu": "W310318",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:21:57.053180",
+      "actualizado_en": "2026-07-05T05:21:57.043361"
+    },
+    "W586053": {
+      "ciu": "W586053",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:22:11.896895"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:22:11.896895",
+          "timestamp": "2026-07-05T05:22:11.896895",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057923_F-KYC_PC_CHOPPAVARAPU_PRABHAVATHI_1_250427_1339@G.pdf_page_12.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "meat\nDEPARTMENT OF BIOCHEMISTRY\nPatient CIU: W586053 FP HP\nAdmn ‘iii MRSE252¢ By : Dr.PRAVEEN KUMAR KULKARNI MBBS,\nBill Date :26-Apr-25 11:45 pm Report Date 5 27-Apr-25 11:19 am\nParameter Specimen _ Results Biological Reference Method\nCreatinine Serum 0.75 0.51 - 0.95 mg/dl Modified Jaffe-Kinetic\neGFR >90.00 >= 75 ml/min/1.73m2 Calculation by CKD -\nEPI\n*** End Of Report ***\nBOLD - Denotes Abnormal Results. Poa se\n* — - Denotes Critical Alerts. ge oxy) i p> at a\nVe Sie oy 3) ; —\nVerified By : : 90115880 We” er .\nTest results related only to the item tested. ; MC-2071 Dr. M.A. MUQEETH, MD, DNB\nNo part of the report can be reproduced without written\npermission of the laboratory. CONSULTANT BIOCHEMIST\nSuggested Clinical Correlation * If neccessary, Please discuss\n>> oases\nDr.D.RADHIKA CHOWDARY Dr.MD.MOUNUDDIN Dr.M.A. MUQEETH\nM.D MD MD, DNB\nSR. CONSULTANT BIOCHEMIST CONSULTANT BIOCHEMIST CONSULTANT BIOCHEMIST\nPrinted By : 90115117 Printed On : 27-Apr-2025 01:25:41 PM System i:",
+          "campos": {
+            "ciu": "W586053",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:22:11.906515",
+      "actualizado_en": "2026-07-05T05:22:11.896895"
+    },
+    "W290389": {
+      "ciu": "W290389",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:22:19.484074"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:22:19.484074",
+          "timestamp": "2026-07-05T05:22:19.484074",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057931_F-SachinPreAuth_250427_1410@G.pdf_page_12.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "‘. .\n: Dr. R.K. Bajaj\n2 ? MEDLINE piacnostics Ween ne eal\nPatient CIU: W290389\n505, Model Jown, Upp. State bank OF India, .\nSs) KARNAL-132001 (Haryana) | Ph. : 94163-35507\nPatient Clu: : ;\n| | Fe 7\n: Dr. Davinder Singh Sample: . £67901\na : / Sample Reg Date : 27-Apr-2025\n——COCCCCCCoiilection Centre: Medline Diagnostics ___\nInvestigations Result Unit Reference Range\nHAEMATOLOGY\n* COMPLETE BLOOD COUNT (CBC)\nHAEMOGLOBIN 11.8 gm/dl 12.0-18.0 :\nTOTAL LEUCOCYTE COUNT 20500 /cumm 4000-11000\nDIFFERENTIAL LEUCOCYTE COUNT\nNeutrophils 84 Y %, 40-75 ,\nLymphocytes me 12 I %. 20-45\nMonocytes f 02 %. | 00-08\nEosinophils ( ‘02 %. 00-06 : .\nBasophils we 00 ; %. - 00-01\n. TOTAL R.B.C. COUNT 4.60 million/cumm\\, 3.5-6.5\nP.C.V./ Haematocrit value | - 38.6 % 35-54\nMCV . r 78.6 : fL 76-96\nMCH >» 25.7 Pg 27.00-32.00\n~MCHC 32.8 g/dl 30.50-34.50\nRDW 15.2 % 11.5 - 14.5 .\nPLATELET COUNT 1.99 lacs/mm3 1.50 - 4.50\n‘\na\nPant RoKS Bajaj\nM.B.B.S., M.D. (PATH) uch\na\n__\n. This report is Not for Medico Legel purpose ¢ Reportis oie and same day ¢ The content of this report is a professions opinion & not the Final Diagnosis\nLL",
+          "campos": {
+            "ciu": "W290389",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:22:19.492736",
+      "actualizado_en": "2026-07-05T05:22:19.484074"
+    },
+    "W262175": {
+      "ciu": "W262175",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:22:36.040163"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:22:36.040163",
+          "timestamp": "2026-07-05T05:22:36.040163",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0058016_F-KYC_PC_RAMKUMAR_SANTOSH_KUMAR_1_250427_1718@G.pdf_page_13.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "DEPARTMENT OF BIOCHEMISTRY\nPatient CIU: W262175 al\nAdmn No «=: IS) ese252¢ ey 90: rR PHYSICIAN\nBill Date 127-Apr-25 12:36 pm Report Date : 27-Apr-25 01:24 pm\nParameter Specimen Results Biological Reference Method\nCreatinine Serum 0.85 0.67 - 1.17 mg/dl Mog ied Jaffe-Kinetic\neGFR >90.00 >= 85 mi/min/i.73m2 _ Calculation by CKD -\n(EPI\n*** End Of Report *** :\nt ic E\n\\ f\nC al\nBOLD - Denotes Abnormal Results. hE RN\n* — - Denotes Critical Alerts. iB (Cx) ;\nVerified By : : 110809 Wee?’\nTest results related only to the item tested ; MC-2071 Dr. RADHIKA CHOWDARY. D, M.D.\nNo part of the report can be reproduced without written\npermission of the laboratory. SR. CONSULTANT BIOCHEMIST\nSuggested Clinical Correlation * If neccessary, Please discuss\nDr.D.RADHIKA CHOWDARY Dr.MD.MOUNUDDIN Dr.M.A. MUQEETH\nM.D MD MD, DNB\nSR. CONSULTANT BIOCHEMIST CONSULTANT BIOCHEMIST CONSULTANT BIOCHEMIST\nPrinted By : 90115117 Printed On : 27-Apr-2025 04:18:24 PM System i",
+          "campos": {
+            "ciu": "W262175",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:22:36.050348",
+      "actualizado_en": "2026-07-05T05:22:36.040163"
+    },
+    "W201866": {
+      "ciu": "W201866",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:22:43.265094"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:22:43.265094",
+          "timestamp": "2026-07-05T05:22:43.265094",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0058034_F-MANJEET_SINGH_1_250427_1803@G.pdf_page_30.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "Lesie seer Sle)\nVeneapeeeis\nJs rm\nfele oct lax\nSEN 7”\nLaboratory Investigation Report\nr.Emergency Team Gon Reporting Date/Time : 27/Apri2025 07:03AM\nlinical Biochemistry Il WHI TOT\nRenal Function Test (RFT) Profile , Without Urine\nUrea, Serum\nDate 27/Apr/2025 Unit Bio Ref Interval\n05:24AM\nUrea 16.0 mg/dL 17.0 - 43.0\nCreatinine, Serum\nDate 27/Apr/2025 Unit Bio Ref\n05:24AM Interval\nCreatinine 0.52 mo/dL 0.8-1.3\neGFR by MDRD 160.84 mimin'1.73\neGFR by CKD EPI 2021 112.91\nPatient CIU: W201866\neGFR - Estimated Glomerular Filteration Rate is calculated by MDRD equation which is most accurate for GFRs < 60m! / min\n1.73 m?.MDRD equation is used for adult population only\n- a ae |\nCategory Ref Interval (ml / min / 1.73 m*) Condition |\nGl 290 |\na2 60-8 Mildly Decreased\n|\nGh a5 - 59 Mildly to Moderately Decreased |\nG3t 30-44 Moderately to Severly Decreased\ni: 15 Aldne Nur\nTest Performed at ‘S85 - Max Lab Sector-44, Gurugram, Delta Tower Plot No,-$4, Sectar-4, |\nBooking Centre -5081 - Max Hospital - Gurugram, Opposite HUDA City Centre Metro Station, B - Block\nThe authenticity of the report can be verified by scanning the QR Cade on top of ‘ho\nMe-e8s",
+          "campos": {
+            "ciu": "W201866",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:22:43.274352",
+      "actualizado_en": "2026-07-05T05:22:43.265094"
+    },
+    "W946192": {
+      "ciu": "W946192",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:22:58.719819"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:22:58.719819",
+          "timestamp": "2026-07-05T05:22:58.719819",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0058042_F-KYC_PC_BHUMI_1_250427_1830@G.pdf_page_18.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "med\nSarvodaya SARVODAYA HOSPITAL\nHEALTHCARE SECTOR-19, Patient CiU: W946192\nHB BHUMI [ SHA034708 ] HUA\n——— es\nPatient CIU: 2925\nby : Dr. RAKESH GUPTA/DR SHRIYANSH JAIN Accepted on\n| : 6/ EMERGENCY / EMERGENCY\nCLINICAL BIOCHEMISTRY\nINVESTIGATION RESULT UNIT BIOLOGICAL REFERENCE RANGE\nRFT II\nBlood Urea 22.8 mg/dL 17 -43\ni, Serum Creatnine 0.60 mg/dL F0.5-1.1 ‘\nJ Sodium(Na+) 135 mmol/L 135 - 155\nPotassium(K+) 4.50 mmol/L 3.5-5.5\n. Chioride(CL-) 98.9 mmol/L 96 - 110\nLFT II\nfh SERUM BILIRUBIN\n: Total Bilirubin 0.397 mg/dl 0.3-1.2\nj Direct Bilirubin 0.163 mg/dl 0-0.25\ni Indirect Bilirubin 0.23 mg/dl 0-06\n} SGPT(ALT) 61.1 H wih 0-50\n| SGOT(AST) 55.2 H ull 0-50\nAlkaline Phosphate(ALP) 107 u/L 20 - 140\nTotal Protein 8.02 gmdl 6.6 - 8.3\nAlbumin 4.17 g/dL 35-52\naD Globulin 3.85 H_ g/dL 2-35\nAG Ratio 1.08\nHAEMATOLOGY\nINVESTIGATION RESULT UNIT BIOLOGICAL REFERENCE RANGE\nCBC (Haemogram)\nHb(Haemoglobin) 11.8 L g/dL F12- Hp\nTLC 8.34 x10(3)/uL 4.5-11\nDLC\nNEUTROPHILS 66.0 % 40-80\nLYMPHOCYTES 22.2 % 20-40\nEOSINOPHIL 0.5 L % 1-6\nMONOCYTES 11.2 H % 2-10\nBASOPHILS 0.4 % 0-1\n5 a oe L % 40m50\n_CIN No. U85110D1.1997PL.C088209 eS SS\nSarvodaya Hospital, Sector-19, Gopi Colony, Faridabad ——————————— me OTE\nTel: Fax: 14076449 BX\nfa |",
+          "campos": {
+            "ciu": "W946192",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:22:58.732179",
+      "actualizado_en": "2026-07-05T05:22:58.719819"
+    },
+    "W264165": {
+      "ciu": "W264165",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [
+            {
+              "nombre": "Eosinophils",
+              "valor": 3.0,
+              "unidad": "%",
+              "flag": "",
+              "referencia": "01-06"
+            }
+          ],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:23:10.105081"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:23:10.105081",
+          "timestamp": "2026-07-05T05:23:10.105081",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\HYD-0425-PA-0007281_Q-QUERYREPLYOFPT.GTSRINIVASARAO_250427_0957@F.pdf_page_8.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": ": DIAGNOSTICS & SPECIALITY LABORATORY\n4 D. No. : 1-76/1/B/4, Ganga Enclave, Petbasheerabad, Medchal Road, Secunderabad - 67.\nte, Ph. No a’\nTa\nPatient CIU: W264165 | OG Tl\n; _ TT a\n. : 20040207 Collected On =: 18-Apr-2025 07:48:03 PM\n-: RSC: Or. PRAVEEN Reporting On : 19-Apr-2025 06:41:56 PM\n——— eee\nDEPARTMENT OF HAEMOTOLOGY . .\nCOMPLETE BLOOD PICTURE(CBP)\n>: 16.0 gm/dL Female : 11.5 - 15.0 :\nlethod) Male: 13.5 - 18.0\n: PCV : 48.0 % 36 - 46\n‘TOTAL RBC COUNT , : 5.3 cells/cumm 3.8-4.8\n(Method : Automated Cell counter/electrical Impedance)\nPLATELET COUNT : 25 Lakhs/cumm 1.5- 5.0 .\n\n\"(Method : Automated Cell counter/Electrical Impedance) ; : F\n\n: TOTAL WBC COUNT . : 9,000 cells/cumm 4000 - 11000 , ;\n(Method : Automated Cell counter/Electrical Impedance) . : ‘i\nan DIFFERENTIAL COUNT:\nPOLYMORPHS . > 57 % 40 - 80 .\n7 LYMPHOCYTES : 35 % 20 - 40\nEOSINOPHILS : 03 % 01-06\n. MONOCYTES >: 05 % 02-10\nBASOPHILS ge : ‘00 % 00 - 02\n“(Method : Automated Cell ‘Counter/Microscopy-Lelshman’s Stan(thin & Thick) .\nPERIPHERAL SMEAR EXAMINATION :\n\n“RBC MORPHOLOGY :  NORMOCYTIC/NORMOCHROMIC ; : ;\n“WBC : WITHIN NORMAL LIMITS\n. PLATELETS ‘ : ADEQUATE\n\n(Method : Automated Cellcounter & Microscopy) ; :\n*. Note : Please Correlate Clinically if necessary kindly discuss.\n-------END OF REPORT-----—- Al\nAV\nIl | IN | | | Dr.B.Bheeshma MD.Path\nFOCUSED ON QUALITY Consultant Pathologist\nFOR CLINICAL CORRELATION IF THERE IS NEED KINDLY DISCUSS\npe A el le Ne |\nFACILITIES AVAILABLE ROUND THE CLOCK UNDER ONE ROOF\noo oo oe co ~ ae Bt Rel, Din Chamictns.Harmnane Aceayv",
+          "campos": {
+            "ciu": "W264165",
+            "pruebas": [
+              {
+                "nombre": "Eosinophils",
+                "valor": 3.0,
+                "unidad": "%",
+                "flag": "",
+                "referencia": "01-06"
+              }
+            ],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:23:10.327917",
+      "actualizado_en": "2026-07-05T05:23:10.105081"
+    },
+    "W987270": {
+      "ciu": "W987270",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [
+            {
+              "nombre": "Quantity",
+              "valor": 25.0,
+              "unidad": "ml",
+              "flag": "",
+              "referencia": ""
+            },
+            {
+              "nombre": "Leucocitos (WBC)",
+              "valor": 120.0,
+              "unidad": "",
+              "flag": "",
+              "referencia": ""
+            }
+          ],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:23:34.602594"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:23:34.602594",
+          "timestamp": "2026-07-05T05:23:34.602594",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\IND-0425-PA-0032901_E-H2658992802126194907ilovepdfmerged15compressed_250427_1710@E.pdf_page_66.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "Mark of Excellence\nDa BOMBAY HOSPITAL - INDORE oe,\nRe AS Ring Road,Indore-452 010,Ph.:4771111,Extension:2156, y 69 \\\nS eV. Website : www.bombayhospitalindore.com\nRes b NAB Hg\n<2 \"ED ca\nDEPARTMENT OF PATHOLOGY\nPatient CIU: W987270 fe Ha 7\n| | oe 7 :\nHS“: br. Ravi Rathi Gender : Male\nOrdered Loc : 10th Floor - West / Bed No : 215 Sample Collected On : Ee 5 0:03:43\nSample Type : URINE Sample Reported On : Ee 5 13:36:20\nSample No _ ; 25050393\nROUTINE URINE ANALYSIS\nPHYSICAL EXAMINATION\nQuantity : 25 ml\nColour : Pale Yellow Pale Yellow\npH > 5.5 4.5 - 8.0\nDeposit : Absent Absent\nSpecific Gravity : 1.006 1.005 - 1.030\nCloudiness :  S.Turbid Absent\nCHEMICAL EXAMINATION\nProtein : Present (+) Absent\nSugar : Present (+++) Absent\nKetone Bodies : Absent Absent\nBile Salts / Bile Pigments : Absent Absent\nBlood : Present (+++) Absent\nNitrite : Absent Absent\nMICROSCOPY\nRed Blood Cells : 45 /hpf. 0-1 /hpf\nWBC : 120-125 /hpf. 0 - 5 /hpf\nWBC Clumps : Absent /hpf. 0 - 5 /hpf\nEpithelial Cells : 0-1 /hpf.\nCrystals : Absent\nCasts : Granular few\nBacteria : Present (+)\nMethod : Fully Automated Urine Analyzer\n** END OF REPORT *\na\nReet}\n}\nDr. P.S. Singh\nD.P.B.,M.D. (Pathology)\nPathologist\nAUTHORISED r es",
+          "campos": {
+            "ciu": "W987270",
+            "pruebas": [
+              {
+                "nombre": "Quantity",
+                "valor": 25.0,
+                "unidad": "ml",
+                "flag": "",
+                "referencia": ""
+              },
+              {
+                "nombre": "Leucocitos (WBC)",
+                "valor": 120.0,
+                "unidad": "",
+                "flag": "",
+                "referencia": ""
+              }
+            ],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:23:34.615695",
+      "actualizado_en": "2026-07-05T05:23:34.602594"
+    },
+    "W185003": {
+      "ciu": "W185003",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [
+            {
+              "nombre": "Test",
+              "valor": 12.6,
+              "unidad": "Seconds",
+              "flag": "",
+              "referencia": ""
+            }
+          ],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:23:42.894731"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:23:42.894731",
+          "timestamp": "2026-07-05T05:23:42.894731",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\IND-0425-PA-0032901_E-H2658992802126194907ilovepdfmerged15compressed_250427_1710@E.pdf_page_67.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "Mark of Excellence\nDa BOMBAY HOSPITAL - INDORE Er,\neS Ring Road,Indore-452 010,Ph.:4771111,Extension:2156, fy 69 4\nS eV. Website : www.bombayhospitalindore.com\ne\nRoa NAB Hg\ntr nal\nDEPARTMENT OF PATHOLOGY\nPatient CIU: W185003 fe Ha iy\n| 7 fe | |\nHS“: br. Ravi Rathi Gender : Male\nOrdered Loc : 10th Floor - West / Bed No : 215 Sample Collected On : | 0:03:43\nSample Type : CITRATED PLASMA Sample Reported On : | 1:01:29\nSample No _ ; 25050394\nTEST DESCRIPTION OBSERVED VALUE UNIT BIOLOGICAL RFERENCE RANGE\nPROTHROMBIN TIME (PT)\nTest : 12.6 Seconds\nNormalized Mean (NMPT) > 11.0 Seconds\nINR Value 1.15\nMethod : By Fully Automated Coagulometer\nTherapeutic Range of INR for Anticoagulant Control .....2.0 - 3.0\nACTIVATED PARTIAL THROMBOPLASTIN TIME (APTT)\nTest : 31.9 Seconds\nNormalized Mean (NMAPT) : 23.5 Seconds\nMethod : By Fully Automated Coagulometer\n** END OF REPORT *\n_\nDr. Neelam Bharihoke\nM.D. (Pathology)\nPathologist\nAUTHORISED r eS",
+          "campos": {
+            "ciu": "W185003",
+            "pruebas": [
+              {
+                "nombre": "Test",
+                "valor": 12.6,
+                "unidad": "Seconds",
+                "flag": "",
+                "referencia": ""
+              }
+            ],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:23:42.906334",
+      "actualizado_en": "2026-07-05T05:23:42.894731"
+    },
+    "W401006": {
+      "ciu": "W401006",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [
+            {
+              "nombre": "Hemoglobina (Hb)",
+              "valor": 11.8,
+              "unidad": "gms/dl",
+              "flag": "",
+              "referencia": "13.0 - 17.0"
+            },
+            {
+              "nombre": "Erythrocytes",
+              "valor": 3.81,
+              "unidad": "mill/cmm",
+              "flag": "",
+              "referencia": "3.8-4.8"
+            },
+            {
+              "nombre": "Haemotocrit",
+              "valor": 35.9,
+              "unidad": "%",
+              "flag": "",
+              "referencia": "40 - 50"
+            },
+            {
+              "nombre": "Leucocytes",
+              "valor": 7300.0,
+              "unidad": "",
+              "flag": "",
+              "referencia": "4000 - 10000"
+            },
+            {
+              "nombre": "Neutrophils",
+              "valor": 83.0,
+              "unidad": "%",
+              "flag": "",
+              "referencia": "40-75"
+            },
+            {
+              "nombre": "Lymphocytes",
+              "valor": 11.2,
+              "unidad": "%",
+              "flag": "",
+              "referencia": "20 - 40"
+            },
+            {
+              "nombre": "Monocytes",
+              "valor": 5.0,
+              "unidad": "%",
+              "flag": "",
+              "referencia": "2-10"
+            },
+            {
+              "nombre": "Eosinophils",
+              "valor": 0.7,
+              "unidad": "%",
+              "flag": "",
+              "referencia": "1-6"
+            },
+            {
+              "nombre": "Basophils",
+              "valor": 0.1,
+              "unidad": "%",
+              "flag": "",
+              "referencia": "1-2"
+            }
+          ],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:23:51.866416"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:23:51.866416",
+          "timestamp": "2026-07-05T05:23:51.866416",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\IND-0425-PA-0032901_E-H2658992802126194907ilovepdfmerged15compressed_250427_1710@E.pdf_page_90.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "Mark of Excellence\nFEMS BOMBAY HOSPITAL - INDORE | gN\nEIS Ring Road,Indore-452 010,Ph.:4771111,Extension:2156, =| iz) 4\n3 OU. Website : www.bombayhospitalindore.com\nRess b NAB Hg\n<2 \"ED ca\nDEPARTMENT OF PATHOLOGY\n\nlal [es |__| |\n| iy 7 7\nHEB = ::«Dr. Ravi Rathi Vch No. : 300537\n\nOrdered Loc : 02nd Floor - Recovery / Bed No : 215 Sample Collected On : | 7:22:24\nSample Type : EDTA Sample Reported On : 10:34:09\nSample No : 25051442\n\nBLOOD COUNT WITHOUT INDICES\n\nHemoglobin : 11.80 gms/dl 13.0 - 17.0\n\nErythrocytes : 3.81 mill/cmm 3.8-4.8\n\nHaemotocrit : 35.90 % 40 - 50\n\nLeucocytes : 7300 /cu.mm 4000 - 10000\n\nDIFFERENTIAL LEUCOCYTE\n\nCOUNT (%)\n\nNeutrophils : 83.00 % 40-75\n\nLymphocytes : 11.20 % 20 - 40\n\nMonocytes : 5.00 % 2-10\n\nEosinophils : 0.70 % 1-6\n\nBasophils : 0.10 % 1-2\n\nDIFFERENTIAL LEUCOCYTE\n\nCOUNT (ABSOLUTE)\n\nNeutrophils # : 6.06 x1000/cumm 2-7\n\nLymphocytes # : 0.82 x1000/cumm 1-3\n\nMonocytes # : 0.37 x1000/cumm 0.2-1\n\nEosinophils # : 0.05 x1000/cumm 0.02 - 0.5\n\nBasophils # : 0.01 x1000/cumm 0.02 - 0.1\n\nPlatelets >: 0.85 lacs/cumm 1.5-4.5\n\nMean Platelet Volume : 11.30 fL 7.5 - 12.0\n\nComments :  Anisocytosis\n\nPlatelet count has been verified/Corrected manually.\n\nBETA SE AIR Ro tent kana 1 ES teats ttn = t= att 1 *—-Jscopic Examination. Reference range from Dacies Lewis Practical Haematology 11th edition.\n\nPatient CIU: W401006 atology (ISLH)\n** END OF REPORT **\npot\nJ\n\nDr. Neelam Bharihoke\n\nM.D. (Pathology)\n\nPathologist\n\nAUTHORISED = eS",
+          "campos": {
+            "ciu": "W401006",
+            "pruebas": [
+              {
+                "nombre": "Hemoglobina (Hb)",
+                "valor": 11.8,
+                "unidad": "gms/dl",
+                "flag": "",
+                "referencia": "13.0 - 17.0"
+              },
+              {
+                "nombre": "Erythrocytes",
+                "valor": 3.81,
+                "unidad": "mill/cmm",
+                "flag": "",
+                "referencia": "3.8-4.8"
+              },
+              {
+                "nombre": "Haemotocrit",
+                "valor": 35.9,
+                "unidad": "%",
+                "flag": "",
+                "referencia": "40 - 50"
+              },
+              {
+                "nombre": "Leucocytes",
+                "valor": 7300.0,
+                "unidad": "",
+                "flag": "",
+                "referencia": "4000 - 10000"
+              },
+              {
+                "nombre": "Neutrophils",
+                "valor": 83.0,
+                "unidad": "%",
+                "flag": "",
+                "referencia": "40-75"
+              },
+              {
+                "nombre": "Lymphocytes",
+                "valor": 11.2,
+                "unidad": "%",
+                "flag": "",
+                "referencia": "20 - 40"
+              },
+              {
+                "nombre": "Monocytes",
+                "valor": 5.0,
+                "unidad": "%",
+                "flag": "",
+                "referencia": "2-10"
+              },
+              {
+                "nombre": "Eosinophils",
+                "valor": 0.7,
+                "unidad": "%",
+                "flag": "",
+                "referencia": "1-6"
+              },
+              {
+                "nombre": "Basophils",
+                "valor": 0.1,
+                "unidad": "%",
+                "flag": "",
+                "referencia": "1-2"
+              }
+            ],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:23:51.879244",
+      "actualizado_en": "2026-07-05T05:23:51.866416"
+    },
+    "W824212": {
+      "ciu": "W824212",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:24:00.494995"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:24:00.494995",
+          "timestamp": "2026-07-05T05:24:00.494995",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\IND-0425-PA-0033745_SANTOSH334_27-04-2025_0431-24_PM@F.pdf_page_3.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "LAB TEST REPORT\n| a P| FFT\nHMM Episode No —:- 13804200 | Report Date : [07:32:10.000\nOrdering Doctor : Dr.Subhaprakash Sanyal & Team Episode Type : IPD\n| a ss\nHR HEMOGLOBIN, EDTA WHOLE BLOOD (3180-SRL)[3180][3180]\nGLYCOSYLATED 6.6 Non-diabetic High %\nHEMOGLOBIN (HBA1C) Adult < 5.7\nPre-diabetes\n5.7-6.4\nDiabetes\ndiagnosis:\n&gt; or =6.5\nTherapeutic\ngoals: < 7.0\nAction\nsuggested :\n&gt; 8.0\n(ADA\nPatient CIU: W824212\n2021)\nMEAN PLASMA GLUCOSE 142.7 < 116.0 High mg/dL\nHEPATITIS B CORE ANTIBODIES (TOTAL), SERUM (2452-SRL)\nHEPATITIS B CORE NON REACTIVE NON\nANTIBODIES (TOTAL) REACTIVE\nPatient Clu: < 1.00 (Non s/CcO\nReactive)\n&gt; or = 1.00\n(Reactive)\nHEPATITIS B SURFACE ANTIGEN; QUANTITATIVE (CMIA)(SRL- 7658)\nHEPATITIS B SURFACE 0.39 < 1.00 Non- col\nANTIGEN reactive\n&gt; or = 1.00\nReactive\nHEPATITIS C ANTIBODIES, SERUM (2446-SRL)\nHEPATITIS C ANTIBODIES NON REACTIVE NON\nREACTIVE\nPATIENT VALUE 0.05 < 0.9:Non- col\nreactive\n&gt; or = 0.9\nto<\n1.0\n:Borderline\n&gt; or =\n1.0:Reactive\nHIV-1&2 ANTIBODIES, SERUM (9916-SRL)\nHIV 4TH GEN ASSAY (P24AG + NON REACTIVE NON\nHIV AB) REACTIVE",
+          "campos": {
+            "ciu": "W824212",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:24:00.509127",
+      "actualizado_en": "2026-07-05T05:24:00.494995"
+    },
+    "W767488": {
+      "ciu": "W767488",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:24:09.818429"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:24:09.818429",
+          "timestamp": "2026-07-05T05:24:09.818429",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\JPR-0425-PA-0005044_H_26671_9290939312_57_59_YUDHAANICPANDREPORTS001_27-04-2025_0101-02_PM.pdf_page_4.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "ORES cee} terli\n. secs sterling\nar ctcring = ACCURIS\nHOSPITALS 2 ey, >\nPathology lab that cares\nj\nPassport No LABORATORY TEST REPORT | | | |\nPatient CIU: W767488 rmation Location Information\neg. ee\na ee ee i\na 558769 Collected on =: = 26-Apr-2025 06 25 Creo\nHE C:sC1241699 i peco-APT: rinted On _-- 26-Apr-2025 08:50\nRef By | Dr DIRECT HOSPITAL Sample Type. EDTA blood Process At 73-Sterling-Gurukul\na\nPre-Operative Major Gurukul Ahmedabad\nComplete Blood Count\n_ SSS —  ———\nTest Result Unit Biological Ref. Interval\nE Sedi ion R\nESR Capmary photometry 03 mm/thr 0-10\nVS\n~~\ni\nDr. Atul Domadiya\nMD Path[G-32352} |\nThis is an Electronically Authenticated Repon\n—_ —— ————— fests aked win 2 are referred WSs — ——\nSterling Accuris Pathology Laboratory TENS\nSterling Hospital, Sterling Hospital Road, Memnagar, Ahmedabad - 380 052. Gujarat, India. Ph.: +9179 4001 1914 ASE\n¢ © Website: wwwssterlingaccuris.com | www-sterlinghospitals.com we Ry sad\nKee Download Accuris App",
+          "campos": {
+            "ciu": "W767488",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:24:09.829083",
+      "actualizado_en": "2026-07-05T05:24:09.818429"
+    },
+    "W328746": {
+      "ciu": "W328746",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [
+            {
+              "nombre": "Age/Sex",
+              "valor": 77.5,
+              "unidad": "YRS",
+              "flag": "",
+              "referencia": ""
+            }
+          ],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:24:26.704970"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:24:26.704970",
+          "timestamp": "2026-07-05T05:24:26.704970",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\JPR-0425-PA-0005076_H_36220_9294528109_59_40_MANMOHAN_28-04-2025_1036-30_AM@G.pdf_page_9.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "}\n|\n:\ni\n2 }\n: |\nRajasthan }\nHospital i\n{\nj\nDiagnostics S.No. : OT eS ; RH/23/002750)31504747\nPotient CIU: W328746 TPDNo 1 23916 |\nAge/Sex :77.5YRS = Sample Collection : |\nDector : Dr. Ajay Reporting Date 3 27-Jan-2023 97:29 PM\n|\n|\nTest Name Status Result Reference Range Unit\n| BIOCHEMISTRY j\nKIDNEY FUNCTION TEST KFT RFT (SERUM) |\nUrea, Blood, Grease GLDH reaction H 183.3\" 16,60-48.5 mg/d j\nCreatinine, Serum, Jaffe ethos H 6,9* 0.70-1.20 mog/di |\nUfic Acid, Serum, Uriease Peroxiduse Reaction =H 7.6 3.4-7.0 mg/ai }\nSannphe Type | Sis |\nELECTROLYTES (SERUM) |\nSodium, Serum, (SE - indirect 143 136,0-145.0 mmol/l. i |\nPotassium, Serum, ISE - indirect 5.1 3.50-5.10 mmol/L |\n| Chloride, ise - mnairect 106.9 98.0-109.0 mmol/L\n| LFT LIVER FUNCTION TEST (SERUM)\ni Bitirubin, Total, Olazc methodycoterimatrcevfandransk 04 0.30-1.40 mg/dl\n| Bilirubin, Direct, Diazo method/colorimetrice Yendrassik 0.2 0.00-0.20 mg/dl\n| Bilirubin, Indirect, Celculeted 0.2 0.10-1.00 mg/db. '\n| SGOT (AST), Serum, iFCC with PYP 19.8 0.0-40.0 U/L\n| SGPT (ALT), Serum, cc with PvP 15.1 0.0-41.0 UA\n| Alkaline Phosphatase (ALP), Serum, pnp aup 75 35.0-129.0 UA\nKinetic\nProtein, Total, Biuret - colorimemic 6.7 6.0-8.0 g/dl\n| Albumin, 806 ~ Coterimetrie 38 3.5-5.2 g/dL\n|\n| Globulin, coicusted 29 2.00-3.50 g/d\nAIG Ratio, Caicwioted 1.3 :\nf 2a TAAM\nJoann\n1 DR, APOORVA SARASWAT\nTECHNOLOGIST MBBS, MD (PATHOLOGY)\n} Test (s) performed on collected sample (s) received . Please correlate with clinical findings & other related investigations,\n| Subject tb jaipur jurisdiction, only. This report is not for medico-leyab Purpose.\n| ABH wABe\ni wy\n; Mahavir Jaipuriya. He: 5\nRajasthan Hospital, RHL aL\nRILN Marg, Jaipur-302018 +91 141 2720020 @www.rajasthanhospital.in WRU Aas\n{\n|\n{\n| ail",
+          "campos": {
+            "ciu": "W328746",
+            "pruebas": [
+              {
+                "nombre": "Age/Sex",
+                "valor": 77.5,
+                "unidad": "YRS",
+                "flag": "",
+                "referencia": ""
+              }
+            ],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:24:26.715032",
+      "actualizado_en": "2026-07-05T05:24:26.704970"
+    },
+    "W964220": {
+      "ciu": "W964220",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:24:35.856008"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:24:35.856008",
+          "timestamp": "2026-07-05T05:24:35.856008",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\JPR-0425-PA-0005079_PA_FILE_OF_PT_BIMALA_DEVI_304_28-04-2025_1132-59_AM@G.pdf_page_9.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "GB Dig\no> lo,\n“7\nt a oa\n, %~4\nOsprt hs\n* : . :\nOpp. Sanwaria Hotel Om Vihar Colony, Jaipur Road, Chomu, Jaipur\nPatient CIU: W964220 | |\n—— a a\nID : RDPL513997 ‘ Sample Collected on: 25-Apr-2025 18:14 =>\nClient : SD 1047 Report Released on + 25-Apr-2025 18:16 =\n. eferred By :NA . Barcode No 074647\n. HAEMATOLOG) = .\nCOMPLETE BLOOD COUNT(( BC 5PART )\nDescription 7 Results ; Units Bio. Ref. Interval\nr “*B -(Haemoglobin) 57 g/dl 11.5-16.5\nsethodology :Photometric Measurement) —_——_\nTotal Leukocyte Count (TLC/WBC) 6.00 10° ul 4,.00-11.0\n(Methodology :Optical’ Imeodance) ; ——\n; DIFFERENTIAL LEUKOCYTE COUNT(DLC) .\nNeutrophils 58.6 % 40,0-75.0\n(Methodology ;Opticall Impedance)\nLymphocytes 35,5 % 20,0-45.0\n(Methodology :Optical’ impedance)\nEosinophils Lo % 1.0-6.0\n(Methodology :Optical’ Impedance)\nMonocytes 4.0 % 2 .0- 10.0\n(Methodology :Opticaly Impedance)\nBasophils 0.0 % 0.00 - 2.00\n(Metnodology :Optica\nPacked Cell Volume (?CV)-Hematoerit 19.5 % 28.0-48.0\n(Methodology :Calculated\n7 Red blood cell count (RBC)* 3.74 millions/mm 3.8-5,5\n(Methodology :Optical/ |mpedanca)\nPlatelet Count 331 10°3/uL 150-450\n(Methodology Optical’ impedance) ——\n* Mean Platelet Volume (MPV) 83 tL. 7.10-12.50\n‘4athodology ‘Derived trom PLT Histogram)\n.ean Corpusculur Volume (MCV) 52.2 tL 80 - 96\n(Methodology -Denved f Histogram) :\nMean Corpuscular tlemoglobin (MCH) 15.2 pyevll 28 - 33\n(Methodology :Calculated)\nMean Corpuscular Hb concentration (MCHC) 29.2 gdl 31-36\n(Methodology Calculated)\nRDW-CV 18.6 % 11.7 - 144\n(Methodology ‘Automated-Cell Automated-Cell Counter) . ‘i\nRDW-SD 33.8 fL 35.0- 56.0\n(Methodology Automated: Automated-Cell Counter)\nAbsolute Neutrophil Count 3.99 103 wh 2.00-8.00.\n(Methodology :Calcutatea .\nAbsolute Lymphocyte Count ’ 4.02 10°35 ub 1.00-3,00 .\n(Methodology ‘Calculated!\nAbsolute Eosinophils Count 0.25 1093 ul 0,02-0.80\n(Methodology :Calculated) i\nAbsolute monocyte Count 0.30 10°3)) ).20.- 1.00\n(Methodology :Caiculated) - :\nAbsolute Basophil Count 0.0) 10°35 uL 0.00-0.10\nPv 2o0f3\n« =\n(2o aft Tay;\n(Tec (Pathologist) a\n4 1\nMob. 9460623171, 9664271149 Email : blimaging.diagnostic.2023@gmail.com ws\n2 ag®",
+          "campos": {
+            "ciu": "W964220",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:24:35.866754",
+      "actualizado_en": "2026-07-05T05:24:35.856008"
+    },
+    "W890776": {
+      "ciu": "W890776",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [
+            {
+              "nombre": "Gine",
+              "valor": 47122224.0,
+              "unidad": "TORY.",
+              "flag": "",
+              "referencia": ""
+            }
+          ],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:24:45.473226"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:24:45.473226",
+          "timestamp": "2026-07-05T05:24:45.473226",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\KOC-0425-PA-0009630_Q-AnilCasesheet_250427_1458@F.pdf_page_21.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "N\nTITUTIO\n| INSTITUTE OF MEDICAL SCIENCE (NIMS) BREST CO LeGe NARC-A\nNOORUL ISLAM er FOUNDASION © DENTAL COLLEGE Wes? rata indi G2)\nIM: nt ital.com - rn Z\nwebsite wwii rsmediil O° A unit of NI ——\nmail i 45, 3951111 ; a:\ngine: 47122224 TORY. RiPORL =\nBors ayoice No- : 40°18 PM\n— : 07:40:18 P\nLI Patient Patient CIU: W890776 - MRLAWIL Rv Invoice Date : ___ aan PM\nName : Collection Date : ,\nGeni der/ Adi | Fe ‘\n; IERAL OPD 7 12025 09:14:46 PM\ntoe By u1.sHAHBAZ ZAILU Result Ready : | |\nReferre ‘ s ‘ 14\ni Bed # .\nIP# ‘a i = 24/04/2025 09:15:34 PM\n‘ : GENERAL MEDICINE Result Verified :\nDept./Unit ; Ward : MALE WARD\nseat Nae RSS et Range\nae HAEMATOLOGY\n“COMPLETE BLOOD COUNT(CBC)\nHAEMOGLOBIN(HB) 138 11.0- 17.0 gmvdl\nMethod:COLORIMETRIC annette ed\nJOTALCOUNT\nNotod:SPARTCELLCOUNTER- 9920 4000 - 11000 cellsfcumm\nFLOW CYTOMETRY seascapes OR npn nin\n‘DIFFERENTIALCOUNT ss ss i tsst~S\n\"POLYMORPHS\nMethod:FLOW CYTOMETRY AND 77.6 50 - 80 %o\nPEROXIDASE STAINING 4\nLYMPHOCYTES me s)he\nMethod:FLOW CYTOMETRY AND 14.0 25-50 %\nPEROXIDASE STAINING\nMONOCYTES ; ~\nMethod:FLOW CYTOMETRY AND 7.0 2-10 %\nPEROXIDASE STAINING\n|\nEOSINOPHILS\nMethod:FLOW CYTOMETRY AND 0.1 <5 %\nPEROXIDASE STAINING ,\neee\nBASOPHILS a\nMethod:FLOW CYTOMETRY AND 0.\nPEROXIDASE STAINING 3 lid %\nPLATELET COUNT\nlethod:SIX PART CELL COUNTER- 1.0 -\nFLOW CYTOMETRY 1.5-5.0 Lakhs/cumm\nRBC i\nMethod:SIX PART CELL COUNTER. 4.14 4) tae ee\n. 3.8 - sine\nRow ovTouerey 8-65 million/emm\n\\Method:SIX PART CE; Cn\nCALCU PART CELL COUNTER- 39.9 _ 37.0-54.0 9\nMCV .\nlethod:SIX PART CELL eee\nALCULAYEL COUNTER- — 97.4 80 - 100 Paes\nICH fL\nthod'SX PART CELL co —\nUI * n ee\nNTER- | 93.6 27.0 - 32.0 —\n; Pg\nRINTED TIME i... AM naeatES TA\nates NABL procédures:\nure:\nDAY & NIGHT SERVICE PRINTED BY: ANARGuace",
+          "campos": {
+            "ciu": "W890776",
+            "pruebas": [
+              {
+                "nombre": "Gine",
+                "valor": 47122224.0,
+                "unidad": "TORY.",
+                "flag": "",
+                "referencia": ""
+              }
+            ],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:24:45.485273",
+      "actualizado_en": "2026-07-05T05:24:45.473226"
+    },
+    "W994854": {
+      "ciu": "W994854",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:25:01.528619"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:25:01.528619",
+          "timestamp": "2026-07-05T05:25:01.528619",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\KOL-0425-PA-0004210_REPORT_27-04-2025_0729-34_PM.pdf_page_7.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "; |\nv S ha Health LLP € |\n\\ parsna neaithcare ee |\n—__._... LABORATORY « IMAGING CENTRE —————— |\n2, Nayratna Lane, Shyambazar, Kolkata -700004 a» 033-2555 0104 / 3216/3717 |\n62 sparshahealthcarallp.imaging@ogmail.com\nPatient CIU: W994854 Me 7 a a\nPaton i a\nDoctor | TARIT MITRA [CHM]\n( Collection Date 26/04/25 16:10 DEPARTMENT OF IIAEMOTOLOGY Lab Rev Date 6:20\nBil Date 26/04/25 15:50 Report Date 7:41\nInvestigation |\nINVESTIGATION P| P| |\nUR\nHAEMOGLOBIN 7.6 g/dl. Male:- 14 To 17\nFemale:- 13 To 15G/ DI.\nTOTAL COUNT |\na (By Automated Blood Cell Count)\na TOTAL W.B.C. COUNT 23,100 /cumm., 4000 - 11000 / Cumm. |\n@ pirreRENTIAL CouNT |\nNEUTROPHILS 86 % 40 - 68 %\nLYMPHOCYTES 10% 20-40%\nMONOCYTES 03 % 02-05%\nEOSINOPHILS 01% 01-04%\nBASOPHILS 00 % 00-01%\nPLATELET COUNT 2.86 lacs/ cu mm 1.5-4.0\nLacs/ Cu Mm !\nonan END OF REPORT --2-e—\n=>\nvf\nDrA Bandyapadbyay Dr. Abbilekha Bishway-Dr.Avindam Sur Dr.Satyabrata Mukherjee Ms.Basundhara Kar\nMBBS MAD PATHOLOGY) MBB SM DIMICKOMOLOGY) M.H.B.S, MD(BIOCHEMISTRY) MBES(CAL),D-ULM & H (CAL) M.Sc (MEDICAL MICROBIOLOGY) .\nChecked By: Ww Printed By:\nce i) ‘ 3 i\n% fe te ls | . 1\nE: : + Mer Ps VaNCED S Bouts p\n4 ANGIOVe Nal elf ATHOLORK YS }\ngg Se",
+          "campos": {
+            "ciu": "W994854",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:25:01.539722",
+      "actualizado_en": "2026-07-05T05:25:01.528619"
+    },
+    "W376616": {
+      "ciu": "W376616",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:25:10.200317"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:25:10.200317",
+          "timestamp": "2026-07-05T05:25:10.200317",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0125-PA-0001141_W2500438UNADKAT ASHWIN_27-04-2025_1001-12_AM.pdf_page_74.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "SS Ee  — EE — ee a ee ee\n=| 5 Grant Medical Foundation Se &\nmy pm Kuby Hall Clinic ‘ @ .\n\nW. « NABH\nAnIWwAarle\neee\nPatient CIU: W376616 .__ TY\n| ee\nReferred By Dr, _*_ IGNATIUS AVINASH Specimen : WHOLE BLOOD\nWard / Bed * CRITICAL CARE/CC19\nPassport No =\na\n_ DEPARTMENT OF LABORATORY MEDICINE-HAEMATOLOGY -\nInvestigation Result Units ____ Biological Reference Interval _|\nHaemogram Report\nMPV 212.7 fl 5.4-11.5\nMethod : Derived from Platelet Histogram\n» RBC MORPHOLOGY : Macrocytosis, moderate anisocytosis. Mild polychromasia.\nMethod : MICROSCOPY\nWBC MORPHOLOGY : Neutrophilic leucocytosis.\nMethod : MICROSCOPY\nPLATELET : Thrombocytopenia,\nMethod : MICROSCOPY\n*** End Of The Report ***\nVerified By i\nAkash jdu ae\n~~\nDr.Anuradha Deole\nConsultant Pathologist\nNOTE\n* Kindly Corelate clinically & discsuss if necessary.\n* Results pertain to the specimen submitted.\n* For 'Terms and Conditions of Reporting’ kindly\nvisit our website : www. Rubyhall.com\n| Printed By : MRD Printed On: 2: 13:37\n59/6, Azad Nagar, Wanowarie, Pune - 411 040 (INDIA). | Tel. : 020 - 66494982 / 83 / 84 Fax : 020 - 66494939\nPS-1044",
+          "campos": {
+            "ciu": "W376616",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:25:10.212129",
+      "actualizado_en": "2026-07-05T05:25:10.200317"
+    },
+    "W847137": {
+      "ciu": "W847137",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:25:18.337091"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:25:18.337091",
+          "timestamp": "2026-07-05T05:25:18.337091",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0125-PA-0001141_W2500438UNADKAT ASHWIN_27-04-2025_1001-12_AM.pdf_page_80.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "mg gp Kuby Hall Clinic a @ :\nW. « NABH\nanowarle\na\nPatient CIU: W847137 Ld Cd\nLr a\nLab No/Result No * Release Date : J 09:16 am\nReferred By Dr. + IGNATIUS AVINASH Specimen + WHOLE BLOOD\nWard / Bed * CRITICAL CARE/CC19\nPassport No 3\nCee a\n_ DEPARTMENT OF LABORATORY MEDICINE-HAEMATOLOGY\n[Investigation Result _ Units Biological Reference Interval\nHaemogram Report\nMPV 39.54 fl 5.4-11.5\nMethod : Derived from Platelet Histogram\nRBC MORPHOLOGY : Normocytic normechromic, mild anisocytosis, few macrocytes. Mild polychromasia and\n& 2 nRBCs/100 WBCs.\nMethod : MICROSCOPY\nWBC MORPHOLOGY : Neutrophilic leucocytosis\nMethod ; MICROSCOPY\nPLATELET : Thrombocytopenia.\nMethod : MICROSCOPY\n*** End Of The Report ***\nVerified By f /\nDXH560 Jie.\nREMISOL_WANOWARIE a\nDr.Anuradha Deole\nConsultant Pathologist\nNOTE\n* Kindly Corelate clinically & discsuss if necessary.\n* Results pertain to the specimen submitted.\n* For ‘Terms and Conditions of Reporting’, kindly\nvisit our website : www.Rubyhall.com\nPrinted By : MRD Pointed On: RB 2:14:32\n59/6, Azad Nagar, Wanowarie, Pune - 411 040 (INDIA). | Tel. : 020 - 66494982 / 83 / 84 Fax : 020 - 66494939\nPS-1044",
+          "campos": {
+            "ciu": "W847137",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:25:18.347277",
+      "actualizado_en": "2026-07-05T05:25:18.337091"
+    },
+    "W388693": {
+      "ciu": "W388693",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [
+            {
+              "nombre": "Haematocrit",
+              "valor": 27.6,
+              "unidad": "%",
+              "flag": "",
+              "referencia": "40-50"
+            }
+          ],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:25:27.345227"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:25:27.345227",
+          "timestamp": "2026-07-05T05:25:27.345227",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0125-PA-0001141_W2500438UNADKAT ASHWIN_27-04-2025_1001-12_AM.pdf_page_83.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "ee ..........................._ _ LL rrr\n=|5 Grant Medical Foundation OC gm\nRuby Hall Clini (Q@)\nmg pm Ruby Hall Clinic “\nWanowarie se\n59/6, Azad Nagar, Wanowarie, Pune - 411 040 (INDIA). Tel. : 020 - 66494982 / 83 / 84 Fax : 020 - 66494939\nPatient CIU: W388693 ; : ae ‘ a 07:30 AM\nan ee ee\nLab No/Result No: Release Date : ER 09:36 av\nReferred By Dr. + IGNATIUS AVINASH Specimen : WHOLE BLOOD\nWard / Bed * CRITICAL CARE/CC19\nPassport No 3\nDEPARTMENT OF LABORATORY MEDICINE-HAEMATOLOGY\nInvestigation Result Units Biological Reference Interval\nHaemogram Report\na W.B,.C.Count : 10300 /ul 4000-10000\nMethod : Coulter Principie\nDifferential Count\nNeutrophils 779.1 % 40-80\nMethod ; OPTICAL/IMPEDENCE\nLymphocytes 710.3 % 20 - 40\nMethod : OPTICAL/IMPEDENCE\nMonocytes 28.1 % 2-10\nMethod : OPTICAL/IMPEDENCE\nEosinophils 22.0 % 1.0-6.0\nMethod : OPTICAL/IMPEDENCE\nBasophils 20.5 % 0.0-1.0\nMethod : OPTICAL/IMPEDENCE\nAbsolute Neutrophil Count 78.15 x103cells/ul 2-7 ;\nMethod : Calculated\nAbsolute Lymphocyte Count 21.06 x103cells/ul 1-3\nMethod : Calculated\nAbsolute Monocyte Count 70.84 x103cells/ul 0.2-1.0\nMethod : Calculated\nAbsolute Eosinophil Count 20.21 x103cells/ul 0.02-0.5\nMethod : Calculated\nAbsolute Basophil Count 70.05 x102cells/ul 0.02 - 0.1\nMethod : Calculated\nR.B.C Count :2.8 million/ul 4.5-5.5\nMethod : Coulter Principle\nHaemoglobin 8.9 g/dl 13-17\nMethod : Photometric Measurement\nHaematocrit :27.6 % 40-50\nMethod : Calculated\nMCV 2100.4 fl 83-101\nMethod : Derived from RBC Histogram\nMCH 132.5 pg 27-32\nMethod : Calculated\nMCHC 132.4 g/dl 31.5-34.5\nMethod : Calculated\nRDW 122.4 % 11.6-14\nMethod : Derived from RBC Histogram\nPlatelet Count :70 x103/ul 150-410\nMethod : Coulter Principle\nPrinted By : WICU2 Printed On: OS: 20:24\n=i —",
+          "campos": {
+            "ciu": "W388693",
+            "pruebas": [
+              {
+                "nombre": "Haematocrit",
+                "valor": 27.6,
+                "unidad": "%",
+                "flag": "",
+                "referencia": "40-50"
+              }
+            ],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:25:27.356564",
+      "actualizado_en": "2026-07-05T05:25:27.345227"
+    },
+    "W366396": {
+      "ciu": "W366396",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:25:35.539871"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:25:35.539871",
+          "timestamp": "2026-07-05T05:25:35.539871",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0125-PA-0001141_W2500438UNADKAT ASHWIN_27-04-2025_1002-19_AM.pdf_page_80.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "mg gp Kuby Hall Clinic a @ :\nW. « NABH\nanowarle\na\nPatient CIU: W366396 | |\nee a\nLab No/Result No * Release Date : J 09:16 am\nReferred By Dr. + IGNATIUS AVINASH Specimen + WHOLE BLOOD\nWard / Bed * CRITICAL CARE/CC19\nPassport No 3\nNeen ee eee ee ee ee ee\n_ DEPARTMENT OF LABORATORY MEDICINE-HAEMATOLOGY\n[Investigation Result _ Units Biological Reference Interval\nHaemogram Report\nMPV 39.54 fl 5.4-11.5\nMethod : Derived from Platelet Histogram\nRBC MORPHOLOGY : Normocytic normechromic, mild anisocytosis, few macrocytes. Mild polychromasia and\n& 2 nRBCs/100 WBCs.\nMethod : MICROSCOPY\nWBC MORPHOLOGY : Neutrophilic leucocytosis\nMethod ; MICROSCOPY\nPLATELET : Thrombocytopenia.\nMethod : MICROSCOPY\n*** End Of The Report ***\nVerified By f /\nDXH560 Jie.\nREMISOL_WANOWARIE Z\nDr.Anuradha Deole .\nConsultant Pathologist\nNOTE\n* Kindly Corelate clinically & discsuss if necessary.\n* Results pertain to the specimen submitted.\n* For ‘Terms and Conditions of Reporting’, kindly\nvisit our website : www.Rubyhall.com\nPrinted By : MRD Pointed On: RB 2:14:32\n59/6, Azad Nagar, Wanowarie, Pune - 411 040 (INDIA). | Tel. : 020 - 66494982 / 83 / 84 Fax : 020 - 66494939\nPS-1044",
+          "campos": {
+            "ciu": "W366396",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:25:35.551362",
+      "actualizado_en": "2026-07-05T05:25:35.539871"
+    },
+    "W781260": {
+      "ciu": "W781260",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:26:01.104418"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:26:01.104418",
+          "timestamp": "2026-07-05T05:26:01.104418",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0425-PA-0004284_E-1745743986041ARCHANARANAFINALBILLO_250427_1425@E.pdf_page_4.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "e:\n3 Fortis Hospital\nHOSPITAL DEPARTMENT OF OBSTETRICS & GYNAECOLOGY peepee cs\nShalintate3 azyapr/2025 Discharge Summary pi se a Ah\nPatient CIU: W781260 Ell\na a —_.\nfF r. Sunita Verma & Team, Dr. Sunita Varma, Dr. Poonam Lata Singh, Dr. Netra Singh\n[35-00-2025 |\nA |\nGs | fee. 2 = ee 2 WfORTIS BEARHCARE ARTE 22 oe ce eee Se\nRegd. Office: Fortis Hospital, Sector-62, Phase Vill, Mohali — 160062, Punjab\nTel: +91 11 2682 5000, Fax: +91 11 4162 8435 CIN: L85110PB1996PLC045933\n42 Fortis SPECIALITY Hospital",
+          "campos": {
+            "ciu": "W781260",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:26:01.117257",
+      "actualizado_en": "2026-07-05T05:26:01.104418"
+    },
+    "W535851": {
+      "ciu": "W535851",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:26:09.254748"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:26:09.254748",
+          "timestamp": "2026-07-05T05:26:09.254748",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0425-PA-0004300_REPORTS_27-04-2025_0134-06_PM@G.pdf_page_11.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "MIRA SUPER SPECHTALITY HOSPITAL\nTEST REPORT\nkh rOOOvOmvOvOCSSBR ETTeSeeeFeFeFeEese\n\nPatient CIU: W535851 |\n\nEE 7\n\nEe. : Dr. GAURISH SHETTY (M.D PHYSICIAN) Reported Dt.\n\nReferred Dr. > Dr. JAYANTI LUNIA Collection Dt. hm\nCOMPLETE BLOOD COUNT\nSee\n\nTest Result Value Range Value Unit\nHAEMOGLOBIN 11.8 13.5 to 18.0 g/dl\nTOTAL ERYTHROCYTE (RBC) COUNT 4.02 4.2 105.6 X 1046/pL\n( PACKED CELLS VOLUME 33.5 42 to 52 %\nMCV (CBC). 83,33 81.2 to 94.0 fl\nMCH (CBC) 29.35 27 to 31 pg\nMCHC(MEAN CELL HB 35.22... 30 to 36 g/dl\nCONCENTRATION) HE: -\nTOTAL WBC COUNT “7510 4000 to 11000 iCumm\nDIFFERENTIAL COUNT a) os\nNEUTROPHILS 60. 40 to.75 % age ly\nLYMPHOCYTES. = ae 32 oe % ce\nEOSINOPHIS 03 eed %\nMONOCYTES = 05 ae % Rec\nBASOPHILS = - 00 “Qto2 %\nPLATELET COUNT © ogee. 353000 --. 180000 to 500000 ./cumm\nMORPHOLOGICAL EVALUATION : : : oe :\nRDW(RED CELL DISTRIBUTION 12.8 11.5 to 14.0 %\n( WIDTH)\nSAMPLE HAS BEEN PROCESSED ON FULLY AUTOMATED BLOOD CELL ANALYSER -ACCULAB CBC 330\n***** End Of Report **##*\nream ee\nFs aoa ates s ep Bee\nae Ree reer CHECKED BY : wal cures\neas Dr. AGARWAL AKHIL\na wat tego in\nBacto MD (PATH),\n—— A HOSPITAL\nApirkatrBy Bldige KpAKAD Mart, Near Salasar Business Park, 150 Feet Cross Road, Bhayandar West, ThanepadOd di!\n2 i © 2c inc | 10 §ec-  & wow.mirahospitals.com",
+          "campos": {
+            "ciu": "W535851",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:26:09.267436",
+      "actualizado_en": "2026-07-05T05:26:09.254748"
+    },
+    "W624898": {
+      "ciu": "W624898",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [
+            {
+              "nombre": "Eosinophils",
+              "valor": 2.0,
+              "unidad": "%",
+              "flag": "",
+              "referencia": ""
+            },
+            {
+              "nombre": "Monocytes",
+              "valor": 2.0,
+              "unidad": "%",
+              "flag": "",
+              "referencia": ""
+            },
+            {
+              "nombre": "H.C.T.",
+              "valor": 37.8,
+              "unidad": "%",
+              "flag": "",
+              "referencia": "45-52"
+            },
+            {
+              "nombre": "M.C.V.",
+              "valor": 100.8,
+              "unidad": "fl",
+              "flag": "",
+              "referencia": "84-96"
+            },
+            {
+              "nombre": "M.C.H.",
+              "valor": 32.53,
+              "unidad": "pg",
+              "flag": "",
+              "referencia": "27-32"
+            },
+            {
+              "nombre": "M.C.H.C.",
+              "valor": 32.28,
+              "unidad": "gidl",
+              "flag": "",
+              "referencia": "30-36"
+            },
+            {
+              "nombre": "R.D.W.",
+              "valor": 16.9,
+              "unidad": "%",
+              "flag": "",
+              "referencia": "10.0-15.0"
+            },
+            {
+              "nombre": "M.P.V.",
+              "valor": 8.0,
+              "unidad": "%",
+              "flag": "",
+              "referencia": "6.5-11.0"
+            }
+          ],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:26:17.290139"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:26:17.290139",
+          "timestamp": "2026-07-05T05:26:17.290139",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\PUN-0425-PA-0011414_Lab Report_27-04-2025_0949-24_PM.pdf_page_1.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "__\n\né. PATHOLOGY LABORATORY\n= cn\nPatient CIU: W624898 Collection Date : ER\nPaes i | ee\nRef. + Dr.Shree Parth Hospital Reporting Date: os\n\nOTULECUCLULUOILTLHILLLULL — | ion\nHAEMATOLOGY REPORT\nHEMOGLOBIN 112.2 mg/dl 13.5-17.5\nTotal R.B.C. : 3.75 millcumm 4.5-6.2\nTotal W. B. C. fear 4000-11000\nDIFFERENTIAL COUNT\n@oiymorphs 81 % 4075\nLymphocytes 215 % 20-45\nEosinophils : 02 % 14\nMonocytes : 02 % 28\nBasophils : : 00 % 1\nPLATELET COUNT : 1.28 Lakhs /emm 1.5-4.5\nBLOOD INDICES\nH.C.T. : 37.8 % 45-52\nM.C.V. : 100.8 fl 84-96\nM.C.H. : 32.53 pg 27-32\nM.C.H.C. : 32.28 gidl 30-36\nR.D.W. : 16.9 % 10.0-15.0\nM.P.V. : 8 % 6.5-11.0\n€ ‘ateletcrit (PCT) : 0.110 % 0.100-0.500\nRBC Morphology : Normocytic\nNormochromic\nPlatelets on Smear : Plateles reduced on\n. Smear\nBae~\nDr.D.P.Rajput\nMBBS\n_ Lab Technician =\n“please correlate repor@yiGhiwee ParthsHospital, Banarsi Nagar, Hirawadi Panchavati, Nashik. i",
+          "campos": {
+            "ciu": "W624898",
+            "pruebas": [
+              {
+                "nombre": "Eosinophils",
+                "valor": 2.0,
+                "unidad": "%",
+                "flag": "",
+                "referencia": ""
+              },
+              {
+                "nombre": "Monocytes",
+                "valor": 2.0,
+                "unidad": "%",
+                "flag": "",
+                "referencia": ""
+              },
+              {
+                "nombre": "H.C.T.",
+                "valor": 37.8,
+                "unidad": "%",
+                "flag": "",
+                "referencia": "45-52"
+              },
+              {
+                "nombre": "M.C.V.",
+                "valor": 100.8,
+                "unidad": "fl",
+                "flag": "",
+                "referencia": "84-96"
+              },
+              {
+                "nombre": "M.C.H.",
+                "valor": 32.53,
+                "unidad": "pg",
+                "flag": "",
+                "referencia": "27-32"
+              },
+              {
+                "nombre": "M.C.H.C.",
+                "valor": 32.28,
+                "unidad": "gidl",
+                "flag": "",
+                "referencia": "30-36"
+              },
+              {
+                "nombre": "R.D.W.",
+                "valor": 16.9,
+                "unidad": "%",
+                "flag": "",
+                "referencia": "10.0-15.0"
+              },
+              {
+                "nombre": "M.P.V.",
+                "valor": 8.0,
+                "unidad": "%",
+                "flag": "",
+                "referencia": "6.5-11.0"
+              }
+            ],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:26:17.300830",
+      "actualizado_en": "2026-07-05T05:26:17.290139"
+    },
+    "W863924": {
+      "ciu": "W863924",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [
+            {
+              "nombre": "Albumin",
+              "valor": 3.74,
+              "unidad": "gm/dl",
+              "flag": "",
+              "referencia": "3.5-4.5"
+            },
+            {
+              "nombre": "Globulin",
+              "valor": 3.08,
+              "unidad": "gm/dl",
+              "flag": "",
+              "referencia": "2.5-3.5"
+            }
+          ],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:26:27.426386"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:26:27.426386",
+          "timestamp": "2026-07-05T05:26:27.426386",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\PUN-0425-PA-0011414_Lab Report_27-04-2025_0949-24_PM.pdf_page_11.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "a. PATHOLOGY LABORATORY\ne a\nCollection Date :\nPatient CIU: W863924\nrales i | re\nRef. | | : Dr.Shree Parth Hospital Reporting Date;\nEDUCCMENTEENINIEDINITREL a P\nLIVER FUNCTION TESTS\nBilirubin (Total) 34.04 mg/dl 0.3-1.20 mg/dl\nBilirubin (Direct) : 0.29 mg/dl 0-0.4 mg/dl\nBilirubin (Indirect) : : 0.82 mg/dl 0-0 mg/dl\nincressed in ; acute or chronic hepatitis, cirrhosis, biliary tract obstruction, toxic hepatitis, neonatal jaundice (neonatal hyperbilirubinemia),\ne.. liver enzyme absormalities (dubin-johnson, rotor, gilbert, crigler-najjar syndromes), fasting, hemolytic disorders. Hepatotoxic druds.\n-Alkaline Phosphatase : 123.4 lun 60-170 iu/l\nIncreased In :Obstructive hepatobiliary disease, bone disease, hyperparathyroidism, rickets, benign familiar hyperphosphatasemia pregnancy, GI\ndisease, Hepatotoxic drug. Decreased In: Hypophosphatasia.\nAlanine Transaminase (ALT/SGPT) > 35.21 IU/L 5-50 U/L\nSerum, Method: UV Kinetic\nAspartate Transaminase (AST/SGOT) : 36.78 IU/L $-50 U/L\nSerum, Method: UV Kinetic\nTotal Proteins : 6.82 gm/dl 68 gmidi\nAlbumin : 3.74 gm/dl 3.5-4.5 gmidl\nGlobulin : 3.08 gm/dl 2.5-3.5 mg/dl\nA/G Ratio : 1.21 mgm% 1.3-4.0 mgm%\nThe pattern of liver test abnormiality is hepatocellular. The AST is typically in the 100 to 200 IU/L range, even in severe disease, and the ALT\nlevel may be normal, even in severe cases, The AST level is higher than the ALT level, and the ratio is greater than 2:1 in 70% of patients.\nC. REACTIVE PROTEIN\n© REACTIVE PROTEIN : 28.87 mg/L 06\nC-reactive protein (CRP) is an important and evolutionarily ancient component of the innate immune response. CRP has been described as\n“the prototypical acute-phase reactant to infections and inflammation in human beings.” In the clinical setting, CRP is used “as a clinical\nindicator of acute infections and response to treatment, and to assess inflammatory status in chronic diseases. Initially it was thought that\nCRP might be a pathogenic secretion as it was elevated in people with a variety of illnesses including cancer. However, discovery of synthesis\nin the liver demonstrated that it is manufactured by the human body.\nThe fact that CRP is an independent predictor of stroke and coronary artery disease but also a key contributor to effective bacterial\nclearance, underscores the importance of microbes in the pathogenesis of these diseases. Some patients on the Marshall Protocol (MP)\nhave reported temporary increases in CRP, an observation which is consistent with a heightened immune\n2 ——————— To\npneumococcal infection.\nVe\nDr.D.P.Rajput\nMBBS,DCP\nLab Technician _\nNT PY\n“Please correlate reporeyilts Fie Hf?Hospital, Banarsi Nagar, Hirawadi Panchavati, Nashik. >\na ee ane Ree ORI RRRREE V 7 PENSE",
+          "campos": {
+            "ciu": "W863924",
+            "pruebas": [
+              {
+                "nombre": "Albumin",
+                "valor": 3.74,
+                "unidad": "gm/dl",
+                "flag": "",
+                "referencia": "3.5-4.5"
+              },
+              {
+                "nombre": "Globulin",
+                "valor": 3.08,
+                "unidad": "gm/dl",
+                "flag": "",
+                "referencia": "2.5-3.5"
+              }
+            ],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:26:27.437425",
+      "actualizado_en": "2026-07-05T05:26:27.426386"
+    },
+    "W632919": {
+      "ciu": "W632919",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:26:36.013116"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:26:36.013116",
+          "timestamp": "2026-07-05T05:26:36.013116",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\PUN-0425-PA-0011414_Lab Report_27-04-2025_0949-24_PM.pdf_page_2.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "/ A. PATHOLOGY LABORATORY\n= $$$\nPatient CIU: W632919 Collection Date =; 22/04/2025\nPatient's i! | ee\nRef. - Dr.Shree Parth Hospital Repotting Date; 22042025\nBU TUOUUELLCUILELUL LLL fF | |\nWIDAL\nSalmonella typhi - O : 1:160 Significant Titre\n1:80 or More\nSalmonella Typhi - H : 4:120 Significant Titre\n1:80 or More\nSalmonella paratyphi A - H > NIL Significant Titre\ne 1:80 or More\nSalmonella Paratyphi B - H : NIL Significant Titre\n1:80 or More\nWidal Conclusion : WIDAL TEST IS\nPOSITIVE\na\n(1) 'H' & 'O' agglutinins appear in the serum after 10 days.Increase into peak in third to fifth\nweeks than gradully fall for sevral weeks. There is no increase during relapse.\n(2) ‘O' agglutinins appear before 'H' and is usually higher at first. Lateron ‘H' is higher.\n(3) Usual criteria for diagnosis is both ‘O' and 'H’ 1:80 or more.\n(4) Positive reaction could occur on account of typhoid vaccination or previous typhoid infection.\nNonspecific febrile desease may cause this titre to increase. (Anamnestic reaction)\n(5) Rising titre may be necessary for proper evaluation.\n(6) Early treatment with specific drug may cause titre to remain negative.\n(7) Increase in 'O’ titre may reflect infection with any Salmonella organisms.\n(8) Urine or Stool culture is preferable when illness of more than four weeks duration.\n(9)Result of slide technique shold alwalys be confirmed by tube technique.\nMALARIA ANTIGEN\nP. Vivax Antigen : TEST IS NON NON REACTIVE\n: REACTIVE\nS.. Falci. Antigen : TEST IS NON NON REACTIVE\nREACTIVE\nLimitation of Test :\n* The results must always be correlated with clinical findings.\n* The test is sensitive to P.Falciparum and P.vivax malaria. However, 2 negative test result does not rule out\npossibility of infection with malarial parasite.\nBaer\nDr.D.P.Rajput\n7 MBBS,\nLab Technician =\n‘Please correlate report@yiGtired PartthsHospital, Banarsi Nagar, Hirawadi Panchavati, Nashik. [nn",
+          "campos": {
+            "ciu": "W632919",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:26:36.024450",
+      "actualizado_en": "2026-07-05T05:26:36.013116"
+    },
+    "W807216": {
+      "ciu": "W807216",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [
+            {
+              "nombre": "Hemoglobina (Hb)",
+              "valor": 12.0,
+              "unidad": "mg/dl",
+              "flag": "",
+              "referencia": "13.5-17.5"
+            },
+            {
+              "nombre": "Lymphocytes",
+              "valor": 12.0,
+              "unidad": "%",
+              "flag": "",
+              "referencia": "20-45"
+            },
+            {
+              "nombre": "Monocytes",
+              "valor": 2.0,
+              "unidad": "%",
+              "flag": "",
+              "referencia": ""
+            },
+            {
+              "nombre": "Basophils",
+              "valor": null,
+              "unidad": "%",
+              "flag": "",
+              "referencia": "0-41"
+            },
+            {
+              "nombre": "Hci,",
+              "valor": 40.1,
+              "unidad": "%",
+              "flag": "",
+              "referencia": "45-52"
+            },
+            {
+              "nombre": "M.C.H.",
+              "valor": 27.15,
+              "unidad": "pg",
+              "flag": "",
+              "referencia": "27-32"
+            },
+            {
+              "nombre": "M.C.H.C.",
+              "valor": 29.93,
+              "unidad": "g/dl",
+              "flag": "",
+              "referencia": "30-36"
+            },
+            {
+              "nombre": "R.D.W.",
+              "valor": 10.2,
+              "unidad": "%",
+              "flag": "",
+              "referencia": "10.0-15.0"
+            },
+            {
+              "nombre": "M.P.V.",
+              "valor": 6.62,
+              "unidad": "%",
+              "flag": "",
+              "referencia": "6.5-11.0"
+            }
+          ],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:26:43.416215"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T05:26:43.416215",
+          "timestamp": "2026-07-05T05:26:43.416215",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\PUN-0425-PA-0011414_Lab Report_27-04-2025_0949-24_PM@F.pdf_page_10.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "_ te\n= é PARTH\n“TS. PATHOLOGY LABORATORY\n\" Patient CIU: W807216 Collection Date : I\nPatient's i! | ee ee\nRef. + Dr.Shree Parth Hospital Reporting Date\nWUBUCE MENTE ININNIEIAE rtf | 4, —\nHAEMATOLOGY REPORT\nHEMOGLOBIN : 12.0 mg/dl 13.5-17.5\nTotal R.B.C. : 4.42 mill/cumm 4.56.2\nTotal W. B. C. : 16900 /cumm 4000-11000\nDIFFERENTIAL COUNT\n€2olymorphs : 83 % 40-75\nLymphocytes :12 % 20-45\nEosinophils : : 03 % 16\nMonocytes : 02 % 28\nBasophils : 00 % 0-41\nPLATELET COUNT : 1.76 Lakhs /emm 1.54.5\nBLOOD INDICES\nHCI, : 40.10 % 45-52\nM.C.V. > 90.72 fl 84-96\nM.C.H. : 27.15 pg 27-32\nM.C.H.C. : 29.93 g/dl 30-36\nR.D.W. : 10.2 % 10.0-15.0\nM.P.V. : 6.62 % 6.5-11.0\n@ “lateletcrit (PCT) : 0.160 % 0.100-0.500\nRBC Morphology \"| : Normocytic\nNormochromic\nPlatelets on Smear : Adequate on Smear\n———————————— ee Oe Enekeot=  =~=~*~—~—~—~—O:—COOOCOCOSSSC(\nVav™\nDr.D.P.Rajput\nMBBS,DCP\n- Lab Technician Registration noori0eyfg\\ ll\n“Please correlate reports wenstail peggy’ Hospital, Banarsi Nagar, Hirawadi Panchavati, Nashik. oii” Sy",
+          "campos": {
+            "ciu": "W807216",
+            "pruebas": [
+              {
+                "nombre": "Hemoglobina (Hb)",
+                "valor": 12.0,
+                "unidad": "mg/dl",
+                "flag": "",
+                "referencia": "13.5-17.5"
+              },
+              {
+                "nombre": "Lymphocytes",
+                "valor": 12.0,
+                "unidad": "%",
+                "flag": "",
+                "referencia": "20-45"
+              },
+              {
+                "nombre": "Monocytes",
+                "valor": 2.0,
+                "unidad": "%",
+                "flag": "",
+                "referencia": ""
+              },
+              {
+                "nombre": "Basophils",
+                "valor": null,
+                "unidad": "%",
+                "flag": "",
+                "referencia": "0-41"
+              },
+              {
+                "nombre": "Hci,",
+                "valor": 40.1,
+                "unidad": "%",
+                "flag": "",
+                "referencia": "45-52"
+              },
+              {
+                "nombre": "M.C.H.",
+                "valor": 27.15,
+                "unidad": "pg",
+                "flag": "",
+                "referencia": "27-32"
+              },
+              {
+                "nombre": "M.C.H.C.",
+                "valor": 29.93,
+                "unidad": "g/dl",
+                "flag": "",
+                "referencia": "30-36"
+              },
+              {
+                "nombre": "R.D.W.",
+                "valor": 10.2,
+                "unidad": "%",
+                "flag": "",
+                "referencia": "10.0-15.0"
+              },
+              {
+                "nombre": "M.P.V.",
+                "valor": 6.62,
+                "unidad": "%",
+                "flag": "",
+                "referencia": "6.5-11.0"
+              }
+            ],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T05:26:43.427298",
+      "actualizado_en": "2026-07-05T05:26:43.416215"
     }
   }
 }
