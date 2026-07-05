@@ -88,11 +88,12 @@ class EnhancedOCRProcessor:
     def __init__(self, use_preprocessing: bool = True):
         """
         Inicializar procesador
-        
+
         Args:
             use_preprocessing: Si usar preprocesamiento de imagen (recomendado)
         """
         self.use_preprocessing = use_preprocessing
+        pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
     
     def preprocess_image(self, image_path: str) -> np.ndarray:
         """
