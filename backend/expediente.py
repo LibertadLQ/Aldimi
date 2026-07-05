@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """Sincronización de expediente con OCR y persistencia en ALDIMI_DB."""
 
 import os
@@ -11,14 +11,6 @@ from typing import Any, Dict, List, Optional
 import ocr_robusto as ocr
 from db import cargar_bd, cargar_sesiones, guardar_bd, guardar_sesiones
 from storage import DNI_DIR, LAB_DIR, OCR_IMAGES_DIR
-
-# Optional Google Drive support
-GDRIVE_ENABLED = os.environ.get("GDRIVE_ENABLED") == "1"
-if GDRIVE_ENABLED:
-    try:
-        from drive_sync import download_folder_images
-    except Exception:
-        download_folder_images = None
 
 SUPPORTED_EXTENSIONS = {".png", ".jpg", ".jpeg", ".tif", ".tiff", ".bmp"}
 
@@ -78,10 +70,7 @@ def persistir_ocr_resultado(ruta_imagen: str, resultado: Dict[str, Any], fuente:
     ciu = str(campos.get("ciu", "")).strip().upper() if isinstance(campos, dict) else ""
 
     origen_path = Path(ruta_imagen)
-    if fuente in {"DNI_ALDIMI", "LAB_ALDIMI"} and GDRIVE_ENABLED and Path(tempfile.gettempdir()) in origen_path.parents:
-        archivo_origen = f"drive://{fuente}/{origen_path.name}"
-    else:
-        archivo_origen = str(origen_path.resolve()) if origen_path.exists() else ruta_imagen
+    archivo_origen = str(origen_path.resolve()) if origen_path.exists() else ruta_imagen
 
     documento = {
         "id": f"ocr_{timestamp}",
@@ -144,54 +133,7 @@ def persistir_ocr_resultado(ruta_imagen: str, resultado: Dict[str, Any], fuente:
 def sincronizar_carpetas(max_images: int = 0) -> Dict[str, Any]:
     """Procesa imágenes de DNI_ALDIMI y LAB_ALDIMI y las guarda en ALDIMI_DB."""
     resultados = []
-    # If GDrive enabled, download images to temp folder and process those first
-    if GDRIVE_ENABLED:
-        if 'download_folder_images' not in globals() or not download_folder_images:
-            return {
-                "procesados": 0,
-                "resultados": [],
-                "warning": "GDRIVE_ENABLED está activo pero la integración de Drive no está disponible.",
-            }
 
-        from tempfile import TemporaryDirectory
-        dni_id = os.environ.get("GDRIVE_DNI_FOLDER_ID")
-        lab_id = os.environ.get("GDRIVE_LAB_FOLDER_ID")
-        if not dni_id and not lab_id:
-            return {
-                "procesados": 0,
-                "resultados": [],
-                "warning": "GDRIVE_ENABLED está activo pero no se configuraron GDRIVE_DNI_FOLDER_ID ni GDRIVE_LAB_FOLDER_ID.",
-            }
-
-        with TemporaryDirectory() as td:
-            tdpath = Path(td)
-            if dni_id:
-                dpaths = download_folder_images(dni_id, tdpath / "DNI_ALDIMI", max_files=max_images)
-                for p in dpaths:
-                    resultado = ocr.procesar_documento(str(p))
-                    guardado = persistir_ocr_resultado(str(p), resultado, fuente="DNI_ALDIMI")
-                    resultados.append({
-                        "carpeta": "DNI_ALDIMI",
-                        "archivo": p.name,
-                        "tipo_documento": resultado.get("tipo_documento"),
-                        "ciu": (resultado.get("campos", {}) or {}).get("ciu"),
-                        "guardado": guardado,
-                    })
-            if lab_id:
-                lpaths = download_folder_images(lab_id, tdpath / "LAB_ALDIMI", max_files=max_images)
-                for p in lpaths:
-                    resultado = ocr.procesar_documento(str(p))
-                    guardado = persistir_ocr_resultado(str(p), resultado, fuente="LAB_ALDIMI")
-                    resultados.append({
-                        "carpeta": "LAB_ALDIMI",
-                        "archivo": p.name,
-                        "tipo_documento": resultado.get("tipo_documento"),
-                        "ciu": (resultado.get("campos", {}) or {}).get("ciu"),
-                        "guardado": guardado,
-                    })
-            return {"procesados": len(resultados), "resultados": resultados}
-
-    # Fallback to local folders when Drive is not enabled
     carpetas = [
         ("DNI_ALDIMI", DNI_DIR),
         ("LAB_ALDIMI", LAB_DIR),

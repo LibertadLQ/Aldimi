@@ -1,16 +1,15 @@
 # -*- coding: utf-8 -*-
 """
 ocr_robusto.py — Pipeline OCR completo del ALDIMI_FINAL.ipynb
-===========================================================
 Portado de Colab a backend modular.
 Características:
-  ✅ Multi-variantes de preprocesamiento (original, grayscale, CLAHE, upscale, threshold)
-  ✅ Scoring automático — elige mejor resultado por calidad + longitud
-  ✅ Tesseract multi-PSM (6, 4, 11, 3, 1) + EasyOCR fallback
-  ✅ MRZ parsing para DNI Perú (más robusto que etiquetas)
-  ✅ Lab parser extendido (numérico, tabla, Widal, cualitativos, rangos población)
-  ✅ Informe médico narrativo + CRP, hemograma, cultivos
-  ✅ Autoscan DNI_ALDIMI + LAB_ALDIMI en startup
+  Multi-variantes de preprocesamiento (original, grayscale, CLAHE, upscale, threshold)
+  Scoring automático — elige mejor resultado por calidad + longitud
+  Tesseract multi-PSM (6, 4, 11, 3, 1) + EasyOCR fallback
+  MRZ parsing para DNI Perú (más robusto que etiquetas)
+  Lab parser extendido (numérico, tabla, Widal, cualitativos, rangos población)
+  Informe médico narrativo + CRP, hemograma, cultivos
+  Autoscan DNI_ALDIMI + LAB_ALDIMI en startup
 """
 
 import re

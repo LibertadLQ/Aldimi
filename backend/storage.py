@@ -1,11 +1,10 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """Rutas compartidas para almacenamiento local de ALDIMI."""
 
 import os
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
-GDRIVE_ENABLED = os.environ.get("GDRIVE_ENABLED") == "1"
 
 
 def _resolve_dir(env_name: str, default_path: Path) -> Path:
@@ -17,10 +16,7 @@ def _resolve_dir(env_name: str, default_path: Path) -> Path:
         path.mkdir(parents=True, exist_ok=True)
     else:
         path = default_path.resolve()
-        # Cuando Drive está activo, no creamos carpetas locales automáticas
-        # para las fuentes de imagen y la carpeta DB por defecto.
-        if not GDRIVE_ENABLED:
-            path.mkdir(parents=True, exist_ok=True)
+        path.mkdir(parents=True, exist_ok=True)
     return path
 
 

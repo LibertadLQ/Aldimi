@@ -1,10 +1,8 @@
-fastapi
-uvicorn[standard]
-python-multipart
-pytesseract
+﻿pytesseract
 Pillow
 numpy
 opencv-python-headless
+easyocr
 torch
 torchvision
 transformers
@@ -13,6 +11,3 @@ nltk
 scikit-learn
 aiofiles
 notebook
-google-api-python-client
-google-auth
-google-auth-httplib2
