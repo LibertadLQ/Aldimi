@@ -1,6 +1,6 @@
 {
   "sesion": {
-    "ultima_actualizacion": "2026-07-05T05:16:17.474905",
+    "ultima_actualizacion": "2026-07-05T05:17:24.552229",
     "archivo": "aldimi_pacientes.json"
   },
   "pacientes": {
@@ -60,6 +60,31 @@
           ],
           "alertas_detectadas": [],
           "registrado_en": "2026-07-05T05:16:17.468621"
+        },
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:16:36.205000"
+        },
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:16:43.612359"
+        },
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:16:50.984382"
+        },
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:16:59.287297"
+        },
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:17:24.544982"
         }
       ],
       "alertas_clinicas": [],
@@ -188,10 +213,90 @@
             "alertas_detectadas": []
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:16:36.205000",
+          "timestamp": "2026-07-05T05:16:36.205000",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055057_F-KYC_PC_Mrs_CHANDER_KANTA_1_250422_1418@G.pdf_page_7.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "Chita.\nOy, 20 Hii\nLaboratory Investigation Report\nPatient ClU: WO60735 im |\n———— ee\nmz Fe Collection Date/Time : 22/Apr/2025 04:39AM\nFe : Dr.Emergency Team Shbg Reporting Date/Time : 22/Apr/2025 07:24AM\nImmunoassay OTT\nSIN No:SB2155984\nThyroid Profile ( Free T3, Free T4 & TSH), Serum\nDate 22/Apr/2025 Unit Bio Ref\n04:39AM Interval\nFree Triiodothyronine (FT3) 3.61 pg/mL 2.6 - 4.2\nCLIA\nFree Thyroxine (FT4) 0.89 ng/dL 0.58 - 1.64\nCLIA\nThyroid Stimulating 16.832 ylU/mL 0.38 - 5.33\nHormone\nCLIA\nComment\nParameter Unit os i ., oa Blood ot02 Ast 2nd 3rd\narameter m . Month Trimester Trimester Trimester\nweeks) weeks)\nFT3 Pg/mL 0.15-3.91 24-56 2.11 - 3.83 1.96 - 3.38 1.96 - 3.38\nFT4 ng/dl 1.7-40 0.7- 2.0 05-16 05-16\nTSH ulU/ml 0.7 - 27.0 2.3-13.2 05-10 0.05 - 3.7 0.31 - 4.35 0.41 -5.18\nNote : TSH levels are subject to circadian variation, reaching peak levels between 2 — 4 am\nand at a minimum between 6 — 10 pm. The variation is of the order of 50% - 206 %, hence\ntime of the day has influence on the measured serum TSH concentrations.\nComment: TSH - Ultrasensitive\nKindly correlate with clinical findings\n** End Of Report ***\n= Pipe\nfoo = :\nDr. Pooja Bhasin M.D. ss\nDirector & HOD Dr. Vijay Laxmi Sharma, MD\nLab Service Pathology Associate Director & Quality\nTest Performed at :1060 - Max Hospital Shalimar Bagh, Max Lab |\nBooking Centre :1060 - Max Hospital Shalimar Bagh, Max Lab,\nThe authenticity of the report can be verified by scanning the Q R Code on top of the iy\nad\nMC-2262",
+          "campos": {
+            "ciu": null,
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:16:43.612359",
+          "timestamp": "2026-07-05T05:16:43.612359",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055398_SUNILA ARORA INVESTIGATION  FOR ENHANCMENT _26-04-2025_0642-20_PM@G.pdf_page_19.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "R. i\nsarvodaya 033% © Helpline: 1800 313 1515\nDIAGNOSTICS i, 2 —_\nBy Survodayaieathcare ond ist ® www.sarvodayadiagnostics.com\nao. tent ClU: W780043 ices Adhering to NABL Guidelines for Quality Report\nMr. SUNILA ARORA\nTT es ee\n: 488285 Accepted on : MMJo5:10 Pv\nWy =; Dr. ADITI MEHROTRA Report Date : MMJoc:15 Pv\nStatus : Finalized -\nSample Type : SERUM (SST or Plain)\nHORMONES\nINVESTIGATION RESULT UNIT BIOLOGICAL REFERENCE RANGE\n® TSH (Thyroid Stimulating Hormone)\nTSH (Thyroid Stimulating Hormone) 3.700 ulU/mL 0.27 - 4.2 i\n_~\n4\nMr. ALOK KUMAR Dr. Ranjan Kuma\nMBBS, MD (Pathology\nHilithe QR code to\ncheck interpretations:\nAbove Results are of the Tests performed at Sarvodaya Hospital and Research Centre Lab adhering to Quality testing Guidelines.\n—_\nSarvodaya Diagnostics - A Unit of Anshu Hospitals Limited Patient ClU: C088289 -F1",
+          "campos": {
+            "ciu": null,
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:16:50.984382",
+          "timestamp": "2026-07-05T05:16:50.984382",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055398_SUNILA ARORA INVESTIGATION  FOR ENHANCMENT _27-04-2025_1111-09_AM.pdf_page_6.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "R 7\na sarvodaya 33% ® Helpline: 1800 313 1515\n[) J io} m\nYears\nDIAGNOSTICS NZ @ www.sarvodayadiagnostics.com\npatent clu: w249703 ices Adhering to NABL Guidelines for Quality Report\nMrs. SUNILA ARORA\ni; es ee\n: 491403 Accepted on: SMJo1:30 Pv\nHy =; Dr. ADITI MEHROTRA Report Date : 02:39 Pv\nStatus : Finalized\nSample Type : SERUM (SST or Plain)\nCLINICAL BIOCHEMISTRY\nINVESTIGATION RESULT UNIT BIOLOGICAL REFERENCE RANGE\nSerum Chloride 105.3 mmol/L 98 - 107\n> ty\n~ ante,\nMr. SOURABH Dr. Ranjan Kuma\nMBBS, MD (Pathology\nHl the QR code to\ncheck interpretations\nAbove Results are of the Tests performed at Sarvodaya Hospital and Research Centre Lab adhering to Quality testing Guidelines.\n-~\nSarvodaya Diagnostics - A Unit of Anshu Hospitals Limited Patient Clu: C088269*\"",
+          "campos": {
+            "ciu": null,
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:16:59.287297",
+          "timestamp": "2026-07-05T05:16:59.287297",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055398_SUNILA ARORA INVESTIGATION  FOR ENHANCMENT _27-04-2025_1111-09_AM.pdf_page_8.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "BR\nsarvodaya AN» © Helpline: 1800 313 1515\nDIAGNOSTICS Wi = —\nBy Sarvedayarealincate GS @® www.sarvodayadiagnostics.com\nPatient clu: wese896 ices Adhering to NABL Guidelines for Quality Report\nMrs. SUNILA ARORA\nyy, es ee\nHe : 4914 Accepted on : MMJo1:30 Pu\n|| : Dr. ADITI MEHROTRA Report Date : MMfo2:39 Pu\nStatus : Finalized\nSample Type : SERUM (SST or Plain)\nCLINICAL BIOCHEMISTRY\nINVESTIGATION RESULT UNIT BIOLOGICAL REFERENCE RANGE\nSerum Sodium (Na+) 143.6 mmol/L 136 - 145\nInterpretation: :\nElectrolytes: Affects most metabolic processes. They serve top maintain osmotic pressure and hydration of various body fluid\ncompartments, proper body pH, and regulation of appropriate heart and muscle functions. Electrolytes are also involved in oxidatior\n_mfeduction reactions and participate as essential parts or, co factors, in enzyme reactions.\nst Method :- ISE Indirect.\nSample Type :- Serum\nSar Pen’,\nSF\nMr. SOURABH Dr. Ranjan Kuma\nMBBS, MD (Pathology\nHE the QR code to\ncheck interpretations\nBal\nmeas\na,\nAbove Results are of the Tests performed at Sarvodaya Hospital and Resea. \" Centre Lab adhering to Quality testing Guidelines.\nSaivodaya Diagnostics - A Unit of Anshu Hospitals Limited Patient Clu: C088209~\"\"",
+          "campos": {
+            "ciu": null,
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:17:24.544982",
+          "timestamp": "2026-07-05T05:17:24.544982",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055460_Q-LOKESHYADAV202580001compressed_250428_1148@F.pdf_page_32.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "— Ujala Cygnus i: : ‘Cy\nMag HEALTHCARE SERVICES Cygnus SuperSpeciality Hospital NABH,\nV\n| Patient ClU: W467582 49 aM\na\nTe a\nDoctor Name : Mar TYPE: HP\nSEROLOGY __BedNo HDU-05 / HDU\nINVESTIGATION RESULTs UNITS __ REFERENCE RANGE\nHBS AG SCREENING (AUSTRALIA ANTIGEN)\nHBSAG\nHBsAG NON REACTIVE\nCOMMENTS:-\nHEPACARD is a visual, rapid,sensitive and accurate one step immunoassay for the qualitative detection of Hepatitis B\nSurface Antigen (HBsAg) in Human Serum or Plasma. HEPACARD can detect Hepatitis B Surface Antigen in Serum or\n: Plasma at a concentration of as low as 0.5 ng/mLat 20 minutes.\n] <F% f The Report ***\n{\nLab Technician Dr. NEELAKSH KAUL\nFR Pathologist\nUser: A ANILR MBBS, MD\nPrint D Time: BJ 1.29 Pu :\nRegd./Corp. ; Cygnus Medicare Pvt. Ltd., A-9A, Ground Floor, Green Park Main, New Delhi 7\nTel. No. | Website : ujalacygnus.com [i\nUjala Cygnus Hospitals : Haryana : Sonipat i Kaithal J Kurukshetra | Panipat | Rewari\nDelhi : Nangloi | Rama Vihar | IT Main Gaet | Uttar Pradesh : Varanasi | Uttarakhand : Kashipur\n: TC064120 rae le\nee He URE SES\nee tit*#. wes aE",
+          "campos": {
+            "ciu": null,
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T03:11:32.785160",
-      "actualizado_en": "2026-07-05T05:16:17.468621"
+      "actualizado_en": "2026-07-05T05:17:24.544982"
     },
     "W499485": {
       "ciu": "W499485",
@@ -1400,7 +1505,21 @@
         "apellidos": "CARTER",
         "fecha_nacimiento": "01/05/1996"
       },
-      "informes_laboratorio": [],
+      "informes_laboratorio": [
+        {
+          "pruebas": [
+            {
+              "nombre": "Uid",
+              "valor": 13424637.0,
+              "unidad": "REQNO-21208267",
+              "flag": "",
+              "referencia": ""
+            }
+          ],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:16:27.012626"
+        }
+      ],
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
@@ -1418,10 +1537,34 @@
             "fecha_nacimiento": "01/05/1996"
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:16:27.012626",
+          "timestamp": "2026-07-05T05:16:27.012626",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055053_Q-1745410679910ArtiKumariinv0001_250423_1751@F.pdf_page_8.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "2DIAGNOSTIC'REPORT.. QD EB\n- — ~ =. he fee -_ a\nDiagnostics Report USERRA & }\na OQ . Sey t AQIS »\n4 FY a MC-S837 a US Dy le\nFarhc diagnostics\n4 —\nPatient CIU: W760019\ni —— —\na vst - PATIENTID + FH.13424637 | EE 2:56:00\nSECTOR 10, A, VASHI, SECTOR 10, MINI SEA |\nSHORE ROAD,SECTOR 10, A, VASHI, {CLIENT PATIENT 1D: UI0:13424637 jReceiveD : NNN 22:58:13\nNAVI MUMBAI 400703 jABHANO {REPORTED MN 16:31:49\n022 39199222 i i\ni H\nCLINICAL INFORMATION :\nUID:13424637 REQNO-21208267\nJPD-4B\n[rest Report Status Final Results Biological Reference Interval Units\nLYMPHOCYTES 11 Low 20.0 - 40.0 %\nMETHOD ;: FLOW CYTOMETRY WITH LIGHT SCATTERING\nMONOCYTES 10 2.0 - 10.0 %\nMETHOD : FLOW CYTOMETRY WITH LIGHT SCATTERING\nEOSINOPHILS 1 1-6 %\nMETHOD ; FLOW CYTOMETRY WITH LIGHT SCATTERING\nBASOPHILS 0 0-2 %\nMETHOD : FLOW CYTOMETRY WITH LIGHT SCATTERING\nABSOLUTE NEUTROPHIL COUNT 4.71 2.0 - 7.0 thou/pL\nMETHOD : CALCULATED PARAMETER\nABSOLUTE LYMPHOCYTE COUNT 0.66 Low 1.0 - 3.0 thou/pL\nMETHOD : CALCULATED PARAMETER,\nABSOLUTE MONOCYTE COUNT 0.60 0.2- 1.0 thou/pL\nMETHOD : CALCULATED PARAMETER\nABSOLUTE EOSINOPHIL COUNT 0.06 0.02 - 0.50 thou/yL\nMETHOD : CALCULATED PARAMETER\nABSOLUTE BASOPHIL COUNT 0 0.0 - 0.1 thou/yL\nMETHOD : CALCULATED PARAMETER\nMORPHOLOGY (MICROSCOPY)\nRBC MILD HYPOCHROMASIA, NORMOCYTIC\nMETHOD : MICROSCOPIC EXAMINATION\nWBC NORMAL MORPHOLOGY\nMETHOD : MICROSCOPIC EXAMINATION\nPLATELETS ADEQUATE\nMETHOD : MICROSCOPIC EXAMINATION\nInterpretation(s)\nRBC AND PLATELET INDICES-Mentzer Index (MCV/RBC) is an automated cell-counter based calculated screen tool to differentiate cases of Iron defictency anaemla(>13)\nfrom Beta thalassaemia tralt (<13) in patients with microcytic anaemia. This needs to be interpreted fn JIne with clinical correlation and suspicion. Estimation of HbA2\nremains the gold standard for diagnosing a case of beta thalassaemia trait.\nDr.Snehalkumar Prahladrao area eae\nPadghane (Reg No. MMC 3 ES aa nace\nConsultant Pathologist miswenes bles:\nView Details View Report\nPERFORMED AT : ae sup eveT\nAgilus Diagnostics Ltd iil Fes Eee hate fi. sha |\nHiranandani Hospital (A Fortis Network Hospital), Mini Seashore Road, Sector 10A,Vashi Bee Ei Feat ld\nNavi Mumbai, 400703 ULR\nMaharashtra, India\n| CIN =\nee",
+          "campos": {
+            "ciu": "W760019",
+            "pruebas": [
+              {
+                "nombre": "Uid",
+                "valor": 13424637.0,
+                "unidad": "REQNO-21208267",
+                "flag": "",
+                "referencia": ""
+              }
+            ],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T04:50:52.253099",
-      "actualizado_en": "2026-07-05T04:50:52.246254"
+      "actualizado_en": "2026-07-05T05:16:27.012626"
     },
     "W060735": {
       "ciu": "W060735",
@@ -1586,7 +1729,21 @@
         "apellidos": "PARK",
         "fecha_nacimiento": "04/19/1995"
       },
-      "informes_laboratorio": [],
+      "informes_laboratorio": [
+        {
+          "pruebas": [
+            {
+              "nombre": "Age/Gender",
+              "valor": 21.0,
+              "unidad": "Years9",
+              "flag": "",
+              "referencia": ""
+            }
+          ],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:17:15.745158"
+        }
+      ],
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
@@ -1604,10 +1761,34 @@
             "fecha_nacimiento": "04/19/1995"
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:17:15.745158",
+          "timestamp": "2026-07-05T05:17:15.745158",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055449_Q-SEEMAKUMARI202600001compressed_250428_1147@F.pdf_page_46.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "Ujala Cygnus ea z Gy\n+) Jo > | Cygnus SuperSpeciality Hospital 4 ,\nLoc ReqNo : 06 Bill Date 7104/20\nPatient CIU: W724366 Sample col Date ‘QR 1220PmM\nswame > Mrs. SEEMA KUMARI : Sample Rec Date 1‘ rie\nAge/Gender : 21 Years9 Months8 Days / Female Reporting Date f 1.47 PM\nDoctor Name : YADAV TYPE 7IP\n‘ HAEMATOLOGY Bed No 132 BED3-GWM / ECONOMY\nINVESTIGATION RESULTs UNITS __ REFERENCE RANGE\nBLOOD GROUP. j\nBLOOD GROUP i\nBLOOD GROUP : AB\nRH FACTOR POSITIVE\n; : *** End Of The neice '\nt) s Dr. nal dav\n. DNB (OBS & GYNAE)\ntag DMC-83884 4\nCygnus Superspeciality Hospital, Rewari\n0 |\nLab Technici Dr. NEELAKSH KAUL\nUser: ASH LR : Pathologist\n>rint Daté 258 ZB O4¥202Bv BG! FAye. Civil Hospital, Near BSNL Office, Rewari, Haryana-123401 | Tel, No. :01274-258556 me\nRegd./Corp. Office : Cygnus Medicare Pvt. Ltd., A-9A, Ground Floor, Green Park Main, New Delhi - 110016\nTel. No. | IN| Website : ujalacygnus.com in\nUjala Cygnus Hospitals : Haryana : Sonipat i Kaithal I! Kurukshetra | Panipat | Rewari :\nDelhi : Nangloi | Rama Vihar | IIT Main Gaet | Uttar Pradesh : Varanasi | Uttarakhand : Kashipur\nCIN : U85190HR2011PTC064120",
+          "campos": {
+            "ciu": "W724366",
+            "pruebas": [
+              {
+                "nombre": "Age/Gender",
+                "valor": 21.0,
+                "unidad": "Years9",
+                "flag": "",
+                "referencia": ""
+              }
+            ],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T04:51:08.193804",
-      "actualizado_en": "2026-07-05T04:51:08.186768"
+      "actualizado_en": "2026-07-05T05:17:15.745158"
     },
     "W467582": {
       "ciu": "W467582",
