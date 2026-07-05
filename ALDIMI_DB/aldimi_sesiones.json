@@ -1612,5 +1612,34 @@
       "tipo": "UNKNOWN"
     },
     "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-05T05:14:03.958515",
+    "timestamp": "2026-07-05T05:14:03.958515",
+    "fuente": "LAB_ALDIMI",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053481_Q-CHHAYADEVI21.04.20250001compressed_250427_1617@F.pdf_page_38.png",
+    "archivo_copia": null,
+    "tipo_documento": "UNKNOWN",
+    "texto_crudo": "7 Jhajjar Road, Bahadurgarh @\nFhe Shitt Vo Heat |\nThe Spirit Te Care v\nPatient CU: W806358 1003 Date\n— ee ee ee\nHs SWASTIK HosPITAL\nTest\nHAEMATOLOGY\nHB A1C 4.52 %\nEXPECTED VALUES :-\nMetabolicaly healthy patients = 4.8-6.0 % HbAIC\nGood Control = 6.0-6.8 % HbAIC\nFair Control = 6.8-8.2 % HbAIC\nPoor Control = >8.2 % HbAIC\nREMARKS:-\nIn vitro quantitative determination of HbAIC in whole blood is utilized in long term monitoring of glycemia .\n‘he HbAIC level correlates with the mean glucose concentration prevailing in the course of the patient's\n‘ecent history (approx - 6-8 weeks) and therefore provides much more reliable information for glycemia\nmonitoring than do determinations of blood glucose or urinary glucose.\n'tis recommended that the determination of HbAIC be performed at intervals of 4-6 weeksduring Diabetes\nMellitus therapy\nResults of HbAIC should be assessed in conjunction with the patient's medical history, clinical\nexaminations\nand other findings\n==\" End Of Report ****\nSMCS ,\n&S ~ 2 Yooesh Ky\n(af MD 1) Chahar Dr. GY ;\nag (Interathped po GUN IANL NADY\nCAN Fis D, Me dicing) MBBS Aer\nos Ky MC Nos p \"©! Decal\nOya ‘06137 dibend\nDMC/R/10211\nDn P. l © 3D/4D Ultrasound\nn Panel:\nae ® Color Doppler\nees Government | All Lab Test, ICU & Ambulance Facility 24x7 Hrs. AVAILABLE | irre\nelhi Government Gat\nT zi : *® Digital X-Ray\nDelhi Jal Board NOT FOR MEDICO LEGAL PURPOSE SC ania teed tabs\nAll TPA & Insurance",
+    "campos": {
+      "tipo": "UNKNOWN"
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-05T05:14:12.977037",
+    "timestamp": "2026-07-05T05:14:12.977037",
+    "fuente": "LAB_ALDIMI",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053481_Q-CHHAYADEVI21.04.20250001compressed_250427_1617@F.pdf_page_39.png",
+    "archivo_copia": null,
+    "tipo_documento": "LAB_REPORT",
+    "texto_crudo": "7 Jhajjar Road, Bahadurgarh zz\nYe Sti 7o Heat i\nThe Spirit To Care\nPatient CIU: W967038 1003 Date\nee ee ee\nMY SWASTIK HOSPITAL | |\ncs | | a\nIMMUNOLOGY\nT3 1.20 ng/ml 0.60 - 1.81\n14 5.63 ug/dl 45-109\nChemiluminescence\nTSH 2.20 ulU/ml\nshemiluminescence\nREFERENCE RANGE\nPAEDIATRIC AGE GROUP\n| 9-3 DAYS 1-20 ulu/ ml\n3-30 DAYS 0.5-6.5 ulu/ml\n| MONTH -§ MONTHS 0.5 -6.0 ulu/ml\n6 MONTHS- 18 YEARS 05-45 ulu/ml\nADULTS 0.35 - 5.50 ulu/ml\nNote: TSH levels are subject to circadian variation, rising several hours\nbefore the onset of sleep, reaching peak levels between 11 pm to6 am\nNadir concentrations are observed during the afternoon.\nDiurnal variation in TSH level approximates + 50 %, hence time of the day\nhas influence on the measured serum TSH concentration\nSEROLOGY\nVITAMIN D 25 HYDROXY\nCLIA\nVitamin D, 25 - Hydroxy 21.0 ng/ml ( > 30 ng/ml)\n“ik ry kAimar Chahar\n(yy ‘fs f ema! thet we}\n(a (May Me iS AC 0106131 Dr. CUNSETNAIN\nAS ARM -\n@ 3D/4D Ultrasound\n| On Panel : = ® Color Doppler\nHaryana Government | All Lab Test, ICU & Ambulance Facility 24x7 Hrs. AVAILABLE | eo eRe\nein Government © Digital X-Ray\nelhi Jal Board NOT FOR MEDICO LEGAL PURPOSE | ee seas ab\nAll TPA & Insurance :",
+    "campos": {
+      "ciu": "W967038",
+      "pruebas": [],
+      "tipo": "LAB_REPORT",
+      "alertas_detectadas": []
+    },
+    "advertencia": null
   }
 ]
