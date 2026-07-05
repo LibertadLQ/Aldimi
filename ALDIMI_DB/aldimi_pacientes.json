@@ -1,6 +1,6 @@
 {
   "sesion": {
-    "ultima_actualizacion": "2026-07-05T09:50:53.867819",
+    "ultima_actualizacion": "2026-07-05T09:51:12.052699",
     "archivo": "aldimi_pacientes.json"
   },
   "pacientes": {
@@ -339,8 +339,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-05T05:16:50.984382",
-          "timestamp": "2026-07-05T05:16:50.984382",
+          "id": "ocr_2026-07-05T09:51:02.635544",
+          "timestamp": "2026-07-05T09:51:02.635544",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055398_SUNILA ARORA INVESTIGATION  FOR ENHANCMENT _27-04-2025_1111-09_AM.pdf_page_6.png",
           "archivo_copia": null,
@@ -355,8 +355,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-05T05:16:59.287297",
-          "timestamp": "2026-07-05T05:16:59.287297",
+          "id": "ocr_2026-07-05T09:51:12.041111",
+          "timestamp": "2026-07-05T09:51:12.041111",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055398_SUNILA ARORA INVESTIGATION  FOR ENHANCMENT _27-04-2025_1111-09_AM.pdf_page_8.png",
           "archivo_copia": null,
@@ -634,7 +634,7 @@
         }
       ],
       "creado_en": "2026-07-05T03:11:32.785160",
-      "actualizado_en": "2026-07-05T09:50:53.854942"
+      "actualizado_en": "2026-07-05T09:51:12.041111"
     },
     "W499485": {
       "ciu": "W499485",
