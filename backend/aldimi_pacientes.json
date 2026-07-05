@@ -1,26 +1,8 @@
 {
-  "48451826": {
-    "ciu": "48451826",
-    "datos_personales": {
-      "nombres": "VANESSA SILVIA",
-      "apellidos": "CASTILLO GOMES",
-      "fecha_nacimiento": "05/18/2012"
-    },
-    "informes_laboratorio": [],
-    "alertas_clinicas": [],
-    "creado_en": "2026-07-03T03:51:55.907829",
-    "actualizado_en": "2026-07-03T03:51:55.907829"
-  },
-  "42951703": {
-    "ciu": "42951703",
-    "datos_personales": {
-      "nombres": "ASENCION TIMONEL",
-      "apellidos": "ALLENDE ABARCA",
-      "fecha_nacimiento": "08/15/1951"
-    },
-    "informes_laboratorio": [],
-    "alertas_clinicas": [],
-    "creado_en": "2026-07-03T22:04:08.823555",
-    "actualizado_en": "2026-07-03T22:04:08.823581"
-  }
+  "timestamp": "2026-07-05T04:16:59.108544",
+  "dni_procesados": 0,
+  "lab_procesados": 0,
+  "errores": 0,
+  "alertas": [],
+  "pacientes": {}
 }

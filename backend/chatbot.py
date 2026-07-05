@@ -26,6 +26,7 @@ from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
 from db import cargar_bd
+from expediente import sincronizar_carpetas
 
 router = APIRouter()
 
@@ -357,6 +358,12 @@ def responder_chat(mensaje: str, ciu: Optional[str] = None) -> dict:
                 "respuesta": KNOWLEDGE_BASE["EXPEDIENTE"],
                 "accion": "pedir_ciu_expediente",
             }
+        # Before reading the DB, try to synchronize images (Drive or local) so
+        # the expediente reflects latest OCR results.
+        try:
+            sincronizar_carpetas(max_images=0)
+        except Exception:
+            pass
         bd = cargar_bd()
         registro = bd.get(ciu_limpio)
         if not registro:

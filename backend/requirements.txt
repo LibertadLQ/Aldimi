@@ -12,3 +12,7 @@ spacy
 nltk
 scikit-learn
 aiofiles
+notebook
+google-api-python-client
+google-auth
+google-auth-httplib2

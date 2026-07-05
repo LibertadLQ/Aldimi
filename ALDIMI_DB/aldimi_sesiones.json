@@ -1,0 +1,150 @@
+[
+  {
+    "id": "ocr_2026-07-05T03:11:09.622673",
+    "timestamp": "2026-07-05T03:11:09.622673",
+    "fuente": "upload",
+    "archivo_origen": "C:\\R\\tmpgqm5v23d.png",
+    "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260705_031109_tmpgqm5v23d.png",
+    "tipo_documento": "UNKNOWN",
+    "texto_crudo": "bd REPUBLICA DEL PERU Re eon cul\nNERD cocumentonacionsccewennoao —— 74747580-1\nPriemer Apellido\nr GRANADOS i)\nSegunde Apellido\na — we\n\\ = Pronompres. i Sie\n_ JUAN FELIPE\n3\n5 * 539910 ° PER” 09 422000.\nEstado Civil Fecha de Emision\nSOLTERO 0903 2023\np- N\" de Taxjeta + Fecha de Caducktad\n0201698550 09.03 2031",
+    "campos": {},
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-05T03:11:20.265753",
+    "timestamp": "2026-07-05T03:11:20.265753",
+    "fuente": "upload",
+    "archivo_origen": "C:\\R\\tmp3qp3j_3k.png",
+    "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260705_031120_tmp3qp3j_3k.png",
+    "tipo_documento": "UNKNOWN",
+    "texto_crudo": "bd REPUBLICA DEL PERU Re eon cul\nNERD cocumentonacionsccewennoao —— 74747580-1\nPriemer Apellido\nr GRANADOS i)\nSegunde Apellido\na — we\n\\ = Pronompres. i Sie\n_ JUAN FELIPE\n3\n5 * 539910 ° PER” 09 422000.\nEstado Civil Fecha de Emision\nSOLTERO 0903 2023\np- N\" de Taxjeta + Fecha de Caducktad\n0201698550 09.03 2031",
+    "campos": {},
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-05T03:11:32.783138",
+    "timestamp": "2026-07-05T03:11:32.783138",
+    "fuente": "upload",
+    "archivo_origen": "C:\\R\\tmpl15g8dwn.jpg",
+    "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260705_031132_tmpl15g8dwn.jpg",
+    "tipo_documento": "LAB_REPORT",
+    "texto_crudo": "REPUBLICA DEL PERU REGISTRO NACIONAL DE IDENTIFICACION Y ESTADO CIVIL |\nDOCUMENTO NACIONAL\nBOMENONACON A\na eeeaic hae MUESTRA |\ncul sas SIN\nCASTILLO\n43451826-7\nETAT ummm _, VALOR\n| GOMES\nt Prenombres\n| VANESSA SILVIA d\nKG eon\nFENENINO SOLTERA\n| pape “ep ti\n¢°“— 48021986 140109\nfd ie\n48052012 1805 2020",
+    "campos": {
+      "ciu": null,
+      "pruebas": [],
+      "alertas_detectadas": []
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-05T03:12:04.725750",
+    "timestamp": "2026-07-05T03:12:04.725750",
+    "fuente": "upload",
+    "archivo_origen": "C:\\R\\tmph6a0226e.png",
+    "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260705_031204_tmph6a0226e.png",
+    "tipo_documento": "DNI_USA",
+    "texto_crudo": "WEST VIRGINIA’ ©\ncovernor: JAMES C. JUSTICE. Il |\nad ono. W499485 4beExp 11/08/2027\n3 vos 07/14/1992\n1 FIGUEROA |\n2MELANIE\ng 139 ISRSTREET\nSOUTH CHARLESTON, WV 25309\n9 Class C 7\n9aEnd NONE\nmes 11/08/2022\nAll ex F 116 Hat 6'-02\" 4alss TI\nLifign € mie BRO Lawn 119 Ib ay\n5 DD 0000000000000842 < 07/1 4/92",
+    "campos": {
+      "ciu": "W499485",
+      "nombres": "NO_DETECTADO",
+      "apellidos": "FIGUEROA",
+      "fecha_nacimiento": "07/14/1992"
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-05T03:12:29.166591",
+    "timestamp": "2026-07-05T03:12:29.166591",
+    "fuente": "upload",
+    "archivo_origen": "C:\\R\\tmpheq0opn0.png",
+    "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260705_031229_tmpheq0opn0.png",
+    "tipo_documento": "LAB_REPORT",
+    "texto_crudo": "GY Jhajjar Road, Bahadurgarh\nhe Sit o Peat i\nThe Spirit To Care\nPatient CIU: W030305 154 Date [a\nOe TOU te\nHA Ss SWASTIK HOSPITAL | | |\nHAEMATOLOGY\nHB AIC 5.65 %\nEXPECTED VALUES :-\nMetabolicaly healthy patients = 48-60 % HbAIC\nGood Control = 6.0-6.8 % HbAIC\nFair Control = 6.8-8.2 % HbAIC\nPoor Control = >8.2 % HbAIC\nREMARKS:-\n'n vitro quantitative determination of HbAIC in whole blood is utilized in long term monitoring of glycemia .\n'he HbAIC level correlates with the mean glucose concentration prevailing in the course of the patient's\nrecent history (approx - 6-8 weeks) and therefore provides much more reliable information for glycemia\nmonitoring than do determinations of blood glucose or urinary glucose.\n[tis recommended that the determination of HbAIC be performed at intervals of 4-6 weeksduring Diabetes\nMellitus therapy\nResults of HBAIC should be assessed in conjunction with the patient's medical history, clinical\nexaminations\nand other findings\n1\n|\n*“** End Of Report ****\nCJ J Surgeon Bice Lit] |\nTECHNIGIANE” — |\nDMC/R/10211\ne 3D/4D Ultrasound\nOn Panel : ase @ Color Doppler\ne Haryana Government All Lab Test, ICU & Ambulance Facility 24x7 Hrs. AVAILABLE iericican\n© Delhi Government as\n® Digital X-Ray\n* Delhi Jal Board NOT FOR MEDICO LEGAL PURPOSE sp bhnereee CHE\n© All TPA & Insurance",
+    "campos": {
+      "ciu": "W030305",
+      "pruebas": [
+        {
+          "nombre": "Hemoglobina (Hb)",
+          "valor": 5.65,
+          "unidad": "%",
+          "referencia": "",
+          "flag": ""
+        }
+      ],
+      "alertas_detectadas": []
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-05T03:28:25.337560",
+    "timestamp": "2026-07-05T03:28:25.337560",
+    "fuente": "upload",
+    "archivo_origen": "C:\\R\\tmp_kccxmoq.png",
+    "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260705_032825_tmp_kccxmoq.png",
+    "tipo_documento": "LAB_REPORT",
+    "texto_crudo": "RB) OSCAR SUPER SPECIALITY HOSPITAL\npp. Civil Hospital, Sonipat | Mob : i as\nTransactidin No. : 42325 i |\nPatient CIU: W668239 Date iz\nWiUUNE Ivy. ‘ P| : 4837\nDoctor Name : A as: Reporting Date : i\nnt eee\nest Nanje: URINE FOR PREGNANCY\nURINE FQR PREGNANCY RESULTS UNITS REFF.RANGE\nSS OE\n***END OF REPORT* Regd. No. 1938\nf wt fh led} : ARI\n' Zan SE, Tt M\nof ENN nes nae)\nsoot SS Regd. HN O1S~ \">\nte 4.\nCBC, Thyroid, Kidney F(nction Test, Liver Function Test, Lipid Profile, Blood Sugar, LH, FSH, Prolactin, B-HCG, TORCH, CA-125, CEA, PSA\nGes 2. ee\nHE.G.-21 Channels EMG NCV VEP 8.E.RA. PFT & Comprehensive Health Check-ups etc.\n3D/4D Ultrasound, Color Doppler, CT-Scan, Digital X-Ray & Computerised Lab\nNOT FOR MEDICO LEGAL PURPOSE await Be gfe 24 He soe FI",
+    "campos": {
+      "ciu": "W668239",
+      "pruebas": [],
+      "alertas_detectadas": []
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-05T03:50:16.539947",
+    "timestamp": "2026-07-05T03:50:16.539947",
+    "fuente": "upload",
+    "archivo_origen": "C:\\R\\tmpdiph0ihd.png",
+    "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260705_035016_tmpdiph0ihd.png",
+    "tipo_documento": "LAB_REPORT",
+    "texto_crudo": "+ OSCAR SUPER SPECIALITY HOSPITAL (@)\nos & TRAUMA CENTRE -\npp. Civil Hospital, Sonipat | Mob : i\n\nTramacti@n ho 42325 |\nPatient CIU: W668239 Date a\na\n: URINE FOR PREGNANCY\nORENT\ni\nURE FOnpRGNANCySCOMEGATIVE.\na\nDr. ENP SILL\n006 END OF REPORT®**** Maes coy)\n‘RES or ane ae\nfy Tg Regd. HN 012°\" ’\nL i aa a\nCOC, Thyroid, dees tien Teet, Liver Function Test, Lipid Profile, Bleed Seger, LX, FSM, Pretectin, B-NCS, TORCH, CA-125, CEA, PSA\nDeppies Utraseu © SG IVP Barium Stusees Degitar f May Mult Sice Spra CT Scan FCG\nbi. 2) Sahannets EMG ACV VER BE AA PFT & Comprenensize Heath Che 0 upiet:\n3D/4D Ultrasound. Color Doppler, CT-Scan. Digital X-Ray & Computerised Lab\n[ NOT FOR MEDICO LEGAL PURPOSE",
+    "campos": {
+      "ciu": "W668239",
+      "pruebas": [],
+      "alertas_detectadas": []
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-05T03:50:46.177587",
+    "timestamp": "2026-07-05T03:50:46.177587",
+    "fuente": "upload",
+    "archivo_origen": "C:\\R\\tmplod3juhu.png",
+    "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260705_035046_tmplod3juhu.png",
+    "tipo_documento": "DNI_USA",
+    "texto_crudo": "WEST VIRGINIA’\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W030305 4b Exp 06/02/2025\n3 pos 03/30/1997\n1 CAMPBELL\n2 AARON\ng 214TH STREET\nKENOVA, WV 25530\n9 Class C\n9aEnd NONE\notal - 12 Restr B\nbait am issex M tent 7-01\" 4alss 06/02/2020\n18 Eyes BRO 17 Wgt 188 lb\n5 DD 0000000000003019 03/30/97",
+    "campos": {
+      "ciu": "W030305",
+      "nombres": "AARON",
+      "apellidos": "CAMPBELL",
+      "fecha_nacimiento": "03/30/1997"
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-05T03:51:22.859643",
+    "timestamp": "2026-07-05T03:51:22.859643",
+    "fuente": "upload",
+    "archivo_origen": "C:\\R\\tmph0t6ofq6.jpg",
+    "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260705_035122_tmph0t6ofq6.jpg",
+    "tipo_documento": "LAB_REPORT",
+    "texto_crudo": "° REPUBLICA DEL PERU REGISTRO NACIONAL DE IDENTIFICACION Y ESTADO CIV.\nMUESTRA\ncur met Apetide SIN\nCASTILLO\n-43451826-7 VALOR\neoonde Aneto\nGOMES\na Peenantores\n=a VANESSA SILVIA.\n}\n_ sete Ot\nFEMENINO SOLTERA\nFacies de Nocimtente bigs te thactmiens\nco i802 ise6 = 140100\nfeowde bauer fete comnted\n18082012 1805 2020\nGrape cavencién __Bananam a Ores\né ry 237286 eae ”",
+    "campos": {
+      "ciu": null,
+      "pruebas": [],
+      "alertas_detectadas": []
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-05T03:54:45.198689",
+    "timestamp": "2026-07-05T03:54:45.198689",
+    "fuente": "upload",
+    "archivo_origen": "C:\\R\\tmp_xdosiz0.png",
+    "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260705_035445_tmp_xdosiz0.png",
+    "tipo_documento": "UNKNOWN",
+    "texto_crudo": "we REPUBLICA DEL PERU cul\nESTAR NAD WAL OE OE NTI AC IO, UA:\nWR MENT ONAL OAL DE DEN TOAL\nApethdos\n° a] Macsonakdad Feche de necamento Le\n~ PER 00 12 2006 a\nstado Crva\n\"ERC ,\n9 03 2031\n~cha 6: emisién\neee 970587",
+    "campos": {},
+    "advertencia": null
+  }
+]

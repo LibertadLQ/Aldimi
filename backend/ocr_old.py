@@ -1,23 +1,18 @@
 # -*- coding: utf-8 -*-
 """
-ocr.py — ALDIMI Legacy (compatibilidad backwards)
-================================================
-DEPRECADO: usar backend/ocr_robusto.py en su lugar.
-
-Este archivo mantiene la API antigua para backwards compatibility.
-Las nuevas funciones deben usar ocr_robusto.py directamente.
+ocr.py — ALDIMI
+================
+Convierte una imagen (o texto ya extraído por OCR) en un JSON estructurado.
 
 Flujo:
   imagen -> extraer_texto_ocr() -> clasificar_documento()
          -> [DNI_PERU|DNI_USA]  -> extraer_campos_dni()
-         -> [LAB_REPORT]        -> extraer_campos_lab() (incluyendo Widal y cualitativos)
+         -> [LAB_REPORT]        -> extraer_campos_lab()
 
-Mejoras de robustez:
-  1. Preprocesamiento de imagen con OpenCV (escalas de grises, umbral, deskew)
-  2. Reintento multi-PSM para DNI (valida campos completos antes de aceptar)
-  3. Fallback a EasyOCR si Tesseract falla
-  4. Ruta de Tesseract detectada automáticamente (PATH, env, default Windows)
-  5. Parser LAB extendido: numérico, tabla, Widal, cualitativos
+La idea clave: DNI y LAB son problemas distintos, así que NO comparten
+parser. DNI busca 3-4 campos fijos por etiqueta conocida. LAB recorre
+línea por línea, descarta ruido (encabezados, método, página, firmas) y
+solo interpreta líneas con forma "nombre valor [unidad] [flag] [referencia]".
 """
 
 import re
@@ -44,11 +39,10 @@ _DNI_DB_CONOCIDOS = _cargar_dni_db()
 
 
 # ===========================================================================
-# 0. OCR CRUDO CON PREPROCESAMIENTO Y MULTI-PSM
+# 0. OCR CRUDO
 # ===========================================================================
 
 def _get_tesseract_cmd() -> Optional[str]:
-    """Detecta ruta de Tesseract: env -> PATH -> default Windows."""
     env_path = os.environ.get("TESSERACT_CMD")
     if env_path:
         return env_path
@@ -60,7 +54,6 @@ def _get_tesseract_cmd() -> Optional[str]:
 
 
 def _preprocesar_imagen(ruta_imagen: str):
-    """Preprocesamiento con OpenCV: gris, bilateral, threshold, deskew."""
     try:
         import cv2
         import numpy as np
@@ -92,7 +85,7 @@ def _preprocesar_imagen(ruta_imagen: str):
 
 
 def extraer_texto_ocr(ruta_imagen: str, lang: str = "spa+eng", psm: int = 6) -> str:
-    """Ejecuta Tesseract sobre la imagen con preprocesamiento."""
+    """Ejecuta Tesseract sobre la imagen y devuelve el texto crudo."""
     import pytesseract
     from PIL import Image
     import numpy as np
@@ -114,7 +107,6 @@ def extraer_texto_ocr(ruta_imagen: str, lang: str = "spa+eng", psm: int = 6) -> 
 
 
 def extraer_texto_easyocr(ruta_imagen: str) -> Optional[str]:
-    """Fallback a EasyOCR si Tesseract falla."""
     try:
         import easyocr
     except Exception:
@@ -151,7 +143,11 @@ _USA_KW = [
 
 
 def clasificar_documento(texto: str) -> str:
-    """Devuelve 'DNI_PERU' | 'DNI_USA' | 'LAB_REPORT' | 'UNKNOWN'."""
+    """Devuelve 'DNI_PERU' | 'DNI_USA' | 'LAB_REPORT' | 'UNKNOWN'.
+
+    Clasificación por conteo de palabras clave: cada categoría "vota" y
+    gana la de mayor puntaje. Si nadie vota, es UNKNOWN.
+    """
     t = (texto or "").lower()
 
     lab_s = sum(1 for k in _LAB_KW if k in t)
@@ -174,12 +170,12 @@ def clasificar_documento(texto: str) -> str:
 # ===========================================================================
 
 def _fix_num(s: str) -> str:
-    """Corrige confusiones típicas de OCR en dígitos."""
+    """Corrige confusiones típicas de OCR en dígitos (O→0, I→1, S→5...)."""
     return s.translate(str.maketrans({"O": "0", "o": "0", "I": "1", "l": "1", "S": "5", "Z": "2", "B": "8"}))
 
 
 def extraer_ciu_dni(texto: str, tipo_dni: str) -> Optional[str]:
-    """Número de documento / licencia."""
+    """Número de documento / licencia. Prioridad: CUI Perú > ID alfanumérico USA > 8 dígitos Perú."""
     t = texto or ""
 
     m = re.search(r"(?:4d\s+)?DL\s*NO\.?\s*([A-Z]{1,2}\d{5,7})\b", t, re.I)
@@ -194,9 +190,14 @@ def extraer_ciu_dni(texto: str, tipo_dni: str) -> Optional[str]:
     if m:
         return _fix_num(m.group(1))
 
+    # Alfanumérico USA: 1-2 letras + 5-7 dígitos (ej. W839927, WV632919)
     for m in re.finditer(r"\b([A-Z]{1,2}\d{5,7})\b(?!\d)", t):
         return m.group(1).upper()
 
+    # 8 dígitos Perú, descartando años y números de tarjeta.
+    # El OCR a veces mete un espacio suelto en medio del número
+    # (ej. "43451826" -> "48451 826"), así que buscamos también en
+    # una versión sin espacios entre dígitos, sin tocar el texto original.
     t_sin_espacios = re.sub(r"(?<=\d)\s+(?=\d)", "", t)
     for c in re.findall(r"\b(\d{8})\b", t) + re.findall(r"\b(\d{8})\b", t_sin_espacios):
         y4 = int(c[:4])
@@ -220,7 +221,13 @@ _EXCL_DOC_PERU = {
 
 
 def _bloque_limpio(texto: str, etiqueta_regex: str, lineas_extra: int = 2) -> Optional[str]:
-    """Busca `etiqueta_regex` y devuelve el primer bloque de letras reales."""
+    """Busca `etiqueta_regex` línea por línea y devuelve el primer bloque de
+    letras "reales" (>=3 caracteres, sin contar palabras del propio documento)
+    que aparezca en esa línea o en las siguientes `lineas_extra`.
+
+    Esto evita quedarnos con basura OCR de 1-2 caracteres (ej. "S | N a")
+    que a veces aparece pegada justo después de la etiqueta.
+    """
     lineas = texto.split("\n")
     for i, line in enumerate(lineas):
         if re.search(etiqueta_regex, line, re.I):
@@ -235,7 +242,9 @@ def _bloque_limpio(texto: str, etiqueta_regex: str, lineas_extra: int = 2) -> Op
 
 
 def extraer_nombre_apellido_dni(texto: str, tipo_dni: str):
-    """Extrae nombres y apellidos según tipo DNI."""
+    """DNI_PERU: etiquetas 'Primer/Segundo Apellido' + 'Prenombres'.
+    DNI_USA : campos numerados '1 APELLIDO' / '2 NOMBRE'.
+    """
     t = texto
     nombres = apellidos = None
 
@@ -310,9 +319,10 @@ def extraer_campos_dni(texto: str, tipo_dni: str) -> Dict[str, Any]:
 
 
 # ===========================================================================
-# 2B. EXTRACCIÓN — INFORME DE LABORATORIO (CON WIDAL, CUALITATIVOS)
+# 2B. EXTRACCIÓN — INFORME DE LABORATORIO
 # ===========================================================================
 
+# Líneas a IGNORAR (ruido de cabecera/pie, no son pruebas)
 _SKIP_RE = re.compile(
     r"^(reference|rango\s*normal|método|method|specimen|equipment|"
     r"sample\s*no|collection|report\s*date|report\s*release|printed|"
@@ -329,28 +339,33 @@ _SKIP_RE = re.compile(
     re.IGNORECASE,
 )
 
+# Fila con ":" explícito → "Nombre: valor unidad [FLAG] referencia"
+# Separador limitado a ":" (NO "-") para no confundir con un rango de
+# referencia tipo "123-103" que aparece más adelante en la misma línea.
 _LAB_NUM = re.compile(
     r"""
-    ^([\wÁÉÍÓÚÑáéíóúñ()\[\]{}#\./,+%°\s]{3,85}?)
+    ^([\wÁÉÍÓÚÑáéíóúñ()\[\]{}#\./,+%°\s]{3,85}?)      # G1 nombre
     \s*:\s*
-    (\d+(?:[.,]\d+)?)
+    (\d+(?:[.,]\d+)?)                                  # G2 valor
     \s*
-    ([a-zA-ZµμΩ%°][a-zA-Z0-9µμ%/^.·\-]{0,20})?
-    \s*(?:\[([HLhl]+)\])?
-    (?:[^\d\-]*?([<>]?\s*[\d.,]+\s*[-–]\s*[\d.,]+|[<>]\s*[\d.,]+))?
+    ([a-zA-ZµμΩ%°][a-zA-Z0-9µμ%/^.·\-]{0,20})?          # G3 unidad
+    \s*(?:\[([HLhl]+)\])?                               # G4 flag
+    (?:[^\d\-]*?([<>]?\s*[\d.,]+\s*[-–]\s*[\d.,]+|[<>]\s*[\d.,]+))?  # G5 referencia
     \s*$
     """,
     re.VERBOSE | re.IGNORECASE,
 )
 
+# Fila tipo tabla, SIN ":" → "NOMBRE  valor  referencia  unidad"
+# (formato típico de reportes peruanos: "Hemoglobina 146 123-103 g/dl")
 _LAB_TABLE = re.compile(
     r"""
-    ^([A-Za-zÁÉÍÓÚÑáéíóúñ][A-Za-zÁÉÍÓÚÑáéíóúñ\s\(\)%]{2,60}?)
+    ^([A-Za-zÁÉÍÓÚÑáéíóúñ][A-Za-zÁÉÍÓÚÑáéíóúñ\s\(\)%]{2,60}?)   # G1 nombre
     \s+
-    (\d+(?:[.,]\d+)?)
-    \s*(?:\[([HLhl]+)\])?
-    \s*([\d.,]+\s*[-–]\s*[\d.,]+|[<>]\s*[\d.,]+)?
-    \s*([a-zA-Z%µ][a-zA-Z0-9%/µ\.\^\-]{0,15})?
+    (\d+(?:[.,]\d+)?)                                            # G2 valor
+    \s*(?:\[([HLhl]+)\])?                                        # G3 flag
+    \s*([\d.,]+\s*[-–]\s*[\d.,]+|[<>]\s*[\d.,]+)?                # G4 referencia
+    \s*([a-zA-Z%µ][a-zA-Z0-9%/µ\.\^\-]{0,15})?                   # G5 unidad
     \s*$
     """,
     re.VERBOSE | re.IGNORECASE,
@@ -362,6 +377,7 @@ _QUALITATIVE_RE = re.compile(
     r"(POSITIVO|NEGATIVO|SENSITIVE|RESISTANT|SUSCEPTIBLE|SENSIBLE|DETECTADO|NO\s+DETECTADO|PRESENTE|AUSENTE)\b"
 )
 
+# Nombres OCR-rotos -> nombre clínico canónico (bilingüe ES/EN)
 _NAME_MAP_LAB = [
     (r"c.?reactive\s*protein|^crp\b", "Proteína C Reactiva (CRP)"),
     (r"h(a?e)?mo?glo?[bh]in[ae]?|^hb\b|hem[oa]glob", "Hemoglobina (Hb)"),
@@ -430,7 +446,14 @@ def extraer_ciu_lab(texto: str) -> Optional[str]:
 
 
 def extraer_campos_lab(texto: str) -> Dict[str, Any]:
-    """Extrae campos de laboratorio: pruebas numéricas, Widal, cualitativos."""
+    """Punto de entrada para informes de laboratorio.
+
+    A diferencia del DNI (campos fijos), aquí recorremos línea por línea:
+      1. Si la línea matchea ruido conocido (_SKIP_RE) -> se descarta.
+      2. Si matchea el patrón numérico o de tabla -> se registra como prueba.
+      3. Si matchea Widal o cualitativo -> se registra como prueba también.
+      3. Se normaliza el nombre y se infiere el flag H/L si falta.
+    """
     res: Dict[str, Any] = {"ciu": extraer_ciu_lab(texto), "pruebas": [], "alertas_detectadas": []}
     seen = set()
 
@@ -561,7 +584,7 @@ def extraer_campos_lab(texto: str) -> Dict[str, Any]:
 
 
 # ===========================================================================
-# 3. ORQUESTADOR — PUNTO DE ENTRADA PRINCIPAL
+# 3. ORQUESTADOR — punto de entrada único para main.py / FastAPI
 # ===========================================================================
 
 def procesar_texto(texto: str) -> Dict[str, Any]:
@@ -583,62 +606,6 @@ def procesar_texto(texto: str) -> Dict[str, Any]:
 
 
 def procesar_documento(ruta_imagen: str) -> Dict[str, Any]:
-    """Punto de entrada: recibe una ruta de imagen y retorna OCR estructurado.
-    
-    Para DNI: intenta múltiples PSM hasta obtener CIU + nombres + apellidos + fecha.
-    Para LAB: ejecuta una sola pasada pero con mejor captura de Widal/cualitativos.
-    Fallback: si Tesseract falla, intenta EasyOCR si está disponible.
-    """
-    psm_list = [6, 4, 3, 1]
-    best_resultado = None
-    best_completo = False
-
-    for psm in psm_list:
-        try:
-            texto = extraer_texto_ocr(ruta_imagen, psm=psm)
-        except Exception:
-            continue
-
-        if not texto or len(texto) < 20:
-            continue
-
-        resultado = procesar_texto(texto)
-        tipo = resultado.get("tipo_documento", "UNKNOWN")
-
-        if tipo in ("DNI_PERU", "DNI_USA"):
-            campos = resultado.get("campos", {})
-            ciu = campos.get("ciu")
-            nombres = campos.get("nombres")
-            apellidos = campos.get("apellidos")
-            fecha = campos.get("fecha_nacimiento")
-
-            completo = (
-                ciu and ciu != "NO_DETECTADO" and
-                nombres and nombres != "NO_DETECTADO" and
-                apellidos and apellidos != "NO_DETECTADO" and
-                fecha and fecha != "NO_DETECTADO"
-            )
-
-            if not best_resultado:
-                best_resultado = resultado
-                best_completo = completo
-            elif completo and not best_completo:
-                best_resultado = resultado
-                best_completo = completo
-                break
-
-        else:
-            return resultado
-
-    if best_resultado:
-        return best_resultado
-
-    texto_easyocr = extraer_texto_easyocr(ruta_imagen)
-    if texto_easyocr:
-        return procesar_texto(texto_easyocr)
-
-    return {
-        "tipo_documento": "UNKNOWN",
-        "texto_crudo": "OCR FALLIDO",
-        "campos": {},
-    }
+    """Punto de entrada de más alto nivel: recibe una ruta de imagen en disco."""
+    texto = extraer_texto_ocr(ruta_imagen)
+    return procesar_texto(texto)

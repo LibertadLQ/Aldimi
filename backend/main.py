@@ -19,6 +19,8 @@ Endpoints principales:
 
 import os
 import shutil
+import subprocess
+import sys
 import tempfile
 from datetime import datetime
 from pathlib import Path
@@ -27,15 +29,89 @@ from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-import ocr
+try:
+    import ocr_robusto as ocr
+except ImportError:
+    import ocr
 from db import cargar_bd, guardar_bd
 from chatbot import router as chatbot_router
+from expediente import persistir_ocr_resultado, sincronizar_carpetas
 
 # ─────────────────────────────────────────────────────────────
 # Configuración
 # ─────────────────────────────────────────────────────────────
 
 app = FastAPI(title="ALDIMI 2.0 API")
+
+NOTEBOOK_PATH = Path(__file__).resolve().parent.parent / "ALDIMI_Core_AI.ipynb"
+USE_NOTEBOOK = os.environ.get("USE_NOTEBOOK") == "1"
+
+
+@app.on_event("startup")
+async def startup_scan_drives():
+    """
+    Al iniciar FastAPI:
+    1. Auto-escanea DNI_ALDIMI y LAB_ALDIMI
+    2. Procesa con OCR robusto (multi-variante, scoring, MRZ)
+    3. Persiste en aldimi_pacientes.json ANTES de servir la API
+    La página NO inicia hasta que el escaneo termina.
+    """
+    print("[STARTUP] Iniciando escaneo automático de carpetas...")
+    print("[STARTUP] Modo: OCR robusto (multi-variante, MRZ parsing, Widal/cualitativos)")
+    
+    try:
+        # Auto-scan con OCR robusto
+        resultados = ocr.autoscan_folders(
+            dni_folder="DNI_ALDIMI",
+            lab_folder="LAB_ALDIMI",
+            output_json="aldimi_pacientes.json",
+        )
+        
+        print(f"[STARTUP] ✅ Escaneo completado:")
+        print(f"         DNI procesados: {resultados['dni_procesados']}")
+        print(f"         LAB procesados: {resultados['lab_procesados']}")
+        print(f"         Pacientes: {len(resultados['pacientes'])}")
+        print(f"         Alertas: {len(resultados['alertas'])}")
+        print(f"         Errores: {resultados['errores']}")
+        
+        # Sincronización adicional (si hay Drive configurado)
+        try:
+            resultado_sync = sincronizar_carpetas(max_images=0)
+            print(f"[STARTUP] Sincronización de Drive: {resultado_sync}")
+        except Exception as e:
+            print(f"[STARTUP] Info: Sincronización Drive no disponible ({e})")
+        
+        print("[STARTUP] ✅ API lista para servir requests")
+        
+    except Exception as e:
+        print(f"[STARTUP] ⚠️  Error durante escaneo automático: {e}")
+        print("[STARTUP] Continuando sin escaneo previo...")
+
+
+
+def _ejecutar_notebook():
+    if not USE_NOTEBOOK:
+        return
+    if not NOTEBOOK_PATH.exists():
+        print(f"WARNING: No se encontró el notebook {NOTEBOOK_PATH}")
+        return
+    try:
+        cmd = [
+            sys.executable,
+            "-m",
+            "nbconvert",
+            "--to",
+            "notebook",
+            "--execute",
+            "--inplace",
+            str(NOTEBOOK_PATH),
+        ]
+        subprocess.run(cmd, cwd=str(NOTEBOOK_PATH.parent), check=False)
+        print(f"Notebook ejecutado: {NOTEBOOK_PATH}")
+    except Exception as e:
+        print(f"WARNING: No se pudo ejecutar el notebook: {e}")
+
+_ejecutar_notebook()
 
 # CORS abierto: el frontend (index.html/chatbot.html) se sirve aparte
 # (Live Server, otro puerto, etc.), así que el navegador necesita permiso
@@ -84,6 +160,7 @@ async def ocr_procesar(archivo: UploadFile = File(...)):
 
     try:
         resultado = ocr.procesar_documento(ruta_temporal)
+        persistir_ocr_resultado(ruta_temporal, resultado, fuente="upload")
     except Exception as e:
         raise HTTPException(500, f"Error procesando la imagen: {e}")
     finally:
@@ -95,6 +172,12 @@ async def ocr_procesar(archivo: UploadFile = File(...)):
             "Revisa el texto extraído y completa los campos manualmente."
         )
     return resultado
+
+
+@app.post("/expediente/sincronizar")
+async def sincronizar_expediente(max_images: int = 0):
+    """Procesa las imágenes encontradas en DNI_ALDIMI y LAB_ALDIMI."""
+    return sincronizar_carpetas(max_images=max_images)
 
 
 # ─────────────────────────────────────────────────────────────
