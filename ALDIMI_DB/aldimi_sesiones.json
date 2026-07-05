@@ -1683,5 +1683,177 @@
       "tipo": "UNKNOWN"
     },
     "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-05T05:14:51.781712",
+    "timestamp": "2026-07-05T05:14:51.781712",
+    "fuente": "LAB_ALDIMI",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053930_Q-REKHA10500_250427_1509@F.pdf_page_27.png",
+    "archivo_copia": null,
+    "tipo_documento": "LAB_REPORT",
+    "texto_crudo": "C5 ae Propert) Patient Clu: W169099 |\nee ¥y iy , oO. Opp. Metro chen No. sich Rohtak Road,\nDRI ee) ANJ AY > Distt. Jhajjar, Haryana - 124507\nSe ose. ED es\na \\ s : =: © __wwwadrsanjayhospital.com\nlame : Mrs. Rekha Devi |\nRef.By : Dr. Ramesh Kumar OPD IPD =i\nct Lab No :04\nComplete Blood Count\nInvestigations _- _Result Units Normal Adult Range\nHaemoglobin Tf; gm% M:13-18\n(Cyanmet. method) F: 11.5-16.5\nTotal Leucocyte Count 19,800 /cumm., 4000-11000\nDLC\nPolymorphs 92 % 45-75\nLymphocytes 06 % 25-45\nMonocytes _ ae lon % 0-7\nEosinophils 01 % 0-4\nBasophils 00 % 0-1\nE.S.R 64 mm/1’st hr. 2-10M\n(Tech : W.G.) 2-20 F\nRBC 3.30 millions/ cmm 4.5-6.5\nPCV 24:38 % 37-47\n: MCV 60.6 fl 82-92\nMCH 26.6 pg 28-32\nMCHC 32.1 gm% 32-37\nPlatelet Count 2.40 lac / cmm 1.5-4.5\nR.D.W 50.4 fl 39-46\nBIOCHEMISTRY\nInvestigations Result __ Units Normal Range\nB.Sugar (R) 94.0 mg/d] 80-140\nC. Reactive Protein 31.1 mg/L Less than 6.0 :\nLab wipe pe Rune | Dr. NAVIN KUMAR SINHA ages\nDr. Nar pps» MP 5967) (MD) PATHOLOGY Be\n|  pucte. 3° ~- ise\na",
+    "campos": {
+      "ciu": null,
+      "pruebas": [],
+      "tipo": "LAB_REPORT",
+      "alertas_detectadas": []
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-05T05:15:11.759558",
+    "timestamp": "2026-07-05T05:15:11.759558",
+    "fuente": "LAB_ALDIMI",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053930_Q-REKHA10500_250427_1509@F.pdf_page_28.png",
+    "archivo_copia": null,
+    "tipo_documento": "LAB_REPORT",
+    "texto_crudo": "5°. at Property Potient clu: '\nwy Cam ® Opp. Metro Pillar No. 881, Rohtak Road,\n“tSany AY Fi @ ; an Distt. Jhajjar, Haryana - 124507\nwrens HOSPITAL NABH a\nPatient CIU: W557198 ; : © www.drsanjayhospital.com\name : Mrs. Rekha Devi i] |\nRef.By : Dr. Ramesh Kumar OPD IPD : IPD\nDate: LabNo :04\nImmuno-Serology\nInvestigation : a Result\nTYPHIDOT IgM : Positive\nTYPHIDOT IgG : Negative\nDengue NS-1 Antigen : NON REACTIVE\nDengue IgM : NON REACTIVE\nDengue IgG : NON REACTIVE\nWIDAL AGGLUTINATION TEST\n| | 20 [40 | 1:80 | 1160 | 1320 | 1:640\neer ia\noo\nS. PARATYPHI | 4. =\n“AH”\nS. PARATYPHI | 4\n“BH”\nINTERPRETATION: Positive\nAgglutinin titre greater than 1:80 is considered significant and rising titre will confirm the\ndiagnosis.In typhoid fever, widal test is usually positive after 7 days of fever.\nImmuno-Serology\nInvestigation Result\nMalaria Antigen Test : Negative 3\nmar Sit a\n~ Lab mA <ores ere | Dr. NAVIN KUMAR SINHA =\na \\ at ¢ No. 39400\" (MD) PATHOLOGY :",
+    "campos": {
+      "ciu": "W557198",
+      "pruebas": [],
+      "tipo": "LAB_REPORT",
+      "alertas_detectadas": []
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-05T05:15:20.770792",
+    "timestamp": "2026-07-05T05:15:20.770792",
+    "fuente": "LAB_ALDIMI",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053972_E-SANDEEPKUMARMID_250427_1418@E.pdf_page_12.png",
+    "archivo_copia": null,
+    "tipo_documento": "LAB_REPORT",
+    "texto_crudo": "Aakash Healthcare Aakash Pathlab 4 a\nSuper Speciality Hospital i\ngant eo ats Arm etn\nLABORATORY INVESTIGATION REPORT\n, = Age/Sex a\nPatient CU: Order Date ‘3:45\nEpisode : IP IP/Bed 1128824 / 430\nPatient CIU: W702846 Facility : Aakash Healthcare Delhi\n2day <11.3 mg/dL\n3day <12.7 mg/dL\n4-6 day <12.6 mg/dL\nALKALINE PHOSPHATE\nExpected Values\nMALES\n; = h_| 83 - 248 U/L\n15DAYS~ <1 YEARS 122- 469 UL :\n1 - <10YEARS 142- 335 UL ~\n10 - <13YEARS 129- 417 UL ; y Es\n13 - <15 YEARS 116 - 468 U/L ow» %\n15-<17 YEARS 82 - 331UL .\n17-<19 YEARS 55 - 149UL\n>=19 YEARS 40 - 129 UL\nr)\nFEMALES\n[Es 14 cays 83 - 248 UL * @ |\n15DAYS - <1 YEARS 122 - 469 U/L > 4\n1 - <10YEARS 142- 335 UL ~~\n10 - <13YEARS 129- 417UL |\n13 - <15 YEARS 57 - 254 UL\n15-<17 YEARS 50 -117Up \\ 2B\n17-<19 YEARS 45 87, Uh,\n>=19 YEARS 35 104 UN\nRenal Function Test (KFT)\nUrea 4 28 mg/dl 19-45\nMethod - Urease-GLDH\nCreatinine 1.04 mg/dl 0.67 - 1.17\nMethod - Serum, Enzymatic\nUric Acid 58 mg/dl 3.5-7.2\nMethod - Uricase-POD\nPhosphorus 2.98 mg/dl 2.5-4.5\nMethod - UV Molybdate\nCalcium 8.95 mg/dl 8.6 - 10\nMethod - Serum, BAPTA\nLe 3)\nLPS\ni4c-2008\nPage 2 of 3",
+    "campos": {
+      "ciu": "W702846",
+      "pruebas": [],
+      "tipo": "LAB_REPORT",
+      "alertas_detectadas": []
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-05T05:15:30.973768",
+    "timestamp": "2026-07-05T05:15:30.973768",
+    "fuente": "LAB_ALDIMI",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054044_Q-FINAL0001_250427_1157@F.pdf_page_36.png",
+    "archivo_copia": null,
+    "tipo_documento": "LAB_REPORT",
+    "texto_crudo": "ADVANTA SUPER SPECIALITY HOSPITAL\n.\n= Silani Gate, Jhajjar (Haryana\nADV. TA\nan Ph. 01251-25216, laa\n| Date | | Sri No. 332 Patient CIU: W574383\n|| | Le |\nHD. MRINAL VERMA HE No. 15014 HMNo. = 12412\nTest —_ | | a\nBIOCHEMISTRY\nBLOOD SUGAR RANDOM 98 mg/dl 80 - 160\nHEXOKINASE\nMALARIA PARASITE (M.P)\nThick and thin smears are Negative for Malaria Parasite.\nNB :- Microscopic methods of detection may miss low levels of parasitemia.In case of strong index of clinical\nsuspicion, serologic test for malaria may be performed..\nNS-1 ANTIGEN DENGUE\nImmunochromatography\nRESULT NON - REACTIVE\nREMARKS:\nIn tropical and subtropical regions, dengue is the most important arbovirosis in terms of mortality and morality.\nAn easy-to-perform, rapid and specific test is needed to confirm infection during the acute phase of the\ninfection\nin order to implement appropriate treatment during early course of teh disease. NS1 antigen is an non-\nstructural protein recognized as a marker of acute phase of dengue infection, a period for which traditional\nserological antibodies based methods are of limited value. NS1 antigen was found circulating in sample of\ninfected patients\nfrom the first day up to 9 days after onset of fever (1,2 & 3) .\n| Dengue NS‘1 Ag Strip is an individual test for qualitative detection of Dengue virus NS1 antigen\n| in human serum or plasma as an aid in the diagnosis of acute dengue infection.\nTYPHIDOT (IgG & IgM)\nDOT EIA FOR DECTECTION OF IgM AND IgG ANTIBODIES\nTO SALMONELLA TYPHI:\nIgM - NEGATIVE th, {\nMBS, MD (PATH\nConsultant Pathologist\nReed. No. DMC-17916",
+    "campos": {
+      "ciu": "W574383",
+      "pruebas": [],
+      "tipo": "LAB_REPORT",
+      "alertas_detectadas": []
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-05T05:15:39.881965",
+    "timestamp": "2026-07-05T05:15:39.881965",
+    "fuente": "LAB_ALDIMI",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054524_E-FinalbillanddischargeSangitadevi_250427_1834@E.pdf_page_14.png",
+    "archivo_copia": null,
+    "tipo_documento": "LAB_REPORT",
+    "texto_crudo": "em, Decent Hospital\n(infront SBI Zonal Office), Gorakhpur\na\nREPORTINGDATE +:\nPatient CIU: W754518 7 ‘\nbaunysex > SUYyF TIME :\nREF BY DR + DECENT HOSPITAL\n(8G. CRP) SAMPLE NO. :\n_TEST'S|\n; BIO-CHEMISTRY\n“CRP (C-Reactive Protein) 77 Hi me/i (Adults <Smg/I)\n= (New Born upto\n= 3 weeks <4.1mg/1)\n— (Infants & Children\na Children <2.8 mg/1\nom INTERPRETATION:\nSGRP is an acute phase B-globulin with a molecular mass of approximately\n118,000 daltons,\nGRP levels in serum or plasma may rise during general,nonspecific response to\nMp fectious and non-infectious inflammatory conditions such as rheumatoid\n‘@uatthritis, cardiovascular disease and peripheral vascular disease.\nWithin 24 to 48 hours following acute [nn\nmarise to approximately 1000 tmes the CR? levels may\n=qhemain elevated for several days before returning to normal.\nPAs elevated CRP values are always associated with pathological changes, the\nGRP assay provides useful information for the diagnosis, therapy, and\nMonitoring of inflammatory conditions and associated disease.\n: <5 ae ,\n* WISH YOU GOOD HEALTH * — .\nDr. S.P.YADAV ca\nMD PATH (Reg no, 044013) o,.\n‘ La\nach Investigation has technical imitations and the inaccuracies are inherent in a constantly changing ad i\nlogical the result, may also vary, so kindly Correlate Clinicatty and inform the center. the present , @ °°\nport is only @ professional opinion and not the final diagnosis : . ed &\nCail for ABG 9807900207",
+    "campos": {
+      "ciu": "W754518",
+      "pruebas": [],
+      "tipo": "LAB_REPORT",
+      "alertas_detectadas": []
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-05T05:15:47.865100",
+    "timestamp": "2026-07-05T05:15:47.865100",
+    "fuente": "LAB_ALDIMI",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054745_Q-REPORTS_250427_1041@F.pdf_page_7.png",
+    "archivo_copia": null,
+    "tipo_documento": "UNKNOWN",
+    "texto_crudo": "8 ff ;\nHealing Touch 69)\nSuper Speciality Fo ital WAE\n\n{ :\nPatient ClU: W867192 ZZ\nes Zz 7\n| a : Dr. PRATIBHA PUNDHIR Requisitions : 21/04/2025\nReq.No : 2566557 Reported on : iy\nPatient Type ; IPD\nBIOCHEMISTRY\nLFT(LIVER FUNCTION TEST)\nSpecimen Type: Serum BIOLOGICAL\nTEST OU ee eee\n| | 0:55 mg/dL 0.1 -1.2 Diazotized\nSulphanilic Acid\n“STRECT BILIRUBI 0.16 mg/dL 0.00 - 0.20 Diazotized\nSulphanilic Acid\nINDIRECT BILIRUBIN 0.39 mg/dL 0.0- 0.9 Calculated\nSGOT (AST) 24.79 U/L 0-45 IFCC WPP AMP\nSGPT (ALT) 29.62 U/L 5-45 IFCC WPP AMP\nAlkaline Phosphatase 56.43 IU/L 50 - 136 Modified IFCC\nTotal Protein 6.57 g/dl 6.4-8.2 Biuret Endpoint\nAlbumin - Serum 3.79 g/DL 32-50 Photometric\nColumn test\nBCG Dye\nGlobulin 2.78 gms% 23-45 Calculated\n“Results of these tests should always be o“ in conjunction with patients medical history, clinical presentation and other findings.\net ee\n-** End of Report ****\nPlease Correlate With Clinical Findings\nMoD (Path AoMByAssINDAL\nPATHOLOGIST\n(This is only professional Opinion and not the diagnosis, Please correlate clinically)\nSultanpur Chowk, Nr. Dhulkot Barrier, Ambala Chandigarh Expy, Ambala, Haryana 134003 Ph. : 74320 00000, 74969 79727\nPh.: 171 - 2500000, 74320 00000, 74969 79727 Toll free No.: 1800 180 I III iin\nthe health care providers the care providers",
+    "campos": {
+      "tipo": "UNKNOWN"
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-05T05:15:55.585438",
+    "timestamp": "2026-07-05T05:15:55.585438",
+    "fuente": "LAB_ALDIMI",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054811_Q-GUDDUKUMAR10534_250427_1457@F.pdf_page_31.png",
+    "archivo_copia": null,
+    "tipo_documento": "LAB_REPORT",
+    "texto_crudo": "WG : Property Patient Clu: W642457\nhr p7, ; f Opp. Metro Pillar No. 881, Rohtak Road,\nDR. ee ) ANJ. AY Bahadurgarh, Distt. Jhajjar, Haryana - 124507\nwanseecdur” HOSPITAL 0\nCIN No. : U24100DL2010PTC203581 NABH mA ree\n1SO 9001 : 2015 CERTIFIED 3) www.drsanjayhospital.com\nRef.By : Dr. Ramesh Kumar OPD IPD : IPD\nDate: iy LabNo :07\nHormonal Assay\nInvestigations Result Units Normal Range\nProcalcitonin 1.06 ng/dl\nProcalcitonin Interpretation\nBacterial infection is unlikely.\n0.25 -<0.5 -.Local Bacterial infection is Possible but sepsis is unlikely\n0.5 - <2.0 Systemic infection (sepsis) is possible and morderate risk of\ndeveloping to severe\n2.0 - < 10.0 High risk of progression to severe sepsis or even septic shock.\nHigh likelihood of severe sepsis or septic shock.\nRemarks: This test has been processed and validated by CRL Diagnostics PVT. LTD. NEW Delhi.\nHE GUPTA HP AWAN KUMAR ;\nM.B.B.S, M.D (PATH) Phd. BIOCHEMISTRY\nSR. CONSULTANT PATHOLOGIST CONSULTANT BIOCHEMIST\nREGDJNO, 5015 : aie\nGy ‘aia Naveen fear Sinh\nelena ee aes is D (Path\na DMC No. 3526 -\ne ———_",
+    "campos": {
+      "ciu": null,
+      "pruebas": [],
+      "tipo": "LAB_REPORT",
+      "alertas_detectadas": []
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-05T05:16:02.816962",
+    "timestamp": "2026-07-05T05:16:02.816962",
+    "fuente": "LAB_ALDIMI",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054840_Q-pawankumarfinal_250427_1337@F.pdf_page_36.png",
+    "archivo_copia": null,
+    "tipo_documento": "LAB_REPORT",
+    "texto_crudo": "Vedanta Path Labs ul eeev\ne anta a a S Consultant Pathologist .\nSe ee a oe\nDice chore en ial Ne Wacisi2sten Ab e-reports Hi\n|\nas SN. 2150S\nPatient CIU: W528313 nn ee\nReferred Jj : Vedanta Hospital :\na —\n9.8 gm% 13.0 - 18.0\nTOTAL LEUCOCYTE COUNT 15000 /Cumm 4000 - 11000\nOIFFERENTIAL LEUCOCYTE COUNT\nNeutrophils 83 %, 45 -75\nLymphocytes 12 %. 20-45\nEosinophils 02 %. 01-06\nMonocytes 03 %. 02-08\nBasophils 00 %, 00-02\n&.5.P. (Westergren Method)\n-in First hour 66 mm 0-15\nPLATELET COUNT 2.16 Lakh/cumm = 1.5-4.0\nTOTAL R.B.C. COUNT 3.13 Million/Cu mm 4.2 - 5,4\nP.C.V./ Haematocrit Value 29.6 %, 36 - 48\nMCV 94.57 fl 77 - 93\nMCH 31.31 pg 27-32\nM CHC 33.11 g/dl 32 - 36\nBIOCHEMISTRY\nC.R.P. (Quantitative) 44.8 mg/dl < 6.0 mg/d!\nLIVER FUNCTION TEST\nSERUM BILIRUBIN\nTOTAL 1.0 mg/dL. 0,2-1.2\nDIRECT 0.4 mg/dL. up to 0.2\nINDIRECT 0.6 mg/dL. 0.2-0.6\nS.G,0.T. 102 U/L 0-45\nS.G.P.T, 108 U/L 0-49\nSERUM ALKALINE PHOSPHATASE 147 IU/L. 100-250\nTOTAL PROTEINS 6.2 Gm/dL. 6.0-8.3\nALBUMIN 3.2 Gm/dL.\n———— eS Ee\nNOT Patient clu: x*POSES",
+    "campos": {
+      "ciu": "W528313",
+      "pruebas": [],
+      "tipo": "LAB_REPORT",
+      "alertas_detectadas": []
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-05T05:16:10.398923",
+    "timestamp": "2026-07-05T05:16:10.398923",
+    "fuente": "LAB_ALDIMI",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054989_Q-112752REETADEVI_250427_1429@F.pdf_page_31.png",
+    "archivo_copia": null,
+    "tipo_documento": "LAB_REPORT",
+    "texto_crudo": "OF MEDICAL SCIENCES (P) LTD. mee ||\nE-mail : em@jjmedicalinstitute.com\nWebsite : www-imedicalinstitute.com\nNi AB\nH-2021-0773\n. Department of Pathology\n— fd a\nmz es es EE ee ee\n| | : 152031 Reporting Date [x 1.52.32 PM\nPatient ClU: WO56552 Consultant Doctor : Dr. VED PRAKASH RANJAN\nIP No. 111252\nURINE ROUTINE MICROSCOPY -\ninvestigation Result Units Biological Reference Interval\nPHYSICAL EXAMINATION\nQUANTITY 10 mi i\nCOLOUR P.YELLOW\nTRANSPARENCY S TURBID u,\nPH. 6.5 ; 4.6 -8.0\nBIOCHEMICAL EXAMINATION\nURINE ALBUMIN * NIL -,\nSUGAR . ++ —\nMICROSCOPIC EXAMINATION\nPUS CELLS 2-3 /apf 0-2\nEPITHELIAL CELLS 6-8 /hpf 0-2\nRBCS NIL /hpf 0-2 -\nCASTS NIL ,\nCRYSTALS NIL * -.\nOTHERS NIL Ae AL EDs -,\nASS <p Dr. VED p A\nHA KESHARWANI Ls a MBB RAKASH RANJAN\nOr. MEG aGY) A SURGE\nBBS, MO PA st f = wr SURGEON\nSULTANT PAT NO. 15182 a RECO. DIC Songs\nG. NO. a MS Ae JJIMS, BAHADURGa oe\ni JJIMS, BAHADURGARA * ope << AH? DURGARH\n’ AHANURS 4\n0\" END OF THE-REPORT “>\n-\nUser: SUNITA ro\nDelhi-Rohtak Road, Opp. Metro Pillar No. 792, Bahadurgarh, Haryana-124507 (India)\nbe -—s ss —. = es -—. 2s ‘Err ’",
+    "campos": {
+      "ciu": null,
+      "pruebas": [],
+      "tipo": "LAB_REPORT",
+      "alertas_detectadas": []
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-05T05:16:17.468621",
+    "timestamp": "2026-07-05T05:16:17.468621",
+    "fuente": "LAB_ALDIMI",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054989_Q-112752REETADEVI_250427_1429@F.pdf_page_37.png",
+    "archivo_copia": null,
+    "tipo_documento": "LAB_REPORT",
+    "texto_crudo": "OF MEDICAL SCIENCES (P) LTD. —_{ (6) os zi\nNABH,\n: H-2021-0773\nDepartment of Pathology\n= es =\nP| ee es es ee =\nHla : 152031 Reporting Date =: 9.34 PM\nPotient ClU: W804502 Consultant Doctor : Dr. VED PRAKASH RANJAN .\n» IP No. 1192752 ,\n“URINE KETONES\nInvestigation Result Units Biological Reference Interval\nURINE FOR KETONES\nKETONE BODIES NEGATIVE\n****s END OF THE REPORT *****\nK eDIGAl Step\nIS) Co. -\n: 1 = eo s\nESHARWAN 5( 2 ; PRAT\nDr. MEGHA'C patHoLosy) = |Z Ss Dr. VED PRARASH RANJAN\nEULTANT PATHOLOGIST D 3 Conte eeN. SURGERY!\nfe) : 462 * cY, NSLETANT SURGEO\n.NO. 15 ie x\nSE DURGARH Aeneas , REG. NO. DMC-59487\nJIMS, BA JJIMS, BAHADURGARH\n>\n* Delhi-Rohtak Road, Opp. Metro Pillar No. 792, Bahadurgarh, Haryana-124507 (India)\nUser: SUNITA Page 1 of 1\n'teueer BiB a: Teer Teer 2.",
+    "campos": {
+      "ciu": null,
+      "pruebas": [
+        {
+          "nombre": "Hla",
+          "valor": 152031.0,
+          "unidad": "Reporting",
+          "flag": "",
+          "referencia": ""
+        },
+        {
+          "nombre": "Fe)",
+          "valor": 462.0,
+          "unidad": "",
+          "flag": "",
+          "referencia": ""
+        }
+      ],
+      "tipo": "LAB_REPORT",
+      "alertas_detectadas": []
+    },
+    "advertencia": null
   }
 ]
