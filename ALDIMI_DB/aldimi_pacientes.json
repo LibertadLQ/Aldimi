@@ -1,6 +1,6 @@
 {
   "sesion": {
-    "ultima_actualizacion": "2026-07-05T03:51:22.862224",
+    "ultima_actualizacion": "2026-07-05T05:13:43.978646",
     "archivo": "aldimi_pacientes.json"
   },
   "pacientes": {
@@ -20,6 +20,11 @@
           "pruebas": [],
           "alertas_detectadas": [],
           "registrado_en": "2026-07-05T03:51:22.859643"
+        },
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:13:26.455901"
         }
       ],
       "alertas_clinicas": [],
@@ -53,16 +58,32 @@
             "alertas_detectadas": []
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:13:26.455901",
+          "timestamp": "2026-07-05T05:13:26.455901",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053434_Q-PREETI4837000111zon_250427_1314@F.pdf_page_42.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "/, OBCAR SUPER SPECIALITY HOSPITAL\n*) ! @\ney & TRAUMA CENTRE a\npp. Civil Hospital, Sonipat | Mob : in\nTransaction No. © 42418 |\nPatient ClU: W196188 a |\nWwigUNt mu, | : 4837\nDoctor Name : BT ian Reporting Date : Ey\nji\" _ 3 HAEMATOLOGY REPORT\n‘est Name: COMPYETE HAEMOGRAM\nCOMPONENT RESULTS UNITS REFF. RANGE\nHB (HAEMOGLOBIN\nHAEMOGLOBIN 87 grvdl 12-16\nLC\nTLC 19800 fcc.mm 4000--11000\nDL\nNEUTROPHILS 78 % 40-70\nLYMPHOCYTES 18 % 20-40\nMONOCYTE 2 % 2-8\nEOSINOPHILS 2 % 1-5\nBASHOPHILS 0 feumm oH\nRB\nRBC 3.50 millionicumm 35-5.5\nPCY\nPCV 346 % 36 - 48\nv\nMCV 786 fi 76-96\nMCH\nMCH 23.6 Pg 27-32\nMCHC 28.4 gmid! 30-35\nPLATELATE COUNT\nPLATELATE COUNT 1.95 laciounm 15-45\nROW\nIRD 14.6 % 11--16\nPCT\nPCT 0.25 % 0.08-1\nMPY =\nMPV 4 HGSP,, 86 fl 6-10\nD ‘ VsS PON\nio/ 7 \\ aN Dr. SWETA KUMARI Dr. GURKEEN GILL\nBlo! - }3h M.818-85M.S es EROS\n\\c\\ Sa J5i ‘ MBBS,\n> a WAYS (Oo Gynar Regd. No, OM /R/21938\n[Se Regd. HN 018373\nCBC, Thyroid, Kidney Function Test, Liver Function Test, Lipid Profile, Blood Sugar, LH, FSH, Prolactin, B-HCG, TORCH, CA-125, CEA, PSA\nUltrasound, H.S.6. IVP, Barium Studies, Digital X-Ray, Multi Stice Spiral CT Scan, E.C.G.,\nPRE.G.-21 Channets EMG NCV VEP B.E.RA. PFT & Comprehensive Health Check-ups etc.\n| ee\n3D/4D Ultrasound, Color Doppler, CT-Scan, Digital X-Ray & Computerised Lab\nNOT FOR MEDICO LEGAL PURPOSE wat te Giaa 24 de ote ¥i",
+          "campos": {
+            "ciu": null,
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T03:11:32.785160",
-      "actualizado_en": "2026-07-05T03:51:22.859643"
+      "actualizado_en": "2026-07-05T05:13:26.455901"
     },
     "W499485": {
       "ciu": "W499485",
       "datos_personales": {
         "ciu": "W499485",
-        "nombres": "NO_DETECTADO",
+        "nombres": "MELANIE",
         "apellidos": "FIGUEROA",
         "fecha_nacimiento": "07/14/1992"
       },
@@ -84,10 +105,26 @@
             "fecha_nacimiento": "07/14/1992"
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T04:49:48.058032",
+          "timestamp": "2026-07-05T04:49:48.058032",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0044172.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Ik\nsap.no. W499485 4b Exp 11/08/2027\n3 pos 07/14/1992\n1 FIGUEROA\n2 MELANIE\n[4 3 139 1ST STREET\nSOUTH CHARLESTON, WV 25309\n~~\n—~ Ld 9 Class C\n9aEnd NONE\nww Ln 12 Rest. B\nLifiqu 15Sex F 16 Hgt 6'-02\" 4alss 11/08/2022\nJ 18 Eyes BRO 17 Wgt 119 Ib\n5 DD 9000000000000842 07/14/92",
+          "campos": {
+            "ciu": "W499485",
+            "nombres": "MELANIE",
+            "apellidos": "FIGUEROA",
+            "fecha_nacimiento": "07/14/1992"
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T03:12:04.728980",
-      "actualizado_en": "2026-07-05T03:12:04.725750"
+      "actualizado_en": "2026-07-05T04:49:48.058032"
     },
     "W030305": {
       "ciu": "W030305",
@@ -110,6 +147,11 @@
           ],
           "alertas_detectadas": [],
           "registrado_en": "2026-07-05T03:12:29.166591"
+        },
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:13:00.380295"
         }
       ],
       "alertas_clinicas": [],
@@ -152,14 +194,51 @@
             "fecha_nacimiento": "03/30/1997"
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T04:49:56.002208",
+          "timestamp": "2026-07-05T04:49:56.002208",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0044457.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA’\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W030305 4b Exp 06/02/2025\n3 pos 03/30/1997\n1 CAMPBELL\n2 AARON\ng 214TH STREET\nKENOVA, WV 25530\n9 Class C\n9aEnd NONE\notal - 12 Restr B\nbait am issex M tent 7-01\" 4alss 06/02/2020\n18 Eyes BRO 17 Wgt 188 lb\n5 DD 0000000000003019 03/30/97",
+          "campos": {
+            "ciu": "W030305",
+            "nombres": "AARON",
+            "apellidos": "CAMPBELL",
+            "fecha_nacimiento": "03/30/1997"
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:13:00.380295",
+          "timestamp": "2026-07-05T05:13:00.380295",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053408_Q-SATISHKUMAR19.04.20250001compressed_250427_1052@F.pdf_page_37.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "Y Jhajjar Road, Bahadurgarh\nhe Stitt To Peat ——t\nThe Spirit To Care\nPatient CIU: W030305 154 Date [a\nOe TOU te\nHA Ss SWASTIK HOSPITAL | | |\nHAEMATOLOGY\nHB AIC 5.65 %\nEXPECTED VALUES :-\nMetabolicaly healthy patients = 48-60 % HbAIC\nGood Control = 6.0-6.8 % HbAIC\nFair Control = 6.8-8.2 % HbAIC\nPoor Control = >8.2 % HbAIC\nREMARKS:-\n'n vitro quantitative determination of HbAIC in whole blood is utilized in long term monitoring of glycemia .\n'he HbAIC level correlates with the mean glucose concentration prevailing in the course of the patient's\nrecent history (approx - 6-8 weeks) and therefore provides much more reliable information for glycemia\nmonitoring than do determinations of blood glucose or urinary glucose.\n\\t is recommended that the determination of HbAIC be performed at intervals of 4-6 weeksduring Diabetes\nMellitus therapy\nResults of HBAIC should be assessed in conjunction with the patient's medical history, clinical\nexaminations\nand other findings\n1\n|\n*“** End Of Report ****\nGs) Surgzon BCe Fa\nTECHNIGIANE” — |\nDMC/R/10211\ne 3D/4D Ultrasound\nOn Panel : oo @ Color Doppler\ne Haryana Government All Lab Test, ICU & Ambulance Facility 24x7 Hrs. AVAILABLE ierricicar\n© Delhi Government ass\n® Digital X-Ray\n* Delhi Jal Board NOT FOR MEDICO LEGAL PURPOSE 5. tbsnerRee CIE\n© All TPA & Insurance",
+          "campos": {
+            "ciu": "W030305",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T03:12:29.171297",
-      "actualizado_en": "2026-07-05T03:50:46.177587"
+      "actualizado_en": "2026-07-05T05:13:00.380295"
     },
     "W668239": {
       "ciu": "W668239",
-      "datos_personales": {},
+      "datos_personales": {
+        "ciu": "W668239",
+        "nombres": "LIANG",
+        "apellidos": "MIYAMOTO",
+        "fecha_nacimiento": "12/16/1997"
+      },
       "informes_laboratorio": [
         {
           "pruebas": [],
@@ -170,6 +249,11 @@
           "pruebas": [],
           "alertas_detectadas": [],
           "registrado_en": "2026-07-05T03:50:16.539947"
+        },
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:13:08.384398"
         }
       ],
       "alertas_clinicas": [],
@@ -203,10 +287,1896 @@
             "alertas_detectadas": []
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T04:49:59.117454",
+          "timestamp": "2026-07-05T04:49:59.117454",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0044557.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W668239 4b Exp 08/07/2025\n3 pos 12/16/1997\n1 MIYAMOTO\n2 LIANG\nsg 6 SCHOOL STREET\nSPENCER, WV 25276\n9 ClassA\n9aEnd NONE\n12 Restr B\nhu 15Sex M 16 Hgt 6'-09\" 4aiss 08/07/2020\nvie 18 Eyes BRO. 17 Wat 161 Ib\n5 DD 9000000000001249 12/16/97",
+          "campos": {
+            "ciu": "W668239",
+            "nombres": "LIANG",
+            "apellidos": "MIYAMOTO",
+            "fecha_nacimiento": "12/16/1997"
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:13:08.384398",
+          "timestamp": "2026-07-05T05:13:08.384398",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053434_Q-PREETI4837000111zon_250427_1314@F.pdf_page_35.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "®) OSCAR SUPER SPECIALITY HOSPITAL\npp. Civil Hospital, Sonipat | Mob : as\nTransactidin No. : 42325 i |\nPatient CIU: W668239 Date iz\nWiUUNE Ivy. ‘ P| : 4837\nDoctor Name : A as: Reporting Date : i\nnt eee\nest Nanje: URINE FOR PREGNANCY\nURINE FQR PREGNANCY RESULTS UNITS REFF.RANGE\nSS OE\n***END OF REPORT* Regd. No. 1938\nf wt fh Led} : ARI\n' VG fi Ey. T, M\na ENN a ees nee)\nsont SS Regd. HN O1S~ \">\nbe 4.\nCBC, Thyroid, Kidney F(nction Test, Liver Function Test, Lipid Profile, Blood Sugar, LH, FSH, Prolactin, B-HCG, TORCH, CA-125, CEA, PSA\nMien... eee\nHE .G.-21 Channels EMG NCV VEP 8.E.RA. PFT & Comprehensive Health Check-ups etc.\n3D/4D Ultrasound, Color Doppler, CT-Scan, Digital X-Ray & Computerised Lab\nNOT FOR MEDICO LEGAL PURPOSE at te gira 24 He soe FI",
+          "campos": {
+            "ciu": "W668239",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T03:28:25.343389",
-      "actualizado_en": "2026-07-05T03:50:16.539947"
+      "actualizado_en": "2026-07-05T05:13:08.384398"
+    },
+    "W290166": {
+      "ciu": "W290166",
+      "datos_personales": {
+        "ciu": "W290166",
+        "nombres": "ANDREW",
+        "apellidos": "MILLER",
+        "fecha_nacimiento": "08/22/1983"
+      },
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:12:44.562644"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:49:50.756045",
+          "timestamp": "2026-07-05T04:49:50.756045",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0044206.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W290166 4b Exp 07/28/2029\n3 pos 08/22/1983\n1 MILLER\n2 ANDREW\ng 2377 2ND STREET\nBECKLEY, WV 25801\n9 Class C\n9aEnd NONE\n- 12 Rest. B\nLome 15Sex M 16 Hgt 5-01\" 4alss 07/28/2024\n18 Eyes BRO 17 Wgt 101 Ib\n5 DD 0000000000002893 08/22/83",
+          "campos": {
+            "ciu": "W290166",
+            "nombres": "ANDREW",
+            "apellidos": "MILLER",
+            "fecha_nacimiento": "08/22/1983"
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:12:44.562644",
+          "timestamp": "2026-07-05T05:12:44.562644",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053405_Q-RANJANADEVI21.04.20250001compressed_250427_1041@F.pdf_page_46.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "7 Jhajjar Road, Bahadurgarh -\nThe Spirit To Care\nee\nPatient CIU: W290166 10 Date\nle\nMS SWASTIK HOSPITAL | |\nHAEMATOLOGY\nCOMPLETE BLOOD COUNT (CBC)\nHAEMOGLOBIN (Hb) 11.2 gm/dl 11.5- 16.5\n}OTAL LEUCOCYTE COUNT (TLC) 16,800 /cumm 4000 - 11000\nDIFFERENTIAL LEUCOCYTE COUNT (DLC) ,\nNEUTROPHIL 77 % 40-75\nLYMPHOCYTE 20 % 20 - 45\nEOSINOPHIL 01 % 01 - 06\niVONOCYTE 02 % 02-10\nBASOPHIL 00 % 0-0\nPLATELET COUNT 0.82 Lakh/cmm 1.50 - 4.50\nR BC COUNT 3.90 Millions/emm 3.8°-.4.8\nPCV / HAEMATOCRIT 33.6 % 35-45\nMCV 85.0 fl. 80 - 100\nMCH 27.6 Picogram 27.0 - 31.0\nMCHC 33.3 gm/dl 30 - 35\ni je “** End Of Report ****\n| 4 hs 3 fies Dr. Yoo ia i - a ibd orn ie\nTECHNICIAN HE GUNJAN NAIN\n| PE\nDMC/R/10211\n1 e 3D/4D Ultrasound\nOn Panel ; e Color Doppler\n© Dethi Government © Digital X-Ray\n© Delhi Jal Board NOT FOR MEDICO LEGAL PURPOSE © Computerised Lab\n| © All TPA & Insurance",
+          "campos": {
+            "ciu": "W290166",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:49:50.757861",
+      "actualizado_en": "2026-07-05T05:12:44.562644"
+    },
+    "W718295": {
+      "ciu": "W718295",
+      "datos_personales": {
+        "ciu": "W718295",
+        "nombres": "FELIX",
+        "apellidos": "FUENTES",
+        "fecha_nacimiento": "07/17/1998"
+      },
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:12:52.288936"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:49:53.439083",
+          "timestamp": "2026-07-05T04:49:53.439083",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0044357.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W718295 4b Exp 12/31/2025\n3 pos 07/17/1998\n1 FUENTES\n2 FELIX\nga 14 CHARLES STREET\nWELLSBURG, WV 26070\n9 Class B\n9aEnd NONE\n12 Restr B\n6) 15Sex M 16 Hgt 7'-01\" 4alss 12/31/2020\nMoe 18 Eyes BRO 17 wat 166 Ib\n5 BD 0000000000004365 07/17/98",
+          "campos": {
+            "ciu": "W718295",
+            "nombres": "FELIX",
+            "apellidos": "FUENTES",
+            "fecha_nacimiento": "07/17/1998"
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:12:52.288936",
+          "timestamp": "2026-07-05T05:12:52.288936",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053408_Q-SATISHKUMAR19.04.20250001compressed_250427_1052@F.pdf_page_30.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "Y Jhajjar Road, Bahadurgarh A\nLg. soeongiona P|\n\nPatient CIU: W718295 154 Date <x |\n\naS ee\n\nHM SWASTIK HOSPITAL TT\n\na || | a\n\nCHS\n\nHAEMATOLOGY\n\nCOMPLETE BLOOD COUNT (CBC)\n\nHAEMOGLOBIN (Hb) 13.4 gm/dl 13.5 - 18.0\n\nTOTAL LEUCOCYTE COUNT (TLC) 20,400 /cumm 4000 - 11000\n\nDIFFERENTIAL LEUCOCYTE COUNT (DLC)\n\nNEUTROPHIL 77 % 40-75\n\nLYMPHOCYTE 18 % 20-45\n\nEOSINOPHIL 02 % 01-06 =\n\nMONOCYTE 03 % 02-10\n\n| BASOPHIL 00 % 0-0\n\nPLATELET COUNT 2.55 Lakh/cmm 1.50- 4.50\n\nRBC COUNT 4.34 Millions/emm 4.5 -5.5\n\nPCV / HAEMATOCRIT 40.2 % 40 - 54\n\nMCV 92.63 fl. 80 - 100\n\nMCH 30.88 Picogram 27.0 - 31.0\n\nMCHC 33.3 gm/d! 30-35\n\nKIDNEY FUNCTION TEST (RFT)\n\nFae No Me en Ly RY oa\nq ‘ j Page 1\n| e 3D/4D Ultrasound\nOn Panel | = @ Color Doppler\n|e Haryana Government All Lab Test, ICU & Ambulance Facility 24x7 Hrs, AVAILABLE RE\n|e Delhi Government Sint\nDigital X-Ra\n\n| Delhi Jal Board NOT FOR MEDICO LEGAL PURPOSE % te ete\nr All TPA\\& Insurance",
+          "campos": {
+            "ciu": "W718295",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:49:53.442212",
+      "actualizado_en": "2026-07-05T05:12:52.288936"
+    },
+    "W533568": {
+      "ciu": "W533568",
+      "datos_personales": {
+        "ciu": "W533568",
+        "nombres": "IESHA",
+        "apellidos": "PARKER",
+        "fecha_nacimiento": "11/29/2002"
+      },
+      "informes_laboratorio": [
+        {
+          "pruebas": [
+            {
+              "nombre": "Insufficiegcy",
+              "valor": 20.0,
+              "unidad": "",
+              "flag": "",
+              "referencia": ""
+            },
+            {
+              "nombre": "Sufficiendy",
+              "valor": 30.0,
+              "unidad": "",
+              "flag": "",
+              "referencia": ""
+            }
+          ],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:13:17.898090"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:50:01.850685",
+          "timestamp": "2026-07-05T04:50:01.850685",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0044884.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\n\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W533568 4b Exp 05/01/2028\n3 pos 11/29/2002\n1 PARKER\n2 IESHA\n8 99 VIRGINIA AVENUE\n\nPETERSBURG, WV 26847\n9aEnd NONE\n= 12 Restr B\nLye kh 15 Sex F 16 Hgt 5'-07\" 4aiss 05/01/2023\n\n18 Eyes BRO 17 Wgt 146 Ib\n5 DD 9000000000000450 11/29/02",
+          "campos": {
+            "ciu": "W533568",
+            "nombres": "IESHA",
+            "apellidos": "PARKER",
+            "fecha_nacimiento": "11/29/2002"
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:13:17.898090",
+          "timestamp": "2026-07-05T05:13:17.898090",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053434_Q-PREETI4837000111zon_250427_1314@F.pdf_page_38.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "(>, OSCAR SUPER SPECIALITY\n+ 03 LITY HOSPITAL\n| es @\nSE & TRAUMA CENTRE eae\npp. Civil Hospital, Sonipat | Mob : I As\nTransactidn No. +: 42325\nPatient CIU: W533568 ones I a\nmiuune ng. — Fe : 4837\nDoctor Name : ER Kumari Reporting Date;\noll BIOCHEMISTRY REPORT\nI ik eS\nICOMPONENI RESULTS UNITS REEF. RANGE\nVITAMIN 25-OH\nVITAMIN B3(25-OH) 19.6 ng/ml =. 20--100\nBiologicalRef Interval\nDeficiency ; Below 20 ng/ml\nInsufficiegcy : 20.0 - 30.0 ng/ml\nSufficiendy :30.0- 100.0 ng/ml\nToxicity : Above 100.0 ng/ml!\nCOMMENTES :-\n1. Cholicagciferol (vitamin D3) is synthesized in the skin from 7 dehydrocholestrol in\nresponse fo sunlight. Erogocalciferol ( vitamin D2) comes essentilly from diet and\nsupplements. The assay mesures both 02 (Ergocalciferol) and D3 (Cholecatciferol)\nmetaboliths of vitamin D.\nVitamin Ojstatus is best determined by measurement of 25 hydroxy Vitamin D, as it is\nthe majocirculating from and has longer half life (2-3 weeks) than 1,25 Dihydroxy\nvitamin DES-8 hrs).\n2. Both cHplicalciferol and Ergocalciferol are converted in liver to 25 OH Vitamin D.\n3.25 OH \\§tamin D is considered the best indicator of Vitamin D nutritional status.\n4. Vitarmid D toxicity is recognized, but is a rere occurance.\n5.VitamingD level shows seasonal varition, with values being 40-50% lower in winter\nthan in summer.\nDecreaseg Levels:\n* Inadequpte exposure to sunlight.\n*Dietary deficiency.\n*Vitamin — malabsorption. CURL EN GILL\n“Severe Hepatocellular disease, R S,M thology)\n‘ga. No. 21938\n' 7 *****END OF REPORT*****\nAaya N\n4 Tae | Dr. SWETA KUMARI\nifs 72 Va M.B-BEeAS\n[SSE (Obs. & Bynae’\n| Noy Regd. HN 012275\nWoae\nCBC, Thyroid, Kidney F n¢tion Test, Liver Function Test, Lipid Profile, Blood Sugar, LH, FSH, Prolactin, B-HCG, TORCH, CA-125, CEA, PSA\nDoppler Ultrasound, H.S.6. IVP, Barium Studies, Digital X-Ray, Multi Slice Spiral CT Scan, E.C.6.,\n£.6.-21 Channels EMG NCV VEP B.E.RA. PFT & Comprehensive Health Check-ups etc.\nSS\n3D/4D Ultra sound, Color Doppler, CT-Scan, Digital X-Ray & Computerised Lab\nNOT FC R MEDICO LEGAL PURPOSE wat tee gfaar 24 oe soar FI",
+          "campos": {
+            "ciu": "W533568",
+            "pruebas": [
+              {
+                "nombre": "Insufficiegcy",
+                "valor": 20.0,
+                "unidad": "",
+                "flag": "",
+                "referencia": ""
+              },
+              {
+                "nombre": "Sufficiendy",
+                "valor": 30.0,
+                "unidad": "",
+                "flag": "",
+                "referencia": ""
+              }
+            ],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:50:01.853381",
+      "actualizado_en": "2026-07-05T05:13:17.898090"
+    },
+    "W196188": {
+      "ciu": "W196188",
+      "datos_personales": {
+        "ciu": "W196188",
+        "nombres": "STEPHEN",
+        "apellidos": "SCOTT",
+        "fecha_nacimiento": "05/15/1967"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:50:04.980227",
+          "timestamp": "2026-07-05T04:50:04.980227",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0045113.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. It\nsap.no.W196188 4b Exp 01/01/2028\n3 vos 05/15/1967\n1 SCOTT\n2 STEPHEN\n3 7753 COURT STREET\nSUMMERSVILLE, WV 26651\n9 Class B\n(“ 9aEnd NONE\n~ 12 Rest. B\n_Lescok 15Sex M 16 Hgt 5'-08\" aalss 01/01/2023\n18 Eyes BRO 17 Wgt 106 Ib\n5 DD 0000000000000330 05/1 5/67",
+          "campos": {
+            "ciu": "W196188",
+            "nombres": "STEPHEN",
+            "apellidos": "SCOTT",
+            "fecha_nacimiento": "05/15/1967"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:50:04.982950",
+      "actualizado_en": "2026-07-05T04:50:04.980227"
+    },
+    "W278941": {
+      "ciu": "W278941",
+      "datos_personales": {
+        "ciu": "W278941",
+        "nombres": "ANDREW",
+        "apellidos": "TRUMP",
+        "fecha_nacimiento": "06/26/1997"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:50:07.121167",
+          "timestamp": "2026-07-05T04:50:07.121167",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0045204.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. It\nsap.no. W278941 4b Exp 10/27/2027\n3 pos 06/26/1997\n1 TRUMP\n2 ANDREW\n3 5986 MONTROSE DRIVE\nSOUTH CHARLESTON, WV 25309\n9 Class C\n9aEnd NONE\n+ 12 Rest. B\nTatrum 15Sex M 16 gt - 5-05\" 4aiss 10/27/2022\n18 Eyes BRO 17 Wgt 228 Ib\n5 DD 0000000000003219 06/26/97",
+          "campos": {
+            "ciu": "W278941",
+            "nombres": "ANDREW",
+            "apellidos": "TRUMP",
+            "fecha_nacimiento": "06/26/1997"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:50:07.123266",
+      "actualizado_en": "2026-07-05T04:50:07.121167"
+    },
+    "W348963": {
+      "ciu": "W348963",
+      "datos_personales": {
+        "ciu": "W348963",
+        "nombres": "MARK",
+        "apellidos": "BOSH",
+        "fecha_nacimiento": "05/24/2000"
+      },
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:13:43.969370"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:50:09.192624",
+          "timestamp": "2026-07-05T04:50:09.192624",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0045438.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\n\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W348963 4b Exp 01/13/2026\n3 pos 05/24/2000\n1 BOSH\n2 MARK\ns 67 BRIDGE STREET\n\nGRAFTON, WV 26354\n9 ClassA\n9aEnd NONE\nee M 01/13/2021\nx M 5-04\" 4alss\nwabeogh ‘e Eyes BRO 7 wet 127 Ib\n\n5 DD 0000000000000065 05/24/00",
+          "campos": {
+            "ciu": "W348963",
+            "nombres": "MARK",
+            "apellidos": "BOSH",
+            "fecha_nacimiento": "05/24/2000"
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:13:43.969370",
+          "timestamp": "2026-07-05T05:13:43.969370",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053454_Q-11zonmergedFiles2411zon_250427_1324@F.pdf_page_36.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "For tame\n(a, OSCAR SUPER SPECIALITY HOSPITAL\n{ \\¥?\nFY & TRAUMA CENTRE ~\nDpp. Civil Hospital, Sonipat | Mob :\nTransaction No. : 42304 7\nPatient CIU: W348963 Date :\ndiel a | > 4839\nDoctor Name : DR.RAHUL Reporting Date : [x\nTs SEROLOGY & IMMUNOGY REPORT\nTest Name: ANTI HCV\nCOMPONENT\nANTI Hq RESULTS UNITS REFF.RANGE\nThis is @ 4th Generation assay,utilizing s combination of modified HCV antigens from the core,NS3,NS4\nand NSS r@jons of Hepatitis Cvirus. This is only a screening test. ALL reactive samples should be\nconfirmed py supplemental assays like RIBAHCV antibody is ypically not dedcted until approximately\n14 weeks #ter infection,\nA non-reagive result does not exclude the possibility of exposure to or infection with HCV. The presence\nlof anti-HC¥ antibody does not imply a Hepatitis C infection but may be indicative of recent and / or\npast infection by HCV.\nDr. GUBEZEN GILL\nMBBS VET enthology)\nRegd. Saran akagist\n*****END OF REPORT*****\nee ws Dr-RAHUL\nAe, Lz) >\ntae <M @ES, MS (Gen. Surgery)\nFc & ot onSpitags Gerr. & Laproscopic Surgeon\na. lee /3E Regt. No.- DMC 91153\na\\s § tr= ja\na 473\nL 2 ree\n>\nCBC, Thyroid; Kidney Function Tes#, Liver Function Test, Lipid Profile, Blood Sugar, LH, FSH, Prolactin, B-HCG, TORCH, CA-125, CEA, PSA\n30/40 Colfr Doppler Ultrasound, H.$.G. IVP, Barium Studies, Digital X-Ray, Multi Slice Spiral CT Scan, E.C.G.,\n.E.6.-21 Channels EMG NCV VEP B.E.RA. PFT & Comprehensive Health Check-ups etc.\n3D/4D Ultrasound, Color Doppler, CT-Scan, Digital X-Ray & Computerised Lab\nNOT FOR MEDICO LEGAL PURPOSE aat ae gira 24 de soe El",
+          "campos": {
+            "ciu": "W348963",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:50:09.195772",
+      "actualizado_en": "2026-07-05T05:13:43.969370"
+    },
+    "W374517": {
+      "ciu": "W374517",
+      "datos_personales": {
+        "ciu": "W374517",
+        "nombres": "ELLIE",
+        "apellidos": "ROBINSON",
+        "fecha_nacimiento": "09/26/1992"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:50:11.345923",
+          "timestamp": "2026-07-05T04:50:11.345923",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0045589.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsao.no.W374517 4b Exp 08/10/2025\n3 pos 09/26/1992\n1 ROBINSON\n2 ELLIE\nsg 5278 BENONI AVENUE\nGRAFTON, WV 26354\n9 Class C\n9aEnd NONE\n~ 12 Restr B\nevobin 15 Sex F 16 Hgt 5'-04\" 4alss 08/10/2020\n18 Eyes BRO 17 Wgt 126 Ib\n5 DD 0000000000002955 09/26/92",
+          "campos": {
+            "ciu": "W374517",
+            "nombres": "ELLIE",
+            "apellidos": "ROBINSON",
+            "fecha_nacimiento": "09/26/1992"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:50:11.348053",
+      "actualizado_en": "2026-07-05T04:50:11.345923"
+    },
+    "W806358": {
+      "ciu": "W806358",
+      "datos_personales": {
+        "ciu": "W806358",
+        "nombres": "ERIC",
+        "apellidos": "GARCIA",
+        "fecha_nacimiento": "01/07/1968"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:50:13.177987",
+          "timestamp": "2026-07-05T04:50:13.177987",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0045677.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\n\ncovernor: JAMES C. JUSTICE. Il\nsao.no. W806358 4b Exp 04/14/2028\n3 pos 01/07/1968\n1 GARCIA\n2 ERIC\ngs 8601 WV-41\n\nSUMMERSVILLE, WV 26651\n9 ClassA\n9aEnd NONE\nee M 04/14/2023\nx M 5-07\" 4alss\nLeate te Eyes BRO 7 Wot 116 Ib\n\n5 DD 0000000000001693 01/07/68",
+          "campos": {
+            "ciu": "W806358",
+            "nombres": "ERIC",
+            "apellidos": "GARCIA",
+            "fecha_nacimiento": "01/07/1968"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:50:13.180081",
+      "actualizado_en": "2026-07-05T04:50:13.177987"
+    },
+    "W967038": {
+      "ciu": "W967038",
+      "datos_personales": {
+        "ciu": "W967038",
+        "nombres": "VALENTINA",
+        "apellidos": "ESPINOZA",
+        "fecha_nacimiento": "08/22/1989"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:50:14.919009",
+          "timestamp": "2026-07-05T04:50:14.919009",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0045823.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W967038 4b Exp 07/21/2026\n3 pos 08/22/1989\n1 ESPINOZA\n2 VALENTINA\nsg 118 4TH AVENUE\nHUNTINGTON, WV 25701\n9 Class C\n9aEnd NONE\n12 Rest. B\nWop 15Sex F 16 Hgt 6'-07\" aaiss 07/21/2021\n18 Eyes BRO 17 Wgt 165 Ib\n5 DD 0000000000005375 08/22/89",
+          "campos": {
+            "ciu": "W967038",
+            "nombres": "VALENTINA",
+            "apellidos": "ESPINOZA",
+            "fecha_nacimiento": "08/22/1989"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:50:14.920898",
+      "actualizado_en": "2026-07-05T04:50:14.919009"
+    },
+    "W112474": {
+      "ciu": "W112474",
+      "datos_personales": {
+        "ciu": "W112474",
+        "nombres": "HECTOR",
+        "apellidos": "FLORES",
+        "fecha_nacimiento": "08/01/1997"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:50:16.869770",
+          "timestamp": "2026-07-05T04:50:16.869770",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046068.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\n\ncovernor: JAMES C. JUSTICE. Il\nsap.no.W112474 4b Exp 12/17/2025\n3 pos 08/01/1997\n1 FLORES\n2 HECTOR\ngs 687 NEVILLE STREET\n\nBECKLEY, WV 25801\n9 ClassA\n9aEnd NONE\n12 Restr B\nLh_pl-  — issex M tng 7-08\" —4alss: 12/17/2020\n\n18 Eyes BRO 17 Wgt 194 lb\n5 DD 0000000000001894 08/01/97",
+          "campos": {
+            "ciu": "W112474",
+            "nombres": "HECTOR",
+            "apellidos": "FLORES",
+            "fecha_nacimiento": "08/01/1997"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:50:16.872150",
+      "actualizado_en": "2026-07-05T04:50:16.869770"
+    },
+    "W972138": {
+      "ciu": "W972138",
+      "datos_personales": {
+        "ciu": "W972138",
+        "nombres": "ALEX",
+        "apellidos": "CASTILLO",
+        "fecha_nacimiento": "09/20/1988"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:50:19.149286",
+          "timestamp": "2026-07-05T04:50:19.149286",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046078.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Ik\nsan.no.W972138 4b Exp 10/12/2029\n6 3 pos 09/20/1988\n1 CASTILLO\n2 ALEX\n3 5227 MILLS AVENUE\nBECKLEY, WV 25801\n9 Class B\n\\ ‘ 9aEnd NONE\n- 12 Rest B\nLoge 15Sex M 16 Hgt 5-06\" 4alss 10/12/2024\n“— 18 Eyes BRO. 17 Wgt 189 Ib\n5 DD 0000000000001423 09/20/88",
+          "campos": {
+            "ciu": "W972138",
+            "nombres": "ALEX",
+            "apellidos": "CASTILLO",
+            "fecha_nacimiento": "09/20/1988"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:50:19.152018",
+      "actualizado_en": "2026-07-05T04:50:19.149286"
+    },
+    "W697654": {
+      "ciu": "W697654",
+      "datos_personales": {
+        "ciu": "W697654",
+        "nombres": "QUAN",
+        "apellidos": "XU",
+        "fecha_nacimiento": "02/24/2002"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:50:21.723364",
+          "timestamp": "2026-07-05T04:50:21.723364",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046206.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\n\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W697654 4b Exp 03/11/2029\n3 pos 02/24/2002\n1 XU\n2 QUAN\nsg 118 PRINCETON AVENUE\n\nBLUEFIELD, WV 24701\n9 Class C\n9aEnd NONE\noe M 03/11/2024\nx M 5-08\" 4alss\nos ‘8 Eyes BRO 7 wat 173 Ib\n\n5 DD 0000000000002689 02/24/02",
+          "campos": {
+            "ciu": "W697654",
+            "nombres": "QUAN",
+            "apellidos": "XU",
+            "fecha_nacimiento": "02/24/2002"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:50:21.726280",
+      "actualizado_en": "2026-07-05T04:50:21.723364"
+    },
+    "W169099": {
+      "ciu": "W169099",
+      "datos_personales": {
+        "ciu": "W169099",
+        "nombres": "CAMILA",
+        "apellidos": "GONZALEZ",
+        "fecha_nacimiento": "02/15/1994"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:50:24.040691",
+          "timestamp": "2026-07-05T04:50:24.040691",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046219.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W169099 4b Exp 05/24/2028\n3 pos 02/15/1994\n1 GONZALEZ\n2 CAMILA\n8 498 ROSEMAR ROAD\nVIENNA, WV 26105\n9 Class B\n9aEnd NONE\n12 Rest B\n15Sex F 16 Hgt 6-11\" 4alss 05/24/2023\nd gov 18 Eyes BRO 17 wot 128 Ib\n5 DD c000000000005084 02/15/94",
+          "campos": {
+            "ciu": "W169099",
+            "nombres": "CAMILA",
+            "apellidos": "GONZALEZ",
+            "fecha_nacimiento": "02/15/1994"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:50:24.043177",
+      "actualizado_en": "2026-07-05T04:50:24.040691"
+    },
+    "W557198": {
+      "ciu": "W557198",
+      "datos_personales": {
+        "ciu": "W557198",
+        "nombres": "LAYLA",
+        "apellidos": "CLARK",
+        "fecha_nacimiento": "01/19/1991"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:50:26.511060",
+          "timestamp": "2026-07-05T04:50:26.511060",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046598.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\n\ncovernor: JAMES C. JUSTICE. Il\nsao.no.W557198 4b Exp 08/11/2026\n3 pos 01/19/1991\n1 CLARK\n2 LAYLA\n3 91 WEBSTER ROAD\n\nSUMMERSVILLE, WV 26651\n9 ClassB\n9aEnd NONE\n12 Restr B\nlclarh 15 Sex F 16 Hgt 6'-02\" 4aiss 08/11/2021\n\n18 Eyes GRE 17 Wgt 114 Ib\n5 DD 0000000000001520 0 1 /1 9/91",
+          "campos": {
+            "ciu": "W557198",
+            "nombres": "LAYLA",
+            "apellidos": "CLARK",
+            "fecha_nacimiento": "01/19/1991"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:50:26.514543",
+      "actualizado_en": "2026-07-05T04:50:26.511060"
+    },
+    "W702846": {
+      "ciu": "W702846",
+      "datos_personales": {
+        "ciu": "W702846",
+        "nombres": "KENJI",
+        "apellidos": "PARK",
+        "fecha_nacimiento": "07/08/1999"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:50:28.920473",
+          "timestamp": "2026-07-05T04:50:28.920473",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046624.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W702846 4b Exp 11/19/2027\n3 pos 07/08/1999\n1 PARK\n2 KENJI\nsg 547 FIRST STREET\nKEYSER, WV 26726\n9 Class C\n9aEnd NONE\n= 12 Rest B\nLeoack 15Sex M 16 Hgt 5'-08\" aalss 11/19/2022\nf 18 Eyes BRO 17 Wot 196 Ib\n5 BD 0000000000005247 07/08/99",
+          "campos": {
+            "ciu": "W702846",
+            "nombres": "KENJI",
+            "apellidos": "PARK",
+            "fecha_nacimiento": "07/08/1999"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:50:28.924197",
+      "actualizado_en": "2026-07-05T04:50:28.920473"
+    },
+    "W574383": {
+      "ciu": "W574383",
+      "datos_personales": {
+        "ciu": "W574383",
+        "nombres": "ANJALI",
+        "apellidos": "CHOI",
+        "fecha_nacimiento": "04/08/2002"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:50:31.606069",
+          "timestamp": "2026-07-05T04:50:31.606069",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046654.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsao.no. W574383 4b Exp 01/21/2028\n3 pos 04/08/2002\n1 CHOI\n2 ANJALI\nsg 8208 PARK AVENUE\nNITRO, WV 25143\n9 Class C\n9aEnd NONE\n_ 12 Restr B\nDachei 15Sex F 16 Hgt 5'-08\" aalss 01/21/2023\n18 Eyes BRO 17 Wgt 100 Ib\n5 DD 0000000000004742 04/08/02",
+          "campos": {
+            "ciu": "W574383",
+            "nombres": "ANJALI",
+            "apellidos": "CHOI",
+            "fecha_nacimiento": "04/08/2002"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:50:31.609733",
+      "actualizado_en": "2026-07-05T04:50:31.606069"
+    },
+    "W754518": {
+      "ciu": "W754518",
+      "datos_personales": {
+        "ciu": "W754518",
+        "nombres": "GENESIS",
+        "apellidos": "DIAZ",
+        "fecha_nacimiento": "06/09/1995"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:50:34.422320",
+          "timestamp": "2026-07-05T04:50:34.422320",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046720.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsao.no.W754518 4b Exp 12/05/2028\n3 pos 06/09/1995\n1 DIAZ\n2 GENESIS\ng 22 HIGHLAND DRIVE\nST. ALBANS, WV 25177\n9 Class C\n“. 9aEnd NONE\neee 12/05/2023\nqekin x F 6-03\" 4alss\n‘e Eyes BRO 7 wet 127 Ib\n5 DD 0000000000001291 06/09/95",
+          "campos": {
+            "ciu": "W754518",
+            "nombres": "GENESIS",
+            "apellidos": "DIAZ",
+            "fecha_nacimiento": "06/09/1995"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:50:34.428003",
+      "actualizado_en": "2026-07-05T04:50:34.422320"
+    },
+    "W867192": {
+      "ciu": "W867192",
+      "datos_personales": {
+        "ciu": "W867192",
+        "nombres": "EVANGELINE",
+        "apellidos": "LEE",
+        "fecha_nacimiento": "08/18/1991"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:50:37.471465",
+          "timestamp": "2026-07-05T04:50:37.471465",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046868.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\n\ncovernor: JAMES C. JUSTICE. It\nsap.no. W867192 4b Exp 10/25/2026\n3 vos 08/18/1991\n1 LEE\n2 EVANGELINE\n3 484 W. PIKE STREET\n\nPETERSBURG, WV 26847\n9 ClassA\n9aEnd NONE\n12 Rest. B\nLeelee 15 Sex F 16 Hgt 5'-09\" aalss 10/25/2021\n\n18 Eyes GRA 17 Wgt 175 Ib\n5 DD 6000000000003365 08/1 8/91",
+          "campos": {
+            "ciu": "W867192",
+            "nombres": "EVANGELINE",
+            "apellidos": "LEE",
+            "fecha_nacimiento": "08/18/1991"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:50:37.475993",
+      "actualizado_en": "2026-07-05T04:50:37.471465"
+    },
+    "W642457": {
+      "ciu": "W642457",
+      "datos_personales": {
+        "ciu": "W642457",
+        "nombres": "NO_DETECTADO",
+        "apellidos": "SATO",
+        "fecha_nacimiento": "03/10/1993"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:50:40.227355",
+          "timestamp": "2026-07-05T04:50:40.227355",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046967.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W642457 4b Exp 11/19/2027\n3 pos 03/10/1993\n1 SATO\n2RINA\nsg 8714 FAYETTE AVENUE\nOAK HILL, WV 25901\n9 Class C\n9aEnd NONE\n- 12 Restr B\nLh 15 Sex F 16 Hgt 5'-08\" 4aiss 11/19/2022\n18 Eyes BRO 17 Wgt 122 Ib\n5 DD 0000000000002866 03/1 0/93",
+          "campos": {
+            "ciu": "W642457",
+            "nombres": "NO_DETECTADO",
+            "apellidos": "SATO",
+            "fecha_nacimiento": "03/10/1993"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:50:40.232931",
+      "actualizado_en": "2026-07-05T04:50:40.227355"
+    },
+    "W528313": {
+      "ciu": "W528313",
+      "datos_personales": {
+        "ciu": "W528313",
+        "nombres": "JERMAINE",
+        "apellidos": "MORGAN",
+        "fecha_nacimiento": "07/13/1995"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:50:43.352228",
+          "timestamp": "2026-07-05T04:50:43.352228",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0047729_0931598_0055648.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no.W528313 4b Exp 06/06/2025\n3 pos 07/13/1995\n1 MORGAN\n2 JERMAINE\nsg 606 EOFF STREET\nWHEELING, WV 26003\n9 Class B\naEnd NONE\nis 2 Rest B 0 20\nj x M 5°-06\" 4alss 06/06/20\nat ‘e Eyes BRO 7 wet 245 Ib\n5 DD 0000000000005347 07/13/95",
+          "campos": {
+            "ciu": "W528313",
+            "nombres": "JERMAINE",
+            "apellidos": "MORGAN",
+            "fecha_nacimiento": "07/13/1995"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:50:43.356040",
+      "actualizado_en": "2026-07-05T04:50:43.352228"
+    },
+    "W056552": {
+      "ciu": "W056552",
+      "datos_personales": {
+        "ciu": "W056552",
+        "nombres": "KHALIL",
+        "apellidos": "JOHNSON",
+        "fecha_nacimiento": "04/18/1993"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:50:46.667286",
+          "timestamp": "2026-07-05T04:50:46.667286",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0047729_0931598_0690333.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W056552 4b Exp 02/22/2027\n3 pos 04/18/1993\n1 JOHNSON\n2 KHALIL\nrf 3 47 3RD AVENUE\n: NITRO, WV 25143\n, 9 ClassA\n9aEnd NONE\n“= A 12 Restr B\ntyohn 15Sex M 16 Hgt 5°-03\" 4alss 02/22/2022\n18 Eyes BRO 17 Wgt 216 Ib\n5 OD 0000000000000198 04/1 8/93",
+          "campos": {
+            "ciu": "W056552",
+            "nombres": "KHALIL",
+            "apellidos": "JOHNSON",
+            "fecha_nacimiento": "04/18/1993"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:50:46.671908",
+      "actualizado_en": "2026-07-05T04:50:46.667286"
+    },
+    "W804502": {
+      "ciu": "W804502",
+      "datos_personales": {
+        "ciu": "W804502",
+        "nombres": "KWAME",
+        "apellidos": "BROWN",
+        "fecha_nacimiento": "12/25/1996"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:50:49.375103",
+          "timestamp": "2026-07-05T04:50:49.375103",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0047729_0931598_0857959.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W804502 4b Exp 04/22/2026\n3 pos 12/25/1996\n1 BROWN\n2 KWAME\n8 5441 GRASSLICK ROAD\nRICHWOOD, WV 26261\n\\ 9 ClassA\n. 9aEnd NONE\n7 12 Restr B\nHibs see? 15Sex M 16 Hgt 6'-04\" 4atss 04/22/2021\n18 Eyes BRO 17 Wgt 198 Ib\n5 BD 0000000000002161 12/25/96",
+          "campos": {
+            "ciu": "W804502",
+            "nombres": "KWAME",
+            "apellidos": "BROWN",
+            "fecha_nacimiento": "12/25/1996"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:50:49.378286",
+      "actualizado_en": "2026-07-05T04:50:49.375103"
+    },
+    "W760019": {
+      "ciu": "W760019",
+      "datos_personales": {
+        "ciu": "W760019",
+        "nombres": "LATONYA",
+        "apellidos": "CARTER",
+        "fecha_nacimiento": "01/05/1996"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:50:52.246254",
+          "timestamp": "2026-07-05T04:50:52.246254",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0047729_0931598_0884479.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\n\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W760019 4b Exp 08/21/2027\n3 vos 01/05/1996\n1 CARTER\n2 LATONYA\nsg 947 NICHOLAS STREET\n\nSUMMERSVILLE, WV 26651\n9 ClassB\n9aEnd NONE\n12 Rest. B\nbeast 15Sex F 16 Hgt 5'-07\" 4alss 08/21/2022\n\n18 Eyes BRO 17 Wgt 150 Ib\n5 DD 0000000000001047 0 1 10 5/96",
+          "campos": {
+            "ciu": "W760019",
+            "nombres": "LATONYA",
+            "apellidos": "CARTER",
+            "fecha_nacimiento": "01/05/1996"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:50:52.253099",
+      "actualizado_en": "2026-07-05T04:50:52.246254"
+    },
+    "W060735": {
+      "ciu": "W060735",
+      "datos_personales": {
+        "ciu": "W060735",
+        "nombres": "XIMENA",
+        "apellidos": "HERNANDEZ",
+        "fecha_nacimiento": "07/06/1993"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:50:54.694454",
+          "timestamp": "2026-07-05T04:50:54.694454",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0047729_0931598_0990670.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\n\ncovernor: JAMES C. JUSTICE. Il\nsao.no. W060735 4b Exp 11/26/2028\n3 vos 07/06/1993\n1 HERNANDEZ\n2 XIMENA\n3 744TH STREET\n\nKENOVA, WV 25530\n9 ClassB\n9aEnd NONE\n12 Restr B\nwherna 15 Sex F 16 Hgt 7'-06\" 4alss 11/26/2023\n\n18 Eyes BRO 17 Wgt 107 Ib\n5 DD 0000000000003116 07/06/93",
+          "campos": {
+            "ciu": "W060735",
+            "nombres": "XIMENA",
+            "apellidos": "HERNANDEZ",
+            "fecha_nacimiento": "07/06/1993"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:50:54.701029",
+      "actualizado_en": "2026-07-05T04:50:54.694454"
+    },
+    "W760043": {
+      "ciu": "W760043",
+      "datos_personales": {
+        "ciu": "W760043",
+        "nombres": "DANIELA",
+        "apellidos": "ROJAS",
+        "fecha_nacimiento": "10/13/1996"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:50:57.370703",
+          "timestamp": "2026-07-05T04:50:57.370703",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0047793.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA’\ncovernor: JAMES C. JUSTICE. Il\nsao.no. W760043 4b Exp 02/17/2028\n3 pos 10/13/1996\n1 ROJAS\n2 DANIELA\ngs 976 6TH STREET\nRAVENSWOOD, WV 26164\n9 Class B\n9aEnd NONE\n— eee 02/17/2023\nChuga x F 5-05\" 4alss\nte Eyes BRO 7 wet 200 Ib\n5 DD 0000000000004526 10/13/96",
+          "campos": {
+            "ciu": "W760043",
+            "nombres": "DANIELA",
+            "apellidos": "ROJAS",
+            "fecha_nacimiento": "10/13/1996"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:50:57.374950",
+      "actualizado_en": "2026-07-05T04:50:57.370703"
+    },
+    "W249703": {
+      "ciu": "W249703",
+      "datos_personales": {
+        "ciu": "W249703",
+        "nombres": "ZARA",
+        "apellidos": "CHUA",
+        "fecha_nacimiento": "02/12/1996"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:00.036927",
+          "timestamp": "2026-07-05T04:51:00.036927",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0048075.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\n\ncovernor: JAMES C. JUSTICE. Il\nsap.no.W249703 4b Exp 04/23/2025\n3 pos 02/12/1996\n1 CHUA\n2 ZARA\nsg 325 WALNUT STREET\n\nRAVENSWOOD, WV 26164\n9 ClassA\n9aEnd NONE\n12 Restr B\nCzar. 15 Sex F 16 Hgt 5'-06\" 4alss 04/23/2020\n\n18 Eyes BRO 17 Wgt 126 Ib\n5 DD 0000000000005884 02/1 2/96",
+          "campos": {
+            "ciu": "W249703",
+            "nombres": "ZARA",
+            "apellidos": "CHUA",
+            "fecha_nacimiento": "02/12/1996"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:00.040346",
+      "actualizado_en": "2026-07-05T04:51:00.036927"
+    },
+    "W689896": {
+      "ciu": "W689896",
+      "datos_personales": {
+        "ciu": "W689896",
+        "nombres": "JESUS",
+        "apellidos": "CAMPOS",
+        "fecha_nacimiento": "10/29/1996"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:02.626719",
+          "timestamp": "2026-07-05T04:51:02.626719",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0048144.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W689896 4b Exp 06/18/2029\n3 pos 10/29/1996\n1 CAMPOS\n2 JESUS\ngs 4458 ERIE AVENUE\n~~ VIENNA, WV 26105\n9 Class B\n9aEnd NONE\n12 Restr B\nAjcamp 15Sex M 16 Hgt 5'-02\" 4aiss 06/18/2024\n18 Eyes BRO 17 Wgt 109 Ib\n5 BD 0000000000003767 10/29/96",
+          "campos": {
+            "ciu": "W689896",
+            "nombres": "JESUS",
+            "apellidos": "CAMPOS",
+            "fecha_nacimiento": "10/29/1996"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:02.631660",
+      "actualizado_en": "2026-07-05T04:51:02.626719"
+    },
+    "W214705": {
+      "ciu": "W214705",
+      "datos_personales": {
+        "ciu": "W214705",
+        "nombres": "DAVID",
+        "apellidos": "RIVERA",
+        "fecha_nacimiento": "02/07/1979"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:05.487632",
+          "timestamp": "2026-07-05T04:51:05.487632",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0048190.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no.W214705 4b Exp 07/27/2029\n3 pos 02/07/1979\n1 RIVERA\n2 DAVID\ng 7281 7TH STREET\nRAVENSWOOD, WV 26164\n> 9 Class C\n9aEnd NONE\n‘ 12 Restr B\n15Sex M 16 Hgt 5'-01\" aaiss 07/27/2024\n18 Eyes BLU 17 Wgt 104 Ib\n5 DD 0000000000002152 02/07/79",
+          "campos": {
+            "ciu": "W214705",
+            "nombres": "DAVID",
+            "apellidos": "RIVERA",
+            "fecha_nacimiento": "02/07/1979"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:05.490617",
+      "actualizado_en": "2026-07-05T04:51:05.487632"
+    },
+    "W724366": {
+      "ciu": "W724366",
+      "datos_personales": {
+        "ciu": "W724366",
+        "nombres": "YINGYING",
+        "apellidos": "PARK",
+        "fecha_nacimiento": "04/19/1995"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:08.186768",
+          "timestamp": "2026-07-05T04:51:08.186768",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0048203.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsao.no. W724366 4b Exp 09/21/2026\n3 pos 04/19/1995\n1 PARK\n2 YINGYING\ng 40 13TH STREET\nWELLSBURG, WV 26070\n9 Class B\n9aEnd NONE\n— 12 Restr B\npwk 15Sex F 16 Hgt 5'-05\" 4aiss 09/21/2021\n18 Eyes BRO 17 Wat 167 Ib\n5 BD 0000000000000026 04/19/95",
+          "campos": {
+            "ciu": "W724366",
+            "nombres": "YINGYING",
+            "apellidos": "PARK",
+            "fecha_nacimiento": "04/19/1995"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:08.193804",
+      "actualizado_en": "2026-07-05T04:51:08.186768"
+    },
+    "W467582": {
+      "ciu": "W467582",
+      "datos_personales": {
+        "ciu": "W467582",
+        "nombres": "SATO",
+        "apellidos": "ONG",
+        "fecha_nacimiento": "01/22/2000"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:10.857521",
+          "timestamp": "2026-07-05T04:51:10.857521",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0048569.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W467582 4b Exp 02/13/2026\n3 pos 01/22/2000\n1 ONG\n2 SATO\nsg 9093 DRY HILL ROAD\nBECKLEY, WV 25801\n9 Class C\n9aEnd NONE\n12 Restr B\nJoong 15Sex M 16 Hgt 6'-07\" 4aiss 02/13/2021\n18 Eyes BRO 17 Wgt 169 lb\n5 DD 0000000000002483 01/22/00",
+          "campos": {
+            "ciu": "W467582",
+            "nombres": "SATO",
+            "apellidos": "ONG",
+            "fecha_nacimiento": "01/22/2000"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:10.860444",
+      "actualizado_en": "2026-07-05T04:51:10.857521"
+    },
+    "W475134": {
+      "ciu": "W475134",
+      "datos_personales": {
+        "ciu": "W475134",
+        "nombres": "LUCY",
+        "apellidos": "RUSSELL",
+        "fecha_nacimiento": "07/22/1990"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:13.936660",
+          "timestamp": "2026-07-05T04:51:13.936660",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0048728.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\n\ncovernor: JAMES C. JUSTICE. Il\nsap.no.W475134 4b Exp 12/22/2028\n3 pos 07/22/1990\n1 RUSSELL\n2 LUCY\ng 23 2ND STREET\n\nKENOVA, WV 25530\n9 ClassB\n9aEnd NONE\n12 Restr B\n[Lode 158ex F 16 Hgt 5°-03\" 4alss 12/22/2023\n\n18 Eyes BRO 17 Wgt 119 Ib\n5 DD 6000000000005798 07/22/90",
+          "campos": {
+            "ciu": "W475134",
+            "nombres": "LUCY",
+            "apellidos": "RUSSELL",
+            "fecha_nacimiento": "07/22/1990"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:13.940059",
+      "actualizado_en": "2026-07-05T04:51:13.936660"
+    },
+    "W180109": {
+      "ciu": "W180109",
+      "datos_personales": {
+        "ciu": "W180109",
+        "nombres": "LATOYA",
+        "apellidos": "BRYANT",
+        "fecha_nacimiento": "02/08/1996"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:17.100154",
+          "timestamp": "2026-07-05T04:51:17.100154",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0048943.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W180109 4b Exp 08/14/2028\n3 pos 02/08/1996\n1 BRYANT\n2 LATOYA\nsg 9608 5TH AVENUE\nHUNTINGTON, WV 25701\n9 ClassA\n9aEnd NONE\n12 Rest. B\nL lbs 15Sex F 16 Hgt 6'-07\" 4alss 08/14/2023\n18 Eyes BRO 17 Wgt 102 Ib\n5 DD 0000000000003493 02/08/96",
+          "campos": {
+            "ciu": "W180109",
+            "nombres": "LATOYA",
+            "apellidos": "BRYANT",
+            "fecha_nacimiento": "02/08/1996"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:17.109129",
+      "actualizado_en": "2026-07-05T04:51:17.100154"
+    },
+    "W448325": {
+      "ciu": "W448325",
+      "datos_personales": {
+        "ciu": "W448325",
+        "nombres": "ADRIAN",
+        "apellidos": "REYES",
+        "fecha_nacimiento": "05/18/1993"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:20.088575",
+          "timestamp": "2026-07-05T04:51:20.088575",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0049052.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA’\n\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W448325 4b Exp 05/06/2029\n3 pos 05/18/1993\n1 REYES\n2 ADRIAN\ngs 1700 VIRGINIA STREET\n\n~ CHARLESTON, WV 25301\nSs 9 Class B\n. aEnd NONE\n“ _ 2 Rest B 0 2A\nx M 5-01\" 4alss 05/06/20\nloseye te Eyes BRO 7 wat 151 Ib\n\n5 DD 0000000000001011 05/18/93",
+          "campos": {
+            "ciu": "W448325",
+            "nombres": "ADRIAN",
+            "apellidos": "REYES",
+            "fecha_nacimiento": "05/18/1993"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:20.092689",
+      "actualizado_en": "2026-07-05T04:51:20.088575"
+    },
+    "W201672": {
+      "ciu": "W201672",
+      "datos_personales": {
+        "ciu": "W201672",
+        "nombres": "ARTURO",
+        "apellidos": "CASTRO",
+        "fecha_nacimiento": "10/14/1999"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:22.764312",
+          "timestamp": "2026-07-05T04:51:22.764312",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0049178.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W201672 4b Exp 06/01/2026\n3 pos 10/14/1999\n1 CASTRO\n2 ARTURO\nsg 3500 RIVER STREET\nELKINS, WV 26241\n9 Class B\n. 9a End NONE\n7s - 12 Restr B\nlacasl 15Sex M 16 Hgt 5'-09\" 4aiss 06/01/2021\n18 Eyes BRO 17 Wgt 181 Ib\n5 DD 0000000000000373 10/14/99",
+          "campos": {
+            "ciu": "W201672",
+            "nombres": "ARTURO",
+            "apellidos": "CASTRO",
+            "fecha_nacimiento": "10/14/1999"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:22.772401",
+      "actualizado_en": "2026-07-05T04:51:22.764312"
+    },
+    "W303512": {
+      "ciu": "W303512",
+      "datos_personales": {
+        "ciu": "W303512",
+        "nombres": "ARTURO",
+        "apellidos": "TORRES",
+        "fecha_nacimiento": "07/13/1986"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:25.403621",
+          "timestamp": "2026-07-05T04:51:25.403621",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0049203.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W303512 4b Exp 09/03/2028\n3 vos 07/13/1986\n1 TORRES\n2 ARTURO\nsg 506 4TH AVENUE\nWILLIAMSON, WV 25661\n9 Class C\n9aEnd NONE\n12 Restr B\nSafe 15Sex M 16 Hgt 6'-10\" 4aiss 09/03/2023\n18 Eyes BRO 17 Wgt 146 Ib\n5 DD 0000000000001177 07/1 3/86",
+          "campos": {
+            "ciu": "W303512",
+            "nombres": "ARTURO",
+            "apellidos": "TORRES",
+            "fecha_nacimiento": "07/13/1986"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:25.406811",
+      "actualizado_en": "2026-07-05T04:51:25.403621"
+    },
+    "W337392": {
+      "ciu": "W337392",
+      "datos_personales": {
+        "ciu": "W337392",
+        "nombres": "SOFIA",
+        "apellidos": "CAMPOS",
+        "fecha_nacimiento": "02/04/1991"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:27.793129",
+          "timestamp": "2026-07-05T04:51:27.793129",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0049206.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W337392 4b Exp 10/09/2027\n3 pos 02/04/1991\n1 CAMPOS\n2 SOFIA\n3 25 SYCAMORE STREET\nRAVENSWOOD, WV 26164\n9 ClassA\n| 9aEnd NONE\n12 Resur B\nLscamp 15Sex F 16 Hgt 7'-00\" 4aiss 10/09/2022\n18 Eyes BRO 17 Wgt 130 Ib\n5 DD 0000000000002605 02/04/91",
+          "campos": {
+            "ciu": "W337392",
+            "nombres": "SOFIA",
+            "apellidos": "CAMPOS",
+            "fecha_nacimiento": "02/04/1991"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:27.796536",
+      "actualizado_en": "2026-07-05T04:51:27.793129"
+    },
+    "W883738": {
+      "ciu": "W883738",
+      "datos_personales": {
+        "ciu": "W883738",
+        "nombres": "LIWEI",
+        "apellidos": "ONG",
+        "fecha_nacimiento": "05/15/2002"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:30.161791",
+          "timestamp": "2026-07-05T04:51:30.161791",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0049824.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsao.no. W883738 4b exp 05/05/2025\n3 pos 05/15/2002\n1 ONG\n2 LIWEI\nsg 457 12TH STREET\nFAIRMONT, WV 26554\n9 ClassB\n9aEnd NONE\n* 12 Rest B\nLh ope 15Sex M 16 Hgt 5'-05\" 4aiss 05/05/2020\n18 Eyes BRO 17 Wgt 220 lb\n5 DD 0000000000005659 05/15/02",
+          "campos": {
+            "ciu": "W883738",
+            "nombres": "LIWEI",
+            "apellidos": "ONG",
+            "fecha_nacimiento": "05/15/2002"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:30.166581",
+      "actualizado_en": "2026-07-05T04:51:30.161791"
+    },
+    "W756832": {
+      "ciu": "W756832",
+      "datos_personales": {
+        "ciu": "W756832",
+        "nombres": "JUAN",
+        "apellidos": "MARTINEZ",
+        "fecha_nacimiento": "09/13/1992"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:32.653477",
+          "timestamp": "2026-07-05T04:51:32.653477",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0049954.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W756832 4b Exp 01/10/2029\n3 pos 09/13/1992\n1 MARTINEZ\n2 JUAN\nsg 374 10TH STREET\nHUNTINGTON, WV 25701\n9 Class C\n9aEnd NONE\n12 Restr B\nGmart 15sex M 16H 5-08\" = “ass 01/10/2024\n18 Eyes BRO 17 Wgt 162 lb\n5 DD 0000000000001803 09/13/92",
+          "campos": {
+            "ciu": "W756832",
+            "nombres": "JUAN",
+            "apellidos": "MARTINEZ",
+            "fecha_nacimiento": "09/13/1992"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:32.656947",
+      "actualizado_en": "2026-07-05T04:51:32.653477"
+    },
+    "W597252": {
+      "ciu": "W597252",
+      "datos_personales": {
+        "ciu": "W597252",
+        "nombres": "BELLA",
+        "apellidos": "CAMPOS",
+        "fecha_nacimiento": "12/31/1991"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:35.272678",
+          "timestamp": "2026-07-05T04:51:35.272678",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050078.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\naap.no. W597252 4b Exp 05/23/2028\n3 pos 12/31/1991\n1 CAMPOS\n2 BELLA\n8 144 3RD AVENUE\nHUNTINGTON, WV 25701\n9 Class C\n9aEnd NONE\n12 Restr B\nbeamp 15Sex F 16 Hgt 5'-06\" 4alss 05/23/2023\n18 Eyes BRO 17 Wat 143 Ib\n5 BD 0000000000004232 12/31/91",
+          "campos": {
+            "ciu": "W597252",
+            "nombres": "BELLA",
+            "apellidos": "CAMPOS",
+            "fecha_nacimiento": "12/31/1991"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:35.283151",
+      "actualizado_en": "2026-07-05T04:51:35.272678"
+    },
+    "W597281": {
+      "ciu": "W597281",
+      "datos_personales": {
+        "ciu": "W597281",
+        "nombres": "ELEANOR",
+        "apellidos": "LEE",
+        "fecha_nacimiento": "04/30/1993"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:38.384742",
+          "timestamp": "2026-07-05T04:51:38.384742",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050118.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W597281 4b Exp 05/02/2027\n3 pos 04/30/1993\n1 LEE\n2 ELEANOR\n8 9369 SOUTH STREET\nBLUEFIELD, WV 24701\n9 ClassA\n9aEnd NONE\n— 12 Restr B\nflee 15Sex F 16 Hgt 6'-10\" aalss 05/02/2022\n18 Eyes GRE 17 Wgt 143 Ib\n5 BD 0000000000003146 04/30/93",
+          "campos": {
+            "ciu": "W597281",
+            "nombres": "ELEANOR",
+            "apellidos": "LEE",
+            "fecha_nacimiento": "04/30/1993"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:38.388583",
+      "actualizado_en": "2026-07-05T04:51:38.384742"
+    },
+    "W191877": {
+      "ciu": "W191877",
+      "datos_personales": {
+        "ciu": "W191877",
+        "nombres": "OLIVIA",
+        "apellidos": "VARGAS",
+        "fecha_nacimiento": "05/07/1995"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:39.367566",
+          "timestamp": "2026-07-05T04:51:39.367566",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050151.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\n\ncovernor: JAMES C. JUSTICE. Il\nsao.no.W191877 4b Exp 06/20/2025\n3 pos 05/07/1995\n1 VARGAS\n2 OLIVIA\n\n8 1788 10TH STREET\nFAIRMONT, WV 26554\n\n9 ClassB\n\n9aEnd NONE\n\n12 Restr B\n\n15Sex F 16 Hgt 5°-03\" 4alss 06/20/2020\n18 Eyes BRO = 17 Wat 143 Ib\n\n5 DD 0000000000002898 0 5/07/9 5",
+          "campos": {
+            "ciu": "W191877",
+            "nombres": "OLIVIA",
+            "apellidos": "VARGAS",
+            "fecha_nacimiento": "05/07/1995"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:39.371443",
+      "actualizado_en": "2026-07-05T04:51:39.367566"
+    },
+    "W390807": {
+      "ciu": "W390807",
+      "datos_personales": {
+        "ciu": "W390807",
+        "nombres": "EVANGELINE",
+        "apellidos": "NELSON",
+        "fecha_nacimiento": "09/09/2001"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:41.884413",
+          "timestamp": "2026-07-05T04:51:41.884413",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050204.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W390807 4b Exp 07/04/2027\n3 pos 09/09/2001\n1 NELSON\n2 EVANGELINE\nsg 17 JONES AVENUE\nOAK HILL, WV 25901\n9 Class B\n. 9a End NONE\n12 Restr B\njerels 15 Sex F 16 Hgt 5'-09\" aalss 07/04/2022\n18 Eyes BRO 17 Wgt 140 Ib\n5 DD 0000000000000034 09/09/01",
+          "campos": {
+            "ciu": "W390807",
+            "nombres": "EVANGELINE",
+            "apellidos": "NELSON",
+            "fecha_nacimiento": "09/09/2001"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:41.888323",
+      "actualizado_en": "2026-07-05T04:51:41.884413"
+    },
+    "W958991": {
+      "ciu": "W958991",
+      "datos_personales": {
+        "ciu": "W958991",
+        "nombres": "DARNELL",
+        "apellidos": "FOWLER",
+        "fecha_nacimiento": "07/12/1992"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:44.572135",
+          "timestamp": "2026-07-05T04:51:44.572135",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050284.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W958991 4b Exp 07/05/2028\n3 pos 07/12/1992\n1 FOWLER\n2 DARNELL\n8g 1063 12TH AVENUE\nST. ALBANS, WV 25177\n9 Class C\n9aEnd NONE\n12 Restr B\nLdfowe 15Sex M 16 Hgt 5'-06\" 4aiss 07/05/2023\n18 Eyes BRO 17 Wgt 213 Ib\n5 DD 0000000000000111 07/12/92",
+          "campos": {
+            "ciu": "W958991",
+            "nombres": "DARNELL",
+            "apellidos": "FOWLER",
+            "fecha_nacimiento": "07/12/1992"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:44.580977",
+      "actualizado_en": "2026-07-05T04:51:44.572135"
+    },
+    "W675734": {
+      "ciu": "W675734",
+      "datos_personales": {
+        "ciu": "W675734",
+        "nombres": "SATO",
+        "apellidos": "KUMAR",
+        "fecha_nacimiento": "07/01/2000"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:47.052616",
+          "timestamp": "2026-07-05T04:51:47.052616",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050430.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W675734 4b Exp 07/28/2028\n3 pos 07/01/2000\n1 KUMAR\n2 SATO\n8 64 22ND STREET\nNITRO, WV 25143\n9 ClassA\n_ 9a End NONE\n12 Restr B\nto hin — issex M  teng 5-0\" 4alss 07/28/2023\n18 Eyes BRO 17 Wat 196 Ib\n5 DD 0000000000001844 07/01/00",
+          "campos": {
+            "ciu": "W675734",
+            "nombres": "SATO",
+            "apellidos": "KUMAR",
+            "fecha_nacimiento": "07/01/2000"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:47.056233",
+      "actualizado_en": "2026-07-05T04:51:47.052616"
+    },
+    "W570466": {
+      "ciu": "W570466",
+      "datos_personales": {
+        "ciu": "W570466",
+        "nombres": "MAYA",
+        "apellidos": "FLORES",
+        "fecha_nacimiento": "09/11/1991"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:49.262275",
+          "timestamp": "2026-07-05T04:51:49.262275",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050618.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W570466 4b Exp 07/11/2026\n3 pos 09/11/1991\n1 FLORES\n2 MAYA\nsg 1047 B STREET\nCEREDO, WV 25507\n9 ClassA\n9aEnd NONE\n12 Restr B\nLotlor 15 Sex F 16 Hgt 6'-09\" aalss 07/11/2021\n18 Eyes BRO 17 Wgt 168 Ib\n5 DD 6000000000004929 09/1 1 191",
+          "campos": {
+            "ciu": "W570466",
+            "nombres": "MAYA",
+            "apellidos": "FLORES",
+            "fecha_nacimiento": "09/11/1991"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:49.266358",
+      "actualizado_en": "2026-07-05T04:51:49.262275"
+    },
+    "W126571": {
+      "ciu": "W126571",
+      "datos_personales": {
+        "ciu": "W126571",
+        "nombres": "EMMA",
+        "apellidos": "MOORE",
+        "fecha_nacimiento": "03/18/1997"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:51.773180",
+          "timestamp": "2026-07-05T04:51:51.773180",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050765.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. fl\nsap.no. W126571 4b Exp 06/19/2027\n3 pos 03/18/1997\n1 MOORE\n2 EMMA\nsg 558 PLEASANT AVENUE\n6 WEIRTON, WV 26062\n9 Class B\n9aEnd NONE\n12 Restr B\n15Sex F 16 Hgt 6'-07\" 4alss 06/19/2022\nLerrnt 18 Eyes BRO 17 wot 114 Ib\n5 DD 0000000000003657 03/18/97",
+          "campos": {
+            "ciu": "W126571",
+            "nombres": "EMMA",
+            "apellidos": "MOORE",
+            "fecha_nacimiento": "03/18/1997"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:51.782091",
+      "actualizado_en": "2026-07-05T04:51:51.773180"
+    },
+    "W259192": {
+      "ciu": "W259192",
+      "datos_personales": {
+        "ciu": "W259192",
+        "nombres": "MINGZHE",
+        "apellidos": "HUANG",
+        "fecha_nacimiento": "01/18/2004"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:52.644037",
+          "timestamp": "2026-07-05T04:51:52.644037",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050853.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“™\n\ncovernor: JAMES C. JUSTICE. Il\n\nsap.no. W259192 4b Exp 07/29/2025\n3 pos 01/18/2004\n\n1 HUANG\n\n2 MINGZHE\n\ngs 19 12TH STREET\nFAIRMONT, WV 26554\n\n9 ClassA\n\n9aEnd NONE\n\n12 Restr B\n\n15Sex M 16 Hat 6'-01\" 4alss 07/29/2020\n18 Eyes BRO 17 Wgt 232 Ib\n\n5 DD 0000000000004511 0 1 /1 8/04",
+          "campos": {
+            "ciu": "W259192",
+            "nombres": "MINGZHE",
+            "apellidos": "HUANG",
+            "fecha_nacimiento": "01/18/2004"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:52.647581",
+      "actualizado_en": "2026-07-05T04:51:52.644037"
+    },
+    "WO26662": {
+      "ciu": "WO26662",
+      "datos_personales": {
+        "ciu": "WO26662",
+        "nombres": "ROBERTO",
+        "apellidos": "SILVA",
+        "fecha_nacimiento": "03/15/1995"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:55.273371",
+          "timestamp": "2026-07-05T04:51:55.273371",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0051354.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA’\ncovernor: JAMES C. JUSTICE. Il\nsao.no. WO26662 4b Exp 04/14/2029\n3 pos 03/15/1995\n1 SILVA\n2 ROBERTO\ns 478 RIPLEY ROAD\nSPENCER, WV 25276\n9 Class A\n9aEnd NONE\n12 Restr B\na a 15 Sex M 16 Hgt 6-07\" 4alss 04/14/2024\n18 Eyes BRO 17 Wgt 248 lb\n5 DD 0000000000003545 03/1 5/95",
+          "campos": {
+            "ciu": "WO26662",
+            "nombres": "ROBERTO",
+            "apellidos": "SILVA",
+            "fecha_nacimiento": "03/15/1995"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:55.277004",
+      "actualizado_en": "2026-07-05T04:51:55.273371"
+    },
+    "W722348": {
+      "ciu": "W722348",
+      "datos_personales": {
+        "ciu": "W722348",
+        "nombres": "SUBHAS",
+        "apellidos": "PATEL",
+        "fecha_nacimiento": "05/28/1999"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:57.772833",
+          "timestamp": "2026-07-05T04:51:57.772833",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0051381.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W722348 4b Exp 05/16/2025\n3 pos 05/28/1999\n1 PATEL\n2 SUBHAS\nsg 60 9TH STREET\nHUNTINGTON, WV 25701\nfs 9 ClassB\n> 9aEnd NONE\n- - 12 Restr B\n_Lpate 15Sex M 16 Hgt 5'-06\" aalss 05/16/2020\n18 Eyes BRO 17 Wgt 118 Ib\n5 DD 0000000000002362 0 5/28/99",
+          "campos": {
+            "ciu": "W722348",
+            "nombres": "SUBHAS",
+            "apellidos": "PATEL",
+            "fecha_nacimiento": "05/28/1999"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:57.776716",
+      "actualizado_en": "2026-07-05T04:51:57.772833"
+    },
+    "W122053": {
+      "ciu": "W122053",
+      "datos_personales": {
+        "ciu": "W122053",
+        "nombres": "RYU",
+        "apellidos": "THAKUR",
+        "fecha_nacimiento": "10/14/2000"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:51:58.543741",
+          "timestamp": "2026-07-05T04:51:58.543741",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0051648.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\n\ncovernor: JAMES C. JUSTICE. Il\n\nsap.no.W122053 4b Exp 03/04/2028\n3 pos 10/14/2000\n\n1 THAKUR\n\n2 RYU\n\n8 4466 COURT STREET\nSUMMERSVILLE, WV 26651\n\n9 Class B\n\n9aEnd NONE\n\n12 Rest. B\n\nDelhak 15Sex M 16 Hgt 5'-03\" 4alss 03/04/2023\n18 Eyes BRO 17 Wgt 109 Ib\n\n5 DD 0000000000002166 1 0/1 4/00",
+          "campos": {
+            "ciu": "W122053",
+            "nombres": "RYU",
+            "apellidos": "THAKUR",
+            "fecha_nacimiento": "10/14/2000"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:51:58.547586",
+      "actualizado_en": "2026-07-05T04:51:58.543741"
+    },
+    "W535945": {
+      "ciu": "W535945",
+      "datos_personales": {
+        "ciu": "W535945",
+        "nombres": "ARTURO",
+        "apellidos": "FLORES",
+        "fecha_nacimiento": "03/10/2000"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:52:01.368265",
+          "timestamp": "2026-07-05T04:52:01.368265",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0051665.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\n\ncovernor: JAMES C. JUSTICE. Il\nsao.no. W535945 4b Exp 08/22/2028\n3 pos 03/10/2000\n1 FLORES\n2 ARTURO\ngs 66 5TH STREET\n\nCEREDO, WV 25507\n\n9 Class B\n9aEnd NONE\n\nae 12 Restr B\n\nLaw ft iissex M18 Hat 6-09\" 4alss 08/22/2023\n\n18 Eyes BRO 17 Wgt 241 Ib\n5 DD 0000000000004060 03/10/00",
+          "campos": {
+            "ciu": "W535945",
+            "nombres": "ARTURO",
+            "apellidos": "FLORES",
+            "fecha_nacimiento": "03/10/2000"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:52:01.376805",
+      "actualizado_en": "2026-07-05T04:52:01.368265"
+    },
+    "W76997": {
+      "ciu": "W76997",
+      "datos_personales": {
+        "ciu": "W76997",
+        "nombres": "NANDINI",
+        "apellidos": "NO_DETECTADO",
+        "fecha_nacimiento": "08/19/2002"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:52:04.653326",
+          "timestamp": "2026-07-05T04:52:04.653326",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0051859.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W76997 1 4b Exp 07/30/2028\n3 pos 08/19/2002\niUl\n2 NANDINI\nsg 978 LAFAYETTE AVENUE\nMOUNDSVILLE, WV 26041\n9 Class C\n9aEnd NONE\na 12 Rest. B\nuf 15Sex F 16 Hgt 7'-11\" 4alss 07/30/2023\n18 Eyes BRO 17 Wgt 156 Ib\n5 DD 0000000000003742 08/1 9/02",
+          "campos": {
+            "ciu": "W76997",
+            "nombres": "NANDINI",
+            "apellidos": "NO_DETECTADO",
+            "fecha_nacimiento": "08/19/2002"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:52:04.658460",
+      "actualizado_en": "2026-07-05T04:52:04.653326"
+    },
+    "W340582": {
+      "ciu": "W340582",
+      "datos_personales": {
+        "ciu": "W340582",
+        "nombres": "SITI",
+        "apellidos": "CHUA",
+        "fecha_nacimiento": "12/26/2000"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:52:07.938573",
+          "timestamp": "2026-07-05T04:52:07.938573",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0051981.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsa p.no. W340582 4b Exp 02/05/2028\n3 pos 12/26/2000\n1 CHUA\n2 SITI\n8 682 PLEASANT AVENUE\nWEIRTON, WV 26062\n9 ClassA\n9aEnd NONE\n—_- — 12 Restr B\nfadyra 15 Sex F 16 Hgt 5'-06\" 4aiss 02/05/2023\n18 Eyes BRO 17 Wgt 117 Ib\n5 DD 0000000000001892 12/26/00",
+          "campos": {
+            "ciu": "W340582",
+            "nombres": "SITI",
+            "apellidos": "CHUA",
+            "fecha_nacimiento": "12/26/2000"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:52:07.943666",
+      "actualizado_en": "2026-07-05T04:52:07.938573"
+    },
+    "W783479": {
+      "ciu": "W783479",
+      "datos_personales": {
+        "ciu": "W783479",
+        "nombres": "SEO",
+        "apellidos": "SATO",
+        "fecha_nacimiento": "12/26/2003"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:52:11.396279",
+          "timestamp": "2026-07-05T04:52:11.396279",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0051986.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W783479 4b Exp 11/06/2026\n3 pos 12/26/2003\n1 SATO\n2 SEO-YUN\ng 261 19TH STREET\nDUNBAR, WV 25064\n9 Class B\n9aEnd NONE\n4 vee 11/06/2021\nTs ate x F 5-09\" 4alss\nLyit ‘e Eyes BRO 7 wet 133 Ib\n5 DD 0000000000004432 12/26/03",
+          "campos": {
+            "ciu": "W783479",
+            "nombres": "SEO",
+            "apellidos": "SATO",
+            "fecha_nacimiento": "12/26/2003"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:52:11.408727",
+      "actualizado_en": "2026-07-05T04:52:11.396279"
+    },
+    "W672757": {
+      "ciu": "W672757",
+      "datos_personales": {
+        "ciu": "W672757",
+        "nombres": "CHLOE",
+        "apellidos": "HOWARD",
+        "fecha_nacimiento": "04/01/1991"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:52:15.762795",
+          "timestamp": "2026-07-05T04:52:15.762795",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0052096.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsap.no. W672757 4b Exp 11/21/2028\n3 pos 04/01/1991\n1 HOWARD\n2 CHLOE\n3 4274 9TH STREET\nHUNTINGTON, WV 25701\n9 Class C\n9aEnd NONE\n12 Resur B\nheowas, 15 Sex F 16 Hgt 6'-06\" 4aiss 11/21/2023\n18 Eyes BLU 17 Wgt 158 Ib\n5 DD 0000000000003970 04/0 1 /91",
+          "campos": {
+            "ciu": "W672757",
+            "nombres": "CHLOE",
+            "apellidos": "HOWARD",
+            "fecha_nacimiento": "04/01/1991"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:52:15.768941",
+      "actualizado_en": "2026-07-05T04:52:15.762795"
+    },
+    "W131948": {
+      "ciu": "W131948",
+      "datos_personales": {
+        "ciu": "W131948",
+        "nombres": "GEORGE",
+        "apellidos": "GARCIA",
+        "fecha_nacimiento": "04/18/1992"
+      },
+      "informes_laboratorio": [],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-05T04:52:19.006267",
+          "timestamp": "2026-07-05T04:52:19.006267",
+          "fuente": "DNI_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0052304.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_USA",
+          "texto_crudo": "WEST VIRGINIA“\ncovernor: JAMES C. JUSTICE. Il\nsao.no.W131948 4b Exp 09/20/2029\n3 pos 04/18/1992\n1 GARCIA\n2 GEORGE\n8 132 CENTRAL AVENUE\nSOUTH CHARLESTON, WV 25309\nass B\n%. a End NONE\n12 Restr B\n15Sex M 16 Hgt 5'-07\" 4alss 09/20/2024\nger 18 Eyes BRO 17 wat 202 Ib\n5 BD 0000000000003667 04/18/92",
+          "campos": {
+            "ciu": "W131948",
+            "nombres": "GEORGE",
+            "apellidos": "GARCIA",
+            "fecha_nacimiento": "04/18/1992"
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-05T04:52:19.013033",
+      "actualizado_en": "2026-07-05T04:52:19.006267"
     }
   }
 }

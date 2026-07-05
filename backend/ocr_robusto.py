@@ -48,6 +48,7 @@ except ImportError:
 
 OCR_LANG = "spa+eng"
 THRESHOLD = 150
+MAX_IMAGES = 1  # Limitador temporal: número máximo de imágenes a procesar por carpeta (1..100)
 
 
 def _get_tesseract_cmd() -> Optional[str]:
@@ -612,6 +613,7 @@ def autoscan_folders(
     dni_folder: str = "DNI_ALDIMI",
     lab_folder: str = "LAB_ALDIMI",
     output_json: str = "aldimi_pacientes.json",
+    max_images: int = MAX_IMAGES,
 ) -> Dict[str, Any]:
     """
     Escanea DNI_ALDIMI y LAB_ALDIMI, procesa todas las imágenes.
@@ -626,35 +628,56 @@ def autoscan_folders(
         "pacientes": {},
     }
     
-    # Procesar DNI
-    if Path(dni_folder).is_dir():
-        for ext in ["*.png", "*.jpg", "*.jpeg"]:
-            for ruta in Path(dni_folder).glob(ext):
-                try:
-                    resultado = procesar_imagen(str(ruta))
-                    if resultado["estado"] == "ok" and resultado["tipo"] == "DNI_PERU":
-                        ciu = resultado["campos"].get("ciu", "DESCONOCIDO")
-                        resultados["pacientes"][ciu] = resultado["campos"]
-                        resultados["dni_procesados"] += 1
-                except Exception as e:
-                    resultados["errores"] += 1
-    
-    # Procesar LAB
-    if Path(lab_folder).is_dir():
-        for ext in ["*.png", "*.jpg", "*.jpeg"]:
-            for ruta in Path(lab_folder).glob(ext):
-                try:
-                    resultado = procesar_imagen(str(ruta))
-                    if resultado["estado"] == "ok" and resultado["tipo"] in ("LAB_REPORT", "INFORME_MEDICO"):
-                        ciu = resultado["campos"].get("ciu", "DESCONOCIDO")
-                        if ciu in resultados["pacientes"]:
-                            if "informe_laboratorio" not in resultados["pacientes"][ciu]:
-                                resultados["pacientes"][ciu]["informe_laboratorio"] = resultado["campos"]
-                        resultados["lab_procesados"] += 1
-                        if resultado["campos"].get("alertas"):
-                            resultados["alertas"].extend(resultado["campos"]["alertas"])
-                except Exception as e:
-                    resultados["errores"] += 1
+    # Recolectar listas ordenadas de archivos y limitar por índice (pareo por fila)
+    def _gather_images(folder: str) -> List[Path]:
+        p = Path(folder)
+        if not p.is_dir():
+            return []
+        imgs = []
+        for ext in ("*.png", "*.jpg", "*.jpeg"):
+            imgs.extend(list(p.glob(ext)))
+        imgs = sorted(imgs, key=lambda x: x.name)
+        # normalizar max_images: None or <=0 => sin límite
+        try:
+            if max_images is None or int(max_images) <= 0:
+                return imgs
+            n = min(100, max(1, int(max_images)))
+            return imgs[:n]
+        except Exception:
+            return imgs
+
+    dni_list = _gather_images(dni_folder)
+    lab_list = _gather_images(lab_folder)
+
+    total_pairs = max(len(dni_list), len(lab_list))
+    for i in range(total_pairs):
+        # Procesar DNI por índice
+        if i < len(dni_list):
+            ruta = dni_list[i]
+            try:
+                resultado = procesar_imagen(str(ruta))
+                if resultado.get("estado") == "ok" and resultado.get("tipo") == "DNI_PERU":
+                    ciu = resultado["campos"].get("ciu", "DESCONOCIDO")
+                    resultados["pacientes"][ciu] = resultado["campos"]
+                    resultados["dni_procesados"] += 1
+            except Exception:
+                resultados["errores"] += 1
+
+        # Procesar LAB por índice
+        if i < len(lab_list):
+            ruta = lab_list[i]
+            try:
+                resultado = procesar_imagen(str(ruta))
+                if resultado.get("estado") == "ok" and resultado.get("tipo") in ("LAB_REPORT", "INFORME_MEDICO"):
+                    ciu = resultado["campos"].get("ciu", "DESCONOCIDO")
+                    if ciu in resultados["pacientes"]:
+                        if "informe_laboratorio" not in resultados["pacientes"][ciu]:
+                            resultados["pacientes"][ciu]["informe_laboratorio"] = resultado["campos"]
+                    resultados["lab_procesados"] += 1
+                    if resultado["campos"].get("alertas"):
+                        resultados["alertas"].extend(resultado["campos"]["alertas"])
+            except Exception:
+                resultados["errores"] += 1
     
     # Guardar JSON
     try:
@@ -664,6 +687,40 @@ def autoscan_folders(
         pass
     
     return resultados
+
+
+def procesar_documento(ruta: str) -> Dict[str, Any]:
+    """
+    Wrapper de compatibilidad para la API antigua.
+    Llama a `procesar_imagen` y mapea la salida al esquema esperado
+    por `backend/main.py` y el frontend legado.
+    """
+    # Este wrapper devuelve el esquema legacy que espera el resto del sistema:
+    # { "tipo_documento", "texto_crudo", "campos", "advertencia" }
+    texto = extraer_texto_ocr(ruta)
+    resultado = procesar_imagen(ruta)
+
+    if resultado.get("estado") != "ok":
+        return {
+            "tipo_documento": "UNKNOWN",
+            "texto_crudo": texto or "",
+            "campos": {},
+            "advertencia": resultado.get("mensaje", "OCR no pudo extraer texto suficiente."),
+        }
+
+    tipo = resultado.get("tipo", "UNKNOWN")
+    campos = resultado.get("campos", {}) or {}
+
+    # Normalizar alertas para compatibilidad con expediente.py
+    if tipo in ("LAB_REPORT", "INFORME_MEDICO") and "alertas" in campos and "alertas_detectadas" not in campos:
+        campos["alertas_detectadas"] = campos.pop("alertas")
+
+    return {
+        "tipo_documento": tipo,
+        "texto_crudo": texto or "",
+        "campos": campos,
+        "advertencia": None,
+    }
 
 
 if __name__ == "__main__":

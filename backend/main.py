@@ -61,10 +61,18 @@ async def startup_scan_drives():
     
     try:
         # Auto-scan con OCR robusto
+        # Por defecto limitado a 1 imagen por carpeta para pruebas rápidas.
+        max_images_env = os.environ.get("ALDIMI_MAX_IMAGES", "1")
+        try:
+            max_images = int(max_images_env)
+        except Exception:
+            max_images = 1
+
         resultados = ocr.autoscan_folders(
             dni_folder="DNI_ALDIMI",
             lab_folder="LAB_ALDIMI",
             output_json="aldimi_pacientes.json",
+            max_images=max_images,
         )
         
         print(f"[STARTUP] ✅ Escaneo completado:")

@@ -31,6 +31,9 @@ if ($useDrive) {
 
 $env:USE_NOTEBOOK = "1"
 Write-Host "USE_NOTEBOOK=1 establecido para backend." -ForegroundColor Cyan
+# Limitar procesamiento inicial durante pruebas (1 = primera imagen de cada carpeta)
+$env:ALDIMI_MAX_IMAGES = "1"
+Write-Host "ALDIMI_MAX_IMAGES=1 (limitador de imágenes por carpeta)" -ForegroundColor Cyan
 
 # Check Python
 if (-not (Get-Command python -ErrorAction SilentlyContinue)) {
@@ -72,6 +75,7 @@ if (Test-Path $reqFile) {
         "Pillow",
         "numpy",
         "opencv-python-headless",
+        "easyocr",
         "torch",
         "torchvision",
         "transformers",
@@ -114,6 +118,15 @@ $backendCommand = "Set-Location -LiteralPath '$backendDir'; & '$activate'; & '$v
 $staticCommand  = "Set-Location -LiteralPath '$root'; & '$activate'; & '$venvPython' -m http.server $staticPort"
 
 Write-Host "Iniciando backend (uvicorn) en nueva ventana de PowerShell..."
+# Ejecutar autoscan localmente para generar backend/aldimi_pacientes.json antes de arrancar el servidor
+Write-Host "Ejecutando autoscan local para generar backend/aldimi_pacientes.json..."
+try {
+    & $venvPython scripts\run_autoscan.py
+    Write-Host "Autoscan finalizado." -ForegroundColor Green
+} catch {
+    Write-Warning "Autoscan falló, revisa la salida. Se continuará intentando iniciar el backend." 
+}
+
 Start-Process -FilePath powershell -ArgumentList "-NoExit","-Command",$backendCommand
 
 Write-Host "Iniciando servidor estático en puerto $staticPort en nueva ventana..."

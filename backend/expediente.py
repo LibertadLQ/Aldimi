@@ -8,7 +8,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-import ocr
+import ocr_robusto as ocr
 from db import cargar_bd, cargar_sesiones, guardar_bd, guardar_sesiones
 from storage import DNI_DIR, LAB_DIR, OCR_IMAGES_DIR
 
