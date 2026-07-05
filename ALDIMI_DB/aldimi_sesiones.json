@@ -1641,5 +1641,47 @@
       "alertas_detectadas": []
     },
     "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-05T05:14:21.122757",
+    "timestamp": "2026-07-05T05:14:21.122757",
+    "fuente": "LAB_ALDIMI",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053481_Q-CHHAYADEVI21.04.20250001compressed_250427_1617@F.pdf_page_42.png",
+    "archivo_copia": null,
+    "tipo_documento": "LAB_REPORT",
+    "texto_crudo": "7 Jhajjar Road, Bahadurgarh\nThe Sicrit To Care\n1005 Date [a\nPatient CIU: W112474\n— eee ee |\nMY Ss SWASTIK HOSPITAL | |\nPHYSICAL EXAMINATION\nQUANTITY 20 mi.\nCOLOUR PALE YELLOW\nTRANSPARENCY SLIGHTLY TURBID\nSPECIFIC GRAVITY 1.025 1.005-1.025\nPH 6.0 §.5-6.5\nCHEMICAL EXAMINATION\nALBUMIN NIL NIL\nREDUCING SUGAR NIL NIL\nBLOOD NIL NIL NIL\nKETON NIL NIL NIL\nBILIRUBIN NIL NIL NIL\nMICROSCOPIC EXAMINATION\nPUS CELLS 20-30 /HPF 1-2\nRBC'S NIL /HPF NIL\nCASTS NIL NIL\nCRYSTALS NIL NIL\nEPITHELIAL CELLS 20-22 /HPF 1-2\nBACTERIA NIL NIL\nUe yo 78/1 dey yA EG ri fret e F MBBS 425\nP fi: © 3D/4D Ultrasound\n6 anel: a } # Color Doppler\ne Dethi Government © Digital X-Ray\nf ° oe Jal Board NOT FOR MEDICO LEGAL PURPOSE BS ecaanauntoad ¢ ab\n® All TPA & Insurance an",
+    "campos": {
+      "ciu": "W112474",
+      "pruebas": [],
+      "tipo": "LAB_REPORT",
+      "alertas_detectadas": []
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-05T05:14:30.333417",
+    "timestamp": "2026-07-05T05:14:30.333417",
+    "fuente": "LAB_ALDIMI",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053567_Q-PT.ROSHNIESIBUNCH11zon_250427_1622@F.pdf_page_41.png",
+    "archivo_copia": null,
+    "tipo_documento": "UNKNOWN",
+    "texto_crudo": "= \\\nDESHWAL'S CLINICAL LABORATORY 1\nGohana Road, Krishan Pura, PANIPAT-13210 Dr. Rashmi Tayal\npharambir Doshwal M. : 74046-03651 MiQBS, MO (Pathology)\nly \\ )\n| Patient CW: ee ee\na ee ee\nM882 Reported : 18-Apr-25 03:50 PM\n. Reported Status ; Final\np\n| Referred By. Dr. Anil Mittal\nBiochemistry Report\nInvestigation. Result ___Normal Range\nSerum Cholesterol 159 mg/dl [130 - 250 mg/dl]\n» Serum Triglycerides 124 mg/dl [Less than 150 mg/dl]\nHDL Cholesterol 36 mg/dl [30 - 65 mg/dl]\nLDL Cholesterol 98.2 mp/dl [Less than 130 mg/dl]\nVLDL Cholesterol 24.8 mg/dl [Less than 40 mg/dl]\n| Serum Amylase ~ 105 U/L [Up to 85 U/L] - |\n| Serum Lipase 180U/L ~ [Up to 160 U/L] | |\n> : _ a a\n| CRP Quantitative 40 mg/l - [0 -6 mg/l] i |\nFS } “A\n5, MD (Pat\nullant Patt ~\nvie\nNOT VALID FOR MEDICO-LEGAL PURPOSE Lab Technician\nA Ey auto Prades iy ay This Is a professional opinion, not a diagnosis,\n@ HBAIC Auto-Analyzer Ploase co-rolate with clinical & other investigations,",
+    "campos": {
+      "tipo": "UNKNOWN"
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-05T05:14:39.210877",
+    "timestamp": "2026-07-05T05:14:39.210877",
+    "fuente": "LAB_ALDIMI",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053567_Q-PT.ROSHNIESIBUNCH11zon_250427_1622@F.pdf_page_63.png",
+    "archivo_copia": null,
+    "tipo_documento": "UNKNOWN",
+    "texto_crudo": "DESHWAL'S CLINICAL LABORATORY ;\ne\n¢\ni NIPAT-132103 2\nD Gohana Road, Krishan Pura, PA Dr. Rashmi Tayal\nparambir Deshwal M. : 74046-03651 MBBS, KD (Pathology)\naS.\nPatient Clu: i\na EE ee\nHE : 957 Reported : 20-Apr-25 10:18AM\nmm a Reported Status: Final\n| Referred By. Dr. Anil Mittal\n—— = a\nUrine Examination\nPhysical Examination\nColour........ P.Yellow\n> Specific Gravity...QNS\nTurbidity .... Nil\nChemical Examination\nReaction... Acidic\nAlbumin... Nil\nSugar ....... Nil\nMicroscopic Examination.\nPusCells ... 20 -25/HPF\nt RBC .. 2-3/HPF A\n<\\) TAD\nEpithelal Cells... 1-2 /HPF % wo\nod =\nSs Pa\nCrystal ssevese Nil a\nRes KS\nCast commas ANE\nAny Other __........ A Few Bacteria\nhe\nDr. Rashmi Tayal\nMBBS. MD (Pathology)\nConsultant Pathologist A -\nbos\nNOT VALID FOR MEDICO-LEGAL PURPOSE Lah: Technicion\n. er hate Slo-chenn eee This is a professional opinion, not a diagnosis.\n. HBAIC Auto-Analyzer Please co-relate with clinical & other investigations.",
+    "campos": {
+      "tipo": "UNKNOWN"
+    },
+    "advertencia": null
   }
 ]

@@ -1,6 +1,6 @@
 {
   "sesion": {
-    "ultima_actualizacion": "2026-07-05T05:14:12.992135",
+    "ultima_actualizacion": "2026-07-05T05:14:21.128650",
     "archivo": "aldimi_pacientes.json"
   },
   "pacientes": {
@@ -751,7 +751,13 @@
         "apellidos": "FLORES",
         "fecha_nacimiento": "08/01/1997"
       },
-      "informes_laboratorio": [],
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-05T05:14:21.122757"
+        }
+      ],
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
@@ -769,10 +775,26 @@
             "fecha_nacimiento": "08/01/1997"
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-05T05:14:21.122757",
+          "timestamp": "2026-07-05T05:14:21.122757",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053481_Q-CHHAYADEVI21.04.20250001compressed_250427_1617@F.pdf_page_42.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "7 Jhajjar Road, Bahadurgarh\nThe Sicrit To Care\n1005 Date [a\nPatient CIU: W112474\n— eee ee |\nMY Ss SWASTIK HOSPITAL | |\nPHYSICAL EXAMINATION\nQUANTITY 20 mi.\nCOLOUR PALE YELLOW\nTRANSPARENCY SLIGHTLY TURBID\nSPECIFIC GRAVITY 1.025 1.005-1.025\nPH 6.0 §.5-6.5\nCHEMICAL EXAMINATION\nALBUMIN NIL NIL\nREDUCING SUGAR NIL NIL\nBLOOD NIL NIL NIL\nKETON NIL NIL NIL\nBILIRUBIN NIL NIL NIL\nMICROSCOPIC EXAMINATION\nPUS CELLS 20-30 /HPF 1-2\nRBC'S NIL /HPF NIL\nCASTS NIL NIL\nCRYSTALS NIL NIL\nEPITHELIAL CELLS 20-22 /HPF 1-2\nBACTERIA NIL NIL\nUe yo 78/1 dey yA EG ri fret e F MBBS 425\nP fi: © 3D/4D Ultrasound\n6 anel: a } # Color Doppler\ne Dethi Government © Digital X-Ray\nf ° oe Jal Board NOT FOR MEDICO LEGAL PURPOSE BS ecaanauntoad ¢ ab\n® All TPA & Insurance an",
+          "campos": {
+            "ciu": "W112474",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "alertas_detectadas": []
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-05T04:50:16.872150",
-      "actualizado_en": "2026-07-05T04:50:16.869770"
+      "actualizado_en": "2026-07-05T05:14:21.122757"
     },
     "W972138": {
       "ciu": "W972138",
