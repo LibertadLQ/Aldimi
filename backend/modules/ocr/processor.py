@@ -106,20 +106,20 @@ class EnhancedOCRProcessor:
         img = cv2.imread(image_path)
         if img is None:
             raise ValueError(f"Cannot load image: {image_path}")
-        
+
         # Convertir a escala de grises
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-        
+
         # Aplicar CLAHE
         clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8, 8))
         enhanced = clahe.apply(gray)
-        
+
         # Bilateral filter (preserva bordes)
         bilateral = cv2.bilateralFilter(enhanced, 9, 75, 75)
-        
+
         # Median filter para denoise
         denoised = cv2.medianBlur(bilateral, 3)
-        
+
         return denoised
     
     def extract_text_robust(self, image_path: str) -> str:
@@ -132,7 +132,7 @@ class EnhancedOCRProcessor:
                 img_pil = Image.fromarray(processed)
             else:
                 img_pil = Image.open(image_path)
-            
+
             # Usar PSM 6 (bloque de texto uniforme) para tablas
             text = pytesseract.image_to_string(
                 img_pil,
@@ -176,17 +176,35 @@ class EnhancedOCRProcessor:
         
         # Name (buscar patrones comunes)
         patterns_name = [
+            # DNI: apellido y nombre después de fecha DOB (pos YYYY)
+            r'pos\s+\d{2}/\d{2}/\d{4}\s*[^\n]*\n\s*[;>\|]?\s*([A-Z]{3,})[^\n]*\n\s*[;>\|]?\s*([A-Z]{3,})',
+            # DNI: solo apellido después de fecha
+            r'pos\s+\d{2}/\d{2}/\d{4}\s*[^\n]*\n\s*\|\s*([A-Z]{3,})\s*\(',
+            # Patient Name en reportes médicos
             r'(?:Patient|Paciente)\s+Name\s*:?\s*([A-Z][A-Za-z\s]{2,40}?)(?:\n|Age|DOB)',
-            r'NIKHIL\s+MAKARAND',
-            r'([A-Z][A-Za-z]+\s+[A-Z][A-Za-z]+)',
+            # Dos palabras capitalizadas
+            r'([A-Z][a-z]+\s+[A-Z][a-z]+)',
         ]
         for pattern in patterns_name:
-            match = re.search(pattern, text, re.IGNORECASE)
+            match = re.search(pattern, text)
             if match:
-                name = match.group(1 if match.lastindex and match.lastindex > 0 else 0)
-                if len(name) > 2:
-                    info.name = name.strip()
-                    break
+                # Si tiene 2 grupos (apellido + nombre)
+                if match.lastindex and match.lastindex >= 2:
+                    apellido = match.group(1).strip()
+                    nombre = match.group(2).strip()
+                    # Filtrar basura (palabras con caracteres extraños o muy cortas)
+                    if len(apellido) >= 3 and len(nombre) >= 3 and apellido.isalpha() and nombre.isalpha():
+                        name = f"{nombre} {apellido}"
+                    else:
+                        continue
+                else:
+                    name = match.group(1).strip()
+
+                # Filtrar estados USA comunes
+                if name.upper() not in ['WEST VIRGINIA', 'NEW YORK', 'CALIFORNIA', 'TEXAS', 'FLORIDA', 'GOVERNOR']:
+                    if len(name) > 2:
+                        info.name = name
+                        break
         
         # Age
         match = re.search(r'Age\s*:?\s*(\d{1,3})', text, re.IGNORECASE)
@@ -247,10 +265,32 @@ class EnhancedOCRProcessor:
                                          'DISCLAIMER', 'REFERENCE', 'COLLECTION', 'REPORTING']):
                 continue
             
+            # Buscar patrón NEGATIVE/POSITIVE (para serology)
+            text_match = re.search(r'(NEGATIVE|POSITIVE|REACTIVE|NON-REACTIVE)', stripped, re.IGNORECASE)
+            if text_match and ':' in stripped:
+                # Extraer nombre antes de ":"
+                parts = stripped.split(':')
+                if len(parts) >= 2:
+                    test_name = parts[0].strip()
+                    result_text = parts[1].strip().upper()
+
+                    # Convertir a valor numérico (0 = negative, 1 = positive)
+                    numeric_value = 1.0 if 'POSITIVE' in result_text or 'REACTIVE' in result_text else 0.0
+
+                    if len(test_name) >= 3:
+                        values.append(LabValue(
+                            test_name=test_name,
+                            value=numeric_value,
+                            unit='qualitative',
+                            reference_range=None,
+                            status='negative' if numeric_value == 0 else 'positive'
+                        ))
+                        continue
+
             # Buscar patrón: línea con nombre + número + unidad
             # Patrón más permisivo para capturar variaciones
             num_match = re.search(r'(\d+\.?\d*)\s*[#*]?\s+([a-zA-Z/%\-]+)', stripped)
-            
+
             if not num_match:
                 continue
             
@@ -269,7 +309,19 @@ class EnhancedOCRProcessor:
                 # Validar nombre
                 if not test_name or len(test_name) < 3 or len(test_name) > 100:
                     continue
-                
+
+                # Filtrar líneas que no son nombres de tests reales
+                test_upper = test_name.upper()
+                invalid_keywords = ['DATE', 'SRI NO', 'PATIENT', 'CIU', 'PATHOLOG', 'CONSULTANT',
+                                   'SEROLOGICAL', 'IN ORDER TO', 'METHODS ARE', 'BASED METHODS',
+                                   'ANTIBODIES BASED']
+                if any(kw in test_upper for kw in invalid_keywords):
+                    continue
+
+                # Filtrar nombres demasiado cortos o que parecen código (NS-, ig, etc)
+                if len(test_name) <= 3 and not test_name.isalpha():
+                    continue
+
                 # Remover caracteres de paciente si se mezcló
                 if 'Patient' in test_name or 'CIU' in test_name:
                     test_name = re.sub(r'\s+Patient.*', '', test_name).strip()
