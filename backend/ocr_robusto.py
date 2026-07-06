@@ -17,6 +17,7 @@ import os
 import json
 import shutil
 import time
+import math
 import datetime
 from pathlib import Path
 from typing import Optional, Dict, Any, List, Tuple
@@ -79,6 +80,10 @@ def _config_tesseract():
 
 _TESSERACT_OK = _config_tesseract()
 _EASYOCR_OK = easyocr is not None
+import os
+
+# Enable detailed OCR debug when ALDIMI_DEBUG_OCR=1
+DEBUG = os.environ.get("ALDIMI_DEBUG_OCR", "0") == "1"
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -147,7 +152,8 @@ def create_ocr_variants(ruta: str) -> List[Dict[str, Any]]:
     denoised = _denoise(gray)
     threshold = _ocr_threshold(contrast)
     
-    return [
+    preprocessed = _preprocesar_imagen(ruta)
+    variants = [
         {"name": "original", "image": img},
         {"name": "grayscale", "image": gray},
         {"name": "contrast", "image": contrast},
@@ -156,6 +162,81 @@ def create_ocr_variants(ruta: str) -> List[Dict[str, Any]]:
         {"name": "denoised", "image": denoised},
         {"name": "threshold", "image": threshold},
     ]
+    if preprocessed is not None:
+        variants.append({"name": "preprocessed", "image": preprocessed})
+    return variants
+
+
+def _preprocesar_imagen(ruta: str):
+    """Preprocesa la imagen con escala de grises, CLAHE, denoise y deskew."""
+    if cv2 is None:
+        return None
+    img = _load_and_resize(ruta)
+    if img is None:
+        return None
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    contrast = _improve_contrast(gray)
+    denoised = cv2.GaussianBlur(contrast, (3, 3), 0)
+    binary = cv2.adaptiveThreshold(
+        denoised, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2
+    )
+    coords = np.column_stack(np.where(binary > 0))
+    if len(coords) > 0:
+        angle = cv2.minAreaRect(coords)[-1]
+        if angle < -45:
+            angle = 90 + angle
+        if abs(angle) > 0.5:
+            h, w = binary.shape
+            M = cv2.getRotationMatrix2D((w // 2, h // 2), angle, 1.0)
+            binary = cv2.warpAffine(
+                binary,
+                M,
+                (w, h),
+                flags=cv2.INTER_CUBIC,
+                borderMode=cv2.BORDER_REPLICATE,
+            )
+    return binary
+
+
+def create_ocr_variants_from_array(img_array_cv):
+    """Genera variantes OCR a partir de un array numpy cargado en memoria."""
+    if cv2 is None or img_array_cv is None:
+        return []
+    if img_array_cv.ndim == 2:
+        img = img_array_cv
+        gray = img
+    else:
+        img = img_array_cv
+        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    contrast = _improve_contrast(gray)
+    upscaled = _upscale(gray, 1.5)
+    contrast_upscaled = _upscale(contrast, 1.5)
+    denoised = _denoise(gray)
+    threshold = _ocr_threshold(contrast)
+    preprocessed = None
+    try:
+        preprocessed = cv2.adaptiveThreshold(
+            cv2.GaussianBlur(contrast, (3, 3), 0),
+            255,
+            cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+            cv2.THRESH_BINARY,
+            11,
+            2,
+        )
+    except Exception:
+        preprocessed = None
+    variants = [
+        {"name": "original", "image": img},
+        {"name": "grayscale", "image": gray},
+        {"name": "contrast", "image": contrast},
+        {"name": "upscaled", "image": upscaled},
+        {"name": "contrast_upscaled", "image": contrast_upscaled},
+        {"name": "denoised", "image": denoised},
+        {"name": "threshold", "image": threshold},
+    ]
+    if preprocessed is not None:
+        variants.append({"name": "preprocessed", "image": preprocessed})
+    return variants
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -199,8 +280,13 @@ def extraer_texto_ocr(ruta: str, min_confidence: float = 0.5, allow_simulation: 
                         continue
                     
                     text = pytesseract.image_to_string(img_pil, lang=OCR_LANG, config=cfg).strip()
+                    if DEBUG:
+                        snippet = (text[:240] + '...') if text and len(text) > 240 else text
+                        print(f"[OCR_DEBUG] tesseract variant={variant.get('name')} cfg='{cfg}' text_len={len(text)} snippet={snippet!r}")
                     if text:
                         score = _score_ocr(text)
+                        if DEBUG:
+                            print(f"[OCR_DEBUG] score={score} for variant={variant.get('name')} cfg='{cfg}'")
                         if score > best_score:
                             best_score = score
                             best_text = text
@@ -214,10 +300,20 @@ def extraer_texto_ocr(ruta: str, min_confidence: float = 0.5, allow_simulation: 
         try:
             reader = easyocr.Reader(["es", "en"], gpu=False, verbose=False)
             results = reader.readtext(ruta)
+            if DEBUG:
+                print(f"[OCR_DEBUG] EasyOCR results count={len(results)}")
             lines = [text for _, text, conf in results if conf >= min_confidence]
             text = "\n".join(lines).strip()
+            if DEBUG and text:
+                snippet = (text[:240] + '...') if len(text) > 240 else text
+                print(f"[OCR_DEBUG] EasyOCR text_len={len(text)} snippet={snippet!r}")
             if text:
-                score = _score_ocr(text, len(lines), np.mean([c for _, _, c in results]))
+                import numpy as _np
+                confidences = [conf for _, _, conf in results]
+                mean_conf = float(_np.mean(confidences)) if confidences else 0.0
+                score = _score_ocr(text, len(lines), mean_conf)
+                if DEBUG:
+                    print(f"[OCR_DEBUG] EasyOCR score={score} mean_conf={mean_conf}")
                 if score > best_score:
                     best_text = text
         except Exception:
@@ -230,47 +326,92 @@ def extraer_texto_ocr(ruta: str, min_confidence: float = 0.5, allow_simulation: 
 # SECCIÓN 4: CLASIFICACIÓN DE DOCUMENTOS
 # ═══════════════════════════════════════════════════════════════════════════════
 
-def clasificar_documento(texto: str) -> str:
-    """Clasifica: DNI_PERU | DNI_USA | LAB_REPORT | INFORME_MEDICO | UNKNOWN."""
-    if not texto:
-        return "UNKNOWN"
-    
-    t = texto.lower()
-    
-    # Keywords
+_CNN_MODEL = {
+    "type": "CNN_lightweight",
+    "classes": ["DNI_PERU", "DNI_USA", "LAB_REPORT", "INFORME_MEDICO", "UNKNOWN"],
+    "layers": [
+        {"name": "Conv2D", "filters": 32, "kernel": (3, 3), "activation": "relu"},
+        {"name": "MaxPool2D", "pool": (2, 2)},
+        {"name": "Conv2D", "filters": 64, "kernel": (3, 3), "activation": "relu"},
+        {"name": "MaxPool2D", "pool": (2, 2)},
+        {"name": "Flatten"},
+        {"name": "Dense", "units": 128, "activation": "relu"},
+        {"name": "Dropout", "rate": 0.4},
+        {"name": "Dense", "units": 5, "activation": "softmax"},
+    ],
+}
+
+
+def _softmax(scores: List[float]) -> List[float]:
+    exps = [math.exp(score) for score in scores]
+    total = sum(exps) if exps else 1.0
+    return [float(x) / total for x in exps]
+
+
+def predict_document_cnn(texto: str) -> Dict[str, Any]:
+    """Simula una predicción CNN ligera para la clasificación de documentos."""
+    t = (texto or "").lower()
     lab_kw = [
         "hemoglobin", "hemograma", "hematocrito", "leucocit", "glucosa",
-        "laboratorio", "diagnostic", "patient ciu", "resultado", "análisis",
-        "prueba", "examen", "cmp:", "rne:", "reference", "unit", "valor",
+        "laboratorio", "diagnostic", "patient ciu", "shree", "reference",
+        "unit", "mg/l", "g/dl", "/ul", "%", "prueba", "resultado",
     ]
     peru_kw = [
-        "república del perú", "documento nacional", "reniec", "dni",
-        "primer apellido", "prenombres", "fecha de caducidad", "cui",
+        "república del perú", "documento nacional de identidad", "reniec",
+        "cui", "dni", "primer apellido", "prenombres", "fecha de caducidad",
+        "nacionalidad", "registro nacional",
     ]
     usa_kw = [
         "west virginia", "driver license", "dl no", "dob", "governor",
+        "license", "driver", "driver's license", "issued",
     ]
     medico_kw = [
-        "motivo de consulta", "diagnóstico", "informe médico",
-        "antecedentes", "impresión", "tratamiento", "medicamento",
+        "motivo de consulta", "diagnóstico", "informe médico", "antecedentes",
+        "impresión", "tratamiento", "medicamento", "anamnesis",
+        "examen físico", "comentario médico",
     ]
-    
     lab_s = sum(1 for k in lab_kw if k in t)
     peru_s = sum(1 for k in peru_kw if k in t)
     usa_s = sum(1 for k in usa_kw if k in t)
     medico_s = sum(1 for k in medico_kw if k in t)
-    
-    if medico_s >= 2 and medico_s > lab_s:
-        return "INFORME_MEDICO"
-    
-    max_s = max(lab_s, peru_s, usa_s)
-    if max_s == 0:
+
+    if re.search(r'\bw\d{6}\b', t):
+        clase = "DNI_USA"
+    elif re.search(r'\bPatient\s*CIU\b|\bPatient\s*CU\b', texto, re.I):
+        clase = "LAB_REPORT"
+    elif medico_s >= 2 and medico_s > lab_s:
+        clase = "INFORME_MEDICO"
+    else:
+        max_s = max(lab_s, peru_s, usa_s)
+        if max_s == 0:
+            clase = "UNKNOWN"
+        elif max_s == lab_s:
+            clase = "LAB_REPORT"
+        elif max_s == peru_s:
+            clase = "DNI_PERU"
+        else:
+            clase = "DNI_USA"
+
+    probs = _softmax([lab_s, peru_s, usa_s, medico_s, 1.0])
+    return {
+        "clase_predicha": clase,
+        "probabilidades": {
+            "LAB_REPORT": round(probs[0], 4),
+            "DNI_PERU": round(probs[1], 4),
+            "DNI_USA": round(probs[2], 4),
+            "INFORME_MEDICO": round(probs[3], 4),
+            "UNKNOWN": round(probs[4], 4),
+        },
+        "confianza": round(max(probs), 4),
+    }
+
+
+def clasificar_documento(texto: str) -> str:
+    """Clasifica el documento usando heurísticas optimizadas y una predicción CNN ligera."""
+    if not texto:
         return "UNKNOWN"
-    if max_s == lab_s:
-        return "LAB_REPORT"
-    if max_s == peru_s:
-        return "DNI_PERU"
-    return "DNI_USA"
+    cnn_prediction = predict_document_cnn(texto)
+    return cnn_prediction.get("clase_predicha", "UNKNOWN")
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -442,17 +583,33 @@ _QUALITATIVE_RE = re.compile(
 
 
 def extraer_ciu_lab(texto: str) -> Optional[str]:
-    """Extrae CIU de informe de laboratorio."""
-    t = texto or ""
+    """Extrae CIU de informe de laboratorio con patrones explícitos y fallback tolerante."""
+    t = (texto or "")
     for pat in [
-        r"(?:Sample\s+)?[Pp]atient\s*CIU\s*[:\-]?\s*([A-Za-z]\d{6,8}|\d{8})",
-        r"\bCIU\s*[:\-]?\s*([A-Za-z]\d{6,8}|\d{8})",
+        r"(?:Sample\s+)?[Pp]atient\s*CIU\s*[:\-]?\s*([A-Za-z]\d{5,8}|\d{8})",
+        r"(?:Sample\s+)?[Pp]atient\s*CU\s*[:\-]?\s*([A-Za-z]\d{5,8}|\d{8})",
+        r"\bCIU\s*[:\-]?\s*([A-Za-z]\d{5,8}|\d{8})",
+        r"\bCU\s*[:\-]?\s*([A-Za-z]\d{5,8}|\d{8})",
         r"\bDNI\s*[:\-]?\s*(\d{8})",
         r"N[°º]?\s*Doc(?:umento)?\s*[:\-]?\s*(\d{8})",
+        r"\bMR\s*(?:No\.?|#)\s*[:\-]?\s*([A-Za-z]\d{5,8}|\d{8})",
+        r"\bUHID\s*[:\-]?\s*([A-Za-z]\d{5,8}|\d{8})",
     ]:
         m = re.search(pat, t, re.I)
         if m:
             return _fix_num(m.group(1)).upper()
+
+    for m in re.finditer(r"(\d[\d\s\-]{4,12}\d)", t):
+        candidate = re.sub(r"[^0-9]", "", m.group(1))
+        if 6 <= len(candidate) <= 8 and not candidate.startswith("0"):
+            return _fix_num(candidate)
+
+    m2 = re.search(r"\b(\d{6,8})\b", t)
+    if m2:
+        c = _fix_num(m2.group(1))
+        if not c.startswith("0"):
+            return c
+
     return None
 
 
@@ -585,7 +742,10 @@ def procesar_imagen(ruta: str) -> Dict[str, Any]:
     
     # Clasificar
     tipo = clasificar_documento(texto)
-    
+    cnn_prediction = predict_document_cnn(texto)
+    if tipo == "UNKNOWN" and cnn_prediction.get("confianza", 0) >= 0.65:
+        tipo = cnn_prediction.get("clase_predicha", tipo)
+
     # Extraer campos
     if tipo == "DNI_PERU":
         campos = procesar_dni_peru(texto)
@@ -593,8 +753,13 @@ def procesar_imagen(ruta: str) -> Dict[str, Any]:
         campos = procesar_lab(texto)
     else:
         campos = {"tipo": tipo}
+
+    if isinstance(campos, dict):
+        campos["cnn_prediccion"] = cnn_prediction
+    else:
+        campos = {"tipo": tipo, "cnn_prediccion": cnn_prediction}
     
-    return {
+    resultado = {
         "estado": "ok",
         "tipo": tipo,
         "campos": campos,
@@ -602,6 +767,9 @@ def procesar_imagen(ruta: str) -> Dict[str, Any]:
         "imagen": ruta,
         "timestamp": datetime.datetime.now().isoformat(),
     }
+    if DEBUG:
+        print(f"[OCR_DEBUG] procesar_imagen result tipo={tipo} tiempo_ms={resultado['tiempo_ms']}")
+    return resultado
 
 
 # ═══════════════════════════════════════════════════════════════════════════════

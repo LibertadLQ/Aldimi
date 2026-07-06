@@ -140,8 +140,11 @@ def sincronizar_carpetas(max_images: int = 0) -> Dict[str, Any]:
     ]
     for nombre_carpeta, carpeta in carpetas:
         for path in _listar_imagenes(carpeta, max_images=max_images):
+            print(f"[SYNC] Procesando {nombre_carpeta}: {path.name}")
             resultado = ocr.procesar_documento(str(path))
+            print(f"[SYNC] Resultado preliminar: tipo={resultado.get('tipo_documento')} campos_keys={list((resultado.get('campos') or {}).keys())}")
             guardado = persistir_ocr_resultado(str(path), resultado, fuente=nombre_carpeta)
+            print(f"[SYNC] Persistencia: paciente_actualizado={guardado.get('paciente_actualizado')}")
             resultados.append({
                 "carpeta": nombre_carpeta,
                 "archivo": path.name,
