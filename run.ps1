@@ -31,9 +31,9 @@ if ($useDrive) {
 
 $env:USE_NOTEBOOK = "1"
 Write-Host "USE_NOTEBOOK=1 establecido para backend." -ForegroundColor Cyan
-# Limitar procesamiento inicial durante pruebas (1 = primera imagen de cada carpeta)
-$env:ALDIMI_MAX_IMAGES = "1"
-Write-Host "ALDIMI_MAX_IMAGES=1 (limitador de imágenes por carpeta)" -ForegroundColor Cyan
+# No limitar el procesamiento inicial de imágenes (0 = sin límite).
+$env:ALDIMI_MAX_IMAGES = "0"
+Write-Host "ALDIMI_MAX_IMAGES=0 (procesamiento completo de imágenes en el arranque)" -ForegroundColor Cyan
 
 # Check Python
 if (-not (Get-Command python -ErrorAction SilentlyContinue)) {
@@ -114,7 +114,7 @@ $backendDir = Join-Path $root "backend"
 
 $activate = Join-Path $venvPath "Scripts\Activate.ps1"
 
-$backendCommand = "& '$activate'; Set-Location -LiteralPath '$backendDir'; & '$venvPython' -m uvicorn main:app --host 127.0.0.1 --port 8000 --reload"
+$backendCommand = "& '$activate'; Set-Location -LiteralPath '$root'; & '$venvPython' -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload"
 $staticCommand  = "& '$activate'; Set-Location -LiteralPath '$root'; & '$venvPython' -m http.server $staticPort"
 
 Write-Host "Iniciando backend (uvicorn) en nueva ventana de PowerShell..."
@@ -155,7 +155,7 @@ if (-not $ok) {
     }
 }
 
-# Abrir la página principal
+# Abrir la página principal de inicio de sesión
 $indexUrl = "http://localhost:$staticPort/index.html"
 Write-Host "Abriendo $indexUrl en el navegador predeterminado..."
 try { Start-Process $indexUrl } catch { Write-Host "No se pudo abrir el navegador automáticamente." -ForegroundColor Yellow }

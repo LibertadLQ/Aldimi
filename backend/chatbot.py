@@ -71,17 +71,20 @@ def coincide_variante(texto_norm: str, variantes: List[str], umbral: float = 0.8
 _VARIANTES_AFIRMACION = [
     "si", "sí", "claro", "ok", "okay", "dale", "de acuerdo", "por favor",
     "obvio", "asi es", "correcto", "afirmativo", "va", "vale", "eso quiero",
-    "quiero mas informacion", "cuentame mas", "sigue",
+    "quiero mas informacion", "cuentame mas", "sigue", "pues si", "pues claro",
+    "por supuesto", "seguro", "listo", "esta bien", "ya", "sip", "dale pues",
 ]
- 
+
 _VARIANTES_NEGACION = [
     "no", "no gracias", "nada mas", "eso es todo", "asi esta bien",
     "no por ahora", "negativo", "esta bien asi", "ninguna", "no necesito nada mas",
+    "ah no", "no pues", "mejor despues", "ya no", "creo que no", "quizas despues",
 ]
  
 _VARIANTES_AGRADECIMIENTO = [
-    "gracias", "muchas gracias", "muy amable", "te agradezco", "mil gracias",
-    "gracias por la ayuda", "genial gracias",
+    "gracias", "muchas gracias", "mil gracias", "muy amable",
+    "te agradezco", "gracias por la ayuda", "gracias por todo",
+    "gracias hermano", "gracias amigo", "gracias bro",
 ]
  
 _VARIANTES_SALUDO = [
@@ -103,6 +106,8 @@ def es_negacion(texto_norm: str) -> bool:
  
  
 def es_agradecimiento(texto_norm: str) -> bool:
+    if es_negacion(texto_norm):
+        return False
     return coincide_variante(texto_norm, _VARIANTES_AGRADECIMIENTO, umbral=0.75)
  
  
@@ -135,9 +140,18 @@ INTENCIONES: Dict[str, List[str]] = {
         "inscribir paciente", "registro",
     ],
     "expediente": [
-        "expediente", "ver expediente", "consultar expediente",
-        "historial clinico", "historia clinica", "ficha del paciente",
+        "expediente", "expedientes", "ver expediente", "ver expedientes",
+        "consultar expediente", "consultar expedientes", "historial clinico",
+        "historia clinica", "historial medico", "historico medico",
+        "ficha clinica", "ficha del paciente", "mi expediente", "mi historial",
         "informacion del paciente", "datos del paciente",
+    ],
+    "evolucion": [
+        "como estoy", "como voy", "como voy en mi proceso",
+        "como crees que voy", "que debo hacer", "que hago", "que deberia hacer",
+        "debo mejorar", "estoy mejorando", "como estoy de salud",
+        "mi proceso", "mi evolucion", "que me recomiendas",
+        "consejos para mejorar", "que cuidados debo tener",
     ],
     "alertas_clinicas": [
         "alertas clinicas", "alertas activas", "hay alguna alerta",
@@ -297,7 +311,7 @@ RESPUESTAS_INFORMATIVAS: Dict[str, str] = {
 # Respuesta de fallback cuando no se reconoce ninguna intención.
 RESPUESTA_FALLBACK = (
     "No pude entender su consulta. Puede escribir:\n"
-    "   horario | registro | donaciones | expedientes\n"
+    "   horario | registro | donaciones | expedientes | como estoy\n"
     "   alertas | reglamento | servicios | requisitos | visitas"
 )
  
@@ -582,6 +596,25 @@ def procesar_mensaje(mensaje: str, ciu: Optional[str] = None) -> Dict[str, Any]:
         respuesta = RESPUESTAS_INFORMATIVAS["admision"] + f"\n\n{PREGUNTA_OTRO_SERVICIO}"
         _actualizar_contexto(ciu, esperando="confirmacion_otro_servicio", ultima_intencion=intencion)
         return {"respuesta": respuesta, "accion": None}
+ 
+    if intencion == "evolucion":
+        if ciu:
+            bd = cargar_bd()
+            registro = bd.get(ciu.strip().upper())
+            if not registro:
+                return {"respuesta": f"No encontré un expediente registrado con CIU {ciu}.", "accion": None}
+            respuesta = (
+                "Aquí tienes un resumen de la evolución clínica del paciente:\n"
+                + construir_respuesta_expediente(registro)
+                + f"\n\n{PREGUNTA_OTRO_SERVICIO}"
+            )
+            _actualizar_contexto(ciu, esperando="confirmacion_otro_servicio")
+            return {"respuesta": respuesta, "accion": None}
+        _actualizar_contexto(ciu, esperando="pedir_ciu_expediente")
+        return {
+            "respuesta": "Para revisar la evolución necesito el CIU del paciente.",
+            "accion": "pedir_ciu_expediente",
+        }
  
     if intencion == "expediente":
         if ciu:
