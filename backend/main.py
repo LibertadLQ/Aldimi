@@ -11,10 +11,15 @@ Combina:
 import os
 import shutil
 import tempfile
+import sys
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, Optional
 from uuid import uuid4
+
+BACKEND_DIR = Path(__file__).resolve().parent
+if str(BACKEND_DIR) not in sys.path:
+    sys.path.insert(0, str(BACKEND_DIR))
 
 from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware

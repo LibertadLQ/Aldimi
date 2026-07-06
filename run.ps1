@@ -114,8 +114,8 @@ $backendDir = Join-Path $root "backend"
 
 $activate = Join-Path $venvPath "Scripts\Activate.ps1"
 
-$backendCommand = "Set-Location -LiteralPath '$backendDir'; & '$activate'; & '$venvPython' -m uvicorn main:app --reload --port 8000"
-$staticCommand  = "Set-Location -LiteralPath '$root'; & '$activate'; & '$venvPython' -m http.server $staticPort"
+$backendCommand = "& '$activate'; Set-Location -LiteralPath '$backendDir'; & '$venvPython' -m uvicorn main:app --host 127.0.0.1 --port 8000 --reload"
+$staticCommand  = "& '$activate'; Set-Location -LiteralPath '$root'; & '$venvPython' -m http.server $staticPort"
 
 Write-Host "Iniciando backend (uvicorn) en nueva ventana de PowerShell..."
 Write-Host "El autoscan se ejecutará automáticamente al iniciar el servidor FastAPI (evento 'startup')." -ForegroundColor Cyan
@@ -158,9 +158,7 @@ if (-not $ok) {
 # Abrir la página principal
 $indexUrl = "http://localhost:$staticPort/index.html"
 Write-Host "Abriendo $indexUrl en el navegador predeterminado..."
-Start-Process $indexUrl
+try { Start-Process $indexUrl } catch { Write-Host "No se pudo abrir el navegador automáticamente." -ForegroundColor Yellow }
 
 Write-Host "Listo. Si el frontend muestra aún el error de conexión asegúrate de que el backend se haya iniciado sin errores y que FastAPI tenga CORS habilitado para el origen http://localhost:$staticPort." -ForegroundColor Cyan
 Write-Host "Si necesitas, puedo añadir un middleware CORS al backend si me lo indicas." -ForegroundColor Cyan
-
-Pause
