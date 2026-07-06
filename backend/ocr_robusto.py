@@ -747,8 +747,10 @@ def procesar_imagen(ruta: str) -> Dict[str, Any]:
         tipo = cnn_prediction.get("clase_predicha", tipo)
 
     # Extraer campos
-    if tipo == "DNI_PERU":
+    if tipo in ("DNI_PERU", "DNI_USA"):
         campos = procesar_dni_peru(texto)
+        if tipo == "DNI_USA":
+            campos["tipo"] = "DNI_USA"
     elif tipo in ("LAB_REPORT", "INFORME_MEDICO"):
         campos = procesar_lab(texto)
     else:

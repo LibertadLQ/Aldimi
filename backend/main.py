@@ -55,20 +55,60 @@ class PacienteGuardarRequest(BaseModel):
 
 @app.on_event("startup")
 async def startup_scan() -> None:
-    """Al iniciar, escanea DNI_ALDIMI y LAB_ALDIMI."""
-    print("[STARTUP] Iniciando escaneo automático de carpetas...")
-    try:
-        max_images_env = os.environ.get("ALDIMI_MAX_IMAGES", "0")
-        try:
-            max_images = int(max_images_env)
-        except Exception:
-            max_images = 0
+    """Al iniciar, escanea DNI_ALDIMI y LAB_ALDIMI.
 
-        resultados = sincronizar_carpetas(max_images=max_images)
-        print("[STARTUP] ✅ Escaneo completado:")
-        print(f"         Imágenes procesadas: {resultados['procesados']}")
-    except Exception as exc:
-        print(f"[STARTUP] ⚠️ Error durante escaneo: {exc}")
+    Comportamiento controlado por env `ALDIMI_WAIT_FOR_SCAN`:
+    - si está a '1' o 'true' (por defecto), el escaneo se ejecuta de forma
+      sincrónica y bloqueante antes de que la API acepte peticiones.
+    - si está a '0' o 'false', el escaneo se programa en background (no bloqueante).
+    """
+    wait_env = os.environ.get("ALDIMI_WAIT_FOR_SCAN", "1").lower()
+    wait_for_scan = wait_env in ("1", "true", "yes")
+
+    max_images_dni_env = os.environ.get("ALDIMI_SCAN_DNI", "1")
+    max_images_lab_env = os.environ.get("ALDIMI_SCAN_LAB", "1")
+    try:
+        max_images_dni = int(max_images_dni_env)
+    except Exception:
+        max_images_dni = 1
+    try:
+        max_images_lab = int(max_images_lab_env)
+    except Exception:
+        max_images_lab = 1
+
+    print(f"[STARTUP] ALDIMI_WAIT_FOR_SCAN={wait_env}, ALDIMI_SCAN_DNI={max_images_dni}, ALDIMI_SCAN_LAB={max_images_lab}")
+
+    if wait_for_scan:
+        print("[STARTUP] Ejecutando escaneo automático de carpetas (modo bloqueante)...")
+        try:
+            resultados = sincronizar_carpetas(max_images_dni=max_images_dni, max_images_lab=max_images_lab)
+            print("[STARTUP] Escaneo completado.")
+            print(f"         Imagenes procesadas: {resultados.get('procesados')}")
+        except Exception as exc:
+            print(f"[STARTUP] Error durante escaneo bloqueante: {exc}")
+    else:
+        print("[STARTUP] Programando escaneo automático de carpetas en background...")
+        try:
+            import asyncio
+
+            loop = asyncio.get_running_loop()
+
+            async def _run_sync_scan():
+                try:
+                    resultados = await loop.run_in_executor(
+                        None,
+                        sincronizar_carpetas,
+                        max_images_dni,
+                        max_images_lab,
+                    )
+                    print("[STARTUP] Escaneo completado.")
+                    print(f"         Imagenes procesadas: {resultados.get('procesados')}")
+                except Exception as exc:
+                    print(f"[STARTUP] Error durante escaneo en background: {exc}")
+
+            asyncio.create_task(_run_sync_scan())
+        except Exception as exc:
+            print(f"[STARTUP] Error al programar escaneo: {exc}")
 
 
 class ChatRequest(BaseModel):
@@ -175,7 +215,7 @@ def ejecutar_local(max_images: int = 0) -> dict:
     print("[ALDIMI] Carpeta DNI_ALDIMI:", Path("DNI_ALDIMI").resolve())
     print("[ALDIMI] Carpeta LAB_ALDIMI:", Path("LAB_ALDIMI").resolve())
 
-    resultados = sincronizar_carpetas(max_images=max_images)
+    resultados = sincronizar_carpetas(max_images_dni=max_images, max_images_lab=max_images)
 
     print("[ALDIMI] Escaneo local finalizado.")
     print(f"         Imágenes procesadas: {resultados['procesados']}")

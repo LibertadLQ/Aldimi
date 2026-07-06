@@ -148,14 +148,18 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:44:25.174706",
-    "timestamp": "2026-07-06T14:44:25.174706",
+    "id": "ocr_2026-07-06T16:12:56.099688",
+    "timestamp": "2026-07-06T16:12:56.099688",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0044172.png",
     "archivo_copia": null,
     "tipo_documento": "DNI_USA",
     "texto_crudo": "WEST VIKGINIA’ ©\ncovernor: JAMES C. JUSTICE. Il |\nad ono. W499485 4beExp 11/08/2027\n3 vos 07/14/1992\n1 FIGUEROA\n2MELANIE\ng 139 ISRSTREET\nSOUTH CHARLESTON, WV 25309\n9 Class C 7\n9aEnd NONE\nmes 11/08/2022\nAll ex F116 Hat 6'-02\" 4alss TT\nLifiza -, ANS BRO Lawn 119 Ib PN)\n5 DD 0000000000000842 < 07/1 4/92",
     "campos": {
+      "ciu": "NO_DETECTADO",
+      "nombres": "JAMES",
+      "apellidos": "WEST VIKGINIA",
+      "fecha_nacimiento": "NO_DETECTADO",
       "tipo": "DNI_USA",
       "cnn_prediccion": {
         "clase_predicha": "DNI_USA",
@@ -172,8 +176,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:44:27.001208",
-    "timestamp": "2026-07-06T14:44:27.001208",
+    "id": "ocr_2026-07-06T15:24:52.368572",
+    "timestamp": "2026-07-06T15:24:52.368572",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0044206.png",
     "archivo_copia": null,
@@ -196,8 +200,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:44:28.713659",
-    "timestamp": "2026-07-06T14:44:28.713659",
+    "id": "ocr_2026-07-06T15:25:02.965168",
+    "timestamp": "2026-07-06T15:25:02.965168",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0044357.png",
     "archivo_copia": null,
@@ -220,8 +224,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:44:30.462726",
-    "timestamp": "2026-07-06T14:44:30.462726",
+    "id": "ocr_2026-07-06T15:25:14.276674",
+    "timestamp": "2026-07-06T15:25:14.276674",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0044457.png",
     "archivo_copia": null,
@@ -244,8 +248,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:44:32.314830",
-    "timestamp": "2026-07-06T14:44:32.314830",
+    "id": "ocr_2026-07-06T15:25:22.489001",
+    "timestamp": "2026-07-06T15:25:22.489001",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0044557.png",
     "archivo_copia": null,
@@ -268,8 +272,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:44:34.113813",
-    "timestamp": "2026-07-06T14:44:34.113813",
+    "id": "ocr_2026-07-06T15:25:35.210979",
+    "timestamp": "2026-07-06T15:25:35.210979",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0044884.png",
     "archivo_copia": null,
@@ -292,8 +296,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:44:36.031180",
-    "timestamp": "2026-07-06T14:44:36.031180",
+    "id": "ocr_2026-07-06T15:25:44.292993",
+    "timestamp": "2026-07-06T15:25:44.292993",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0045113.png",
     "archivo_copia": null,
@@ -316,8 +320,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:44:37.825119",
-    "timestamp": "2026-07-06T14:44:37.825119",
+    "id": "ocr_2026-07-06T15:25:55.296659",
+    "timestamp": "2026-07-06T15:25:55.296659",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0045204.png",
     "archivo_copia": null,
@@ -340,8 +344,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:44:39.581225",
-    "timestamp": "2026-07-06T14:44:39.581225",
+    "id": "ocr_2026-07-06T15:26:10.148932",
+    "timestamp": "2026-07-06T15:26:10.148932",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0045438.png",
     "archivo_copia": null,
@@ -364,8 +368,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:44:41.520843",
-    "timestamp": "2026-07-06T14:44:41.520843",
+    "id": "ocr_2026-07-06T15:26:21.700469",
+    "timestamp": "2026-07-06T15:26:21.700469",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0045589.png",
     "archivo_copia": null,
@@ -388,8 +392,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:44:43.364742",
-    "timestamp": "2026-07-06T14:44:43.364742",
+    "id": "ocr_2026-07-06T15:26:34.310024",
+    "timestamp": "2026-07-06T15:26:34.310024",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0045677.png",
     "archivo_copia": null,
@@ -412,8 +416,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:44:45.168823",
-    "timestamp": "2026-07-06T14:44:45.168823",
+    "id": "ocr_2026-07-06T15:26:48.833325",
+    "timestamp": "2026-07-06T15:26:48.833325",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0045823.png",
     "archivo_copia": null,
@@ -436,8 +440,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:44:47.021386",
-    "timestamp": "2026-07-06T14:44:47.021386",
+    "id": "ocr_2026-07-06T15:26:54.758449",
+    "timestamp": "2026-07-06T15:26:54.758449",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046068.png",
     "archivo_copia": null,
@@ -460,8 +464,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:44:48.898412",
-    "timestamp": "2026-07-06T14:44:48.898412",
+    "id": "ocr_2026-07-06T15:13:39.002619",
+    "timestamp": "2026-07-06T15:13:39.002619",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046078.png",
     "archivo_copia": null,
@@ -484,8 +488,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:44:50.764003",
-    "timestamp": "2026-07-06T14:44:50.764003",
+    "id": "ocr_2026-07-06T15:13:52.408716",
+    "timestamp": "2026-07-06T15:13:52.408716",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046206.png",
     "archivo_copia": null,
@@ -508,8 +512,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:44:52.639418",
-    "timestamp": "2026-07-06T14:44:52.639418",
+    "id": "ocr_2026-07-06T15:14:08.790450",
+    "timestamp": "2026-07-06T15:14:08.790450",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046219.png",
     "archivo_copia": null,
@@ -532,8 +536,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:44:54.536938",
-    "timestamp": "2026-07-06T14:44:54.536938",
+    "id": "ocr_2026-07-06T15:14:25.420044",
+    "timestamp": "2026-07-06T15:14:25.420044",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046598.png",
     "archivo_copia": null,
@@ -556,8 +560,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:44:56.375554",
-    "timestamp": "2026-07-06T14:44:56.375554",
+    "id": "ocr_2026-07-06T15:14:47.329478",
+    "timestamp": "2026-07-06T15:14:47.329478",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046624.png",
     "archivo_copia": null,
@@ -580,8 +584,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:44:58.300525",
-    "timestamp": "2026-07-06T14:44:58.300525",
+    "id": "ocr_2026-07-06T15:15:04.447664",
+    "timestamp": "2026-07-06T15:15:04.447664",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046654.png",
     "archivo_copia": null,
@@ -604,8 +608,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:00.144658",
-    "timestamp": "2026-07-06T14:45:00.144658",
+    "id": "ocr_2026-07-06T15:15:30.647265",
+    "timestamp": "2026-07-06T15:15:30.647265",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046720.png",
     "archivo_copia": null,
@@ -628,8 +632,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:01.960212",
-    "timestamp": "2026-07-06T14:45:01.960212",
+    "id": "ocr_2026-07-06T15:15:46.008094",
+    "timestamp": "2026-07-06T15:15:46.008094",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046868.png",
     "archivo_copia": null,
@@ -652,8 +656,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:03.854858",
-    "timestamp": "2026-07-06T14:45:03.854858",
+    "id": "ocr_2026-07-06T15:16:06.018782",
+    "timestamp": "2026-07-06T15:16:06.018782",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046967.png",
     "archivo_copia": null,
@@ -676,8 +680,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:05.902675",
-    "timestamp": "2026-07-06T14:45:05.902675",
+    "id": "ocr_2026-07-06T15:16:22.023151",
+    "timestamp": "2026-07-06T15:16:22.023151",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0047729_0931598_0055648.png",
     "archivo_copia": null,
@@ -700,8 +704,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:07.789259",
-    "timestamp": "2026-07-06T14:45:07.789259",
+    "id": "ocr_2026-07-06T15:16:32.425208",
+    "timestamp": "2026-07-06T15:16:32.425208",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0047729_0931598_0690333.png",
     "archivo_copia": null,
@@ -724,8 +728,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:09.892131",
-    "timestamp": "2026-07-06T14:45:09.892131",
+    "id": "ocr_2026-07-06T15:16:45.789938",
+    "timestamp": "2026-07-06T15:16:45.789938",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0047729_0931598_0857959.png",
     "archivo_copia": null,
@@ -748,8 +752,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:11.776414",
-    "timestamp": "2026-07-06T14:45:11.776414",
+    "id": "ocr_2026-07-06T15:16:56.259424",
+    "timestamp": "2026-07-06T15:16:56.259424",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0047729_0931598_0884479.png",
     "archivo_copia": null,
@@ -772,8 +776,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:13.653209",
-    "timestamp": "2026-07-06T14:45:13.653209",
+    "id": "ocr_2026-07-06T15:17:08.424829",
+    "timestamp": "2026-07-06T15:17:08.424829",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0047729_0931598_0990670.png",
     "archivo_copia": null,
@@ -796,8 +800,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:15.439413",
-    "timestamp": "2026-07-06T14:45:15.439413",
+    "id": "ocr_2026-07-06T15:17:23.896198",
+    "timestamp": "2026-07-06T15:17:23.896198",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0047793.png",
     "archivo_copia": null,
@@ -820,8 +824,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:17.234017",
-    "timestamp": "2026-07-06T14:45:17.234017",
+    "id": "ocr_2026-07-06T15:17:32.869677",
+    "timestamp": "2026-07-06T15:17:32.869677",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0048075.png",
     "archivo_copia": null,
@@ -844,8 +848,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:19.222384",
-    "timestamp": "2026-07-06T14:45:19.222384",
+    "id": "ocr_2026-07-06T15:17:43.540217",
+    "timestamp": "2026-07-06T15:17:43.540217",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0048144.png",
     "archivo_copia": null,
@@ -868,8 +872,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:21.056634",
-    "timestamp": "2026-07-06T14:45:21.056634",
+    "id": "ocr_2026-07-06T15:17:56.453840",
+    "timestamp": "2026-07-06T15:17:56.453840",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0048190.png",
     "archivo_copia": null,
@@ -892,13 +896,13 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:22.930571",
-    "timestamp": "2026-07-06T14:45:22.930571",
+    "id": "ocr_2026-07-06T15:18:11.138072",
+    "timestamp": "2026-07-06T15:18:11.138072",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0048203.png",
     "archivo_copia": null,
     "tipo_documento": "DNI_USA",
-    "texto_crudo": "y\nWEST VIRGINIA’ hr]\ncovernor; JAMES C. JUSTICE. Il\naq ono. W724366 4b Exp 09/21/2026\n3 pop 04/19/1995\n1 PARK ,\n2 YINGYING  ~\ng 40 13TH STREET es\nWELLSBURG, WV 26070 |\n9 ClassB ‘\n9aEnd NONE\n12 Restr B\npak, 15Sex F 16 Hat 5-05\" aalss 09/21/2021\n18 Eyes BRO 17 Wat 167 Ib ‘\n5 DD 0000000000000026 04/19/95",
+    "texto_crudo": "WEST VIRGINIA’\n\ncovernor; JAMES C. JUSTICE. Il\n\nado. no. W724366\n\n4b exp 09/21/2026\n\n3 pop 04/19/1995\n\n1 PARK\n\n2 YINGYING ~\n\n8 40 13TH STREET\n\nWELLSBURG, WV 26070\n\n9 Class B\n\n9aEnd NONE\n\n12 Restr B\n\n15 Sex F°\n\nBra\n\n18 Eyes BRO 17 Wat 167 Ib\n\n716 Hgt 5'-05\"\n\n4alss 09/21/2021\n\n5 DD 0000000000000026\n\nyl ES",
     "campos": {
       "tipo": "DNI_USA",
       "cnn_prediccion": {
@@ -916,8 +920,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:24.823213",
-    "timestamp": "2026-07-06T14:45:24.823213",
+    "id": "ocr_2026-07-06T15:18:24.360797",
+    "timestamp": "2026-07-06T15:18:24.360797",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0048569.png",
     "archivo_copia": null,
@@ -940,8 +944,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:26.713365",
-    "timestamp": "2026-07-06T14:45:26.713365",
+    "id": "ocr_2026-07-06T15:18:34.656317",
+    "timestamp": "2026-07-06T15:18:34.656317",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0048728.png",
     "archivo_copia": null,
@@ -964,8 +968,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:28.568568",
-    "timestamp": "2026-07-06T14:45:28.568568",
+    "id": "ocr_2026-07-06T15:18:46.053482",
+    "timestamp": "2026-07-06T15:18:46.053482",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0048943.png",
     "archivo_copia": null,
@@ -988,8 +992,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:30.341360",
-    "timestamp": "2026-07-06T14:45:30.341360",
+    "id": "ocr_2026-07-06T15:19:06.236849",
+    "timestamp": "2026-07-06T15:19:06.236849",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0049052.png",
     "archivo_copia": null,
@@ -1012,8 +1016,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:32.220637",
-    "timestamp": "2026-07-06T14:45:32.220637",
+    "id": "ocr_2026-07-06T15:19:34.857245",
+    "timestamp": "2026-07-06T15:19:34.857245",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0049178.png",
     "archivo_copia": null,
@@ -1036,8 +1040,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:34.016633",
-    "timestamp": "2026-07-06T14:45:34.016633",
+    "id": "ocr_2026-07-06T15:19:54.075417",
+    "timestamp": "2026-07-06T15:19:54.075417",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0049203.png",
     "archivo_copia": null,
@@ -1060,8 +1064,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:35.832411",
-    "timestamp": "2026-07-06T14:45:35.832411",
+    "id": "ocr_2026-07-06T15:20:24.688307",
+    "timestamp": "2026-07-06T15:20:24.688307",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0049206.png",
     "archivo_copia": null,
@@ -1084,8 +1088,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:37.647258",
-    "timestamp": "2026-07-06T14:45:37.647258",
+    "id": "ocr_2026-07-06T15:20:51.476474",
+    "timestamp": "2026-07-06T15:20:51.476474",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0049824.png",
     "archivo_copia": null,
@@ -1108,8 +1112,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:39.651110",
-    "timestamp": "2026-07-06T14:45:39.651110",
+    "id": "ocr_2026-07-06T15:21:19.903985",
+    "timestamp": "2026-07-06T15:21:19.903985",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0049954.png",
     "archivo_copia": null,
@@ -1132,8 +1136,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:41.648814",
-    "timestamp": "2026-07-06T14:45:41.648814",
+    "id": "ocr_2026-07-06T15:21:44.057016",
+    "timestamp": "2026-07-06T15:21:44.057016",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050078.png",
     "archivo_copia": null,
@@ -1156,8 +1160,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:43.494372",
-    "timestamp": "2026-07-06T14:45:43.494372",
+    "id": "ocr_2026-07-06T15:22:03.854425",
+    "timestamp": "2026-07-06T15:22:03.854425",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050118.png",
     "archivo_copia": null,
@@ -1180,8 +1184,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:45.288409",
-    "timestamp": "2026-07-06T14:45:45.288409",
+    "id": "ocr_2026-07-06T15:22:38.417004",
+    "timestamp": "2026-07-06T15:22:38.417004",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050151.png",
     "archivo_copia": null,
@@ -1204,8 +1208,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:47.158881",
-    "timestamp": "2026-07-06T14:45:47.158881",
+    "id": "ocr_2026-07-06T15:22:58.566374",
+    "timestamp": "2026-07-06T15:22:58.566374",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050204.png",
     "archivo_copia": null,
@@ -1228,8 +1232,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:49.035714",
-    "timestamp": "2026-07-06T14:45:49.035714",
+    "id": "ocr_2026-07-06T15:23:19.420353",
+    "timestamp": "2026-07-06T15:23:19.420353",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050284.png",
     "archivo_copia": null,
@@ -1252,8 +1256,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:50.907858",
-    "timestamp": "2026-07-06T14:45:50.907858",
+    "id": "ocr_2026-07-06T15:23:49.769715",
+    "timestamp": "2026-07-06T15:23:49.769715",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050430.png",
     "archivo_copia": null,
@@ -1276,8 +1280,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:52.792391",
-    "timestamp": "2026-07-06T14:45:52.792391",
+    "id": "ocr_2026-07-06T15:24:14.663352",
+    "timestamp": "2026-07-06T15:24:14.663352",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050618.png",
     "archivo_copia": null,
@@ -1300,8 +1304,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:54.683137",
-    "timestamp": "2026-07-06T14:45:54.683137",
+    "id": "ocr_2026-07-06T15:24:33.376720",
+    "timestamp": "2026-07-06T15:24:33.376720",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050765.png",
     "archivo_copia": null,
@@ -1324,8 +1328,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:56.572411",
-    "timestamp": "2026-07-06T14:45:56.572411",
+    "id": "ocr_2026-07-06T15:24:53.762658",
+    "timestamp": "2026-07-06T15:24:53.762658",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050853.png",
     "archivo_copia": null,
@@ -1348,8 +1352,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:45:58.563325",
-    "timestamp": "2026-07-06T14:45:58.563325",
+    "id": "ocr_2026-07-06T15:25:12.656133",
+    "timestamp": "2026-07-06T15:25:12.656133",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0051354.png",
     "archivo_copia": null,
@@ -1372,8 +1376,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:00.615806",
-    "timestamp": "2026-07-06T14:46:00.615806",
+    "id": "ocr_2026-07-06T15:25:21.335956",
+    "timestamp": "2026-07-06T15:25:21.335956",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0051381.png",
     "archivo_copia": null,
@@ -1396,8 +1400,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:02.463816",
-    "timestamp": "2026-07-06T14:46:02.463816",
+    "id": "ocr_2026-07-06T15:25:33.471353",
+    "timestamp": "2026-07-06T15:25:33.471353",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0051648.png",
     "archivo_copia": null,
@@ -1420,8 +1424,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:04.598488",
-    "timestamp": "2026-07-06T14:46:04.598488",
+    "id": "ocr_2026-07-06T15:25:42.503221",
+    "timestamp": "2026-07-06T15:25:42.503221",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0051665.png",
     "archivo_copia": null,
@@ -1444,8 +1448,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:06.421887",
-    "timestamp": "2026-07-06T14:46:06.421887",
+    "id": "ocr_2026-07-06T15:25:54.558380",
+    "timestamp": "2026-07-06T15:25:54.558380",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0051859.png",
     "archivo_copia": null,
@@ -1468,8 +1472,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:08.213969",
-    "timestamp": "2026-07-06T14:46:08.213969",
+    "id": "ocr_2026-07-06T15:26:04.133797",
+    "timestamp": "2026-07-06T15:26:04.133797",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0051981.png",
     "archivo_copia": null,
@@ -1492,8 +1496,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:10.070689",
-    "timestamp": "2026-07-06T14:46:10.070689",
+    "id": "ocr_2026-07-06T15:26:17.130679",
+    "timestamp": "2026-07-06T15:26:17.130679",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0051986.png",
     "archivo_copia": null,
@@ -1516,8 +1520,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:12.060196",
-    "timestamp": "2026-07-06T14:46:12.060196",
+    "id": "ocr_2026-07-06T15:26:30.711181",
+    "timestamp": "2026-07-06T15:26:30.711181",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0052096.png",
     "archivo_copia": null,
@@ -1540,8 +1544,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:13.823580",
-    "timestamp": "2026-07-06T14:46:13.823580",
+    "id": "ocr_2026-07-06T15:26:46.407812",
+    "timestamp": "2026-07-06T15:26:46.407812",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0052304.png",
     "archivo_copia": null,
@@ -1564,8 +1568,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:15.798292",
-    "timestamp": "2026-07-06T14:46:15.798292",
+    "id": "ocr_2026-07-06T15:14:39.010877",
+    "timestamp": "2026-07-06T15:14:39.010877",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0052703.png",
     "archivo_copia": null,
@@ -1588,8 +1592,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:17.793134",
-    "timestamp": "2026-07-06T14:46:17.793134",
+    "id": "ocr_2026-07-06T15:14:49.878112",
+    "timestamp": "2026-07-06T15:14:49.878112",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0052809.png",
     "archivo_copia": null,
@@ -1612,8 +1616,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:19.867191",
-    "timestamp": "2026-07-06T14:46:19.867191",
+    "id": "ocr_2026-07-06T15:15:00.852371",
+    "timestamp": "2026-07-06T15:15:00.852371",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0052889.png",
     "archivo_copia": null,
@@ -1636,8 +1640,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:21.912647",
-    "timestamp": "2026-07-06T14:46:21.912647",
+    "id": "ocr_2026-07-06T15:15:07.574489",
+    "timestamp": "2026-07-06T15:15:07.574489",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0053221.png",
     "archivo_copia": null,
@@ -1660,8 +1664,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:23.772846",
-    "timestamp": "2026-07-06T14:46:23.772846",
+    "id": "ocr_2026-07-06T15:15:18.091237",
+    "timestamp": "2026-07-06T15:15:18.091237",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0053668.png",
     "archivo_copia": null,
@@ -1684,8 +1688,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:25.753597",
-    "timestamp": "2026-07-06T14:46:25.753597",
+    "id": "ocr_2026-07-06T15:15:29.089065",
+    "timestamp": "2026-07-06T15:15:29.089065",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0053781.png",
     "archivo_copia": null,
@@ -1708,8 +1712,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:27.586229",
-    "timestamp": "2026-07-06T14:46:27.586229",
+    "id": "ocr_2026-07-06T15:15:36.090291",
+    "timestamp": "2026-07-06T15:15:36.090291",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0053895.png",
     "archivo_copia": null,
@@ -1732,8 +1736,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:29.681510",
-    "timestamp": "2026-07-06T14:46:29.681510",
+    "id": "ocr_2026-07-06T15:15:47.501590",
+    "timestamp": "2026-07-06T15:15:47.501590",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0054454.png",
     "archivo_copia": null,
@@ -1756,8 +1760,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:31.671529",
-    "timestamp": "2026-07-06T14:46:31.671529",
+    "id": "ocr_2026-07-06T15:15:55.025114",
+    "timestamp": "2026-07-06T15:15:55.025114",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0054541.png",
     "archivo_copia": null,
@@ -1780,8 +1784,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:33.740003",
-    "timestamp": "2026-07-06T14:46:33.740003",
+    "id": "ocr_2026-07-06T15:16:05.248142",
+    "timestamp": "2026-07-06T15:16:05.248142",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0054568.png",
     "archivo_copia": null,
@@ -1804,8 +1808,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:35.777817",
-    "timestamp": "2026-07-06T14:46:35.777817",
+    "id": "ocr_2026-07-06T15:16:15.645542",
+    "timestamp": "2026-07-06T15:16:15.645542",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0054904.png",
     "archivo_copia": null,
@@ -1828,8 +1832,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:37.591588",
-    "timestamp": "2026-07-06T14:46:37.591588",
+    "id": "ocr_2026-07-06T15:16:25.433625",
+    "timestamp": "2026-07-06T15:16:25.433625",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0055034.png",
     "archivo_copia": null,
@@ -1852,8 +1856,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:39.690789",
-    "timestamp": "2026-07-06T14:46:39.690789",
+    "id": "ocr_2026-07-06T15:16:39.690860",
+    "timestamp": "2026-07-06T15:16:39.690860",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0055204.png",
     "archivo_copia": null,
@@ -1876,8 +1880,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:41.669093",
-    "timestamp": "2026-07-06T14:46:41.669093",
+    "id": "ocr_2026-07-06T15:16:47.643351",
+    "timestamp": "2026-07-06T15:16:47.643351",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0055301.png",
     "archivo_copia": null,
@@ -1900,8 +1904,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:43.703027",
-    "timestamp": "2026-07-06T14:46:43.703027",
+    "id": "ocr_2026-07-06T15:17:01.786535",
+    "timestamp": "2026-07-06T15:17:01.786535",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0055927.png",
     "archivo_copia": null,
@@ -1924,8 +1928,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:45.663136",
-    "timestamp": "2026-07-06T14:46:45.663136",
+    "id": "ocr_2026-07-06T15:17:08.248653",
+    "timestamp": "2026-07-06T15:17:08.248653",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0056074.png",
     "archivo_copia": null,
@@ -1948,8 +1952,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:47.644287",
-    "timestamp": "2026-07-06T14:46:47.644287",
+    "id": "ocr_2026-07-06T15:17:22.175264",
+    "timestamp": "2026-07-06T15:17:22.175264",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0056110_0507927_0098482.png",
     "archivo_copia": null,
@@ -1972,8 +1976,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:49.966423",
-    "timestamp": "2026-07-06T14:46:49.966423",
+    "id": "ocr_2026-07-06T15:17:31.285986",
+    "timestamp": "2026-07-06T15:17:31.285986",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0056299.png",
     "archivo_copia": null,
@@ -1996,8 +2000,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:51.954589",
-    "timestamp": "2026-07-06T14:46:51.954589",
+    "id": "ocr_2026-07-06T15:17:41.336824",
+    "timestamp": "2026-07-06T15:17:41.336824",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0056425.png",
     "archivo_copia": null,
@@ -2020,8 +2024,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:53.790316",
-    "timestamp": "2026-07-06T14:46:53.790316",
+    "id": "ocr_2026-07-06T15:17:54.558289",
+    "timestamp": "2026-07-06T15:17:54.558289",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0056583.png",
     "archivo_copia": null,
@@ -2044,8 +2048,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:55.668739",
-    "timestamp": "2026-07-06T14:46:55.668739",
+    "id": "ocr_2026-07-06T15:18:05.088571",
+    "timestamp": "2026-07-06T15:18:05.088571",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0056860.png",
     "archivo_copia": null,
@@ -2068,13 +2072,13 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:57.534433",
-    "timestamp": "2026-07-06T14:46:57.534433",
+    "id": "ocr_2026-07-06T15:18:17.962584",
+    "timestamp": "2026-07-06T15:18:17.962584",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0056880.png",
     "archivo_copia": null,
     "tipo_documento": "DNI_USA",
-    "texto_crudo": "WEST VIRGINIA’ hr]\ncovernor; JAMES C. JUSTICE. Il\nad otno. W824212 4beExp 04/02/2029\n3 pos 01/20/1995\n, ORTIZ os.\n>GABRIEL\n8 72 BENONI AVENUE\nGRAFTON, WV 26354\n9 ClassB\n= 9aEnd NONE\n12 Restr B\n; 15Sex M 16 Hat 7'-01\" aalss 04/02/2024\nHUG 18 Eyes BRO 17 Wat 182 Ib EN\n5 DD oo00000000003204 01/20/95",
+    "texto_crudo": "( WEST VIRGINIA’\n\ncovernor; JAMES C. JUSTICE. Il\n\nad o.no. W824212\n\n4pexp 04/02/2029\n\n3 pos 01/20/1995\n\n1 ORTIZ\n\n2 GABRIEL >\n\nSEE\n\n=\n\ng 72 BENONI AVENUE\n\na\n\nGRAFTON, WV 26354\n\n9 Class B\n\n9aEnd NONE\n\n12 Restr B\n\n15 Sex M\n\n18 Eyes BRO 17 Wat 182 Ib\n\n~/16 Hot 7'-01\"\n\n4aiss 04/02/2024\n\n5 DD 0000000000003294\n\n01 (20195",
     "campos": {
       "tipo": "DNI_USA",
       "cnn_prediccion": {
@@ -2092,8 +2096,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:46:59.593743",
-    "timestamp": "2026-07-06T14:46:59.593743",
+    "id": "ocr_2026-07-06T15:18:25.999460",
+    "timestamp": "2026-07-06T15:18:25.999460",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0056988.png",
     "archivo_copia": null,
@@ -2116,8 +2120,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:47:01.617244",
-    "timestamp": "2026-07-06T14:47:01.617244",
+    "id": "ocr_2026-07-06T15:18:38.257097",
+    "timestamp": "2026-07-06T15:18:38.257097",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0057283.png",
     "archivo_copia": null,
@@ -2140,8 +2144,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:47:03.698543",
-    "timestamp": "2026-07-06T14:47:03.698543",
+    "id": "ocr_2026-07-06T15:18:47.756715",
+    "timestamp": "2026-07-06T15:18:47.756715",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0057519.png",
     "archivo_copia": null,
@@ -2164,8 +2168,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:47:05.621727",
-    "timestamp": "2026-07-06T14:47:05.621727",
+    "id": "ocr_2026-07-06T15:19:00.653458",
+    "timestamp": "2026-07-06T15:19:00.653458",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0057645.png",
     "archivo_copia": null,
@@ -2188,8 +2192,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:47:07.668464",
-    "timestamp": "2026-07-06T14:47:07.668464",
+    "id": "ocr_2026-07-06T15:19:14.380097",
+    "timestamp": "2026-07-06T15:19:14.380097",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058235.png",
     "archivo_copia": null,
@@ -2212,8 +2216,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:47:09.612279",
-    "timestamp": "2026-07-06T14:47:09.612279",
+    "id": "ocr_2026-07-06T15:19:22.815453",
+    "timestamp": "2026-07-06T15:19:22.815453",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058290.png",
     "archivo_copia": null,
@@ -2236,8 +2240,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:47:11.559879",
-    "timestamp": "2026-07-06T14:47:11.559879",
+    "id": "ocr_2026-07-06T15:19:35.206889",
+    "timestamp": "2026-07-06T15:19:35.206889",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058299.png",
     "archivo_copia": null,
@@ -2260,8 +2264,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:47:13.498998",
-    "timestamp": "2026-07-06T14:47:13.498998",
+    "id": "ocr_2026-07-06T15:19:45.809389",
+    "timestamp": "2026-07-06T15:19:45.809389",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058313.png",
     "archivo_copia": null,
@@ -2284,8 +2288,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:47:15.386170",
-    "timestamp": "2026-07-06T14:47:15.386170",
+    "id": "ocr_2026-07-06T15:15:08.412250",
+    "timestamp": "2026-07-06T15:15:08.412250",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058331.png",
     "archivo_copia": null,
@@ -2308,8 +2312,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:47:17.228453",
-    "timestamp": "2026-07-06T14:47:17.228453",
+    "id": "ocr_2026-07-06T15:20:07.522396",
+    "timestamp": "2026-07-06T15:20:07.522396",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058414.png",
     "archivo_copia": null,
@@ -2332,8 +2336,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:47:19.454578",
-    "timestamp": "2026-07-06T14:47:19.454578",
+    "id": "ocr_2026-07-06T15:20:16.945059",
+    "timestamp": "2026-07-06T15:20:16.945059",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058466.png",
     "archivo_copia": null,
@@ -2356,8 +2360,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:47:21.485885",
-    "timestamp": "2026-07-06T14:47:21.485885",
+    "id": "ocr_2026-07-06T15:20:29.614650",
+    "timestamp": "2026-07-06T15:20:29.614650",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058749_0041322_0179013.png",
     "archivo_copia": null,
@@ -2380,8 +2384,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:47:24.497901",
-    "timestamp": "2026-07-06T14:47:24.497901",
+    "id": "ocr_2026-07-06T15:20:40.941525",
+    "timestamp": "2026-07-06T15:20:40.941525",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058749_0041322_0241225.png",
     "archivo_copia": null,
@@ -2404,8 +2408,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:47:28.928190",
-    "timestamp": "2026-07-06T14:47:28.928190",
+    "id": "ocr_2026-07-06T15:20:50.474632",
+    "timestamp": "2026-07-06T15:20:50.474632",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058749_0041322_0638058.png",
     "archivo_copia": null,
@@ -2428,8 +2432,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:47:33.256417",
-    "timestamp": "2026-07-06T14:47:33.256417",
+    "id": "ocr_2026-07-06T15:21:03.645126",
+    "timestamp": "2026-07-06T15:21:03.645126",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058749_0041322_0744423.png",
     "archivo_copia": null,
@@ -2452,8 +2456,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:47:36.380931",
-    "timestamp": "2026-07-06T14:47:36.380931",
+    "id": "ocr_2026-07-06T15:21:11.227832",
+    "timestamp": "2026-07-06T15:21:11.227832",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058749_0041322_0853309.png",
     "archivo_copia": null,
@@ -2476,8 +2480,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:47:39.827951",
-    "timestamp": "2026-07-06T14:47:39.827951",
+    "id": "ocr_2026-07-06T15:21:24.707199",
+    "timestamp": "2026-07-06T15:21:24.707199",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058779.png",
     "archivo_copia": null,
@@ -2500,8 +2504,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:47:43.972552",
-    "timestamp": "2026-07-06T14:47:43.972552",
+    "id": "ocr_2026-07-06T15:21:36.548978",
+    "timestamp": "2026-07-06T15:21:36.548978",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058823.png",
     "archivo_copia": null,
@@ -2524,8 +2528,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:47:46.743912",
-    "timestamp": "2026-07-06T14:47:46.743912",
+    "id": "ocr_2026-07-06T15:21:46.819322",
+    "timestamp": "2026-07-06T15:21:46.819322",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058994.png",
     "archivo_copia": null,
@@ -2548,8 +2552,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:47:59.703680",
-    "timestamp": "2026-07-06T14:47:59.703680",
+    "id": "ocr_2026-07-06T16:13:09.470625",
+    "timestamp": "2026-07-06T16:13:09.470625",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053405_Q-RANJANADEVI21.04.20250001compressed_250427_1041@F.pdf_page_38.png",
     "archivo_copia": null,
@@ -2575,8 +2579,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:13:13.280045",
-    "timestamp": "2026-07-06T14:13:13.280045",
+    "id": "ocr_2026-07-06T15:23:05.819380",
+    "timestamp": "2026-07-06T15:23:05.819380",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053405_Q-RANJANADEVI21.04.20250001compressed_250427_1041@F.pdf_page_46.png",
     "archivo_copia": null,
@@ -2599,8 +2603,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:13:21.822339",
-    "timestamp": "2026-07-06T14:13:21.822339",
+    "id": "ocr_2026-07-06T15:23:42.454226",
+    "timestamp": "2026-07-06T15:23:42.454226",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053408_Q-SATISHKUMAR19.04.20250001compressed_250427_1052@F.pdf_page_30.png",
     "archivo_copia": null,
@@ -2623,8 +2627,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:13:30.744076",
-    "timestamp": "2026-07-06T14:13:30.744076",
+    "id": "ocr_2026-07-06T15:24:17.087693",
+    "timestamp": "2026-07-06T15:24:17.087693",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053408_Q-SATISHKUMAR19.04.20250001compressed_250427_1052@F.pdf_page_37.png",
     "archivo_copia": null,
@@ -2647,8 +2651,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:13:39.782581",
-    "timestamp": "2026-07-06T14:13:39.782581",
+    "id": "ocr_2026-07-06T15:24:54.941220",
+    "timestamp": "2026-07-06T15:24:54.941220",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053434_Q-PREETI4837000111zon_250427_1314@F.pdf_page_35.png",
     "archivo_copia": null,
@@ -2671,8 +2675,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:13:50.022267",
-    "timestamp": "2026-07-06T14:13:50.022267",
+    "id": "ocr_2026-07-06T15:25:53.568453",
+    "timestamp": "2026-07-06T15:25:53.568453",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053434_Q-PREETI4837000111zon_250427_1314@F.pdf_page_38.png",
     "archivo_copia": null,
@@ -2695,8 +2699,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:13:59.491043",
-    "timestamp": "2026-07-06T14:13:59.491043",
+    "id": "ocr_2026-07-06T15:26:50.021239",
+    "timestamp": "2026-07-06T15:26:50.021239",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053434_Q-PREETI4837000111zon_250427_1314@F.pdf_page_42.png",
     "archivo_copia": null,
@@ -2719,8 +2723,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:14:08.277360",
-    "timestamp": "2026-07-06T14:14:08.277360",
+    "id": "ocr_2026-07-06T15:27:22.948455",
+    "timestamp": "2026-07-06T15:27:22.948455",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053454_Q-11zonmergedFiles2411zon_250427_1324@F.pdf_page_30.png",
     "archivo_copia": null,
@@ -2743,8 +2747,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:14:17.666285",
-    "timestamp": "2026-07-06T14:14:17.666285",
+    "id": "ocr_2026-07-06T15:27:43.221641",
+    "timestamp": "2026-07-06T15:27:43.221641",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053454_Q-11zonmergedFiles2411zon_250427_1324@F.pdf_page_36.png",
     "archivo_copia": null,
@@ -2767,8 +2771,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:14:26.887956",
-    "timestamp": "2026-07-06T14:14:26.887956",
+    "id": "ocr_2026-07-06T15:28:01.607211",
+    "timestamp": "2026-07-06T15:28:01.607211",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053481_Q-CHHAYADEVI21.04.20250001compressed_250427_1617@F.pdf_page_34.png",
     "archivo_copia": null,
@@ -2791,8 +2795,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:14:36.221373",
-    "timestamp": "2026-07-06T14:14:36.221373",
+    "id": "ocr_2026-07-06T15:28:20.070182",
+    "timestamp": "2026-07-06T15:28:20.070182",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053481_Q-CHHAYADEVI21.04.20250001compressed_250427_1617@F.pdf_page_38.png",
     "archivo_copia": null,
@@ -2815,8 +2819,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:14:45.060189",
-    "timestamp": "2026-07-06T14:14:45.060189",
+    "id": "ocr_2026-07-06T15:28:38.532475",
+    "timestamp": "2026-07-06T15:28:38.532475",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053481_Q-CHHAYADEVI21.04.20250001compressed_250427_1617@F.pdf_page_39.png",
     "archivo_copia": null,
@@ -2839,8 +2843,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:14:53.274158",
-    "timestamp": "2026-07-06T14:14:53.274158",
+    "id": "ocr_2026-07-06T15:28:57.698989",
+    "timestamp": "2026-07-06T15:28:57.698989",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053481_Q-CHHAYADEVI21.04.20250001compressed_250427_1617@F.pdf_page_42.png",
     "archivo_copia": null,
@@ -2863,8 +2867,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:15:02.339040",
-    "timestamp": "2026-07-06T14:15:02.339040",
+    "id": "ocr_2026-07-06T15:29:15.068203",
+    "timestamp": "2026-07-06T15:29:15.068203",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053567_Q-PT.ROSHNIESIBUNCH11zon_250427_1622@F.pdf_page_41.png",
     "archivo_copia": null,
@@ -2890,8 +2894,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:15:11.467120",
-    "timestamp": "2026-07-06T14:15:11.467120",
+    "id": "ocr_2026-07-06T15:29:33.125408",
+    "timestamp": "2026-07-06T15:29:33.125408",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053567_Q-PT.ROSHNIESIBUNCH11zon_250427_1622@F.pdf_page_63.png",
     "archivo_copia": null,
@@ -2917,8 +2921,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:15:21.234050",
-    "timestamp": "2026-07-06T14:15:21.234050",
+    "id": "ocr_2026-07-06T15:29:51.952179",
+    "timestamp": "2026-07-06T15:29:51.952179",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053930_Q-REKHA10500_250427_1509@F.pdf_page_27.png",
     "archivo_copia": null,
@@ -2941,8 +2945,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:15:31.031310",
-    "timestamp": "2026-07-06T14:15:31.031310",
+    "id": "ocr_2026-07-06T15:30:12.013965",
+    "timestamp": "2026-07-06T15:30:12.013965",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053930_Q-REKHA10500_250427_1509@F.pdf_page_28.png",
     "archivo_copia": null,
@@ -2965,8 +2969,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:15:39.527880",
-    "timestamp": "2026-07-06T14:15:39.527880",
+    "id": "ocr_2026-07-06T15:30:29.496125",
+    "timestamp": "2026-07-06T15:30:29.496125",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053972_E-SANDEEPKUMARMID_250427_1418@E.pdf_page_12.png",
     "archivo_copia": null,
@@ -2989,8 +2993,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:15:49.583017",
-    "timestamp": "2026-07-06T14:15:49.583017",
+    "id": "ocr_2026-07-06T15:30:51.209385",
+    "timestamp": "2026-07-06T15:30:51.209385",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054044_Q-FINAL0001_250427_1157@F.pdf_page_36.png",
     "archivo_copia": null,
@@ -3013,8 +3017,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:15:58.900646",
-    "timestamp": "2026-07-06T14:15:58.900646",
+    "id": "ocr_2026-07-06T15:31:08.565158",
+    "timestamp": "2026-07-06T15:31:08.565158",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054524_E-FinalbillanddischargeSangitadevi_250427_1834@E.pdf_page_14.png",
     "archivo_copia": null,
@@ -3037,8 +3041,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:16:08.858985",
-    "timestamp": "2026-07-06T14:16:08.858985",
+    "id": "ocr_2026-07-06T15:31:26.516157",
+    "timestamp": "2026-07-06T15:31:26.516157",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054745_Q-REPORTS_250427_1041@F.pdf_page_7.png",
     "archivo_copia": null,
@@ -3061,8 +3065,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:16:18.458358",
-    "timestamp": "2026-07-06T14:16:18.458358",
+    "id": "ocr_2026-07-06T15:31:45.374467",
+    "timestamp": "2026-07-06T15:31:45.374467",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054811_Q-GUDDUKUMAR10534_250427_1457@F.pdf_page_31.png",
     "archivo_copia": null,
@@ -3085,8 +3089,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:16:27.325269",
-    "timestamp": "2026-07-06T14:16:27.325269",
+    "id": "ocr_2026-07-06T15:32:00.554946",
+    "timestamp": "2026-07-06T15:32:00.554946",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054840_Q-pawankumarfinal_250427_1337@F.pdf_page_36.png",
     "archivo_copia": null,
@@ -3109,8 +3113,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:16:37.855948",
-    "timestamp": "2026-07-06T14:16:37.855948",
+    "id": "ocr_2026-07-06T15:32:19.421505",
+    "timestamp": "2026-07-06T15:32:19.421505",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054989_Q-112752REETADEVI_250427_1429@F.pdf_page_31.png",
     "archivo_copia": null,
@@ -3123,21 +3127,21 @@
       "cnn_prediccion": {
         "clase_predicha": "LAB_REPORT",
         "probabilidades": {
-          "LAB_REPORT": 0.7784,
-          "DNI_PERU": 0.0388,
-          "DNI_USA": 0.0388,
-          "INFORME_MEDICO": 0.0388,
-          "UNKNOWN": 0.1053
+          "LAB_REPORT": 0.5637,
+          "DNI_PERU": 0.0763,
+          "DNI_USA": 0.0763,
+          "INFORME_MEDICO": 0.0763,
+          "UNKNOWN": 0.2074
         },
-        "confianza": 0.7784
+        "confianza": 0.5637
       },
       "alertas_detectadas": []
     },
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:16:46.605296",
-    "timestamp": "2026-07-06T14:16:46.605296",
+    "id": "ocr_2026-07-06T15:32:35.786825",
+    "timestamp": "2026-07-06T15:32:35.786825",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054989_Q-112752REETADEVI_250427_1429@F.pdf_page_37.png",
     "archivo_copia": null,
@@ -3160,8 +3164,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:16:56.952691",
-    "timestamp": "2026-07-06T14:16:56.952691",
+    "id": "ocr_2026-07-06T15:32:53.262030",
+    "timestamp": "2026-07-06T15:32:53.262030",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055053_Q-1745410679910ArtiKumariinv0001_250423_1751@F.pdf_page_8.png",
     "archivo_copia": null,
@@ -3184,8 +3188,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:17:05.783109",
-    "timestamp": "2026-07-06T14:17:05.783109",
+    "id": "ocr_2026-07-06T15:33:09.173433",
+    "timestamp": "2026-07-06T15:33:09.173433",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055057_F-KYC_PC_Mrs_CHANDER_KANTA_1_250422_1418@G.pdf_page_7.png",
     "archivo_copia": null,
@@ -3211,8 +3215,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:17:14.543654",
-    "timestamp": "2026-07-06T14:17:14.543654",
+    "id": "ocr_2026-07-06T15:33:25.810014",
+    "timestamp": "2026-07-06T15:33:25.810014",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055398_SUNILA ARORA INVESTIGATION  FOR ENHANCMENT _26-04-2025_0642-20_PM@G.pdf_page_19.png",
     "archivo_copia": null,
@@ -3235,8 +3239,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:17:23.706315",
-    "timestamp": "2026-07-06T14:17:23.706315",
+    "id": "ocr_2026-07-06T15:33:45.342709",
+    "timestamp": "2026-07-06T15:33:45.342709",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055398_SUNILA ARORA INVESTIGATION  FOR ENHANCMENT _27-04-2025_1111-09_AM.pdf_page_6.png",
     "archivo_copia": null,
@@ -3259,8 +3263,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:17:33.829343",
-    "timestamp": "2026-07-06T14:17:33.829343",
+    "id": "ocr_2026-07-06T15:34:11.212275",
+    "timestamp": "2026-07-06T15:34:11.212275",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055398_SUNILA ARORA INVESTIGATION  FOR ENHANCMENT _27-04-2025_1111-09_AM.pdf_page_8.png",
     "archivo_copia": null,
@@ -3286,8 +3290,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:17:43.460633",
-    "timestamp": "2026-07-06T14:17:43.460633",
+    "id": "ocr_2026-07-06T15:34:41.942039",
+    "timestamp": "2026-07-06T15:34:41.942039",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055418_Q-Princeipd_250428_0930@F.pdf_page_21.png",
     "archivo_copia": null,
@@ -3310,8 +3314,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:17:52.824919",
-    "timestamp": "2026-07-06T14:17:52.824919",
+    "id": "ocr_2026-07-06T15:35:07.240842",
+    "timestamp": "2026-07-06T15:35:07.240842",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055449_Q-SEEMAKUMARI202600001compressed_250428_1147@F.pdf_page_46.png",
     "archivo_copia": null,
@@ -3334,8 +3338,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:18:02.377922",
-    "timestamp": "2026-07-06T14:18:02.377922",
+    "id": "ocr_2026-07-06T15:35:31.989488",
+    "timestamp": "2026-07-06T15:35:31.989488",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055460_Q-LOKESHYADAV202580001compressed_250428_1148@F.pdf_page_32.png",
     "archivo_copia": null,
@@ -3358,8 +3362,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:18:11.555510",
-    "timestamp": "2026-07-06T14:18:11.555510",
+    "id": "ocr_2026-07-06T15:35:50.197783",
+    "timestamp": "2026-07-06T15:35:50.197783",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055511_Q-ROHIT4854000111zon_250427_1412@F.pdf_page_23.png",
     "archivo_copia": null,
@@ -3385,8 +3389,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:18:20.467783",
-    "timestamp": "2026-07-06T14:18:20.467783",
+    "id": "ocr_2026-07-06T15:36:14.785072",
+    "timestamp": "2026-07-06T15:36:14.785072",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055511_Q-ROHIT4854000111zon_250427_1412@F.pdf_page_31.png",
     "archivo_copia": null,
@@ -3409,8 +3413,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:18:29.905940",
-    "timestamp": "2026-07-06T14:18:29.905940",
+    "id": "ocr_2026-07-06T15:36:42.713853",
+    "timestamp": "2026-07-06T15:36:42.713853",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055576_Q-kailashfnalbill_250427_1333@F.pdf_page_37.png",
     "archivo_copia": null,
@@ -3433,8 +3437,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:18:41.592106",
-    "timestamp": "2026-07-06T14:18:41.592106",
+    "id": "ocr_2026-07-06T15:37:03.652950",
+    "timestamp": "2026-07-06T15:37:03.652950",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055868_F-DOCUMENTAMRITPAL_250423_1639@G.pdf_page_19.png",
     "archivo_copia": null,
@@ -3460,8 +3464,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:18:50.534579",
-    "timestamp": "2026-07-06T14:18:50.534579",
+    "id": "ocr_2026-07-06T15:37:25.812322",
+    "timestamp": "2026-07-06T15:37:25.812322",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055928_Q-QUERYREPLYMSSAUMYASINGH_250423_1911@F.pdf_page_9.png",
     "archivo_copia": null,
@@ -3484,8 +3488,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:18:58.822797",
-    "timestamp": "2026-07-06T14:18:58.822797",
+    "id": "ocr_2026-07-06T15:37:42.971588",
+    "timestamp": "2026-07-06T15:37:42.971588",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055942_IV REPORTS_27-04-2025_1102-25_AM@E.pdf_page_4.png",
     "archivo_copia": null,
@@ -3508,13 +3512,13 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:19:07.622947",
-    "timestamp": "2026-07-06T14:19:07.622947",
+    "id": "ocr_2026-07-06T15:38:04.112418",
+    "timestamp": "2026-07-06T15:38:04.112418",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055942_IV_REPORTS_27-04-2025_1112-47_AM@E.pdf_page_1.png",
     "archivo_copia": null,
     "tipo_documento": "DNI_USA",
-    "texto_crudo": "~— PARAMEDICAL CENTRE\nom T=.\nlp 471, School Road, Kolkata- 51 (Near Uttarayan School), © : 2514-9592 (Lab.)\nan ieee ial ecemuaniuiniinaiaamamisemne dat eee ee ae\nare Ce\n} Sarat Bose Road, Kolkata- 81, © : 2514-3858, Mob.:\na\nPict i i i aE\n. Gender [x Receiving Date [J09:50\nPatient CIU: W883738\nHwienny wy wi. mani Vanya: Wuua varias Reg. il Hi Date Of Report [NNN 18:15\nDEPARTMENT OF CLINICAL PATHOLOGY (URINE\nAM RESULT UNIT\nPHYSICAL EXAMINATION\nQuantity 30 ml\nColour Light Straw\nAppearance Clear\nDeposit Absent\nSpecific Gravity 1.015 .\nCHEMICAL EXAMINATION\nReaction ‘ Acidic\nProtein (Alb) Present(+)\nSugar Absent\nKetone bodies /\nPH !\nChyle /\nBlood Absent.\nBile Salt Absent\nBile Pigment Absent\nPhosphates Absent\nNitrite Absent\nMICROSCOPICAL EXAMINATION oe\nPus Cells 0-1 /E.LPLF\nR.B.C 0-1 1H.PF vee\nEpithelial Cells Few\nCasts Absent\nCrystals Absent\nYeast Cell Absent\nParasite Absent\nMicro-organisms Few\nOthers /\nZL\nN.B:- Alll referencé ranges ime ee\nprovided along with the\nyd secweee-= TNE ort ---------\nTar gah\nger iae ey .\nphecked By - RS\nLab./Outside Consultant Biochemist Pathologist in Charge Consultant Microbiologist\nDr. Bilas Kumar Sarkar Dr. Subrata Pal Dr. Arpita Neogi\nMD (Biochemistry) Consultant Pathologist MD (Microbiology)\nMD (Cal)",
+    "texto_crudo": "PARAMEDICAL CENTRE\n\n—_\n\n(COMPUTERISED PATHOLOGICAL LABORATORY)\n\n—\n\n——| A,\n\n471, School Road, Kolkata- 51 (Near Uttarayan School), © : 2514-9592 (Lab.)\n\nSarat Bose Road, Kolkata- 81, © : 2514-3858, Mo\n\nSee LrLrltCa—CtssSdYSCT~SCSCd\n\nOO\n\nGender\n\nPatient CIU: W883738\n\nReceiving Date [J09:50\n\nlwwisminiy wy we\n\nnani varnyarywuuna varia\n\nReg. 7 7\n\nDate Of Report [18:15\n\n=\n\nDEPARTMENT OF CLINICAL PATHOLOGY (URINE)\n\nRESULT\n\nUNIT\n\nPHYSICAL EXAMINATION\n\nQuantity\n\n30 ml\n\nColour\n\nLight Straw\n\nAppearance\n\nClear\n\nDeposit\n\nAbsent\n\n1.015\n\nSpecific Gravity\n\nCHEMICAL EXAMINATION\n\nReaction\n\nAcidic\n\n.\n\nProtein (Alb)\n\nPresent(+)\n\nSugar\n\nAbsent\n\nKetone bodies\n\n/\n\nPH\n\n/\n\nChyle\n\n/\n\nBlood\n\nAbsent.\n\nBile Salt\n\nAbsent\n\nBile Pigment\n\nAbsent\n\nPhosphates\n\nAbsent\n\nNitrite\n\nAbsent\n\nMICROSCOPICAL EXAMINATION\n\nPus Cells\n\n0-1\n\n/E.LPLF\n\nx\n\nR.B.C\n\nO-1\n\nWLP.F\n\nEpithelial Cells\n\nFew\n\nCasts\n\nAbsent\n\nAbsent\n\nCrystals\n\nYeast Cell\n\nAbsent\n\nParasite\n\nAbsent\n\nFew\n\nMicro-organisms\n\nOthers\n\n/\n\nN.B:- All referen\n\nranges are\n\nprovided mang with the\n\nort\n\nOE Tain\n\nBye\n\nHE\n\nae\n\nConsultant Biochemist\n\nLab./Outside\n\ner in Charse\n\nConsultant Microbiologist\n\nDr. Bilas Kumar Sarkar\n\nDr. Subrata Pal\n\nDr. Arpita Neogi\n\nMD (Biochemistry)\n\nConsultant Pathologist\n\nMD (Microbiology)\n\nMD (Cal)",
     "campos": {
       "tipo": "DNI_USA",
       "cnn_prediccion": {
@@ -3532,8 +3536,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:19:17.045592",
-    "timestamp": "2026-07-06T14:19:17.045592",
+    "id": "ocr_2026-07-06T15:38:20.259091",
+    "timestamp": "2026-07-06T15:38:20.259091",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056008_ASHISH BAGDIYA CN GUR0425PA0056008_27-04-2025_0517-33_PM@E.pdf_page_45.png",
     "archivo_copia": null,
@@ -3559,8 +3563,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:19:25.506057",
-    "timestamp": "2026-07-06T14:19:25.506057",
+    "id": "ocr_2026-07-06T15:38:35.923119",
+    "timestamp": "2026-07-06T15:38:35.923119",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056064_F-PARINALEPCHAPA_250423_2059@G.pdf_page_16.png",
     "archivo_copia": null,
@@ -3583,8 +3587,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:19:34.720780",
-    "timestamp": "2026-07-06T14:19:34.720780",
+    "id": "ocr_2026-07-06T15:38:56.633068",
+    "timestamp": "2026-07-06T15:38:56.633068",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056064_Q-PARINALEPCHAQR_250424_1328@F.pdf_page_8.png",
     "archivo_copia": null,
@@ -3607,8 +3611,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:19:42.747479",
-    "timestamp": "2026-07-06T14:19:42.747479",
+    "id": "ocr_2026-07-06T15:39:21.942900",
+    "timestamp": "2026-07-06T15:39:21.942900",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056087_E-SIVASUM_250427_1015@E.pdf_page_13.png",
     "archivo_copia": null,
@@ -3631,8 +3635,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:19:52.375175",
-    "timestamp": "2026-07-06T14:19:52.375175",
+    "id": "ocr_2026-07-06T15:39:49.436668",
+    "timestamp": "2026-07-06T15:39:49.436668",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056189_Q-rahulfinalbill_250427_1335@F.pdf_page_32.png",
     "archivo_copia": null,
@@ -3655,8 +3659,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:20:01.282721",
-    "timestamp": "2026-07-06T14:20:01.282721",
+    "id": "ocr_2026-07-06T15:40:18.681785",
+    "timestamp": "2026-07-06T15:40:18.681785",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056282_F-KYC_PC_SHANAZ_1_250424_1254@G.pdf_page_11.png",
     "archivo_copia": null,
@@ -3679,13 +3683,13 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:20:12.616224",
-    "timestamp": "2026-07-06T14:20:12.616224",
+    "id": "ocr_2026-07-06T15:40:46.011605",
+    "timestamp": "2026-07-06T15:40:46.011605",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056304_GUR0425PA0056304_FB_27-04-2025_0538-54_PM.pdf_page_10.png",
     "archivo_copia": null,
     "tipo_documento": "DNI_USA",
-    "texto_crudo": "DISCHARGE SUMMARY\nie MR oo eee ee\nPatient CIU: W675734 6100140281\nVOC Ol a\nCompany —_: VIDAL HEALTH NS\nSponsor + ZUNO GENERAL INSU LI {MA}\nBed No : ‘ 01:24 PM\nSpe Ciaity :\n|\nIRINE ROUTINE AND MICROSCOPY\nfest Met pt hichat Sho and Microscop\nSpecimen: Urine | LE LL TT\nNed team ee sical Examination:\nLs, ie a ala ta A Sa 7 ha\na iad sellin Pale Yellow\nee ee ll\nChemical Examination:\nSpecific Gravity: simi\nReducing Sugar: ‘5 A a TTR\nPus Cells | hil LAE LTE\nEpithelial Cells: 2 eR PY SEE\n[Ho aS | Lr\nAe | Sev\nPROTHROMBIN TIME AND INR\nPROTHROMBIN TIME 34 [Sec _(10.1-14.7)\nPROTHROMBIN CONTROL i a\nBLOOD GROUP ABO RH B'= POSITIVE\nBC (COMPLETE BLOOD COUNT\naS EE\n[eee] EE) - 11000\nAS __—*ka0-40)\nEosinophils Ze a Sa\n05 | Sa\nRBC COUNT B65 _[ioremuL f4.2-5.4)\nES Se |\nrE B48 \\gdc (92-36)\nPacked cell volume B42 De _K37-47) Ss\n; fs STONE UROLOGY & LAPAROSCOPY HOSPITAL,\n“12, East of Kailash, New Delhis410088",
+    "texto_crudo": "DISCHARGE SUMMARY\n\n6100140281\n\nPatient CIU: W675734\n\nvoctor\n\nCompany\n\n* VIDAL HEALTH INS,\n\nTE wy\n\nSponsor\n\n: ZUNO GENERAL INSU\n\n01:24 PM\n\nTATE\n\nTO <i\n\nON ccciencr emcee\n\nnna oe tain mn kde Alliaeniai al\n\naaa sa cenit\n\nEPEC 1. Gasca\n\nential\n\n| AEE\n\nNEGATIVE\n\nSS SS\n\nTET\n\n| SO TET\n\nSais: a TTL\n\ns\n\n13.4\n\nee aa\n\nLTT AN ca\n\nBLOOD GROUPABORH\n\nBLOOD GROUP ABO RH\n\n——\n\npas IS,\n\n1.9 |\n\nfcu.mm (4000 - 11000)\n\noe LA CR EST SERS AB.\n\nb=\n\nSS aA\n\nps_ fe _—_\n\n(4.2-5.4) |\n\n1s = SE PE EEE\n\n7 a\n\nNe eel\n\nB48 fgg (32-36)\n\np42\n\n(or -47)\n\nRG STONE UROLOGY & LAPAROSCOPY HOSPITAL\n\nF-12, East of Kailash, New Delhi-110065",
     "campos": {
       "tipo": "DNI_USA",
       "cnn_prediccion": {
@@ -3703,8 +3707,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:20:24.289110",
-    "timestamp": "2026-07-06T14:20:24.289110",
+    "id": "ocr_2026-07-06T15:41:30.911672",
+    "timestamp": "2026-07-06T15:41:30.911672",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056304_GUR0425PA0056304_FB_27-04-2025_0711-07_PM@F.pdf_page_9.png",
     "archivo_copia": null,
@@ -3727,8 +3731,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:20:32.528669",
-    "timestamp": "2026-07-06T14:20:32.528669",
+    "id": "ocr_2026-07-06T15:42:02.007760",
+    "timestamp": "2026-07-06T15:42:02.007760",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056422_CASHLESS CLAIM FILE GAURAB PATHAK_0001_compressed_27-04-2025_0804-45_PM@E.pdf_page_37.png",
     "archivo_copia": null,
@@ -3751,8 +3755,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:20:41.861230",
-    "timestamp": "2026-07-06T14:20:41.861230",
+    "id": "ocr_2026-07-06T15:42:28.303247",
+    "timestamp": "2026-07-06T15:42:28.303247",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056422_CASHLESS CLAIM FILE GAURAB PATHAK_0001_compressed_27-04-2025_0804-45_PM@E.pdf_page_45.png",
     "archivo_copia": null,
@@ -3775,8 +3779,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:20:50.954658",
-    "timestamp": "2026-07-06T14:20:50.954658",
+    "id": "ocr_2026-07-06T15:42:44.872723",
+    "timestamp": "2026-07-06T15:42:44.872723",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056519_discharge virendra_11zon_28-04-2025_1115-27_AM.pdf_page_14.png",
     "archivo_copia": null,
@@ -3802,8 +3806,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:21:00.576974",
-    "timestamp": "2026-07-06T14:21:00.576974",
+    "id": "ocr_2026-07-06T15:43:02.677809",
+    "timestamp": "2026-07-06T15:43:02.677809",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056519_discharge virendra_11zon_28-04-2025_1115-27_AM@G.pdf_page_10.png",
     "archivo_copia": null,
@@ -3826,8 +3830,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:21:09.964131",
-    "timestamp": "2026-07-06T14:21:09.964131",
+    "id": "ocr_2026-07-06T15:43:21.667999",
+    "timestamp": "2026-07-06T15:43:21.667999",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056519_discharge virendra_11zon_28-04-2025_1132-57_AM@G.pdf_page_13.png",
     "archivo_copia": null,
@@ -3850,8 +3854,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:21:19.920972",
-    "timestamp": "2026-07-06T14:21:19.920972",
+    "id": "ocr_2026-07-06T15:43:51.043759",
+    "timestamp": "2026-07-06T15:43:51.043759",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056519_preauth virender _24-04-2025_0447-58_PM@G.pdf_page_12.png",
     "archivo_copia": null,
@@ -3874,8 +3878,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:21:29.030167",
-    "timestamp": "2026-07-06T14:21:29.030167",
+    "id": "ocr_2026-07-06T15:44:09.933652",
+    "timestamp": "2026-07-06T15:44:09.933652",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056568_E-REPORTS_250427_1436@E.pdf_page_1.png",
     "archivo_copia": null,
@@ -3898,8 +3902,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:21:37.651928",
-    "timestamp": "2026-07-06T14:21:37.651928",
+    "id": "ocr_2026-07-06T15:44:37.105748",
+    "timestamp": "2026-07-06T15:44:37.105748",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056644_Q-REPORT_250428_1140@F.pdf_page_6.png",
     "archivo_copia": null,
@@ -3922,8 +3926,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:21:46.100345",
-    "timestamp": "2026-07-06T14:21:46.100345",
+    "id": "ocr_2026-07-06T15:45:16.527958",
+    "timestamp": "2026-07-06T15:45:16.527958",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056644_Q-REPORT_250428_1140@F.pdf_page_9.png",
     "archivo_copia": null,
@@ -3946,8 +3950,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:21:54.587457",
-    "timestamp": "2026-07-06T14:21:54.587457",
+    "id": "ocr_2026-07-06T15:45:56.742475",
+    "timestamp": "2026-07-06T15:45:56.742475",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056853_E-CHITRAKSHIFINALBILLDISCHARGESUMMARY_250427_1048@E.pdf_page_4.png",
     "archivo_copia": null,
@@ -3970,8 +3974,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:22:02.845442",
-    "timestamp": "2026-07-06T14:22:02.845442",
+    "id": "ocr_2026-07-06T15:46:37.564713",
+    "timestamp": "2026-07-06T15:46:37.564713",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056892_GUR0425PA0056892_Q_27-04-2025_0620-20_PM.pdf_page_10.png",
     "archivo_copia": null,
@@ -3994,8 +3998,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:22:12.403876",
-    "timestamp": "2026-07-06T14:22:12.403876",
+    "id": "ocr_2026-07-06T15:47:10.011168",
+    "timestamp": "2026-07-06T15:47:10.011168",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057745_Q-LABREPORTS_250428_1121@F.pdf_page_12.png",
     "archivo_copia": null,
@@ -4018,8 +4022,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:22:20.482853",
-    "timestamp": "2026-07-06T14:22:20.482853",
+    "id": "ocr_2026-07-06T15:47:26.822122",
+    "timestamp": "2026-07-06T15:47:26.822122",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057759_Q-RAJINDERKUMARPHANDAQR_250427_1311@F.pdf_page_28.png",
     "archivo_copia": null,
@@ -4042,8 +4046,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:22:29.100610",
-    "timestamp": "2026-07-06T14:22:29.100610",
+    "id": "ocr_2026-07-06T15:47:44.012943",
+    "timestamp": "2026-07-06T15:47:44.012943",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057759_Q-RAJINDERKUMARPHANDAQR_250427_1311@F.pdf_page_41.png",
     "archivo_copia": null,
@@ -4066,8 +4070,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:22:36.946610",
-    "timestamp": "2026-07-06T14:22:36.946610",
+    "id": "ocr_2026-07-06T15:48:05.401171",
+    "timestamp": "2026-07-06T15:48:05.401171",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057805_E-gauravqewr_250427_1916@E.pdf_page_21.png",
     "archivo_copia": null,
@@ -4090,8 +4094,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:22:45.541776",
-    "timestamp": "2026-07-06T14:22:45.541776",
+    "id": "ocr_2026-07-06T15:48:28.342821",
+    "timestamp": "2026-07-06T15:48:28.342821",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057813_Shivani Preautharization request_26-04-2025_0924-28_PM@G.pdf_page_7.png",
     "archivo_copia": null,
@@ -4114,8 +4118,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:22:54.229906",
-    "timestamp": "2026-07-06T14:22:54.229906",
+    "id": "ocr_2026-07-06T15:48:50.388559",
+    "timestamp": "2026-07-06T15:48:50.388559",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057825_Akshaya Kumar Preauth (1)_27-04-2025_0857-23_AM@G.pdf_page_17.png",
     "archivo_copia": null,
@@ -4138,8 +4142,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:23:02.440187",
-    "timestamp": "2026-07-06T14:23:02.440187",
+    "id": "ocr_2026-07-06T15:49:11.635924",
+    "timestamp": "2026-07-06T15:49:11.635924",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057914_Q-AdditionalDocument_250427_1443@F.pdf_page_15.png",
     "archivo_copia": null,
@@ -4162,8 +4166,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:23:10.422114",
-    "timestamp": "2026-07-06T14:23:10.422114",
+    "id": "ocr_2026-07-06T15:49:27.638505",
+    "timestamp": "2026-07-06T15:49:27.638505",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057918_F-KYC_PC_KARUNA_1_250427_1321@G.pdf_page_29.png",
     "archivo_copia": null,
@@ -4186,8 +4190,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:23:18.895785",
-    "timestamp": "2026-07-06T14:23:18.895785",
+    "id": "ocr_2026-07-06T15:49:51.034097",
+    "timestamp": "2026-07-06T15:49:51.034097",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057918_F-KYC_PC_KARUNA_1_250427_1321@G.pdf_page_41.png",
     "archivo_copia": null,
@@ -4210,8 +4214,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:23:27.237189",
-    "timestamp": "2026-07-06T14:23:27.237189",
+    "id": "ocr_2026-07-06T15:50:16.017163",
+    "timestamp": "2026-07-06T15:50:16.017163",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057923_F-KYC_PC_CHOPPAVARAPU_PRABHAVATHI_1_250427_1339@G.pdf_page_12.png",
     "archivo_copia": null,
@@ -4234,8 +4238,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:23:35.983125",
-    "timestamp": "2026-07-06T14:23:35.983125",
+    "id": "ocr_2026-07-06T15:50:39.011080",
+    "timestamp": "2026-07-06T15:50:39.011080",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057931_F-SachinPreAuth_250427_1410@G.pdf_page_12.png",
     "archivo_copia": null,
@@ -4258,8 +4262,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:23:46.190319",
-    "timestamp": "2026-07-06T14:23:46.190319",
+    "id": "ocr_2026-07-06T15:51:05.850949",
+    "timestamp": "2026-07-06T15:51:05.850949",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057991_F-EchsDept27042025162653392807_250427_1637@G.pdf_page_10.png",
     "archivo_copia": null,
@@ -4282,8 +4286,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:23:54.571651",
-    "timestamp": "2026-07-06T14:23:54.571651",
+    "id": "ocr_2026-07-06T15:51:25.042145",
+    "timestamp": "2026-07-06T15:51:25.042145",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0058016_F-KYC_PC_RAMKUMAR_SANTOSH_KUMAR_1_250427_1718@G.pdf_page_13.png",
     "archivo_copia": null,
@@ -4306,8 +4310,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:24:03.084008",
-    "timestamp": "2026-07-06T14:24:03.084008",
+    "id": "ocr_2026-07-06T15:51:43.277569",
+    "timestamp": "2026-07-06T15:51:43.277569",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0058034_F-MANJEET_SINGH_1_250427_1803@G.pdf_page_30.png",
     "archivo_copia": null,
@@ -4330,8 +4334,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:24:11.407746",
-    "timestamp": "2026-07-06T14:24:11.407746",
+    "id": "ocr_2026-07-06T15:51:58.956286",
+    "timestamp": "2026-07-06T15:51:58.956286",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0058035_F-PKJosephcasesheetreports_250427_1808@G.pdf_page_14.png",
     "archivo_copia": null,
@@ -4357,8 +4361,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:24:20.455596",
-    "timestamp": "2026-07-06T14:24:20.455596",
+    "id": "ocr_2026-07-06T15:52:24.514466",
+    "timestamp": "2026-07-06T15:52:24.514466",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0058042_F-KYC_PC_BHUMI_1_250427_1830@G.pdf_page_18.png",
     "archivo_copia": null,
@@ -4381,8 +4385,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:24:29.355365",
-    "timestamp": "2026-07-06T14:24:29.355365",
+    "id": "ocr_2026-07-06T15:52:55.204599",
+    "timestamp": "2026-07-06T15:52:55.204599",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\HYD-0425-PA-0007281_Q-QUERYREPLYOFPT.GTSRINIVASARAO_250427_0957@F.pdf_page_8.png",
     "archivo_copia": null,
@@ -4405,8 +4409,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:24:36.664872",
-    "timestamp": "2026-07-06T14:24:36.664872",
+    "id": "ocr_2026-07-06T15:53:15.709518",
+    "timestamp": "2026-07-06T15:53:15.709518",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\HYD-0425-PA-0007281_Q-QUERYREPLYOFPT.GTSRINIVASARAO_250427_0957@F.pdf_page_9.png",
     "archivo_copia": null,
@@ -4429,8 +4433,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:24:45.012853",
-    "timestamp": "2026-07-06T14:24:45.012853",
+    "id": "ocr_2026-07-06T15:53:34.647412",
+    "timestamp": "2026-07-06T15:53:34.647412",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\IND-0425-PA-0032901_E-H2658992802126194907ilovepdfmerged15compressed_250427_1710@E.pdf_page_66.png",
     "archivo_copia": null,
@@ -4453,8 +4457,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:24:53.434285",
-    "timestamp": "2026-07-06T14:24:53.434285",
+    "id": "ocr_2026-07-06T15:53:53.151515",
+    "timestamp": "2026-07-06T15:53:53.151515",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\IND-0425-PA-0032901_E-H2658992802126194907ilovepdfmerged15compressed_250427_1710@E.pdf_page_67.png",
     "archivo_copia": null,
@@ -4477,8 +4481,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:25:02.004149",
-    "timestamp": "2026-07-06T14:25:02.004149",
+    "id": "ocr_2026-07-06T15:54:11.659531",
+    "timestamp": "2026-07-06T15:54:11.659531",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\IND-0425-PA-0032901_E-H2658992802126194907ilovepdfmerged15compressed_250427_1710@E.pdf_page_90.png",
     "archivo_copia": null,
@@ -4501,8 +4505,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:25:10.087180",
-    "timestamp": "2026-07-06T14:25:10.087180",
+    "id": "ocr_2026-07-06T15:54:27.625628",
+    "timestamp": "2026-07-06T15:54:27.625628",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\IND-0425-PA-0033745_SANTOSH334_27-04-2025_0431-24_PM@F.pdf_page_3.png",
     "archivo_copia": null,
@@ -4525,8 +4529,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:25:18.884155",
-    "timestamp": "2026-07-06T14:25:18.884155",
+    "id": "ocr_2026-07-06T15:54:45.277436",
+    "timestamp": "2026-07-06T15:54:45.277436",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\JPR-0425-PA-0005044_H_26671_9290939312_57_59_YUDHAANICPANDREPORTS001_27-04-2025_0101-02_PM.pdf_page_4.png",
     "archivo_copia": null,
@@ -4549,8 +4553,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:25:27.614878",
-    "timestamp": "2026-07-06T14:25:27.614878",
+    "id": "ocr_2026-07-06T15:55:09.132274",
+    "timestamp": "2026-07-06T15:55:09.132274",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\JPR-0425-PA-0005068_E-AnnuFinal_250427_1502@E.pdf_page_19.png",
     "archivo_copia": null,
@@ -4573,8 +4577,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:25:36.436577",
-    "timestamp": "2026-07-06T14:25:36.436577",
+    "id": "ocr_2026-07-06T15:55:32.449658",
+    "timestamp": "2026-07-06T15:55:32.449658",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\JPR-0425-PA-0005076_H_36220_9294528109_59_40_MANMOHAN_28-04-2025_1036-30_AM@G.pdf_page_9.png",
     "archivo_copia": null,
@@ -4597,8 +4601,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:25:46.263569",
-    "timestamp": "2026-07-06T14:25:46.263569",
+    "id": "ocr_2026-07-06T15:55:52.576119",
+    "timestamp": "2026-07-06T15:55:52.576119",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\JPR-0425-PA-0005079_PA_FILE_OF_PT_BIMALA_DEVI_304_28-04-2025_1132-59_AM@G.pdf_page_9.png",
     "archivo_copia": null,
@@ -4621,8 +4625,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:25:56.399793",
-    "timestamp": "2026-07-06T14:25:56.399793",
+    "id": "ocr_2026-07-06T15:56:20.349983",
+    "timestamp": "2026-07-06T15:56:20.349983",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\KOC-0425-PA-0009630_Q-AnilCasesheet_250427_1458@F.pdf_page_21.png",
     "archivo_copia": null,
@@ -4645,8 +4649,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:26:05.082360",
-    "timestamp": "2026-07-06T14:26:05.082360",
+    "id": "ocr_2026-07-06T15:56:48.008892",
+    "timestamp": "2026-07-06T15:56:48.008892",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\KOL-0425-PA-0004068_E-1745819838697ANKURSAXENAFINALBILLconverted_250428_1144@E.pdf_page_16.png",
     "archivo_copia": null,
@@ -4672,8 +4676,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:26:13.664627",
-    "timestamp": "2026-07-06T14:26:13.664627",
+    "id": "ocr_2026-07-06T15:57:25.635971",
+    "timestamp": "2026-07-06T15:57:25.635971",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\KOL-0425-PA-0004210_REPORT_27-04-2025_0729-34_PM.pdf_page_7.png",
     "archivo_copia": null,
@@ -4696,8 +4700,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:26:22.414386",
-    "timestamp": "2026-07-06T14:26:22.414386",
+    "id": "ocr_2026-07-06T15:57:49.219250",
+    "timestamp": "2026-07-06T15:57:49.219250",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0125-PA-0001141_W2500438UNADKAT ASHWIN_27-04-2025_1001-12_AM.pdf_page_74.png",
     "archivo_copia": null,
@@ -4720,8 +4724,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:26:31.167121",
-    "timestamp": "2026-07-06T14:26:31.167121",
+    "id": "ocr_2026-07-06T15:58:17.272494",
+    "timestamp": "2026-07-06T15:58:17.272494",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0125-PA-0001141_W2500438UNADKAT ASHWIN_27-04-2025_1001-12_AM.pdf_page_80.png",
     "archivo_copia": null,
@@ -4744,8 +4748,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:26:41.246736",
-    "timestamp": "2026-07-06T14:26:41.246736",
+    "id": "ocr_2026-07-06T15:58:38.765081",
+    "timestamp": "2026-07-06T15:58:38.765081",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0125-PA-0001141_W2500438UNADKAT ASHWIN_27-04-2025_1001-12_AM.pdf_page_83.png",
     "archivo_copia": null,
@@ -4768,8 +4772,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:26:50.083105",
-    "timestamp": "2026-07-06T14:26:50.083105",
+    "id": "ocr_2026-07-06T15:58:48.567362",
+    "timestamp": "2026-07-06T15:58:48.567362",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0125-PA-0001141_W2500438UNADKAT ASHWIN_27-04-2025_1002-19_AM.pdf_page_80.png",
     "archivo_copia": null,
@@ -4792,8 +4796,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:27:00.123785",
-    "timestamp": "2026-07-06T14:27:00.123785",
+    "id": "ocr_2026-07-06T15:58:58.842872",
+    "timestamp": "2026-07-06T15:58:58.842872",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0125-PA-0001141_W2500438UNADKAT ASHWIN_27-04-2025_1002-19_AM.pdf_page_91.png",
     "archivo_copia": null,
@@ -4841,8 +4845,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:27:09.571292",
-    "timestamp": "2026-07-06T14:27:09.571292",
+    "id": "ocr_2026-07-06T15:59:08.487282",
+    "timestamp": "2026-07-06T15:59:08.487282",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0425-PA-0003769_E-BodakheParvatiReports_250427_1201@E.pdf_page_2.png",
     "archivo_copia": null,
@@ -4868,8 +4872,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:27:18.269311",
-    "timestamp": "2026-07-06T14:27:18.269311",
+    "id": "ocr_2026-07-06T15:59:17.720929",
+    "timestamp": "2026-07-06T15:59:17.720929",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0425-PA-0004284_E-1745743986041ARCHANARANAFINALBILLO_250427_1425@E.pdf_page_4.png",
     "archivo_copia": null,
@@ -4892,8 +4896,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:27:26.933146",
-    "timestamp": "2026-07-06T14:27:26.933146",
+    "id": "ocr_2026-07-06T15:59:26.794635",
+    "timestamp": "2026-07-06T15:59:26.794635",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0425-PA-0004300_REPORTS_27-04-2025_0134-06_PM@G.pdf_page_11.png",
     "archivo_copia": null,
@@ -4916,8 +4920,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:27:35.781958",
-    "timestamp": "2026-07-06T14:27:35.781958",
+    "id": "ocr_2026-07-06T15:59:35.638837",
+    "timestamp": "2026-07-06T15:59:35.638837",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\PUN-0425-PA-0011414_Lab Report_27-04-2025_0949-24_PM.pdf_page_1.png",
     "archivo_copia": null,
@@ -4940,8 +4944,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:27:46.506562",
-    "timestamp": "2026-07-06T14:27:46.506562",
+    "id": "ocr_2026-07-06T15:59:46.646086",
+    "timestamp": "2026-07-06T15:59:46.646086",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\PUN-0425-PA-0011414_Lab Report_27-04-2025_0949-24_PM.pdf_page_11.png",
     "archivo_copia": null,
@@ -4964,8 +4968,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:27:55.994141",
-    "timestamp": "2026-07-06T14:27:55.994141",
+    "id": "ocr_2026-07-06T15:59:56.117396",
+    "timestamp": "2026-07-06T15:59:56.117396",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\PUN-0425-PA-0011414_Lab Report_27-04-2025_0949-24_PM.pdf_page_2.png",
     "archivo_copia": null,
@@ -4988,8 +4992,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-06T14:28:04.498694",
-    "timestamp": "2026-07-06T14:28:04.498694",
+    "id": "ocr_2026-07-06T16:00:06.535865",
+    "timestamp": "2026-07-06T16:00:06.535865",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\PUN-0425-PA-0011414_Lab Report_27-04-2025_0949-24_PM@F.pdf_page_10.png",
     "archivo_copia": null,
@@ -5144,6 +5148,153 @@
     "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260706_123235_ocr_02871c71d89640de8cf1b76f2f4a45e6.jpg",
     "tipo_documento": "UNKNOWN",
     "texto_crudo": "ee ay\ney ay | come\nofa Gey coance Tova sove\ni OE AIS ony: —\niF 1<PER42388604<5<<€<<<<<<<<<<<<<\n\\ 8405302M2101222PER<<<<<<<<<<<4\n{ MARIN<<JORGE<ENRIQUE<<<<<<<<<<\na2\n—_— & bs",
+    "campos": {
+      "tipo": "UNKNOWN",
+      "cnn_prediccion": {
+        "clase_predicha": "UNKNOWN",
+        "probabilidades": {
+          "LAB_REPORT": 0.1488,
+          "DNI_PERU": 0.1488,
+          "DNI_USA": 0.1488,
+          "INFORME_MEDICO": 0.1488,
+          "UNKNOWN": 0.4046
+        },
+        "confianza": 0.4046
+      }
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-06T15:13:23.270920",
+    "timestamp": "2026-07-06T15:13:23.270920",
+    "fuente": "upload",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\ocr_ee8bbaaa042444e1905c138c82d2c715.png",
+    "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260706_151323_ocr_ee8bbaaa042444e1905c138c82d2c715.png",
+    "tipo_documento": "UNKNOWN",
+    "texto_crudo": "bd REPUBLICA DEL PERU Re eon cul\nNERD cocumentonacionsccewennoao —— 74747580-1\nPriemer Apellido\nr GRANADOS i)\nSegunde Apellido\na — we\n\\ = Pronompres. i Sie\n_ JUAN FELIPE\n3\n5 * 539910 ° PER” 09 422000.\nEstado Civil Fecha de Emision\nSOLTERO 0903 2023\np- N\" de Taxjeta + Fecha de Caducktad\n0201698550 09.03 2031",
+    "campos": {
+      "tipo": "UNKNOWN",
+      "cnn_prediccion": {
+        "clase_predicha": "UNKNOWN",
+        "probabilidades": {
+          "LAB_REPORT": 0.1488,
+          "DNI_PERU": 0.1488,
+          "DNI_USA": 0.1488,
+          "INFORME_MEDICO": 0.1488,
+          "UNKNOWN": 0.4046
+        },
+        "confianza": 0.4046
+      }
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-06T16:05:43.860775",
+    "timestamp": "2026-07-06T16:05:43.860775",
+    "fuente": "upload",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\ocr_f93dcf2fc5e04d40bdf9fb24a68d8256.png",
+    "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260706_160543_ocr_f93dcf2fc5e04d40bdf9fb24a68d8256.png",
+    "tipo_documento": "INFORME_MEDICO",
+    "texto_crudo": "So CLINICA ANGLO AMERICANA\nNombre: JUAN FELIPE\nInforme Medico Apellidos: GRANADOS ALLENDE\n22/11/2018 16:37 RA MARIA r\n° 2 MRISLUSASTIGUCHWATSON | Fecha Nac.: 9-dic-2004  Edad:13 Sexo: M\nN° Doc.: 74747580 H.C Papel: 0643691\ney 22/11/2018 1639 DRA MARIA LUISA STIGLICH WATSON\na. Ea\nFECHA EVALUACION 08 DE NOVIEMBRE 2018\nFECHA INFORME: 22 DE NOVIEMBRE 2018\nMotivo de Consulta’\nJuan Felipe es traido por sus padres por haber episodios de tics desde los 3 afios. En esa primera oportunidad,\npresento episodios de parpadeo que se autollimitaron en unos meses. A los 8 ajios, también presento episodios\nrepetidos de parpadeo e igualmente desaparecieron. En el 2018, desde marzo, presenta no solo episodios de\nparpadeo sino también movimientos repetitivos esteotipados de la nariz y boca. No presenta tics sonoros 0 motores\nde mayor complejidad. Estos episodios se presentan sin causa y son de frecuencia variable, sin embargo, preocupan\na ambos padres. Ni en el colegio ni otros familiares han notado o mostrado preocupacién por estos movimientos\ninvoluntarios.\nAntecedentes de Importancia\nPerinatales: No significativo.\nPatolégicos:  Niega\nFamiliar Primo paterno epilepsia de lactante. Madre es migrafiosa.\nDesarrollo Cursa segundo de media con rendimiento adecuado para la edad. Su desarrollo también ha sido\nadecuado.\nAl examen fisico y neurolégico preferencial\nPC 54cm\nNo dismorfias ni lesiones en piel.\nSe relaciona de manera esperada para su edad cronolégica\nEl examen fisico general y el examen neurolégico en si han sido adecuados para la edad.\nImpresién diagnéstica\n1 Tics motores crénicos\nComentario\nPaciente con historia de tics motores simples cronicos que incrementan levemente con ansiedad. No considero\nrequieran manejo farmacol6gico, se ha sugerido terapia psicolégica de tipo emocional. Control en 2 a 3 meses.\nAggie\n(a ant) sk\n3. 08? = 169\na wenn 26389\n8\nue\nbeta a si 7 (a) a ite 4000 2ayat# Fontana 362 La Molina. 7(511) @108888 = MARIA LUISA STIGLICH WATSON\nPagina 1 det NEUROLOGIA PEDIATRICA\nCMP. 041806 RN.E: 26359",
+    "campos": {
+      "ciu": "201816",
+      "pruebas": [],
+      "tipo": "LAB_REPORT",
+      "cnn_prediccion": {
+        "clase_predicha": "INFORME_MEDICO",
+        "probabilidades": {
+          "LAB_REPORT": 0.0763,
+          "DNI_PERU": 0.0763,
+          "DNI_USA": 0.0763,
+          "INFORME_MEDICO": 0.5637,
+          "UNKNOWN": 0.2074
+        },
+        "confianza": 0.5637
+      },
+      "alertas_detectadas": []
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-06T16:05:56.807199",
+    "timestamp": "2026-07-06T16:05:56.807199",
+    "fuente": "upload",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\ocr_984a19a50b364c4dbce7ca1134b66d18.png",
+    "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260706_160556_ocr_984a19a50b364c4dbce7ca1134b66d18.png",
+    "tipo_documento": "UNKNOWN",
+    "texto_crudo": ", te Peed» shill Bpacse\nPacenre. Aioc ananca asencon ron. FUGREY\na\n“RECUENTO CELULAR SS\n—- — = be Faas",
+    "campos": {
+      "tipo": "UNKNOWN",
+      "cnn_prediccion": {
+        "clase_predicha": "UNKNOWN",
+        "probabilidades": {
+          "LAB_REPORT": 0.1488,
+          "DNI_PERU": 0.1488,
+          "DNI_USA": 0.1488,
+          "INFORME_MEDICO": 0.1488,
+          "UNKNOWN": 0.4046
+        },
+        "confianza": 0.4046
+      }
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-06T16:06:16.285828",
+    "timestamp": "2026-07-06T16:06:16.285828",
+    "fuente": "upload",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\ocr_9321f44e5faa46d699aac5dba8479602.png",
+    "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260706_160616_ocr_9321f44e5faa46d699aac5dba8479602.png",
+    "tipo_documento": "DNI_USA",
+    "texto_crudo": "manipalhospitals ic oP\nLIFE’S ON ecaABl\n7 ee || a\nPs | 7 a\n| a; sd Collection Date: 27 Apr 2025 08:28\nReferred By : DR SHASHI VADHAN Reporting Date: 27 Apr 2025 10:19\nReceiving Date : 27 Apr 2025 09:01\nClinical Laboratory Report\nBIOCHEMISTRY Eye\nRENAL PANEL - II Specimen: Serum\nPlasma GLUCOSE - Random (Hexokinase) 126 mg/dl [70-140]\nSERUM BICARBONATE 19.8 # mmol/L [22.0-29.0]\nBUN (Urease/GLDH) 4.90 # mg/dl [6.00-20.00]\nSERUM CREATININE (mod.Jaffe) 1.00 mg/dl [0.80-1.60]\n*eGFR 93.7 ml/min/1.73sq.m [>60.0]\nSERUM SODIUM (Indirect ISE) 137.0 mmol/1 [135.0-145.0]\nSERUM POTASSIUM (Indirect ISE) 4.49 mmol/1 [3.50-5.10]\nSERUM Patient CIU: W920981 mmol/L [98.0-107.0]\nSERUM URIC ACID (mod.Uricase) 7.0 mg/dl [3.5-7.2]\nSERUM CALCIUM (NM-BAPTA) 9.52 mg/dl [8.60-10.30]\nSERUM PHOSPHORUS (Molybdate, UV) 3.03 mg/dl [2.50-4.50]\nTOTAL CHOLESTEROL (CHOD/POD) 171 mg/dl [<200]\nModerate risk: 200-239\nHigh risk: >240\nBILIRUBIN-TOTAL(mod.J Groff)** 10.36 # mg/dl [0.10-1.20]\nBILIRUBIN-DIRECT(mod.J Groff) 5.38 # mg/dl [<0.2]\nTOTAL PROTEIN (mod.Biuret) 7.2 g/dl [6.4-8.3]\nSERUM ALBUMIN (BCG-dye) 4.7 g/dl [3.5-5.2]\nSERUM GLOBULIN 2.5 g/dl [1.8-3.4]\nALB/GLOB (A/G) Ratio 1.92 # [1.10-1.80]\nSGPT/ ALT (P5P,IFCC) 356 # U/L [10-50]\nSGOT/ AST (P5P,IFCC) 249 # U/L [5-37]\nALP (p-NPP,kinetic)* 129 U/L [45-135]\nLDH (UV kinetic) 287 # U/L [135-225]\nDisclaimer :\neGFR which is primarily based on Serum Creatinine is a derivation of\nCKD-EPI 2009 equation normalized tol.73 sq.m BSA and is not applicable to individuals\neGFR tends to be less accurate when Serum Creatinine estimation is indeterminate e.g.\nbelow 18 years. patients at extremes of muscle mass, on unusual diets etc. and samples\nThis report is based on the specimen/s received. The report may need to be correlated clinically as laboratory investigations are\ndependent on multiple variables. These results should not be reproduced in part.\nDisclaimer: Please note that this is system generated e-copy of the report. The same can be downloaded from Manipal app OR\ncollected at the laboratory, Manipal Hospitals, Old Airport Road, Bengaluru 560017.\nManipal Hospitals is not responsible for any modifications / alterations made on this e-copy of the report, by an) Patient Clu:\nother than the Authorizing Signatory mentioned in the report, in the interest of the patient.\nree the QR code t\nDepartment of Laboratory Medicine eas °\n#98, Old _— Road, a 560 017, P 1800 102 3222, +91 80 2502 4444 Extn. 3206 / 4617",
+    "campos": {
+      "tipo": "DNI_USA",
+      "cnn_prediccion": {
+        "clase_predicha": "DNI_USA",
+        "probabilidades": {
+          "LAB_REPORT": 0.5637,
+          "DNI_PERU": 0.0763,
+          "DNI_USA": 0.0763,
+          "INFORME_MEDICO": 0.0763,
+          "UNKNOWN": 0.2074
+        },
+        "confianza": 0.5637
+      }
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-06T16:14:22.429319",
+    "timestamp": "2026-07-06T16:14:22.429319",
+    "fuente": "upload",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\ocr_e85ff1f3626340918cbaa868932fd526.png",
+    "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260706_161422_ocr_e85ff1f3626340918cbaa868932fd526.png",
+    "tipo_documento": "UNKNOWN",
+    "texto_crudo": ", te Peed» shill Bpacse\nPacenre. Aioc ananca asencon ron. FUGREY\na\n“RECUENTO CELULAR SS\n—- — = be Faas",
+    "campos": {
+      "tipo": "UNKNOWN",
+      "cnn_prediccion": {
+        "clase_predicha": "UNKNOWN",
+        "probabilidades": {
+          "LAB_REPORT": 0.1488,
+          "DNI_PERU": 0.1488,
+          "DNI_USA": 0.1488,
+          "INFORME_MEDICO": 0.1488,
+          "UNKNOWN": 0.4046
+        },
+        "confianza": 0.4046
+      }
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-06T16:14:45.117028",
+    "timestamp": "2026-07-06T16:14:45.117028",
+    "fuente": "upload",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\ocr_a5c795c1b3e94581bdda10c91b4834b1.png",
+    "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260706_161445_ocr_a5c795c1b3e94581bdda10c91b4834b1.png",
+    "tipo_documento": "UNKNOWN",
+    "texto_crudo": ", te Peed» shill Bpacse\nPacenre. Aioc ananca asencon ron. FUGREY\na\n“RECUENTO CELULAR SS\n—- — = be Faas",
     "campos": {
       "tipo": "UNKNOWN",
       "cnn_prediccion": {

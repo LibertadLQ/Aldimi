@@ -36,7 +36,7 @@ print('Módulos disponibles: sincronizar_carpetas, cargar_bd')
 
 def ejecutar_local_scan(max_images: int = 0) -> dict:
     """Escanea DNI_ALDIMI y LAB_ALDIMI localmente."""
-    resultado = sincronizar_carpetas(max_images=max_images)
+    resultado = sincronizar_carpetas(max_images_dni=max_images, max_images_lab=max_images)
     print(f'Escaneo local completado: {resultado["procesados"]} imágenes procesadas')
     return resultado
 

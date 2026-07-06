@@ -67,7 +67,8 @@ def persistir_ocr_resultado(ruta_imagen: str, resultado: Dict[str, Any], fuente:
 
     tipo_documento = resultado.get("tipo_documento", "UNKNOWN")
     campos = resultado.get("campos", {}) or {}
-    ciu = str(campos.get("ciu", "")).strip().upper() if isinstance(campos, dict) else ""
+    ciu_raw = str(campos.get("ciu", "")).strip().upper() if isinstance(campos, dict) else ""
+    ciu = ciu_raw if ciu_raw and ciu_raw != "NO_DETECTADO" else ""
 
     origen_path = Path(ruta_imagen)
     archivo_origen = str(origen_path.resolve()) if origen_path.exists() else ruta_imagen
@@ -130,16 +131,37 @@ def persistir_ocr_resultado(ruta_imagen: str, resultado: Dict[str, Any], fuente:
     return {"documento": documento, "paciente_actualizado": bool(ciu)}
 
 
-def sincronizar_carpetas(max_images: int = 0) -> Dict[str, Any]:
-    """Procesa imágenes de DNI_ALDIMI y LAB_ALDIMI y las guarda en ALDIMI_DB."""
+def sincronizar_carpetas(max_images_dni: int = 0, max_images_lab: int = 0) -> Dict[str, Any]:
+    """Procesa imágenes de DNI_ALDIMI y LAB_ALDIMI y las guarda en ALDIMI_DB.
+
+    Se procesan en pares por índice para mantener el orden: primero DNI[0], LAB[0], luego DNI[1], LAB[1], etc.
+    """
     resultados = []
 
-    carpetas = [
-        ("DNI_ALDIMI", DNI_DIR),
-        ("LAB_ALDIMI", LAB_DIR),
-    ]
-    for nombre_carpeta, carpeta in carpetas:
-        for path in _listar_imagenes(carpeta, max_images=max_images):
+    dni_images = _listar_imagenes(DNI_DIR, max_images=max_images_dni)
+    lab_images = _listar_imagenes(LAB_DIR, max_images=max_images_lab)
+    total = max(len(dni_images), len(lab_images))
+
+    for index in range(total):
+        if index < len(dni_images):
+            path = dni_images[index]
+            nombre_carpeta = "DNI_ALDIMI"
+            print(f"[SYNC] Procesando {nombre_carpeta}: {path.name}")
+            resultado = ocr.procesar_documento(str(path))
+            print(f"[SYNC] Resultado preliminar: tipo={resultado.get('tipo_documento')} campos_keys={list((resultado.get('campos') or {}).keys())}")
+            guardado = persistir_ocr_resultado(str(path), resultado, fuente=nombre_carpeta)
+            print(f"[SYNC] Persistencia: paciente_actualizado={guardado.get('paciente_actualizado')}")
+            resultados.append({
+                "carpeta": nombre_carpeta,
+                "archivo": path.name,
+                "tipo_documento": resultado.get("tipo_documento"),
+                "ciu": (resultado.get("campos", {}) or {}).get("ciu"),
+                "guardado": guardado,
+            })
+
+        if index < len(lab_images):
+            path = lab_images[index]
+            nombre_carpeta = "LAB_ALDIMI"
             print(f"[SYNC] Procesando {nombre_carpeta}: {path.name}")
             resultado = ocr.procesar_documento(str(path))
             print(f"[SYNC] Resultado preliminar: tipo={resultado.get('tipo_documento')} campos_keys={list((resultado.get('campos') or {}).keys())}")

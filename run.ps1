@@ -30,10 +30,16 @@ if ($useDrive) {
 }
 
 $env:USE_NOTEBOOK = "1"
+$env:PYTHONUTF8 = "1"
 Write-Host "USE_NOTEBOOK=1 establecido para backend." -ForegroundColor Cyan
-# No limitar el procesamiento inicial de imágenes (0 = sin límite).
-$env:ALDIMI_MAX_IMAGES = "0"
-Write-Host "ALDIMI_MAX_IMAGES=0 (procesamiento completo de imágenes en el arranque)" -ForegroundColor Cyan
+Write-Host "PYTHONUTF8=1 establecido para asegurar que Python use UTF-8 en el proceso." -ForegroundColor Cyan
+
+# Limitar startup scan a un solo archivo por carpeta.
+$env:ALDIMI_WAIT_FOR_SCAN = "1"
+$env:ALDIMI_SCAN_DNI = "1"
+$env:ALDIMI_SCAN_LAB = "1"
+$env:ALDIMI_MAX_IMAGES = "1"
+Write-Host "ALDIMI_WAIT_FOR_SCAN=1, ALDIMI_SCAN_DNI=1, ALDIMI_SCAN_LAB=1, ALDIMI_MAX_IMAGES=1" -ForegroundColor Cyan
 
 # Check Python
 if (-not (Get-Command python -ErrorAction SilentlyContinue)) {
@@ -110,25 +116,34 @@ if (-not $tessCmd) {
 
 $staticPort = 5500
 $venvPython = Join-Path $venvPath "Scripts\python.exe"
-$backendDir = Join-Path $root "backend"
+$psExe = Join-Path $PSHOME "powershell.exe"
+$backendLog = Join-Path $root "backend\backend.log"
 
-$activate = Join-Path $venvPath "Scripts\Activate.ps1"
-
-$backendCommand = "& '$activate'; Set-Location -LiteralPath '$root'; & '$venvPython' -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload"
+$backendCommand = "& '$activate'; Set-Location -LiteralPath '$root'; `$env:ALDIMI_WAIT_FOR_SCAN='1'; `$env:ALDIMI_SCAN_DNI='1'; `$env:ALDIMI_SCAN_LAB='1'; `$env:ALDIMI_MAX_IMAGES='1'; & '$venvPython' -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload 2>&1 | Tee-Object -FilePath '$backendLog'"
 $staticCommand  = "& '$activate'; Set-Location -LiteralPath '$root'; & '$venvPython' -m http.server $staticPort"
+
+# Liberar puerto 8000 si hay algún listener huérfano.
+Write-Host "Liberando puerto 8000 si está ocupado..." -ForegroundColor Cyan
+try {
+    Get-NetTCPConnection -LocalPort 8000 -State Listen -ErrorAction SilentlyContinue | ForEach-Object {
+        Write-Host "Deteniendo proceso con PID=$($_.OwningProcess) que escucha en 8000" -ForegroundColor Yellow
+        Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue
+    }
+} catch {
+    Write-Host "No se pudo liberar el puerto 8000 automáticamente: $_" -ForegroundColor Yellow
+}
 
 Write-Host "Iniciando backend (uvicorn) en nueva ventana de PowerShell..."
 Write-Host "El autoscan se ejecutará automáticamente al iniciar el servidor FastAPI (evento 'startup')." -ForegroundColor Cyan
-
-Start-Process -FilePath powershell -ArgumentList "-NoExit","-Command",$backendCommand
+Start-Process -FilePath $psExe -ArgumentList "-NoProfile","-ExecutionPolicy","Bypass","-NoExit","-Command",$backendCommand -WorkingDirectory $root -WindowStyle Normal
 
 Write-Host "Iniciando servidor estático en puerto $staticPort en nueva ventana..."
-Start-Process -FilePath powershell -ArgumentList "-NoExit","-Command",$staticCommand
+Start-Process -FilePath $psExe -ArgumentList "-NoProfile","-ExecutionPolicy","Bypass","-NoExit","-Command",$staticCommand -WorkingDirectory $root -WindowStyle Normal
 
 # Esperar a que el backend responda
 $backendUrl = "http://127.0.0.1:8000"
 Write-Host "Comprobando conectividad con el backend en $backendUrl ..."
-$maxRetries = 30
+$maxRetries = 60
 $retry = 0
 $ok = $false
 while ($retry -lt $maxRetries) {
@@ -145,20 +160,24 @@ while ($retry -lt $maxRetries) {
 if (-not $ok) {
     Write-Host "ADVERTENCIA: No se detectó el backend en $backendUrl después de $maxRetries segundos." -ForegroundColor Yellow
     Write-Host "Verifica la ventana de PowerShell donde se inició uvicorn para ver errores." -ForegroundColor Yellow
-
-    $backendLog = Join-Path $root "backend\backend.log"
-    if (Test-Path $backendLog) {
-        Write-Host "Mostrando últimas 200 líneas de backend\backend.log:" -ForegroundColor Cyan
-        Get-Content -Path $backendLog -Tail 200 | ForEach-Object { Write-Host $_ }
+    Write-Host "También revisa el archivo de logs: $backendLog" -ForegroundColor Yellow
+    $listener = Get-NetTCPConnection -LocalPort 8000 -ErrorAction SilentlyContinue
+    if ($listener) {
+        Write-Host "Hay un listener en el puerto 8000, pero el backend no responde correctamente." -ForegroundColor Yellow
     } else {
-        Write-Host "No se encontró backend\backend.log. Si usaste PRUEBAS\run.ps1, revisa su salida; o ejecuta manualmente en 'backend' para ver errores." -ForegroundColor Yellow
+        Write-Host "No hay ningún proceso escuchando en el puerto 8000. El backend probablemente falló al arrancar." -ForegroundColor Yellow
     }
+} else {
+    Write-Host "Backend disponible. Abriendo frontend..." -ForegroundColor Green
 }
 
-# Abrir la página principal de inicio de sesión
+# Abrir la página principal de inicio de sesión solo si el backend respondió
 $indexUrl = "http://localhost:$staticPort/index.html"
-Write-Host "Abriendo $indexUrl en el navegador predeterminado..."
-try { Start-Process $indexUrl } catch { Write-Host "No se pudo abrir el navegador automáticamente." -ForegroundColor Yellow }
-
-Write-Host "Listo. Si el frontend muestra aún el error de conexión asegúrate de que el backend se haya iniciado sin errores y que FastAPI tenga CORS habilitado para el origen http://localhost:$staticPort." -ForegroundColor Cyan
-Write-Host "Si necesitas, puedo añadir un middleware CORS al backend si me lo indicas." -ForegroundColor Cyan
+if ($ok) {
+    Write-Host "Abriendo $indexUrl en el navegador predeterminado..."
+    try { Start-Process $indexUrl } catch { Write-Host "No se pudo abrir el navegador automáticamente." -ForegroundColor Yellow }
+    Write-Host "Listo. El backend está disponible y el frontend se abrió." -ForegroundColor Cyan
+} else {
+    Write-Host "No se abrirá el frontend porque el backend no respondió." -ForegroundColor Yellow
+    Write-Host "Revisa la ventana de PowerShell donde se inició uvicorn para encontrar el error y vuelve a ejecutar el script." -ForegroundColor Yellow
+}
