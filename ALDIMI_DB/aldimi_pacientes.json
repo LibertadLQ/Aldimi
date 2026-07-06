@@ -1,6 +1,6 @@
 {
   "sesion": {
-    "ultima_actualizacion": "2026-07-06T13:34:37.248627",
+    "ultima_actualizacion": "2026-07-06T14:47:59.725948",
     "archivo": "aldimi_pacientes.json"
   },
   "pacientes": {
@@ -17,8 +17,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T13:22:06.237159",
-          "timestamp": "2026-07-06T13:22:06.237159",
+          "id": "ocr_2026-07-06T14:47:59.703680",
+          "timestamp": "2026-07-06T14:47:59.703680",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053405_Q-RANJANADEVI21.04.20250001compressed_250427_1041@F.pdf_page_38.png",
           "archivo_copia": null,
@@ -45,7 +45,7 @@
         }
       ],
       "creado_en": "2026-07-06T10:01:43.273491",
-      "actualizado_en": "2026-07-06T13:22:06.237159"
+      "actualizado_en": "2026-07-06T14:47:59.703680"
     },
     "130250": {
       "ciu": "130250",
@@ -60,8 +60,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T13:24:23.175672",
-          "timestamp": "2026-07-06T13:24:23.175672",
+          "id": "ocr_2026-07-06T14:15:02.339040",
+          "timestamp": "2026-07-06T14:15:02.339040",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053567_Q-PT.ROSHNIESIBUNCH11zon_250427_1622@F.pdf_page_41.png",
           "archivo_copia": null,
@@ -88,7 +88,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:24:23.188752",
-      "actualizado_en": "2026-07-06T13:24:23.175672"
+      "actualizado_en": "2026-07-06T14:15:02.339040"
     },
     "1321032": {
       "ciu": "1321032",
@@ -103,8 +103,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T13:24:33.652555",
-          "timestamp": "2026-07-06T13:24:33.652555",
+          "id": "ocr_2026-07-06T14:15:11.467120",
+          "timestamp": "2026-07-06T14:15:11.467120",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053567_Q-PT.ROSHNIESIBUNCH11zon_250427_1622@F.pdf_page_63.png",
           "archivo_copia": null,
@@ -131,7 +131,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:24:33.666396",
-      "actualizado_en": "2026-07-06T13:24:33.652555"
+      "actualizado_en": "2026-07-06T14:15:11.467120"
     },
     "20210773": {
       "ciu": "20210773",
@@ -146,8 +146,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T13:26:10.853273",
-          "timestamp": "2026-07-06T13:26:10.853273",
+          "id": "ocr_2026-07-06T14:16:37.855948",
+          "timestamp": "2026-07-06T14:16:37.855948",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054989_Q-112752REETADEVI_250427_1429@F.pdf_page_31.png",
           "archivo_copia": null,
@@ -160,13 +160,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.5637,
-                "DNI_PERU": 0.0763,
-                "DNI_USA": 0.0763,
-                "INFORME_MEDICO": 0.0763,
-                "UNKNOWN": 0.2074
+                "LAB_REPORT": 0.7784,
+                "DNI_PERU": 0.0388,
+                "DNI_USA": 0.0388,
+                "INFORME_MEDICO": 0.0388,
+                "UNKNOWN": 0.1053
               },
-              "confianza": 0.5637
+              "confianza": 0.7784
             },
             "alertas_detectadas": []
           },
@@ -174,7 +174,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:26:10.873906",
-      "actualizado_en": "2026-07-06T13:26:10.853273"
+      "actualizado_en": "2026-07-06T14:16:37.855948"
     },
     "202504": {
       "ciu": "202504",
@@ -189,8 +189,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T13:26:42.491487",
-          "timestamp": "2026-07-06T13:26:42.491487",
+          "id": "ocr_2026-07-06T14:17:05.783109",
+          "timestamp": "2026-07-06T14:17:05.783109",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055057_F-KYC_PC_Mrs_CHANDER_KANTA_1_250422_1418@G.pdf_page_7.png",
           "archivo_copia": null,
@@ -217,7 +217,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:26:42.505992",
-      "actualizado_en": "2026-07-06T13:26:42.491487"
+      "actualizado_en": "2026-07-06T14:17:05.783109"
     },
     "136145": {
       "ciu": "136145",
@@ -232,8 +232,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T13:27:09.075481",
-          "timestamp": "2026-07-06T13:27:09.075481",
+          "id": "ocr_2026-07-06T14:17:33.829343",
+          "timestamp": "2026-07-06T14:17:33.829343",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055398_SUNILA ARORA INVESTIGATION  FOR ENHANCMENT _27-04-2025_1111-09_AM.pdf_page_8.png",
           "archivo_copia": null,
@@ -260,7 +260,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:27:09.089200",
-      "actualizado_en": "2026-07-06T13:27:09.075481"
+      "actualizado_en": "2026-07-06T14:17:33.829343"
     },
     "751340": {
       "ciu": "751340",
@@ -275,8 +275,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T13:27:51.117053",
-          "timestamp": "2026-07-06T13:27:51.117053",
+          "id": "ocr_2026-07-06T14:18:11.555510",
+          "timestamp": "2026-07-06T14:18:11.555510",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055511_Q-ROHIT4854000111zon_250427_1412@F.pdf_page_23.png",
           "archivo_copia": null,
@@ -303,7 +303,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:27:51.131033",
-      "actualizado_en": "2026-07-06T13:27:51.117053"
+      "actualizado_en": "2026-07-06T14:18:11.555510"
     },
     "1001066": {
       "ciu": "1001066",
@@ -318,8 +318,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T13:28:28.866296",
-          "timestamp": "2026-07-06T13:28:28.866296",
+          "id": "ocr_2026-07-06T14:18:41.592106",
+          "timestamp": "2026-07-06T14:18:41.592106",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055868_F-DOCUMENTAMRITPAL_250423_1639@G.pdf_page_19.png",
           "archivo_copia": null,
@@ -346,7 +346,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:28:28.879682",
-      "actualizado_en": "2026-07-06T13:28:28.866296"
+      "actualizado_en": "2026-07-06T14:18:41.592106"
     },
     "183659": {
       "ciu": "183659",
@@ -361,8 +361,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T13:29:04.843119",
-          "timestamp": "2026-07-06T13:29:04.843119",
+          "id": "ocr_2026-07-06T14:19:17.045592",
+          "timestamp": "2026-07-06T14:19:17.045592",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056008_ASHISH BAGDIYA CN GUR0425PA0056008_27-04-2025_0517-33_PM@E.pdf_page_45.png",
           "archivo_copia": null,
@@ -389,7 +389,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:29:04.857245",
-      "actualizado_en": "2026-07-06T13:29:04.843119"
+      "actualizado_en": "2026-07-06T14:19:17.045592"
     },
     "263401": {
       "ciu": "263401",
@@ -404,8 +404,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T13:30:47.387086",
-          "timestamp": "2026-07-06T13:30:47.387086",
+          "id": "ocr_2026-07-06T14:20:50.954658",
+          "timestamp": "2026-07-06T14:20:50.954658",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056519_discharge virendra_11zon_28-04-2025_1115-27_AM.pdf_page_14.png",
           "archivo_copia": null,
@@ -432,7 +432,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:30:47.402163",
-      "actualizado_en": "2026-07-06T13:30:47.387086"
+      "actualizado_en": "2026-07-06T14:20:50.954658"
     },
     "NONE": {
       "ciu": "NONE",
@@ -447,8 +447,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T13:34:37.232098",
-          "timestamp": "2026-07-06T13:34:37.232098",
+          "id": "ocr_2026-07-06T14:24:11.407746",
+          "timestamp": "2026-07-06T14:24:11.407746",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0058035_F-PKJosephcasesheetreports_250427_1808@G.pdf_page_14.png",
           "archivo_copia": null,
@@ -475,7 +475,180 @@
         }
       ],
       "creado_en": "2026-07-06T13:34:37.248607",
-      "actualizado_en": "2026-07-06T13:34:37.232098"
+      "actualizado_en": "2026-07-06T14:24:11.407746"
+    },
+    "382421": {
+      "ciu": "382421",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-06T13:37:06.224889"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-06T14:26:05.082360",
+          "timestamp": "2026-07-06T14:26:05.082360",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\KOL-0425-PA-0004068_E-1745819838697ANKURSAXENAFINALBILLconverted_250428_1144@E.pdf_page_16.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "Oo\nKD Hospital\ngyn desea aie\nDEPARTMENT OF BIOCHEMISTRY\n™_ ee\nroe eee mes =~ --913 SR by : Dr.ARCHANA JADEJA MD Medicine\nBill Date :25-Apr-25 11:26am Report Date : 25-Apr-25 12:18 pm\nCollection Date : (RR) 11:26:07 Received Date : MJ 12:16:59\nLIVER FUNCTION TEST WITH PROTEINS\nParameter Specimen Results Biological Reference Method\nIntervals\nTotal Bilirubin Serum 0.955 0- 1.4 mo/dl Diazo Method\nDirect Bilirubin 0.311 <= 0,30 mg/dl Diazo end point\nIndirect Bilirubin 0,644 0.0 - 0.8 mg/dl Calculation\nAlkaline Phosphatase 65.0 40-129 U/L 4-PNPP/Amp kinetic\nSGPT/ALT 57.0 5.0- 41.0 U/L IFCC without P5P\nSGOT/AST 56.0 5.0- 40.0 U/L IFCC without PSP\nGamma GT 60.0 8-61 U/L IFCC method, Kinetic\nTotal Protein 6.8 6.4 - 8.3 gm/dl Biuret\nAlbumin 4.5 3.5 - 5.0 gm/d! BCP Dye Binding\nGlobulin 23 2.0- 3.5 gmi/di Calculation\nA/G Ratio 1:957 0.9- 2.1\nNOTE:\n*** End Of Report ***\nSuggested Clinical Correlation * If neccessary, Please sh\ndiscuss f way — F\n: f j jigaila! ital\nBy ss iste sted rc Sem duipias mae\nVarn Bip'ss 2a Kae ? VOishnedeui Circle,\nTest results related only to the item tested, ty ay. S. G. Highway, Ahmedabad - 382421\nAUnit of No part of the report can be reproduced without written MC-3264 Dr. MASUM BHAVSAR, MBBS, MD\nnICOF: permission of the laboratory.\nShri Harihar Maharaj consul FARH PS FRRESE A 0000\nCharitab be-Reeest_AAA_$_$__$_?_@$?_@_~__— ti edhospitalcoin\nPrinted By : 2672 Printed On ; 25-Apr-2025 11:16:04 PM system [iin",
+          "campos": {
+            "ciu": "382421",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "cnn_prediccion": {
+              "clase_predicha": "LAB_REPORT",
+              "probabilidades": {
+                "LAB_REPORT": 0.7784,
+                "DNI_PERU": 0.0388,
+                "DNI_USA": 0.0388,
+                "INFORME_MEDICO": 0.0388,
+                "UNKNOWN": 0.1053
+              },
+              "confianza": 0.7784
+            },
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-06T13:37:06.241610",
+      "actualizado_en": "2026-07-06T14:26:05.082360"
+    },
+    "411040": {
+      "ciu": "411040",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [
+            {
+              "nombre": "W.B.C.Count",
+              "valor": 12000.0,
+              "unidad": "",
+              "flag": "",
+              "referencia": "4000-10000"
+            },
+            {
+              "nombre": "Eosinophils",
+              "valor": 0.4,
+              "unidad": "%",
+              "flag": "",
+              "referencia": "1.0-6.0"
+            },
+            {
+              "nombre": "Haematocrit",
+              "valor": 20.4,
+              "unidad": "%",
+              "flag": "",
+              "referencia": "40-50"
+            }
+          ],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-06T13:38:04.548711"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-06T14:27:00.123785",
+          "timestamp": "2026-07-06T14:27:00.123785",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0125-PA-0001141_W2500438UNADKAT ASHWIN_27-04-2025_1002-19_AM.pdf_page_91.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "me\n=|= Grant Medical Foundation f @ :\ns s ; 5\n= pe Ruby Hall Clinic us!\nAnowarl\n59/6, Azad Nagar, Wanowarie, Pune - 411 040 (INDIA). Tel. : 020 - 66494982 / 83 / 84 Fax : 020 - 66494939\npakielit Nanla!O-WANQHahERAPLOM Kee —— 1 es\na CE Received Date + SMos:00 am\nLabNo/Result No | Release Date ' ER 09:00 am |\nReferred By Dr. —* IGNATIUS AVINASH Specimen ? WHOLE BLOOD me ate |\nWard / Bed * PVT-6TH/607 oe\nPassport No 5 ma oe\nDEPARTMENT OF LABORATORY potent clu: 953923\nInvestigation Result Units Biological Reference Interval\nHaemogram Report\nW.B.C.Count :12000 /ul 4000-10000\n* Method : Coulter Principle\nDifferential Count\nNeutrophils > 78.3 % 40-80\nMethod : OPTICAL/IMPEDENCE\nLymphocytes 13.7 % 20 - 40\nMethod : OPTICAL/IMPEDENCE |\nMonocytes 17.4 % 2-10\nMethod ; OPTICAL/IMPEDENCE\nEosinophils :0.4 % 1.0-6.0\nMethod : OPTICAL/IMPEDENCE\nBasophils 70.2 % 0.0-1.0\nMethod : OPTICAL/IMPEDENCE\nAbsolute Neutrophil Count 39.36 x103cells/ul 2-7\nMethod ; Calculated\nAbsolute Lymphocyte Count 21.64 x103cells/ul 1-3\nMethod : Calculated\nAbsolute Monocyte Count 20.88 x103cells/ul 0.2-1.0\nMethod : Calculated\nerr Eosinophil Count 0.05 x103cells/ul 0.02-0.5\nMethod : Calculated\nAbsolute Basophil Count :0.03 x103cells/ul 0.02 - 0.1\nMethod : Calculated\nR.B.C Count 22.0 million/ul 4.5-5.5\nMethod : Coulter Principle\nHaemoglobin 16.7 g/dl 13-17\nMethod : Photometric Measurement\nHaematocrit :20.4 % 40-50\nMethod : Calculated\nMCV 399.3 fl 83-101\nMethod : Derived from RBC Histogram\nMCH 132.8 pg 27-32\nMethod : Calculated\nMCHC 233.0 g/dl 31.5-34.5\nMethod : Calculated\nRDW 718.7 % 11.6-14\nMethod : Derived from RBC Histogram\nPlatelet Count 744 x103/ul 150-410\nMethod : Coulter Principle\nPrinted By : WICU2 Printed On: MMM: 1:05:32\nio",
+          "campos": {
+            "ciu": "411040",
+            "pruebas": [
+              {
+                "nombre": "W.B.C.Count",
+                "valor": 12000.0,
+                "unidad": "",
+                "flag": "",
+                "referencia": "4000-10000"
+              },
+              {
+                "nombre": "Eosinophils",
+                "valor": 0.4,
+                "unidad": "%",
+                "flag": "",
+                "referencia": "1.0-6.0"
+              },
+              {
+                "nombre": "Haematocrit",
+                "valor": 20.4,
+                "unidad": "%",
+                "flag": "",
+                "referencia": "40-50"
+              }
+            ],
+            "tipo": "LAB_REPORT",
+            "cnn_prediccion": {
+              "clase_predicha": "LAB_REPORT",
+              "probabilidades": {
+                "LAB_REPORT": 0.9629,
+                "DNI_PERU": 0.0065,
+                "DNI_USA": 0.0065,
+                "INFORME_MEDICO": 0.0065,
+                "UNKNOWN": 0.0176
+              },
+              "confianza": 0.9629
+            },
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-06T13:38:04.563285",
+      "actualizado_en": "2026-07-06T14:27:00.123785"
+    },
+    "414003": {
+      "ciu": "414003",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-06T13:38:15.328890"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-06T14:27:09.571292",
+          "timestamp": "2026-07-06T14:27:09.571292",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0425-PA-0003769_E-BodakheParvatiReports_250427_1201@E.pdf_page_2.png",
+          "archivo_copia": null,
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "(i TS Se ation C1: waso198 | Research Pvt. Lid.\n‘ V4 viray Estate, Tarakpur Road, Ahmednagar- 414003\nomit Ph: 2775700 | Mob :\nSU ee\ni} ye\n1D: RR order ff. 28919 Accepted on: SNN07:04 AM\n; Dt. RAHUL DHOOT Report Date : 0:07AM\nWard ; A/ Room No- 916/ SEMI SPECIAL 9th Sample Type ; EDTA whole blood\nHAEMATOLOGY\nINVESTIGATION RESULT UNIT RANGE METHOD\nCOMPLETE BLOOD COUNT\n(CBC)\nHAEMOGLOBIN 12.6 gm/di 12-15 Cyanide-tree hemoglobin\nWBC COLINT. 9050 /cumm 4000 - 10500 Laser scuttering(FOM)\nPLATELET COUNT, 141 lac/cumm 15-41 Laser scattering(FOM)\nRBC COUNT 4.52 million/cum 3.8- 4.8 |\nm\nHCT 39.0 % 36 - 46 Laser seattering(FOM)\nMCV 86.4 fL 83-101 Calculated\nMCH 28.0 pg 27 - 32 Caleulated\nMCHC 32.4 gm/dl 31,5 - 34.5 Cateulated\nCHCM 33.6 gm/dl 29 - 34 Calculated\nCH 28.9 pg 24-35 Calculated\nRDW-CV 14.9 H % 11.6 - 14 Calculated\nHiDWw 2S5 g/dl 2.2-3,2 Caleulated\nMPV 8.0 fl 8-12 Caleulated\nRoutine WBC Difterential Peroxidase\nNEUTROPHILLS 79.9 % 40 - 80\nLYMPHOCYTES 11.2 % 20-40\nEOSINOPHILLS 2,2 % 0-6\nMONOCYTES 4.9 % 2-10\nBASOPHILLS 0.2 % 0-2\nLUC 1.7 % 0-3\nPerformed On : SIEMENS ADVIA 2120 2\nNote; All abnormal critical CBC's are reviewed contimed microscopically\nEND OF REPORT\nMr. SAYYAD ASIF RASHID Dr. SAHTL NISAR SHAIKH\nPREPARED BY MBBS, MD Pathology\nPatient ClU:\nScan the QR code to download your e-report\nMRS. BODAKHE PARVATI RAMESH /MRN-250400912/67Yr/Female Twi Pheegn tr Le Re\nIPD,-25-26-751 / 128919 mea",
+          "campos": {
+            "ciu": "414003",
+            "pruebas": [],
+            "tipo": "LAB_REPORT",
+            "cnn_prediccion": {
+              "clase_predicha": "LAB_REPORT",
+              "probabilidades": {
+                "LAB_REPORT": 0.9052,
+                "DNI_PERU": 0.0166,
+                "DNI_USA": 0.0166,
+                "INFORME_MEDICO": 0.0166,
+                "UNKNOWN": 0.0451
+              },
+              "confianza": 0.9052
+            },
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-06T13:38:15.345008",
+      "actualizado_en": "2026-07-06T14:27:09.571292"
     }
   }
 }
