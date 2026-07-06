@@ -17,23 +17,19 @@ from pathlib import Path
 from typing import Any, Dict, Optional
 from uuid import uuid4
 
-BACKEND_DIR = Path(__file__).resolve().parent
-if str(BACKEND_DIR) not in sys.path:
-    sys.path.insert(0, str(BACKEND_DIR))
-
 from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from chatbot import procesar_mensaje
-from db import cargar_bd, guardar_bd
-from expediente import persistir_ocr_resultado, sincronizar_carpetas
-from storage import OCR_IMAGES_DIR
+from backend.chatbot import procesar_mensaje
+from backend.db import cargar_bd, guardar_bd
+from backend.expediente import persistir_ocr_resultado, sincronizar_carpetas
+from backend.storage import OCR_IMAGES_DIR
 
 try:
-    from ocr_robusto import procesar_documento as procesar_documento_ocr
+    from backend.ocr_robusto import procesar_documento as procesar_documento_ocr
 except ImportError:
-    from ocr import procesar_documento as procesar_documento_ocr
+    from backend.ocr import procesar_documento as procesar_documento_ocr
 
 
 app = FastAPI(

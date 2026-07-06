@@ -6,7 +6,7 @@ import unicodedata
 from datetime import datetime
 from typing import Any, Dict, List, Optional, Tuple
  
-from db import cargar_bd
+from .db import cargar_bd
  
  
 # ═══════════════════════════════════════════════════════════════════════

@@ -8,7 +8,7 @@ Lee y escribe `ALDIMI_DB/aldimi_pacientes.json` y `ALDIMI_DB/aldimi_sesiones.jso
 import json
 from datetime import datetime
 
-from storage import DB_PATH, SESSION_PATH
+from .storage import DB_PATH, SESSION_PATH
 
 
 def cargar_bd() -> dict:

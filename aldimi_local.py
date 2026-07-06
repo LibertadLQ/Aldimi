@@ -13,7 +13,6 @@ Uso:
     from aldimi_local import ejecutar_local_scan, consultar_expediente
 """
 
-import os
 import sys
 from pathlib import Path
 
@@ -29,10 +28,10 @@ print(f'ALDIMI ROOT: {ROOT}')
 print(f'Backend path agregado: {BACKEND_PATH}')
 
 # Import backend modules
-from expediente import sincronizar_carpetas
-from db import cargar_bd, guardar_bd
+from backend.expediente import sincronizar_carpetas
+from backend.db import cargar_bd
 
-print('Módulos disponibles: sincronizar_carpetas, cargar_bd, guardar_bd')
+print('Módulos disponibles: sincronizar_carpetas, cargar_bd')
 
 
 def ejecutar_local_scan(max_images: int = 0) -> dict:
