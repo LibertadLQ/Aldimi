@@ -1,6 +1,6 @@
 {
   "sesion": {
-    "ultima_actualizacion": "2026-07-06T16:13:09.495385",
+    "ultima_actualizacion": "2026-07-06T16:35:23.090375",
     "archivo": "aldimi_pacientes.json"
   },
   "pacientes": {
@@ -17,8 +17,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T16:13:09.470625",
-          "timestamp": "2026-07-06T16:13:09.470625",
+          "id": "ocr_2026-07-06T16:35:23.064682",
+          "timestamp": "2026-07-06T16:35:23.064682",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053405_Q-RANJANADEVI21.04.20250001compressed_250427_1041@F.pdf_page_38.png",
           "archivo_copia": null,
@@ -45,7 +45,7 @@
         }
       ],
       "creado_en": "2026-07-06T10:01:43.273491",
-      "actualizado_en": "2026-07-06T16:13:09.470625"
+      "actualizado_en": "2026-07-06T16:35:23.064682"
     },
     "130250": {
       "ciu": "130250",

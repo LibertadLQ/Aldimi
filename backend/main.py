@@ -38,6 +38,8 @@ app = FastAPI(
     version="1.0.0",
 )
 
+# Indica si la inicialización (escaneo + lectura de BD) ya terminó
+STARTUP_READY = False
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -78,6 +80,9 @@ async def startup_scan() -> None:
 
     print(f"[STARTUP] ALDIMI_WAIT_FOR_SCAN={wait_env}, ALDIMI_SCAN_DNI={max_images_dni}, ALDIMI_SCAN_LAB={max_images_lab}")
 
+    global STARTUP_READY
+    STARTUP_READY = False
+
     if wait_for_scan:
         print("[STARTUP] Ejecutando escaneo automático de carpetas (modo bloqueante)...")
         try:
@@ -86,6 +91,12 @@ async def startup_scan() -> None:
             print(f"         Imagenes procesadas: {resultados.get('procesados')}")
         except Exception as exc:
             print(f"[STARTUP] Error durante escaneo bloqueante: {exc}")
+        # Intentamos asegurar que la base de datos sea legible al inicio
+        try:
+            cargar_bd()
+        except Exception as exc:
+            print(f"[STARTUP] Aviso: no se pudo cargar la base de datos: {exc}")
+        STARTUP_READY = True
     else:
         print("[STARTUP] Programando escaneo automático de carpetas en background...")
         try:
@@ -105,10 +116,24 @@ async def startup_scan() -> None:
                     print(f"         Imagenes procesadas: {resultados.get('procesados')}")
                 except Exception as exc:
                     print(f"[STARTUP] Error durante escaneo en background: {exc}")
+                # Cargamos la BD y marcamos listo al terminar el escaneo en background
+                try:
+                    cargar_bd()
+                except Exception as exc:
+                    print(f"[STARTUP] Aviso: no se pudo cargar la base de datos: {exc}")
+                global STARTUP_READY
+                STARTUP_READY = True
 
             asyncio.create_task(_run_sync_scan())
         except Exception as exc:
             print(f"[STARTUP] Error al programar escaneo: {exc}")
+
+
+@app.get('/ready')
+def ready() -> dict:
+    """Endpoint sencillo para que el frontend consulte si el backend terminó
+    la inicialización (escaneo de carpetas y lectura de BD)."""
+    return {"ready": bool(STARTUP_READY)}
 
 
 class ChatRequest(BaseModel):

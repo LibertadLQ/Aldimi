@@ -1,15 +1,9 @@
-import sys
-from pathlib import Path
-sys.path.insert(0, '.')
-from backend import ocr_robusto as ocr
-p = Path('DNI_ALDIMI')
-files = sorted([x for x in p.glob('*.png')])
-if not files:
-    print('no files in DNI_ALDIMI')
-else:
-    f = files[0]
-    print('Testing', f)
-    res = ocr.procesar_documento(str(f))
-    print('Result keys:', list(res.keys()))
-    import json
-    print(json.dumps(res, indent=2, ensure_ascii=False))
+"""Wrapper: moved to backend/scripts/test_procesar.py
+
+This script now lives under `backend.scripts`. Import or run that
+module instead.
+"""
+"""Removed: moved to backend/scripts/test_procesar.py
+
+Run `python -m backend.scripts.test_procesar` instead.
+"""

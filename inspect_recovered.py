@@ -1,4 +1,5 @@
-from pathlib import Path
-p = Path('ALDIMI_DB/aldimi_pacientes.json')
-text = p.read_text('utf-8')
-print(text[:400])
+"""Removed: implementation moved to backend/inspect_recovered.py
+
+Use `python -m backend.inspect_recovered` or import from
+`backend.inspect_recovered` instead.
+"""

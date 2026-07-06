@@ -14,13 +14,62 @@
 const API_BASE = 'http://127.0.0.1:8000';
 
 document.addEventListener('DOMContentLoaded', () => {
-  cargarUsuario();
-  mostrarFecha();
-  mostrarSeccion('inicio');
-  mostrarEstadoOCR('vacio');
-  inyectarCampoCiuOCR();
-  actualizarContadorPacientes();
+  esperarBackendReady().then(() => {
+    cargarUsuario();
+    mostrarFecha();
+    mostrarSeccion('inicio');
+    mostrarEstadoOCR('vacio');
+    inyectarCampoCiuOCR();
+    actualizarContadorPacientes();
+  });
 });
+
+
+/* Espera a que el backend haya terminado la inicialización (escaneo + BD).
+   Hace polling a `GET /ready` y muestra una capa de carga mientras tanto. */
+async function esperarBackendReady() {
+  showLoadingOverlay('Cargando datos locales y escaneando imágenes…');
+  const url = `${API_BASE}/ready`;
+  while (true) {
+    try {
+      const res = await fetch(url, { cache: 'no-store' });
+      if (res.ok) {
+        const j = await res.json();
+        if (j.ready) break;
+      }
+    } catch (e) {
+      // Backend no disponible aún, volver a intentar
+    }
+    await new Promise(r => setTimeout(r, 700));
+  }
+  hideLoadingOverlay();
+}
+
+function showLoadingOverlay(text) {
+  if (document.getElementById('aldimi-loading-overlay')) return;
+  const overlay = document.createElement('div');
+  overlay.id = 'aldimi-loading-overlay';
+  overlay.style.position = 'fixed';
+  overlay.style.left = '0';
+  overlay.style.top = '0';
+  overlay.style.right = '0';
+  overlay.style.bottom = '0';
+  overlay.style.background = 'rgba(0,0,0,0.55)';
+  overlay.style.zIndex = '9999';
+  overlay.style.display = 'flex';
+  overlay.style.alignItems = 'center';
+  overlay.style.justifyContent = 'center';
+  overlay.style.color = '#fff';
+  overlay.style.fontSize = '18px';
+  overlay.style.fontFamily = 'sans-serif';
+  overlay.textContent = text || 'Cargando…';
+  document.body.appendChild(overlay);
+}
+
+function hideLoadingOverlay() {
+  const el = document.getElementById('aldimi-loading-overlay');
+  if (el) el.remove();
+}
 
 
 /* ── Sesión ── */
