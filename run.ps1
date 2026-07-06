@@ -118,14 +118,7 @@ $backendCommand = "Set-Location -LiteralPath '$backendDir'; & '$activate'; & '$v
 $staticCommand  = "Set-Location -LiteralPath '$root'; & '$activate'; & '$venvPython' -m http.server $staticPort"
 
 Write-Host "Iniciando backend (uvicorn) en nueva ventana de PowerShell..."
-# Ejecutar autoscan localmente para generar backend/aldimi_pacientes.json antes de arrancar el servidor
-Write-Host "Ejecutando autoscan local para generar backend/aldimi_pacientes.json..."
-try {
-    & $venvPython scripts\run_autoscan.py
-    Write-Host "Autoscan finalizado." -ForegroundColor Green
-} catch {
-    Write-Warning "Autoscan falló, revisa la salida. Se continuará intentando iniciar el backend." 
-}
+Write-Host "El autoscan se ejecutará automáticamente al iniciar el servidor FastAPI (evento 'startup')." -ForegroundColor Cyan
 
 Start-Process -FilePath powershell -ArgumentList "-NoExit","-Command",$backendCommand
 
