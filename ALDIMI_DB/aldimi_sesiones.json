@@ -148,8 +148,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-05T10:02:54.096034",
-    "timestamp": "2026-07-05T10:02:54.096034",
+    "id": "ocr_2026-07-06T02:11:32.409414",
+    "timestamp": "2026-07-06T02:11:32.409414",
     "fuente": "DNI_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0044172.png",
     "archivo_copia": null,
@@ -1448,8 +1448,8 @@
     "advertencia": null
   },
   {
-    "id": "ocr_2026-07-05T10:07:07.354897",
-    "timestamp": "2026-07-05T10:07:07.354897",
+    "id": "ocr_2026-07-06T02:11:45.879289",
+    "timestamp": "2026-07-06T02:11:45.879289",
     "fuente": "LAB_ALDIMI",
     "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053405_Q-RANJANADEVI21.04.20250001compressed_250427_1041@F.pdf_page_38.png",
     "archivo_copia": null,
@@ -3344,5 +3344,79 @@
       "alertas_detectadas": []
     },
     "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-06T02:13:45.846141",
+    "timestamp": "2026-07-06T02:13:45.846141",
+    "fuente": "upload",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\ocr_881597ddad4d45f59d189655c0127ae0.png",
+    "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260706_021345_ocr_881597ddad4d45f59d189655c0127ae0.png",
+    "tipo_documento": "UNKNOWN",
+    "texto_crudo": "bd REPUBLICA DEL PERU Re eon cul\nNERD cocumentonacionsccewennoao —— 74747580-1\nPriemer Apellido\nr GRANADOS i)\nSegunde Apellido\na — we\n\\ = Pronompres. i Sie\n_ JUAN FELIPE\n3\n5 * 539910 ° PER” 09 422000.\nEstado Civil Fecha de Emision\nSOLTERO 0903 2023\np- N\" de Taxjeta + Fecha de Caducktad\n0201698550 09.03 2031",
+    "campos": {
+      "tipo": "UNKNOWN"
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-06T02:14:08.858893",
+    "timestamp": "2026-07-06T02:14:08.858893",
+    "fuente": "upload",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\ocr_d50db4172c0241e5aab6933784279481.jpg",
+    "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260706_021408_ocr_d50db4172c0241e5aab6933784279481.jpg",
+    "tipo_documento": "DNI_PERU",
+    "texto_crudo": "244 REPUBLICA DEL PERU REGISTRO NACIONAL DE IDENTIFICACION Y ESTADO CIVIL\nDOCUMENTO NACIONAL |\nA as\n\nspss ee oa a MUESTRA |\ncul SIN = |\nCASTILLO\n43451 826-7 : VALOR\nsegundo Apelido\nf GOMES\n| ee\n| VANESSA SILVIA |\nsexo Estado cit : |\nFEMENINO SOLTERA |\n| FechadeNacimiento__Ubigeo de Nacielem\n‘“— 48021986 140109 |\nFecha de Emision Fecha de Caducidad\n18 05 2012 18 05 2020 |\nSpupacaueaién _Grscende rans Z |\nfe le",
+    "campos": {
+      "ciu": "NO_DETECTADO",
+      "nombres": "MUESTRA",
+      "apellidos": "IDENTIFICACION",
+      "fecha_nacimiento": "05/18/2012",
+      "tipo": "DNI_PERU"
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-06T02:14:45.300480",
+    "timestamp": "2026-07-06T02:14:45.300480",
+    "fuente": "upload",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\ocr_e4f46fc363514ef79e1b06c6f4237240.png",
+    "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260706_021445_ocr_e4f46fc363514ef79e1b06c6f4237240.png",
+    "tipo_documento": "INFORME_MEDICO",
+    "texto_crudo": "So CLINICA ANGLO AMERICANA\nNombre: JUAN FELIPE\nInforme Medico Apellidos: GRANADOS ALLENDE\n22/11/2018 16:37 RA MARIA r\n° 2 MRISLUSASTIGUCHWATSON | Fecha Nac.: 9-dic-2004  Edad:13 Sexo: M\nN° Doc.: 74747580 H.C Papel: 0643691\ney 22/11/2018 1639 DRA MARIA LUISA STIGLICH WATSON\na. Ea\nFECHA EVALUACION 08 DE NOVIEMBRE 2018\nFECHA INFORME: 22 DE NOVIEMBRE 2018\nMotivo de Consulta’\nJuan Felipe es traido por sus padres por haber episodios de tics desde los 3 afios. En esa primera oportunidad,\npresento episodios de parpadeo que se autollimitaron en unos meses. A los 8 ajios, también presento episodios\nrepetidos de parpadeo e igualmente desaparecieron. En el 2018, desde marzo, presenta no solo episodios de\nparpadeo sino también movimientos repetitivos esteotipados de la nariz y boca. No presenta tics sonoros 0 motores\nde mayor complejidad. Estos episodios se presentan sin causa y son de frecuencia variable, sin embargo, preocupan\na ambos padres. Ni en el colegio ni otros familiares han notado o mostrado preocupacién por estos movimientos\ninvoluntarios.\nAntecedentes de Importancia\nPerinatales: No significativo.\nPatolégicos:  Niega\nFamiliar Primo paterno epilepsia de lactante. Madre es migrafiosa.\nDesarrollo Cursa segundo de media con rendimiento adecuado para la edad. Su desarrollo también ha sido\nadecuado.\nAl examen fisico y neurolégico preferencial\nPC 54cm\nNo dismorfias ni lesiones en piel.\nSe relaciona de manera esperada para su edad cronolégica\nEl examen fisico general y el examen neurolégico en si han sido adecuados para la edad.\nImpresién diagnéstica\n1 Tics motores crénicos\nComentario\nPaciente con historia de tics motores simples cronicos que incrementan levemente con ansiedad. No considero\nrequieran manejo farmacol6gico, se ha sugerido terapia psicolégica de tipo emocional. Control en 2 a 3 meses.\nAggie\n(a ant) sk\n3. 08? = 169\na wenn 26389\n8\nue\nbeta a si 7 (a) a ite 4000 2ayat# Fontana 362 La Molina. 7(511) @108888 = MARIA LUISA STIGLICH WATSON\nPagina 1 det NEUROLOGIA PEDIATRICA\nCMP. 041806 RN.E: 26359",
+    "campos": {
+      "ciu": null,
+      "pruebas": [],
+      "tipo": "LAB_REPORT",
+      "alertas_detectadas": []
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-06T02:15:14.870875",
+    "timestamp": "2026-07-06T02:15:14.870875",
+    "fuente": "upload",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\ocr_3546e33982a64e19be347183c4f6269b.png",
+    "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260706_021514_ocr_3546e33982a64e19be347183c4f6269b.png",
+    "tipo_documento": "DNI_PERU",
+    "texto_crudo": "REPUBLICA DEL PERU SocuMENTONACIONAL De IDENTIDAD. BNI 42345678 - 4\n_ Primer Apellido Fecha Inscripcion\n\nPEREZ 2505 2010\n) Segundo Apellido Fecha Emisién\nn | TORRES 18 06 2010\n\n\\ Nombres. Fecha Caducidad\no | CAROLINA 18 06 2022\n, . Nacimiento: Fecha y Lugar\n60 yo ‘y 31012004 937882 6)\n\nSexo —\n\nF\nI<PER12345678<8<<<<<<<<<<<<<<<<<<<<<\n8750963554M15668378 PER<<<<<<<<<<<<<5\nPEREZ<<TORRES<CAROLINA<<<<<<<<<<<<<",
+    "campos": {
+      "ciu": "12345678",
+      "nombres": "BNI",
+      "apellidos": "Fecha Inscripcion\n\nPEREZ",
+      "fecha_nacimiento": "06/18/2010",
+      "tipo": "DNI_PERU"
+    },
+    "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-06T02:15:32.086571",
+    "timestamp": "2026-07-06T02:15:32.086571",
+    "fuente": "upload",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\ocr_33c9aad29760434db1ff356920f430ab.png",
+    "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260706_021532_ocr_33c9aad29760434db1ff356920f430ab.png",
+    "tipo_documento": "UNKNOWN",
+    "texto_crudo": "",
+    "campos": {},
+    "advertencia": "OCR no pudo extraer texto suficiente"
   }
 ]
