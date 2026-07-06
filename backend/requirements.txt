@@ -1,4 +1,6 @@
-﻿pytesseract
+﻿fastapi
+uvicorn[standard]
+pytesseract
 Pillow
 numpy
 opencv-python-headless

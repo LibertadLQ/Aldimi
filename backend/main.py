@@ -19,9 +19,13 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 from db import cargar_bd, guardar_bd
-from expediente import sincronizar_carpetas
-from ocr import procesar_documento
+from expediente import persistir_ocr_resultado, sincronizar_carpetas
 from storage import OCR_IMAGES_DIR
+
+try:
+    from ocr_robusto import procesar_documento as procesar_documento_ocr
+except ImportError:
+    from ocr import procesar_documento as procesar_documento_ocr
 
 
 app = FastAPI(
@@ -39,6 +43,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 class PacienteGuardarRequest(BaseModel):
     ciu: str
@@ -174,6 +179,25 @@ class ChatRequest(BaseModel):
     ciu: Optional[str] = None
 
 
+@app.on_event("startup")
+async def startup_scan():
+    """Al iniciar, escanea DNI_ALDIMI y LAB_ALDIMI."""
+    print("[STARTUP] Iniciando escaneo automático de carpetas...")
+    try:
+        max_images_env = os.environ.get("ALDIMI_MAX_IMAGES", "0")
+        try:
+            max_images = int(max_images_env)
+        except Exception:
+            max_images = 0
+
+        resultados = sincronizar_carpetas(max_images=max_images)
+
+        print("[STARTUP] ✅ Escaneo completado:")
+        print(f"         Imágenes procesadas: {resultados['procesados']}")
+    except Exception as exc:
+        print(f"[STARTUP] ⚠️ Error durante escaneo: {exc}")
+
+
 @app.post("/chat")
 async def chat_endpoint(request: ChatRequest):
     mensaje = request.mensaje.strip()
@@ -205,7 +229,16 @@ async def root():
 @app.get("/pacientes")
 async def obtener_pacientes():
     bd = cargar_bd()
-    return {"total": len(bd) if isinstance(bd, dict) else 0}
+    return {"total": len(bd) if isinstance(bd, dict) else 0, "pacientes": list(bd.values()) if isinstance(bd, dict) else []}
+
+
+@app.get("/pacientes/{ciu}")
+async def obtener_paciente(ciu: str):
+    bd = cargar_bd()
+    ciu = ciu.strip().upper()
+    if ciu not in bd:
+        raise HTTPException(status_code=404, detail=f"No se encontró un paciente con CIU {ciu}.")
+    return bd[ciu]
 
 
 @app.post("/pacientes/guardar")
@@ -269,7 +302,8 @@ async def procesar_ocr(archivo: UploadFile = File(...)):
         raise HTTPException(status_code=500, detail=f"Error al guardar el archivo: {exc}")
 
     try:
-        resultado = procesar_documento(str(ruta_temporal))
+        resultado = procesar_documento_ocr(str(ruta_temporal))
+        persistir_ocr_resultado(str(ruta_temporal), resultado, fuente="upload")
     except Exception as exc:
         raise HTTPException(status_code=500, detail=f"Error al procesar el documento: {exc}")
 
