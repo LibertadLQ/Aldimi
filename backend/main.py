@@ -9,9 +9,6 @@ Combina:
 """
 
 import os
-import shutil
-import tempfile
-import sys
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, Optional
@@ -24,12 +21,8 @@ from pydantic import BaseModel
 from backend.chatbot import procesar_mensaje
 from backend.db import cargar_bd, guardar_bd
 from backend.expediente import persistir_ocr_resultado, sincronizar_carpetas
+from backend.ocr_robusto import procesar_documento as procesar_documento_ocr
 from backend.storage import OCR_IMAGES_DIR
-
-try:
-    from backend.ocr_robusto import procesar_documento as procesar_documento_ocr
-except ImportError:
-    from backend.ocr import procesar_documento as procesar_documento_ocr
 
 
 app = FastAPI(
@@ -55,6 +48,16 @@ class PacienteGuardarRequest(BaseModel):
     campos: Dict[str, Any]
 
 
+def _read_limit_env(name: str, fallback: int = 0) -> int:
+    raw = os.environ.get(name)
+    if raw is None or str(raw).strip() == "":
+        return fallback
+    try:
+        return int(str(raw).strip())
+    except Exception:
+        return fallback
+
+
 @app.on_event("startup")
 async def startup_scan() -> None:
     """Al iniciar, escanea DNI_ALDIMI y LAB_ALDIMI.
@@ -67,18 +70,11 @@ async def startup_scan() -> None:
     wait_env = os.environ.get("ALDIMI_WAIT_FOR_SCAN", "1").lower()
     wait_for_scan = wait_env in ("1", "true", "yes")
 
-    max_images_dni_env = os.environ.get("ALDIMI_SCAN_DNI", "1")
-    max_images_lab_env = os.environ.get("ALDIMI_SCAN_LAB", "1")
-    try:
-        max_images_dni = int(max_images_dni_env)
-    except Exception:
-        max_images_dni = 1
-    try:
-        max_images_lab = int(max_images_lab_env)
-    except Exception:
-        max_images_lab = 1
+    default_limit = _read_limit_env("ALDIMI_MAX_IMAGES", 0)
+    max_images_dni = _read_limit_env("ALDIMI_SCAN_DNI", default_limit)
+    max_images_lab = _read_limit_env("ALDIMI_SCAN_LAB", default_limit)
 
-    print(f"[STARTUP] ALDIMI_WAIT_FOR_SCAN={wait_env}, ALDIMI_SCAN_DNI={max_images_dni}, ALDIMI_SCAN_LAB={max_images_lab}")
+    print(f"[STARTUP] ALDIMI_WAIT_FOR_SCAN={wait_env}, ALDIMI_SCAN_DNI={max_images_dni}, ALDIMI_SCAN_LAB={max_images_lab}, ALDIMI_MAX_IMAGES={default_limit}")
 
     global STARTUP_READY
     STARTUP_READY = False
@@ -189,6 +185,9 @@ async def guardar_paciente(request: PacienteGuardarRequest) -> Dict[str, Any]:
     elif tipo_documento == "LAB":
         informe = {
             "fecha_carga": datetime.now().isoformat(),
+            "registrado_en": datetime.now().isoformat(),
+            "pruebas": campos.get("pruebas", []),
+            "alertas_detectadas": campos.get("alertas_detectadas", []),
             "campos": campos,
         }
         informes = registro.get("informes_laboratorio", [])
@@ -249,11 +248,11 @@ def ejecutar_local(max_images: int = 0) -> dict:
 
 
 def main() -> None:
-    max_images_env = os.environ.get("ALDIMI_MAX_IMAGES", "1")
+    max_images_env = os.environ.get("ALDIMI_MAX_IMAGES", "0")
     try:
         max_images = int(max_images_env)
     except Exception:
-        max_images = 1
+        max_images = 0
 
     ejecutar_local(max_images=max_images)
 

@@ -48,7 +48,7 @@ except ImportError:
 
 OCR_LANG = "spa+eng"
 THRESHOLD = 150
-MAX_IMAGES = 1  # Limitador temporal: número máximo de imágenes a procesar por carpeta (1..100)
+MAX_IMAGES = 0  # Limitador temporal: número máximo de imágenes a procesar por carpeta (0 = todas)
 
 
 def _get_tesseract_cmd() -> Optional[str]:
@@ -363,7 +363,8 @@ def predict_document_cnn(texto: str) -> Dict[str, Any]:
     ]
     usa_kw = [
         "west virginia", "driver license", "dl no", "dob", "governor",
-        "license", "driver", "driver's license", "issued",
+        "license", "driver", "driver's license", "issued", "state of",
+        "department of motor vehicles", "dmv",
     ]
     medico_kw = [
         "motivo de consulta", "diagnóstico", "informe médico", "antecedentes",
@@ -374,13 +375,19 @@ def predict_document_cnn(texto: str) -> Dict[str, Any]:
     peru_s = sum(1 for k in peru_kw if k in t)
     usa_s = sum(1 for k in usa_kw if k in t)
     medico_s = sum(1 for k in medico_kw if k in t)
+    usa_id_like = bool(re.search(r"\b[A-Z]{1,2}\d{5,7}\b", texto, re.I))
+    usa_doc_like = bool(re.search(
+        r"\b(driver(?:'s)?\s+license|dl\s*no|license\s+number|issued\s+by|state\s+of|department\s+of\s+motor\s+vehicles|dmv)\b",
+        texto,
+        re.I,
+    ))
 
-    if re.search(r'\bw\d{6}\b', t):
-        clase = "DNI_USA"
-    elif re.search(r'\bPatient\s*CIU\b|\bPatient\s*CU\b', texto, re.I):
+    if re.search(r'\bpatient\s*ciu\b|\bpatient\s*cu\b', texto, re.I):
         clase = "LAB_REPORT"
     elif medico_s >= 2 and medico_s > lab_s:
         clase = "INFORME_MEDICO"
+    elif usa_id_like and (usa_doc_like or usa_s >= 2) and usa_s >= lab_s and usa_s >= peru_s:
+        clase = "DNI_USA"
     else:
         max_s = max(lab_s, peru_s, usa_s)
         if max_s == 0:
@@ -539,6 +546,72 @@ def procesar_dni_peru(texto: str) -> Dict[str, Any]:
     }
 
 
+def procesar_dni_usa(texto: str) -> Dict[str, Any]:
+    """Heurístico para extraer campos de licencias/ID USA (ej. West Virginia).
+    Busca DL number, nombre completo y fecha de nacimiento en formatos comunes.
+    """
+    t = texto or ""
+    dl = None
+    nombre = None
+    apellidos = None
+    fecha = None
+
+    # Intentar extraer DL/License number
+    patterns_dl = [
+        r"\bDL\s*NO\.?\s*([A-Z0-9\-]{4,})\b",
+        r"\bDriver\s+License\s*No\.?\s*([A-Z0-9\-]{4,})\b",
+        r"\bLicense\s+No\.?\s*([A-Z0-9\-]{4,})\b",
+        r"\bLIC\s*#?\s*([A-Z0-9\-]{4,})\b",
+        r"\b(?:DL|Driver\s+License|License\s+No\.?|LIC)[:#\s]*([A-Z0-9\-]{4,})\b",
+    ]
+    for pat in patterns_dl:
+        m = re.search(pat, t, re.I)
+        if m:
+            dl = m.group(1).strip().upper()
+            break
+
+    # Intentar extraer DOB (MM/DD/YYYY or DD/MM/YYYY or YYYY-MM-DD)
+    m = re.search(r"\b(\d{1,2}/\d{1,2}/\d{4})\b", t)
+    if m:
+        fecha = m.group(1)
+    else:
+        m2 = re.search(r"\b(\d{4}-\d{2}-\d{2})\b", t)
+        if m2:
+            fecha = m2.group(1)
+
+    # Intentar extraer nombre: look for lines containing 'Name' or ALL CAPS lines
+    m = re.search(r"\bName[:\s]+([A-Z ,.'-]{3,80})", t, re.I)
+    if m:
+        full = m.group(1).strip()
+        parts = [p.strip() for p in re.split(r"[,\n]+", full) if p.strip()]
+        if len(parts) == 1:
+            # Could be 'LAST FIRST' or 'FIRST LAST'
+            words = parts[0].split()
+            if len(words) >= 2:
+                apellidos = words[-1]
+                nombre = " ".join(words[:-1])
+        else:
+            # If 'LAST, FIRST' style
+            apellidos = parts[0]
+            nombre = parts[1]
+
+    if not nombre:
+        # fallback: first reasonably long ALL CAPS block
+        blocks = re.findall(r"\b([A-Z]{2,}\s+[A-Z]{2,}(?:\s+[A-Z]{2,})?)\b", t)
+        if blocks:
+            parts = blocks[0].split()
+            apellidos = parts[0]
+            nombre = " ".join(parts[1:])
+
+    return {
+        "ciu": dl or "NO_DETECTADO",
+        "nombres": nombre or "NO_DETECTADO",
+        "apellidos": apellidos or "NO_DETECTADO",
+        "fecha_nacimiento": fecha or "NO_DETECTADO",
+        "tipo": "DNI_USA",
+    }
+
+
 # ═══════════════════════════════════════════════════════════════════════════════
 # SECCIÓN 6: EXTRACCIÓN LABORATORIO (CON WIDAL, CUALITATIVOS, TABLAS)
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -575,10 +648,13 @@ _LAB_TABLE_RE = re.compile(
 )
 
 _WIDAL_RE = re.compile(r"(?i)\bWidal\b.*?(\d{1,4})\s*[:/]\s*(\d{1,4})")
+# Cualitativos: aceptar español e inglés y variantes comunes (POSITIVE/NEGATIVE/REACTIVE/NOT DETECTED, etc.)
 _QUALITATIVE_RE = re.compile(
-    r"(?i)^\s*([A-Za-zÁÉÍÓÚÑ0-9().,%\-/]{3,80}?)\s*[:\-]\s*"
+    r"^\s*([A-Za-zÁÉÍÓÚÑ0-9().,%\-/]{3,80}?)\s*[:\-]\s*"
     r"(POSITIVO|NEGATIVO|SENSITIVO|SENSIBLE|RESISTENTE|PRESENTE|AUSENTE|"
-    r"DETECTADO|NO\s+DETECTADO|REACTIVO|NO\s+REACTIVO|CLEARED)\b"
+    r"DETECTADO|NO\s+DETECTADO|REACTIVO|NO\s+REACTIVO|CLEARED|"
+    r"POSITIVE|NEGATIVE|REACTIVE|NON[- ]REACTIVE|DETECTED|NOT\s+DETECTED|PRESENT|ABSENT)\b",
+    re.IGNORECASE,
 )
 
 
@@ -716,6 +792,40 @@ def procesar_lab(texto: str) -> Dict[str, Any]:
                     "valor": valor,
                     "tipo": "ALTO" if flag == "H" else "BAJO",
                 })
+            continue
+
+        # Fallback: filas tipo tabla sin ':' (Nombre  95.6  mg/dl  80-140)
+        m = _LAB_TABLE_RE.match(ls)
+        if m:
+            nombre_raw = m.group(1).strip()
+            if len(nombre_raw) < 3:
+                continue
+            nombre = _norm_nombre_lab(nombre_raw)
+            key = nombre.lower()
+            if key in seen:
+                continue
+            try:
+                valor = float(m.group(2).replace(",", "."))
+            except Exception:
+                continue
+            flag = (m.group(3) or "").upper() or ""
+            unidad = (m.group(5) or "").strip() or ""
+            ref = (m.group(4) or "").strip() or ""
+            seen.add(key)
+            res["pruebas"].append({
+                "nombre": nombre,
+                "valor": round(valor, 4) if valor else None,
+                "unidad": unidad,
+                "flag": flag,
+                "referencia": ref,
+            })
+            if flag in ("H", "L"):
+                res["alertas"].append({
+                    "prueba": nombre,
+                    "valor": valor,
+                    "tipo": "ALTO" if flag == "H" else "BAJO",
+                })
+            continue
     
     return res
 
@@ -739,7 +849,6 @@ def procesar_imagen(ruta: str) -> Dict[str, Any]:
             "mensaje": "OCR no pudo extraer texto suficiente",
             "tiempo_ms": round((time.time() - inicio) * 1000, 1),
         }
-    
     # Clasificar
     tipo = clasificar_documento(texto)
     cnn_prediction = predict_document_cnn(texto)
@@ -747,10 +856,10 @@ def procesar_imagen(ruta: str) -> Dict[str, Any]:
         tipo = cnn_prediction.get("clase_predicha", tipo)
 
     # Extraer campos
-    if tipo in ("DNI_PERU", "DNI_USA"):
+    if tipo == "DNI_PERU":
         campos = procesar_dni_peru(texto)
-        if tipo == "DNI_USA":
-            campos["tipo"] = "DNI_USA"
+    elif tipo == "DNI_USA":
+        campos = procesar_dni_usa(texto)
     elif tipo in ("LAB_REPORT", "INFORME_MEDICO"):
         campos = procesar_lab(texto)
     else:
@@ -769,6 +878,7 @@ def procesar_imagen(ruta: str) -> Dict[str, Any]:
         "imagen": ruta,
         "timestamp": datetime.datetime.now().isoformat(),
     }
+    resultado["_texto_ocr"] = texto
     if DEBUG:
         print(f"[OCR_DEBUG] procesar_imagen result tipo={tipo} tiempo_ms={resultado['tiempo_ms']}")
     return resultado
@@ -783,10 +893,16 @@ def autoscan_folders(
     lab_folder: str = "LAB_ALDIMI",
     output_json: str = "aldimi_pacientes.json",
     max_images: int = MAX_IMAGES,
+    max_images_dni: Optional[int] = None,
+    max_images_lab: Optional[int] = None,
 ) -> Dict[str, Any]:
     """
     Escanea DNI_ALDIMI y LAB_ALDIMI, procesa todas las imágenes.
     Retorna stats: total, DNI procesados, LAB procesados, alertas.
+
+    El límite puede aplicarse de forma global (`max_images`) o por carpeta
+    (`max_images_dni` y `max_images_lab`). Si no se especifica uno por carpeta,
+    se usa el límite global.
     """
     resultados = {
         "timestamp": datetime.datetime.now().isoformat(),
@@ -798,7 +914,7 @@ def autoscan_folders(
     }
     
     # Recolectar listas ordenadas de archivos y limitar por índice (pareo por fila)
-    def _gather_images(folder: str) -> List[Path]:
+    def _gather_images(folder: str, limit: Optional[int] = None) -> List[Path]:
         p = Path(folder)
         if not p.is_dir():
             return []
@@ -808,15 +924,17 @@ def autoscan_folders(
         imgs = sorted(imgs, key=lambda x: x.name)
         # normalizar max_images: None or <=0 => sin límite
         try:
-            if max_images is None or int(max_images) <= 0:
+            if limit is None:
+                limit = max_images
+            if limit is None or int(limit) <= 0:
                 return imgs
-            n = min(100, max(1, int(max_images)))
+            n = min(100, max(1, int(limit)))
             return imgs[:n]
         except Exception:
             return imgs
 
-    dni_list = _gather_images(dni_folder)
-    lab_list = _gather_images(lab_folder)
+    dni_list = _gather_images(dni_folder, limit=max_images_dni)
+    lab_list = _gather_images(lab_folder, limit=max_images_lab)
 
     total_pairs = max(len(dni_list), len(lab_list))
     for i in range(total_pairs):
@@ -866,8 +984,8 @@ def procesar_documento(ruta: str) -> Dict[str, Any]:
     """
     # Este wrapper devuelve el esquema legacy que espera el resto del sistema:
     # { "tipo_documento", "texto_crudo", "campos", "advertencia" }
-    texto = extraer_texto_ocr(ruta)
     resultado = procesar_imagen(ruta)
+    texto = resultado.get("_texto_ocr", "") or resultado.get("texto", "")
 
     if resultado.get("estado") != "ok":
         return {
@@ -879,6 +997,42 @@ def procesar_documento(ruta: str) -> Dict[str, Any]:
 
     tipo = resultado.get("tipo", "UNKNOWN")
     campos = resultado.get("campos", {}) or {}
+
+    # Si la clasificación inicial no decidió, aplicar heurísticas adicionales
+    if tipo == "UNKNOWN":
+        # 1) intentar extraer CIU/DNI desde el texto
+        try:
+            ciu_detectado = extraer_ciu_dni(texto)
+        except Exception:
+            ciu_detectado = None
+
+        if ciu_detectado:
+            tipo = "DNI_PERU"
+            campos = {**campos, "ciu": ciu_detectado}
+        else:
+            text_low = (texto or "").lower()
+            usa_keywords = (
+                "driver license", "dl no", "license no", "dob", "state of",
+                "west virginia", "dmv", "issued by", "department of motor vehicles"
+            )
+            if any(k in text_low for k in usa_keywords):
+                tipo = "DNI_USA"
+                try:
+                    campos = procesar_dni_usa(texto)
+                except Exception:
+                    campos = {**campos}
+            else:
+                # 2) heurística de palabras clave para detectar informe de laboratorio
+                lab_keywords = (
+                    "hemograma,glucosa,colesterol,urea,creatinina,hemoglobina,"
+                    "proteina c reactiva,crp,resultado,valor,referencia,prueba,mg/dl"
+                )
+                if any(k.strip() in text_low for k in lab_keywords.split(',')):
+                    tipo = "LAB_REPORT"
+                    try:
+                        campos = procesar_lab(texto)
+                    except Exception:
+                        campos = {**campos}
 
     # Normalizar alertas para compatibilidad con expediente.py
     if tipo in ("LAB_REPORT", "INFORME_MEDICO") and "alertas" in campos and "alertas_detectadas" not in campos:

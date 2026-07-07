@@ -6,6 +6,7 @@ Lee y escribe `ALDIMI_DB/aldimi_pacientes.json` y `ALDIMI_DB/aldimi_sesiones.jso
 """
 
 import json
+import os
 from datetime import datetime
 
 from .storage import DB_PATH, SESSION_PATH
@@ -66,8 +67,10 @@ def guardar_bd(bd: dict) -> None:
     }
 
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with open(DB_PATH, "w", encoding="utf-8") as f:
+    tmp_path = DB_PATH.with_suffix(DB_PATH.suffix + ".tmp")
+    with open(tmp_path, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2, ensure_ascii=False)
+    os.replace(tmp_path, DB_PATH)
 
 
 def cargar_sesiones() -> list:
@@ -80,5 +83,7 @@ def cargar_sesiones() -> list:
 
 def guardar_sesiones(sesiones: list) -> None:
     SESSION_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with open(SESSION_PATH, "w", encoding="utf-8") as f:
+    tmp_path = SESSION_PATH.with_suffix(SESSION_PATH.suffix + ".tmp")
+    with open(tmp_path, "w", encoding="utf-8") as f:
         json.dump(sesiones, f, indent=2, ensure_ascii=False)
+    os.replace(tmp_path, SESSION_PATH)

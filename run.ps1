@@ -8,38 +8,31 @@ Write-Host "Iniciando setup y ejecución del proyecto Aldimi..."
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path
 Set-Location -Path $root
 
-$useDrive = $env:GDRIVE_ENABLED -eq "1"
+$aldbPath = Join-Path $root "ALDIMI_DB"
+$dniPath = Join-Path $root "DNI_ALDIMI"
+$labPath = Join-Path $root "LAB_ALDIMI"
 
-if ($useDrive) {
-    Write-Host "Drive habilitado: no se crearán carpetas locales DNI_ALDIMI, LAB_ALDIMI ni ALDIMI_DB automáticamente." -ForegroundColor Cyan
-    Write-Host "Configura las variables GDRIVE_SERVICE_ACCOUNT_JSON, GDRIVE_DNI_FOLDER_ID, GDRIVE_LAB_FOLDER_ID y GDRIVE_DB_FOLDER_ID si necesitas persistir JSON en Drive." -ForegroundColor Cyan
-} else {
-    $aldbPath = Join-Path $root "ALDIMI_DB"
-    $dniPath = Join-Path $root "DNI_ALDIMI"
-    $labPath = Join-Path $root "LAB_ALDIMI"
+New-Item -ItemType Directory -Path $aldbPath -Force | Out-Null
+New-Item -ItemType Directory -Path $dniPath -Force | Out-Null
+New-Item -ItemType Directory -Path $labPath -Force | Out-Null
 
-    New-Item -ItemType Directory -Path $aldbPath -Force | Out-Null
-    New-Item -ItemType Directory -Path $dniPath -Force | Out-Null
-    New-Item -ItemType Directory -Path $labPath -Force | Out-Null
+$env:ALDIMI_DB_PATH = $aldbPath
+$env:DNI_ALDIMI_PATH = $dniPath
+$env:LAB_ALDIMI_PATH = $labPath
 
-    $env:ALDIMI_DB_PATH = $aldbPath
-    $env:DNI_ALDIMI_PATH = $dniPath
-    $env:LAB_ALDIMI_PATH = $labPath
-
-    Write-Host "Rutas de datos preparadas: ALDIMI_DB=$aldbPath | DNI_ALDIMI=$dniPath | LAB_ALDIMI=$labPath" -ForegroundColor Cyan
-}
+Write-Host "Rutas de datos preparadas: ALDIMI_DB=$aldbPath | DNI_ALDIMI=$dniPath | LAB_ALDIMI=$labPath" -ForegroundColor Cyan
 
 $env:USE_NOTEBOOK = "1"
 $env:PYTHONUTF8 = "1"
 Write-Host "USE_NOTEBOOK=1 establecido para backend." -ForegroundColor Cyan
 Write-Host "PYTHONUTF8=1 establecido para asegurar que Python use UTF-8 en el proceso." -ForegroundColor Cyan
 
-# Limitar startup scan a un solo archivo por carpeta.
+# Configurar startup scan con todas las imágenes locales.
 $env:ALDIMI_WAIT_FOR_SCAN = "1"
-$env:ALDIMI_SCAN_DNI = "1"
-$env:ALDIMI_SCAN_LAB = "1"
-$env:ALDIMI_MAX_IMAGES = "1"
-Write-Host "ALDIMI_WAIT_FOR_SCAN=1, ALDIMI_SCAN_DNI=1, ALDIMI_SCAN_LAB=1, ALDIMI_MAX_IMAGES=1" -ForegroundColor Cyan
+$env:ALDIMI_SCAN_DNI = "0"
+$env:ALDIMI_SCAN_LAB = "0"
+$env:ALDIMI_MAX_IMAGES = "0"
+Write-Host "ALDIMI_WAIT_FOR_SCAN=1, ALDIMI_SCAN_DNI=0, ALDIMI_SCAN_LAB=0, ALDIMI_MAX_IMAGES=0" -ForegroundColor Cyan
 
 # Check Python
 if (-not (Get-Command python -ErrorAction SilentlyContinue)) {
@@ -119,7 +112,7 @@ $venvPython = Join-Path $venvPath "Scripts\python.exe"
 $psExe = Join-Path $PSHOME "powershell.exe"
 $backendLog = Join-Path $root "backend\backend.log"
 
-$backendCommand = "& '$activate'; Set-Location -LiteralPath '$root'; `$env:ALDIMI_WAIT_FOR_SCAN='1'; `$env:ALDIMI_SCAN_DNI='1'; `$env:ALDIMI_SCAN_LAB='1'; `$env:ALDIMI_MAX_IMAGES='1'; & '$venvPython' -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload 2>&1 | Tee-Object -FilePath '$backendLog'"
+$backendCommand = "& '$activate'; Set-Location -LiteralPath '$root'; `$env:ALDIMI_WAIT_FOR_SCAN='1'; `$env:ALDIMI_SCAN_DNI='0'; `$env:ALDIMI_SCAN_LAB='0'; `$env:ALDIMI_MAX_IMAGES='0'; & '$venvPython' -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload 2>&1 | Tee-Object -FilePath '$backendLog'"
 $staticCommand  = "& '$activate'; Set-Location -LiteralPath '$root'; & '$venvPython' -m http.server $staticPort"
 
 # Liberar puerto 8000 si hay algún listener huérfano.
@@ -172,7 +165,7 @@ if (-not $ok) {
 }
 
 # Abrir la página principal de inicio de sesión solo si el backend respondió
-$indexUrl = "http://localhost:$staticPort/index.html"
+$indexUrl = "http://localhost:$staticPort/chatbot.html"
 if ($ok) {
     Write-Host "Abriendo $indexUrl en el navegador predeterminado..."
     try { Start-Process $indexUrl } catch { Write-Host "No se pudo abrir el navegador automáticamente." -ForegroundColor Yellow }

@@ -118,7 +118,15 @@ def es_saludo(texto_norm: str) -> bool:
 def es_despedida(texto_norm: str) -> bool:
     return coincide_variante(texto_norm, _VARIANTES_DESPEDIDA, umbral=0.85)
  
+
+def es_ciu_valido(texto: str) -> bool:
+    """Valida formatos comunes de CIU/DNI: 8 dígitos Perú o 1-2 letras + 5-7 dígitos."""
+    if not texto:
+        return False
+    t = texto.strip().upper()
+    return bool(re.fullmatch(r"\d{8}", t) or re.fullmatch(r"[A-Z]{1,2}\d{5,7}", t))
  
+
 # ═══════════════════════════════════════════════════════════════════════
 # 3. INTENCIONES (varias formas de decir lo mismo, no solo una palabra)
 # ═══════════════════════════════════════════════════════════════════════
@@ -561,6 +569,21 @@ def procesar_mensaje(mensaje: str, ciu: Optional[str] = None) -> Dict[str, Any]:
         return {"respuesta": "¡Hasta luego! Aquí estaré si necesitas algo más.", "accion": None}
     if es_agradecimiento(texto_norm):
         return {"respuesta": "¡De nada! Fue un gusto ayudarte. 😊", "accion": None}
+ 
+    if esperando == "pedir_ciu_expediente" and es_ciu_valido(mensaje):
+        ciu_buscar = mensaje.strip().upper()
+        bd = cargar_bd()
+        registro = bd.get(ciu_buscar)
+        if not registro:
+            _limpiar_espera(None)
+            return {
+                "respuesta": f"No encontré un expediente registrado con CIU {ciu_buscar}.",
+                "accion": None,
+            }
+        respuesta = construir_respuesta_expediente(registro) + f"\n\n{PREGUNTA_OTRO_SERVICIO}"
+        _limpiar_espera(None)
+        _actualizar_contexto(ciu_buscar, esperando="confirmacion_otro_servicio")
+        return {"respuesta": respuesta, "accion": None}
  
     # ── 3) Caso especial: viene del flujo "pedir_ciu_expediente" ──
     if texto_norm.startswith("ver expediente") or (ciu and "expediente" in texto_norm):

@@ -6,11 +6,4 @@ Pillow
 numpy
 opencv-python-headless
 easyocr
-torch
-torchvision
-transformers
-spacy
-nltk
-scikit-learn
 aiofiles
-notebook
