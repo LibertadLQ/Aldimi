@@ -171,9 +171,27 @@ if (-not $ok) {
 # Abrir la página principal de inicio de sesión solo si el backend respondió
 $indexUrl = "http://localhost:$staticPort/chatbot.html"
 if ($ok) {
-    Write-Host "Abriendo $indexUrl en el navegador predeterminado..."
-    try { Start-Process $indexUrl } catch { Write-Host "No se pudo abrir el navegador automáticamente." -ForegroundColor Yellow }
-    Write-Host "Listo. El backend está disponible y el frontend se abrió." -ForegroundColor Cyan
+    Write-Host "Intentando abrir $indexUrl en el navegador predeterminado..."
+    try {
+        $proc = Start-Process -FilePath $indexUrl -ErrorAction Stop
+        if ($proc) {
+            Write-Host "Navegador iniciado con Start-Process (proceso creado)." -ForegroundColor Green
+        } else {
+            Write-Host "Start-Process no devolvió un objeto; intentando método alternativo..." -ForegroundColor Yellow
+            Start-Process -FilePath "cmd.exe" -ArgumentList "/c","start","$indexUrl" -ErrorAction Stop
+            Write-Host "Navegador abierto con 'cmd /c start'." -ForegroundColor Green
+        }
+    } catch {
+        Write-Host "Start-Process falló, intentando 'cmd /c start'..." -ForegroundColor Yellow
+        try {
+            Start-Process -FilePath "cmd.exe" -ArgumentList "/c","start","$indexUrl" -ErrorAction Stop
+            Write-Host "Navegador abierto con 'cmd /c start'." -ForegroundColor Green
+        } catch {
+            Write-Host "No se pudo abrir el navegador automáticamente. Abre manualmente:" -ForegroundColor Yellow
+            Write-Host $indexUrl -ForegroundColor Cyan
+        }
+    }
+    Write-Host "Listo. El backend está disponible." -ForegroundColor Cyan
 } else {
     Write-Host "No se abrirá el frontend porque el backend no respondió." -ForegroundColor Yellow
     Write-Host "Revisa la ventana de PowerShell donde se inició uvicorn para encontrar el error y vuelve a ejecutar el script." -ForegroundColor Yellow

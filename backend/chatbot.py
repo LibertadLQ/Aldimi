@@ -687,7 +687,7 @@ def procesar_mensaje(mensaje: str, ciu: Optional[str] = None) -> Dict[str, Any]:
         if alertas:
             respuesta_partes.append(f"⚠️  Alertas clínicas: {len(alertas)}")
         
-        respuesta_partes.append("\n¿Confirmar registro? (s/n):")
+       
         respuesta = "\n".join(respuesta_partes)
         
         _limpiar_espera(None)
