@@ -1,6 +1,6 @@
 {
   "sesion": {
-    "ultima_actualizacion": "2026-07-06T19:33:52.175360",
+    "ultima_actualizacion": "2026-07-06T20:40:51.856923",
     "archivo": "aldimi_pacientes.json"
   },
   "pacientes": {
@@ -10738,6 +10738,65 @@
       ],
       "creado_en": "2026-07-06T19:33:52.175339",
       "actualizado_en": "2026-07-06T19:33:52.144798"
+    },
+    "W354101": {
+      "ciu": "W354101",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [
+            {
+              "nombre": "Age",
+              "valor": 37.0,
+              "unidad": "Yr",
+              "flag": "",
+              "referencia": ""
+            }
+          ],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-06T20:40:51.823275"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-06T20:40:51.823275",
+          "timestamp": "2026-07-06T20:40:51.823275",
+          "fuente": "upload",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\ocr_b2fa6b9a14ee49e983f88dbe929d39d5.png",
+          "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260706_204051_ocr_b2fa6b9a14ee49e983f88dbe929d39d5.png",
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "e\ne\n@\ne )\n@\n= ‘e\ne@\nThe New Possible\nR > MAMATA EE SPETAL\nMN NIKHIL MAKARAND patient cu: w354101\nAge 37 Yr / Mal wag Collection on; 24-04-2025 09:05 PM | SERO-479\n5 See - -\nPatient CiU: 71 aes Accepted on: 24-04-2025 09:05 PM\nReq by Dr. UIWAL RAMTEKE Gleveex} ~~ Report Date: 24-04-2025 09:24 PM\nWard BED-101 / SD / Super-Deluxe Status Finalized\nSample Type : SERUM\nDEPARTMENT OF SEROLOGY\nHIV LAND ITRAPID\nhve NON REACTIVI NON REACTIVI\nHIV-2 NON REACTIVE NON REACTIVE\nF Nutes: HIV 1 & I Rapid is screening test.Posttive results have to be confirmed by Quantitative assay(ELISA Western Blot)\nAUSTRALIAN ANTIGEN(HBsAg) NON REACTIVE Non-Reactive\nNotes: : HBSAG Rapid ts screening test, Positive results have to be contirmed by Quantitative assay\nHCV Rapid NON REACTIVE Non-Reactive\nNotes: : HCV Rapid is sereening test. Positive results TS PE asscy\nEND OF REPORT\nPitan bc\nMss pn \\SHOK KAMBLI DR.FURQAN MURUMKAR\nPREPARED BY M.B.B.S.M.D(Pa\nRey No, 2009.02.0\nConsulting Pathok\nSean the QR code to download your e-1\ni (DOMBIVLL}e:\n~ Ww op\nea\nPage 1 of 1\nPrinted By : Ms. NAMRATA ASHOK KaMB B04. 2095 05.34 >\nOperated by Tristar Healthcare LLP\nce) SRV Hospitals - Dombivli, P 43, Phase I, Next to om\nial ae. www. itals.com e\nICICI Bank, MIDC, Dombivii (E) - 421203 & .Srvhospitals.co: A.\né\ninfo@: atahospital.com bees\n® 022-5085 0000 / 8291 89 3641/ 8603 600 600 @ info@srvmam Pi",
+          "campos": {
+            "ciu": "W354101",
+            "pruebas": [
+              {
+                "nombre": "Age",
+                "valor": 37.0,
+                "unidad": "Yr",
+                "flag": "",
+                "referencia": ""
+              }
+            ],
+            "tipo": "LAB_REPORT",
+            "cnn_prediccion": {
+              "clase_predicha": "LAB_REPORT",
+              "probabilidades": {
+                "LAB_REPORT": 0.3222,
+                "DNI_PERU": 0.1185,
+                "DNI_USA": 0.1185,
+                "INFORME_MEDICO": 0.1185,
+                "UNKNOWN": 0.3222
+              },
+              "confianza": 0.3222
+            },
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-06T20:40:51.856901",
+      "actualizado_en": "2026-07-06T20:40:51.823275"
     }
   }
 }

@@ -711,13 +711,114 @@ def _norm_nombre_lab(raw: str) -> str:
     return raw.strip().title()
 
 
+def _es_valor_critico(nombre_prueba: str, valor: float, tipo_alerta: str) -> bool:
+    """Detecta si un valor es críticamente anormal (muy extremo)."""
+    nombre_low = nombre_prueba.lower()
+    
+    # Valores críticos por parámetro (rangos muy peligrosos)
+    criticos = {
+        "glucosa": {"ALTO": 400, "BAJO": 40},
+        "hemoglobina": {"ALTO": 20, "BAJO": 5},
+        "hematocrito": {"ALTO": 70, "BAJO": 15},
+        "leucocitos": {"ALTO": 50, "BAJO": 1},
+        "plaquetas": {"ALTO": 1000, "BAJO": 10},
+        "sodio": {"ALTO": 160, "BAJO": 120},
+        "potasio": {"ALTO": 7, "BAJO": 2.5},
+        "calcio": {"ALTO": 13, "BAJO": 6},
+        "creatinina": {"ALTO": 10, "BAJO": 0.5},
+        "bilirrubina": {"ALTO": 10, "BAJO": 0},
+        "ácido úrico": {"ALTO": 15, "BAJO": 0},
+    }
+    
+    for param, limites in criticos.items():
+        if param in nombre_low:
+            limite = limites.get(tipo_alerta)
+            if limite and ((tipo_alerta == "ALTO" and valor > limite) or (tipo_alerta == "BAJO" and valor < limite)):
+                return True
+    
+    return False
+
+
+def extraer_informacion_clinica_lab(texto: str) -> Dict[str, Any]:
+    """Extrae información clínica adicional del informe: fecha, médico, diagnóstico, etc."""
+    info = {}
+    
+    # Fecha de análisis
+    fecha_patterns = [
+        r"(?:fecha|date|analysis date)[:\s]+(\d{1,2}[/-]\d{1,2}[/-]\d{2,4})",
+        r"(\d{1,2}[/-]\d{1,2}[/-]\d{2,4})",
+    ]
+    for pat in fecha_patterns:
+        m = re.search(pat, texto, re.I)
+        if m:
+            info["fecha_analisis"] = m.group(1)
+            break
+    
+    # Nombre del paciente
+    for pat in [r"(?:patient|paciente)\s*(?:name)?[:\s]+([A-ZÁÉÍÓÚáéíóú\s]+)", 
+                r"(?:nombre|name)[:\s]+([A-ZÁÉÍÓÚáéíóú\s]+)"]:
+        m = re.search(pat, texto, re.I)
+        if m:
+            info["nombre_paciente"] = m.group(1).strip()
+            break
+    
+    # Edad y sexo
+    edad_m = re.search(r"(?:edad|age)[:\s]*(\d+)\s*(?:años|years|yo)?", texto, re.I)
+    if edad_m:
+        info["edad"] = int(edad_m.group(1))
+    
+    sexo_m = re.search(r"(?:sexo|sex|gender)[:\s]*(M|F|Male|Female|Masculino|Femenino|Hombre|Mujer)", texto, re.I)
+    if sexo_m:
+        val = sexo_m.group(1).upper()
+        info["sexo"] = "M" if val[0] in "MH" else "F"
+    
+    # Médico o laboratorio
+    for pat in [r"(?:médico|doctor|physician|dr\.?)[:\s]+([A-ZÁÉÍÓÚáéíóú\s]+)",
+                r"(?:laboratorio|laboratory|lab)[:\s]+([A-ZÁÉÍÓÚáéíóú\s]+)"]:
+        m = re.search(pat, texto, re.I)
+        if m:
+            info["médico_laboratorio"] = m.group(1).strip()
+            break
+    
+    # Diagnóstico o impresión clínica
+    for pat in [r"(?:diagnóstico|diagnosis|diagnóstic|impresión|impression|clinical impression)[:\n]+([^\n]+)",
+                r"(?:observación|observation|notes?)[:\n]+([^\n]+)"]:
+        m = re.search(pat, texto, re.I)
+        if m:
+            info["diagnostico"] = m.group(1).strip()
+            break
+    
+    return info
+
+
+def extraer_interpretacion_lab(texto: str) -> Optional[str]:
+    """Extrae la interpretación clínica o conclusión del informe."""
+    # Buscar secciones de interpretación
+    patterns = [
+        r"(?:interpretación|interpretation|conclusión|conclusion|impresión clínica|clinical impression)[:\n\s]+([^\n]*(?:\n[^\n]*){0,3})",
+        r"(?:observación|remarks|notes?)[:\n\s]+([^\n]*(?:\n[^\n]*){0,3})",
+    ]
+    
+    for pat in patterns:
+        m = re.search(pat, texto, re.I)
+        if m:
+            result = m.group(1).strip()
+            if len(result) > 10:  # Al menos 10 caracteres
+                return result
+    
+    return None
+
+
 def procesar_lab(texto: str) -> Dict[str, Any]:
-    """Extrae parámetros de laboratorio."""
+    """Extrae parámetros de laboratorio con información clínica completa."""
     res = {
         "ciu": extraer_ciu_lab(texto),
         "pruebas": [],
         "alertas": [],
+        "alertas_criticas": [],
         "tipo": "LAB_REPORT",
+        "informacion_clinica": extraer_informacion_clinica_lab(texto),
+        "interpretacion": extraer_interpretacion_lab(texto),
     }
     
     seen = set()
@@ -787,11 +888,20 @@ def procesar_lab(texto: str) -> Dict[str, Any]:
             })
             
             if flag in ("H", "L"):
+                alerta_tipo = "ALTO" if flag == "H" else "BAJO"
                 res["alertas"].append({
                     "prueba": nombre,
                     "valor": valor,
-                    "tipo": "ALTO" if flag == "H" else "BAJO",
+                    "tipo": alerta_tipo,
                 })
+                # Detectar valores críticos (muy extremos)
+                if _es_valor_critico(nombre, valor, alerta_tipo):
+                    res["alertas_criticas"].append({
+                        "prueba": nombre,
+                        "valor": valor,
+                        "tipo": alerta_tipo,
+                        "severidad": "CRÍTICA",
+                    })
             continue
 
         # Fallback: filas tipo tabla sin ':' (Nombre  95.6  mg/dl  80-140)
@@ -820,11 +930,20 @@ def procesar_lab(texto: str) -> Dict[str, Any]:
                 "referencia": ref,
             })
             if flag in ("H", "L"):
+                alerta_tipo = "ALTO" if flag == "H" else "BAJO"
                 res["alertas"].append({
                     "prueba": nombre,
                     "valor": valor,
-                    "tipo": "ALTO" if flag == "H" else "BAJO",
+                    "tipo": alerta_tipo,
                 })
+                # Detectar valores críticos
+                if _es_valor_critico(nombre, valor, alerta_tipo):
+                    res["alertas_criticas"].append({
+                        "prueba": nombre,
+                        "valor": valor,
+                        "tipo": alerta_tipo,
+                        "severidad": "CRÍTICA",
+                    })
             continue
     
     return res

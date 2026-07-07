@@ -27,12 +27,16 @@ $env:PYTHONUTF8 = "1"
 Write-Host "USE_NOTEBOOK=1 establecido para backend." -ForegroundColor Cyan
 Write-Host "PYTHONUTF8=1 establecido para asegurar que Python use UTF-8 en el proceso." -ForegroundColor Cyan
 
-# Configurar startup scan con todas las imágenes locales.
-$env:ALDIMI_WAIT_FOR_SCAN = "1"
-$env:ALDIMI_SCAN_DNI = "0"
-$env:ALDIMI_SCAN_LAB = "0"
-$env:ALDIMI_MAX_IMAGES = "0"
-Write-Host "ALDIMI_WAIT_FOR_SCAN=1, ALDIMI_SCAN_DNI=0, ALDIMI_SCAN_LAB=0, ALDIMI_MAX_IMAGES=0" -ForegroundColor Cyan
+# Configurar startup scan para cargar datos antes de iniciar el chatbot.
+# ALDIMI_AUTO_SCAN=true    : Ejecuta el escaneo de carpetas al iniciar.
+# ALDIMI_WAIT_FOR_SCAN=true: Bloquea hasta que termine el escaneo.
+# ALDIMI_SCAN_DNI=N        : Límite de imágenes a procesar en DNI_ALDIMI (0=skip).
+# ALDIMI_SCAN_LAB=N        : Límite de imágenes a procesar en LAB_ALDIMI (0=skip).
+$env:ALDIMI_AUTO_SCAN = "true"
+$env:ALDIMI_WAIT_FOR_SCAN = "true"
+$env:ALDIMI_SCAN_DNI = "100"
+$env:ALDIMI_SCAN_LAB = "100"
+Write-Host "Startup scan HABILITADO: ALDIMI_AUTO_SCAN=true, ALDIMI_WAIT_FOR_SCAN=true, ALDIMI_SCAN_DNI=100, ALDIMI_SCAN_LAB=100 (TODAS LAS IMÁGENES)" -ForegroundColor Cyan
 
 # Check Python
 if (-not (Get-Command python -ErrorAction SilentlyContinue)) {
