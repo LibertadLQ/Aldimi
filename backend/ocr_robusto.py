@@ -619,9 +619,20 @@ def procesar_dni_usa(texto: str) -> Dict[str, Any]:
 _LAB_SKIP = re.compile(
     r"^(reference|método|method|specimen|result|date|report|page|"
     r"test name|unit|ref\.?|biology|patient|facility|printed|note|"
-    r"n° de guía|cmp|rne|entidad|cliente|dirección|edad|sexo)",
+    r"n° de guía|cmp|rne|entidad|cliente|dirección|edad|sexo|laboratorio|lab|qualab|clinico|clinical|médico|patólogo)",
     re.IGNORECASE,
 )
+
+_LAB_NOISE_RE = re.compile(
+    r"(página|registro|cmp|rne|médico|patólogo|doctor|laboratorio|qualab|clinical|clinico|patient|cliente|firma|signature)",
+    re.IGNORECASE,
+)
+
+
+def _es_ruido_lab_nombre(raw: str) -> bool:
+    if not raw:
+        return False
+    return bool(_LAB_NOISE_RE.search(raw))
 
 _LAB_NUM_RE = re.compile(
     r"""
@@ -630,7 +641,7 @@ _LAB_NUM_RE = re.compile(
     (\d+(?:[.,]\d+)?)
     \s*(?:\[([HLhl]+)\])?
     \s*([a-zA-Zµ%°][a-zA-Z0-9µ%/^.\-]{0,20})?
-    (?:[^\d]*([<>]?\s*[\d.,]+\s*[-–]\s*[\d.,]+|[<>]\s*[\d.,]+))?
+    (?:[^\d]*([<>]?\s*[\d]+(?:[.,]\d+)?\s*[-–]\s*[\d]+(?:[.,]\d+)?|[<>]\s*[\d]+(?:[.,]\d+)?))?
     """,
     re.VERBOSE | re.IGNORECASE,
 )
@@ -641,7 +652,7 @@ _LAB_TABLE_RE = re.compile(
     \s+
     (\d+(?:[.,]\d+)?)
     \s*(?:\[([HLhl]+)\])?
-    \s*([\d.,]+\s*[-–]\s*[\d.,]+)?
+    \s*([\d]+(?:[.,]\d+)?\s*[-–]\s*[\d]+(?:[.,]\d+)?)?
     \s*([a-zA-Z%µ][a-zA-Z0-9%/µ.\-]{0,15})?
     """,
     re.VERBOSE | re.IGNORECASE,
@@ -846,6 +857,8 @@ def procesar_lab(texto: str) -> Dict[str, Any]:
         m = _QUALITATIVE_RE.match(ls)
         if m:
             nombre_raw, resultado = m.groups()
+            if _es_ruido_lab_nombre(nombre_raw):
+                continue
             nombre = _norm_nombre_lab(nombre_raw)
             key = nombre.lower()
             if key not in seen:
@@ -862,7 +875,7 @@ def procesar_lab(texto: str) -> Dict[str, Any]:
         m = _LAB_NUM_RE.search(ls)
         if m:
             nombre_raw = m.group(1).strip()
-            if len(nombre_raw) < 3:
+            if len(nombre_raw) < 3 or _es_ruido_lab_nombre(nombre_raw):
                 continue
             nombre = _norm_nombre_lab(nombre_raw)
             key = nombre.lower()
@@ -908,7 +921,7 @@ def procesar_lab(texto: str) -> Dict[str, Any]:
         m = _LAB_TABLE_RE.match(ls)
         if m:
             nombre_raw = m.group(1).strip()
-            if len(nombre_raw) < 3:
+            if len(nombre_raw) < 3 or _es_ruido_lab_nombre(nombre_raw):
                 continue
             nombre = _norm_nombre_lab(nombre_raw)
             key = nombre.lower()

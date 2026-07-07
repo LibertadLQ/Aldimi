@@ -20,7 +20,7 @@ from pydantic import BaseModel
 
 from backend.chatbot import procesar_mensaje
 from backend.db import cargar_bd, guardar_bd
-from backend.expediente import persistir_ocr_resultado, sincronizar_carpetas
+from backend.expediente import persistir_ocr_resultado, reparar_pacientes_desde_sesiones, sincronizar_carpetas
 from backend.ocr_robusto import procesar_documento as procesar_documento_ocr
 from backend.storage import OCR_IMAGES_DIR
 
@@ -81,6 +81,7 @@ async def startup_scan() -> None:
         print("[STARTUP] Escaneo automático desactivado. Solo se procesarán archivos por upload o solicitud explícita.")
         try:
             cargar_bd()
+            reparar_pacientes_desde_sesiones()
         except Exception as exc:
             print(f"[STARTUP] Aviso: no se pudo cargar la base de datos: {exc}")
         STARTUP_READY = True
@@ -105,6 +106,7 @@ async def startup_scan() -> None:
             print(f"[STARTUP] Error durante escaneo bloqueante: {exc}")
         try:
             cargar_bd()
+            reparar_pacientes_desde_sesiones()
         except Exception as exc:
             print(f"[STARTUP] Aviso: no se pudo cargar la base de datos: {exc}")
         STARTUP_READY = True
@@ -129,6 +131,7 @@ async def startup_scan() -> None:
                     print(f"[STARTUP] Error durante escaneo en background: {exc}")
                 try:
                     cargar_bd()
+                    reparar_pacientes_desde_sesiones()
                 except Exception as exc:
                     print(f"[STARTUP] Aviso: no se pudo cargar la base de datos: {exc}")
                 global STARTUP_READY
@@ -163,14 +166,39 @@ def raiz() -> Dict[str, str]:
 
 @app.get("/pacientes")
 def obtener_pacientes() -> Dict[str, Any]:
-    bd = cargar_bd()
-    return {"total": len(bd) if isinstance(bd, dict) else 0, "pacientes": list(bd.values()) if isinstance(bd, dict) else []}
+    """Retorna todos los pacientes en formato { total, pacientes }"""
+    bd = cargar_bd()  # Ya extrae bd["pacientes"] automáticamente
+    if isinstance(bd, dict):
+        print(f"[API] GET /pacientes → {len(bd)} pacientes disponibles")
+        return {"total": len(bd), "pacientes": bd}
+    print(f"[API] GET /pacientes → BD inválida")
+    return {"total": 0, "pacientes": {}}
+
+
+def _normalizar_ciu_main(ciu: str) -> str:
+    if not ciu:
+        return ""
+    ciu = ciu.strip().upper()
+    if ciu and ciu[0].isalpha():
+        digitos = "".join(ch for ch in ciu if ch.isdigit())
+        return digitos or ciu
+    return ciu
 
 
 @app.get("/pacientes/{ciu}")
 def obtener_paciente(ciu: str) -> Dict[str, Any]:
     bd = cargar_bd()
     ciu = ciu.strip().upper()
+    if ciu not in bd:
+        ciu_normalizado = _normalizar_ciu_main(ciu)
+        if ciu_normalizado in bd:
+            ciu = ciu_normalizado
+        else:
+            for clave in bd:
+                if _normalizar_ciu_main(clave) == ciu_normalizado:
+                    ciu = clave
+                    break
+
     if ciu not in bd:
         raise HTTPException(status_code=404, detail=f"No se encontró un paciente con CIU {ciu}.")
     return bd[ciu]

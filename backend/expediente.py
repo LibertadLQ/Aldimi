@@ -2,6 +2,7 @@
 """Sincronización de expediente con OCR y persistencia en ALDIMI_DB."""
 
 import os
+import re
 import shutil
 import tempfile
 from datetime import datetime
@@ -48,10 +49,19 @@ def _crear_registro_paciente(ciu: str) -> Dict[str, Any]:
     }
 
 
+def _normalizar_ciu(ciu: str) -> str:
+    if not ciu:
+        return ""
+    ciu = str(ciu).strip().upper()
+    if re.fullmatch(r"[A-Z]{1,2}\d{5,7}", ciu):
+        return re.sub(r"[A-Z]", "", ciu)
+    return ciu
+
+
 def _normalizar_campos_dni(campos: Optional[Dict[str, Any]]) -> Dict[str, Any]:
     campos = campos or {}
     return {
-        "ciu": str(campos.get("ciu", "")).strip().upper() or "",
+        "ciu": _normalizar_ciu(campos.get("ciu", "")) or "",
         "nombres": campos.get("nombres") or "NO_DETECTADO",
         "apellidos": campos.get("apellidos") or "NO_DETECTADO",
         "fecha_nacimiento": campos.get("fecha_nacimiento") or "NO_DETECTADO",
@@ -68,7 +78,8 @@ def persistir_ocr_resultado(ruta_imagen: str, resultado: Dict[str, Any], fuente:
     tipo_documento = resultado.get("tipo_documento", "UNKNOWN")
     campos = resultado.get("campos", {}) or {}
     ciu_raw = str(campos.get("ciu", "")).strip().upper() if isinstance(campos, dict) else ""
-    ciu = ciu_raw if ciu_raw and ciu_raw != "NO_DETECTADO" else ""
+    ciu = _normalizar_ciu(ciu_raw) if ciu_raw and ciu_raw != "NO_DETECTADO" else ""
+    key = ciu or ciu_raw
 
     origen_path = Path(ruta_imagen)
     archivo_origen = str(origen_path.resolve()) if origen_path.exists() else ruta_imagen
@@ -96,9 +107,26 @@ def persistir_ocr_resultado(ruta_imagen: str, resultado: Dict[str, Any], fuente:
         sesiones.append(documento)
     guardar_sesiones(sesiones)
 
-    if ciu:
+    if key:
         bd = cargar_bd()
-        registro = bd.get(ciu, _crear_registro_paciente(ciu))
+        registro = None
+        registro_clave = None
+
+        if ciu and ciu in bd:
+            registro = bd[ciu]
+            registro_clave = ciu
+        elif ciu_raw and ciu_raw in bd:
+            registro = bd[ciu_raw]
+            registro_clave = ciu_raw
+        else:
+            registro = _crear_registro_paciente(key)
+            registro_clave = key
+
+        if ciu and ciu_raw and ciu != ciu_raw and ciu_raw in bd and registro_clave != ciu:
+            registro = bd.pop(ciu_raw)
+            registro_clave = ciu
+            registro["ciu"] = ciu
+
         documentos = registro.setdefault("documentos_ocr", [])
         existing_doc = next(
             (d for d in documentos if d.get("archivo_origen") == archivo_origen and d.get("fuente") == fuente),
@@ -125,7 +153,7 @@ def persistir_ocr_resultado(ruta_imagen: str, resultado: Dict[str, Any], fuente:
             registro.setdefault("informes_laboratorio", []).append(informe)
             registro.setdefault("alertas_clinicas", []).extend(informe["alertas_detectadas"])
 
-        bd[ciu] = registro
+        bd[registro_clave] = registro
         guardar_bd(bd)
 
     return {"documento": documento, "paciente_actualizado": bool(ciu)}
@@ -180,3 +208,58 @@ def sincronizar_carpetas(max_images_dni: int = 0, max_images_lab: int = 0) -> Di
             })
 
     return {"procesados": len(resultados), "resultados": resultados}
+
+
+def _buscar_clave_registro_por_ciu(bd: Dict[str, Any], ciu_raw: str) -> Optional[str]:
+    if not ciu_raw:
+        return None
+    ciu_raw = str(ciu_raw).strip().upper()
+    ciu_norm = _normalizar_ciu(ciu_raw)
+
+    if ciu_raw in bd:
+        return ciu_raw
+    if ciu_norm and ciu_norm in bd:
+        return ciu_norm
+
+    for clave in bd:
+        if _normalizar_ciu(clave) == ciu_norm:
+            return clave
+    return None
+
+
+def reparar_pacientes_desde_sesiones() -> int:
+    bd = cargar_bd()
+    sesiones = cargar_sesiones()
+    if not sesiones:
+        return 0
+
+    cambios = 0
+    for sesion in reversed(sesiones):
+        if sesion.get("tipo_documento") not in {"DNI_PERU", "DNI_USA"}:
+            continue
+
+        campos = sesion.get("campos", {}) or {}
+        ciu_raw = str(campos.get("ciu", "")).strip().upper()
+        if not ciu_raw or ciu_raw == "NO_DETECTADO":
+            continue
+
+        registro_clave = _buscar_clave_registro_por_ciu(bd, ciu_raw)
+        if registro_clave is None:
+            registro_clave = _normalizar_ciu(ciu_raw) or ciu_raw
+            registro = _crear_registro_paciente(registro_clave)
+            bd[registro_clave] = registro
+            cambios += 1
+        else:
+            registro = bd[registro_clave]
+
+        datos_actuales = registro.get("datos_personales", {}) or {}
+        if not datos_actuales or datos_actuales.get("nombres") in {None, "", "NO_DETECTADO"}:
+            registro["datos_personales"] = _normalizar_campos_dni(campos)
+            registro["datos_personales"]["ciu"] = _normalizar_ciu(ciu_raw) or ciu_raw
+            registro["actualizado_en"] = sesion.get("timestamp") or datetime.now().isoformat()
+            bd[registro_clave] = registro
+            cambios += 1
+
+    if cambios:
+        guardar_bd(bd)
+    return cambios

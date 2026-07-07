@@ -13,14 +13,22 @@
 
 const API_BASE = 'http://127.0.0.1:8000';
 
+/* Cache global de pacientes cargado desde la BD al iniciar */
+let pacientesCache = {};
+
+console.log('[ALDIMI] Inicializando aplicación...');
+
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('[ALDIMI] DOM loaded');
   esperarBackendReady().then(() => {
+    console.log('[ALDIMI] Backend ready, cargando datos...');
     cargarUsuario();
     mostrarFecha();
     mostrarSeccion('inicio');
     mostrarEstadoOCR('vacio');
     inyectarCampoCiuOCR();
     actualizarContadorPacientes();
+    cargarPacientesEnCache();
   });
 });
 
@@ -135,6 +143,25 @@ async function actualizarContadorPacientes() {
   }
 }
 
+async function cargarPacientesEnCache() {
+  console.log('[CHATBOT] Iniciando carga de pacientes desde API...');
+  try {
+    const res = await fetch(`${API_BASE}/pacientes`, { cache: 'no-store' });
+    if (!res.ok) {
+      console.warn('[CHATBOT] API retornó error:', res.status);
+      return;
+    }
+    const data = await res.json();
+    pacientesCache = data.pacientes || {};
+    const ciusList = Object.keys(pacientesCache).slice(0, 20); // Primeros 20
+    console.log(`[CHATBOT] ✅ Cargados ${Object.keys(pacientesCache).length} pacientes`);
+    console.log('[CHATBOT] Primeros CIUs:', ciusList);
+    console.log('[CHATBOT] Caché completo:', pacientesCache);
+  } catch (e) {
+    console.error('[CHATBOT] Error al cargar pacientes:', e);
+  }
+}
+
 
 /* ═══════════════════════════════════════════════════════════════
    CHATBOT
@@ -205,8 +232,63 @@ async function procesarMensajeUsuario(mensaje) {
       agregarMensaje('Ese CIU no parece válido. Intenta de nuevo (ej: 42951703 o W839927).', 'bot');
       return;
     }
+    let ciuBuscado = mensaje.trim().toUpperCase();
+    
+    // Normalizar: si viene con letra (ej "W499485"), extraer solo dígitos
+    if (/^[A-Z]+\d+$/.test(ciuBuscado)) {
+      ciuBuscado = ciuBuscado.replace(/[A-Z]/g, '');
+    }
+    
     modoConversacion = 'idle';
-    await consultarChat('ver expediente', mensaje.trim().toUpperCase());
+    
+    console.log(`[BUSQUEDA] CIU original: ${mensaje.trim().toUpperCase()}`);
+    console.log(`[BUSQUEDA] CIU normalizado: ${ciuBuscado}`);
+    console.log(`[BUSQUEDA] CIUs disponibles (primeros 10):`, Object.keys(pacientesCache).slice(0, 10));
+    
+    // Buscar primero en caché local
+    if (pacientesCache[ciuBuscado]) {
+      const paciente = pacientesCache[ciuBuscado];
+      let datos = paciente.datos_personales || {};
+      
+      // Si datos_personales está vacío, extraer del último DNI en documentos_ocr
+      if (!datos.nombres || datos.nombres === 'NO_DETECTADO') {
+        const docsOcr = paciente.documentos_ocr || [];
+        for (let i = docsOcr.length - 1; i >= 0; i--) {
+          const doc = docsOcr[i];
+          if (doc.tipo_documento === 'DNI_PERU' || doc.tipo_documento === 'DNI_USA') {
+            datos = doc.campos || {};
+            console.log('[BUSQUEDA] Datos extraídos de documentos_ocr:', datos);
+            break;
+          }
+        }
+      }
+      
+      const informes = paciente.informes_laboratorio || [];
+      const alertas = paciente.alertas_clinicas || [];
+      
+      console.log(`[BUSQUEDA] ✅ Encontrado en caché:`, paciente);
+      
+      const respuesta_partes = [
+        `✅ Datos extraídos:`,
+        `   CIU: ${ciuBuscado}`,
+        `   Nombre: ${datos.nombres || 'NO_DETECTADO'} ${datos.apellidos || 'NO_DETECTADO'}`,
+        `   Fecha nac.: ${datos.fecha_nacimiento || 'NO_DETECTADO'}`,
+      ];
+      
+      if (informes.length > 0) {
+        respuesta_partes.push(`\n📋 Informes de laboratorio: ${informes.length}`);
+      }
+      if (alertas.length > 0) {
+        respuesta_partes.push(`⚠️  Alertas clínicas: ${alertas.length}`);
+      }
+      
+      respuesta_partes.push(`\n¿Confirmar registro? (s/n):`);
+      agregarMensaje(respuesta_partes.join('\n'), 'bot');
+    } else {
+      console.log(`[BUSQUEDA] ❌ No encontrado en caché, consultando backend...`);
+      // Si no está en caché, enviar al backend
+      await consultarChat('ver expediente', ciuBuscado);
+    }
     return;
   }
 

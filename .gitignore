@@ -2,3 +2,4 @@ __pycache__/
 *.pyc
 *.bak
 .venv/
+ALDIMI_DB/imagenes_ocr/

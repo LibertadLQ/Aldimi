@@ -1,6 +1,6 @@
 {
   "sesion": {
-    "ultima_actualizacion": "2026-07-06T20:40:51.856923",
+    "ultima_actualizacion": "2026-07-06T22:42:03.494961",
     "archivo": "aldimi_pacientes.json"
   },
   "pacientes": {
@@ -17,8 +17,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:21:05.959942",
-          "timestamp": "2026-07-06T19:21:05.959942",
+          "id": "ocr_2026-07-06T22:42:03.459728",
+          "timestamp": "2026-07-06T22:42:03.459728",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053405_Q-RANJANADEVI21.04.20250001compressed_250427_1041@F.pdf_page_38.png",
           "archivo_copia": null,
@@ -42,7 +42,14 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CU",
+              "edad": 4,
+              "médico_laboratorio": "Test"
+            },
+            "interpretacion": "in tropical and subtropical regions dengue is the most important arbovirosis in terms of mortality and\nnorality\n\\n easy-to-perform, rapid and specific test is needed to confirm infection during the acute phase of the\n| fection",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -60,7 +67,7 @@
         }
       ],
       "creado_en": "2026-07-06T10:01:43.273491",
-      "actualizado_en": "2026-07-06T19:21:05.959942"
+      "actualizado_en": "2026-07-06T22:42:03.459728"
     },
     "130250": {
       "ciu": "130250",
@@ -75,8 +82,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:22:25.631877",
-          "timestamp": "2026-07-06T19:22:25.631877",
+          "id": "ocr_2026-07-06T22:18:36.964378",
+          "timestamp": "2026-07-06T22:18:36.964378",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053567_Q-PT.ROSHNIESIBUNCH11zon_250427_1622@F.pdf_page_41.png",
           "archivo_copia": null,
@@ -114,7 +121,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CW",
+              "médico_laboratorio": "Rashmi Tayal\npharambir Doshwal M"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -132,7 +145,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:24:23.188752",
-      "actualizado_en": "2026-07-06T19:22:25.631877"
+      "actualizado_en": "2026-07-06T22:18:36.964378"
     },
     "1321032": {
       "ciu": "1321032",
@@ -147,8 +160,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:22:34.325894",
-          "timestamp": "2026-07-06T19:22:34.325894",
+          "id": "ocr_2026-07-06T22:18:42.437382",
+          "timestamp": "2026-07-06T22:18:42.437382",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053567_Q-PT.ROSHNIESIBUNCH11zon_250427_1622@F.pdf_page_63.png",
           "archivo_copia": null,
@@ -157,7 +170,13 @@
           "campos": {
             "ciu": "1321032",
             "pruebas": [],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "Clu",
+              "médico_laboratorio": "Rashmi Tayal\nparambir Deshwal M"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -175,7 +194,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:24:33.666396",
-      "actualizado_en": "2026-07-06T19:22:34.325894"
+      "actualizado_en": "2026-07-06T22:18:42.437382"
     },
     "20210773": {
       "ciu": "20210773",
@@ -224,8 +243,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:23:38.911136",
-          "timestamp": "2026-07-06T19:23:38.911136",
+          "id": "ocr_2026-07-06T22:19:34.567522",
+          "timestamp": "2026-07-06T22:19:34.567522",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054989_Q-112752REETADEVI_250427_1429@F.pdf_page_31.png",
           "archivo_copia": null,
@@ -256,7 +275,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "ClU",
+              "médico_laboratorio": "Dr"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -273,8 +298,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-06T19:23:46.268311",
-          "timestamp": "2026-07-06T19:23:46.268311",
+          "id": "ocr_2026-07-06T22:19:42.554930",
+          "timestamp": "2026-07-06T22:19:42.554930",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054989_Q-112752REETADEVI_250427_1429@F.pdf_page_37.png",
           "archivo_copia": null,
@@ -312,7 +337,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "edad": 1,
+              "médico_laboratorio": "Dr"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -330,7 +361,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:26:10.873906",
-      "actualizado_en": "2026-07-06T19:23:46.268311"
+      "actualizado_en": "2026-07-06T22:19:42.554930"
     },
     "202504": {
       "ciu": "202504",
@@ -345,8 +376,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:24:04.140877",
-          "timestamp": "2026-07-06T19:24:04.140877",
+          "id": "ocr_2026-07-06T22:19:55.457575",
+          "timestamp": "2026-07-06T22:19:55.457575",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055057_F-KYC_PC_Mrs_CHANDER_KANTA_1_250422_1418@G.pdf_page_7.png",
           "archivo_copia": null,
@@ -370,7 +401,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "ClU",
+              "médico_laboratorio": "Pooja Bhasin M"
+            },
+            "interpretacion": "TSH levels are subject to circadian variation, reaching peak levels between 2 — 4 am\nand at a minimum between 6 — 10 pm. The variation is of the order of 50% - 206 %, hence\ntime of the day has influence on the measured serum TSH concentrations.\nComment: TSH - Ultrasensitive",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -388,7 +425,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:26:42.505992",
-      "actualizado_en": "2026-07-06T19:24:04.140877"
+      "actualizado_en": "2026-07-06T22:19:55.457575"
     },
     "136145": {
       "ciu": "136145",
@@ -403,8 +440,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:24:27.367194",
-          "timestamp": "2026-07-06T19:24:27.367194",
+          "id": "ocr_2026-07-06T22:20:13.751278",
+          "timestamp": "2026-07-06T22:20:13.751278",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055398_SUNILA ARORA INVESTIGATION  FOR ENHANCMENT _27-04-2025_1111-09_AM.pdf_page_8.png",
           "archivo_copia": null,
@@ -413,7 +450,13 @@
           "campos": {
             "ciu": "136145",
             "pruebas": [],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "clu",
+              "médico_laboratorio": "ADITI MEHROTRA Report Date"
+            },
+            "interpretacion": "Electrolytes: Affects most metabolic processes. They serve top maintain osmotic pressure and hydration of various body fluid\ncompartments, proper body pH, and regulation of appropriate heart and muscle functions. Electrolytes are also involved in oxidatior\n_mfeduction reactions and participate as essential parts or, co factors, in enzyme reactions.\nst Method :- ISE Indirect.",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -431,7 +474,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:27:09.089200",
-      "actualizado_en": "2026-07-06T19:24:27.367194"
+      "actualizado_en": "2026-07-06T22:20:13.751278"
     },
     "751340": {
       "ciu": "751340",
@@ -446,8 +489,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:24:57.967349",
-          "timestamp": "2026-07-06T19:24:57.967349",
+          "id": "ocr_2026-07-06T22:20:38.680576",
+          "timestamp": "2026-07-06T22:20:38.680576",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055511_Q-ROHIT4854000111zon_250427_1412@F.pdf_page_23.png",
           "archivo_copia": null,
@@ -485,7 +528,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "Civ",
+              "médico_laboratorio": "Name"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -503,7 +552,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:27:51.131033",
-      "actualizado_en": "2026-07-06T19:24:57.967349"
+      "actualizado_en": "2026-07-06T22:20:38.680576"
     },
     "1001066": {
       "ciu": "1001066",
@@ -518,8 +567,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:25:34.055531",
-          "timestamp": "2026-07-06T19:25:34.055531",
+          "id": "ocr_2026-07-06T22:20:58.529828",
+          "timestamp": "2026-07-06T22:20:58.529828",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055868_F-DOCUMENTAMRITPAL_250423_1639@G.pdf_page_19.png",
           "archivo_copia": null,
@@ -613,7 +662,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "fecha_analisis": "21/04/2025",
+              "médico_laboratorio": ""
+            },
+            "interpretacion": "hence as per [\ndifferential leucocyte counts are reported as absolute number of each cell type per unit\nvolume of blood.\nSERUMELECTROLYIES. ie eee",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -631,7 +686,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:28:28.879682",
-      "actualizado_en": "2026-07-06T19:25:34.055531"
+      "actualizado_en": "2026-07-06T22:20:58.529828"
     },
     "183659": {
       "ciu": "183659",
@@ -646,8 +701,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:25:59.924149",
-          "timestamp": "2026-07-06T19:25:59.924149",
+          "id": "ocr_2026-07-06T22:21:21.206077",
+          "timestamp": "2026-07-06T22:21:21.206077",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056008_ASHISH BAGDIYA CN GUR0425PA0056008_27-04-2025_0517-33_PM@E.pdf_page_45.png",
           "archivo_copia": null,
@@ -790,7 +845,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "First\nHematology Result No",
+              "médico_laboratorio": "ANIRUDDHA VYAS"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -808,7 +869,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:29:04.857245",
-      "actualizado_en": "2026-07-06T19:25:59.924149"
+      "actualizado_en": "2026-07-06T22:21:21.206077"
     },
     "263401": {
       "ciu": "263401",
@@ -823,8 +884,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:27:21.162607",
-          "timestamp": "2026-07-06T19:27:21.162607",
+          "id": "ocr_2026-07-06T22:22:23.373393",
+          "timestamp": "2026-07-06T22:22:23.373393",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056519_discharge virendra_11zon_28-04-2025_1115-27_AM.pdf_page_14.png",
           "archivo_copia": null,
@@ -918,7 +979,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "ClU",
+              "médico_laboratorio": "Or"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -936,7 +1003,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:30:47.402163",
-      "actualizado_en": "2026-07-06T19:27:21.162607"
+      "actualizado_en": "2026-07-06T22:22:23.373393"
     },
     "NONE": {
       "ciu": "NONE",
@@ -951,8 +1018,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:30:41.800054",
-          "timestamp": "2026-07-06T19:30:41.800054",
+          "id": "ocr_2026-07-06T22:24:37.011124",
+          "timestamp": "2026-07-06T22:24:37.011124",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0058035_F-PKJosephcasesheetreports_250427_1808@G.pdf_page_14.png",
           "archivo_copia": null,
@@ -969,7 +1036,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "ClU",
+              "médico_laboratorio": "PARIMUTHUKUMAR"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -987,7 +1060,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:34:37.248607",
-      "actualizado_en": "2026-07-06T19:30:41.800054"
+      "actualizado_en": "2026-07-06T22:24:37.011124"
     },
     "382421": {
       "ciu": "382421",
@@ -1002,8 +1075,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:32:29.701602",
-          "timestamp": "2026-07-06T19:32:29.701602",
+          "id": "ocr_2026-07-06T22:25:56.388044",
+          "timestamp": "2026-07-06T22:25:56.388044",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\KOL-0425-PA-0004068_E-1745819838697ANKURSAXENAFINALBILLconverted_250428_1144@E.pdf_page_16.png",
           "archivo_copia": null,
@@ -1076,7 +1149,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "médico_laboratorio": "MASUM BHAVSAR",
+              "diagnostico": "*** End Of Report ***"
+            },
+            "interpretacion": "*** End Of Report ***\nSuggested Clinical Correlation * If neccessary, Please sh\ndiscuss f way — F\n: f j jigaila! ital",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -1094,7 +1173,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:37:06.241610",
-      "actualizado_en": "2026-07-06T19:32:29.701602"
+      "actualizado_en": "2026-07-06T22:25:56.388044"
     },
     "411040": {
       "ciu": "411040",
@@ -1131,8 +1210,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:33:07.171670",
-          "timestamp": "2026-07-06T19:33:07.171670",
+          "id": "ocr_2026-07-06T22:26:38.017460",
+          "timestamp": "2026-07-06T22:26:38.017460",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0125-PA-0001141_W2500438UNADKAT ASHWIN_27-04-2025_1002-19_AM.pdf_page_91.png",
           "archivo_copia": null,
@@ -1261,7 +1340,12 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "médico_laboratorio": "potent clu"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -1279,7 +1363,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:38:04.563285",
-      "actualizado_en": "2026-07-06T19:33:07.171670"
+      "actualizado_en": "2026-07-06T22:26:38.017460"
     },
     "414003": {
       "ciu": "414003",
@@ -1294,8 +1378,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:33:13.673454",
-          "timestamp": "2026-07-06T19:33:13.673454",
+          "id": "ocr_2026-07-06T22:26:45.100096",
+          "timestamp": "2026-07-06T22:26:45.100096",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0425-PA-0003769_E-BodakheParvatiReports_250427_1201@E.pdf_page_2.png",
           "archivo_copia": null,
@@ -1410,7 +1494,14 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "fecha_analisis": "25-26-751",
+              "nombre_paciente": "ClU",
+              "médico_laboratorio": "SAHTL NISAR SHAIKH\nPREPARED BY MBBS"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -1428,7 +1519,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:38:15.345008",
-      "actualizado_en": "2026-07-06T19:33:13.673454"
+      "actualizado_en": "2026-07-06T22:26:45.100096"
     },
     "201816": {
       "ciu": "201816",
@@ -1601,8 +1692,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-06T19:22:48.334311",
-          "timestamp": "2026-07-06T19:22:48.334311",
+          "id": "ocr_2026-07-06T22:18:54.700293",
+          "timestamp": "2026-07-06T22:18:54.700293",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053930_Q-REKHA10500_250427_1509@F.pdf_page_28.png",
           "archivo_copia": null,
@@ -1625,7 +1716,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Ramesh Kumar OPD IPD"
+            },
+            "interpretacion": "Positive\nAgglutinin titre greater than 1:80 is considered significant and rising titre will confirm the\ndiagnosis.In typhoid fever, widal test is usually positive after 7 days of fever.\nImmuno-Serology",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -1643,7 +1740,7 @@
         }
       ],
       "creado_en": "2026-07-06T18:16:52.438682",
-      "actualizado_en": "2026-07-06T19:22:48.334311"
+      "actualizado_en": "2026-07-06T22:18:54.700293"
     },
     "W290166": {
       "ciu": "W290166",
@@ -1736,8 +1833,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:21:11.093482",
-          "timestamp": "2026-07-06T19:21:11.093482",
+          "id": "ocr_2026-07-06T22:17:24.490105",
+          "timestamp": "2026-07-06T22:17:24.490105",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053405_Q-RANJANADEVI21.04.20250001compressed_250427_1041@F.pdf_page_46.png",
           "archivo_copia": null,
@@ -1824,7 +1921,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Yoo ia i"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -1842,7 +1945,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:21:11.114862",
-      "actualizado_en": "2026-07-06T19:21:11.093482"
+      "actualizado_en": "2026-07-06T22:17:24.490105"
     },
     "W718295": {
       "ciu": "W718295",
@@ -1935,8 +2038,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:21:16.231141",
-          "timestamp": "2026-07-06T19:21:16.231141",
+          "id": "ocr_2026-07-06T22:17:30.179130",
+          "timestamp": "2026-07-06T22:17:30.179130",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053408_Q-SATISHKUMAR19.04.20250001compressed_250427_1052@F.pdf_page_30.png",
           "archivo_copia": null,
@@ -2023,7 +2126,14 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "edad": 1,
+              "médico_laboratorio": "Test"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -2041,7 +2151,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:21:16.248419",
-      "actualizado_en": "2026-07-06T19:21:16.231141"
+      "actualizado_en": "2026-07-06T22:17:30.179130"
     },
     "W030305": {
       "ciu": "W030305",
@@ -2064,8 +2174,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:21:21.624267",
-          "timestamp": "2026-07-06T19:21:21.624267",
+          "id": "ocr_2026-07-06T22:17:35.982015",
+          "timestamp": "2026-07-06T22:17:35.982015",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053408_Q-SATISHKUMAR19.04.20250001compressed_250427_1052@F.pdf_page_37.png",
           "archivo_copia": null,
@@ -2082,7 +2192,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Test"
+            },
+            "interpretacion": "-\n'n vitro quantitative determination of HbAIC in whole blood is utilized in long term monitoring of glycemia .\n'he HbAIC level correlates with the mean glucose concentration prevailing in the course of the patient's\nrecent history (approx - 6-8 weeks) and therefore provides much more reliable information for glycemia",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -2100,7 +2216,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:21:21.675843",
-      "actualizado_en": "2026-07-06T19:21:21.624267"
+      "actualizado_en": "2026-07-06T22:17:35.982015"
     },
     "W668239": {
       "ciu": "W668239",
@@ -2123,8 +2239,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:21:27.064517",
-          "timestamp": "2026-07-06T19:21:27.064517",
+          "id": "ocr_2026-07-06T22:17:41.511886",
+          "timestamp": "2026-07-06T22:17:41.511886",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053434_Q-PREETI4837000111zon_250427_1314@F.pdf_page_35.png",
           "archivo_copia": null,
@@ -2141,7 +2257,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Name"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -2159,7 +2281,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:21:27.083293",
-      "actualizado_en": "2026-07-06T19:21:27.064517"
+      "actualizado_en": "2026-07-06T22:17:41.511886"
     },
     "W533568": {
       "ciu": "W533568",
@@ -2217,8 +2339,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:21:33.357324",
-          "timestamp": "2026-07-06T19:21:33.357324",
+          "id": "ocr_2026-07-06T22:17:48.758826",
+          "timestamp": "2026-07-06T22:17:48.758826",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053434_Q-PREETI4837000111zon_250427_1314@F.pdf_page_38.png",
           "archivo_copia": null,
@@ -2270,7 +2392,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Name"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -2288,7 +2416,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:21:33.376225",
-      "actualizado_en": "2026-07-06T19:21:33.357324"
+      "actualizado_en": "2026-07-06T22:17:48.758826"
     },
     "196188": {
       "ciu": "196188",
@@ -2423,8 +2551,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:21:39.892274",
-          "timestamp": "2026-07-06T19:21:39.892274",
+          "id": "ocr_2026-07-06T22:17:54.769655",
+          "timestamp": "2026-07-06T22:17:54.769655",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053434_Q-PREETI4837000111zon_250427_1314@F.pdf_page_42.png",
           "archivo_copia": null,
@@ -2553,7 +2681,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "ClU",
+              "médico_laboratorio": "Name"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -2571,7 +2705,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:21:39.911600",
-      "actualizado_en": "2026-07-06T19:21:39.892274"
+      "actualizado_en": "2026-07-06T22:17:54.769655"
     },
     "W348963": {
       "ciu": "W348963",
@@ -2594,8 +2728,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:21:52.312796",
-          "timestamp": "2026-07-06T19:21:52.312796",
+          "id": "ocr_2026-07-06T22:18:07.714749",
+          "timestamp": "2026-07-06T22:18:07.714749",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053454_Q-11zonmergedFiles2411zon_250427_1324@F.pdf_page_36.png",
           "archivo_copia": null,
@@ -2612,7 +2746,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Name"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -2630,7 +2770,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:21:52.329667",
-      "actualizado_en": "2026-07-06T19:21:52.312796"
+      "actualizado_en": "2026-07-06T22:18:07.714749"
     },
     "W806358": {
       "ciu": "W806358",
@@ -2645,8 +2785,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:22:03.660970",
-          "timestamp": "2026-07-06T19:22:03.660970",
+          "id": "ocr_2026-07-06T22:18:20.517495",
+          "timestamp": "2026-07-06T22:18:20.517495",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053481_Q-CHHAYADEVI21.04.20250001compressed_250427_1617@F.pdf_page_38.png",
           "archivo_copia": null,
@@ -2655,7 +2795,13 @@
           "campos": {
             "ciu": "W806358",
             "pruebas": [],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CU",
+              "médico_laboratorio": "GY"
+            },
+            "interpretacion": "-\nIn vitro quantitative determination of HbAIC in whole blood is utilized in long term monitoring of glycemia .\n‘he HbAIC level correlates with the mean glucose concentration prevailing in the course of the patient's\n‘ecent history (approx - 6-8 weeks) and therefore provides much more reliable information for glycemia",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -2673,7 +2819,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:22:03.680056",
-      "actualizado_en": "2026-07-06T19:22:03.660970"
+      "actualizado_en": "2026-07-06T22:18:20.517495"
     },
     "W967038": {
       "ciu": "W967038",
@@ -2717,8 +2863,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:22:09.400370",
-          "timestamp": "2026-07-06T19:22:09.400370",
+          "id": "ocr_2026-07-06T22:18:25.965960",
+          "timestamp": "2026-07-06T22:18:25.965960",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053481_Q-CHHAYADEVI21.04.20250001compressed_250427_1617@F.pdf_page_39.png",
           "archivo_copia": null,
@@ -2756,7 +2902,14 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "CUNSETNAIN\nAS ARM",
+              "diagnostico": "TSH levels are subject to circadian variation, rising several hours"
+            },
+            "interpretacion": "TSH levels are subject to circadian variation, rising several hours\nbefore the onset of sleep, reaching peak levels between 11 pm to6 am\nNadir concentrations are observed during the afternoon.\nDiurnal variation in TSH level approximates + 50 %, hence time of the day",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -2774,7 +2927,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:22:09.421348",
-      "actualizado_en": "2026-07-06T19:22:09.400370"
+      "actualizado_en": "2026-07-06T22:18:25.965960"
     },
     "W112474": {
       "ciu": "W112474",
@@ -2825,8 +2978,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:22:17.440376",
-          "timestamp": "2026-07-06T19:22:17.440376",
+          "id": "ocr_2026-07-06T22:18:31.205206",
+          "timestamp": "2026-07-06T22:18:31.205206",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053481_Q-CHHAYADEVI21.04.20250001compressed_250427_1617@F.pdf_page_42.png",
           "archivo_copia": null,
@@ -2871,7 +3024,12 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -2889,7 +3047,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:22:17.461592",
-      "actualizado_en": "2026-07-06T19:22:17.440376"
+      "actualizado_en": "2026-07-06T22:18:31.205206"
     },
     "169099": {
       "ciu": "169099",
@@ -2975,8 +3133,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:22:41.230573",
-          "timestamp": "2026-07-06T19:22:41.230573",
+          "id": "ocr_2026-07-06T22:18:48.872642",
+          "timestamp": "2026-07-06T22:18:48.872642",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053930_Q-REKHA10500_250427_1509@F.pdf_page_27.png",
           "archivo_copia": null,
@@ -3056,7 +3214,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "Clu",
+              "médico_laboratorio": "Ramesh Kumar OPD IPD"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -3074,7 +3238,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:22:41.253395",
-      "actualizado_en": "2026-07-06T19:22:41.230573"
+      "actualizado_en": "2026-07-06T22:18:48.872642"
     },
     "W702846": {
       "ciu": "W702846",
@@ -3132,8 +3296,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:22:57.437613",
-          "timestamp": "2026-07-06T19:22:57.437613",
+          "id": "ocr_2026-07-06T22:19:00.183890",
+          "timestamp": "2026-07-06T22:19:00.183890",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053972_E-SANDEEPKUMARMID_250427_1418@E.pdf_page_12.png",
           "archivo_copia": null,
@@ -3185,7 +3349,14 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CU",
+              "edad": 2,
+              "médico_laboratorio": "INVESTIGATION REPORT"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -3203,7 +3374,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:22:57.459247",
-      "actualizado_en": "2026-07-06T19:22:57.437613"
+      "actualizado_en": "2026-07-06T22:19:00.183890"
     },
     "W574383": {
       "ciu": "W574383",
@@ -3239,8 +3410,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:23:05.041003",
-          "timestamp": "2026-07-06T19:23:05.041003",
+          "id": "ocr_2026-07-06T22:19:06.237659",
+          "timestamp": "2026-07-06T22:19:06.237659",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054044_Q-FINAL0001_250427_1157@F.pdf_page_36.png",
           "archivo_copia": null,
@@ -3270,7 +3441,12 @@
                 "flag": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU"
+            },
+            "interpretacion": "In tropical and subtropical regions, dengue is the most important arbovirosis in terms of mortality and morality.\nAn easy-to-perform, rapid and specific test is needed to confirm infection during the acute phase of the\ninfection\nin order to implement appropriate treatment during early course of teh disease. NS1 antigen is an non-",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -3288,7 +3464,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:23:05.061842",
-      "actualizado_en": "2026-07-06T19:23:05.041003"
+      "actualizado_en": "2026-07-06T22:19:06.237659"
     },
     "W754518": {
       "ciu": "W754518",
@@ -3325,8 +3501,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:23:11.903857",
-          "timestamp": "2026-07-06T19:23:11.903857",
+          "id": "ocr_2026-07-06T22:19:11.601485",
+          "timestamp": "2026-07-06T22:19:11.601485",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054524_E-FinalbillanddischargeSangitadevi_250427_1834@E.pdf_page_14.png",
           "archivo_copia": null,
@@ -3357,7 +3533,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "S"
+            },
+            "interpretacion": "SGRP is an acute phase B-globulin with a molecular mass of approximately\n118,000 daltons,\nGRP levels in serum or plasma may rise during general,nonspecific response to\nMp fectious and non-infectious inflammatory conditions such as rheumatoid",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -3375,7 +3557,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:23:11.924578",
-      "actualizado_en": "2026-07-06T19:23:11.903857"
+      "actualizado_en": "2026-07-06T22:19:11.601485"
     },
     "867192": {
       "ciu": "867192",
@@ -3461,8 +3643,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:23:18.240913",
-          "timestamp": "2026-07-06T19:23:18.240913",
+          "id": "ocr_2026-07-06T22:19:17.150719",
+          "timestamp": "2026-07-06T22:19:17.150719",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054745_Q-REPORTS_250427_1041@F.pdf_page_7.png",
           "archivo_copia": null,
@@ -3542,7 +3724,14 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "fecha_analisis": "21/04/2025",
+              "nombre_paciente": "ClU",
+              "médico_laboratorio": "PRATIBHA PUNDHIR Requisitions"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -3560,7 +3749,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:23:18.258506",
-      "actualizado_en": "2026-07-06T19:23:18.240913"
+      "actualizado_en": "2026-07-06T22:19:17.150719"
     },
     "642457": {
       "ciu": "642457",
@@ -3583,8 +3772,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:23:24.578163",
-          "timestamp": "2026-07-06T19:23:24.578163",
+          "id": "ocr_2026-07-06T22:19:22.854048",
+          "timestamp": "2026-07-06T22:19:22.854048",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054811_Q-GUDDUKUMAR10534_250427_1457@F.pdf_page_31.png",
           "archivo_copia": null,
@@ -3601,7 +3790,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "Clu",
+              "médico_laboratorio": "ee"
+            },
+            "interpretacion": "Bacterial infection is unlikely.\n0.25 -<0.5 -.Local Bacterial infection is Possible but sepsis is unlikely\n0.5 - <2.0 Systemic infection (sepsis) is possible and morderate risk of\ndeveloping to severe",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -3619,7 +3814,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:23:24.598443",
-      "actualizado_en": "2026-07-06T19:23:24.578163"
+      "actualizado_en": "2026-07-06T22:19:22.854048"
     },
     "W528313": {
       "ciu": "W528313",
@@ -3747,8 +3942,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:23:31.160870",
-          "timestamp": "2026-07-06T19:23:31.160870",
+          "id": "ocr_2026-07-06T22:19:28.263786",
+          "timestamp": "2026-07-06T22:19:28.263786",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054840_Q-pawankumarfinal_250427_1337@F.pdf_page_36.png",
           "archivo_copia": null,
@@ -3870,7 +4065,12 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -3888,7 +4088,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:23:31.184800",
-      "actualizado_en": "2026-07-06T19:23:31.160870"
+      "actualizado_en": "2026-07-06T22:19:28.263786"
     },
     "W760019": {
       "ciu": "W760019",
@@ -3988,8 +4188,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:23:56.148562",
-          "timestamp": "2026-07-06T19:23:56.148562",
+          "id": "ocr_2026-07-06T22:19:49.792633",
+          "timestamp": "2026-07-06T22:19:49.792633",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055053_Q-1745410679910ArtiKumariinv0001_250423_1751@F.pdf_page_8.png",
           "archivo_copia": null,
@@ -4083,7 +4283,12 @@
                 "referencia": "0.0 - 0.1"
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -4101,7 +4306,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:23:56.170034",
-      "actualizado_en": "2026-07-06T19:23:56.148562"
+      "actualizado_en": "2026-07-06T22:19:49.792633"
     },
     "780043": {
       "ciu": "780043",
@@ -4131,8 +4336,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:24:11.547233",
-          "timestamp": "2026-07-06T19:24:11.547233",
+          "id": "ocr_2026-07-06T22:20:01.015415",
+          "timestamp": "2026-07-06T22:20:01.015415",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055398_SUNILA ARORA INVESTIGATION  FOR ENHANCMENT _26-04-2025_0642-20_PM@G.pdf_page_19.png",
           "archivo_copia": null,
@@ -4156,7 +4361,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "ClU",
+              "médico_laboratorio": "ADITI MEHROTRA Report Date"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -4174,7 +4385,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:24:11.604131",
-      "actualizado_en": "2026-07-06T19:24:11.547233"
+      "actualizado_en": "2026-07-06T22:20:01.015415"
     },
     "249703": {
       "ciu": "249703",
@@ -4204,8 +4415,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:24:19.847101",
-          "timestamp": "2026-07-06T19:24:19.847101",
+          "id": "ocr_2026-07-06T22:20:07.204554",
+          "timestamp": "2026-07-06T22:20:07.204554",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055398_SUNILA ARORA INVESTIGATION  FOR ENHANCMENT _27-04-2025_1111-09_AM.pdf_page_6.png",
           "archivo_copia": null,
@@ -4229,7 +4440,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "Clu",
+              "médico_laboratorio": "ADITI MEHROTRA Report Date"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -4247,7 +4464,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:24:19.872251",
-      "actualizado_en": "2026-07-06T19:24:19.847101"
+      "actualizado_en": "2026-07-06T22:20:07.204554"
     },
     "W724366": {
       "ciu": "W724366",
@@ -4270,8 +4487,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:24:43.895769",
-          "timestamp": "2026-07-06T19:24:43.895769",
+          "id": "ocr_2026-07-06T22:20:25.182656",
+          "timestamp": "2026-07-06T22:20:25.182656",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055449_Q-SEEMAKUMARI202600001compressed_250428_1147@F.pdf_page_46.png",
           "archivo_copia": null,
@@ -4288,7 +4505,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Name"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -4306,7 +4529,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:24:43.930735",
-      "actualizado_en": "2026-07-06T19:24:43.895769"
+      "actualizado_en": "2026-07-06T22:20:25.182656"
     },
     "46758249": {
       "ciu": "46758249",
@@ -4321,8 +4544,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:24:50.466159",
-          "timestamp": "2026-07-06T19:24:50.466159",
+          "id": "ocr_2026-07-06T22:20:32.430700",
+          "timestamp": "2026-07-06T22:20:32.430700",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055460_Q-LOKESHYADAV202580001compressed_250428_1148@F.pdf_page_32.png",
           "archivo_copia": null,
@@ -4331,7 +4554,13 @@
           "campos": {
             "ciu": "46758249",
             "pruebas": [],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "ClU",
+              "médico_laboratorio": "Name"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -4349,7 +4578,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:24:50.486013",
-      "actualizado_en": "2026-07-06T19:24:50.466159"
+      "actualizado_en": "2026-07-06T22:20:32.430700"
     },
     "W180109": {
       "ciu": "W180109",
@@ -4372,8 +4601,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:25:07.059886",
-          "timestamp": "2026-07-06T19:25:07.059886",
+          "id": "ocr_2026-07-06T22:20:44.141140",
+          "timestamp": "2026-07-06T22:20:44.141140",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055511_Q-ROHIT4854000111zon_250427_1412@F.pdf_page_31.png",
           "archivo_copia": null,
@@ -4390,7 +4619,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Npme"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -4408,7 +4643,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:25:07.089146",
-      "actualizado_en": "2026-07-06T19:25:07.059886"
+      "actualizado_en": "2026-07-06T22:20:44.141140"
     },
     "W448325": {
       "ciu": "W448325",
@@ -4438,8 +4673,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:25:22.026280",
-          "timestamp": "2026-07-06T19:25:22.026280",
+          "id": "ocr_2026-07-06T22:20:50.374394",
+          "timestamp": "2026-07-06T22:20:50.374394",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055576_Q-kailashfnalbill_250427_1333@F.pdf_page_37.png",
           "archivo_copia": null,
@@ -4463,7 +4698,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Kamal Kant\nM"
+            },
+            "interpretacion": "of culture\nreports must be made according to the particular clinical scenario. Antimicrobial sensitivity testing requests would be acceptable if\nProvided within 6 hrs of the release of Primary culture/identification report.\nCZ",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -4481,7 +4722,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:25:22.092733",
-      "actualizado_en": "2026-07-06T19:25:22.026280"
+      "actualizado_en": "2026-07-06T22:20:50.374394"
     },
     "122002": {
       "ciu": "122002",
@@ -4510,8 +4751,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:25:42.295464",
-          "timestamp": "2026-07-06T19:25:42.295464",
+          "id": "ocr_2026-07-06T22:21:04.851505",
+          "timestamp": "2026-07-06T22:21:04.851505",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055928_Q-QUERYREPLYMSSAUMYASINGH_250423_1911@F.pdf_page_9.png",
           "archivo_copia": null,
@@ -4534,7 +4775,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "ClU",
+              "médico_laboratorio": "SUDHIR SAHA"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -4552,7 +4799,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:25:42.315730",
-      "actualizado_en": "2026-07-06T19:25:42.295464"
+      "actualizado_en": "2026-07-06T22:21:04.851505"
     },
     "W337392": {
       "ciu": "W337392",
@@ -4567,8 +4814,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:25:47.637063",
-          "timestamp": "2026-07-06T19:25:47.637063",
+          "id": "ocr_2026-07-06T22:21:10.091948",
+          "timestamp": "2026-07-06T22:21:10.091948",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055942_IV REPORTS_27-04-2025_1102-25_AM@E.pdf_page_4.png",
           "archivo_copia": null,
@@ -4577,7 +4824,13 @@
           "campos": {
             "ciu": "W337392",
             "pruebas": [],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Rakhi Sanyal"
+            },
+            "interpretacion": "- CRP is an acute - phase protein in normal serum , which increases significantly after most forms of tissue injuries ,\nbacterial and virus infections, inflammation and malignant neoplasia . During tissue necrosis and inflammation resulting\nfrom microbial infections, the CRP concentration can rise up to 300mg/L in 12-24hours\nBlood drawn at outside.",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -4595,7 +4848,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:25:47.657028",
-      "actualizado_en": "2026-07-06T19:25:47.637063"
+      "actualizado_en": "2026-07-06T22:21:10.091948"
     },
     "W883738": {
       "ciu": "W883738",
@@ -4632,8 +4885,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:25:53.179822",
-          "timestamp": "2026-07-06T19:25:53.179822",
+          "id": "ocr_2026-07-06T22:21:15.527367",
+          "timestamp": "2026-07-06T22:21:15.527367",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055942_IV_REPORTS_27-04-2025_1112-47_AM@E.pdf_page_1.png",
           "archivo_copia": null,
@@ -4664,7 +4917,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Bilas Kumar Sarkar Dr"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -4682,7 +4941,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:25:53.240487",
-      "actualizado_en": "2026-07-06T19:25:53.179822"
+      "actualizado_en": "2026-07-06T22:21:15.527367"
     },
     "W597252": {
       "ciu": "W597252",
@@ -4761,8 +5020,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:26:06.427642",
-          "timestamp": "2026-07-06T19:26:06.427642",
+          "id": "ocr_2026-07-06T22:21:26.915446",
+          "timestamp": "2026-07-06T22:21:26.915446",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056064_F-PARINALEPCHAPA_250423_2059@G.pdf_page_16.png",
           "archivo_copia": null,
@@ -4835,7 +5094,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Dr"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -4853,7 +5118,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:26:06.454527",
-      "actualizado_en": "2026-07-06T19:26:06.427642"
+      "actualizado_en": "2026-07-06T22:21:26.915446"
     },
     "W597281": {
       "ciu": "W597281",
@@ -4868,8 +5133,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:26:13.077178",
-          "timestamp": "2026-07-06T19:26:13.077178",
+          "id": "ocr_2026-07-06T22:21:32.682551",
+          "timestamp": "2026-07-06T22:21:32.682551",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056064_Q-PARINALEPCHAQR_250424_1328@F.pdf_page_8.png",
           "archivo_copia": null,
@@ -4878,7 +5143,15 @@
           "campos": {
             "ciu": "W597281",
             "pruebas": [],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "fecha_analisis": "23/04/2025",
+              "nombre_paciente": "CIU",
+              "edad": 1,
+              "médico_laboratorio": "Dr"
+            },
+            "interpretacion": "of the test results:-\nAn absolute agglutination titre of = 1:80 for TO and /or = 1:76Q for TH/ AH/ BH is n6rmally considered significant. Arising titre\nin case of a test repeated after few days is also significant and suggestive Of enteric fever. In enteric fever, antibodies usually\nappear in patient's blood after 6th day of fever. Sera for normal individuals may agglutinate these antigens in dilutions up to",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -4896,7 +5169,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:26:13.098753",
-      "actualizado_en": "2026-07-06T19:26:13.077178"
+      "actualizado_en": "2026-07-06T22:21:32.682551"
     },
     "W191877": {
       "ciu": "W191877",
@@ -4926,8 +5199,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:26:19.140318",
-          "timestamp": "2026-07-06T19:26:19.140318",
+          "id": "ocr_2026-07-06T22:21:37.841142",
+          "timestamp": "2026-07-06T22:21:37.841142",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056087_E-SIVASUM_250427_1015@E.pdf_page_13.png",
           "archivo_copia": null,
@@ -4951,7 +5224,14 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "edad": 13,
+              "médico_laboratorio": "SURENDRAN P"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -4969,7 +5249,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:26:19.162832",
-      "actualizado_en": "2026-07-06T19:26:19.140318"
+      "actualizado_en": "2026-07-06T22:21:37.841142"
     },
     "W390807": {
       "ciu": "W390807",
@@ -4999,8 +5279,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:26:25.338282",
-          "timestamp": "2026-07-06T19:26:25.338282",
+          "id": "ocr_2026-07-06T22:21:44.011486",
+          "timestamp": "2026-07-06T22:21:44.011486",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056189_Q-rahulfinalbill_250427_1335@F.pdf_page_32.png",
           "archivo_copia": null,
@@ -5024,7 +5304,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Kamal Kant\nM"
+            },
+            "interpretacion": "of culture\nreports must be made according to the particular clinical scenario. Antimicrobial Sensitivity testing requests would be acceptable if\nProvided within 6 hrs of the release of Primary culturefidentification report.\nDr. Kamal Kant",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -5042,7 +5328,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:26:25.359863",
-      "actualizado_en": "2026-07-06T19:26:25.338282"
+      "actualizado_en": "2026-07-06T22:21:44.011486"
     },
     "W958991": {
       "ciu": "W958991",
@@ -5107,8 +5393,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:26:31.562857",
-          "timestamp": "2026-07-06T19:26:31.562857",
+          "id": "ocr_2026-07-06T22:21:50.825133",
+          "timestamp": "2026-07-06T22:21:50.825133",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056282_F-KYC_PC_SHANAZ_1_250424_1254@G.pdf_page_11.png",
           "archivo_copia": null,
@@ -5167,7 +5453,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "No"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -5185,7 +5477,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:26:31.594966",
-      "actualizado_en": "2026-07-06T19:26:31.562857"
+      "actualizado_en": "2026-07-06T22:21:50.825133"
     },
     "W675734": {
       "ciu": "W675734",
@@ -5208,8 +5500,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:26:39.138210",
-          "timestamp": "2026-07-06T19:26:39.138210",
+          "id": "ocr_2026-07-06T22:21:57.473799",
+          "timestamp": "2026-07-06T22:21:57.473799",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056304_GUR0425PA0056304_FB_27-04-2025_0538-54_PM.pdf_page_10.png",
           "archivo_copia": null,
@@ -5226,7 +5518,12 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -5244,7 +5541,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:26:39.163824",
-      "actualizado_en": "2026-07-06T19:26:39.138210"
+      "actualizado_en": "2026-07-06T22:21:57.473799"
     },
     "W570466": {
       "ciu": "W570466",
@@ -5295,8 +5592,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:26:48.609462",
-          "timestamp": "2026-07-06T19:26:48.609462",
+          "id": "ocr_2026-07-06T22:22:05.780906",
+          "timestamp": "2026-07-06T22:22:05.780906",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056304_GUR0425PA0056304_FB_27-04-2025_0711-07_PM@F.pdf_page_9.png",
           "archivo_copia": null,
@@ -5341,7 +5638,12 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -5359,7 +5661,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:26:48.630725",
-      "actualizado_en": "2026-07-06T19:26:48.609462"
+      "actualizado_en": "2026-07-06T22:22:05.780906"
     },
     "126571": {
       "ciu": "126571",
@@ -5382,8 +5684,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:26:56.234319",
-          "timestamp": "2026-07-06T19:26:56.234319",
+          "id": "ocr_2026-07-06T22:22:11.432670",
+          "timestamp": "2026-07-06T22:22:11.432670",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056422_CASHLESS CLAIM FILE GAURAB PATHAK_0001_compressed_27-04-2025_0804-45_PM@E.pdf_page_37.png",
           "archivo_copia": null,
@@ -5400,7 +5702,14 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "Result Unit Bio",
+              "médico_laboratorio": "DR KUNAL Client Code",
+              "diagnostico": "This document is nat valid for medino- \" 5 we - ws"
+            },
+            "interpretacion": "This document is nat valid for medino- \" 5 we - ws\nas Neiticioh eacinaaendiaas jino-tegal purpose © 0124-16 70882\nF the reaumt are alarming or unexpected. ES customercaredesperotab.in\nYou are Kindly requested 10}",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -5418,7 +5727,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:26:56.327830",
-      "actualizado_en": "2026-07-06T19:26:56.234319"
+      "actualizado_en": "2026-07-06T22:22:11.432670"
     },
     "259192": {
       "ciu": "259192",
@@ -5518,8 +5827,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:27:09.169456",
-          "timestamp": "2026-07-06T19:27:09.169456",
+          "id": "ocr_2026-07-06T22:22:17.271612",
+          "timestamp": "2026-07-06T22:22:17.271612",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056422_CASHLESS CLAIM FILE GAURAB PATHAK_0001_compressed_27-04-2025_0804-45_PM@E.pdf_page_45.png",
           "archivo_copia": null,
@@ -5613,7 +5922,14 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "ClU",
+              "médico_laboratorio": "Kunal Shrimal Speciman",
+              "diagnostico": "This document is not vaid for medico-lecal purpose Ss"
+            },
+            "interpretacion": "This document is not vaid for medico-lecal purpose Ss\nAl reports are corelated Cinicaly\nI the cesuk are alarming ot |\nwi",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -5631,7 +5947,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:27:09.210154",
-      "actualizado_en": "2026-07-06T19:27:09.169456"
+      "actualizado_en": "2026-07-06T22:22:17.271612"
     },
     "W722348": {
       "ciu": "W722348",
@@ -5731,8 +6047,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:27:35.965836",
-          "timestamp": "2026-07-06T19:27:35.965836",
+          "id": "ocr_2026-07-06T22:22:29.693838",
+          "timestamp": "2026-07-06T22:22:29.693838",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056519_discharge virendra_11zon_28-04-2025_1115-27_AM@G.pdf_page_10.png",
           "archivo_copia": null,
@@ -5826,7 +6142,12 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -5844,7 +6165,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:27:36.053256",
-      "actualizado_en": "2026-07-06T19:27:35.965836"
+      "actualizado_en": "2026-07-06T22:22:29.693838"
     },
     "W122053": {
       "ciu": "W122053",
@@ -5965,8 +6286,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:27:45.106164",
-          "timestamp": "2026-07-06T19:27:45.106164",
+          "id": "ocr_2026-07-06T22:22:35.484847",
+          "timestamp": "2026-07-06T22:22:35.484847",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056519_discharge virendra_11zon_28-04-2025_1132-57_AM@G.pdf_page_13.png",
           "archivo_copia": null,
@@ -6081,7 +6402,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "ea"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -6099,7 +6426,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:27:45.142490",
-      "actualizado_en": "2026-07-06T19:27:45.106164"
+      "actualizado_en": "2026-07-06T22:22:35.484847"
     },
     "W535945": {
       "ciu": "W535945",
@@ -6213,8 +6540,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:27:56.944232",
-          "timestamp": "2026-07-06T19:27:56.944232",
+          "id": "ocr_2026-07-06T22:22:41.862488",
+          "timestamp": "2026-07-06T22:22:41.862488",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056519_preauth virender _24-04-2025_0447-58_PM@G.pdf_page_12.png",
           "archivo_copia": null,
@@ -6322,7 +6649,12 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -6340,7 +6672,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:27:57.020992",
-      "actualizado_en": "2026-07-06T19:27:56.944232"
+      "actualizado_en": "2026-07-06T22:22:41.862488"
     },
     "W769971": {
       "ciu": "W769971",
@@ -6363,8 +6695,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:28:05.177566",
-          "timestamp": "2026-07-06T19:28:05.177566",
+          "id": "ocr_2026-07-06T22:22:48.025945",
+          "timestamp": "2026-07-06T22:22:48.025945",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056568_E-REPORTS_250427_1436@E.pdf_page_1.png",
           "archivo_copia": null,
@@ -6381,7 +6713,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "VIMLESH SHARMA MS"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -6399,7 +6737,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:28:05.211669",
-      "actualizado_en": "2026-07-06T19:28:05.177566"
+      "actualizado_en": "2026-07-06T22:22:48.025945"
     },
     "W340582": {
       "ciu": "W340582",
@@ -6457,8 +6795,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:28:14.877743",
-          "timestamp": "2026-07-06T19:28:14.877743",
+          "id": "ocr_2026-07-06T22:22:53.662996",
+          "timestamp": "2026-07-06T22:22:53.662996",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056644_Q-REPORT_250428_1140@F.pdf_page_6.png",
           "archivo_copia": null,
@@ -6510,7 +6848,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Sanjeev Goyal Requisitions"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -6528,7 +6872,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:28:14.946922",
-      "actualizado_en": "2026-07-06T19:28:14.877743"
+      "actualizado_en": "2026-07-06T22:22:53.662996"
     },
     "W783479": {
       "ciu": "W783479",
@@ -6551,8 +6895,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:28:24.552988",
-          "timestamp": "2026-07-06T19:28:24.552988",
+          "id": "ocr_2026-07-06T22:22:59.089729",
+          "timestamp": "2026-07-06T22:22:59.089729",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056644_Q-REPORT_250428_1140@F.pdf_page_9.png",
           "archivo_copia": null,
@@ -6569,7 +6913,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Sanjeev Goyal Requisitions"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -6587,7 +6937,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:28:24.582004",
-      "actualizado_en": "2026-07-06T19:28:24.552988"
+      "actualizado_en": "2026-07-06T22:22:59.089729"
     },
     "W672757": {
       "ciu": "W672757",
@@ -6617,8 +6967,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:28:33.247480",
-          "timestamp": "2026-07-06T19:28:33.247480",
+          "id": "ocr_2026-07-06T22:23:04.362495",
+          "timestamp": "2026-07-06T22:23:04.362495",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056853_E-CHITRAKSHIFINALBILLDISCHARGESUMMARY_250427_1048@E.pdf_page_4.png",
           "archivo_copia": null,
@@ -6642,7 +6992,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Dr"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -6660,7 +7016,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:28:33.316827",
-      "actualizado_en": "2026-07-06T19:28:33.247480"
+      "actualizado_en": "2026-07-06T22:23:04.362495"
     },
     "913471": {
       "ciu": "913471",
@@ -6704,8 +7060,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:28:58.561493",
-          "timestamp": "2026-07-06T19:28:58.561493",
+          "id": "ocr_2026-07-06T22:23:15.577736",
+          "timestamp": "2026-07-06T22:23:15.577736",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057745_Q-LABREPORTS_250428_1121@F.pdf_page_12.png",
           "archivo_copia": null,
@@ -6743,7 +7099,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "ClU",
+              "médico_laboratorio": "Sanjeev Goyal Requisitions"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -6761,7 +7123,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:28:58.591829",
-      "actualizado_en": "2026-07-06T19:28:58.561493"
+      "actualizado_en": "2026-07-06T22:23:15.577736"
     },
     "W993405": {
       "ciu": "W993405",
@@ -6791,8 +7153,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:29:05.558211",
-          "timestamp": "2026-07-06T19:29:05.558211",
+          "id": "ocr_2026-07-06T22:23:20.961789",
+          "timestamp": "2026-07-06T22:23:20.961789",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057759_Q-RAJINDERKUMARPHANDAQR_250427_1311@F.pdf_page_28.png",
           "archivo_copia": null,
@@ -6816,7 +7178,14 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "edad": 2,
+              "médico_laboratorio": "Dr"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -6834,7 +7203,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:29:05.584805",
-      "actualizado_en": "2026-07-06T19:29:05.558211"
+      "actualizado_en": "2026-07-06T22:23:20.961789"
     },
     "W806791": {
       "ciu": "W806791",
@@ -6920,8 +7289,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:29:12.681360",
-          "timestamp": "2026-07-06T19:29:12.681360",
+          "id": "ocr_2026-07-06T22:23:26.503173",
+          "timestamp": "2026-07-06T22:23:26.503173",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057759_Q-RAJINDERKUMARPHANDAQR_250427_1311@F.pdf_page_41.png",
           "archivo_copia": null,
@@ -7001,7 +7370,14 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "fecha_analisis": "26/53/25",
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Gastro Unit"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -7019,7 +7395,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:29:12.713469",
-      "actualizado_en": "2026-07-06T19:29:12.681360"
+      "actualizado_en": "2026-07-06T22:23:26.503173"
     },
     "W628784": {
       "ciu": "W628784",
@@ -7042,8 +7418,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:29:19.148979",
-          "timestamp": "2026-07-06T19:29:19.148979",
+          "id": "ocr_2026-07-06T22:23:31.805392",
+          "timestamp": "2026-07-06T22:23:31.805392",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057805_E-gauravqewr_250427_1916@E.pdf_page_21.png",
           "archivo_copia": null,
@@ -7060,7 +7436,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Investigation Report\nPatient CIU"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -7078,7 +7460,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:29:19.200881",
-      "actualizado_en": "2026-07-06T19:29:19.148979"
+      "actualizado_en": "2026-07-06T22:23:31.805392"
     },
     "W989651": {
       "ciu": "W989651",
@@ -7129,8 +7511,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:29:26.517040",
-          "timestamp": "2026-07-06T19:29:26.517040",
+          "id": "ocr_2026-07-06T22:23:37.613640",
+          "timestamp": "2026-07-06T22:23:37.613640",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057813_Shivani Preautharization request_26-04-2025_0924-28_PM@G.pdf_page_7.png",
           "archivo_copia": null,
@@ -7175,7 +7557,12 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -7193,7 +7580,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:29:26.547660",
-      "actualizado_en": "2026-07-06T19:29:26.517040"
+      "actualizado_en": "2026-07-06T22:23:37.613640"
     },
     "W536067": {
       "ciu": "W536067",
@@ -7216,8 +7603,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:29:34.304255",
-          "timestamp": "2026-07-06T19:29:34.304255",
+          "id": "ocr_2026-07-06T22:23:43.243925",
+          "timestamp": "2026-07-06T22:23:43.243925",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057825_Akshaya Kumar Preauth (1)_27-04-2025_0857-23_AM@G.pdf_page_17.png",
           "archivo_copia": null,
@@ -7234,7 +7621,14 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "S TA BHAR",
+              "diagnostico": "if Result are Unexpected, “|"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -7252,7 +7646,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:29:34.341326",
-      "actualizado_en": "2026-07-06T19:29:34.304255"
+      "actualizado_en": "2026-07-06T22:23:43.243925"
     },
     "W146378": {
       "ciu": "W146378",
@@ -7282,8 +7676,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:29:40.744640",
-          "timestamp": "2026-07-06T19:29:40.744640",
+          "id": "ocr_2026-07-06T22:23:49.217293",
+          "timestamp": "2026-07-06T22:23:49.217293",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057914_Q-AdditionalDocument_250427_1443@F.pdf_page_15.png",
           "archivo_copia": null,
@@ -7307,7 +7701,13 @@
                 "referencia": "22 - 26"
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "SENTHILKUMAR R MD"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -7325,7 +7725,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:29:40.772223",
-      "actualizado_en": "2026-07-06T19:29:40.744640"
+      "actualizado_en": "2026-07-06T22:23:49.217293"
     },
     "W310318": {
       "ciu": "W310318",
@@ -7340,8 +7740,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:29:48.127499",
-          "timestamp": "2026-07-06T19:29:48.127499",
+          "id": "ocr_2026-07-06T22:23:55.107440",
+          "timestamp": "2026-07-06T22:23:55.107440",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057918_F-KYC_PC_KARUNA_1_250427_1321@G.pdf_page_29.png",
           "archivo_copia": null,
@@ -7350,7 +7750,13 @@
           "campos": {
             "ciu": "W310318",
             "pruebas": [],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Dr"
+            },
+            "interpretacion": "-\n<0.05ng/ml - Normal Value\n0.05 - 0.49ng/ml_ - Minor or no significant systemic inflammatory response. Local inflammation and local\ninfection are possible",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -7368,7 +7774,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:29:48.161256",
-      "actualizado_en": "2026-07-06T19:29:48.127499"
+      "actualizado_en": "2026-07-06T22:23:55.107440"
     },
     "W288878": {
       "ciu": "W288878",
@@ -7419,8 +7825,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:29:54.067083",
-          "timestamp": "2026-07-06T19:29:54.067083",
+          "id": "ocr_2026-07-06T22:24:00.858931",
+          "timestamp": "2026-07-06T22:24:00.858931",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057918_F-KYC_PC_KARUNA_1_250427_1321@G.pdf_page_41.png",
           "archivo_copia": null,
@@ -7465,7 +7871,12 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "médico_laboratorio": "Dr"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -7483,7 +7894,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:29:54.135238",
-      "actualizado_en": "2026-07-06T19:29:54.067083"
+      "actualizado_en": "2026-07-06T22:24:00.858931"
     },
     "W586053": {
       "ciu": "W586053",
@@ -7513,8 +7924,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:30:00.591203",
-          "timestamp": "2026-07-06T19:30:00.591203",
+          "id": "ocr_2026-07-06T22:24:06.103902",
+          "timestamp": "2026-07-06T22:24:06.103902",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057923_F-KYC_PC_CHOPPAVARAPU_PRABHAVATHI_1_250427_1339@G.pdf_page_12.png",
           "archivo_copia": null,
@@ -7538,7 +7949,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "M"
+            },
+            "interpretacion": "Abnormal Results. Poa se\n* — - Denotes Critical Alerts. ge oxy) i p> at a\nVe Sie oy 3) ; —\nVerified By : : 90115880 We” er .",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -7556,7 +7973,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:30:00.624663",
-      "actualizado_en": "2026-07-06T19:30:00.591203"
+      "actualizado_en": "2026-07-06T22:24:06.103902"
     },
     "W290389": {
       "ciu": "W290389",
@@ -7628,8 +8045,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:30:08.002601",
-          "timestamp": "2026-07-06T19:30:08.002601",
+          "id": "ocr_2026-07-06T22:24:11.648043",
+          "timestamp": "2026-07-06T22:24:11.648043",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057931_F-SachinPreAuth_250427_1410@G.pdf_page_12.png",
           "archivo_copia": null,
@@ -7695,7 +8112,14 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "R",
+              "diagnostico": "LL"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -7713,7 +8137,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:30:08.038158",
-      "actualizado_en": "2026-07-06T19:30:08.002601"
+      "actualizado_en": "2026-07-06T22:24:11.648043"
     },
     "412025": {
       "ciu": "412025",
@@ -7736,8 +8160,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:30:17.783712",
-          "timestamp": "2026-07-06T19:30:17.783712",
+          "id": "ocr_2026-07-06T22:24:20.287397",
+          "timestamp": "2026-07-06T22:24:20.287397",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057991_F-EchsDept27042025162653392807_250427_1637@G.pdf_page_10.png",
           "archivo_copia": null,
@@ -7754,7 +8178,15 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "ClU",
+              "edad": 3018,
+              "médico_laboratorio": "tat Pastas De tat Parktaks Dn stat Parkas EMP cectats Dy Lat Pathaks Ta stat Pachslehs Oe at Parastahs Dy stot Parktaks Dec\nBNR OS",
+              "diagnostico": ") should be confirmed by gold standard test such as Blood culture prior to start of antibiotics. >"
+            },
+            "interpretacion": "| 1. Its positivity in serum indicates ongoing or recent infection by Salmonella typhi and the diagnosis\n) should be confirmed by gold standard test such as Blood culture prior to start of antibiotics. >\n2.IgM antibodies are typically detectable 5-7 days post symptom onset, peaking in 2nd week and\n| frequently remain elevated for 2-4 months following infection.",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -7772,7 +8204,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:30:17.816918",
-      "actualizado_en": "2026-07-06T19:30:17.783712"
+      "actualizado_en": "2026-07-06T22:24:20.287397"
     },
     "W262175": {
       "ciu": "W262175",
@@ -7802,8 +8234,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:30:24.660763",
-          "timestamp": "2026-07-06T19:30:24.660763",
+          "id": "ocr_2026-07-06T22:24:25.850009",
+          "timestamp": "2026-07-06T22:24:25.850009",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0058016_F-KYC_PC_RAMKUMAR_SANTOSH_KUMAR_1_250427_1718@G.pdf_page_13.png",
           "archivo_copia": null,
@@ -7827,7 +8259,13 @@
                 "referencia": "0.67 - 1.17"
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Bill Date"
+            },
+            "interpretacion": "Abnormal Results. hE RN\n* — - Denotes Critical Alerts. iB (Cx) ;\nVerified By : : 110809 Wee?’\nTest results related only to the item tested ; MC-2071 Dr. RADHIKA CHOWDARY. D, M.D.",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -7845,7 +8283,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:30:24.692645",
-      "actualizado_en": "2026-07-06T19:30:24.660763"
+      "actualizado_en": "2026-07-06T22:24:25.850009"
     },
     "W201866": {
       "ciu": "W201866",
@@ -7896,8 +8334,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:30:34.328647",
-          "timestamp": "2026-07-06T19:30:34.328647",
+          "id": "ocr_2026-07-06T22:24:31.755328",
+          "timestamp": "2026-07-06T22:24:31.755328",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0058034_F-MANJEET_SINGH_1_250427_1803@G.pdf_page_30.png",
           "archivo_copia": null,
@@ -7942,7 +8380,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Investigation Report\nr"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -7960,7 +8404,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:30:34.358452",
-      "actualizado_en": "2026-07-06T19:30:34.328647"
+      "actualizado_en": "2026-07-06T22:24:31.755328"
     },
     "W946192": {
       "ciu": "W946192",
@@ -8081,8 +8525,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:30:51.401474",
-          "timestamp": "2026-07-06T19:30:51.401474",
+          "id": "ocr_2026-07-06T22:24:42.676548",
+          "timestamp": "2026-07-06T22:24:42.676548",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0058042_F-KYC_PC_BHUMI_1_250427_1830@G.pdf_page_18.png",
           "archivo_copia": null,
@@ -8197,7 +8641,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CiU",
+              "médico_laboratorio": "RAKESH GUPTA"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -8215,7 +8665,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:30:51.438292",
-      "actualizado_en": "2026-07-06T19:30:51.401474"
+      "actualizado_en": "2026-07-06T22:24:42.676548"
     },
     "W264165": {
       "ciu": "W264165",
@@ -8238,8 +8688,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:31:00.872213",
-          "timestamp": "2026-07-06T19:31:00.872213",
+          "id": "ocr_2026-07-06T22:24:48.783306",
+          "timestamp": "2026-07-06T22:24:48.783306",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\HYD-0425-PA-0007281_Q-QUERYREPLYOFPT.GTSRINIVASARAO_250427_0957@F.pdf_page_8.png",
           "archivo_copia": null,
@@ -8256,7 +8706,12 @@
                 "referencia": "01-06"
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU"
+            },
+            "interpretacion": "Please Correlate Clinically if necessary kindly discuss.\n-------END OF REPORT-----—- Al\nAV\nIl | IN | | | Dr.B.Bheeshma MD.Path",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -8274,7 +8729,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:31:00.943629",
-      "actualizado_en": "2026-07-06T19:31:00.872213"
+      "actualizado_en": "2026-07-06T22:24:48.783306"
     },
     "153507": {
       "ciu": "153507",
@@ -8289,8 +8744,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:31:11.153937",
-          "timestamp": "2026-07-06T19:31:11.153937",
+          "id": "ocr_2026-07-06T22:24:54.263230",
+          "timestamp": "2026-07-06T22:24:54.263230",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\HYD-0425-PA-0007281_Q-QUERYREPLYOFPT.GTSRINIVASARAO_250427_0957@F.pdf_page_9.png",
           "archivo_copia": null,
@@ -8299,7 +8754,14 @@
           "campos": {
             "ciu": "153507",
             "pruebas": [],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "ClU",
+              "médico_laboratorio": "Py é D",
+              "diagnostico": "Please Correlate Clinically if necessary kindly discuss. uly"
+            },
+            "interpretacion": "Please Correlate Clinically if necessary kindly discuss. uly\n------—---END OF REPORT---—-------\nTea Dr-B.bheeshma 40 Patn\nFOCUSED ON QUALITY Constant Fotis",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -8317,7 +8779,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:31:11.234026",
-      "actualizado_en": "2026-07-06T19:31:11.153937"
+      "actualizado_en": "2026-07-06T22:24:54.263230"
     },
     "W987270": {
       "ciu": "W987270",
@@ -8389,8 +8851,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:31:19.719316",
-          "timestamp": "2026-07-06T19:31:19.719316",
+          "id": "ocr_2026-07-06T22:24:59.663840",
+          "timestamp": "2026-07-06T22:24:59.663840",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\IND-0425-PA-0032901_E-H2658992802126194907ilovepdfmerged15compressed_250427_1710@E.pdf_page_66.png",
           "archivo_copia": null,
@@ -8456,7 +8918,14 @@
                 "flag": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "sexo": "M",
+              "médico_laboratorio": "P"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -8474,7 +8943,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:31:19.762590",
-      "actualizado_en": "2026-07-06T19:31:19.719316"
+      "actualizado_en": "2026-07-06T22:24:59.663840"
     },
     "W185003": {
       "ciu": "W185003",
@@ -8504,8 +8973,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:31:27.309118",
-          "timestamp": "2026-07-06T19:31:27.309118",
+          "id": "ocr_2026-07-06T22:25:04.897920",
+          "timestamp": "2026-07-06T22:25:04.897920",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\IND-0425-PA-0032901_E-H2658992802126194907ilovepdfmerged15compressed_250427_1710@E.pdf_page_67.png",
           "archivo_copia": null,
@@ -8529,7 +8998,14 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "sexo": "M",
+              "médico_laboratorio": "Neelam Bharihoke\nM"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -8547,7 +9023,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:31:27.348778",
-      "actualizado_en": "2026-07-06T19:31:27.309118"
+      "actualizado_en": "2026-07-06T22:25:04.897920"
     },
     "W401006": {
       "ciu": "W401006",
@@ -8633,8 +9109,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:31:35.077109",
-          "timestamp": "2026-07-06T19:31:35.077109",
+          "id": "ocr_2026-07-06T22:25:10.670069",
+          "timestamp": "2026-07-06T22:25:10.670069",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\IND-0425-PA-0032901_E-H2658992802126194907ilovepdfmerged15compressed_250427_1710@E.pdf_page_90.png",
           "archivo_copia": null,
@@ -8714,7 +9190,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Ravi Rathi Vch No"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -8732,7 +9214,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:31:35.107226",
-      "actualizado_en": "2026-07-06T19:31:35.077109"
+      "actualizado_en": "2026-07-06T22:25:10.670069"
     },
     "W824212": {
       "ciu": "W824212",
@@ -8782,8 +9264,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:31:41.262561",
-          "timestamp": "2026-07-06T19:31:41.262561",
+          "id": "ocr_2026-07-06T22:25:16.061027",
+          "timestamp": "2026-07-06T22:25:16.061027",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\IND-0425-PA-0033745_SANTOSH334_27-04-2025_0431-24_PM@F.pdf_page_3.png",
           "archivo_copia": null,
@@ -8827,7 +9309,14 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Dr",
+              "diagnostico": "&gt; or =6.5"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -8845,7 +9334,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:31:41.294872",
-      "actualizado_en": "2026-07-06T19:31:41.262561"
+      "actualizado_en": "2026-07-06T22:25:16.061027"
     },
     "W767488": {
       "ciu": "W767488",
@@ -8875,8 +9364,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:31:47.653536",
-          "timestamp": "2026-07-06T19:31:47.653536",
+          "id": "ocr_2026-07-06T22:25:22.438317",
+          "timestamp": "2026-07-06T22:25:22.438317",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\JPR-0425-PA-0005044_H_26671_9290939312_57_59_YUDHAANICPANDREPORTS001_27-04-2025_0101-02_PM.pdf_page_4.png",
           "archivo_copia": null,
@@ -8900,7 +9389,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "DIRECT HOSPITAL Sample Type"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -8918,7 +9413,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:31:47.682147",
-      "actualizado_en": "2026-07-06T19:31:47.653536"
+      "actualizado_en": "2026-07-06T22:25:22.438317"
     },
     "705269": {
       "ciu": "705269",
@@ -8941,8 +9436,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:31:55.078515",
-          "timestamp": "2026-07-06T19:31:55.078515",
+          "id": "ocr_2026-07-06T22:25:28.995815",
+          "timestamp": "2026-07-06T22:25:28.995815",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\JPR-0425-PA-0005068_E-AnnuFinal_250427_1502@E.pdf_page_19.png",
           "archivo_copia": null,
@@ -8959,7 +9454,14 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "Clu",
+              "sexo": "F",
+              "médico_laboratorio": "Gender"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -8977,7 +9479,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:31:55.114751",
-      "actualizado_en": "2026-07-06T19:31:55.078515"
+      "actualizado_en": "2026-07-06T22:25:28.995815"
     },
     "W328746": {
       "ciu": "W328746",
@@ -9000,8 +9502,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:32:04.464279",
-          "timestamp": "2026-07-06T19:32:04.464279",
+          "id": "ocr_2026-07-06T22:25:36.074990",
+          "timestamp": "2026-07-06T22:25:36.074990",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\JPR-0425-PA-0005076_H_36220_9294528109_59_40_MANMOHAN_28-04-2025_1036-30_AM@G.pdf_page_9.png",
           "archivo_copia": null,
@@ -9018,7 +9520,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "Status Result Reference Range Unit",
+              "médico_laboratorio": "Ajay Reporting Date"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -9036,7 +9544,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:32:04.502922",
-      "actualizado_en": "2026-07-06T19:32:04.464279"
+      "actualizado_en": "2026-07-06T22:25:36.074990"
     },
     "W964220": {
       "ciu": "W964220",
@@ -9150,8 +9658,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:32:13.850591",
-          "timestamp": "2026-07-06T19:32:13.850591",
+          "id": "ocr_2026-07-06T22:25:43.007308",
+          "timestamp": "2026-07-06T22:25:43.007308",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\JPR-0425-PA-0005079_PA_FILE_OF_PT_BIMALA_DEVI_304_28-04-2025_1132-59_AM@G.pdf_page_9.png",
           "archivo_copia": null,
@@ -9259,7 +9767,12 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -9277,7 +9790,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:32:13.883055",
-      "actualizado_en": "2026-07-06T19:32:13.850591"
+      "actualizado_en": "2026-07-06T22:25:43.007308"
     },
     "W890776": {
       "ciu": "W890776",
@@ -9335,8 +9848,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:32:21.867275",
-          "timestamp": "2026-07-06T19:32:21.867275",
+          "id": "ocr_2026-07-06T22:25:50.205289",
+          "timestamp": "2026-07-06T22:25:50.205289",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\KOC-0425-PA-0009630_Q-AnilCasesheet_250427_1458@F.pdf_page_21.png",
           "archivo_copia": null,
@@ -9388,7 +9901,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "fecha_analisis": "24/04/2025",
+              "nombre_paciente": "Patient CIU"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -9406,7 +9925,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:32:21.916939",
-      "actualizado_en": "2026-07-06T19:32:21.867275"
+      "actualizado_en": "2026-07-06T22:25:50.205289"
     },
     "W994854": {
       "ciu": "W994854",
@@ -9478,8 +9997,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:32:36.842340",
-          "timestamp": "2026-07-06T19:32:36.842340",
+          "id": "ocr_2026-07-06T22:26:01.741796",
+          "timestamp": "2026-07-06T22:26:01.741796",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\KOL-0425-PA-0004210_REPORT_27-04-2025_0729-34_PM.pdf_page_7.png",
           "archivo_copia": null,
@@ -9545,7 +10064,14 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "fecha_analisis": "26/04/25",
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Abbilekha Bishway"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -9563,7 +10089,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:32:36.874506",
-      "actualizado_en": "2026-07-06T19:32:36.842340"
+      "actualizado_en": "2026-07-06T22:26:01.741796"
     },
     "W376616": {
       "ciu": "W376616",
@@ -9586,8 +10112,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:32:42.950427",
-          "timestamp": "2026-07-06T19:32:42.950427",
+          "id": "ocr_2026-07-06T22:26:07.557215",
+          "timestamp": "2026-07-06T22:26:07.557215",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0125-PA-0001141_W2500438UNADKAT ASHWIN_27-04-2025_1001-12_AM.pdf_page_74.png",
           "archivo_copia": null,
@@ -9604,7 +10130,14 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "MEDICINE",
+              "diagnostico": "* Kindly Corelate clinically & discsuss if necessary."
+            },
+            "interpretacion": "* Kindly Corelate clinically & discsuss if necessary.\n* Results pertain to the specimen submitted.\n* For 'Terms and Conditions of Reporting’ kindly\nvisit our website : www. Rubyhall.com",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -9622,7 +10155,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:32:42.975752",
-      "actualizado_en": "2026-07-06T19:32:42.950427"
+      "actualizado_en": "2026-07-06T22:26:07.557215"
     },
     "W847137": {
       "ciu": "W847137",
@@ -9652,8 +10185,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:32:48.510964",
-          "timestamp": "2026-07-06T19:32:48.510964",
+          "id": "ocr_2026-07-06T22:26:15.387729",
+          "timestamp": "2026-07-06T22:26:15.387729",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0125-PA-0001141_W2500438UNADKAT ASHWIN_27-04-2025_1001-12_AM.pdf_page_80.png",
           "archivo_copia": null,
@@ -9677,7 +10210,14 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "No",
+              "diagnostico": "* Kindly Corelate clinically & discsuss if necessary."
+            },
+            "interpretacion": "* Kindly Corelate clinically & discsuss if necessary.\n* Results pertain to the specimen submitted.\n* For ‘Terms and Conditions of Reporting’, kindly\nvisit our website : www.Rubyhall.com",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -9695,7 +10235,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:32:48.537193",
-      "actualizado_en": "2026-07-06T19:32:48.510964"
+      "actualizado_en": "2026-07-06T22:26:15.387729"
     },
     "W388693": {
       "ciu": "W388693",
@@ -9830,8 +10370,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:32:54.878491",
-          "timestamp": "2026-07-06T19:32:54.878491",
+          "id": "ocr_2026-07-06T22:26:23.222537",
+          "timestamp": "2026-07-06T22:26:23.222537",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0125-PA-0001141_W2500438UNADKAT ASHWIN_27-04-2025_1001-12_AM.pdf_page_83.png",
           "archivo_copia": null,
@@ -9960,7 +10500,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "No"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -9978,7 +10524,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:32:54.904654",
-      "actualizado_en": "2026-07-06T19:32:54.878491"
+      "actualizado_en": "2026-07-06T22:26:23.222537"
     },
     "W366396": {
       "ciu": "W366396",
@@ -10008,8 +10554,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:33:00.522033",
-          "timestamp": "2026-07-06T19:33:00.522033",
+          "id": "ocr_2026-07-06T22:26:30.698441",
+          "timestamp": "2026-07-06T22:26:30.698441",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0125-PA-0001141_W2500438UNADKAT ASHWIN_27-04-2025_1002-19_AM.pdf_page_80.png",
           "archivo_copia": null,
@@ -10033,7 +10579,14 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "No",
+              "diagnostico": "* Kindly Corelate clinically & discsuss if necessary."
+            },
+            "interpretacion": "* Kindly Corelate clinically & discsuss if necessary.\n* Results pertain to the specimen submitted.\n* For ‘Terms and Conditions of Reporting’, kindly\nvisit our website : www.Rubyhall.com",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -10051,7 +10604,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:33:00.549885",
-      "actualizado_en": "2026-07-06T19:33:00.522033"
+      "actualizado_en": "2026-07-06T22:26:30.698441"
     },
     "W781260": {
       "ciu": "W781260",
@@ -10066,8 +10619,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:33:20.266989",
-          "timestamp": "2026-07-06T19:33:20.266989",
+          "id": "ocr_2026-07-06T22:26:51.901591",
+          "timestamp": "2026-07-06T22:26:51.901591",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0425-PA-0004284_E-1745743986041ARCHANARANAFINALBILLO_250427_1425@E.pdf_page_4.png",
           "archivo_copia": null,
@@ -10076,7 +10629,14 @@
           "campos": {
             "ciu": "W781260",
             "pruebas": [],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "fecha_analisis": "35-00-2025",
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Sunita Varma"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -10094,7 +10654,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:33:20.298360",
-      "actualizado_en": "2026-07-06T19:33:20.266989"
+      "actualizado_en": "2026-07-06T22:26:51.901591"
     },
     "W535851": {
       "ciu": "W535851",
@@ -10159,8 +10719,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:33:26.111697",
-          "timestamp": "2026-07-06T19:33:26.111697",
+          "id": "ocr_2026-07-06T22:26:58.459282",
+          "timestamp": "2026-07-06T22:26:58.459282",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0425-PA-0004300_REPORTS_27-04-2025_0134-06_PM@G.pdf_page_11.png",
           "archivo_copia": null,
@@ -10219,7 +10779,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "GAURISH SHETTY"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -10237,7 +10803,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:33:26.138859",
-      "actualizado_en": "2026-07-06T19:33:26.111697"
+      "actualizado_en": "2026-07-06T22:26:58.459282"
     },
     "W624898": {
       "ciu": "W624898",
@@ -10323,8 +10889,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:33:32.169324",
-          "timestamp": "2026-07-06T19:33:32.169324",
+          "id": "ocr_2026-07-06T22:27:04.761376",
+          "timestamp": "2026-07-06T22:27:04.761376",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\PUN-0425-PA-0011414_Lab Report_27-04-2025_0949-24_PM.pdf_page_1.png",
           "archivo_copia": null,
@@ -10404,7 +10970,13 @@
                 "referencia": "6.5-11.0"
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Technician"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -10422,7 +10994,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:33:32.198668",
-      "actualizado_en": "2026-07-06T19:33:32.169324"
+      "actualizado_en": "2026-07-06T22:27:04.761376"
     },
     "W863924": {
       "ciu": "W863924",
@@ -10466,8 +11038,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:33:39.250699",
-          "timestamp": "2026-07-06T19:33:39.250699",
+          "id": "ocr_2026-07-06T22:27:12.175237",
+          "timestamp": "2026-07-06T22:27:12.175237",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\PUN-0425-PA-0011414_Lab Report_27-04-2025_0949-24_PM.pdf_page_11.png",
           "archivo_copia": null,
@@ -10505,7 +11077,13 @@
                 "referencia": ""
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "e a\nCollection Date"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -10523,7 +11101,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:33:39.283949",
-      "actualizado_en": "2026-07-06T19:33:39.250699"
+      "actualizado_en": "2026-07-06T22:27:12.175237"
     },
     "W632919": {
       "ciu": "W632919",
@@ -10538,8 +11116,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:33:45.806453",
-          "timestamp": "2026-07-06T19:33:45.806453",
+          "id": "ocr_2026-07-06T22:27:19.071538",
+          "timestamp": "2026-07-06T22:27:19.071538",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\PUN-0425-PA-0011414_Lab Report_27-04-2025_0949-24_PM.pdf_page_2.png",
           "archivo_copia": null,
@@ -10548,7 +11126,14 @@
           "campos": {
             "ciu": "W632919",
             "pruebas": [],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "fecha_analisis": "22/04/2025",
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Technician"
+            },
+            "interpretacion": "WIDAL TEST IS\nPOSITIVE\na\n(1) 'H' & 'O' agglutinins appear in the serum after 10 days.Increase into peak in third to fifth",
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -10566,7 +11151,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:33:45.835853",
-      "actualizado_en": "2026-07-06T19:33:45.806453"
+      "actualizado_en": "2026-07-06T22:27:19.071538"
     },
     "W807216": {
       "ciu": "W807216",
@@ -10645,8 +11230,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-06T19:33:52.144798",
-          "timestamp": "2026-07-06T19:33:52.144798",
+          "id": "ocr_2026-07-06T22:27:25.301811",
+          "timestamp": "2026-07-06T22:27:25.301811",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\PUN-0425-PA-0011414_Lab Report_27-04-2025_0949-24_PM@F.pdf_page_10.png",
           "archivo_copia": null,
@@ -10719,7 +11304,13 @@
                 "referencia": "6.5-11.0"
               }
             ],
+            "alertas_criticas": [],
             "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "nombre_paciente": "CIU",
+              "médico_laboratorio": "Technician Registration noori"
+            },
+            "interpretacion": null,
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -10737,7 +11328,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:33:52.175339",
-      "actualizado_en": "2026-07-06T19:33:52.144798"
+      "actualizado_en": "2026-07-06T22:27:25.301811"
     },
     "W354101": {
       "ciu": "W354101",
@@ -10797,6 +11388,55 @@
       ],
       "creado_en": "2026-07-06T20:40:51.856901",
       "actualizado_en": "2026-07-06T20:40:51.823275"
+    },
+    "110350": {
+      "ciu": "110350",
+      "datos_personales": {},
+      "informes_laboratorio": [
+        {
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "registrado_en": "2026-07-06T22:30:19.621171"
+        }
+      ],
+      "alertas_clinicas": [],
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-06T22:30:19.621171",
+          "timestamp": "2026-07-06T22:30:19.621171",
+          "fuente": "upload",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\ocr_c9410e49ad9244a3836ac2eb40aac697.jpeg",
+          "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260706_223019_ocr_c9410e49ad9244a3836ac2eb40aac697.jpeg",
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "Qualab 3% wi\n= 104110475\n——>——————————_—_—————————————————— ad\n‘Sexo: Masculino Edad: 35 Afios Cliente: CLINICA SAN GABRIEL\nDireccion: MZA1LT 24 - Piso: ‘Numero de Guia: 110350\n—\nee Midtiog Petoge Chance\nCMP: 32624 RNE: 32713\nle ee",
+          "campos": {
+            "ciu": "110350",
+            "pruebas": [],
+            "alertas_criticas": [],
+            "tipo": "LAB_REPORT",
+            "informacion_clinica": {
+              "edad": 35,
+              "sexo": "M"
+            },
+            "interpretacion": null,
+            "cnn_prediccion": {
+              "clase_predicha": "LAB_REPORT",
+              "probabilidades": {
+                "LAB_REPORT": 0.3222,
+                "DNI_PERU": 0.1185,
+                "DNI_USA": 0.1185,
+                "INFORME_MEDICO": 0.1185,
+                "UNKNOWN": 0.3222
+              },
+              "confianza": 0.3222
+            },
+            "alertas_detectadas": []
+          },
+          "advertencia": null
+        }
+      ],
+      "creado_en": "2026-07-06T22:30:19.652668",
+      "actualizado_en": "2026-07-06T22:30:19.621171"
     }
   }
 }

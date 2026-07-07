@@ -6,7 +6,7 @@ import unicodedata
 from datetime import datetime
 from typing import Any, Dict, List, Optional, Tuple
  
-from .db import cargar_bd
+from .db import cargar_bd, cargar_sesiones
  
  
 # ═══════════════════════════════════════════════════════════════════════
@@ -125,7 +125,82 @@ def es_ciu_valido(texto: str) -> bool:
         return False
     t = texto.strip().upper()
     return bool(re.fullmatch(r"\d{8}", t) or re.fullmatch(r"[A-Z]{1,2}\d{5,7}", t))
- 
+
+
+def _normalizar_ciu(ciu: str) -> str:
+    if not ciu:
+        return ""
+    ciu = ciu.strip().upper()
+    if re.fullmatch(r"[A-Z]{1,2}\d{5,7}", ciu):
+        return re.sub(r"[A-Z]", "", ciu)
+    return ciu
+
+
+def _buscar_registro_por_ciu(bd: Dict[str, Any], ciu: str) -> Optional[Dict[str, Any]]:
+    if not ciu:
+        return None
+    ciu_raw = ciu.strip().upper()
+    ciu_norm = _normalizar_ciu(ciu_raw)
+
+    if ciu_raw in bd:
+        return bd[ciu_raw]
+    if ciu_norm and ciu_norm != ciu_raw and ciu_norm in bd:
+        return bd[ciu_norm]
+
+    for key, registro in bd.items():
+        if _normalizar_ciu(key) == ciu_norm:
+            return registro
+    return None
+
+
+def _extraer_datos_personales_desde_sesiones(ciu: str) -> Dict[str, Any]:
+    ciu_norm = _normalizar_ciu(ciu)
+    if not ciu_norm:
+        return {}
+
+    sesiones = cargar_sesiones()
+    for sesion in reversed(sesiones):
+        if sesion.get("tipo_documento") not in {"DNI_PERU", "DNI_USA"}:
+            continue
+        campos = sesion.get("campos", {}) or {}
+        if _normalizar_ciu(str(campos.get("ciu", ""))) != ciu_norm:
+            continue
+        return {
+            "ciu": ciu_norm,
+            "nombres": campos.get("nombres", "NO_DETECTADO"),
+            "apellidos": campos.get("apellidos", "NO_DETECTADO"),
+            "fecha_nacimiento": campos.get("fecha_nacimiento", "NO_DETECTADO"),
+        }
+    return {}
+
+
+def _extraer_datos_personales_desde_registro(registro: Dict[str, Any], ciu: Optional[str] = None) -> Dict[str, Any]:
+    datos = registro.get("datos_personales", {}) or {}
+    if datos and datos.get("nombres") not in {None, "", "NO_DETECTADO"}:
+        return datos
+
+    documentos = registro.get("documentos_ocr", []) or []
+    for doc in reversed(documentos):
+        if doc.get("tipo_documento") in {"DNI_PERU", "DNI_USA"}:
+            campos = doc.get("campos", {}) or {}
+            nombres = campos.get("nombres") or "NO_DETECTADO"
+            apellidos = campos.get("apellidos") or "NO_DETECTADO"
+            fecha = campos.get("fecha_nacimiento") or "NO_DETECTADO"
+            if nombres != "NO_DETECTADO" or apellidos != "NO_DETECTADO" or fecha != "NO_DETECTADO":
+                return {
+                    "ciu": _normalizar_ciu(str(campos.get("ciu", ""))) or (ciu or ""),
+                    "nombres": nombres,
+                    "apellidos": apellidos,
+                    "fecha_nacimiento": fecha,
+                }
+
+    if ciu:
+        datos_sesiones = _extraer_datos_personales_desde_sesiones(ciu)
+        if datos_sesiones:
+            return datos_sesiones
+
+    return datos
+
 
 # ═══════════════════════════════════════════════════════════════════════
 # 3. INTENCIONES (varias formas de decir lo mismo, no solo una palabra)
@@ -472,10 +547,20 @@ def generar_recomendaciones(registro: Dict[str, Any]) -> List[str]:
     return recomendaciones
  
  
-def construir_respuesta_expediente(registro: Dict[str, Any]) -> str:
+def construir_respuesta_expediente(registro: Dict[str, Any], compacto: bool = False) -> str:
     """Arma el mensaje completo: datos básicos + evolución + recomendaciones."""
-    datos = registro.get("datos_personales", {}) or {}
     ciu = registro.get("ciu", "")
+    datos = _extraer_datos_personales_desde_registro(registro, ciu)
+ 
+    if compacto:
+        lineas = [f"CIU: {ciu}"]
+        if datos:
+            nombres = datos.get("nombres", "NO_DETECTADO")
+            apellidos = datos.get("apellidos", "NO_DETECTADO")
+            lineas.append(f"Nombre: {apellidos} {nombres}".strip())
+            lineas.append(f"Fecha nac.: {datos.get('fecha_nacimiento', 'NO_DETECTADO')}")
+        lineas.append("¿Confirmar registro? (s/n):")
+        return "\n".join(lineas)
  
     lineas = [f"Expediente {ciu}:"]
     if datos:
@@ -573,16 +658,39 @@ def procesar_mensaje(mensaje: str, ciu: Optional[str] = None) -> Dict[str, Any]:
     if esperando == "pedir_ciu_expediente" and es_ciu_valido(mensaje):
         ciu_buscar = mensaje.strip().upper()
         bd = cargar_bd()
-        registro = bd.get(ciu_buscar)
+        print(f"[CHATBOT] Buscando expediente para CIU {ciu_buscar}. Base de datos tiene {len(bd)} registros.")
+        registro = _buscar_registro_por_ciu(bd, ciu_buscar)
         if not registro:
             _limpiar_espera(None)
+            print(f"[CHATBOT] No encontrado: {ciu_buscar}")
             return {
                 "respuesta": f"No encontré un expediente registrado con CIU {ciu_buscar}.",
                 "accion": None,
             }
-        respuesta = construir_respuesta_expediente(registro) + f"\n\n{PREGUNTA_OTRO_SERVICIO}"
+        
+        datos = _extraer_datos_personales_desde_registro(registro, ciu_buscar)
+
+        informes = registro.get("informes_laboratorio", []) or []
+        alertas = registro.get("alertas_clinicas", []) or []
+        
+        print(f"[CHATBOT] Encontrado: {ciu_buscar} con {len(informes)} informes de lab y {len(alertas)} alertas")
+        
+        respuesta_partes = [
+            f"✅ Datos extraídos:",
+            f"   CIU: {ciu_buscar}",
+            f"   Nombre: {datos.get('nombres', 'NO_DETECTADO')} {datos.get('apellidos', 'NO_DETECTADO')}",
+            f"   Fecha nac.: {datos.get('fecha_nacimiento', 'NO_DETECTADO')}",
+        ]
+        
+        if informes:
+            respuesta_partes.append(f"\n📋 Informes de laboratorio: {len(informes)}")
+        if alertas:
+            respuesta_partes.append(f"⚠️  Alertas clínicas: {len(alertas)}")
+        
+        respuesta_partes.append("\n¿Confirmar registro? (s/n):")
+        respuesta = "\n".join(respuesta_partes)
+        
         _limpiar_espera(None)
-        _actualizar_contexto(ciu_buscar, esperando="confirmacion_otro_servicio")
         return {"respuesta": respuesta, "accion": None}
  
     # ── 3) Caso especial: viene del flujo "pedir_ciu_expediente" ──
@@ -594,7 +702,7 @@ def procesar_mensaje(mensaje: str, ciu: Optional[str] = None) -> Dict[str, Any]:
                 "accion": "pedir_ciu_expediente",
             }
         bd = cargar_bd()
-        registro = bd.get(ciu.strip().upper())
+        registro = _buscar_registro_por_ciu(bd, ciu)
         if not registro:
             return {
                 "respuesta": f"No encontré un expediente registrado con CIU {ciu}.",
@@ -623,7 +731,7 @@ def procesar_mensaje(mensaje: str, ciu: Optional[str] = None) -> Dict[str, Any]:
     if intencion == "evolucion":
         if ciu:
             bd = cargar_bd()
-            registro = bd.get(ciu.strip().upper())
+            registro = _buscar_registro_por_ciu(bd, ciu)
             if not registro:
                 return {"respuesta": f"No encontré un expediente registrado con CIU {ciu}.", "accion": None}
             respuesta = (
@@ -642,7 +750,7 @@ def procesar_mensaje(mensaje: str, ciu: Optional[str] = None) -> Dict[str, Any]:
     if intencion == "expediente":
         if ciu:
             bd = cargar_bd()
-            registro = bd.get(ciu.strip().upper())
+            registro = _buscar_registro_por_ciu(bd, ciu)
             if not registro:
                 return {"respuesta": f"No encontré un expediente registrado con CIU {ciu}.", "accion": None}
             respuesta = construir_respuesta_expediente(registro) + f"\n\n{PREGUNTA_OTRO_SERVICIO}"
@@ -662,7 +770,7 @@ def procesar_mensaje(mensaje: str, ciu: Optional[str] = None) -> Dict[str, Any]:
                 "accion": "pedir_ciu_expediente",
             }
         bd = cargar_bd()
-        registro = bd.get(ciu.strip().upper())
+        registro = _buscar_registro_por_ciu(bd, ciu)
         alertas = (registro or {}).get("alertas_clinicas", []) or []
         if not alertas:
             respuesta = f"El paciente {ciu} no presenta alertas clínicas activas."

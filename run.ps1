@@ -116,7 +116,7 @@ $venvPython = Join-Path $venvPath "Scripts\python.exe"
 $psExe = Join-Path $PSHOME "powershell.exe"
 $backendLog = Join-Path $root "backend\backend.log"
 
-$backendCommand = "& '$activate'; Set-Location -LiteralPath '$root'; `$env:ALDIMI_WAIT_FOR_SCAN='1'; `$env:ALDIMI_SCAN_DNI='0'; `$env:ALDIMI_SCAN_LAB='0'; `$env:ALDIMI_MAX_IMAGES='0'; & '$venvPython' -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload 2>&1 | Tee-Object -FilePath '$backendLog'"
+$backendCommand = "& '$activate'; Set-Location -LiteralPath '$root'; & '$venvPython' -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 2>&1 | Tee-Object -FilePath '$backendLog'"
 $staticCommand  = "& '$activate'; Set-Location -LiteralPath '$root'; & '$venvPython' -m http.server $staticPort"
 
 # Liberar puerto 8000 si hay algún listener huérfano.
