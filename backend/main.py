@@ -58,26 +58,42 @@ def _read_limit_env(name: str, fallback: int = 0) -> int:
         return fallback
 
 
+def _is_truthy_env(name: str, fallback: bool = False) -> bool:
+    raw = os.environ.get(name)
+    if raw is None or str(raw).strip() == "":
+        return fallback
+    return str(raw).strip().lower() in {"1", "true", "yes", "on"}
+
+
 @app.on_event("startup")
 async def startup_scan() -> None:
-    """Al iniciar, escanea DNI_ALDIMI y LAB_ALDIMI.
+    """Al iniciar, solo prepara la API. El escaneo masivo queda desactivado por defecto.
 
-    Comportamiento controlado por env `ALDIMI_WAIT_FOR_SCAN`:
-    - si está a '1' o 'true' (por defecto), el escaneo se ejecuta de forma
-      sincrónica y bloqueante antes de que la API acepte peticiones.
-    - si está a '0' o 'false', el escaneo se programa en background (no bloqueante).
+    Para activar el escaneo al arrancar se debe definir:
+    - ALDIMI_AUTO_SCAN=true
+    - opcionalmente ALDIMI_MAX_IMAGES, ALDIMI_SCAN_DNI, ALDIMI_SCAN_LAB
     """
-    wait_env = os.environ.get("ALDIMI_WAIT_FOR_SCAN", "1").lower()
+    global STARTUP_READY
+    STARTUP_READY = False
+
+    auto_scan = _is_truthy_env("ALDIMI_AUTO_SCAN", fallback=False)
+    if not auto_scan:
+        print("[STARTUP] Escaneo automático desactivado. Solo se procesarán archivos por upload o solicitud explícita.")
+        try:
+            cargar_bd()
+        except Exception as exc:
+            print(f"[STARTUP] Aviso: no se pudo cargar la base de datos: {exc}")
+        STARTUP_READY = True
+        return
+
+    wait_env = os.environ.get("ALDIMI_WAIT_FOR_SCAN", "0").lower()
     wait_for_scan = wait_env in ("1", "true", "yes")
 
     default_limit = _read_limit_env("ALDIMI_MAX_IMAGES", 0)
     max_images_dni = _read_limit_env("ALDIMI_SCAN_DNI", default_limit)
     max_images_lab = _read_limit_env("ALDIMI_SCAN_LAB", default_limit)
 
-    print(f"[STARTUP] ALDIMI_WAIT_FOR_SCAN={wait_env}, ALDIMI_SCAN_DNI={max_images_dni}, ALDIMI_SCAN_LAB={max_images_lab}, ALDIMI_MAX_IMAGES={default_limit}")
-
-    global STARTUP_READY
-    STARTUP_READY = False
+    print(f"[STARTUP] ALDIMI_AUTO_SCAN={auto_scan}, ALDIMI_WAIT_FOR_SCAN={wait_env}, ALDIMI_SCAN_DNI={max_images_dni}, ALDIMI_SCAN_LAB={max_images_lab}, ALDIMI_MAX_IMAGES={default_limit}")
 
     if wait_for_scan:
         print("[STARTUP] Ejecutando escaneo automático de carpetas (modo bloqueante)...")
@@ -87,7 +103,6 @@ async def startup_scan() -> None:
             print(f"         Imagenes procesadas: {resultados.get('procesados')}")
         except Exception as exc:
             print(f"[STARTUP] Error durante escaneo bloqueante: {exc}")
-        # Intentamos asegurar que la base de datos sea legible al inicio
         try:
             cargar_bd()
         except Exception as exc:
@@ -112,7 +127,6 @@ async def startup_scan() -> None:
                     print(f"         Imagenes procesadas: {resultados.get('procesados')}")
                 except Exception as exc:
                     print(f"[STARTUP] Error durante escaneo en background: {exc}")
-                # Cargamos la BD y marcamos listo al terminar el escaneo en background
                 try:
                     cargar_bd()
                 except Exception as exc:
@@ -235,26 +249,12 @@ async def procesar_ocr(archivo: UploadFile = File(...)) -> Dict[str, Any]:
 
 
 def ejecutar_local(max_images: int = 0) -> dict:
-    print("[ALDIMI] Iniciando escaneo local de carpetas...")
-    print("[ALDIMI] Carpeta DNI_ALDIMI:", Path("DNI_ALDIMI").resolve())
-    print("[ALDIMI] Carpeta LAB_ALDIMI:", Path("LAB_ALDIMI").resolve())
-
-    resultados = sincronizar_carpetas(max_images_dni=max_images, max_images_lab=max_images)
-
-    print("[ALDIMI] Escaneo local finalizado.")
-    print(f"         Imágenes procesadas: {resultados['procesados']}")
-    print(f"         Detalles registrados: {len(resultados['resultados'])}")
-    return resultados
+    print("[ALDIMI] Escaneo local desactivado por defecto. Usa upload o activa ALDIMI_AUTO_SCAN para procesar carpetas.")
+    return {"procesados": 0, "resultados": []}
 
 
 def main() -> None:
-    max_images_env = os.environ.get("ALDIMI_MAX_IMAGES", "0")
-    try:
-        max_images = int(max_images_env)
-    except Exception:
-        max_images = 0
-
-    ejecutar_local(max_images=max_images)
+    print("[ALDIMI] El modo CLI no procesa carpetas por defecto. Usa la API o activa ALDIMI_AUTO_SCAN.")
 
 
 if __name__ == "__main__":

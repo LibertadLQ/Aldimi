@@ -134,8 +134,12 @@ def persistir_ocr_resultado(ruta_imagen: str, resultado: Dict[str, Any], fuente:
 def sincronizar_carpetas(max_images_dni: int = 0, max_images_lab: int = 0) -> Dict[str, Any]:
     """Procesa imágenes de DNI_ALDIMI y LAB_ALDIMI y las guarda en ALDIMI_DB.
 
-    Se procesan en pares por índice para mantener el orden: primero DNI[0], LAB[0], luego DNI[1], LAB[1], etc.
+    Si no se pasa límite positivo, no procesa nada por defecto para evitar cargar carpetas completas.
     """
+    if not max_images_dni and not max_images_lab:
+        print("[SYNC] No se procesan carpetas por defecto. Usa un límite mayor que 0 para escanear.")
+        return {"procesados": 0, "resultados": []}
+
     resultados = []
 
     dni_images = _listar_imagenes(DNI_DIR, max_images=max_images_dni)
