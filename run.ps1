@@ -60,8 +60,8 @@ if (-not (Test-Path $activate)) {
 Write-Host "Activando .venv..."
 & $activate
 
-Write-Host "Actualizando pip y setuptools..."
-python -m pip install --upgrade pip setuptools wheel
+Write-Host "Actualizando pip y wheel..."
+python -m pip install --upgrade pip wheel
 
 # Install Python packages
 $reqFile = Join-Path $root "backend\requirements.txt"
@@ -116,7 +116,7 @@ $venvPython = Join-Path $venvPath "Scripts\python.exe"
 $psExe = Join-Path $PSHOME "powershell.exe"
 $backendLog = Join-Path $root "backend\backend.log"
 
-$backendCommand = "& '$activate'; Set-Location -LiteralPath '$root'; & '$venvPython' -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 2>&1 | Tee-Object -FilePath '$backendLog'"
+$backendCommand = "& '$activate'; Set-Location -LiteralPath '$root'; `$env:ALDIMI_AUTO_SCAN='true'; `$env:ALDIMI_WAIT_FOR_SCAN='false'; `$env:ALDIMI_SCAN_DNI='100'; `$env:ALDIMI_SCAN_LAB='100'; & '$venvPython' -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 2>&1 | Tee-Object -FilePath '$backendLog'"
 $staticCommand  = "& '$activate'; Set-Location -LiteralPath '$root'; & '$venvPython' -m http.server $staticPort"
 
 # Liberar puerto 8000 si hay algún listener huérfano.
@@ -140,7 +140,7 @@ Start-Process -FilePath $psExe -ArgumentList "-NoProfile","-ExecutionPolicy","By
 # Esperar a que el backend responda
 $backendUrl = "http://127.0.0.1:8000"
 Write-Host "Comprobando conectividad con el backend en $backendUrl ..."
-$maxRetries = 60
+$maxRetries = 120
 $retry = 0
 $ok = $false
 while ($retry -lt $maxRetries) {

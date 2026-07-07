@@ -353,13 +353,16 @@ def predict_document_cnn(texto: str) -> Dict[str, Any]:
     t = (texto or "").lower()
     lab_kw = [
         "hemoglobin", "hemograma", "hematocrito", "leucocit", "glucosa",
-        "laboratorio", "diagnostic", "patient ciu", "shree", "reference",
-        "unit", "mg/l", "g/dl", "/ul", "%", "prueba", "resultado",
+        "creatinina", "urea", "colesterol", "triglicer", "proteina c reactiva",
+        "proteína c reactiva", "prueba", "resultado", "valor", "referencia",
+        "laboratorio", "diagnostic", "patient ciu", "shree", "unit", "mg/l",
+        "g/dl", "/ul", "%",
     ]
     peru_kw = [
         "república del perú", "documento nacional de identidad", "reniec",
-        "cui", "dni", "primer apellido", "prenombres", "fecha de caducidad",
-        "nacionalidad", "registro nacional",
+        "cui", "dni", "apellidos", "prenombres", "fecha de nacimiento",
+        "fecha de caducidad", "nacionalidad", "registro nacional", "primer apellido",
+        "segundo apellido", "nombres",
     ]
     usa_kw = [
         "west virginia", "driver license", "dl no", "dob", "governor",
@@ -369,7 +372,7 @@ def predict_document_cnn(texto: str) -> Dict[str, Any]:
     medico_kw = [
         "motivo de consulta", "diagnóstico", "informe médico", "antecedentes",
         "impresión", "tratamiento", "medicamento", "anamnesis",
-        "examen físico", "comentario médico",
+        "examen físico", "comentario médico", "observación", "clinical impression",
     ]
     lab_s = sum(1 for k in lab_kw if k in t)
     peru_s = sum(1 for k in peru_kw if k in t)
@@ -413,10 +416,38 @@ def predict_document_cnn(texto: str) -> Dict[str, Any]:
     }
 
 
+def _es_texto_dni_peru(texto: str) -> bool:
+    t = (texto or "").lower()
+    return any(
+        k in t for k in [
+            "apellidos", "prenombres", "fecha de nacimiento", "documento nacional de identidad",
+            "reniec", "dni", "cui", "primer apellido", "segundo apellido",
+            "nacionalidad",
+        ]
+    )
+
+
+def _es_texto_lab(texto: str) -> bool:
+    t = (texto or "").lower()
+    return any(
+        k in t for k in [
+            "hemograma", "glucosa", "creatinina", "urea", "colesterol", "triglicer",
+            "proteína c reactiva", "proteina c reactiva", "valor", "referencia", "laboratorio",
+            "prueba", "resultado", "unidad", "mg/dl", "mg/l", "%",
+        ]
+    )
+
+
 def clasificar_documento(texto: str) -> str:
     """Clasifica el documento usando heurísticas optimizadas y una predicción CNN ligera."""
     if not texto:
         return "UNKNOWN"
+
+    if extraer_ciu_dni(texto) and _es_texto_dni_peru(texto):
+        return "DNI_PERU"
+    if extraer_ciu_lab(texto) and _es_texto_lab(texto):
+        return "LAB_REPORT"
+
     cnn_prediction = predict_document_cnn(texto)
     return cnn_prediction.get("clase_predicha", "UNKNOWN")
 
@@ -448,11 +479,11 @@ def extraer_ciu_dni(texto: str) -> Optional[str]:
     if m:
         return _fix_num(m.group(1))
     
-    # Etiqueta CUI
+    # Etiqueta CUI/DNI con distintos formatos y errores OCR comunes.
     for pat in [
-        r"\bCUI\s+(\d{8})",
-        r"\bDNI\s*[:\-]?\s*(\d{8})",
-        r"(?:N[°º]?|Doc\.?)\s*(\d{8})",
+        r"\bCUI\s*[:\-]?\s*([0-9OIlS]{8})",
+        r"\bDNI\s*[:\-]?\s*([0-9OIlS]{8})",
+        r"(?:N[°º]?|Doc\.?|Documento)\s*[:\-]?\s*([0-9OIlS]{8})",
     ]:
         m = re.search(pat, t, re.I)
         if m:
@@ -474,60 +505,119 @@ def extraer_nombres_dni_peru(texto: str) -> Tuple[Optional[str], Optional[str]]:
     nombres = None
     apellidos = None
     
-    # Formato moderno: "Apellidos GRANADOS ALLENDE" + "Prenombres JUAN FELIPE"
-    m = re.search(r"(?:Apellidos?|APELLIDOS?)\s*[:\-]?\s*\n?\s*([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑa-záéíóúñ\s]{2,40})", t, re.I | re.M)
+    # Formato moderno: etiquetas con valor en la misma línea o en la línea siguiente.
+    m = re.search(
+        r"(?:Apellidos?|APELLIDOS?)\s*[:\-]?\s*(?:\n\s*)?([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑa-záéíóúñ\.\-\,\s]{2,60})",
+        t,
+        re.I | re.M,
+    )
     if m:
         apellidos = m.group(1).strip()
-    
-    m = re.search(r"(?:Prenombres?|PRENOMBRES?)\s*[:\-]?\s*\n?\s*([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑa-záéíóúñ\s]{2,40})", t, re.I | re.M)
+
+    m = re.search(
+        r"(?:Prenombres?|PRENOMBRES?)\s*[:\-]?\s*(?:\n\s*)?([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑa-záéíóúñ\.\-\,\s]{2,60})",
+        t,
+        re.I | re.M,
+    )
     if m:
         nombres = m.group(1).strip()
     
     # Formato clásico: "Primer Apellido", "Segundo Apellido", "Prenombres"
     if not apellidos:
-        m1 = re.search(r"(?:Primer\s+Apellido|PRIMER\s+APELLIDO)\s*[:\-]?\s*\n?\s*([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑa-záéíóúñ\s]{2,20})", t, re.I | re.M)
-        m2 = re.search(r"(?:Segundo\s+Apellido|SEGUNDO\s+APELLIDO)\s*[:\-]?\s*\n?\s*([A-ZÁÉÍÓÚÑ][A-ZÁÉÍóúñ\s]{2,20})", t, re.I | re.M)
+        m1 = re.search(
+            r"(?:Primer\s+Apellido|PRIMER\s+APELLIDO)\s*[:\-]?\s*(?:\n\s*)?([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑa-záéíóúñ\.\-\,\s]{2,20})",
+            t,
+            re.I | re.M,
+        )
+        m2 = re.search(
+            r"(?:Segundo\s+Apellido|SEGUNDO\s+APELLIDO)\s*[:\-]?\s*(?:\n\s*)?([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑa-záéíóúñ\.\-\,\s]{2,20})",
+            t,
+            re.I | re.M,
+        )
         if m1:
             apellidos = m1.group(1).strip()
             if m2:
                 apellidos += " " + m2.group(1).strip()
-    
+
     if not nombres:
-        m = re.search(r"(?:Prenombres?|PRENOMBRES?)\s*[:\-]?\s*\n?\s*([A-ZÁÉÍÓÚÑ][A-ZÁÉÍóúñ\s]{2,40})", t, re.I | re.M)
+        m = re.search(
+            r"(?:Prenombres?|PRENOMBRES?)\s*[:\-]?\s*(?:\n\s*)?([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑa-záéíóúñ\.\-\,\s]{2,60})",
+            t,
+            re.I | re.M,
+        )
         if m:
             nombres = m.group(1).strip()
-    
-    # Fallback: bloques MAYÚSCULAS
+
     if not apellidos or not nombres:
-        blocks = re.findall(r"\b([A-ZÁÉÍÓÚÑ]{3,15}(?:\s+[A-ZÁÉÍÓÚÑ]{3,15}){0,2})\b", t)
-        excl = {"PERU", "REPUBLICA", "NACIONAL", "DOCUMENTO", "DNI", "CUI", "RENIEC"}
-        blocks = [b for b in blocks if not any(e in b.upper() for e in excl)]
-        if not apellidos and len(blocks) > 0:
-            apellidos = blocks[0]
-        if not nombres and len(blocks) > 1:
-            nombres = blocks[1]
-    
+        lineas = [linea.strip() for linea in t.splitlines() if linea.strip()]
+        for idx, linea in enumerate(lineas):
+            if not apellidos and re.search(r"\b(apellidos|primer\s+apellido|apellido[s]?)\b", linea, re.I):
+                valor = re.sub(r"^(?:Apellidos?|Apellido[s]?|Primer\s+Apellido)[:\-\s]*", "", linea, flags=re.I).strip()
+                if valor and len(valor) > 3:
+                    apellidos = valor
+                elif idx + 1 < len(lineas):
+                    siguiente = lineas[idx + 1]
+                    if siguiente and len(siguiente) > 3:
+                        apellidos = siguiente
+            if not nombres and re.search(r"\b(prenombres|nombre[s]?)\b", linea, re.I):
+                valor = re.sub(r"^(?:Prenombres?|Nombre[s]?)[:\-\s]*", "", linea, flags=re.I).strip()
+                if valor and len(valor) > 3:
+                    nombres = valor
+                elif idx + 1 < len(lineas):
+                    siguiente = lineas[idx + 1]
+                    if siguiente and len(siguiente) > 3:
+                        nombres = siguiente
+            if nombres and apellidos:
+                break
+
+    # Fallback: bloques MAYÚSCULAS, evitando palabras genéricas.
+    if not apellidos or not nombres:
+        blocks = re.findall(r"\b([A-ZÁÉÍÓÚÑ]{3,20}(?:\s+[A-ZÁÉÍÓÚÑ]{3,20}){0,3})\b", t)
+        excl = {"PERU", "REPUBLICA", "NACIONAL", "DOCUMENTO", "DNI", "CUI", "RENIEC", "IDENTIDAD"}
+        candidates = [b for b in blocks if not any(e in b.upper() for e in excl)]
+        if not apellidos and len(candidates) > 0:
+            apellidos = candidates[0]
+        if not nombres and len(candidates) > 1:
+            nombres = candidates[1]
+
     return nombres, apellidos
+
+
+def _normalizar_fecha_dni(raw: str, year_min: int, year_max: int) -> Optional[str]:
+    raw = raw.strip().replace('.', '/').replace('-', '/').replace(' ', '/')
+    partes = raw.split('/')
+    if len(partes) != 3:
+        return None
+    dd, mm, yyyy = partes
+    try:
+        dd_i, mm_i, yyyy_i = int(dd), int(mm), int(yyyy)
+    except ValueError:
+        return None
+    if not (year_min <= yyyy_i <= year_max and 1 <= dd_i <= 31 and 1 <= mm_i <= 12):
+        return None
+    return f"{str(mm_i).zfill(2)}/{str(dd_i).zfill(2)}/{str(yyyy_i).zfill(2)}"
 
 
 def extraer_fecha_dni_peru(texto: str) -> Optional[str]:
     """Extrae fecha de nacimiento del DNI peruano (DD MM YYYY -> MM/DD/YYYY)."""
     t = texto or ""
     YEAR_MIN, YEAR_MAX = 1930, 2015
-    
-    # Patrón: "Fecha de Nacimiento 01 01 1990"
-    m = re.search(r"Fecha\s+de\s+Nacimiento[:\s]+(\d{1,2})\s+(\d{1,2})\s+(\d{4})", t, re.I)
-    if m:
-        dd, mm, yyyy = m.groups()
-        if YEAR_MIN <= int(yyyy) <= YEAR_MAX and 1 <= int(dd) <= 31 and 1 <= int(mm) <= 12:
-            return f"{mm.zfill(2)}/{dd.zfill(2)}/{yyyy}"
-    
-    # Patrón genérico: "DD MM YYYY"
-    for m in re.finditer(r"\b(\d{1,2})\s+(\d{1,2})\s+(\d{4})\b", t):
-        dd, mm, yyyy = m.groups()
-        if YEAR_MIN <= int(yyyy) <= YEAR_MAX and 1 <= int(dd) <= 31 and 1 <= int(mm) <= 12:
-            return f"{mm.zfill(2)}/{dd.zfill(2)}/{yyyy}"
-    
+
+    # Patrón: "Fecha de Nacimiento 01 01 1990" o variantes con separador.
+    for pat in [
+        r"Fecha\s+de\s+Nacimiento[:\s]*([0-3]?\d[\./\s-][0-1]?\d[\./\s-]\d{4})",
+        r"Nacimiento[:\s]*([0-3]?\d[\./\s-][0-1]?\d[\./\s-]\d{4})",
+    ]:
+        m = re.search(pat, t, re.I)
+        if m:
+            return _normalizar_fecha_dni(m.group(1), YEAR_MIN, YEAR_MAX)
+
+    # Patrón genérico: "DD MM YYYY" o "DD/MM/YYYY".
+    for m in re.finditer(r"\b([0-3]?\d)[\./\s-]+([0-1]?\d)[\./\s-]+(\d{4})\b", t):
+        fecha = _normalizar_fecha_dni(f"{m.group(1)}/{m.group(2)}/{m.group(3)}", YEAR_MIN, YEAR_MAX)
+        if fecha:
+            return fecha
+
     return None
 
 
@@ -987,6 +1077,13 @@ def procesar_imagen(ruta: str) -> Dict[str, Any]:
     if tipo == "UNKNOWN" and cnn_prediction.get("confianza", 0) >= 0.65:
         tipo = cnn_prediction.get("clase_predicha", tipo)
 
+    # Heurística adicional cuando la clasificación inicial se queda en UNKNOWN
+    if tipo == "UNKNOWN":
+        if extraer_ciu_dni(texto) and _es_texto_dni_peru(texto):
+            tipo = "DNI_PERU"
+        elif _es_texto_lab(texto):
+            tipo = "LAB_REPORT"
+
     # Extraer campos
     if tipo == "DNI_PERU":
         campos = procesar_dni_peru(texto)
@@ -1140,7 +1237,10 @@ def procesar_documento(ruta: str) -> Dict[str, Any]:
 
         if ciu_detectado:
             tipo = "DNI_PERU"
-            campos = {**campos, "ciu": ciu_detectado}
+            try:
+                campos = procesar_dni_peru(texto)
+            except Exception:
+                campos = {**campos, "ciu": ciu_detectado}
         else:
             text_low = (texto or "").lower()
             usa_keywords = (
@@ -1159,7 +1259,7 @@ def procesar_documento(ruta: str) -> Dict[str, Any]:
                     "hemograma,glucosa,colesterol,urea,creatinina,hemoglobina,"
                     "proteina c reactiva,crp,resultado,valor,referencia,prueba,mg/dl"
                 )
-                if any(k.strip() in text_low for k in lab_keywords.split(',')):
+                if any(k.strip() in text_low for k in lab_keywords.split(',')) or (extraer_ciu_lab(texto) and _es_texto_lab(texto)):
                     tipo = "LAB_REPORT"
                     try:
                         campos = procesar_lab(texto)

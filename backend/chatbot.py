@@ -153,6 +153,74 @@ def _buscar_registro_por_ciu(bd: Dict[str, Any], ciu: str) -> Optional[Dict[str,
     return None
 
 
+def _campo_a_texto(valor: Any) -> str:
+    if valor is None:
+        return "NO_DETECTADO"
+    if isinstance(valor, str):
+        texto = valor.strip()
+        return texto if texto else "NO_DETECTADO"
+    return str(valor).strip() or "NO_DETECTADO"
+
+
+def _extraer_datos_personales_desde_campos(campos: Optional[Dict[str, Any]], ciu: Optional[str] = None) -> Dict[str, Any]:
+    campos = campos or {}
+    nombres = _campo_a_texto(
+        campos.get("nombres") or campos.get("nombre") or campos.get("first_name")
+        or campos.get("given_name") or campos.get("nombre_completo") or campos.get("full_name")
+        or campos.get("name")
+    )
+    apellidos = _campo_a_texto(
+        campos.get("apellidos") or campos.get("apellido") or campos.get("last_name")
+        or campos.get("family_name")
+    )
+
+    if apellidos == "NO_DETECTADO":
+        paterno = _campo_a_texto(campos.get("apellido_paterno") or campos.get("apellido1"))
+        materno = _campo_a_texto(campos.get("apellido_materno") or campos.get("apellido2"))
+        if paterno != "NO_DETECTADO" or materno != "NO_DETECTADO":
+            apellidos = " ".join(
+                p for p in [paterno, materno] if p != "NO_DETECTADO"
+            ) or "NO_DETECTADO"
+
+    if nombres == "NO_DETECTADO" and apellidos != "NO_DETECTADO":
+        # Algunas fuentes pueden devolver el nombre completo en un solo campo.
+        nombre_completo = _campo_a_texto(campos.get("nombre_completo") or campos.get("full_name") or campos.get("name"))
+        if nombre_completo != "NO_DETECTADO" and " " in nombre_completo:
+            partes = nombre_completo.split()
+            nombres = " ".join(partes[:-1])
+            if apellidos == "NO_DETECTADO":
+                apellidos = partes[-1]
+
+    if nombres == "NO_DETECTADO" and apellidos != "NO_DETECTADO" and " " in apellidos:
+        partes = apellidos.split()
+        if len(partes) > 1:
+            apellidos = partes[-1]
+            nombres = " ".join(partes[:-1])
+
+    fecha = _campo_a_texto(
+        campos.get("fecha_nacimiento") or campos.get("fecha") or campos.get("fecha_nac")
+        or campos.get("dob") or campos.get("birth_date")
+    )
+
+    ciu_text = _normalizar_ciu(
+        str(campos.get("ciu") or campos.get("dni") or "")
+    )
+    if not ciu_text and ciu:
+        ciu_text = _normalizar_ciu(ciu)
+
+    return {
+        "ciu": ciu_text,
+        "nombres": nombres,
+        "apellidos": apellidos,
+        "fecha_nacimiento": fecha,
+    }
+
+
+def _datos_validos(entrada: Any) -> bool:
+    return bool(entrada and isinstance(entrada, str) and entrada.strip()
+                and entrada.strip() != "NO_DETECTADO")
+
+
 def _extraer_datos_personales_desde_sesiones(ciu: str) -> Dict[str, Any]:
     ciu_norm = _normalizar_ciu(ciu)
     if not ciu_norm:
@@ -165,41 +233,53 @@ def _extraer_datos_personales_desde_sesiones(ciu: str) -> Dict[str, Any]:
         campos = sesion.get("campos", {}) or {}
         if _normalizar_ciu(str(campos.get("ciu", ""))) != ciu_norm:
             continue
-        return {
-            "ciu": ciu_norm,
-            "nombres": campos.get("nombres", "NO_DETECTADO"),
-            "apellidos": campos.get("apellidos", "NO_DETECTADO"),
-            "fecha_nacimiento": campos.get("fecha_nacimiento", "NO_DETECTADO"),
-        }
+        datos = _extraer_datos_personales_desde_campos(campos, ciu_norm)
+        if datos:
+            return datos
     return {}
 
 
 def _extraer_datos_personales_desde_registro(registro: Dict[str, Any], ciu: Optional[str] = None) -> Dict[str, Any]:
     datos = registro.get("datos_personales", {}) or {}
-    if datos and datos.get("nombres") not in {None, "", "NO_DETECTADO"}:
-        return datos
+    resultado = {
+        "ciu": _normalizar_ciu(str(datos.get("ciu", "") or registro.get("ciu", "") or "")) or _normalizar_ciu(ciu or ""),
+        "nombres": _campo_a_texto(datos.get("nombres")),
+        "apellidos": _campo_a_texto(datos.get("apellidos")),
+        "fecha_nacimiento": _campo_a_texto(datos.get("fecha_nacimiento")),
+    }
 
+    # Completar con los mejores datos encontrados en los DNI guardados.
     documentos = registro.get("documentos_ocr", []) or []
-    for doc in reversed(documentos):
-        if doc.get("tipo_documento") in {"DNI_PERU", "DNI_USA"}:
-            campos = doc.get("campos", {}) or {}
-            nombres = campos.get("nombres") or "NO_DETECTADO"
-            apellidos = campos.get("apellidos") or "NO_DETECTADO"
-            fecha = campos.get("fecha_nacimiento") or "NO_DETECTADO"
-            if nombres != "NO_DETECTADO" or apellidos != "NO_DETECTADO" or fecha != "NO_DETECTADO":
-                return {
-                    "ciu": _normalizar_ciu(str(campos.get("ciu", ""))) or (ciu or ""),
-                    "nombres": nombres,
-                    "apellidos": apellidos,
-                    "fecha_nacimiento": fecha,
-                }
+    mejor_doc: Dict[str, Any] = {}
+    mejor_puntaje = -1
+    mejor_timestamp = ""
 
-    if ciu:
-        datos_sesiones = _extraer_datos_personales_desde_sesiones(ciu)
-        if datos_sesiones:
-            return datos_sesiones
+    for doc in documentos:
+        if doc.get("tipo_documento") not in {"DNI_PERU", "DNI_USA"}:
+            continue
+        doc_datos = _extraer_datos_personales_desde_campos(doc.get("campos", {}) or {}, resultado["ciu"] or ciu)
+        puntaje = sum(
+            1 for campo in ("nombres", "apellidos", "fecha_nacimiento")
+            if _datos_validos(doc_datos.get(campo))
+        )
+        timestamp = str(doc.get("timestamp", ""))
+        if puntaje > mejor_puntaje or (puntaje == mejor_puntaje and timestamp > mejor_timestamp):
+            mejor_doc = doc_datos
+            mejor_puntaje = puntaje
+            mejor_timestamp = timestamp
 
-    return datos
+    if mejor_doc:
+        for campo in ("ciu", "nombres", "apellidos", "fecha_nacimiento"):
+            if not _datos_validos(resultado.get(campo)) and _datos_validos(mejor_doc.get(campo)):
+                resultado[campo] = mejor_doc[campo]
+
+    if not all(_datos_validos(resultado.get(campo)) for campo in ("nombres", "apellidos", "fecha_nacimiento")):
+        datos_sesiones = _extraer_datos_personales_desde_sesiones(resultado["ciu"] or ciu or "")
+        for campo in ("ciu", "nombres", "apellidos", "fecha_nacimiento"):
+            if not _datos_validos(resultado.get(campo)) and _datos_validos(datos_sesiones.get(campo)):
+                resultado[campo] = datos_sesiones[campo]
+
+    return resultado
 
 
 # ═══════════════════════════════════════════════════════════════════════

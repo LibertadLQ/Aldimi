@@ -282,7 +282,6 @@ async function procesarMensajeUsuario(mensaje) {
         respuesta_partes.push(`⚠️  Alertas clínicas: ${alertas.length}`);
       }
       
-      respuesta_partes.push(`\n¿Confirmar registro? (s/n):`);
       agregarMensaje(respuesta_partes.join('\n'), 'bot');
     } else {
       console.log(`[BUSQUEDA] ❌ No encontrado en caché, consultando backend...`);
