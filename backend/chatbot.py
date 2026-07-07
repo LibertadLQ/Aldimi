@@ -559,7 +559,7 @@ def construir_respuesta_expediente(registro: Dict[str, Any], compacto: bool = Fa
             apellidos = datos.get("apellidos", "NO_DETECTADO")
             lineas.append(f"Nombre: {apellidos} {nombres}".strip())
             lineas.append(f"Fecha nac.: {datos.get('fecha_nacimiento', 'NO_DETECTADO')}")
-        lineas.append("¿Confirmar registro? (s/n):")
+        
         return "\n".join(lineas)
  
     lineas = [f"Expediente {ciu}:"]
