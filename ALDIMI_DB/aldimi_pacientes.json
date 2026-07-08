@@ -1,6 +1,6 @@
 {
   "sesion": {
-    "ultima_actualizacion": "2026-07-08T14:57:22.354645",
+    "ultima_actualizacion": "2026-07-08T15:25:01.616300",
     "archivo": "aldimi_pacientes.json"
   },
   "pacientes": {
@@ -4074,9 +4074,9 @@
       "ciu": "NO_DETECTADO",
       "datos_personales": {
         "ciu": "",
-        "nombres": "; ’ Prenombres",
-        "apellidos": "IDENTIFICACION YESTADO CIVIL",
-        "fecha_nacimiento": "12/09/2004"
+        "nombres": "s a",
+        "apellidos": "o ALLENDE re",
+        "fecha_nacimiento": "08/15/1951"
       },
       "informes_laboratorio": [],
       "alertas_clinicas": [],
@@ -7048,10 +7048,66 @@
             }
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-08T15:23:12.525739",
+          "timestamp": "2026-07-08T15:23:12.525739",
+          "fuente": "upload",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\ocr_f2903b4a472b4f458cfa0782e004c503.png",
+          "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260708_152312_ocr_f2903b4a472b4f458cfa0782e004c503.png",
+          "tipo_documento": "DNI_PERU",
+          "texto_crudo": "Fuctetn0 SACONAL DEDENTEACION YES =\nBOCUMENTONAGONALDEDENTDAD.  — 42954703-4\n™ Primer Apellido\no ALLENDE re\n4 PS Segundo Apellido 4 2\nOe\n5 ABARCA wr\n= = Gi Prenombres a4\naf ‘= ASENCION TIMONEL\n3 4\na e Sexo Nacionalidad Fecha de Nacimiento\ng . 389032 M PER 15 08 1951\nEstado Civil Fecha de Emision\ni CASADO 15 09 2022\nSe Nede Tarjeta Fecha de Caduciciad\n0201141554 NO CADUCA",
+          "campos": {
+            "ciu": "NO_DETECTADO",
+            "nombres": "s a",
+            "apellidos": "o ALLENDE re",
+            "fecha_nacimiento": "08/15/1951",
+            "tipo": "DNI_PERU",
+            "cnn_prediccion": {
+              "clase_predicha": "DNI_PERU",
+              "probabilidades": {
+                "LAB_REPORT": 0.0024,
+                "DNI_PERU": 0.986,
+                "DNI_USA": 0.0024,
+                "INFORME_MEDICO": 0.0024,
+                "UNKNOWN": 0.0066
+              },
+              "confianza": 0.986
+            }
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-08T15:23:31.159555",
+          "timestamp": "2026-07-08T15:23:31.159555",
+          "fuente": "upload",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\ocr_675b64bdb64040cc97ce2783717565e7.png",
+          "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260708_152331_ocr_675b64bdb64040cc97ce2783717565e7.png",
+          "tipo_documento": "DNI_PERU",
+          "texto_crudo": "Fuctetn0 SACONAL DEDENTEACION YES =\nBOCUMENTONAGONALDEDENTDAD.  — 42954703-4\n™ Primer Apellido\no ALLENDE re\n4 PS Segundo Apellido 4 2\nOe\n5 ABARCA wr\n= = Gi Prenombres a4\naf ‘= ASENCION TIMONEL\n3 4\na e Sexo Nacionalidad Fecha de Nacimiento\ng . 389032 M PER 15 08 1951\nEstado Civil Fecha de Emision\ni CASADO 15 09 2022\nSe Nede Tarjeta Fecha de Caduciciad\n0201141554 NO CADUCA",
+          "campos": {
+            "ciu": "NO_DETECTADO",
+            "nombres": "s a",
+            "apellidos": "o ALLENDE re",
+            "fecha_nacimiento": "08/15/1951",
+            "tipo": "DNI_PERU",
+            "cnn_prediccion": {
+              "clase_predicha": "DNI_PERU",
+              "probabilidades": {
+                "LAB_REPORT": 0.0024,
+                "DNI_PERU": 0.986,
+                "DNI_USA": 0.0024,
+                "INFORME_MEDICO": 0.0024,
+                "UNKNOWN": 0.0066
+              },
+              "confianza": 0.986
+            }
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-07T00:53:19.779779",
-      "actualizado_en": "2026-07-08T13:33:49.913405"
+      "actualizado_en": "2026-07-08T15:23:31.159555"
     },
     "290166": {
       "ciu": "290166",
@@ -15833,8 +15889,8 @@
       "datos_personales": {
         "ciu": "42951703",
         "tipo_documento": "DNI",
-        "nombres": "ASENCION",
-        "apellidos": "ALLENDE ABARCA",
+        "nombres": "assencion timonel",
+        "apellidos": "ALLENDE",
         "fecha_nacimiento": "08/15/1951"
       },
       "informes_laboratorio": [
@@ -15847,9 +15903,157 @@
             "pruebas": [],
             "alertas_detectadas": []
           }
+        },
+        {
+          "fecha_carga": "2026-07-08T15:25:01.616278",
+          "registrado_en": "2026-07-08T15:25:01.616288",
+          "pruebas": [
+            {
+              "nombre": "Hocebugned Soz Tor,",
+              "valor": 240,
+              "unidad": "",
+              "referencia": "",
+              "flag": ""
+            },
+            {
+              "nombre": "Sodio (Na)",
+              "valor": 14,
+              "unidad": "",
+              "referencia": "",
+              "flag": "L"
+            },
+            {
+              "nombre": "Lactascia Mifos",
+              "valor": 11,
+              "unidad": "",
+              "referencia": "",
+              "flag": ""
+            },
+            {
+              "nombre": "Mematocrto",
+              "valor": 44.4,
+              "unidad": "",
+              "referencia": "",
+              "flag": ""
+            },
+            {
+              "nombre": "Vou Un A",
+              "valor": 0.6,
+              "unidad": "",
+              "referencia": "",
+              "flag": ""
+            },
+            {
+              "nombre": "Row -So An A",
+              "valor": 3,
+              "unidad": "",
+              "referencia": "",
+              "flag": ""
+            },
+            {
+              "nombre": "Eosinófilos (EOS)",
+              "valor": 3,
+              "unidad": "FA",
+              "referencia": "",
+              "flag": ""
+            },
+            {
+              "nombre": "Abastonados (Cayados)",
+              "valor": 6,
+              "unidad": "A",
+              "referencia": "",
+              "flag": ""
+            }
+          ],
+          "alertas_detectadas": [
+            {
+              "prueba": "Sodio (Na)",
+              "valor": 14,
+              "tipo": "BAJO [L]",
+              "unidad": "",
+              "referencia": ""
+            }
+          ],
+          "campos": {
+            "pruebas": [
+              {
+                "nombre": "Hocebugned Soz Tor,",
+                "valor": 240,
+                "unidad": "",
+                "referencia": "",
+                "flag": ""
+              },
+              {
+                "nombre": "Sodio (Na)",
+                "valor": 14,
+                "unidad": "",
+                "referencia": "",
+                "flag": "L"
+              },
+              {
+                "nombre": "Lactascia Mifos",
+                "valor": 11,
+                "unidad": "",
+                "referencia": "",
+                "flag": ""
+              },
+              {
+                "nombre": "Mematocrto",
+                "valor": 44.4,
+                "unidad": "",
+                "referencia": "",
+                "flag": ""
+              },
+              {
+                "nombre": "Vou Un A",
+                "valor": 0.6,
+                "unidad": "",
+                "referencia": "",
+                "flag": ""
+              },
+              {
+                "nombre": "Row -So An A",
+                "valor": 3,
+                "unidad": "",
+                "referencia": "",
+                "flag": ""
+              },
+              {
+                "nombre": "Eosinófilos (EOS)",
+                "valor": 3,
+                "unidad": "FA",
+                "referencia": "",
+                "flag": ""
+              },
+              {
+                "nombre": "Abastonados (Cayados)",
+                "valor": 6,
+                "unidad": "A",
+                "referencia": "",
+                "flag": ""
+              }
+            ],
+            "alertas_detectadas": [
+              {
+                "prueba": "Sodio (Na)",
+                "valor": 14,
+                "tipo": "BAJO [L]",
+                "unidad": "",
+                "referencia": ""
+              }
+            ]
+          }
         }
       ],
-      "alertas_clinicas": []
+      "alertas_clinicas": [
+        {
+          "prueba": "Sodio (Na)",
+          "valor": 14,
+          "tipo": "BAJO [L]",
+          "unidad": "",
+          "referencia": ""
+        }
+      ]
     },
     "278941": {
       "ciu": "278941",
@@ -16427,6 +16631,103 @@
             }
           ],
           "registrado_en": "2026-07-08T12:22:29.408329"
+        },
+        {
+          "pruebas": [
+            {
+              "nombre": "Hocebugned Soz Tor,",
+              "valor": 240.0,
+              "unidad": "",
+              "flag": "",
+              "referencia": ""
+            },
+            {
+              "nombre": "Sodio (Na)",
+              "valor": 14.0,
+              "unidad": "",
+              "flag": "L",
+              "referencia": ""
+            },
+            {
+              "nombre": "Lactascia Mifos",
+              "valor": 11.0,
+              "unidad": "",
+              "flag": "",
+              "referencia": ""
+            },
+            {
+              "nombre": "Mematocrto",
+              "valor": 44.4,
+              "unidad": "",
+              "flag": "",
+              "referencia": ""
+            },
+            {
+              "nombre": "Vou Un A",
+              "valor": 0.6,
+              "unidad": "",
+              "flag": "",
+              "referencia": ""
+            },
+            {
+              "nombre": "Row -So An A",
+              "valor": 3.0,
+              "unidad": "",
+              "flag": "",
+              "referencia": ""
+            },
+            {
+              "nombre": "Eosinófilos (EOS)",
+              "valor": 3.0,
+              "unidad": "FA",
+              "flag": "",
+              "referencia": ""
+            },
+            {
+              "nombre": "Basoflos",
+              "valor": null,
+              "unidad": "",
+              "flag": "",
+              "referencia": ""
+            },
+            {
+              "nombre": "Meelocitos",
+              "valor": null,
+              "unidad": "Z",
+              "flag": "",
+              "referencia": ""
+            },
+            {
+              "nombre": "Abastonados (Cayados)",
+              "valor": 6.0,
+              "unidad": "A",
+              "flag": "",
+              "referencia": ""
+            },
+            {
+              "nombre": "Sasoflos",
+              "valor": null,
+              "unidad": "waa",
+              "flag": "",
+              "referencia": ""
+            }
+          ],
+          "alertas_detectadas": [
+            {
+              "prueba": "Sodio (Na)",
+              "valor": 14.0,
+              "unidad": "",
+              "tipo": "BAJO",
+              "metodo": "default_ref",
+              "referencia": "",
+              "critica": true,
+              "severity": "critical",
+              "suggestion": "Emergencia; posible convulsiones o edema cerebral. Contactar médico.",
+              "reason": "default_ref",
+              "title": "Sodio Crítico"
+            }
+          ],
+          "registrado_en": "2026-07-08T15:24:48.044285"
         }
       ],
       "alertas_clinicas": [
@@ -16454,6 +16755,19 @@
           "metodo": "default_ref",
           "referencia": "",
           "critica": true
+        },
+        {
+          "prueba": "Sodio (Na)",
+          "valor": 14.0,
+          "unidad": "",
+          "tipo": "BAJO",
+          "metodo": "default_ref",
+          "referencia": "",
+          "critica": true,
+          "severity": "critical",
+          "suggestion": "Emergencia; posible convulsiones o edema cerebral. Contactar médico.",
+          "reason": "default_ref",
+          "title": "Sodio Crítico"
         }
       ],
       "documentos_ocr": [
@@ -16767,10 +17081,154 @@
             }
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-08T15:24:48.044285",
+          "timestamp": "2026-07-08T15:24:48.044285",
+          "fuente": "upload",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\ocr_40f537ce45974a0482c1197b402eaf77.png",
+          "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260708_152448_ocr_40f537ce45974a0482c1197b402eaf77.png",
+          "tipo_documento": "LAB_REPORT",
+          "texto_crudo": "x ORDEN + 23021 A aed\nSP EABORATORIO CLiNicO FECHA : 1142028 HORA: 6.36 AM Poginet [ml pee ce\nCCV LAB - doa\nle a Ca al Cala\nnase [werooo[_resavoo [wwe ~—— asonerenenent\nHEMATOLOGIA\nHEMOGRAMA AUTOMATIZADO\nRECUENTO CELULAR\nhocebugned soz tor, 240-600\nLENCOCTOS: a9 wow 440-10.00\n(PLAQUETAS rete ws 1 1-490\n(HEMOGLOGINA / HEMATOCRITO\n(MEMOGLORENA 1440 on Varores: 14-18\nMajernnr 42-16\nLactascia Mifos: 11-16\nMecien Nacien 14-24\nMEMATOCRTO 44.40 * ‘Varones: 42 - 52\nMujeres: 37-47\nLactancis Nifong: 94-43\nNecen Nackion 44-04\nCONSTANTES CORPUSCULARES\nvou un a 0.6\n<a 2370 Pr) 2-0\ncom 40 ow 2-8\nANCHO DE DISTRIBUCION DE HEMATIES\nROW -SO an a 3-52\nfow-cv 1410\nFORMULA DIFERENCIAL PORCENTUAL\nEOSINOFILOS 3 FA es\nBASOFLOS 0 3 a\nmeELocITOs 0 Z\nMETAMIELOCITOS ° .\nABASTONADOS 6 A\nborane «4 “1 * W-72\nUNFOCITOS » * 2-48\nMONOCITOS ‘ _ a\nomros e *\nRECUENTO TOTAL (100%) \"0 =\nRATIO NEUTROFILOS / LINFOCITOS\naR 203 e-313\nFORMULA DIFERENCIAL ABSOLUTA\nEOSINCFLOS O16 we 00-500\nSASOFLOS 00 waa\nMIELOCITOS om reed\nMETAMIELOCITOS aco frend\nABASTONADOS 000 won",
+          "campos": {
+            "ciu": "1142028",
+            "pruebas": [
+              {
+                "nombre": "Hocebugned Soz Tor,",
+                "valor": 240.0,
+                "unidad": "",
+                "flag": "",
+                "referencia": ""
+              },
+              {
+                "nombre": "Sodio (Na)",
+                "valor": 14.0,
+                "unidad": "",
+                "flag": "L",
+                "referencia": ""
+              },
+              {
+                "nombre": "Lactascia Mifos",
+                "valor": 11.0,
+                "unidad": "",
+                "flag": "",
+                "referencia": ""
+              },
+              {
+                "nombre": "Mematocrto",
+                "valor": 44.4,
+                "unidad": "",
+                "flag": "",
+                "referencia": ""
+              },
+              {
+                "nombre": "Vou Un A",
+                "valor": 0.6,
+                "unidad": "",
+                "flag": "",
+                "referencia": ""
+              },
+              {
+                "nombre": "Row -So An A",
+                "valor": 3.0,
+                "unidad": "",
+                "flag": "",
+                "referencia": ""
+              },
+              {
+                "nombre": "Eosinófilos (EOS)",
+                "valor": 3.0,
+                "unidad": "FA",
+                "flag": "",
+                "referencia": ""
+              },
+              {
+                "nombre": "Basoflos",
+                "valor": null,
+                "unidad": "",
+                "flag": "",
+                "referencia": ""
+              },
+              {
+                "nombre": "Meelocitos",
+                "valor": null,
+                "unidad": "Z",
+                "flag": "",
+                "referencia": ""
+              },
+              {
+                "nombre": "Abastonados (Cayados)",
+                "valor": 6.0,
+                "unidad": "A",
+                "flag": "",
+                "referencia": ""
+              },
+              {
+                "nombre": "Sasoflos",
+                "valor": null,
+                "unidad": "waa",
+                "flag": "",
+                "referencia": ""
+              }
+            ],
+            "alertas": [
+              {
+                "prueba": "Sodio (Na)",
+                "valor": 14.0,
+                "tipo": "BAJO"
+              }
+            ],
+            "alertas_criticas": [
+              {
+                "prueba": "Sodio (Na)",
+                "valor": 14.0,
+                "unidad": "",
+                "tipo": "BAJO",
+                "metodo": "default_ref",
+                "referencia": "",
+                "critica": true,
+                "severity": "critical",
+                "suggestion": "Emergencia; posible convulsiones o edema cerebral. Contactar médico.",
+                "reason": "default_ref",
+                "title": "Sodio Crítico",
+                "severidad": "CRÍTICA"
+              }
+            ],
+            "tipo": "LAB_REPORT",
+            "informacion_clinica": {},
+            "interpretacion": null,
+            "alertas_detectadas": [
+              {
+                "prueba": "Sodio (Na)",
+                "valor": 14.0,
+                "unidad": "",
+                "tipo": "BAJO",
+                "metodo": "default_ref",
+                "referencia": "",
+                "critica": true,
+                "severity": "critical",
+                "suggestion": "Emergencia; posible convulsiones o edema cerebral. Contactar médico.",
+                "reason": "default_ref",
+                "title": "Sodio Crítico"
+              }
+            ],
+            "cnn_prediccion": {
+              "clase_predicha": "LAB_REPORT",
+              "probabilidades": {
+                "LAB_REPORT": 0.7784,
+                "DNI_PERU": 0.0388,
+                "DNI_USA": 0.0388,
+                "INFORME_MEDICO": 0.0388,
+                "UNKNOWN": 0.1053
+              },
+              "confianza": 0.7784
+            }
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-08T12:12:36.359472",
-      "actualizado_en": "2026-07-08T12:22:29.408329"
+      "actualizado_en": "2026-07-08T15:24:48.044285"
     },
     "42388604": {
       "ciu": "42388604",
