@@ -12309,5 +12309,33 @@
       }
     },
     "advertencia": null
+  },
+  {
+    "id": "ocr_2026-07-08T13:33:49.913405",
+    "timestamp": "2026-07-08T13:33:49.913405",
+    "fuente": "upload",
+    "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\ocr_26c6d39c1dce4d838f155d90ebbb3d7d.png",
+    "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260708_133349_ocr_26c6d39c1dce4d838f155d90ebbb3d7d.png",
+    "tipo_documento": "DNI_PERU",
+    "texto_crudo": "2g REPUBLICA DEL PERU cul\nREGISTRO NACIONAL DE IDENTIFICACION YESTADO CIVIL ~,~,--.. ,\n= DOCUMENTO NACIONAL DE IDENTIDAD 4747580\n= —\nRANADOS ALLENDE\n; ’ Prenombres\n=e ELIPE\n- Sexo Nacionalidad Fecha de nacimiento a=\n” PER —- 09. 12 2004 ed\nEstado civil - z\nSOLTERO\n09032034 '",
+    "campos": {
+      "ciu": "NO_DETECTADO",
+      "nombres": "; ’ Prenombres",
+      "apellidos": "IDENTIFICACION YESTADO CIVIL",
+      "fecha_nacimiento": "12/09/2004",
+      "tipo": "DNI_PERU",
+      "cnn_prediccion": {
+        "clase_predicha": "DNI_PERU",
+        "probabilidades": {
+          "LAB_REPORT": 0.0024,
+          "DNI_PERU": 0.986,
+          "DNI_USA": 0.0024,
+          "INFORME_MEDICO": 0.0024,
+          "UNKNOWN": 0.0066
+        },
+        "confianza": 0.986
+      }
+    },
+    "advertencia": null
   }
 ]

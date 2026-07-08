@@ -676,6 +676,56 @@ def generar_recomendaciones(registro: Dict[str, Any]) -> List[str]:
     return recomendaciones
 
 
+def construir_respuesta_expediente(registro: Dict[str, Any], compacto: bool = False) -> str:
+    """
+    Arma el mensaje completo del expediente: datos básicos + evolución + recomendaciones.
+    
+    Parámetros:
+        registro: diccionario con datos del paciente
+        compacto: si True, devuelve solo datos básicos
+    
+    Retorna: string formateado con la información del expediente
+    """
+    ciu = registro.get("ciu", "")
+    datos = _extraer_datos_personales_desde_registro(registro, ciu)
+
+    if compacto:
+        lineas = [f"CIU: {ciu}"]
+        if datos:
+            nombres = datos.get("nombres", "NO_DETECTADO")
+            apellidos = datos.get("apellidos", "NO_DETECTADO")
+            lineas.append(f"Nombre: {apellidos} {nombres}".strip())
+            lineas.append(f"Fecha nac.: {datos.get('fecha_nacimiento', 'NO_DETECTADO')}")
+        return "\n".join(lineas)
+
+    lineas = [f"Expediente {ciu}:"]
+    if datos:
+        nombres = datos.get("nombres", "NO_DETECTADO")
+        apellidos = datos.get("apellidos", "NO_DETECTADO")
+        lineas.append(f"• Paciente: {nombres} {apellidos}")
+
+    etiqueta, explicacion = resumen_evolucion(registro)
+    etiquetas_legibles = {
+        "favorable": "Evolución favorable ✅",
+        "estable": "Evolución estable ➖",
+        "desfavorable": "Evolución desfavorable ⚠️",
+        "sin_datos_suficientes": "Aún sin datos suficientes para evaluar evolución",
+    }
+    lineas.append(f"• {etiquetas_legibles[etiqueta]}")
+    lineas.append(explicacion)
+
+    recomendaciones = generar_recomendaciones(registro)
+    if recomendaciones:
+        lineas.append("Recomendaciones orientativas:")
+        lineas.extend(recomendaciones)
+        lineas.append(
+            "Estas recomendaciones son informativas y no sustituyen la "
+            "evaluación de un profesional de salud."
+        )
+    
+    return "\n".join(lineas)
+
+
 def construir_respuesta_salud_otro_usuario(registro: Dict[str, Any], ciu: str) -> str:
     """
     Construye una respuesta tranquilizadora/equilibrada sobre la salud de otra persona.
@@ -760,48 +810,7 @@ def construir_respuesta_salud_otro_usuario(registro: Dict[str, Any], ciu: str) -
     
     return "\n".join(lineas)
 
-    """Arma el mensaje completo: datos básicos + evolución + recomendaciones."""
-    ciu = registro.get("ciu", "")
-    datos = _extraer_datos_personales_desde_registro(registro, ciu)
- 
-    if compacto:
-        lineas = [f"CIU: {ciu}"]
-        if datos:
-            nombres = datos.get("nombres", "NO_DETECTADO")
-            apellidos = datos.get("apellidos", "NO_DETECTADO")
-            lineas.append(f"Nombre: {apellidos} {nombres}".strip())
-            lineas.append(f"Fecha nac.: {datos.get('fecha_nacimiento', 'NO_DETECTADO')}")
-        
-        return "\n".join(lineas)
- 
-    lineas = [f"Expediente {ciu}:"]
-    if datos:
-        nombres = datos.get("nombres", "NO_DETECTADO")
-        apellidos = datos.get("apellidos", "NO_DETECTADO")
-        lineas.append(f"• Paciente: {nombres} {apellidos}")
- 
-    etiqueta, explicacion = resumen_evolucion(registro)
-    etiquetas_legibles = {
-        "favorable": "Evolución favorable ✅",
-        "estable": "Evolución estable ➖",
-        "desfavorable": "Evolución desfavorable ⚠️",
-        "sin_datos_suficientes": "Aún sin datos suficientes para evaluar evolución",
-    }
-    lineas.append(f"• {etiquetas_legibles[etiqueta]}")
-    lineas.append(explicacion)
- 
-    recomendaciones = generar_recomendaciones(registro)
-    if recomendaciones:
-        lineas.append("Recomendaciones orientativas:")
-        lineas.extend(recomendaciones)
-        lineas.append(
-            "Estas recomendaciones son informativas y no sustituyen la "
-            "evaluación de un profesional de salud."
-        )
- 
-    return "\n".join(lineas)
- 
- 
+
 # ═══════════════════════════════════════════════════════════════════════
 # 7. FUNCIÓN PRINCIPAL — llamada desde el endpoint POST /chat en main.py
 # ═══════════════════════════════════════════════════════════════════════

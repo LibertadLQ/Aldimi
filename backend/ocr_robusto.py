@@ -47,6 +47,7 @@ except ImportError:
 # ═══════════════════════════════════════════════════════════════════════════════
 
 from backend.config import get_scan_limit
+from backend.alertas import evaluar_pruebas
 
 OCR_LANG = "spa+eng"
 THRESHOLD = 150
@@ -740,7 +741,11 @@ _LAB_SKIP = re.compile(
 )
 
 _LAB_NOISE_RE = re.compile(
-    r"(página|registro|cmp|rne|médico|patólogo|doctor|laboratorio|qualab|clinical|clinico|patient|cliente|firma|signature)",
+    r"(página|registro|cmp|rne|médico|patólogo|doctor|laboratorio|qualab|clinical|clinico|patient|cliente|firma|signature|order no|receiving date|adm|age|yr|mail|bill|accession|ward|specimen|method|referred by|ref\.|attended|attendant|collection|report date|accepted|finalized|status|"
+    r"hombres?|mujeres?|var[oó]n|varones|femenino|masculino|ni[ñn]os?|ni[ñn]as?|"
+    r"reci[eé]n\s*nac|neonat|lactante|lactancia|adultos?|preescolar|escolar|"
+    r"embaraz|premenopaus|posmenopaus|poblaci[oó]n|rango\s*poblacional|"
+    r"gestante|puerperio)",
     re.IGNORECASE,
 )
 
@@ -750,6 +755,46 @@ def _es_ruido_lab_nombre(raw: str) -> bool:
         return False
     return bool(_LAB_NOISE_RE.search(raw))
 
+
+def _nombre_lab_es_coherente(nombre: str) -> bool:
+    """Rechaza nombres que parecen ruido de OCR (muy pocas vocales, muy corto, sin match conocido).
+    Retorna True si el nombre parece válido, False si debe descartarse.
+    """
+    if not nombre or len(nombre.strip()) < 3:
+        return False
+    
+    limpio = re.sub(r"[^a-zA-Záéíóúñ]", "", nombre)
+    if len(limpio) < 3:
+        return False
+    
+    # Palabras que indican filas de referencia poblacional (nunca son nombres de tests)
+    poblacional_keywords = [
+        r"hombr", r"mujer", r"nac", r"lactancia?", r"embaraz",
+        r"preescolar", r"escolar", r"adulto", r"poblac"
+    ]
+    
+    # Si el nombre contiene palabras de referencia poblacional, rechazar
+    nombre_lower = nombre.lower()
+    for kw in poblacional_keywords:
+        if re.search(kw, nombre_lower):
+            # Excepción: "Nacimiento" podría ser un test, pero "recién nacido" no
+            if "nacimiento" not in nombre_lower and "nac" in kw:
+                return False
+            if "nac" not in kw:  # Para otros keywords, rechazo directo
+                return False
+    
+    # Ratio de vocales: OCR basura típicamente tiene <30-40% de vocales
+    vocales = sum(1 for c in limpio.lower() if c in "aeiouáéíóú")
+    ratio = vocales / len(limpio) if len(limpio) > 0 else 0
+    
+    # Verificar ratio de vocales (métrica fundamental de coherencia)
+    if ratio < 0.35:  # Umbral conservador
+        return False
+    
+    # Si pasa todas las validaciones anteriores, aceptar
+    # (probablemente es un test coherente)
+    return True
+
 _LAB_NUM_RE = re.compile(
     r"""
     ^([\wÁÉÍÓÚÑáéíóúñ()\[\]{}#\.\-/,+%°\s]{3,80}?)
@@ -757,19 +802,45 @@ _LAB_NUM_RE = re.compile(
     (\d+(?:[.,]\d+)?)
     \s*(?:\[([HLhl]+)\])?
     \s*([a-zA-Zµ%°][a-zA-Z0-9µ%/^.\-]{0,20})?
-    (?:[^\d]*([<>]?\s*[\d]+(?:[.,]\d+)?\s*[-–]\s*[\d]+(?:[.,]\d+)?|[<>]\s*[\d]+(?:[.,]\d+)?))?
+    (?:\s*\#)?
+    \s*(?:\[(\d+(?:[.,]\d+)?)\s*[-–]\s*(\d+(?:[.,]\d+)?)\])?
+    \s*(?:\((\d+(?:[.,]\d+)?)\s*[-–]\s*(\d+(?:[.,]\d+)?)\))?
     """,
     re.VERBOSE | re.IGNORECASE,
 )
 
+def detectar_subtipo_lab(texto: str) -> str:
+    """Detecta si es LAB_NUMERICO (tabla de valores) o INFORME_TEXTO (narrativo/diagnóstico).
+    Retorna 'LAB_NUMERICO' si hay proporción significativa de líneas numéricas,
+    'INFORME_TEXTO' si es principalmente texto corrido.
+    """
+    lineas = [l.strip() for l in (texto or "").split("\n") if len(l.strip()) > 3]
+    if not lineas:
+        return "INFORME_TEXTO"
+    
+    # Contar líneas que parecen entradas numéricas de laboratorio
+    # (líneas que tienen el patrón Nombre: Número Unidad [Referencia])
+    numericas = 0
+    for l in lineas:
+        # Usa los mismos regex que procesar_lab
+        if _LAB_NUM_RE.search(l) or _LAB_TABLE_RE.match(l):
+            numericas += 1
+    
+    ratio = numericas / len(lineas) if len(lineas) > 0 else 0
+    # Si >15% de líneas son numéricas, es un reporte numérico
+    return "LAB_NUMERICO" if ratio >= 0.15 else "INFORME_TEXTO"
+
+
 _LAB_TABLE_RE = re.compile(
     r"""
-    ^([A-Za-zÁÉÍÓÚÑáéíóúñ][A-Za-zÁÉÍóúñ\s\(\)%]{2,60}?)
+    ^([A-Za-zÁÉÍÓÚÑáéíóúñ][A-Za-zÁÉÍóúñ\s\(\)\-/,.\s]{2,80}?)
     \s+
     (\d+(?:[.,]\d+)?)
     \s*(?:\[([HLhl]+)\])?
-    \s*([\d]+(?:[.,]\d+)?\s*[-–]\s*[\d]+(?:[.,]\d+)?)?
-    \s*([a-zA-Z%µ][a-zA-Z0-9%/µ.\-]{0,15})?
+    \s*(?:\#)?
+    \s*([a-zA-Z%µ][a-zA-Z0-9%/µ.\-]{0,25})?
+    \s*(?:\[(\d+(?:[.,]\d+)?)\s*[-–]\s*(\d+(?:[.,]\d+)?)\])?
+    \s*(?:\((\d+(?:[.,]\d+)?)\s*[-–]\s*(\d+(?:[.,]\d+)?)\))?
     """,
     re.VERBOSE | re.IGNORECASE,
 )
@@ -1300,6 +1371,9 @@ def procesar_lab(texto: str) -> Dict[str, Any]:
             if len(nombre_raw) < 3 or _es_ruido_lab_nombre(nombre_raw):
                 continue
             nombre = _norm_nombre_lab(nombre_raw)
+            # VALIDACIÓN DE COHERENCIA: rechazar nombres con OCR basura
+            if not _nombre_lab_es_coherente(nombre):
+                continue
             key = nombre.lower()
             if key in seen:
                 continue
@@ -1311,7 +1385,12 @@ def procesar_lab(texto: str) -> Dict[str, Any]:
             
             flag = (m.group(3) or "").upper() or ""
             unidad = (m.group(4) or "").strip() or ""
-            ref = (m.group(5) or "").strip() or ""
+            # Extraer referencia: primero de corchetes [70-140], luego de paréntesis (70-140)
+            ref = ""
+            if m.group(5) and m.group(6):  # Referencia en corchetes
+                ref = f"{m.group(5)}-{m.group(6)}"
+            elif m.group(7) and m.group(8):  # Referencia en paréntesis
+                ref = f"{m.group(7)}-{m.group(8)}"
             
             seen.add(key)
             res["pruebas"].append({
@@ -1346,6 +1425,9 @@ def procesar_lab(texto: str) -> Dict[str, Any]:
             if len(nombre_raw) < 3 or _es_ruido_lab_nombre(nombre_raw):
                 continue
             nombre = _norm_nombre_lab(nombre_raw)
+            # VALIDACIÓN DE COHERENCIA: rechazar nombres con OCR basura
+            if not _nombre_lab_es_coherente(nombre):
+                continue
             key = nombre.lower()
             if key in seen:
                 continue
@@ -1354,8 +1436,13 @@ def procesar_lab(texto: str) -> Dict[str, Any]:
             except Exception:
                 continue
             flag = (m.group(3) or "").upper() or ""
-            unidad = (m.group(5) or "").strip() or ""
-            ref = (m.group(4) or "").strip() or ""
+            unidad = (m.group(4) or "").strip() or ""
+            # Extraer referencia: primero de corchetes, luego de paréntesis
+            ref = ""
+            if m.group(5) and m.group(6):  # Referencia en corchetes
+                ref = f"{m.group(5)}-{m.group(6)}"
+            elif m.group(7) and m.group(8):  # Referencia en paréntesis
+                ref = f"{m.group(7)}-{m.group(8)}"
             seen.add(key)
             res["pruebas"].append({
                 "nombre": nombre,
@@ -1383,6 +1470,34 @@ def procesar_lab(texto: str) -> Dict[str, Any]:
     
     detected_alerts = detectar_alertas(res["pruebas"])
 
+    # Enriquecer alertas con severidad y sugerencias desde backend.alertas
+    try:
+        enriched = evaluar_pruebas(res["pruebas"])
+        for e in enriched:
+            matched = False
+            for a in detected_alerts:
+                if str(a.get("prueba", "")).strip().lower() == str(e.get("prueba", "")).strip().lower():
+                    # añadir campos de la evaluación
+                    a.update({
+                        "severity": e.get("severity"),
+                        "suggestion": e.get("suggestion"),
+                        "reason": e.get("reason"),
+                        "title": e.get("title"),
+                    })
+                    matched = True
+                    break
+            if not matched:
+                detected_alerts.append({
+                    "prueba": e.get("prueba"),
+                    "valor": e.get("valor"),
+                    "tipo": e.get("tipo"),
+                    "severity": e.get("severity"),
+                    "suggestion": e.get("suggestion"),
+                    "title": e.get("title"),
+                })
+    except Exception:
+        pass
+
     # Sincronizar el flag inferido por rango o texto de vuelta a cada prueba individual.
     # Si OCR no detectó [H]/[L] explícito pero la alerta fue detectada por rango,
     # el campo `flag` también debe actualizarse para que otros componentes
@@ -1392,8 +1507,9 @@ def procesar_lab(texto: str) -> Dict[str, Any]:
         for a in detected_alerts
     }
     for prueba in res["pruebas"]:
-        if not prueba.get("flag"):
-            tipo = alertas_por_nombre.get(str(prueba.get("nombre", "")).strip().lower())
+        prueba_nombre = str(prueba.get("nombre", "")).strip().lower()
+        if not prueba.get("flag") and prueba_nombre in alertas_por_nombre:
+            tipo = alertas_por_nombre[prueba_nombre]
             if tipo == "ALTO":
                 prueba["flag"] = "H"
             elif tipo == "BAJO":

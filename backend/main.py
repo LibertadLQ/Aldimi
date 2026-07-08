@@ -206,7 +206,19 @@ def obtener_paciente(ciu: str) -> Dict[str, Any]:
 
     if ciu not in bd:
         raise HTTPException(status_code=404, detail=f"No se encontró un paciente con CIU {ciu}.")
-    return bd[ciu]
+    paciente = bd[ciu]
+    # Asegurar que siempre exista la sección de informes de laboratorio
+    if "informes_laboratorio" not in paciente:
+        paciente["informes_laboratorio"] = []
+
+    # Añadir resumen ligero de laboratorio para respuestas rápidas
+    informes = paciente.get("informes_laboratorio", []) or []
+    lab_summary = {
+        "count": len(informes),
+        "last": informes[-1] if len(informes) > 0 else None,
+    }
+    paciente["lab_summary"] = lab_summary
+    return paciente
 
 
 @app.post("/pacientes/guardar")
