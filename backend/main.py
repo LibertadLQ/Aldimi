@@ -19,6 +19,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 from backend.chatbot import procesar_mensaje
+from backend.config import get_scan_limit
 from backend.db import cargar_bd, guardar_bd
 from backend.expediente import persistir_ocr_resultado, reparar_pacientes_desde_sesiones, sincronizar_carpetas
 from backend.ocr_robusto import procesar_documento as procesar_documento_ocr
@@ -33,6 +34,7 @@ app = FastAPI(
 
 # Indica si la inicialización (escaneo + lectura de BD) ya terminó
 STARTUP_READY = False
+DEFAULT_SCAN_LIMIT = 1
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -90,11 +92,13 @@ async def startup_scan() -> None:
     wait_env = os.environ.get("ALDIMI_WAIT_FOR_SCAN", "0").lower()
     wait_for_scan = wait_env in ("1", "true", "yes")
 
-    default_limit = _read_limit_env("ALDIMI_MAX_IMAGES", 0)
-    max_images_dni = _read_limit_env("ALDIMI_SCAN_DNI", default_limit)
-    max_images_lab = _read_limit_env("ALDIMI_SCAN_LAB", default_limit)
+    # Usar el límite configurado en backend/config.py (SCAN_LIMIT = 1-100)
+    limit = get_scan_limit()
+    max_images_dni = limit
+    max_images_lab = limit
+    global_top = limit
 
-    print(f"[STARTUP] ALDIMI_AUTO_SCAN={auto_scan}, ALDIMI_WAIT_FOR_SCAN={wait_env}, ALDIMI_SCAN_DNI={max_images_dni}, ALDIMI_SCAN_LAB={max_images_lab}, ALDIMI_MAX_IMAGES={default_limit}")
+    print(f"[STARTUP] ALDIMI_AUTO_SCAN={auto_scan}, ALDIMI_WAIT_FOR_SCAN={wait_env}, ALDIMI_SCAN_DNI={max_images_dni}, ALDIMI_SCAN_LAB={max_images_lab}, ALDIMI_MAX_IMAGES={global_top}")
 
     if wait_for_scan:
         print("[STARTUP] Ejecutando escaneo automático de carpetas (modo bloqueante)...")
@@ -217,12 +221,20 @@ async def guardar_paciente(request: PacienteGuardarRequest) -> Dict[str, Any]:
     registro = bd.get(ciu, {})
 
     if tipo_documento == "DNI":
+        def _clean(v):
+            if v is None:
+                return ""
+            s = str(v).strip()
+            if s.upper() == "NO_DETECTADO":
+                return ""
+            return s
+
         registro["datos_personales"] = {
             "ciu": ciu,
             "tipo_documento": tipo_documento,
-            "nombres": campos.get("nombres", "NO_DETECTADO"),
-            "apellidos": campos.get("apellidos", "NO_DETECTADO"),
-            "fecha_nacimiento": campos.get("fecha_nacimiento", "NO_DETECTADO"),
+            "nombres": _clean(campos.get("nombres")),
+            "apellidos": _clean(campos.get("apellidos")),
+            "fecha_nacimiento": _clean(campos.get("fecha_nacimiento")),
         }
     elif tipo_documento == "LAB":
         informe = {

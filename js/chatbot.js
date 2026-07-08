@@ -170,7 +170,7 @@ async function cargarPacientesEnCache() {
 /* Estado conversacional — SOLO controla qué se hace con el
    PRÓXIMO mensaje del usuario. El backend no guarda estado entre
    mensajes (es stateless), así que esto vive aquí en el frontend. */
-let modoConversacion = 'idle'; // 'idle' | 'esperando_ciu_registro' | 'esperando_ciu_expediente'
+let modoConversacion = 'idle'; // 'idle' | 'esperando_ciu_registro' | 'esperando_ciu_expediente' | 'esperando_ciu_alertas'
 
 /* CIU "activo" de la sesión: se rellena cuando el usuario lo da en el
    chat para un registro, y se usa para precargar el campo CIU del
@@ -268,15 +268,46 @@ async function procesarMensajeUsuario(mensaje) {
       
       console.log(`[BUSQUEDA] ✅ Encontrado en caché:`, paciente);
       
+      const nombreLegible = (function(){
+        if (!datos) return 'Nombre no disponible';
+        const n = (datos.nombres && datos.nombres !== 'NO_DETECTADO') ? datos.nombres : '';
+        const a = (datos.apellidos && datos.apellidos !== 'NO_DETECTADO') ? datos.apellidos : '';
+        if (!n && a && a.indexOf(' ') !== -1) {
+          const parts = a.split(' ');
+          const last = parts.pop();
+          return (parts.join(' ') + ' ' + last).trim();
+        }
+        const combined = [n, a].filter(Boolean).join(' ').trim();
+        return combined || 'Nombre no disponible';
+      })();
+      const fechaLegible = (datos && datos.fecha_nacimiento && datos.fecha_nacimiento !== 'NO_DETECTADO') ? datos.fecha_nacimiento : 'Fecha no disponible';
+
       const respuesta_partes = [
         `✅ Datos extraídos:`,
         `   CIU: ${ciuBuscado}`,
-        `   Nombre: ${datos.nombres || 'NO_DETECTADO'} ${datos.apellidos || 'NO_DETECTADO'}`,
-        `   Fecha nac.: ${datos.fecha_nacimiento || 'NO_DETECTADO'}`,
+        `   Nombre: ${nombreLegible}`,
+        `   Fecha nac.: ${fechaLegible}`,
       ];
-      
+
       if (informes.length > 0) {
         respuesta_partes.push(`\n📋 Informes de laboratorio: ${informes.length}`);
+        informes.forEach((inf, idx) => {
+          const fecha = inf.registrado_en ? inf.registrado_en.slice(0, 10) : 'fecha no disponible';
+          respuesta_partes.push(`  Informe ${idx + 1} (${fecha}): ${inf.pruebas?.length || 0} prueba(s)`);
+          (inf.pruebas || []).forEach(prueba => {
+            const nombre = prueba.nombre || 'Prueba sin nombre';
+            const valor = prueba.valor ?? '';
+            const unidad = prueba.unidad ? ` ${prueba.unidad}` : '';
+            const flag = prueba.flag ? ` (${prueba.flag})` : '';
+            respuesta_partes.push(`   • ${nombre}: ${valor}${unidad}${flag}`);
+          });
+          if (inf.alertas_detectadas?.length) {
+            const textoAlertas = inf.alertas_detectadas
+              .map(a => (typeof a === 'object' ? (a.tipo || a.prueba || JSON.stringify(a)) : a))
+              .join(', ');
+            respuesta_partes.push(`   Alertas: ${textoAlertas}`);
+          }
+        });
       }
       if (alertas.length > 0) {
         respuesta_partes.push(`⚠️  Alertas clínicas: ${alertas.length}`);
@@ -288,6 +319,27 @@ async function procesarMensajeUsuario(mensaje) {
       // Si no está en caché, enviar al backend
       await consultarChat('ver expediente', ciuBuscado);
     }
+    return;
+  }
+
+  // ── Paso conversacional: esperando CIU para ALERTAS ──
+  if (modoConversacion === 'esperando_ciu_alertas') {
+    if (!esCiuValido(mensaje)) {
+      agregarMensaje('Ese CIU no parece válido. Intenta de nuevo (ej: 42951703 o W839927).', 'bot');
+      return;
+    }
+    let ciuBuscado = mensaje.trim().toUpperCase();
+    
+    // Normalizar: si viene con letra (ej "W499485"), extraer solo dígitos
+    if (/^[A-Z]+\d+$/.test(ciuBuscado)) {
+      ciuBuscado = ciuBuscado.replace(/[A-Z]/g, '');
+    }
+    
+    modoConversacion = 'idle';
+    
+    // IMPORTANTE: Para alertas, SIEMPRE delegamos al backend (alertas.py).
+    // No usamos caché local; el backend filtra y retorna solo alertas detectadas.
+    await consultarChat('alertas clinicas', ciuBuscado);
     return;
   }
 
@@ -316,6 +368,8 @@ async function consultarChat(mensaje, ciu) {
       modoConversacion = 'esperando_ciu_registro';
     } else if (data.accion === 'pedir_ciu_expediente') {
       modoConversacion = 'esperando_ciu_expediente';
+    } else if (data.accion === 'pedir_ciu_alertas') {
+      modoConversacion = 'esperando_ciu_alertas';
     }
   } catch (e) {
     agregarMensaje(
@@ -757,10 +811,11 @@ async function guardarDatos() {
 
   if (tipoDoc.startsWith('DNI')) {
     tipoDocumento = 'DNI';
+    const _cleanVal = v => (v && v.trim() && v.trim().toUpperCase() !== 'NO_DETECTADO') ? v.trim() : '';
     campos = {
-      nombres: contenedor.querySelector('input[data-campo="nombres"]')?.value.trim() || 'NO_DETECTADO',
-      apellidos: contenedor.querySelector('input[data-campo="apellidos"]')?.value.trim() || 'NO_DETECTADO',
-      fecha_nacimiento: contenedor.querySelector('input[data-campo="fecha_nacimiento"]')?.value.trim() || 'NO_DETECTADO',
+      nombres: _cleanVal(contenedor.querySelector('input[data-campo="nombres"]')?.value || ''),
+      apellidos: _cleanVal(contenedor.querySelector('input[data-campo="apellidos"]')?.value || ''),
+      fecha_nacimiento: _cleanVal(contenedor.querySelector('input[data-campo="fecha_nacimiento"]')?.value || ''),
     };
 
   } else if (tipoDoc === 'LAB_REPORT') {

@@ -46,10 +46,11 @@ except ImportError:
 # SECCIÓN 1: CONFIGURACIÓN Y HELPERS
 # ═══════════════════════════════════════════════════════════════════════════════
 
+from backend.config import get_scan_limit
+
 OCR_LANG = "spa+eng"
 THRESHOLD = 150
-MAX_IMAGES = 0  # Limitador temporal: número máximo de imágenes a procesar por carpeta (0 = todas)
-
+MAX_IMAGES = get_scan_limit()
 
 def _get_tesseract_cmd() -> Optional[str]:
     """Detecta Tesseract: env -> PATH -> default Windows."""
@@ -84,6 +85,8 @@ import os
 
 # Enable detailed OCR debug when ALDIMI_DEBUG_OCR=1
 DEBUG = os.environ.get("ALDIMI_DEBUG_OCR", "0") == "1"
+
+_ALERTAS: List[Dict[str, Any]] = []
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -726,7 +729,7 @@ def _es_ruido_lab_nombre(raw: str) -> bool:
 
 _LAB_NUM_RE = re.compile(
     r"""
-    ^([\wÁÉÍÓÚÑáéíóúñ()\[\]{}#\.\-/,+%°]{3,80}?)
+    ^([\wÁÉÍÓÚÑáéíóúñ()\[\]{}#\.\-/,+%°\s]{3,80}?)
     \s*:\s*
     (\d+(?:[.,]\d+)?)
     \s*(?:\[([HLhl]+)\])?
@@ -791,15 +794,82 @@ def extraer_ciu_lab(texto: str) -> Optional[str]:
 
 
 _NAME_MAP_LAB = [
+    # Proteínas y marcadores inflamatorios
     (r"c.?reactive|crp", "Proteína C Reactiva (CRP)"),
+    (r"proteina.?c.?reactiva", "Proteína C Reactiva (CRP)"),
+    
+    # Hemograma y conteos
     (r"hemoglobin|hb\b|hemograma", "Hemoglobina (Hb)"),
-    (r"hematocrit|pcv", "Hematocrito"),
-    (r"rbc|hematies|red.*blood", "Glóbulos Rojos (RBC)"),
-    (r"wbc|leucocit|white.*blood", "Leucocitos (WBC)"),
+    (r"hematocrit|pcv|hto\b", "Hematocrito"),
+    (r"rbc|hematies|red.*blood|globulos.?rojo", "Glóbulos Rojos (RBC)"),
+    (r"wbc|leucocit|white.*blood|wbc", "Leucocitos (WBC)"),
     (r"platelet|plaqueta", "Plaquetas"),
-    (r"glucose", "Glucosa"),
     (r"rdw\b", "RDW"),
-    (r"mcv\b|volumen.*corpuscular", "VCM (MCV)"),
+    (r"mcv\b|volumen.*corpuscular|vcm", "VCM (MCV)"),
+    (r"mch\b|hemoglobina.*corpuscular", "MCH"),
+    (r"mchc\b|concentración.*hemoglobina", "MCHC"),
+    
+    # Coagulación
+    (r"pt\b|tiempo.*protrombina|prothrombin", "Tiempo de Protrombina (PT)"),
+    (r"ptt|ppta|tiempo.*parcial.*tromboplastina", "Tiempo Parcial Tromboplastina (PTT)"),
+    (r"inr\b", "INR"),
+    (r"fibrinogeno|fibrinogen", "Fibrinógeno"),
+    (r"trombin|thrombin", "Tiempo de Trombina"),
+    
+    # Electrolitos
+    (r"sodio|sodium|na\b", "Sodio (Na)"),
+    (r"potasio|potassium|k\b", "Potasio (K)"),
+    (r"cloro|chloride|cl\b", "Cloro (Cl)"),
+    (r"calcio|calcium|ca\b", "Calcio (Ca)"),
+    (r"fosforo|phosphate|p\b", "Fósforo (P)"),
+    (r"magnesio|magnesium|mg\b", "Magnesio (Mg)"),
+    
+    # Función renal
+    (r"creatinin", "Creatinina"),
+    (r"urea\b|blood.*urea", "Urea/BUN"),
+    (r"nitrogeno.*urea|bun\b", "BUN"),
+    (r"acido.*urico|uric.*acid", "Ácido Úrico"),
+    
+    # Función hepática
+    (r"bilirrub", "Bilirrubina"),
+    (r"ast\b|aspartato.*aminotransf|sgot", "AST"),
+    (r"alt\b|alanina.*aminotransf|gpt", "ALT/GPT"),
+    (r"gpt\b|alanina", "GPT"),
+    (r"fosfatas.*alcalin|alp\b|alkaline.*phosph", "Fosfatasa Alcalina (ALP)"),
+    (r"albumin", "Albúmina"),
+    (r"proteina.*total", "Proteína Total"),
+    (r"globulin", "Globulinas"),
+    (r"gama.?glutamil|gamma.?glutamyl|ggt", "Gamma Glutamil Transpeptidasa (GGT)"),
+    
+    # Lípidos
+    (r"colesterol.*total|total.*cholesterol", "Colesterol Total"),
+    (r"hdl\b|high.*density", "HDL"),
+    (r"ldl\b|low.*density", "LDL"),
+    (r"triglicerid|triglyceride", "Triglicéridos"),
+    
+    # Glucemia y metabolismo
+    (r"glucosa|glucose", "Glucosa"),
+    (r"hemoglobina.*glicad|hba1c|a1c\b", "Hemoglobina Glicosilada (HbA1c)"),
+    
+    # Hierro
+    (r"hierro\b|iron\b", "Hierro"),
+    (r"ferritin", "Ferritina"),
+    (r"transferrin|capacidad.*hierro", "Capacidad Fijación Hierro (TIBC)"),
+    
+    # Otros
+    (r"vitamina.?b12|cobalamina", "Vitamina B12"),
+    (r"acido.*folico|folic.*acid", "Ácido Fólico"),
+    (r"fosfatasa.*acida|acid.*phos", "Fosfatasa Ácida"),
+    (r"lactico|lactic.*acid", "Ácido Láctico"),
+    # Fórmula diferencial y conteo diferencial (células)
+    (r"\beos\b|eosinofil|eosinophil|eosinophils?", "Eosinófilos (EOS)"),
+    (r"\bbas\b|basofil|basophil|basophils?", "Basófilos (BAS)"),
+    (r"\bseg\b|segmentad|segmentado|segmentados|segmented", "Segmentados (SEG)"),
+    (r"\blin\b|linfocit|lymphocyt|lymphocyte|lymphocytes?", "Linfocitos (LIN)"),
+    (r"\bmon\b|monocit|monocyt|monocytes?", "Monocitos (MON)"),
+    (r"mielocit|myelocyt|myelocyte", "Mielocitos"),
+    (r"metamielocit|metamyelocyt|metamyelocyte", "Metamielocitos"),
+    (r"abastonad|cayado|band.*cell|band\b|banded", "Abastonados (Cayados)"),
 ]
 
 
@@ -838,6 +908,190 @@ def _es_valor_critico(nombre_prueba: str, valor: float, tipo_alerta: str) -> boo
                 return True
     
     return False
+
+
+def _parse_float_valor(valor: Any) -> Optional[float]:
+    if valor is None:
+        return None
+    texto = str(valor).strip().replace(",", ".")
+    if not texto:
+        return None
+    m = re.search(r"-?\d+(?:\.\d+)?", texto)
+    if not m:
+        return None
+    try:
+        return float(m.group(0))
+    except Exception:
+        return None
+
+
+def _parse_referencia(ref: str) -> Tuple[Optional[float], Optional[float]]:
+    if not ref:
+        return None, None
+    ref = ref.replace("—", "-").replace("–", "-")
+    partes = [p.strip() for p in re.split(r"[-]", ref) if p.strip()]
+    if len(partes) < 2:
+        return None, None
+    low = _parse_float_valor(partes[0])
+    high = _parse_float_valor(partes[1])
+    return (low, high) if low is not None and high is not None else (None, None)
+
+
+def _detectar_alerta_por_flag(prueba: Dict[str, Any]) -> Optional[str]:
+    flag = str(prueba.get("flag", "") or "").upper()
+    contenido = str(prueba.get("valor", "") or "").upper()
+    if "H" in flag and not any(k in flag for k in ["HH", "HL"]):
+        return "ALTO"
+    if "L" in flag:
+        return "BAJO"
+    if any(k in flag for k in ["POSITIVO", "REACTIVO", "DETECTADO", "RESISTENTE", "HIGH", "ALTO"]):
+        return "ALTO"
+    if any(k in flag for k in ["NEGATIVO", "NO DETECTADO", "ABSENT", "NON-REACTIVE", "LOW", "BAJO"]):
+        return "BAJO"
+    if any(k in contenido for k in ["POSITIVO", "REACTIVO", "RESISTENTE"]):
+        return "ALTO"
+    if any(k in contenido for k in ["NEGATIVO", "NO DETECTADO", "ABSENT", "NON-REACTIVE"]):
+        return "BAJO"
+    return None
+
+
+def _detectar_alerta_por_rango(prueba: Dict[str, Any]) -> Optional[str]:
+    valor = _parse_float_valor(prueba.get("valor"))
+    if valor is None:
+        return None
+    low, high = _parse_referencia(str(prueba.get("referencia", "") or ""))
+    if low is None or high is None:
+        return None
+    if valor < low:
+        return "BAJO"
+    if valor > high:
+        return "ALTO"
+    return None
+
+
+def _es_alerta_critica(prueba: Dict[str, Any], tipo_alerta: str) -> bool:
+    valor = _parse_float_valor(prueba.get("valor"))
+    if valor is None:
+        return False
+    nombre = str(prueba.get("nombre", "")).lower()
+    criticos = {
+        "glucosa": {"ALTO": 400, "BAJO": 40},
+        "hemoglobina": {"ALTO": 20, "BAJO": 5},
+        "hematocrito": {"ALTO": 70, "BAJO": 15},
+        "leucocitos": {"ALTO": 50, "BAJO": 1},
+        "plaquetas": {"ALTO": 1000, "BAJO": 10},
+        "sodio": {"ALTO": 160, "BAJO": 120},
+        "potasio": {"ALTO": 7, "BAJO": 2.5},
+        "calcio": {"ALTO": 13, "BAJO": 6},
+        "creatinina": {"ALTO": 10, "BAJO": 0.5},
+        "bilirrubina": {"ALTO": 10, "BAJO": 0},
+        "ácido úrico": {"ALTO": 15, "BAJO": 0},
+    }
+    for param, limites in criticos.items():
+        if param in nombre:
+            limite = limites.get(tipo_alerta)
+            if limite is not None:
+                return (tipo_alerta == "ALTO" and valor > limite) or (tipo_alerta == "BAJO" and valor < limite)
+    return False
+
+
+_REGEX_CLINICO = re.compile(
+    r'^([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑa-záéíóúñ\s\(\)\.\/\-]{2,60})'
+    r'\s+'
+    r'(\d+(?:[.,]\d+)?)'
+    r'\s*([a-zA-Z%µ/\^][a-zA-Z0-9%/\^]{0,20})?'
+    r'\s*(?:\[?([HLhl\*#\{\}\?8]+)\]?)?'
+    r'\s*([<> ]*[\d.,]+(?:\s*[-–]\s*[\d.,]+)?)?',
+    re.IGNORECASE | re.MULTILINE,
+)
+
+
+def extraer_alertas_de_texto(texto: str) -> Dict[str, Any]:
+    """Analiza el texto OCR y extrae pruebas y alertas clínicas robustamente."""
+    pruebas = []
+    alertas = []
+    lineas = [l.strip() for l in (texto or "").splitlines() if l.strip()]
+
+    for linea in lineas:
+        m = _REGEX_CLINICO.search(linea)
+        if not m:
+            continue
+
+        nombre = m.group(1).strip()
+        try:
+            valor = float(m.group(2).replace(',', '.'))
+        except Exception:
+            continue
+
+        unidad = (m.group(3) or "").strip()
+        flag_raw = (m.group(4) or "").upper()
+        flag = flag_raw.replace('8', 'H').replace('*', 'H').replace('#', 'H').replace('}{', 'H').replace('?', 'H')
+        if 'H' in flag:
+            flag = 'H'
+        elif 'L' in flag:
+            flag = 'L'
+        else:
+            flag = ''
+        referencia = (m.group(5) or "").strip()
+
+        if not flag and referencia:
+            rango_text = referencia.replace(',', '.')
+            rango_match = re.search(r'([\d.]+)\s*[-–]\s*([\d.]+)', rango_text)
+            if rango_match:
+                low = float(rango_match.group(1))
+                high = float(rango_match.group(2))
+                if valor < low:
+                    flag = 'L'
+                elif valor > high:
+                    flag = 'H'
+
+        prueba = {
+            "nombre": nombre,
+            "valor": round(valor, 4),
+            "unidad": unidad,
+            "flag": flag,
+            "referencia": referencia,
+        }
+        pruebas.append(prueba)
+
+        if flag in ("H", "L"):
+            tipo_simple = "ALTO" if flag == "H" else "BAJO"
+            alertas.append({
+                "prueba": nombre,
+                "valor": valor,
+                "tipo": tipo_simple,
+                "flag": "H" if flag == "H" else "L",
+                "unidad": unidad,
+                "referencia": referencia,
+            })
+
+    return {"pruebas": pruebas, "alertas_detectadas": alertas}
+
+
+def detectar_alertas(pruebas_extraidas: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Detecta alertas clínicas por flag y por rango en la lista de pruebas extraídas."""
+    alertas = []
+    for prueba in pruebas_extraidas:
+        tipo = _detectar_alerta_por_flag(prueba)
+        metodo = "flag"
+        if tipo is None:
+            tipo = _detectar_alerta_por_rango(prueba)
+            metodo = "rango" if tipo else ""
+        if not tipo:
+            continue
+        alerta = {
+            "prueba": str(prueba.get("nombre", "")).strip(),
+            "valor": prueba.get("valor"),
+            "unidad": str(prueba.get("unidad", "")),
+            "tipo": tipo,
+            "metodo": metodo,
+            "referencia": str(prueba.get("referencia", "")),
+            "critica": _es_alerta_critica(prueba, tipo),
+        }
+        alertas.append(alerta)
+    if alertas:
+        _ALERTAS.extend(alertas)
+    return alertas
 
 
 def extraer_informacion_clinica_lab(texto: str) -> Dict[str, Any]:
@@ -922,6 +1176,11 @@ def procesar_lab(texto: str) -> Dict[str, Any]:
         "interpretacion": extraer_interpretacion_lab(texto),
     }
     
+    # Debug: imprimir primeras líneas del texto
+    print(f"[PROCESAR_LAB] Texto recibido ({len(texto)} chars):")
+    primeras_lineas = "\n".join((texto or "").split("\n")[:10])
+    print(f"[PROCESAR_LAB] Primeras 10 líneas:\n{primeras_lineas}")
+    
     seen = set()
     
     for linea in (texto or "").split("\n"):
@@ -964,7 +1223,17 @@ def procesar_lab(texto: str) -> Dict[str, Any]:
         # Numérico con ":"
         m = _LAB_NUM_RE.search(ls)
         if m:
-            nombre_raw = m.group(1).strip()
+            # GUARDIA 1: Rechaza líneas que son claramente secciones/referencias
+            # (ej: "Ref:", "Referencia", "Rango", "Resultado", "Page", etc.)
+            if re.search(r"\b(?:ref(?:erencia)?|reference|rango|resultado|result|resultado:|ref\.?|page|página|pagina|pág)\b", m.group(1), re.I):
+                continue
+            
+        # GUARDIA 2: Rechaza si el "nombre" está compuesto solo por números/símbolos
+        # (ej: líneas que contienen únicamente rangos como "80-120" o referencias)
+        nombre_raw = m.group(1).strip()
+        if re.match(r"^[\d\.,\s\-–/°%µ\[\]\(\)]+(?:\s*\[[HLhl]+\])?\s*$", nombre_raw):
+            continue
+            
             if len(nombre_raw) < 3 or _es_ruido_lab_nombre(nombre_raw):
                 continue
             nombre = _norm_nombre_lab(nombre_raw)
@@ -1049,6 +1318,38 @@ def procesar_lab(texto: str) -> Dict[str, Any]:
                     })
             continue
     
+    detected_alerts = detectar_alertas(res["pruebas"])
+
+    # Sincronizar el flag inferido por rango o texto de vuelta a cada prueba individual.
+    # Si OCR no detectó [H]/[L] explícito pero la alerta fue detectada por rango,
+    # el campo `flag` también debe actualizarse para que otros componentes
+    # (como filtros de alertas) puedan basarse en ese valor.
+    alertas_por_nombre = {
+        str(a.get("prueba", "")).strip().lower(): a.get("tipo")
+        for a in detected_alerts
+    }
+    for prueba in res["pruebas"]:
+        if not prueba.get("flag"):
+            tipo = alertas_por_nombre.get(str(prueba.get("nombre", "")).strip().lower())
+            if tipo == "ALTO":
+                prueba["flag"] = "H"
+            elif tipo == "BAJO":
+                prueba["flag"] = "L"
+
+    res["alertas_detectadas"] = detected_alerts
+    res["alertas"] = [
+        {"prueba": a["prueba"], "valor": a["valor"], "tipo": a["tipo"]}
+        for a in detected_alerts
+    ]
+    res["alertas_criticas"] = [
+        {**a, "severidad": "CRÍTICA"} for a in detected_alerts if a.get("critica")
+    ]
+    
+    # Debug: resultado final
+    print(f"[PROCESAR_LAB] CIU: {res.get('ciu')}, Pruebas: {len(res['pruebas'])}, Alertas detectadas: {len(detected_alerts)}")
+    if res["pruebas"]:
+        print(f"[PROCESAR_LAB] Ejemplo prueba: {res['pruebas'][0]}")
+    
     return res
 
 
@@ -1121,7 +1422,7 @@ def autoscan_folders(
     dni_folder: str = "DNI_ALDIMI",
     lab_folder: str = "LAB_ALDIMI",
     output_json: str = "aldimi_pacientes.json",
-    max_images: int = MAX_IMAGES,
+    max_images: int = 0,
     max_images_dni: Optional[int] = None,
     max_images_lab: Optional[int] = None,
 ) -> Dict[str, Any]:
@@ -1142,8 +1443,11 @@ def autoscan_folders(
         "pacientes": {},
     }
     
+    # Usar el límite configurado en backend/config.py (SCAN_LIMIT = 1-100)
+    limit = get_scan_limit()
+
     # Recolectar listas ordenadas de archivos y limitar por índice (pareo por fila)
-    def _gather_images(folder: str, limit: Optional[int] = None) -> List[Path]:
+    def _gather_images(folder: str) -> List[Path]:
         p = Path(folder)
         if not p.is_dir():
             return []
@@ -1151,19 +1455,13 @@ def autoscan_folders(
         for ext in ("*.png", "*.jpg", "*.jpeg"):
             imgs.extend(list(p.glob(ext)))
         imgs = sorted(imgs, key=lambda x: x.name)
-        # normalizar max_images: None or <=0 => sin límite
-        try:
-            if limit is None:
-                limit = max_images
-            if limit is None or int(limit) <= 0:
-                return imgs
-            n = min(100, max(1, int(limit)))
-            return imgs[:n]
-        except Exception:
-            return imgs
+        return imgs[:limit] if limit > 0 else imgs
 
-    dni_list = _gather_images(dni_folder, limit=max_images_dni)
-    lab_list = _gather_images(lab_folder, limit=max_images_lab)
+    dni_list = _gather_images(dni_folder)
+    lab_list = _gather_images(lab_folder)
+
+    print(f"[AUTOSCAN] Límites efectivos: global={max_images} dni={len(dni_list)} lab={len(lab_list)}")
+    print(f"[AUTOSCAN] max_images_dni={max_images_dni} max_images_lab={max_images_lab}")
 
     total_pairs = max(len(dni_list), len(lab_list))
     for i in range(total_pairs):
@@ -1266,6 +1564,20 @@ def procesar_documento(ruta: str) -> Dict[str, Any]:
                     except Exception:
                         campos = {**campos}
 
+    # Extraer alertas robustas si faltan pruebas o alertas en el LAB
+    if tipo in ("LAB_REPORT", "INFORME_MEDICO"):
+        try:
+            if not campos.get("pruebas") or not campos.get("alertas_detectadas"):
+                hallazgos = extraer_alertas_de_texto(texto)
+                if hallazgos.get("pruebas"):
+                    campos["pruebas"] = hallazgos["pruebas"]
+                if hallazgos.get("alertas_detectadas"):
+                    campos["alertas_detectadas"] = hallazgos["alertas_detectadas"]
+                    if "alertas" not in campos:
+                        campos["alertas"] = hallazgos["alertas_detectadas"]
+        except Exception:
+            pass
+
     # Normalizar alertas para compatibilidad con expediente.py
     if tipo in ("LAB_REPORT", "INFORME_MEDICO") and "alertas" in campos and "alertas_detectadas" not in campos:
         campos["alertas_detectadas"] = campos.pop("alertas")
@@ -1276,6 +1588,163 @@ def procesar_documento(ruta: str) -> Dict[str, Any]:
         "campos": campos,
         "advertencia": None,
     }
+
+
+def leer_documento(ruta: str, max_retries: int = 3) -> Dict[str, Any]:
+    """
+    Lectura robusta de un documento (DNI o informe de laboratorio).
+
+    Estrategia de multi-etapa:
+    1. Intento inicial con OCR estándar
+    2. Si insuficiente: reintentos con variantes agresivas (CLAHE, 3x upscale, threshold adaptativo)
+    3. Si aún falla: fallback a CIU desde filename
+    4. Aplicar múltiples PSM (6, 11, 4, 3) en cada variante
+
+    Retorna un dict con el mismo esquema que `procesar_documento`.
+    """
+    # Intento inicial
+    resultado = procesar_documento(ruta)
+    texto = (resultado.get("texto_crudo") or "")
+    tipo = resultado.get("tipo_documento", "UNKNOWN")
+
+    def _is_insuficiente(res):
+        t = (res.get("texto_crudo") or "")
+        tp = res.get("tipo_documento", "UNKNOWN")
+        # Insuficiente si: no hay texto, texto muy corto, o no se clasificó
+        return (not t) or len(t.strip()) < 20 or tp == "UNKNOWN"
+
+    if not _is_insuficiente(resultado):
+        return resultado
+
+    print(f"[LEER_DOC] Extracción inicial insuficiente (tipo={tipo}, texto_len={len(texto)}). Iniciando reintentos...")
+
+    # Reintentos con variantes agresivas
+    for attempt in range(1, max_retries + 1):
+        try:
+            print(f"[LEER_DOC] Reintento {attempt}/{max_retries} para {ruta}")
+
+            nuevo_texto = ""
+            try:
+                img = _load_and_resize(ruta)
+                if img is not None:
+                    # Aplicar variantes agresivas: CLAHE + redimensionamiento 3x + threshold
+                    variants = create_ocr_variants_from_array(img)
+                    
+                    # Agregar variantes adicionales
+                    try:
+                        h, w = img.shape[:2]
+                        # CLAHE (Contrast Limited Adaptive Histogram Equalization)
+                        if cv2 is not None:
+                            clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+                            img_clahe = clahe.apply(cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)) if len(img.shape) == 3 else clahe.apply(img)
+                            variants.append({"image": img_clahe, "label": "CLAHE"})
+                            
+                            # Redimensionamiento 3x + CLAHE
+                            img_3x = cv2.resize(img_clahe, (w*3, h*3), interpolation=cv2.INTER_CUBIC)
+                            variants.append({"image": img_3x, "label": "CLAHE_3X"})
+                            
+                            # Threshold adaptativo
+                            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) if len(img.shape) == 3 else img
+                            img_thresh = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
+                            variants.append({"image": img_thresh, "label": "ADAPTIVE_THRESHOLD"})
+                            
+                            # Binarization with Otsu
+                            _, img_otsu = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+                            variants.append({"image": img_otsu, "label": "OTSU"})
+                    except Exception as e:
+                        print(f"[LEER_DOC] Aviso: no se pudieron crear variantes CLAHE/threshold: {e}")
+                    
+                    # Probar cada variante con múltiples PSM
+                    best_text = ""
+                    best_length = 0
+                    psm_list = [6, 11, 4, 3]
+                    
+                    for v_idx, variant in enumerate(variants):
+                        try:
+                            img_var = variant.get("image")
+                            label_var = variant.get("label", f"variant_{v_idx}")
+                            
+                            if img_var is None or (isinstance(img_var, np.ndarray) and img_var.size == 0):
+                                continue
+                            
+                            # Convertir a PIL si es necesario
+                            if isinstance(img_var, np.ndarray):
+                                img_pil = Image.fromarray(img_var.astype('uint8')) if Image else None
+                            else:
+                                img_pil = img_var if hasattr(img_var, 'save') else None
+                            
+                            if img_pil is None:
+                                continue
+                            
+                            # Probar múltiples PSM
+                            for psm in psm_list:
+                                try:
+                                    if pytesseract is None:
+                                        continue
+                                    config = f'--psm {psm} --oem 3'
+                                    txt = pytesseract.image_to_string(img_pil, lang=OCR_LANG, config=config).strip()
+                                    if txt and len(txt) > best_length:
+                                        best_text = txt
+                                        best_length = len(txt)
+                                        print(f"[LEER_DOC]   Variante {label_var} PSM {psm}: {len(txt)} caracteres")
+                                except Exception:
+                                    continue
+                        except Exception as e:
+                            print(f"[LEER_DOC]   Error procesando variante: {e}")
+                            continue
+                    
+                    if best_text:
+                        nuevo_texto = best_text
+                        print(f"[LEER_DOC]   Mejor resultado: {len(nuevo_texto)} caracteres")
+            except Exception as e:
+                print(f"[LEER_DOC]   Error en carga/procesamiento de imagen: {e}")
+
+            if not nuevo_texto:
+                # Fallback: forzar OCR simple sin variantes
+                nuevo_texto = extraer_texto_ocr(ruta, allow_simulation=False) or ""
+
+            # Re-classify and re-extract based on nuevo_texto
+            tipo_n = clasificar_documento(nuevo_texto)
+            cnn_prediction = predict_document_cnn(nuevo_texto)
+            campos = {}
+            
+            if tipo_n == "DNI_PERU":
+                campos = procesar_dni_peru(nuevo_texto)
+            elif tipo_n == "DNI_USA":
+                campos = procesar_dni_usa(nuevo_texto)
+            elif tipo_n in ("LAB_REPORT", "INFORME_MEDICO"):
+                campos = procesar_lab(nuevo_texto)
+            
+            # Si aún no hay CIU, intentar extraer desde filename
+            if not campos or not campos.get("ciu"):
+                fname = Path(ruta).stem
+                ciu_from_name = extraer_ciu_dni(fname) or extraer_ciu_lab(fname)
+                if ciu_from_name:
+                    if not campos:
+                        campos = {}
+                    campos["ciu"] = ciu_from_name
+
+            if isinstance(campos, dict):
+                campos["cnn_prediccion"] = cnn_prediction
+            else:
+                campos = {"tipo": tipo_n, "cnn_prediccion": cnn_prediction}
+
+            resultado = {
+                "tipo_documento": tipo_n,
+                "texto_crudo": nuevo_texto,
+                "campos": campos,
+                "advertencia": None,
+            }
+
+            if not _is_insuficiente(resultado):
+                print(f"[LEER_DOC] ✅ Extracción exitosa en intento {attempt} tipo={tipo_n} texto_len={len(nuevo_texto)}")
+                return resultado
+        except Exception as exc:
+            print(f"[LEER_DOC] Error en reintento {attempt}: {exc}")
+
+    # Si llegamos aquí, devolvemos el resultado mejor (posiblemente incompleto pero con lo que se pudo conseguir)
+    print(f"[LEER_DOC] ⚠️ Todos los reintentos agotados. Devolviendo resultado parcial para {ruta}")
+    return resultado
 
 
 if __name__ == "__main__":

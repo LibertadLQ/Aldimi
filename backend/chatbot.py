@@ -7,6 +7,8 @@ from datetime import datetime
 from typing import Any, Dict, List, Optional, Tuple
  
 from .db import cargar_bd, cargar_sesiones
+from .alertas import filtrar_alertas_criticas
+from .patient_nlp import get_nlp
  
  
 # ═══════════════════════════════════════════════════════════════════════
@@ -337,6 +339,23 @@ INTENCIONES: Dict[str, List[str]] = {
         "horario de visita", "horarios de visita", "cuando puedo visitar",
         "puedo visitar", "dia de visita", "hora de visita", "visitas",
     ],
+    "pronostico_salud": [
+        "que me pasara", "que me pasará", "estare bien", "estaré bien",
+        "me voy a curar", "me voy a morir", "que futuro tengo", "que pasara conmigo",
+        "que me pasará con mi salud", "tengo miedo de no sanar", "que va a pasar"
+    ],
+    "contexto_historial": [
+        "como saben eso", "como saben mi historial", "como saben que paso",
+        "como saben lo que tengo", "como saben mi informacion", "de donde sacan mis datos"
+    ],
+    "cuidados_recomendaciones": [
+        "que debo cuidar", "que debo tener en cuenta", "que cuidados debo tener",
+        "que me recomiendas hacer", "consejos para mi salud", "que cuidados"
+    ],
+    "contencion_emocional": [
+        "tengo miedo", "estoy asustado", "no se que hacer", "no aguanto",
+        "estoy angustiado", "estoy triste", "me siento mal anímicamente"
+    ],
 }
  
 # Preguntas de cierre que dispara el bot luego de responder una intención
@@ -361,6 +380,31 @@ _VARIANTES_RIESGO_EMOCIONAL = [
  
 def es_riesgo_emocional(texto_norm: str) -> bool:
     return coincide_variante(texto_norm, _VARIANTES_RIESGO_EMOCIONAL, umbral=0.82)
+
+
+# ── Detección de emergencia física (sangrado, fiebre alta, dolor intenso, etc.) ──
+_VARIANTES_EMERGENCIA_SINTOMAS = [
+    "sangrando", "estoy sangrando", "sangra", "sangrado",
+    "fiebre alta", "tengo fiebre", "fiebre", "dolor insoportable",
+    "dolor muy fuerte", "no puedo respirar", "dificultad para respirar",
+    "desmaye", "me desmaye", "me desmayé", "vomito sangre", "vomito con sangre",
+]
+
+
+def es_emergencia_fisica(texto_norm: str) -> bool:
+    return coincide_variante(texto_norm, _VARIANTES_EMERGENCIA_SINTOMAS, umbral=0.78)
+
+
+def registrar_alerta_fisica(ciu: Optional[str], mensaje_original: str) -> None:
+    """
+    Registro simple de una alerta física para que el equipo de turno la atienda.
+    Implementar integración real (guardar en BD, notificación por Slack/telefono)
+    según el procedimiento operativo del albergue.
+    """
+    print(
+        f"[ALDIMI][ALERTA-FISICA] ciu={ciu or 'sin_ciu'} mensaje={mensaje_original!r} "
+        f"timestamp={datetime.now().isoformat()}"
+    )
  
  
 def registrar_alerta_riesgo(ciu: Optional[str], mensaje_original: str) -> None:
@@ -693,8 +737,21 @@ def procesar_mensaje(mensaje: str, ciu: Optional[str] = None) -> Dict[str, Any]:
     texto_norm = normalizar_texto(mensaje)
     ctx = _obtener_contexto(ciu)
     esperando = ctx.get("esperando")
- 
-    # ── 0) Riesgo emocional — SIEMPRE tiene prioridad sobre todo lo demás ──
+
+    # ── 0a) Emergencia física — prioridad máxima (sangrado, fiebre alta, dolor fuerte)
+    if es_emergencia_fisica(texto_norm):
+        registrar_alerta_fisica(ciu, mensaje)
+        _limpiar_espera(ciu)
+        return {
+            "respuesta": (
+                "⚠️ ATENCIÓN: Se ha detectado una posible emergencia médica. "
+                "Por favor, avisa de inmediato al personal de guardia del albergue o llama al número de emergencias. "
+                "He registrado una alerta para el equipo de turno."
+            ),
+            "accion": None,
+        }
+
+    # ── 0b) Riesgo emocional — SIEMPRE tiene prioridad sobre lo demás ──
     if es_riesgo_emocional(texto_norm):
         registrar_alerta_riesgo(ciu, mensaje)
         _limpiar_espera(ciu)
@@ -702,6 +759,29 @@ def procesar_mensaje(mensaje: str, ciu: Optional[str] = None) -> Dict[str, Any]:
  
     # ── 1) Si el bot había hecho una pregunta de seguimiento, interpretar
     #        la respuesta corta del usuario en ese contexto ──
+    if esperando == "confirmar_contacto_equipo":
+        # Pregunta previa: "¿Quieres que avise al equipo médico/psicología?"
+        if es_afirmacion(texto_norm):
+            # Registrar simple solicitud de contacto — la integración real
+            # debe notificar al equipo por el canal operativo del albergue.
+            print(f"[CHATBOT] Solicitud de contacto equipo para CIU={ciu or 'sin_ciu'} mensaje={mensaje}")
+            _limpiar_espera(ciu)
+            return {
+                "respuesta": (
+                    "Entiendo. Avisaré al equipo de ALDIMI para que se pongan en contacto. "
+                    "El personal evaluará la situación y te responderá a la brevedad."
+                ),
+                "accion": None,
+            }
+        if es_negacion(texto_norm):
+            _limpiar_espera(ciu)
+            return {
+                "respuesta": "De acuerdo, no avisaré al equipo por ahora. Si cambias de opinión, dímelo.",
+                "accion": None,
+            }
+        # Si no fue ni sí/no, permitir continuar al flujo normal
+        _limpiar_espera(ciu)
+
     if esperando == "confirmacion_otro_servicio":
         if es_agradecimiento(texto_norm):
             _limpiar_espera(ciu)
@@ -735,42 +815,50 @@ def procesar_mensaje(mensaje: str, ciu: Optional[str] = None) -> Dict[str, Any]:
     if es_agradecimiento(texto_norm):
         return {"respuesta": "¡De nada! Fue un gusto ayudarte. 😊", "accion": None}
  
-    if esperando == "pedir_ciu_expediente" and es_ciu_valido(mensaje):
+    if esperando in ("pedir_ciu_expediente", "pedir_ciu_alertas") and es_ciu_valido(mensaje):
+        prev_esperando = esperando
         ciu_buscar = mensaje.strip().upper()
         bd = cargar_bd()
         print(f"[CHATBOT] Buscando expediente para CIU {ciu_buscar}. Base de datos tiene {len(bd)} registros.")
         registro = _buscar_registro_por_ciu(bd, ciu_buscar)
+        # Normalizar limpieza de estado antes de responder
+        _limpiar_espera(None)
         if not registro:
-            _limpiar_espera(None)
             print(f"[CHATBOT] No encontrado: {ciu_buscar}")
             return {
                 "respuesta": f"No encontré un expediente registrado con CIU {ciu_buscar}.",
                 "accion": None,
             }
-        
+
+        # Si la espera era para ALERTAS, delegar al módulo `alertas.py`
+        if prev_esperando == "pedir_ciu_alertas":
+            try:
+                respuesta = filtrar_alertas_criticas(registro, ciu_buscar)
+            except Exception:
+                respuesta = "Ocurrió un error al filtrar las alertas clínicas."
+            return {"respuesta": respuesta, "accion": None}
+
+        # Flujo por defecto: expediente completo (comportamiento legacy)
         datos = _extraer_datos_personales_desde_registro(registro, ciu_buscar)
 
         informes = registro.get("informes_laboratorio", []) or []
         alertas = registro.get("alertas_clinicas", []) or []
-        
+
         print(f"[CHATBOT] Encontrado: {ciu_buscar} con {len(informes)} informes de lab y {len(alertas)} alertas")
-        
+
         respuesta_partes = [
             f"✅ Datos extraídos:",
             f"   CIU: {ciu_buscar}",
             f"   Nombre: {datos.get('nombres', 'NO_DETECTADO')} {datos.get('apellidos', 'NO_DETECTADO')}",
             f"   Fecha nac.: {datos.get('fecha_nacimiento', 'NO_DETECTADO')}",
         ]
-        
+
         if informes:
             respuesta_partes.append(f"\n📋 Informes de laboratorio: {len(informes)}")
         if alertas:
             respuesta_partes.append(f"⚠️  Alertas clínicas: {len(alertas)}")
-        
-       
+
         respuesta = "\n".join(respuesta_partes)
-        
-        _limpiar_espera(None)
         return {"respuesta": respuesta, "accion": None}
  
     # ── 3) Caso especial: viene del flujo "pedir_ciu_expediente" ──
@@ -803,6 +891,40 @@ def procesar_mensaje(mensaje: str, ciu: Optional[str] = None) -> Dict[str, Any]:
  
     intencion = detectar_intencion(texto_norm)
  
+    # Si no encontramos una intención clara con el detector actual,
+    # delegamos al `PatientNLP` ligero que usa variantes ampliadas y
+    # prioriza emergencias/riesgo emocional. Esto mejora respuestas
+    # espontáneas durante la conversación del paciente.
+    if not intencion:
+        try:
+            nlp = get_nlp()
+            resultado = nlp.classify_and_respond(mensaje, ciu)
+        except Exception:
+            resultado = None
+
+        if resultado:
+            accion_nlp = resultado.get("accion")
+            intent_nlp = resultado.get("intent")
+            respuesta_nlp = resultado.get("respuesta")
+
+            if accion_nlp == "alerta_fisica":
+                # Registrar y responder con instrucción de urgencia
+                registrar_alerta_fisica(ciu, mensaje)
+                _limpiar_espera(ciu)
+                return {"respuesta": respuesta_nlp, "accion": None}
+
+            if accion_nlp == "confirmar_contacto":
+                # Guardar estado para la siguiente respuesta corta (sí/no)
+                _actualizar_contexto(ciu, esperando="confirmar_contacto_equipo")
+                return {"respuesta": respuesta_nlp, "accion": None}
+
+            if intent_nlp in RESPUESTAS_INFORMATIVAS:
+                _actualizar_contexto(ciu, esperando="confirmacion_otro_servicio", ultima_intencion=intent_nlp)
+                return {"respuesta": respuesta_nlp + f"\n\n{PREGUNTA_OTRO_SERVICIO}", "accion": None}
+
+            if respuesta_nlp:
+                # Respuesta general retornada por PatientNLP
+                return {"respuesta": respuesta_nlp, "accion": None}
     if intencion == "admision":
         respuesta = RESPUESTAS_INFORMATIVAS["admision"] + f"\n\n{PREGUNTA_OTRO_SERVICIO}"
         _actualizar_contexto(ciu, esperando="confirmacion_otro_servicio", ultima_intencion=intencion)
@@ -843,26 +965,86 @@ def procesar_mensaje(mensaje: str, ciu: Optional[str] = None) -> Dict[str, Any]:
         }
  
     if intencion == "alertas_clinicas":
+        # Si no tenemos CIU en el contexto, pedimos el CIU pero marcamos
+        # el estado interno como `pedir_ciu_alertas` para distinguirlo
+        # del flujo de expediente.
         if not ciu:
-            _actualizar_contexto(ciu, esperando="pedir_ciu_expediente")
+            _actualizar_contexto(ciu, esperando="pedir_ciu_alertas")
             return {
                 "respuesta": "Indícame el CIU del paciente para revisar sus alertas clínicas.",
-                "accion": "pedir_ciu_expediente",
+                "accion": "pedir_ciu_alertas",
             }
+
         bd = cargar_bd()
         registro = _buscar_registro_por_ciu(bd, ciu)
-        alertas = (registro or {}).get("alertas_clinicas", []) or []
-        if not alertas:
-            respuesta = f"El paciente {ciu} no presenta alertas clínicas activas."
-        else:
-            detalle = "\n".join(
-                f"• {a.get('prueba', 'Prueba')}: {a.get('tipo', '')} ({a.get('valor', '')} {a.get('unidad', '')})"
-                for a in alertas if isinstance(a, dict)
-            )
-            respuesta = f"Alertas clínicas activas para {ciu}:\n{detalle}"
+        if not registro:
+            return {"respuesta": f"No encontré un expediente registrado con CIU {ciu}.", "accion": None}
+
+        try:
+            respuesta = filtrar_alertas_criticas(registro, ciu)
+        except Exception:
+            respuesta = "Ocurrió un error al filtrar las alertas clínicas."
+
         respuesta += f"\n\n{PREGUNTA_OTRO_SERVICIO}"
         _actualizar_contexto(ciu, esperando="confirmacion_otro_servicio")
         return {"respuesta": respuesta, "accion": None}
+
+    # ===== Manejo de nuevas intenciones de soporte al paciente =====
+    if intencion == "pronostico_salud":
+        # No dar pronósticos médicos; ofrecer contención y conectar con equipo.
+        if ciu:
+            _actualizar_contexto(ciu, esperando="confirmar_contacto_equipo")
+            return {
+                "respuesta": (
+                    "Entiendo que tiene muchas dudas sobre el futuro y es normal sentirse así. "
+                    "No puedo ofrecer un pronóstico médico aquí. Si desea, puedo avisar al equipo médico/psicología para que lo contacten y revisen el expediente del paciente. ¿Desea que lo haga?"
+                ),
+                "accion": None,
+            }
+        else:
+            _actualizar_contexto(ciu, esperando="confirmar_contacto_equipo")
+            return {
+                "respuesta": (
+                    "Sé que es difícil no saber qué sucederá. No puedo dar pronósticos médicos por texto, pero puedo contactar al equipo médico o de psicología para que le brinden información y apoyo. ¿Desea que lo notifique?"
+                ),
+                "accion": None,
+            }
+
+    if intencion == "contexto_historial":
+        respuesta = (
+            "ALDIMI accede a la información asociada al CIU del paciente: registros de referencia médica, datos extraídos del DNI con OCR, y los informes de laboratorio que fueron cargados al expediente. "
+            "La información se usa para brindar continuidad de atención y se protege según las políticas de privacidad del albergue. Si desea, puedo mostrar el expediente si me indica el CIU.")
+        _actualizar_contexto(ciu, esperando="confirmacion_otro_servicio")
+        return {"respuesta": respuesta, "accion": None}
+
+    if intencion == "cuidados_recomendaciones":
+        if ciu:
+            bd = cargar_bd()
+            registro = _buscar_registro_por_ciu(bd, ciu)
+            if registro:
+                recomendaciones = generar_recomendaciones(registro)
+                if recomendaciones:
+                    texto = "Recomendaciones orientativas según las alertas actuales:\n" + "\n".join(recomendaciones)
+                    texto += "\n\nEstas recomendaciones son informativas y no sustituyen la evaluación médica. ¿Desea que avise al equipo para una consulta?"
+                    _actualizar_contexto(ciu, esperando="confirmar_contacto_equipo")
+                    return {"respuesta": texto, "accion": None}
+                else:
+                    return {"respuesta": "No hay recomendaciones específicas registradas en el expediente. Si lo desea, puedo pedir al equipo médico que revise el caso.", "accion": None}
+            else:
+                return {"respuesta": f"No encontré un expediente con CIU {ciu}. Si me indica el CIU puedo revisar y brindarle recomendaciones.", "accion": "pedir_ciu_expediente"}
+        else:
+            return {"respuesta": "Puedo dar recomendaciones generales, pero para recomendaciones personalizadas necesito el CIU del paciente. ¿Desea indicarlo?", "accion": "pedir_ciu_expediente"}
+
+    if intencion == "contencion_emocional":
+        # Contención empática no clínica: validar emoción y ofrecer contacto humano.
+        _actualizar_contexto(ciu, esperando="confirmar_contacto_equipo")
+        return {
+            "respuesta": (
+                "Siento que esté pasando por un momento difícil. Es normal sentir miedo o tristeza. "
+                "Si quiere, puedo avisar al equipo de apoyo psicosocial para que lo acompañen. ¿Desea que lo haga?"
+            ),
+            "accion": None,
+        }
  
     if intencion in RESPUESTAS_INFORMATIVAS:
         respuesta = RESPUESTAS_INFORMATIVAS[intencion] + f"\n\n{PREGUNTA_OTRO_SERVICIO}"

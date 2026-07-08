@@ -1,0 +1,95 @@
+{
+  "intents": [
+    {
+      "tag": "pronostico_salud",
+      "patterns": [
+        "¿Estaré bien después de la operación de mañana?",
+        "¿Cómo sabes qué pasó con mi último examen del INEN?",
+        "¿Qué me pasará si dejo las quimioterapias por una semana?",
+        "Doctor/IA, ¿me voy a curar de este cáncer?",
+        "Tengo mucho miedo de los resultados que me dan el viernes.",
+        "¿Es normal sentir que ya no tengo fuerzas para seguir?",
+        "¿Cuánto tiempo dura este tratamiento normalmente?",
+        "¿Qué pasa si mi cuerpo rechaza las pastillas?"
+      ],
+      "responses": [
+        "Entiendo que haya mucha incertidumbre y miedo. No puedo dar un pronóstico médico por este chat, pero en ALDIMI podemos solicitar que el equipo médico o de psicología se comunique con usted para revisar el expediente y conversar. ¿Desea que le avise al equipo?",
+        "Sé que estas preguntas son muy importantes. No doy diagnósticos por chat; si quiere puedo hacer que el equipo de ALDIMI lo contacte para explicar en detalle el estado y las opciones. ¿Quiere que lo haga?"
+      ]
+    },
+    {
+      "tag": "emergencia_sintomas",
+      "patterns": [
+        "Me siento muy mal, me duele fuerte el estómago.",
+        "Estoy temblando de frío y creo que tengo fiebre.",
+        "Me ha salido sangre de la nariz hace un ratito.",
+        "Tengo muchas náuseas y he vomitado la cena.",
+        "Me falta el aire para respirar bien.",
+        "¿Qué puedo tomar para este dolor de cabeza insoportable?",
+        "Se me ha hinchado la pierna donde me pusieron la ampolla.",
+        "Me dio un mareo fuerte y casi me caigo al levantarme."
+      ],
+      "responses": [
+        "⚠️ ATENCIÓN: Esto parece una situación que requiere acción rápida. Por favor avise al personal de guardia del albergue o acérquese a enfermería ahora. He registrado una alerta para el equipo.",
+        "Por favor, contacte inmediatamente al personal del albergue o a la enfermería. Si es una emergencia grave llame al número de emergencias local. Estoy dejando constancia de este reporte."
+      ]
+    },
+    {
+      "tag": "logistica_albergue",
+      "patterns": [
+        "¿A qué hora se sirve el desayuno y el almuerzo?",
+        "¿Puedo salir un rato a la calle a comprar agua?",
+        "¿Hay Wi-Fi en el albergue y cuál es la clave?",
+        "¿Dónde puedo lavar mi ropa limpia esta semana?",
+        "¿Mi esposo se puede quedar a dormir conmigo hoy?",
+        "¿A qué hora cierran la puerta principal en la noche?",
+        "¿Me pueden prestar una frazada más? Hace mucho frío.",
+        "¿Cuáles son las normas para usar la sala de televisión?"
+      ],
+      "responses": [
+        "Te comparto la información: (texto de reglamento/horarios). Si quieres puedo buscar un detalle concreto o avisar a recepción.",
+        "Puedo ayudar con las normas y horarios del albergue. ¿Qué necesitas saber exactamente?"
+      ]
+    },
+    {
+      "tag": "tramites_asistencia_social",
+      "patterns": [
+        "Vengo de provincia y no sé cómo llegar al hospital desde aquí.",
+        "¿El albergue me ayuda a tramitar los pasajes de retorno a mi tierra?",
+        "El SIS no quiere cubrir esta medicina, ¿qué puedo hacer?",
+        "No entiendo este papel de la cita que me dieron en el INEN.",
+        "¿Con quién tengo que hablar para que me ayuden con una asistenta social?",
+        "¿Me van a cobrar algo por quedarme estos días en el albergue?",
+        "Soy nuevo en Lima, ¿dónde queda la farmacia más cercana?"
+      ],
+      "responses": [
+        "Puedo orientar sobre trámites y apoyo social; si quiere puedo conectarlo con la trabajadora social del albergue o darle pasos prácticos. ¿Qué necesita hacer primero?",
+        "Para estos trámites lo mejor es hablar con el equipo social. ¿Desea que solicite que se comuniquen con usted?"
+      ]
+    },
+    {
+      "tag": "apoyo_espiritual",
+      "patterns": [
+        "Muchas gracias por recibirme a mí y a mi familia.",
+        "¿Cuándo viene el sacerdote a dar la misa al albergue?",
+        "Que Dios los bendiga por la comida de hoy.",
+        "¿Tienen una capilla o lugar tranquilo para ir a rezar un momento?",
+        "Me siento muy bendecido de haber encontrado este lugar."
+      ],
+      "responses": [
+        "Amén, nos alegra acompañarle. La misa y actividades espirituales se anuncian en el comedor; puedo decirle los horarios si lo desea.",
+        "Gracias por sus palabras. Si quiere puedo avisar al encargado pastoral o decirle cuándo será la próxima celebración."
+      ]
+    },
+    {
+      "tag": "agradecimiento",
+      "patterns": [
+        "Gracias", "Muchas gracias", "Mil gracias", "Que Dios los bendiga"
+      ],
+      "responses": [
+        "¡De nada! Estamos aquí para ayudar.",
+        "Es un gusto poder acompañarle. Si necesita algo más, aquí estoy."
+      ]
+    }
+  ]
+}

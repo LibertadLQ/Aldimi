@@ -1,6 +1,6 @@
 {
   "sesion": {
-    "ultima_actualizacion": "2026-07-07T02:29:49.090753",
+    "ultima_actualizacion": "2026-07-08T04:48:53.489976",
     "archivo": "aldimi_pacientes.json"
   },
   "pacientes": {
@@ -8,7 +8,7 @@
       "ciu": "499485",
       "datos_personales": {
         "ciu": "499485",
-        "nombres": "NO_DETECTADO",
+        "nombres": "",
         "apellidos": "FIGUEROA",
         "fecha_nacimiento": "07/14/1992"
       },
@@ -22,8 +22,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:06:19.347970",
-          "timestamp": "2026-07-07T02:06:19.347970",
+          "id": "ocr_2026-07-08T04:48:37.402181",
+          "timestamp": "2026-07-08T04:48:37.402181",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053405_Q-RANJANADEVI21.04.20250001compressed_250427_1041@F.pdf_page_38.png",
           "archivo_copia": null,
@@ -33,20 +33,21 @@
             "ciu": "499485",
             "pruebas": [
               {
-                "nombre": "M The First Day Up To",
+                "nombre": "m the first day up to",
                 "valor": 9.0,
                 "unidad": "days",
                 "flag": "",
                 "referencia": ""
               },
               {
-                "nombre": "Ware Sf Page",
+                "nombre": "ware Sf Page",
                 "valor": 4.0,
                 "unidad": "",
                 "flag": "",
                 "referencia": ""
               }
             ],
+            "alertas": [],
             "alertas_criticas": [],
             "tipo": "LAB_REPORT",
             "informacion_clinica": {
@@ -55,6 +56,7 @@
               "médico_laboratorio": "Test"
             },
             "interpretacion": "in tropical and subtropical regions dengue is the most important arbovirosis in terms of mortality and\nnorality\n\\n easy-to-perform, rapid and specific test is needed to confirm infection during the acute phase of the\n| fection",
+            "alertas_detectadas": [],
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -65,8 +67,7 @@
                 "UNKNOWN": 0.3222
               },
               "confianza": 0.3222
-            },
-            "alertas_detectadas": []
+            }
           },
           "advertencia": null
         }
@@ -87,8 +88,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:07:57.004578",
-          "timestamp": "2026-07-07T02:07:57.004578",
+          "id": "ocr_2026-07-07T21:17:18.551462",
+          "timestamp": "2026-07-07T21:17:18.551462",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053567_Q-PT.ROSHNIESIBUNCH11zon_250427_1622@F.pdf_page_41.png",
           "archivo_copia": null,
@@ -126,6 +127,7 @@
                 "referencia": ""
               }
             ],
+            "alertas": [],
             "alertas_criticas": [],
             "tipo": "LAB_REPORT",
             "informacion_clinica": {
@@ -133,6 +135,7 @@
               "médico_laboratorio": "Rashmi Tayal\npharambir Doshwal M"
             },
             "interpretacion": null,
+            "alertas_detectadas": [],
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -143,14 +146,13 @@
                 "UNKNOWN": 0.2074
               },
               "confianza": 0.5637
-            },
-            "alertas_detectadas": []
+            }
           },
           "advertencia": null
         }
       ],
       "creado_en": "2026-07-06T13:24:23.188752",
-      "actualizado_en": "2026-07-07T02:07:57.004578"
+      "actualizado_en": "2026-07-07T21:17:18.551462"
     },
     "1321032": {
       "ciu": "1321032",
@@ -165,8 +167,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:08:03.971724",
-          "timestamp": "2026-07-07T02:08:03.971724",
+          "id": "ocr_2026-07-07T21:17:24.345720",
+          "timestamp": "2026-07-07T21:17:24.345720",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053567_Q-PT.ROSHNIESIBUNCH11zon_250427_1622@F.pdf_page_63.png",
           "archivo_copia": null,
@@ -175,6 +177,7 @@
           "campos": {
             "ciu": "1321032",
             "pruebas": [],
+            "alertas": [],
             "alertas_criticas": [],
             "tipo": "LAB_REPORT",
             "informacion_clinica": {
@@ -182,6 +185,7 @@
               "médico_laboratorio": "Rashmi Tayal\nparambir Deshwal M"
             },
             "interpretacion": null,
+            "alertas_detectadas": [],
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -192,14 +196,13 @@
                 "UNKNOWN": 0.3222
               },
               "confianza": 0.3222
-            },
-            "alertas_detectadas": []
+            }
           },
           "advertencia": null
         }
       ],
       "creado_en": "2026-07-06T13:24:33.666396",
-      "actualizado_en": "2026-07-07T02:08:03.971724"
+      "actualizado_en": "2026-07-07T21:17:24.345720"
     },
     "20210773": {
       "ciu": "20210773",
@@ -248,8 +251,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:09:18.050227",
-          "timestamp": "2026-07-07T02:09:18.050227",
+          "id": "ocr_2026-07-07T20:49:48.373320",
+          "timestamp": "2026-07-07T20:49:48.373320",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054989_Q-112752REETADEVI_250427_1429@F.pdf_page_31.png",
           "archivo_copia": null,
@@ -290,21 +293,21 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.5637,
-                "DNI_PERU": 0.0763,
-                "DNI_USA": 0.0763,
-                "INFORME_MEDICO": 0.0763,
-                "UNKNOWN": 0.2074
+                "LAB_REPORT": 0.3222,
+                "DNI_PERU": 0.1185,
+                "DNI_USA": 0.1185,
+                "INFORME_MEDICO": 0.1185,
+                "UNKNOWN": 0.3222
               },
-              "confianza": 0.5637
+              "confianza": 0.3222
             },
             "alertas_detectadas": []
           },
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:09:24.165994",
-          "timestamp": "2026-07-07T02:09:24.165994",
+          "id": "ocr_2026-07-07T20:49:55.000589",
+          "timestamp": "2026-07-07T20:49:55.000589",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054989_Q-112752REETADEVI_250427_1429@F.pdf_page_37.png",
           "archivo_copia": null,
@@ -352,13 +355,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.5637,
-                "DNI_PERU": 0.0763,
-                "DNI_USA": 0.0763,
-                "INFORME_MEDICO": 0.0763,
-                "UNKNOWN": 0.2074
+                "LAB_REPORT": 0.3222,
+                "DNI_PERU": 0.1185,
+                "DNI_USA": 0.1185,
+                "INFORME_MEDICO": 0.1185,
+                "UNKNOWN": 0.3222
               },
-              "confianza": 0.5637
+              "confianza": 0.3222
             },
             "alertas_detectadas": []
           },
@@ -366,7 +369,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:26:10.873906",
-      "actualizado_en": "2026-07-07T02:09:24.165994"
+      "actualizado_en": "2026-07-07T20:49:55.000589"
     },
     "202504": {
       "ciu": "202504",
@@ -381,8 +384,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:09:37.707908",
-          "timestamp": "2026-07-07T02:09:37.707908",
+          "id": "ocr_2026-07-07T20:50:11.073420",
+          "timestamp": "2026-07-07T20:50:11.073420",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055057_F-KYC_PC_Mrs_CHANDER_KANTA_1_250422_1418@G.pdf_page_7.png",
           "archivo_copia": null,
@@ -430,7 +433,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:26:42.505992",
-      "actualizado_en": "2026-07-07T02:09:37.707908"
+      "actualizado_en": "2026-07-07T20:50:11.073420"
     },
     "136145": {
       "ciu": "136145",
@@ -445,8 +448,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:09:55.708508",
-          "timestamp": "2026-07-07T02:09:55.708508",
+          "id": "ocr_2026-07-07T20:50:36.527025",
+          "timestamp": "2026-07-07T20:50:36.527025",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055398_SUNILA ARORA INVESTIGATION  FOR ENHANCMENT _27-04-2025_1111-09_AM.pdf_page_8.png",
           "archivo_copia": null,
@@ -465,13 +468,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.7784,
-                "DNI_PERU": 0.0388,
-                "DNI_USA": 0.0388,
-                "INFORME_MEDICO": 0.0388,
-                "UNKNOWN": 0.1053
+                "LAB_REPORT": 0.5637,
+                "DNI_PERU": 0.0763,
+                "DNI_USA": 0.0763,
+                "INFORME_MEDICO": 0.0763,
+                "UNKNOWN": 0.2074
               },
-              "confianza": 0.7784
+              "confianza": 0.5637
             },
             "alertas_detectadas": []
           },
@@ -479,7 +482,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:27:09.089200",
-      "actualizado_en": "2026-07-07T02:09:55.708508"
+      "actualizado_en": "2026-07-07T20:50:36.527025"
     },
     "751340": {
       "ciu": "751340",
@@ -494,8 +497,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:10:20.326297",
-          "timestamp": "2026-07-07T02:10:20.326297",
+          "id": "ocr_2026-07-07T20:51:09.843655",
+          "timestamp": "2026-07-07T20:51:09.843655",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055511_Q-ROHIT4854000111zon_250427_1412@F.pdf_page_23.png",
           "archivo_copia": null,
@@ -557,7 +560,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:27:51.131033",
-      "actualizado_en": "2026-07-07T02:10:20.326297"
+      "actualizado_en": "2026-07-07T20:51:09.843655"
     },
     "1001066": {
       "ciu": "1001066",
@@ -572,8 +575,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:10:42.011579",
-          "timestamp": "2026-07-07T02:10:42.011579",
+          "id": "ocr_2026-07-07T20:23:41.499286",
+          "timestamp": "2026-07-07T20:23:41.499286",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055868_F-DOCUMENTAMRITPAL_250423_1639@G.pdf_page_19.png",
           "archivo_copia": null,
@@ -677,13 +680,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.9052,
-                "DNI_PERU": 0.0166,
-                "DNI_USA": 0.0166,
-                "INFORME_MEDICO": 0.0166,
-                "UNKNOWN": 0.0451
+                "LAB_REPORT": 0.9629,
+                "DNI_PERU": 0.0065,
+                "DNI_USA": 0.0065,
+                "INFORME_MEDICO": 0.0065,
+                "UNKNOWN": 0.0176
               },
-              "confianza": 0.9052
+              "confianza": 0.9629
             },
             "alertas_detectadas": []
           },
@@ -691,7 +694,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:28:28.879682",
-      "actualizado_en": "2026-07-07T02:10:42.011579"
+      "actualizado_en": "2026-07-07T20:23:41.499286"
     },
     "183659": {
       "ciu": "183659",
@@ -706,8 +709,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:11:07.254222",
-          "timestamp": "2026-07-07T02:11:07.254222",
+          "id": "ocr_2026-07-07T20:24:15.608688",
+          "timestamp": "2026-07-07T20:24:15.608688",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056008_ASHISH BAGDIYA CN GUR0425PA0056008_27-04-2025_0517-33_PM@E.pdf_page_45.png",
           "archivo_copia": null,
@@ -874,7 +877,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:29:04.857245",
-      "actualizado_en": "2026-07-07T02:11:07.254222"
+      "actualizado_en": "2026-07-07T20:24:15.608688"
     },
     "263401": {
       "ciu": "263401",
@@ -889,8 +892,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:12:18.371776",
-          "timestamp": "2026-07-07T02:12:18.371776",
+          "id": "ocr_2026-07-07T20:26:10.605984",
+          "timestamp": "2026-07-07T20:26:10.605984",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056519_discharge virendra_11zon_28-04-2025_1115-27_AM.pdf_page_14.png",
           "archivo_copia": null,
@@ -1008,7 +1011,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:30:47.402163",
-      "actualizado_en": "2026-07-07T02:12:18.371776"
+      "actualizado_en": "2026-07-07T20:26:10.605984"
     },
     "NONE": {
       "ciu": "NONE",
@@ -1023,8 +1026,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:15:16.931150",
-          "timestamp": "2026-07-07T02:15:16.931150",
+          "id": "ocr_2026-07-07T20:30:15.568713",
+          "timestamp": "2026-07-07T20:30:15.568713",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0058035_F-PKJosephcasesheetreports_250427_1808@G.pdf_page_14.png",
           "archivo_copia": null,
@@ -1051,13 +1054,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.7784,
-                "DNI_PERU": 0.0388,
-                "DNI_USA": 0.0388,
-                "INFORME_MEDICO": 0.0388,
-                "UNKNOWN": 0.1053
+                "LAB_REPORT": 0.5637,
+                "DNI_PERU": 0.0763,
+                "DNI_USA": 0.0763,
+                "INFORME_MEDICO": 0.0763,
+                "UNKNOWN": 0.2074
               },
-              "confianza": 0.7784
+              "confianza": 0.5637
             },
             "alertas_detectadas": []
           },
@@ -1065,7 +1068,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:34:37.248607",
-      "actualizado_en": "2026-07-07T02:15:16.931150"
+      "actualizado_en": "2026-07-07T20:30:15.568713"
     },
     "382421": {
       "ciu": "382421",
@@ -1080,8 +1083,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:16:58.513343",
-          "timestamp": "2026-07-07T02:16:58.513343",
+          "id": "ocr_2026-07-07T20:32:23.386705",
+          "timestamp": "2026-07-07T20:32:23.386705",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\KOL-0425-PA-0004068_E-1745819838697ANKURSAXENAFINALBILLconverted_250428_1144@E.pdf_page_16.png",
           "archivo_copia": null,
@@ -1164,13 +1167,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.7784,
-                "DNI_PERU": 0.0388,
-                "DNI_USA": 0.0388,
-                "INFORME_MEDICO": 0.0388,
-                "UNKNOWN": 0.1053
+                "LAB_REPORT": 0.5637,
+                "DNI_PERU": 0.0763,
+                "DNI_USA": 0.0763,
+                "INFORME_MEDICO": 0.0763,
+                "UNKNOWN": 0.2074
               },
-              "confianza": 0.7784
+              "confianza": 0.5637
             },
             "alertas_detectadas": []
           },
@@ -1178,7 +1181,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:37:06.241610",
-      "actualizado_en": "2026-07-07T02:16:58.513343"
+      "actualizado_en": "2026-07-07T20:32:23.386705"
     },
     "411040": {
       "ciu": "411040",
@@ -1215,8 +1218,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:17:42.795057",
-          "timestamp": "2026-07-07T02:17:42.795057",
+          "id": "ocr_2026-07-07T20:33:25.027500",
+          "timestamp": "2026-07-07T20:33:25.027500",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0125-PA-0001141_W2500438UNADKAT ASHWIN_27-04-2025_1002-19_AM.pdf_page_91.png",
           "archivo_copia": null,
@@ -1354,13 +1357,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.9629,
-                "DNI_PERU": 0.0065,
-                "DNI_USA": 0.0065,
-                "INFORME_MEDICO": 0.0065,
-                "UNKNOWN": 0.0176
+                "LAB_REPORT": 0.9052,
+                "DNI_PERU": 0.0166,
+                "DNI_USA": 0.0166,
+                "INFORME_MEDICO": 0.0166,
+                "UNKNOWN": 0.0451
               },
-              "confianza": 0.9629
+              "confianza": 0.9052
             },
             "alertas_detectadas": []
           },
@@ -1368,7 +1371,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:38:04.563285",
-      "actualizado_en": "2026-07-07T02:17:42.795057"
+      "actualizado_en": "2026-07-07T20:33:25.027500"
     },
     "414003": {
       "ciu": "414003",
@@ -1383,8 +1386,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:17:51.267441",
-          "timestamp": "2026-07-07T02:17:51.267441",
+          "id": "ocr_2026-07-07T20:33:38.916673",
+          "timestamp": "2026-07-07T20:33:38.916673",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0425-PA-0003769_E-BodakheParvatiReports_250427_1201@E.pdf_page_2.png",
           "archivo_copia": null,
@@ -1524,7 +1527,7 @@
         }
       ],
       "creado_en": "2026-07-06T13:38:15.345008",
-      "actualizado_en": "2026-07-07T02:17:51.267441"
+      "actualizado_en": "2026-07-07T20:33:38.916673"
     },
     "201816": {
       "ciu": "201816",
@@ -1771,8 +1774,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:07:10.578004",
-          "timestamp": "2026-07-07T02:07:10.578004",
+          "id": "ocr_2026-07-07T21:16:32.253022",
+          "timestamp": "2026-07-07T21:16:32.253022",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053434_Q-PREETI4837000111zon_250427_1314@F.pdf_page_42.png",
           "archivo_copia": null,
@@ -1901,6 +1904,7 @@
                 "referencia": ""
               }
             ],
+            "alertas": [],
             "alertas_criticas": [],
             "tipo": "LAB_REPORT",
             "informacion_clinica": {
@@ -1908,6 +1912,7 @@
               "médico_laboratorio": "Name"
             },
             "interpretacion": null,
+            "alertas_detectadas": [],
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -1918,14 +1923,13 @@
                 "UNKNOWN": 0.2074
               },
               "confianza": 0.5637
-            },
-            "alertas_detectadas": []
+            }
           },
           "advertencia": null
         }
       ],
       "creado_en": "2026-07-06T19:21:39.911600",
-      "actualizado_en": "2026-07-07T02:07:10.578004"
+      "actualizado_en": "2026-07-07T21:16:32.253022"
     },
     "169099": {
       "ciu": "169099",
@@ -2011,8 +2015,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:08:11.556410",
-          "timestamp": "2026-07-07T02:08:11.556410",
+          "id": "ocr_2026-07-07T21:17:31.832853",
+          "timestamp": "2026-07-07T21:17:31.832853",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053930_Q-REKHA10500_250427_1509@F.pdf_page_27.png",
           "archivo_copia": null,
@@ -2092,6 +2096,7 @@
                 "referencia": ""
               }
             ],
+            "alertas": [],
             "alertas_criticas": [],
             "tipo": "LAB_REPORT",
             "informacion_clinica": {
@@ -2099,6 +2104,7 @@
               "médico_laboratorio": "Ramesh Kumar OPD IPD"
             },
             "interpretacion": null,
+            "alertas_detectadas": [],
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -2109,14 +2115,13 @@
                 "UNKNOWN": 0.1053
               },
               "confianza": 0.7784
-            },
-            "alertas_detectadas": []
+            }
           },
           "advertencia": null
         }
       ],
       "creado_en": "2026-07-06T19:22:41.253395",
-      "actualizado_en": "2026-07-07T02:08:11.556410"
+      "actualizado_en": "2026-07-07T21:17:31.832853"
     },
     "867192": {
       "ciu": "867192",
@@ -2202,8 +2207,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:08:52.642384",
-          "timestamp": "2026-07-07T02:08:52.642384",
+          "id": "ocr_2026-07-07T20:49:26.586395",
+          "timestamp": "2026-07-07T20:49:26.586395",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054745_Q-REPORTS_250427_1041@F.pdf_page_7.png",
           "archivo_copia": null,
@@ -2308,7 +2313,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:23:18.258506",
-      "actualizado_en": "2026-07-07T02:08:52.642384"
+      "actualizado_en": "2026-07-07T20:49:26.586395"
     },
     "642457": {
       "ciu": "642457",
@@ -2331,8 +2336,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:09:03.386515",
-          "timestamp": "2026-07-07T02:09:03.386515",
+          "id": "ocr_2026-07-07T20:49:34.329153",
+          "timestamp": "2026-07-07T20:49:34.329153",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054811_Q-GUDDUKUMAR10534_250427_1457@F.pdf_page_31.png",
           "archivo_copia": null,
@@ -2373,7 +2378,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:23:24.598443",
-      "actualizado_en": "2026-07-07T02:09:03.386515"
+      "actualizado_en": "2026-07-07T20:49:34.329153"
     },
     "780043": {
       "ciu": "780043",
@@ -2403,8 +2408,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:09:43.883360",
-          "timestamp": "2026-07-07T02:09:43.883360",
+          "id": "ocr_2026-07-07T20:50:18.504509",
+          "timestamp": "2026-07-07T20:50:18.504509",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055398_SUNILA ARORA INVESTIGATION  FOR ENHANCMENT _26-04-2025_0642-20_PM@G.pdf_page_19.png",
           "archivo_copia": null,
@@ -2438,13 +2443,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.9052,
-                "DNI_PERU": 0.0166,
-                "DNI_USA": 0.0166,
-                "INFORME_MEDICO": 0.0166,
-                "UNKNOWN": 0.0451
+                "LAB_REPORT": 0.7784,
+                "DNI_PERU": 0.0388,
+                "DNI_USA": 0.0388,
+                "INFORME_MEDICO": 0.0388,
+                "UNKNOWN": 0.1053
               },
-              "confianza": 0.9052
+              "confianza": 0.7784
             },
             "alertas_detectadas": []
           },
@@ -2452,7 +2457,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:24:11.604131",
-      "actualizado_en": "2026-07-07T02:09:43.883360"
+      "actualizado_en": "2026-07-07T20:50:18.504509"
     },
     "249703": {
       "ciu": "249703",
@@ -2482,8 +2487,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:09:49.969561",
-          "timestamp": "2026-07-07T02:09:49.969561",
+          "id": "ocr_2026-07-07T20:50:27.036759",
+          "timestamp": "2026-07-07T20:50:27.036759",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055398_SUNILA ARORA INVESTIGATION  FOR ENHANCMENT _27-04-2025_1111-09_AM.pdf_page_6.png",
           "archivo_copia": null,
@@ -2517,13 +2522,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.9052,
-                "DNI_PERU": 0.0166,
-                "DNI_USA": 0.0166,
-                "INFORME_MEDICO": 0.0166,
-                "UNKNOWN": 0.0451
+                "LAB_REPORT": 0.7784,
+                "DNI_PERU": 0.0388,
+                "DNI_USA": 0.0388,
+                "INFORME_MEDICO": 0.0388,
+                "UNKNOWN": 0.1053
               },
-              "confianza": 0.9052
+              "confianza": 0.7784
             },
             "alertas_detectadas": []
           },
@@ -2531,7 +2536,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:24:19.872251",
-      "actualizado_en": "2026-07-07T02:09:49.969561"
+      "actualizado_en": "2026-07-07T20:50:27.036759"
     },
     "46758249": {
       "ciu": "46758249",
@@ -2546,8 +2551,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:10:14.121457",
-          "timestamp": "2026-07-07T02:10:14.121457",
+          "id": "ocr_2026-07-07T20:51:00.931803",
+          "timestamp": "2026-07-07T20:51:00.931803",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055460_Q-LOKESHYADAV202580001compressed_250428_1148@F.pdf_page_32.png",
           "archivo_copia": null,
@@ -2566,13 +2571,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.7784,
-                "DNI_PERU": 0.0388,
-                "DNI_USA": 0.0388,
-                "INFORME_MEDICO": 0.0388,
-                "UNKNOWN": 0.1053
+                "LAB_REPORT": 0.5637,
+                "DNI_PERU": 0.0763,
+                "DNI_USA": 0.0763,
+                "INFORME_MEDICO": 0.0763,
+                "UNKNOWN": 0.2074
               },
-              "confianza": 0.7784
+              "confianza": 0.5637
             },
             "alertas_detectadas": []
           },
@@ -2580,7 +2585,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:24:50.486013",
-      "actualizado_en": "2026-07-07T02:10:14.121457"
+      "actualizado_en": "2026-07-07T20:51:00.931803"
     },
     "122002": {
       "ciu": "122002",
@@ -2609,8 +2614,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:10:48.867573",
-          "timestamp": "2026-07-07T02:10:48.867573",
+          "id": "ocr_2026-07-07T20:23:49.123099",
+          "timestamp": "2026-07-07T20:23:49.123099",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055928_Q-QUERYREPLYMSSAUMYASINGH_250423_1911@F.pdf_page_9.png",
           "archivo_copia": null,
@@ -2657,7 +2662,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:25:42.315730",
-      "actualizado_en": "2026-07-07T02:10:48.867573"
+      "actualizado_en": "2026-07-07T20:23:49.123099"
     },
     "126571": {
       "ciu": "126571",
@@ -2680,8 +2685,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:12:03.140585",
-          "timestamp": "2026-07-07T02:12:03.140585",
+          "id": "ocr_2026-07-07T20:25:46.622804",
+          "timestamp": "2026-07-07T20:25:46.622804",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056422_CASHLESS CLAIM FILE GAURAB PATHAK_0001_compressed_27-04-2025_0804-45_PM@E.pdf_page_37.png",
           "archivo_copia": null,
@@ -2723,7 +2728,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:26:56.327830",
-      "actualizado_en": "2026-07-07T02:12:03.140585"
+      "actualizado_en": "2026-07-07T20:25:46.622804"
     },
     "259192": {
       "ciu": "259192",
@@ -2823,8 +2828,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:12:11.110081",
-          "timestamp": "2026-07-07T02:12:11.110081",
+          "id": "ocr_2026-07-07T20:25:57.397525",
+          "timestamp": "2026-07-07T20:25:57.397525",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056422_CASHLESS CLAIM FILE GAURAB PATHAK_0001_compressed_27-04-2025_0804-45_PM@E.pdf_page_45.png",
           "archivo_copia": null,
@@ -2943,7 +2948,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:27:09.210154",
-      "actualizado_en": "2026-07-07T02:12:11.110081"
+      "actualizado_en": "2026-07-07T20:25:57.397525"
     },
     "913471": {
       "ciu": "913471",
@@ -2987,8 +2992,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:13:30.304194",
-          "timestamp": "2026-07-07T02:13:30.304194",
+          "id": "ocr_2026-07-07T20:28:09.601453",
+          "timestamp": "2026-07-07T20:28:09.601453",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057745_Q-LABREPORTS_250428_1121@F.pdf_page_12.png",
           "archivo_copia": null,
@@ -3050,7 +3055,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:28:58.591829",
-      "actualizado_en": "2026-07-07T02:13:30.304194"
+      "actualizado_en": "2026-07-07T20:28:09.601453"
     },
     "412025": {
       "ciu": "412025",
@@ -3073,8 +3078,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:14:49.649661",
-          "timestamp": "2026-07-07T02:14:49.649661",
+          "id": "ocr_2026-07-07T20:29:49.315070",
+          "timestamp": "2026-07-07T20:29:49.315070",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057991_F-EchsDept27042025162653392807_250427_1637@G.pdf_page_10.png",
           "archivo_copia": null,
@@ -3117,7 +3122,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:30:17.816918",
-      "actualizado_en": "2026-07-07T02:14:49.649661"
+      "actualizado_en": "2026-07-07T20:29:49.315070"
     },
     "153507": {
       "ciu": "153507",
@@ -3132,8 +3137,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:15:42.185471",
-          "timestamp": "2026-07-07T02:15:42.185471",
+          "id": "ocr_2026-07-07T20:30:40.770043",
+          "timestamp": "2026-07-07T20:30:40.770043",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\HYD-0425-PA-0007281_Q-QUERYREPLYOFPT.GTSRINIVASARAO_250427_0957@F.pdf_page_9.png",
           "archivo_copia": null,
@@ -3153,13 +3158,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.3222,
-                "DNI_PERU": 0.1185,
-                "DNI_USA": 0.1185,
-                "INFORME_MEDICO": 0.1185,
-                "UNKNOWN": 0.3222
+                "LAB_REPORT": 0.5637,
+                "DNI_PERU": 0.0763,
+                "DNI_USA": 0.0763,
+                "INFORME_MEDICO": 0.0763,
+                "UNKNOWN": 0.2074
               },
-              "confianza": 0.3222
+              "confianza": 0.5637
             },
             "alertas_detectadas": []
           },
@@ -3167,7 +3172,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:31:11.234026",
-      "actualizado_en": "2026-07-07T02:15:42.185471"
+      "actualizado_en": "2026-07-07T20:30:40.770043"
     },
     "705269": {
       "ciu": "705269",
@@ -3346,17 +3351,17 @@
     "NO_DETECTADO": {
       "ciu": "NO_DETECTADO",
       "datos_personales": {
-        "ciu": "NO_DETECTADO",
-        "nombres": "MUESTRA",
-        "apellidos": "IDENTIFICACION",
-        "fecha_nacimiento": "05/18/2012"
+        "ciu": "",
+        "nombres": "VIRGINIA",
+        "apellidos": "WEST",
+        "fecha_nacimiento": "06/02/2025"
       },
       "informes_laboratorio": [],
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:06:20.946056",
-          "timestamp": "2026-07-07T02:06:20.946056",
+          "id": "ocr_2026-07-08T04:48:38.411105",
+          "timestamp": "2026-07-08T04:48:38.411105",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0044206.png",
           "archivo_copia": null,
@@ -3383,8 +3388,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:06:29.058086",
-          "timestamp": "2026-07-07T02:06:29.058086",
+          "id": "ocr_2026-07-08T04:48:43.626145",
+          "timestamp": "2026-07-08T04:48:43.626145",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0044357.png",
           "archivo_copia": null,
@@ -3411,8 +3416,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:06:37.285608",
-          "timestamp": "2026-07-07T02:06:37.285608",
+          "id": "ocr_2026-07-08T04:48:48.969674",
+          "timestamp": "2026-07-08T04:48:48.969674",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0044457.png",
           "archivo_copia": null,
@@ -3439,8 +3444,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:06:45.062847",
-          "timestamp": "2026-07-07T02:06:45.062847",
+          "id": "ocr_2026-07-07T21:16:15.092171",
+          "timestamp": "2026-07-07T21:16:15.092171",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0044557.png",
           "archivo_copia": null,
@@ -3467,8 +3472,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:06:53.485809",
-          "timestamp": "2026-07-07T02:06:53.485809",
+          "id": "ocr_2026-07-07T21:16:20.447374",
+          "timestamp": "2026-07-07T21:16:20.447374",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0044884.png",
           "archivo_copia": null,
@@ -3495,8 +3500,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:07:04.339854",
-          "timestamp": "2026-07-07T02:07:04.339854",
+          "id": "ocr_2026-07-07T21:16:27.428767",
+          "timestamp": "2026-07-07T21:16:27.428767",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0045113.png",
           "archivo_copia": null,
@@ -3523,8 +3528,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:07:11.640348",
-          "timestamp": "2026-07-07T02:07:11.640348",
+          "id": "ocr_2026-07-07T21:16:33.568282",
+          "timestamp": "2026-07-07T21:16:33.568282",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0045204.png",
           "archivo_copia": null,
@@ -3551,8 +3556,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:07:23.666500",
-          "timestamp": "2026-07-07T02:07:23.666500",
+          "id": "ocr_2026-07-07T21:16:47.189093",
+          "timestamp": "2026-07-07T21:16:47.189093",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0045589.png",
           "archivo_copia": null,
@@ -3579,8 +3584,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:07:29.868451",
-          "timestamp": "2026-07-07T02:07:29.868451",
+          "id": "ocr_2026-07-07T21:16:53.689089",
+          "timestamp": "2026-07-07T21:16:53.689089",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0045677.png",
           "archivo_copia": null,
@@ -3607,8 +3612,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:07:38.364733",
-          "timestamp": "2026-07-07T02:07:38.364733",
+          "id": "ocr_2026-07-07T21:17:01.174738",
+          "timestamp": "2026-07-07T21:17:01.174738",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0045823.png",
           "archivo_copia": null,
@@ -3635,8 +3640,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:07:44.660230",
-          "timestamp": "2026-07-07T02:07:44.660230",
+          "id": "ocr_2026-07-07T21:17:07.923844",
+          "timestamp": "2026-07-07T21:17:07.923844",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046068.png",
           "archivo_copia": null,
@@ -3663,8 +3668,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:07:50.924300",
-          "timestamp": "2026-07-07T02:07:50.924300",
+          "id": "ocr_2026-07-07T21:17:13.596408",
+          "timestamp": "2026-07-07T21:17:13.596408",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046078.png",
           "archivo_copia": null,
@@ -3691,8 +3696,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:07:58.343343",
-          "timestamp": "2026-07-07T02:07:58.343343",
+          "id": "ocr_2026-07-07T21:17:19.681369",
+          "timestamp": "2026-07-07T21:17:19.681369",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046206.png",
           "archivo_copia": null,
@@ -3719,8 +3724,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:08:05.311971",
-          "timestamp": "2026-07-07T02:08:05.311971",
+          "id": "ocr_2026-07-07T21:17:26.038663",
+          "timestamp": "2026-07-07T21:17:26.038663",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046219.png",
           "archivo_copia": null,
@@ -3747,8 +3752,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:08:12.948261",
-          "timestamp": "2026-07-07T02:08:12.948261",
+          "id": "ocr_2026-07-07T21:17:33.189639",
+          "timestamp": "2026-07-07T21:17:33.189639",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046598.png",
           "archivo_copia": null,
@@ -3775,8 +3780,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:08:22.361156",
-          "timestamp": "2026-07-07T02:08:22.361156",
+          "id": "ocr_2026-07-07T21:17:39.767612",
+          "timestamp": "2026-07-07T21:17:39.767612",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046624.png",
           "archivo_copia": null,
@@ -3803,8 +3808,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:08:28.966490",
-          "timestamp": "2026-07-07T02:08:28.966490",
+          "id": "ocr_2026-07-07T21:17:45.019067",
+          "timestamp": "2026-07-07T21:17:45.019067",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046654.png",
           "archivo_copia": null,
@@ -3831,8 +3836,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:08:38.719010",
-          "timestamp": "2026-07-07T02:08:38.719010",
+          "id": "ocr_2026-07-07T21:17:51.663853",
+          "timestamp": "2026-07-07T21:17:51.663853",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046720.png",
           "archivo_copia": null,
@@ -3859,8 +3864,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:08:46.763131",
-          "timestamp": "2026-07-07T02:08:46.763131",
+          "id": "ocr_2026-07-07T20:49:20.959788",
+          "timestamp": "2026-07-07T20:49:20.959788",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046868.png",
           "archivo_copia": null,
@@ -3887,8 +3892,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:08:54.337069",
-          "timestamp": "2026-07-07T02:08:54.337069",
+          "id": "ocr_2026-07-07T20:49:27.948017",
+          "timestamp": "2026-07-07T20:49:27.948017",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0046967.png",
           "archivo_copia": null,
@@ -3915,8 +3920,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:09:04.889790",
-          "timestamp": "2026-07-07T02:09:04.889790",
+          "id": "ocr_2026-07-07T20:49:35.674270",
+          "timestamp": "2026-07-07T20:49:35.674270",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0047729_0931598_0055648.png",
           "archivo_copia": null,
@@ -3943,8 +3948,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:09:12.996783",
-          "timestamp": "2026-07-07T02:09:12.996783",
+          "id": "ocr_2026-07-07T20:49:42.753387",
+          "timestamp": "2026-07-07T20:49:42.753387",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0047729_0931598_0690333.png",
           "archivo_copia": null,
@@ -3971,8 +3976,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:09:19.246520",
-          "timestamp": "2026-07-07T02:09:19.246520",
+          "id": "ocr_2026-07-07T20:49:49.955696",
+          "timestamp": "2026-07-07T20:49:49.955696",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0047729_0931598_0857959.png",
           "archivo_copia": null,
@@ -3999,8 +4004,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:09:25.174806",
-          "timestamp": "2026-07-07T02:09:25.174806",
+          "id": "ocr_2026-07-07T20:49:56.390882",
+          "timestamp": "2026-07-07T20:49:56.390882",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0047729_0931598_0884479.png",
           "archivo_copia": null,
@@ -4027,8 +4032,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:09:32.142018",
-          "timestamp": "2026-07-07T02:09:32.142018",
+          "id": "ocr_2026-07-07T20:50:04.545133",
+          "timestamp": "2026-07-07T20:50:04.545133",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0047729_0931598_0990670.png",
           "archivo_copia": null,
@@ -4055,8 +4060,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:09:38.906068",
-          "timestamp": "2026-07-07T02:09:38.906068",
+          "id": "ocr_2026-07-07T20:50:12.858177",
+          "timestamp": "2026-07-07T20:50:12.858177",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0047793.png",
           "archivo_copia": null,
@@ -4083,8 +4088,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:09:45.122927",
-          "timestamp": "2026-07-07T02:09:45.122927",
+          "id": "ocr_2026-07-07T20:50:20.119349",
+          "timestamp": "2026-07-07T20:50:20.119349",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0048075.png",
           "archivo_copia": null,
@@ -4111,8 +4116,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:09:51.083797",
-          "timestamp": "2026-07-07T02:09:51.083797",
+          "id": "ocr_2026-07-07T20:50:30.082366",
+          "timestamp": "2026-07-07T20:50:30.082366",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0048144.png",
           "archivo_copia": null,
@@ -4139,8 +4144,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:09:56.799071",
-          "timestamp": "2026-07-07T02:09:56.799071",
+          "id": "ocr_2026-07-07T20:50:37.952696",
+          "timestamp": "2026-07-07T20:50:37.952696",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0048190.png",
           "archivo_copia": null,
@@ -4167,8 +4172,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:10:02.527345",
-          "timestamp": "2026-07-07T02:10:02.527345",
+          "id": "ocr_2026-07-07T20:50:44.849517",
+          "timestamp": "2026-07-07T20:50:44.849517",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0048203.png",
           "archivo_copia": null,
@@ -4195,8 +4200,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:10:08.568172",
-          "timestamp": "2026-07-07T02:10:08.568172",
+          "id": "ocr_2026-07-07T20:50:54.737533",
+          "timestamp": "2026-07-07T20:50:54.737533",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0048569.png",
           "archivo_copia": null,
@@ -4223,8 +4228,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:10:15.122113",
-          "timestamp": "2026-07-07T02:10:15.122113",
+          "id": "ocr_2026-07-07T20:51:02.387224",
+          "timestamp": "2026-07-07T20:51:02.387224",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0048728.png",
           "archivo_copia": null,
@@ -4251,8 +4256,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:10:21.564605",
-          "timestamp": "2026-07-07T02:10:21.564605",
+          "id": "ocr_2026-07-07T20:51:11.213333",
+          "timestamp": "2026-07-07T20:51:11.213333",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0048943.png",
           "archivo_copia": null,
@@ -4279,8 +4284,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:10:28.512223",
-          "timestamp": "2026-07-07T02:10:28.512223",
+          "id": "ocr_2026-07-07T20:51:19.505278",
+          "timestamp": "2026-07-07T20:51:19.505278",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0049052.png",
           "archivo_copia": null,
@@ -4307,8 +4312,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:10:35.225053",
-          "timestamp": "2026-07-07T02:10:35.225053",
+          "id": "ocr_2026-07-07T20:23:32.206746",
+          "timestamp": "2026-07-07T20:23:32.206746",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0049178.png",
           "archivo_copia": null,
@@ -4335,8 +4340,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:10:43.095102",
-          "timestamp": "2026-07-07T02:10:43.095102",
+          "id": "ocr_2026-07-07T20:23:43.149160",
+          "timestamp": "2026-07-07T20:23:43.149160",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0049203.png",
           "archivo_copia": null,
@@ -4363,8 +4368,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:10:49.934024",
-          "timestamp": "2026-07-07T02:10:49.934024",
+          "id": "ocr_2026-07-07T20:23:51.058778",
+          "timestamp": "2026-07-07T20:23:51.058778",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0049206.png",
           "archivo_copia": null,
@@ -4391,8 +4396,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:10:56.428683",
-          "timestamp": "2026-07-07T02:10:56.428683",
+          "id": "ocr_2026-07-07T20:23:58.660009",
+          "timestamp": "2026-07-07T20:23:58.660009",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0049824.png",
           "archivo_copia": null,
@@ -4419,8 +4424,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:11:02.291823",
-          "timestamp": "2026-07-07T02:11:02.291823",
+          "id": "ocr_2026-07-07T20:24:07.269172",
+          "timestamp": "2026-07-07T20:24:07.269172",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0049954.png",
           "archivo_copia": null,
@@ -4447,8 +4452,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:11:08.331639",
-          "timestamp": "2026-07-07T02:11:08.331639",
+          "id": "ocr_2026-07-07T20:24:17.506486",
+          "timestamp": "2026-07-07T20:24:17.506486",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050078.png",
           "archivo_copia": null,
@@ -4475,8 +4480,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:11:14.080116",
-          "timestamp": "2026-07-07T02:11:14.080116",
+          "id": "ocr_2026-07-07T20:24:28.589403",
+          "timestamp": "2026-07-07T20:24:28.589403",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050118.png",
           "archivo_copia": null,
@@ -4503,8 +4508,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:11:20.303823",
-          "timestamp": "2026-07-07T02:11:20.303823",
+          "id": "ocr_2026-07-07T20:24:40.249004",
+          "timestamp": "2026-07-07T20:24:40.249004",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050151.png",
           "archivo_copia": null,
@@ -4531,8 +4536,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:11:25.773313",
-          "timestamp": "2026-07-07T02:11:25.773313",
+          "id": "ocr_2026-07-07T20:24:50.728978",
+          "timestamp": "2026-07-07T20:24:50.728978",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050204.png",
           "archivo_copia": null,
@@ -4559,8 +4564,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:11:32.025322",
-          "timestamp": "2026-07-07T02:11:32.025322",
+          "id": "ocr_2026-07-07T20:25:01.249256",
+          "timestamp": "2026-07-07T20:25:01.249256",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050284.png",
           "archivo_copia": null,
@@ -4587,8 +4592,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:11:40.024062",
-          "timestamp": "2026-07-07T02:11:40.024062",
+          "id": "ocr_2026-07-07T20:25:13.587218",
+          "timestamp": "2026-07-07T20:25:13.587218",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050430.png",
           "archivo_copia": null,
@@ -4615,8 +4620,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:11:47.437977",
-          "timestamp": "2026-07-07T02:11:47.437977",
+          "id": "ocr_2026-07-07T20:25:25.384438",
+          "timestamp": "2026-07-07T20:25:25.384438",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050618.png",
           "archivo_copia": null,
@@ -4643,8 +4648,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:11:57.284301",
-          "timestamp": "2026-07-07T02:11:57.284301",
+          "id": "ocr_2026-07-07T20:25:38.961917",
+          "timestamp": "2026-07-07T20:25:38.961917",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050765.png",
           "archivo_copia": null,
@@ -4671,8 +4676,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:12:05.160884",
-          "timestamp": "2026-07-07T02:12:05.160884",
+          "id": "ocr_2026-07-07T20:25:48.566824",
+          "timestamp": "2026-07-07T20:25:48.566824",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0050853.png",
           "archivo_copia": null,
@@ -4699,8 +4704,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:12:12.239042",
-          "timestamp": "2026-07-07T02:12:12.239042",
+          "id": "ocr_2026-07-07T20:25:59.931072",
+          "timestamp": "2026-07-07T20:25:59.931072",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0051354.png",
           "archivo_copia": null,
@@ -4727,8 +4732,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:12:19.684023",
-          "timestamp": "2026-07-07T02:12:19.684023",
+          "id": "ocr_2026-07-07T20:26:12.946579",
+          "timestamp": "2026-07-07T20:26:12.946579",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0051381.png",
           "archivo_copia": null,
@@ -4755,8 +4760,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:12:26.577849",
-          "timestamp": "2026-07-07T02:12:26.577849",
+          "id": "ocr_2026-07-07T20:26:27.665419",
+          "timestamp": "2026-07-07T20:26:27.665419",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0051648.png",
           "archivo_copia": null,
@@ -4783,8 +4788,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:12:34.242384",
-          "timestamp": "2026-07-07T02:12:34.242384",
+          "id": "ocr_2026-07-07T20:26:39.703180",
+          "timestamp": "2026-07-07T20:26:39.703180",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0051665.png",
           "archivo_copia": null,
@@ -4811,8 +4816,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:12:42.999892",
-          "timestamp": "2026-07-07T02:12:42.999892",
+          "id": "ocr_2026-07-07T20:26:53.176895",
+          "timestamp": "2026-07-07T20:26:53.176895",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0051859.png",
           "archivo_copia": null,
@@ -4839,8 +4844,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:12:51.010104",
-          "timestamp": "2026-07-07T02:12:51.010104",
+          "id": "ocr_2026-07-07T20:27:10.461182",
+          "timestamp": "2026-07-07T20:27:10.461182",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0051981.png",
           "archivo_copia": null,
@@ -4867,8 +4872,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:12:58.355784",
-          "timestamp": "2026-07-07T02:12:58.355784",
+          "id": "ocr_2026-07-07T20:27:22.396626",
+          "timestamp": "2026-07-07T20:27:22.396626",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0051986.png",
           "archivo_copia": null,
@@ -4895,8 +4900,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:13:07.313352",
-          "timestamp": "2026-07-07T02:13:07.313352",
+          "id": "ocr_2026-07-07T20:27:34.291878",
+          "timestamp": "2026-07-07T20:27:34.291878",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0052096.png",
           "archivo_copia": null,
@@ -4923,8 +4928,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:13:23.774138",
-          "timestamp": "2026-07-07T02:13:23.774138",
+          "id": "ocr_2026-07-07T20:27:57.751808",
+          "timestamp": "2026-07-07T20:27:57.751808",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0052703.png",
           "archivo_copia": null,
@@ -4951,8 +4956,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:13:33.625894",
-          "timestamp": "2026-07-07T02:13:33.625894",
+          "id": "ocr_2026-07-07T20:28:11.710397",
+          "timestamp": "2026-07-07T20:28:11.710397",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0052809.png",
           "archivo_copia": null,
@@ -4979,8 +4984,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:13:43.554181",
-          "timestamp": "2026-07-07T02:13:43.554181",
+          "id": "ocr_2026-07-07T20:28:23.309472",
+          "timestamp": "2026-07-07T20:28:23.309472",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0052889.png",
           "archivo_copia": null,
@@ -5007,8 +5012,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:13:50.252217",
-          "timestamp": "2026-07-07T02:13:50.252217",
+          "id": "ocr_2026-07-07T20:28:31.365571",
+          "timestamp": "2026-07-07T20:28:31.365571",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0053221.png",
           "archivo_copia": null,
@@ -5035,8 +5040,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:13:57.050233",
-          "timestamp": "2026-07-07T02:13:57.050233",
+          "id": "ocr_2026-07-07T20:28:38.285900",
+          "timestamp": "2026-07-07T20:28:38.285900",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0053668.png",
           "archivo_copia": null,
@@ -5063,8 +5068,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:14:03.537827",
-          "timestamp": "2026-07-07T02:14:03.537827",
+          "id": "ocr_2026-07-07T20:28:47.378041",
+          "timestamp": "2026-07-07T20:28:47.378041",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0053781.png",
           "archivo_copia": null,
@@ -5091,8 +5096,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:14:09.999292",
-          "timestamp": "2026-07-07T02:14:09.999292",
+          "id": "ocr_2026-07-07T20:28:54.572878",
+          "timestamp": "2026-07-07T20:28:54.572878",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0053895.png",
           "archivo_copia": null,
@@ -5119,8 +5124,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:14:16.772223",
-          "timestamp": "2026-07-07T02:14:16.772223",
+          "id": "ocr_2026-07-07T20:29:02.746937",
+          "timestamp": "2026-07-07T20:29:02.746937",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0054454.png",
           "archivo_copia": null,
@@ -5147,8 +5152,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:14:22.900554",
-          "timestamp": "2026-07-07T02:14:22.900554",
+          "id": "ocr_2026-07-07T20:29:10.533463",
+          "timestamp": "2026-07-07T20:29:10.533463",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0054541.png",
           "archivo_copia": null,
@@ -5175,8 +5180,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:14:29.026601",
-          "timestamp": "2026-07-07T02:14:29.026601",
+          "id": "ocr_2026-07-07T20:29:19.687978",
+          "timestamp": "2026-07-07T20:29:19.687978",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0054568.png",
           "archivo_copia": null,
@@ -5203,8 +5208,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:14:36.846044",
-          "timestamp": "2026-07-07T02:14:36.846044",
+          "id": "ocr_2026-07-07T20:29:29.636628",
+          "timestamp": "2026-07-07T20:29:29.636628",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0054904.png",
           "archivo_copia": null,
@@ -5231,8 +5236,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:14:43.526408",
-          "timestamp": "2026-07-07T02:14:43.526408",
+          "id": "ocr_2026-07-07T20:29:40.804837",
+          "timestamp": "2026-07-07T20:29:40.804837",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0055034.png",
           "archivo_copia": null,
@@ -5259,8 +5264,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:14:50.879258",
-          "timestamp": "2026-07-07T02:14:50.879258",
+          "id": "ocr_2026-07-07T20:29:50.718472",
+          "timestamp": "2026-07-07T20:29:50.718472",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0055204.png",
           "archivo_copia": null,
@@ -5287,8 +5292,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:14:59.121652",
-          "timestamp": "2026-07-07T02:14:59.121652",
+          "id": "ocr_2026-07-07T20:30:00.086970",
+          "timestamp": "2026-07-07T20:30:00.086970",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0055301.png",
           "archivo_copia": null,
@@ -5315,8 +5320,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:15:09.934204",
-          "timestamp": "2026-07-07T02:15:09.934204",
+          "id": "ocr_2026-07-07T20:30:09.474439",
+          "timestamp": "2026-07-07T20:30:09.474439",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0055927.png",
           "archivo_copia": null,
@@ -5343,8 +5348,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:15:19.629054",
-          "timestamp": "2026-07-07T02:15:19.629054",
+          "id": "ocr_2026-07-07T20:30:17.102457",
+          "timestamp": "2026-07-07T20:30:17.102457",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0056074.png",
           "archivo_copia": null,
@@ -5371,8 +5376,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:15:27.697890",
-          "timestamp": "2026-07-07T02:15:27.697890",
+          "id": "ocr_2026-07-07T20:30:25.567492",
+          "timestamp": "2026-07-07T20:30:25.567492",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0056110_0507927_0098482.png",
           "archivo_copia": null,
@@ -5399,8 +5404,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:15:36.761844",
-          "timestamp": "2026-07-07T02:15:36.761844",
+          "id": "ocr_2026-07-07T20:30:34.347343",
+          "timestamp": "2026-07-07T20:30:34.347343",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0056299.png",
           "archivo_copia": null,
@@ -5427,8 +5432,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:15:43.384021",
-          "timestamp": "2026-07-07T02:15:43.384021",
+          "id": "ocr_2026-07-07T20:30:42.475579",
+          "timestamp": "2026-07-07T20:30:42.475579",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0056425.png",
           "archivo_copia": null,
@@ -5455,8 +5460,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:15:49.615655",
-          "timestamp": "2026-07-07T02:15:49.615655",
+          "id": "ocr_2026-07-07T20:30:56.051955",
+          "timestamp": "2026-07-07T20:30:56.051955",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0056583.png",
           "archivo_copia": null,
@@ -5483,8 +5488,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:15:58.668075",
-          "timestamp": "2026-07-07T02:15:58.668075",
+          "id": "ocr_2026-07-07T20:31:07.721419",
+          "timestamp": "2026-07-07T20:31:07.721419",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0056860.png",
           "archivo_copia": null,
@@ -5511,8 +5516,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:16:06.939901",
-          "timestamp": "2026-07-07T02:16:06.939901",
+          "id": "ocr_2026-07-07T20:31:18.729821",
+          "timestamp": "2026-07-07T20:31:18.729821",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0056880.png",
           "archivo_copia": null,
@@ -5539,8 +5544,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:16:12.933076",
-          "timestamp": "2026-07-07T02:16:12.933076",
+          "id": "ocr_2026-07-07T20:31:26.916388",
+          "timestamp": "2026-07-07T20:31:26.916388",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0056988.png",
           "archivo_copia": null,
@@ -5567,8 +5572,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:16:21.475104",
-          "timestamp": "2026-07-07T02:16:21.475104",
+          "id": "ocr_2026-07-07T20:31:35.287917",
+          "timestamp": "2026-07-07T20:31:35.287917",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0057283.png",
           "archivo_copia": null,
@@ -5595,8 +5600,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:16:28.008879",
-          "timestamp": "2026-07-07T02:16:28.008879",
+          "id": "ocr_2026-07-07T20:31:43.288547",
+          "timestamp": "2026-07-07T20:31:43.288547",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0057519.png",
           "archivo_copia": null,
@@ -5623,8 +5628,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:16:34.380662",
-          "timestamp": "2026-07-07T02:16:34.380662",
+          "id": "ocr_2026-07-07T20:31:51.729283",
+          "timestamp": "2026-07-07T20:31:51.729283",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0057645.png",
           "archivo_copia": null,
@@ -5651,8 +5656,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:16:52.040523",
-          "timestamp": "2026-07-07T02:16:52.040523",
+          "id": "ocr_2026-07-07T20:32:15.099504",
+          "timestamp": "2026-07-07T20:32:15.099504",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058290.png",
           "archivo_copia": null,
@@ -5679,8 +5684,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:16:59.940953",
-          "timestamp": "2026-07-07T02:16:59.940953",
+          "id": "ocr_2026-07-07T20:32:25.336975",
+          "timestamp": "2026-07-07T20:32:25.336975",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058299.png",
           "archivo_copia": null,
@@ -5707,8 +5712,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:17:07.796438",
-          "timestamp": "2026-07-07T02:17:07.796438",
+          "id": "ocr_2026-07-07T20:32:35.416454",
+          "timestamp": "2026-07-07T20:32:35.416454",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058313.png",
           "archivo_copia": null,
@@ -5735,8 +5740,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:17:14.450955",
-          "timestamp": "2026-07-07T02:17:14.450955",
+          "id": "ocr_2026-07-07T20:32:44.105724",
+          "timestamp": "2026-07-07T20:32:44.105724",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058331.png",
           "archivo_copia": null,
@@ -5763,8 +5768,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:17:30.001630",
-          "timestamp": "2026-07-07T02:17:30.001630",
+          "id": "ocr_2026-07-07T20:33:05.729773",
+          "timestamp": "2026-07-07T20:33:05.729773",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058466.png",
           "archivo_copia": null,
@@ -5791,8 +5796,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:17:37.604856",
-          "timestamp": "2026-07-07T02:17:37.604856",
+          "id": "ocr_2026-07-07T20:33:17.392024",
+          "timestamp": "2026-07-07T20:33:17.392024",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058749_0041322_0179013.png",
           "archivo_copia": null,
@@ -5819,8 +5824,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:17:44.018778",
-          "timestamp": "2026-07-07T02:17:44.018778",
+          "id": "ocr_2026-07-07T20:33:27.133581",
+          "timestamp": "2026-07-07T20:33:27.133581",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058749_0041322_0241225.png",
           "archivo_copia": null,
@@ -5847,8 +5852,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:17:52.875262",
-          "timestamp": "2026-07-07T02:17:52.875262",
+          "id": "ocr_2026-07-07T20:33:41.345107",
+          "timestamp": "2026-07-07T20:33:41.345107",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058749_0041322_0638058.png",
           "archivo_copia": null,
@@ -5875,8 +5880,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:18:01.308615",
-          "timestamp": "2026-07-07T02:18:01.308615",
+          "id": "ocr_2026-07-07T20:33:53.174287",
+          "timestamp": "2026-07-07T20:33:53.174287",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058749_0041322_0744423.png",
           "archivo_copia": null,
@@ -5903,8 +5908,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:18:09.116594",
-          "timestamp": "2026-07-07T02:18:09.116594",
+          "id": "ocr_2026-07-07T20:34:07.708960",
+          "timestamp": "2026-07-07T20:34:07.708960",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058749_0041322_0853309.png",
           "archivo_copia": null,
@@ -5931,8 +5936,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:18:16.892275",
-          "timestamp": "2026-07-07T02:18:16.892275",
+          "id": "ocr_2026-07-07T20:34:18.133300",
+          "timestamp": "2026-07-07T20:34:18.133300",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058779.png",
           "archivo_copia": null,
@@ -5959,8 +5964,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:18:25.253526",
-          "timestamp": "2026-07-07T02:18:25.253526",
+          "id": "ocr_2026-07-07T20:34:32.612030",
+          "timestamp": "2026-07-07T20:34:32.612030",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058823.png",
           "archivo_copia": null,
@@ -5987,8 +5992,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:18:33.200314",
-          "timestamp": "2026-07-07T02:18:33.200314",
+          "id": "ocr_2026-07-07T20:34:44.464954",
+          "timestamp": "2026-07-07T20:34:44.464954",
           "fuente": "DNI_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\DNI_ALDIMI\\generated.photos_v3_0058994.png",
           "archivo_copia": null,
@@ -6069,10 +6074,150 @@
             }
           },
           "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-07T20:31:41.822355",
+          "timestamp": "2026-07-07T20:31:41.822355",
+          "fuente": "LAB_ALDIMI",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\JPR-0425-PA-0005068_E-AnnuFinal_250427_1502@E.pdf_page_19.png",
+          "archivo_copia": null,
+          "tipo_documento": "DNI_PERU",
+          "texto_crudo": "___ FULLY COMPUTERISED & AUTOMATED\n__* PATHOLOGY * X-RAY * STRESS TEST * TMT ¢ ECG * 2D ECHO\nPatient Clu: W705269 Reg.Date 24.04 2g Se\nPate i —\nRef yl MSNH Dos / m7\nCons. Dr Gender : FEMALE\nCollected at MAIN LAB {HHI li || \\|| |||] | Mob No.\nWIDAL TEST\nTest Description Observed Value Biological Reference Interval\nAgglutination Against\nS.typhi O Antigen 1:80 No Agglutination\nS.typhi H Antigen 1 :320 No Agglutination\nS. paratyphi A(H) Antigen No Agglutination No Agglutination\nS. paratyphi B(H) Antigen No Agglutination No Agglutination\nMethod : Tube Agglutination using serum sample.\nThe test is put up with doubling dilutions of serum from 1:40 to 1:320.\nRepeat testing with Increasing titre is suggestive of infection with\nSalmonella species.\nLimitations: The test may be negative in the first week of fever with\nSalmonella infection. Anamnestic responce may be seen in viral infections.\nPreviously vaccinated individuals will show a positive test. Positive\nresult will also seen in patients who have suffered from salmonella\ninfection in the recent past.\n«+e END OF REPORT ----\nid Dr. Shubhangi Pawar\nChe€Ked by: M.D.(Path)\nD'Wing, 1st & 2nd Floor, Sai Shrushti Building, Adj.Shangrila Biscuit Company,\nOpp. Bharat Petrol Pump, L.B.S.Marg, Bhandup (W), Mumbai - 400078.\nad NO.: /",
+          "campos": {
+            "ciu": "NO_DETECTADO",
+            "nombres": "AUTOMATED",
+            "apellidos": "FULLY COMPUTERISED",
+            "fecha_nacimiento": "NO_DETECTADO",
+            "tipo": "DNI_PERU",
+            "cnn_prediccion": {
+              "clase_predicha": "DNI_PERU",
+              "probabilidades": {
+                "LAB_REPORT": 0.1185,
+                "DNI_PERU": 0.3222,
+                "DNI_USA": 0.1185,
+                "INFORME_MEDICO": 0.1185,
+                "UNKNOWN": 0.3222
+              },
+              "confianza": 0.3222
+            }
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-07T19:59:29.488082",
+          "timestamp": "2026-07-07T19:59:29.488082",
+          "fuente": "upload",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\ocr_76060a6e27a44845a469d7967bd73d67.png",
+          "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260707_195929_ocr_76060a6e27a44845a469d7967bd73d67.png",
+          "tipo_documento": "DNI_PERU",
+          "texto_crudo": "2g REPUBLICA DEL PERU cul\nREGISTRO NACIONAL DE IDENTIFICACION YESTADO CIVIL ~,~,--.. ,\n= DOCUMENTO NACIONAL DE IDENTIDAD 4747580\n= —\nRANADOS ALLENDE\n; ’ Prenombres\n=e ELIPE\n- Sexo Nacionalidad Fecha de nacimiento a=\n” PER —- 09. 12 2004 ed\nEstado civil - z\nSOLTERO\n09032034 '",
+          "campos": {
+            "ciu": "NO_DETECTADO",
+            "nombres": "; ’ Prenombres",
+            "apellidos": "IDENTIFICACION YESTADO CIVIL",
+            "fecha_nacimiento": "12/09/2004",
+            "tipo": "DNI_PERU",
+            "cnn_prediccion": {
+              "clase_predicha": "DNI_PERU",
+              "probabilidades": {
+                "LAB_REPORT": 0.0024,
+                "DNI_PERU": 0.986,
+                "DNI_USA": 0.0024,
+                "INFORME_MEDICO": 0.0024,
+                "UNKNOWN": 0.0066
+              },
+              "confianza": 0.986
+            }
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-08T03:35:33.989055",
+          "timestamp": "2026-07-08T03:35:33.989055",
+          "fuente": "upload",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\ocr_a351e452cf094e0ba8aaa3327a7dc940.png",
+          "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260708_033533_ocr_a351e452cf094e0ba8aaa3327a7dc940.png",
+          "tipo_documento": "DNI_PERU",
+          "texto_crudo": "2g REPUBLICA DEL PERU cul\nREGISTRO NACIONAL DE IDENTIFICACION YESTADO CIVIL ~,~,--.. ,\n= DOCUMENTO NACIONAL DE IDENTIDAD 4747580\n= —\nRANADOS ALLENDE\n; ’ Prenombres\n=e ELIPE\n- Sexo Nacionalidad Fecha de nacimiento a=\n” PER —- 09. 12 2004 ed\nEstado civil - z\nSOLTERO\n09032034 '",
+          "campos": {
+            "ciu": "NO_DETECTADO",
+            "nombres": "; ’ Prenombres",
+            "apellidos": "IDENTIFICACION YESTADO CIVIL",
+            "fecha_nacimiento": "12/09/2004",
+            "tipo": "DNI_PERU",
+            "cnn_prediccion": {
+              "clase_predicha": "DNI_PERU",
+              "probabilidades": {
+                "LAB_REPORT": 0.0024,
+                "DNI_PERU": 0.986,
+                "DNI_USA": 0.0024,
+                "INFORME_MEDICO": 0.0024,
+                "UNKNOWN": 0.0066
+              },
+              "confianza": 0.986
+            }
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-08T03:36:23.956290",
+          "timestamp": "2026-07-08T03:36:23.956290",
+          "fuente": "upload",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\ocr_2297f136c3c547e6a611e2608d78438c.png",
+          "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260708_033623_ocr_2297f136c3c547e6a611e2608d78438c.png",
+          "tipo_documento": "DNI_PERU",
+          "texto_crudo": "Fuctetn0 SACONAL DEDENTEACION YES =\nBOCUMENTONAGONALDEDENTDAD.  — 42954703-4\n™ Primer Apellido\no ALLENDE re\n4 PS Segundo Apellido 4 2\nOe\n5 ABARCA wr\n= = Gi Prenombres a4\naf ‘= ASENCION TIMONEL\n3 4\na e Sexo Nacionalidad Fecha de Nacimiento\ng . 389032 M PER 15 08 1951\nEstado Civil Fecha de Emision\ni CASADO 15 09 2022\nSe Nede Tarjeta Fecha de Caduciciad\n0201141554 NO CADUCA",
+          "campos": {
+            "ciu": "NO_DETECTADO",
+            "nombres": "s a",
+            "apellidos": "o ALLENDE re",
+            "fecha_nacimiento": "08/15/1951",
+            "tipo": "DNI_PERU",
+            "cnn_prediccion": {
+              "clase_predicha": "DNI_PERU",
+              "probabilidades": {
+                "LAB_REPORT": 0.0024,
+                "DNI_PERU": 0.986,
+                "DNI_USA": 0.0024,
+                "INFORME_MEDICO": 0.0024,
+                "UNKNOWN": 0.0066
+              },
+              "confianza": 0.986
+            }
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-08T04:25:26.121431",
+          "timestamp": "2026-07-08T04:25:26.121431",
+          "fuente": "upload",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\ocr_7222e5b5b48c4848bb7f9ac1d13fddf7.png",
+          "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260708_042526_ocr_7222e5b5b48c4848bb7f9ac1d13fddf7.png",
+          "tipo_documento": "DNI_PERU",
+          "texto_crudo": "Fuctetn0 SACONAL DEDENTEACION YES =\nBOCUMENTONAGONALDEDENTDAD.  — 42954703-4\n™ Primer Apellido\no ALLENDE re\n4 PS Segundo Apellido 4 2\nOe\n5 ABARCA wr\n= = Gi Prenombres a4\naf ‘= ASENCION TIMONEL\n3 4\na e Sexo Nacionalidad Fecha de Nacimiento\ng . 389032 M PER 15 08 1951\nEstado Civil Fecha de Emision\ni CASADO 15 09 2022\nSe Nede Tarjeta Fecha de Caduciciad\n0201141554 NO CADUCA",
+          "campos": {
+            "ciu": "NO_DETECTADO",
+            "nombres": "s a",
+            "apellidos": "o ALLENDE re",
+            "fecha_nacimiento": "08/15/1951",
+            "tipo": "DNI_PERU",
+            "cnn_prediccion": {
+              "clase_predicha": "DNI_PERU",
+              "probabilidades": {
+                "LAB_REPORT": 0.0024,
+                "DNI_PERU": 0.986,
+                "DNI_USA": 0.0024,
+                "INFORME_MEDICO": 0.0024,
+                "UNKNOWN": 0.0066
+              },
+              "confianza": 0.986
+            }
+          },
+          "advertencia": null
         }
       ],
       "creado_en": "2026-07-07T00:53:19.779779",
-      "actualizado_en": "2026-07-07T02:29:49.055893"
+      "actualizado_en": "2026-07-08T04:48:48.969674"
     },
     "290166": {
       "ciu": "290166",
@@ -6165,8 +6310,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:06:27.582001",
-          "timestamp": "2026-07-07T02:06:27.582001",
+          "id": "ocr_2026-07-08T04:48:42.532564",
+          "timestamp": "2026-07-08T04:48:42.532564",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053405_Q-RANJANADEVI21.04.20250001compressed_250427_1041@F.pdf_page_46.png",
           "archivo_copia": null,
@@ -6176,83 +6321,91 @@
             "ciu": "W290166",
             "pruebas": [
               {
-                "nombre": "Hemoglobina (Hb)",
+                "nombre": "HAEMOGLOBIN (Hb)",
                 "valor": 11.2,
                 "unidad": "gm/dl",
-                "flag": "",
-                "referencia": ""
+                "flag": "L",
+                "referencia": "11.5- 16.5"
               },
               {
-                "nombre": "Neutrophil",
+                "nombre": "NEUTROPHIL",
                 "valor": 77.0,
                 "unidad": "%",
-                "flag": "",
-                "referencia": ""
+                "flag": "H",
+                "referencia": "40-75"
               },
               {
-                "nombre": "Lymphocyte",
+                "nombre": "LYMPHOCYTE",
                 "valor": 20.0,
                 "unidad": "%",
                 "flag": "",
-                "referencia": ""
+                "referencia": "20 - 45"
               },
               {
-                "nombre": "Eosinophil",
+                "nombre": "EOSINOPHIL",
                 "valor": 1.0,
                 "unidad": "%",
                 "flag": "",
-                "referencia": ""
+                "referencia": "01 - 06"
               },
               {
-                "nombre": "Ivonocyte",
+                "nombre": "iVONOCYTE",
                 "valor": 2.0,
                 "unidad": "%",
                 "flag": "",
-                "referencia": ""
+                "referencia": "02-10"
               },
               {
-                "nombre": "Basophil",
-                "valor": null,
+                "nombre": "BASOPHIL",
+                "valor": 0.0,
                 "unidad": "%",
                 "flag": "",
-                "referencia": ""
+                "referencia": "0-0"
               },
               {
-                "nombre": "Plaquetas",
+                "nombre": "PLATELET COUNT",
                 "valor": 0.82,
                 "unidad": "Lakh/cmm",
-                "flag": "",
-                "referencia": ""
+                "flag": "L",
+                "referencia": "1.50 - 4.50"
               },
               {
-                "nombre": "R Bc Count",
+                "nombre": "R BC COUNT",
                 "valor": 3.9,
                 "unidad": "Millions/emm",
                 "flag": "",
-                "referencia": ""
+                "referencia": "3.8"
               },
               {
-                "nombre": "VCM (MCV)",
+                "nombre": "PCV / HAEMATOCRIT",
+                "valor": 33.6,
+                "unidad": "%",
+                "flag": "L",
+                "referencia": "35-45"
+              },
+              {
+                "nombre": "MCV",
                 "valor": 85.0,
-                "unidad": "fl.",
+                "unidad": "fl",
                 "flag": "",
-                "referencia": ""
+                "referencia": "."
               },
               {
-                "nombre": "Mch",
+                "nombre": "MCH",
                 "valor": 27.6,
                 "unidad": "Picogram",
                 "flag": "",
-                "referencia": ""
+                "referencia": "27.0 - 31.0"
               },
               {
-                "nombre": "Mchc",
+                "nombre": "MCHC",
                 "valor": 33.3,
                 "unidad": "gm/dl",
                 "flag": "",
-                "referencia": ""
+                "referencia": "30 - 35"
               }
             ],
+            "alertas": [],
             "alertas_criticas": [],
             "tipo": "LAB_REPORT",
             "informacion_clinica": {
@@ -6260,6 +6413,40 @@
               "médico_laboratorio": "Yoo ia i"
             },
             "interpretacion": null,
+            "alertas_detectadas": [
+              {
+                "prueba": "HAEMOGLOBIN (Hb)",
+                "valor": 11.2,
+                "tipo": "BAJO",
+                "flag": "L",
+                "unidad": "gm/dl",
+                "referencia": "11.5- 16.5"
+              },
+              {
+                "prueba": "NEUTROPHIL",
+                "valor": 77.0,
+                "tipo": "ALTO",
+                "flag": "H",
+                "unidad": "%",
+                "referencia": "40-75"
+              },
+              {
+                "prueba": "PLATELET COUNT",
+                "valor": 0.82,
+                "tipo": "BAJO",
+                "flag": "L",
+                "unidad": "Lakh/cmm",
+                "referencia": "1.50 - 4.50"
+              },
+              {
+                "prueba": "PCV / HAEMATOCRIT",
+                "valor": 33.6,
+                "tipo": "BAJO",
+                "flag": "L",
+                "unidad": "%",
+                "referencia": "35-45"
+              }
+            ],
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -6270,14 +6457,13 @@
                 "UNKNOWN": 0.2074
               },
               "confianza": 0.5637
-            },
-            "alertas_detectadas": []
+            }
           },
           "advertencia": null
         }
       ],
       "creado_en": "2026-07-06T19:21:11.114862",
-      "actualizado_en": "2026-07-07T02:06:27.582001"
+      "actualizado_en": "2026-07-08T04:48:42.532564"
     },
     "718295": {
       "ciu": "718295",
@@ -6370,8 +6556,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:06:36.235867",
-          "timestamp": "2026-07-07T02:06:36.235867",
+          "id": "ocr_2026-07-08T04:48:47.920337",
+          "timestamp": "2026-07-08T04:48:47.920337",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053408_Q-SATISHKUMAR19.04.20250001compressed_250427_1052@F.pdf_page_30.png",
           "archivo_copia": null,
@@ -6381,83 +6567,91 @@
             "ciu": "W718295",
             "pruebas": [
               {
-                "nombre": "Hemoglobina (Hb)",
+                "nombre": "HAEMOGLOBIN (Hb)",
                 "valor": 13.4,
                 "unidad": "gm/dl",
-                "flag": "",
-                "referencia": ""
+                "flag": "L",
+                "referencia": "13.5 - 18.0"
               },
               {
-                "nombre": "Total Leucocyte Count (Tlc)",
+                "nombre": "TOTAL LEUCOCYTE COUNT (TLC)",
                 "valor": 20.4,
-                "unidad": "",
-                "flag": "",
-                "referencia": ""
+                "unidad": "/cumm",
+                "flag": "L",
+                "referencia": "4000 - 11000"
               },
               {
-                "nombre": "Neutrophil",
+                "nombre": "NEUTROPHIL",
                 "valor": 77.0,
                 "unidad": "%",
-                "flag": "",
-                "referencia": ""
+                "flag": "H",
+                "referencia": "40-75"
               },
               {
-                "nombre": "Lymphocyte",
+                "nombre": "LYMPHOCYTE",
                 "valor": 18.0,
                 "unidad": "%",
-                "flag": "",
-                "referencia": ""
+                "flag": "L",
+                "referencia": "20-45"
               },
               {
-                "nombre": "Eosinophil",
+                "nombre": "EOSINOPHIL",
                 "valor": 2.0,
                 "unidad": "%",
                 "flag": "",
-                "referencia": ""
+                "referencia": "01-06"
               },
               {
-                "nombre": "Monocyte",
+                "nombre": "MONOCYTE",
                 "valor": 3.0,
                 "unidad": "%",
                 "flag": "",
-                "referencia": ""
+                "referencia": "02-10"
               },
               {
-                "nombre": "Plaquetas",
+                "nombre": "PLATELET COUNT",
                 "valor": 2.55,
                 "unidad": "Lakh/cmm",
                 "flag": "",
-                "referencia": ""
+                "referencia": "1.50- 4.50"
               },
               {
-                "nombre": "Glóbulos Rojos (RBC)",
+                "nombre": "RBC COUNT",
                 "valor": 4.34,
                 "unidad": "Millions/emm",
-                "flag": "",
-                "referencia": ""
+                "flag": "L",
+                "referencia": "4.5 -5.5"
               },
               {
-                "nombre": "VCM (MCV)",
+                "nombre": "PCV / HAEMATOCRIT",
+                "valor": 40.2,
+                "unidad": "%",
+                "flag": "",
+                "referencia": "40 - 54"
+              },
+              {
+                "nombre": "MCV",
                 "valor": 92.63,
-                "unidad": "fl.",
+                "unidad": "fl",
                 "flag": "",
-                "referencia": ""
+                "referencia": "."
               },
               {
-                "nombre": "Mch",
+                "nombre": "MCH",
                 "valor": 30.88,
                 "unidad": "Picogram",
                 "flag": "",
-                "referencia": ""
+                "referencia": "27.0 - 31.0"
               },
               {
-                "nombre": "Mchc",
+                "nombre": "MCHC",
                 "valor": 33.3,
                 "unidad": "gm/d",
                 "flag": "",
                 "referencia": ""
               }
             ],
+            "alertas": [],
             "alertas_criticas": [],
             "tipo": "LAB_REPORT",
             "informacion_clinica": {
@@ -6466,6 +6660,48 @@
               "médico_laboratorio": "Test"
             },
             "interpretacion": null,
+            "alertas_detectadas": [
+              {
+                "prueba": "HAEMOGLOBIN (Hb)",
+                "valor": 13.4,
+                "tipo": "BAJO",
+                "flag": "L",
+                "unidad": "gm/dl",
+                "referencia": "13.5 - 18.0"
+              },
+              {
+                "prueba": "TOTAL LEUCOCYTE COUNT (TLC)",
+                "valor": 20.4,
+                "tipo": "BAJO",
+                "flag": "L",
+                "unidad": "/cumm",
+                "referencia": "4000 - 11000"
+              },
+              {
+                "prueba": "NEUTROPHIL",
+                "valor": 77.0,
+                "tipo": "ALTO",
+                "flag": "H",
+                "unidad": "%",
+                "referencia": "40-75"
+              },
+              {
+                "prueba": "LYMPHOCYTE",
+                "valor": 18.0,
+                "tipo": "BAJO",
+                "flag": "L",
+                "unidad": "%",
+                "referencia": "20-45"
+              },
+              {
+                "prueba": "RBC COUNT",
+                "valor": 4.34,
+                "tipo": "BAJO",
+                "flag": "L",
+                "unidad": "Millions/emm",
+                "referencia": "4.5 -5.5"
+              }
+            ],
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -6476,14 +6712,13 @@
                 "UNKNOWN": 0.2074
               },
               "confianza": 0.5637
-            },
-            "alertas_detectadas": []
+            }
           },
           "advertencia": null
         }
       ],
       "creado_en": "2026-07-06T19:21:16.248419",
-      "actualizado_en": "2026-07-07T02:06:36.235867"
+      "actualizado_en": "2026-07-08T04:48:47.920337"
     },
     "030305": {
       "ciu": "030305",
@@ -6511,8 +6746,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:06:43.647115",
-          "timestamp": "2026-07-07T02:06:43.647115",
+          "id": "ocr_2026-07-08T04:48:53.396694",
+          "timestamp": "2026-07-08T04:48:53.396694",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053408_Q-SATISHKUMAR19.04.20250001compressed_250427_1052@F.pdf_page_37.png",
           "archivo_copia": null,
@@ -6522,13 +6757,21 @@
             "ciu": "W030305",
             "pruebas": [
               {
-                "nombre": "Hemoglobina (Hb)",
+                "nombre": "HB AIC",
                 "valor": 5.65,
                 "unidad": "%",
                 "flag": "",
                 "referencia": ""
+              },
+              {
+                "nombre": "recent history (approx -",
+                "valor": 6.0,
+                "unidad": "",
+                "flag": "",
+                "referencia": ""
               }
             ],
+            "alertas": [],
             "alertas_criticas": [],
             "tipo": "LAB_REPORT",
             "informacion_clinica": {
@@ -6536,6 +6779,7 @@
               "médico_laboratorio": "Test"
             },
             "interpretacion": "-\n'n vitro quantitative determination of HbAIC in whole blood is utilized in long term monitoring of glycemia .\n'he HbAIC level correlates with the mean glucose concentration prevailing in the course of the patient's\nrecent history (approx - 6-8 weeks) and therefore provides much more reliable information for glycemia",
+            "alertas_detectadas": [],
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -6546,14 +6790,13 @@
                 "UNKNOWN": 0.2074
               },
               "confianza": 0.5637
-            },
-            "alertas_detectadas": []
+            }
           },
           "advertencia": null
         }
       ],
       "creado_en": "2026-07-06T19:21:21.675843",
-      "actualizado_en": "2026-07-07T02:06:43.647115"
+      "actualizado_en": "2026-07-08T04:48:53.396694"
     },
     "668239": {
       "ciu": "668239",
@@ -6576,8 +6819,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:06:51.896806",
-          "timestamp": "2026-07-07T02:06:51.896806",
+          "id": "ocr_2026-07-07T21:16:19.376271",
+          "timestamp": "2026-07-07T21:16:19.376271",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053434_Q-PREETI4837000111zon_250427_1314@F.pdf_page_35.png",
           "archivo_copia": null,
@@ -6594,6 +6837,7 @@
                 "referencia": ""
               }
             ],
+            "alertas": [],
             "alertas_criticas": [],
             "tipo": "LAB_REPORT",
             "informacion_clinica": {
@@ -6601,6 +6845,7 @@
               "médico_laboratorio": "Name"
             },
             "interpretacion": null,
+            "alertas_detectadas": [],
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -6611,14 +6856,13 @@
                 "UNKNOWN": 0.2074
               },
               "confianza": 0.5637
-            },
-            "alertas_detectadas": []
+            }
           },
           "advertencia": null
         }
       ],
       "creado_en": "2026-07-06T19:21:27.083293",
-      "actualizado_en": "2026-07-07T02:06:51.896806"
+      "actualizado_en": "2026-07-07T21:16:19.376271"
     },
     "533568": {
       "ciu": "533568",
@@ -6676,8 +6920,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:07:02.090102",
-          "timestamp": "2026-07-07T02:07:02.090102",
+          "id": "ocr_2026-07-07T21:16:26.410400",
+          "timestamp": "2026-07-07T21:16:26.410400",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053434_Q-PREETI4837000111zon_250427_1314@F.pdf_page_38.png",
           "archivo_copia": null,
@@ -6729,6 +6973,7 @@
                 "referencia": ""
               }
             ],
+            "alertas": [],
             "alertas_criticas": [],
             "tipo": "LAB_REPORT",
             "informacion_clinica": {
@@ -6736,6 +6981,7 @@
               "médico_laboratorio": "Name"
             },
             "interpretacion": null,
+            "alertas_detectadas": [],
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -6746,14 +6992,13 @@
                 "UNKNOWN": 0.1053
               },
               "confianza": 0.7784
-            },
-            "alertas_detectadas": []
+            }
           },
           "advertencia": null
         }
       ],
       "creado_en": "2026-07-06T19:21:33.376225",
-      "actualizado_en": "2026-07-07T02:07:02.090102"
+      "actualizado_en": "2026-07-07T21:16:26.410400"
     },
     "348963": {
       "ciu": "348963",
@@ -6776,8 +7021,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:07:22.489473",
-          "timestamp": "2026-07-07T02:07:22.489473",
+          "id": "ocr_2026-07-07T21:16:45.853873",
+          "timestamp": "2026-07-07T21:16:45.853873",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053454_Q-11zonmergedFiles2411zon_250427_1324@F.pdf_page_36.png",
           "archivo_copia": null,
@@ -6794,6 +7039,7 @@
                 "referencia": ""
               }
             ],
+            "alertas": [],
             "alertas_criticas": [],
             "tipo": "LAB_REPORT",
             "informacion_clinica": {
@@ -6801,6 +7047,7 @@
               "médico_laboratorio": "Name"
             },
             "interpretacion": null,
+            "alertas_detectadas": [],
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -6811,14 +7058,13 @@
                 "UNKNOWN": 0.2074
               },
               "confianza": 0.5637
-            },
-            "alertas_detectadas": []
+            }
           },
           "advertencia": null
         }
       ],
       "creado_en": "2026-07-06T19:21:52.329667",
-      "actualizado_en": "2026-07-07T02:07:22.489473"
+      "actualizado_en": "2026-07-07T21:16:45.853873"
     },
     "806358": {
       "ciu": "806358",
@@ -6833,8 +7079,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:07:36.976791",
-          "timestamp": "2026-07-07T02:07:36.976791",
+          "id": "ocr_2026-07-07T21:16:59.651185",
+          "timestamp": "2026-07-07T21:16:59.651185",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053481_Q-CHHAYADEVI21.04.20250001compressed_250427_1617@F.pdf_page_38.png",
           "archivo_copia": null,
@@ -6843,6 +7089,7 @@
           "campos": {
             "ciu": "W806358",
             "pruebas": [],
+            "alertas": [],
             "alertas_criticas": [],
             "tipo": "LAB_REPORT",
             "informacion_clinica": {
@@ -6850,6 +7097,7 @@
               "médico_laboratorio": "GY"
             },
             "interpretacion": "-\nIn vitro quantitative determination of HbAIC in whole blood is utilized in long term monitoring of glycemia .\n‘he HbAIC level correlates with the mean glucose concentration prevailing in the course of the patient's\n‘ecent history (approx - 6-8 weeks) and therefore provides much more reliable information for glycemia",
+            "alertas_detectadas": [],
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -6860,14 +7108,13 @@
                 "UNKNOWN": 0.3222
               },
               "confianza": 0.3222
-            },
-            "alertas_detectadas": []
+            }
           },
           "advertencia": null
         }
       ],
       "creado_en": "2026-07-06T19:22:03.680056",
-      "actualizado_en": "2026-07-07T02:07:36.976791"
+      "actualizado_en": "2026-07-07T21:16:59.651185"
     },
     "967038": {
       "ciu": "967038",
@@ -6911,8 +7158,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:07:43.474693",
-          "timestamp": "2026-07-07T02:07:43.474693",
+          "id": "ocr_2026-07-07T21:17:06.333713",
+          "timestamp": "2026-07-07T21:17:06.333713",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053481_Q-CHHAYADEVI21.04.20250001compressed_250427_1617@F.pdf_page_39.png",
           "archivo_copia": null,
@@ -6950,6 +7197,7 @@
                 "referencia": ""
               }
             ],
+            "alertas": [],
             "alertas_criticas": [],
             "tipo": "LAB_REPORT",
             "informacion_clinica": {
@@ -6958,24 +7206,24 @@
               "diagnostico": "TSH levels are subject to circadian variation, rising several hours"
             },
             "interpretacion": "TSH levels are subject to circadian variation, rising several hours\nbefore the onset of sleep, reaching peak levels between 11 pm to6 am\nNadir concentrations are observed during the afternoon.\nDiurnal variation in TSH level approximates + 50 %, hence time of the day",
+            "alertas_detectadas": [],
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.9052,
-                "DNI_PERU": 0.0166,
-                "DNI_USA": 0.0166,
-                "INFORME_MEDICO": 0.0166,
-                "UNKNOWN": 0.0451
+                "LAB_REPORT": 0.7784,
+                "DNI_PERU": 0.0388,
+                "DNI_USA": 0.0388,
+                "INFORME_MEDICO": 0.0388,
+                "UNKNOWN": 0.1053
               },
-              "confianza": 0.9052
-            },
-            "alertas_detectadas": []
+              "confianza": 0.7784
+            }
           },
           "advertencia": null
         }
       ],
       "creado_en": "2026-07-06T19:22:09.421348",
-      "actualizado_en": "2026-07-07T02:07:43.474693"
+      "actualizado_en": "2026-07-07T21:17:06.333713"
     },
     "112474": {
       "ciu": "112474",
@@ -7026,8 +7274,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:07:49.609911",
-          "timestamp": "2026-07-07T02:07:49.609911",
+          "id": "ocr_2026-07-07T21:17:12.390467",
+          "timestamp": "2026-07-07T21:17:12.390467",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053481_Q-CHHAYADEVI21.04.20250001compressed_250427_1617@F.pdf_page_42.png",
           "archivo_copia": null,
@@ -7072,12 +7320,14 @@
                 "referencia": ""
               }
             ],
+            "alertas": [],
             "alertas_criticas": [],
             "tipo": "LAB_REPORT",
             "informacion_clinica": {
               "nombre_paciente": "CIU"
             },
             "interpretacion": null,
+            "alertas_detectadas": [],
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -7088,14 +7338,13 @@
                 "UNKNOWN": 0.3222
               },
               "confianza": 0.3222
-            },
-            "alertas_detectadas": []
+            }
           },
           "advertencia": null
         }
       ],
       "creado_en": "2026-07-06T19:22:17.461592",
-      "actualizado_en": "2026-07-07T02:07:49.609911"
+      "actualizado_en": "2026-07-07T21:17:12.390467"
     },
     "557198": {
       "ciu": "557198",
@@ -7156,8 +7405,8 @@
           "advertencia": null
         },
         {
-          "id": "ocr_2026-07-07T02:08:20.950389",
-          "timestamp": "2026-07-07T02:08:20.950389",
+          "id": "ocr_2026-07-07T21:17:38.681958",
+          "timestamp": "2026-07-07T21:17:38.681958",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053930_Q-REKHA10500_250427_1509@F.pdf_page_28.png",
           "archivo_copia": null,
@@ -7180,6 +7429,7 @@
                 "referencia": ""
               }
             ],
+            "alertas": [],
             "alertas_criticas": [],
             "tipo": "LAB_REPORT",
             "informacion_clinica": {
@@ -7187,6 +7437,7 @@
               "médico_laboratorio": "Ramesh Kumar OPD IPD"
             },
             "interpretacion": "Positive\nAgglutinin titre greater than 1:80 is considered significant and rising titre will confirm the\ndiagnosis.In typhoid fever, widal test is usually positive after 7 days of fever.\nImmuno-Serology",
+            "alertas_detectadas": [],
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -7197,14 +7448,13 @@
                 "UNKNOWN": 0.3222
               },
               "confianza": 0.3222
-            },
-            "alertas_detectadas": []
+            }
           },
           "advertencia": null
         }
       ],
       "creado_en": "2026-07-06T18:16:52.438682",
-      "actualizado_en": "2026-07-07T02:08:20.950389"
+      "actualizado_en": "2026-07-07T21:17:38.681958"
     },
     "702846": {
       "ciu": "702846",
@@ -7262,8 +7512,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:08:27.693334",
-          "timestamp": "2026-07-07T02:08:27.693334",
+          "id": "ocr_2026-07-07T21:17:43.957707",
+          "timestamp": "2026-07-07T21:17:43.957707",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0053972_E-SANDEEPKUMARMID_250427_1418@E.pdf_page_12.png",
           "archivo_copia": null,
@@ -7315,6 +7565,7 @@
                 "referencia": ""
               }
             ],
+            "alertas": [],
             "alertas_criticas": [],
             "tipo": "LAB_REPORT",
             "informacion_clinica": {
@@ -7323,24 +7574,24 @@
               "médico_laboratorio": "INVESTIGATION REPORT"
             },
             "interpretacion": null,
+            "alertas_detectadas": [],
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.7784,
-                "DNI_PERU": 0.0388,
-                "DNI_USA": 0.0388,
-                "INFORME_MEDICO": 0.0388,
-                "UNKNOWN": 0.1053
+                "LAB_REPORT": 0.9052,
+                "DNI_PERU": 0.0166,
+                "DNI_USA": 0.0166,
+                "INFORME_MEDICO": 0.0166,
+                "UNKNOWN": 0.0451
               },
-              "confianza": 0.7784
-            },
-            "alertas_detectadas": []
+              "confianza": 0.9052
+            }
           },
           "advertencia": null
         }
       ],
       "creado_en": "2026-07-06T19:22:57.459247",
-      "actualizado_en": "2026-07-07T02:08:27.693334"
+      "actualizado_en": "2026-07-07T21:17:43.957707"
     },
     "574383": {
       "ciu": "574383",
@@ -7376,8 +7627,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:08:37.452476",
-          "timestamp": "2026-07-07T02:08:37.452476",
+          "id": "ocr_2026-07-07T21:17:50.225632",
+          "timestamp": "2026-07-07T21:17:50.225632",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054044_Q-FINAL0001_250427_1157@F.pdf_page_36.png",
           "archivo_copia": null,
@@ -7407,12 +7658,14 @@
                 "flag": ""
               }
             ],
+            "alertas": [],
             "alertas_criticas": [],
             "tipo": "LAB_REPORT",
             "informacion_clinica": {
               "nombre_paciente": "CIU"
             },
             "interpretacion": "In tropical and subtropical regions, dengue is the most important arbovirosis in terms of mortality and morality.\nAn easy-to-perform, rapid and specific test is needed to confirm infection during the acute phase of the\ninfection\nin order to implement appropriate treatment during early course of teh disease. NS1 antigen is an non-",
+            "alertas_detectadas": [],
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
@@ -7423,14 +7676,13 @@
                 "UNKNOWN": 0.2074
               },
               "confianza": 0.5637
-            },
-            "alertas_detectadas": []
+            }
           },
           "advertencia": null
         }
       ],
       "creado_en": "2026-07-06T19:23:05.061842",
-      "actualizado_en": "2026-07-07T02:08:37.452476"
+      "actualizado_en": "2026-07-07T21:17:50.225632"
     },
     "754518": {
       "ciu": "754518",
@@ -7467,8 +7719,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:08:45.023063",
-          "timestamp": "2026-07-07T02:08:45.023063",
+          "id": "ocr_2026-07-07T20:49:19.639499",
+          "timestamp": "2026-07-07T20:49:19.639499",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054524_E-FinalbillanddischargeSangitadevi_250427_1834@E.pdf_page_14.png",
           "archivo_copia": null,
@@ -7523,7 +7775,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:23:11.924578",
-      "actualizado_en": "2026-07-07T02:08:45.023063"
+      "actualizado_en": "2026-07-07T20:49:19.639499"
     },
     "528313": {
       "ciu": "528313",
@@ -7651,8 +7903,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:09:11.070221",
-          "timestamp": "2026-07-07T02:09:11.070221",
+          "id": "ocr_2026-07-07T20:49:41.366112",
+          "timestamp": "2026-07-07T20:49:41.366112",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0054840_Q-pawankumarfinal_250427_1337@F.pdf_page_36.png",
           "archivo_copia": null,
@@ -7797,7 +8049,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:23:31.184800",
-      "actualizado_en": "2026-07-07T02:09:11.070221"
+      "actualizado_en": "2026-07-07T20:49:41.366112"
     },
     "760019": {
       "ciu": "760019",
@@ -7897,8 +8149,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:09:31.043740",
-          "timestamp": "2026-07-07T02:09:31.043740",
+          "id": "ocr_2026-07-07T20:50:02.770222",
+          "timestamp": "2026-07-07T20:50:02.770222",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055053_Q-1745410679910ArtiKumariinv0001_250423_1751@F.pdf_page_8.png",
           "archivo_copia": null,
@@ -8001,13 +8253,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.9629,
-                "DNI_PERU": 0.0065,
-                "DNI_USA": 0.0065,
-                "INFORME_MEDICO": 0.0065,
-                "UNKNOWN": 0.0176
+                "LAB_REPORT": 0.9052,
+                "DNI_PERU": 0.0166,
+                "DNI_USA": 0.0166,
+                "INFORME_MEDICO": 0.0166,
+                "UNKNOWN": 0.0451
               },
-              "confianza": 0.9629
+              "confianza": 0.9052
             },
             "alertas_detectadas": []
           },
@@ -8015,7 +8267,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:23:56.170034",
-      "actualizado_en": "2026-07-07T02:09:31.043740"
+      "actualizado_en": "2026-07-07T20:50:02.770222"
     },
     "724366": {
       "ciu": "724366",
@@ -8038,8 +8290,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:10:07.426090",
-          "timestamp": "2026-07-07T02:10:07.426090",
+          "id": "ocr_2026-07-07T20:50:52.581933",
+          "timestamp": "2026-07-07T20:50:52.581933",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055449_Q-SEEMAKUMARI202600001compressed_250428_1147@F.pdf_page_46.png",
           "archivo_copia": null,
@@ -8066,13 +8318,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.7784,
-                "DNI_PERU": 0.0388,
-                "DNI_USA": 0.0388,
-                "INFORME_MEDICO": 0.0388,
-                "UNKNOWN": 0.1053
+                "LAB_REPORT": 0.5637,
+                "DNI_PERU": 0.0763,
+                "DNI_USA": 0.0763,
+                "INFORME_MEDICO": 0.0763,
+                "UNKNOWN": 0.2074
               },
-              "confianza": 0.7784
+              "confianza": 0.5637
             },
             "alertas_detectadas": []
           },
@@ -8080,7 +8332,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:24:43.930735",
-      "actualizado_en": "2026-07-07T02:10:07.426090"
+      "actualizado_en": "2026-07-07T20:50:52.581933"
     },
     "180109": {
       "ciu": "180109",
@@ -8103,8 +8355,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:10:27.115334",
-          "timestamp": "2026-07-07T02:10:27.115334",
+          "id": "ocr_2026-07-07T20:51:17.497804",
+          "timestamp": "2026-07-07T20:51:17.497804",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055511_Q-ROHIT4854000111zon_250427_1412@F.pdf_page_31.png",
           "archivo_copia": null,
@@ -8145,7 +8397,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:25:07.089146",
-      "actualizado_en": "2026-07-07T02:10:27.115334"
+      "actualizado_en": "2026-07-07T20:51:17.497804"
     },
     "448325": {
       "ciu": "448325",
@@ -8175,8 +8427,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:10:33.851043",
-          "timestamp": "2026-07-07T02:10:33.851043",
+          "id": "ocr_2026-07-07T20:23:30.661520",
+          "timestamp": "2026-07-07T20:23:30.661520",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055576_Q-kailashfnalbill_250427_1333@F.pdf_page_37.png",
           "archivo_copia": null,
@@ -8210,13 +8462,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.9052,
-                "DNI_PERU": 0.0166,
-                "DNI_USA": 0.0166,
-                "INFORME_MEDICO": 0.0166,
-                "UNKNOWN": 0.0451
+                "LAB_REPORT": 0.7784,
+                "DNI_PERU": 0.0388,
+                "DNI_USA": 0.0388,
+                "INFORME_MEDICO": 0.0388,
+                "UNKNOWN": 0.1053
               },
-              "confianza": 0.9052
+              "confianza": 0.7784
             },
             "alertas_detectadas": []
           },
@@ -8224,7 +8476,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:25:22.092733",
-      "actualizado_en": "2026-07-07T02:10:33.851043"
+      "actualizado_en": "2026-07-07T20:23:30.661520"
     },
     "337392": {
       "ciu": "337392",
@@ -8239,8 +8491,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:10:55.354588",
-          "timestamp": "2026-07-07T02:10:55.354588",
+          "id": "ocr_2026-07-07T20:23:57.256715",
+          "timestamp": "2026-07-07T20:23:57.256715",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055942_IV REPORTS_27-04-2025_1102-25_AM@E.pdf_page_4.png",
           "archivo_copia": null,
@@ -8259,13 +8511,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.9052,
-                "DNI_PERU": 0.0166,
-                "DNI_USA": 0.0166,
-                "INFORME_MEDICO": 0.0166,
-                "UNKNOWN": 0.0451
+                "LAB_REPORT": 0.7784,
+                "DNI_PERU": 0.0388,
+                "DNI_USA": 0.0388,
+                "INFORME_MEDICO": 0.0388,
+                "UNKNOWN": 0.1053
               },
-              "confianza": 0.9052
+              "confianza": 0.7784
             },
             "alertas_detectadas": []
           },
@@ -8273,7 +8525,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:25:47.657028",
-      "actualizado_en": "2026-07-07T02:10:55.354588"
+      "actualizado_en": "2026-07-07T20:23:57.256715"
     },
     "883738": {
       "ciu": "883738",
@@ -8310,8 +8562,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:11:01.236150",
-          "timestamp": "2026-07-07T02:11:01.236150",
+          "id": "ocr_2026-07-07T20:24:05.558638",
+          "timestamp": "2026-07-07T20:24:05.558638",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0055942_IV_REPORTS_27-04-2025_1112-47_AM@E.pdf_page_1.png",
           "archivo_copia": null,
@@ -8366,7 +8618,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:25:53.240487",
-      "actualizado_en": "2026-07-07T02:11:01.236150"
+      "actualizado_en": "2026-07-07T20:24:05.558638"
     },
     "597252": {
       "ciu": "597252",
@@ -8445,8 +8697,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:11:13.041878",
-          "timestamp": "2026-07-07T02:11:13.041878",
+          "id": "ocr_2026-07-07T20:24:26.475440",
+          "timestamp": "2026-07-07T20:24:26.475440",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056064_F-PARINALEPCHAPA_250423_2059@G.pdf_page_16.png",
           "archivo_copia": null,
@@ -8543,7 +8795,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:26:06.454527",
-      "actualizado_en": "2026-07-07T02:11:13.041878"
+      "actualizado_en": "2026-07-07T20:24:26.475440"
     },
     "597281": {
       "ciu": "597281",
@@ -8558,8 +8810,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:11:19.063247",
-          "timestamp": "2026-07-07T02:11:19.063247",
+          "id": "ocr_2026-07-07T20:24:38.296121",
+          "timestamp": "2026-07-07T20:24:38.296121",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056064_Q-PARINALEPCHAQR_250424_1328@F.pdf_page_8.png",
           "archivo_copia": null,
@@ -8594,7 +8846,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:26:13.098753",
-      "actualizado_en": "2026-07-07T02:11:19.063247"
+      "actualizado_en": "2026-07-07T20:24:38.296121"
     },
     "191877": {
       "ciu": "191877",
@@ -8624,8 +8876,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:11:24.668272",
-          "timestamp": "2026-07-07T02:11:24.668272",
+          "id": "ocr_2026-07-07T20:24:48.394088",
+          "timestamp": "2026-07-07T20:24:48.394088",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056087_E-SIVASUM_250427_1015@E.pdf_page_13.png",
           "archivo_copia": null,
@@ -8674,7 +8926,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:26:19.162832",
-      "actualizado_en": "2026-07-07T02:11:24.668272"
+      "actualizado_en": "2026-07-07T20:24:48.394088"
     },
     "390807": {
       "ciu": "390807",
@@ -8704,8 +8956,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:11:30.801178",
-          "timestamp": "2026-07-07T02:11:30.801178",
+          "id": "ocr_2026-07-07T20:24:59.459905",
+          "timestamp": "2026-07-07T20:24:59.459905",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056189_Q-rahulfinalbill_250427_1335@F.pdf_page_32.png",
           "archivo_copia": null,
@@ -8739,13 +8991,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.9052,
-                "DNI_PERU": 0.0166,
-                "DNI_USA": 0.0166,
-                "INFORME_MEDICO": 0.0166,
-                "UNKNOWN": 0.0451
+                "LAB_REPORT": 0.7784,
+                "DNI_PERU": 0.0388,
+                "DNI_USA": 0.0388,
+                "INFORME_MEDICO": 0.0388,
+                "UNKNOWN": 0.1053
               },
-              "confianza": 0.9052
+              "confianza": 0.7784
             },
             "alertas_detectadas": []
           },
@@ -8753,7 +9005,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:26:25.359863",
-      "actualizado_en": "2026-07-07T02:11:30.801178"
+      "actualizado_en": "2026-07-07T20:24:59.459905"
     },
     "958991": {
       "ciu": "958991",
@@ -8818,8 +9070,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:11:38.645450",
-          "timestamp": "2026-07-07T02:11:38.645450",
+          "id": "ocr_2026-07-07T20:25:11.526007",
+          "timestamp": "2026-07-07T20:25:11.526007",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056282_F-KYC_PC_SHANAZ_1_250424_1254@G.pdf_page_11.png",
           "archivo_copia": null,
@@ -8902,7 +9154,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:26:31.594966",
-      "actualizado_en": "2026-07-07T02:11:38.645450"
+      "actualizado_en": "2026-07-07T20:25:11.526007"
     },
     "675734": {
       "ciu": "675734",
@@ -8925,8 +9177,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:11:46.243484",
-          "timestamp": "2026-07-07T02:11:46.243484",
+          "id": "ocr_2026-07-07T20:25:23.326786",
+          "timestamp": "2026-07-07T20:25:23.326786",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056304_GUR0425PA0056304_FB_27-04-2025_0538-54_PM.pdf_page_10.png",
           "archivo_copia": null,
@@ -8966,7 +9218,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:26:39.163824",
-      "actualizado_en": "2026-07-07T02:11:46.243484"
+      "actualizado_en": "2026-07-07T20:25:23.326786"
     },
     "570466": {
       "ciu": "570466",
@@ -9017,8 +9269,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:11:53.984261",
-          "timestamp": "2026-07-07T02:11:53.984261",
+          "id": "ocr_2026-07-07T20:25:36.408754",
+          "timestamp": "2026-07-07T20:25:36.408754",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056304_GUR0425PA0056304_FB_27-04-2025_0711-07_PM@F.pdf_page_9.png",
           "archivo_copia": null,
@@ -9086,7 +9338,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:26:48.630725",
-      "actualizado_en": "2026-07-07T02:11:53.984261"
+      "actualizado_en": "2026-07-07T20:25:36.408754"
     },
     "722348": {
       "ciu": "722348",
@@ -9186,8 +9438,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:12:25.410707",
-          "timestamp": "2026-07-07T02:12:25.410707",
+          "id": "ocr_2026-07-07T20:26:24.983412",
+          "timestamp": "2026-07-07T20:26:24.983412",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056519_discharge virendra_11zon_28-04-2025_1115-27_AM@G.pdf_page_10.png",
           "archivo_copia": null,
@@ -9304,7 +9556,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:27:36.053256",
-      "actualizado_en": "2026-07-07T02:12:25.410707"
+      "actualizado_en": "2026-07-07T20:26:24.983412"
     },
     "122053": {
       "ciu": "122053",
@@ -9425,8 +9677,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:12:32.661669",
-          "timestamp": "2026-07-07T02:12:32.661669",
+          "id": "ocr_2026-07-07T20:26:37.515352",
+          "timestamp": "2026-07-07T20:26:37.515352",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056519_discharge virendra_11zon_28-04-2025_1132-57_AM@G.pdf_page_13.png",
           "archivo_copia": null,
@@ -9565,7 +9817,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:27:45.142490",
-      "actualizado_en": "2026-07-07T02:12:32.661669"
+      "actualizado_en": "2026-07-07T20:26:37.515352"
     },
     "535945": {
       "ciu": "535945",
@@ -9679,8 +9931,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:12:40.827207",
-          "timestamp": "2026-07-07T02:12:40.827207",
+          "id": "ocr_2026-07-07T20:26:50.429655",
+          "timestamp": "2026-07-07T20:26:50.429655",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056519_preauth virender _24-04-2025_0447-58_PM@G.pdf_page_12.png",
           "archivo_copia": null,
@@ -9797,13 +10049,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.9052,
-                "DNI_PERU": 0.0166,
-                "DNI_USA": 0.0166,
-                "INFORME_MEDICO": 0.0166,
-                "UNKNOWN": 0.0451
+                "LAB_REPORT": 0.7784,
+                "DNI_PERU": 0.0388,
+                "DNI_USA": 0.0388,
+                "INFORME_MEDICO": 0.0388,
+                "UNKNOWN": 0.1053
               },
-              "confianza": 0.9052
+              "confianza": 0.7784
             },
             "alertas_detectadas": []
           },
@@ -9811,7 +10063,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:27:57.020992",
-      "actualizado_en": "2026-07-07T02:12:40.827207"
+      "actualizado_en": "2026-07-07T20:26:50.429655"
     },
     "769971": {
       "ciu": "769971",
@@ -9834,8 +10086,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:12:49.378646",
-          "timestamp": "2026-07-07T02:12:49.378646",
+          "id": "ocr_2026-07-07T20:27:08.018249",
+          "timestamp": "2026-07-07T20:27:08.018249",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056568_E-REPORTS_250427_1436@E.pdf_page_1.png",
           "archivo_copia": null,
@@ -9876,7 +10128,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:28:05.211669",
-      "actualizado_en": "2026-07-07T02:12:49.378646"
+      "actualizado_en": "2026-07-07T20:27:08.018249"
     },
     "340582": {
       "ciu": "340582",
@@ -9934,8 +10186,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:12:56.763952",
-          "timestamp": "2026-07-07T02:12:56.763952",
+          "id": "ocr_2026-07-07T20:27:19.837945",
+          "timestamp": "2026-07-07T20:27:19.837945",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056644_Q-REPORT_250428_1140@F.pdf_page_6.png",
           "archivo_copia": null,
@@ -9997,13 +10249,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.5637,
-                "DNI_PERU": 0.0763,
-                "DNI_USA": 0.0763,
-                "INFORME_MEDICO": 0.0763,
-                "UNKNOWN": 0.2074
+                "LAB_REPORT": 0.7784,
+                "DNI_PERU": 0.0388,
+                "DNI_USA": 0.0388,
+                "INFORME_MEDICO": 0.0388,
+                "UNKNOWN": 0.1053
               },
-              "confianza": 0.5637
+              "confianza": 0.7784
             },
             "alertas_detectadas": []
           },
@@ -10011,7 +10263,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:28:14.946922",
-      "actualizado_en": "2026-07-07T02:12:56.763952"
+      "actualizado_en": "2026-07-07T20:27:19.837945"
     },
     "783479": {
       "ciu": "783479",
@@ -10034,8 +10286,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:13:05.829564",
-          "timestamp": "2026-07-07T02:13:05.829564",
+          "id": "ocr_2026-07-07T20:27:30.992020",
+          "timestamp": "2026-07-07T20:27:30.992020",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056644_Q-REPORT_250428_1140@F.pdf_page_9.png",
           "archivo_copia": null,
@@ -10076,7 +10328,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:28:24.582004",
-      "actualizado_en": "2026-07-07T02:13:05.829564"
+      "actualizado_en": "2026-07-07T20:27:30.992020"
     },
     "672757": {
       "ciu": "672757",
@@ -10106,8 +10358,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:13:13.024660",
-          "timestamp": "2026-07-07T02:13:13.024660",
+          "id": "ocr_2026-07-07T20:27:42.066317",
+          "timestamp": "2026-07-07T20:27:42.066317",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0056853_E-CHITRAKSHIFINALBILLDISCHARGESUMMARY_250427_1048@E.pdf_page_4.png",
           "archivo_copia": null,
@@ -10141,13 +10393,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.9052,
-                "DNI_PERU": 0.0166,
-                "DNI_USA": 0.0166,
-                "INFORME_MEDICO": 0.0166,
-                "UNKNOWN": 0.0451
+                "LAB_REPORT": 0.7784,
+                "DNI_PERU": 0.0388,
+                "DNI_USA": 0.0388,
+                "INFORME_MEDICO": 0.0388,
+                "UNKNOWN": 0.1053
               },
-              "confianza": 0.9052
+              "confianza": 0.7784
             },
             "alertas_detectadas": []
           },
@@ -10155,7 +10407,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:28:33.316827",
-      "actualizado_en": "2026-07-07T02:13:13.024660"
+      "actualizado_en": "2026-07-07T20:27:42.066317"
     },
     "993405": {
       "ciu": "993405",
@@ -10185,8 +10437,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:13:41.815719",
-          "timestamp": "2026-07-07T02:13:41.815719",
+          "id": "ocr_2026-07-07T20:28:21.605627",
+          "timestamp": "2026-07-07T20:28:21.605627",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057759_Q-RAJINDERKUMARPHANDAQR_250427_1311@F.pdf_page_28.png",
           "archivo_copia": null,
@@ -10235,7 +10487,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:29:05.584805",
-      "actualizado_en": "2026-07-07T02:13:41.815719"
+      "actualizado_en": "2026-07-07T20:28:21.605627"
     },
     "806791": {
       "ciu": "806791",
@@ -10321,8 +10573,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:13:48.963967",
-          "timestamp": "2026-07-07T02:13:48.963967",
+          "id": "ocr_2026-07-07T20:28:29.484481",
+          "timestamp": "2026-07-07T20:28:29.484481",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057759_Q-RAJINDERKUMARPHANDAQR_250427_1311@F.pdf_page_41.png",
           "archivo_copia": null,
@@ -10427,7 +10679,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:29:12.713469",
-      "actualizado_en": "2026-07-07T02:13:48.963967"
+      "actualizado_en": "2026-07-07T20:28:29.484481"
     },
     "628784": {
       "ciu": "628784",
@@ -10450,8 +10702,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:13:55.513727",
-          "timestamp": "2026-07-07T02:13:55.513727",
+          "id": "ocr_2026-07-07T20:28:36.763332",
+          "timestamp": "2026-07-07T20:28:36.763332",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057805_E-gauravqewr_250427_1916@E.pdf_page_21.png",
           "archivo_copia": null,
@@ -10492,7 +10744,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:29:19.200881",
-      "actualizado_en": "2026-07-07T02:13:55.513727"
+      "actualizado_en": "2026-07-07T20:28:36.763332"
     },
     "989651": {
       "ciu": "989651",
@@ -10543,8 +10795,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:14:02.061355",
-          "timestamp": "2026-07-07T02:14:02.061355",
+          "id": "ocr_2026-07-07T20:28:45.691649",
+          "timestamp": "2026-07-07T20:28:45.691649",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057813_Shivani Preautharization request_26-04-2025_0924-28_PM@G.pdf_page_7.png",
           "archivo_copia": null,
@@ -10598,13 +10850,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.9052,
-                "DNI_PERU": 0.0166,
-                "DNI_USA": 0.0166,
-                "INFORME_MEDICO": 0.0166,
-                "UNKNOWN": 0.0451
+                "LAB_REPORT": 0.9629,
+                "DNI_PERU": 0.0065,
+                "DNI_USA": 0.0065,
+                "INFORME_MEDICO": 0.0065,
+                "UNKNOWN": 0.0176
               },
-              "confianza": 0.9052
+              "confianza": 0.9629
             },
             "alertas_detectadas": []
           },
@@ -10612,7 +10864,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:29:26.547660",
-      "actualizado_en": "2026-07-07T02:14:02.061355"
+      "actualizado_en": "2026-07-07T20:28:45.691649"
     },
     "536067": {
       "ciu": "536067",
@@ -10635,8 +10887,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:14:08.708409",
-          "timestamp": "2026-07-07T02:14:08.708409",
+          "id": "ocr_2026-07-07T20:28:53.056060",
+          "timestamp": "2026-07-07T20:28:53.056060",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057825_Akshaya Kumar Preauth (1)_27-04-2025_0857-23_AM@G.pdf_page_17.png",
           "archivo_copia": null,
@@ -10678,7 +10930,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:29:34.341326",
-      "actualizado_en": "2026-07-07T02:14:08.708409"
+      "actualizado_en": "2026-07-07T20:28:53.056060"
     },
     "146378": {
       "ciu": "146378",
@@ -10708,8 +10960,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:14:15.222396",
-          "timestamp": "2026-07-07T02:14:15.222396",
+          "id": "ocr_2026-07-07T20:29:00.783049",
+          "timestamp": "2026-07-07T20:29:00.783049",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057914_Q-AdditionalDocument_250427_1443@F.pdf_page_15.png",
           "archivo_copia": null,
@@ -10757,7 +11009,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:29:40.772223",
-      "actualizado_en": "2026-07-07T02:14:15.222396"
+      "actualizado_en": "2026-07-07T20:29:00.783049"
     },
     "310318": {
       "ciu": "310318",
@@ -10772,8 +11024,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:14:21.775853",
-          "timestamp": "2026-07-07T02:14:21.775853",
+          "id": "ocr_2026-07-07T20:29:07.982204",
+          "timestamp": "2026-07-07T20:29:07.982204",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057918_F-KYC_PC_KARUNA_1_250427_1321@G.pdf_page_29.png",
           "archivo_copia": null,
@@ -10806,7 +11058,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:29:48.161256",
-      "actualizado_en": "2026-07-07T02:14:21.775853"
+      "actualizado_en": "2026-07-07T20:29:07.982204"
     },
     "288878": {
       "ciu": "288878",
@@ -10857,8 +11109,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:14:27.693184",
-          "timestamp": "2026-07-07T02:14:27.693184",
+          "id": "ocr_2026-07-07T20:29:17.353079",
+          "timestamp": "2026-07-07T20:29:17.353079",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057918_F-KYC_PC_KARUNA_1_250427_1321@G.pdf_page_41.png",
           "archivo_copia": null,
@@ -10926,7 +11178,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:29:54.135238",
-      "actualizado_en": "2026-07-07T02:14:27.693184"
+      "actualizado_en": "2026-07-07T20:29:17.353079"
     },
     "586053": {
       "ciu": "586053",
@@ -10956,8 +11208,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:14:34.181957",
-          "timestamp": "2026-07-07T02:14:34.181957",
+          "id": "ocr_2026-07-07T20:29:27.762026",
+          "timestamp": "2026-07-07T20:29:27.762026",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057923_F-KYC_PC_CHOPPAVARAPU_PRABHAVATHI_1_250427_1339@G.pdf_page_12.png",
           "archivo_copia": null,
@@ -10991,13 +11243,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.7784,
-                "DNI_PERU": 0.0388,
-                "DNI_USA": 0.0388,
-                "INFORME_MEDICO": 0.0388,
-                "UNKNOWN": 0.1053
+                "LAB_REPORT": 0.5637,
+                "DNI_PERU": 0.0763,
+                "DNI_USA": 0.0763,
+                "INFORME_MEDICO": 0.0763,
+                "UNKNOWN": 0.2074
               },
-              "confianza": 0.7784
+              "confianza": 0.5637
             },
             "alertas_detectadas": []
           },
@@ -11005,7 +11257,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:30:00.624663",
-      "actualizado_en": "2026-07-07T02:14:34.181957"
+      "actualizado_en": "2026-07-07T20:29:27.762026"
     },
     "290389": {
       "ciu": "290389",
@@ -11077,8 +11329,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:14:42.267688",
-          "timestamp": "2026-07-07T02:14:42.267688",
+          "id": "ocr_2026-07-07T20:29:38.466081",
+          "timestamp": "2026-07-07T20:29:38.466081",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0057931_F-SachinPreAuth_250427_1410@G.pdf_page_12.png",
           "archivo_copia": null,
@@ -11155,13 +11407,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.986,
-                "DNI_PERU": 0.0024,
-                "DNI_USA": 0.0024,
-                "INFORME_MEDICO": 0.0024,
-                "UNKNOWN": 0.0066
+                "LAB_REPORT": 0.9629,
+                "DNI_PERU": 0.0065,
+                "DNI_USA": 0.0065,
+                "INFORME_MEDICO": 0.0065,
+                "UNKNOWN": 0.0176
               },
-              "confianza": 0.986
+              "confianza": 0.9629
             },
             "alertas_detectadas": []
           },
@@ -11169,7 +11421,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:30:08.038158",
-      "actualizado_en": "2026-07-07T02:14:42.267688"
+      "actualizado_en": "2026-07-07T20:29:38.466081"
     },
     "262175": {
       "ciu": "262175",
@@ -11199,8 +11451,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:14:56.811602",
-          "timestamp": "2026-07-07T02:14:56.811602",
+          "id": "ocr_2026-07-07T20:29:58.029429",
+          "timestamp": "2026-07-07T20:29:58.029429",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0058016_F-KYC_PC_RAMKUMAR_SANTOSH_KUMAR_1_250427_1718@G.pdf_page_13.png",
           "archivo_copia": null,
@@ -11234,13 +11486,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.7784,
-                "DNI_PERU": 0.0388,
-                "DNI_USA": 0.0388,
-                "INFORME_MEDICO": 0.0388,
-                "UNKNOWN": 0.1053
+                "LAB_REPORT": 0.5637,
+                "DNI_PERU": 0.0763,
+                "DNI_USA": 0.0763,
+                "INFORME_MEDICO": 0.0763,
+                "UNKNOWN": 0.2074
               },
-              "confianza": 0.7784
+              "confianza": 0.5637
             },
             "alertas_detectadas": []
           },
@@ -11248,7 +11500,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:30:24.692645",
-      "actualizado_en": "2026-07-07T02:14:56.811602"
+      "actualizado_en": "2026-07-07T20:29:58.029429"
     },
     "201866": {
       "ciu": "201866",
@@ -11299,8 +11551,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:15:07.454969",
-          "timestamp": "2026-07-07T02:15:07.454969",
+          "id": "ocr_2026-07-07T20:30:07.821452",
+          "timestamp": "2026-07-07T20:30:07.821452",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0058034_F-MANJEET_SINGH_1_250427_1803@G.pdf_page_30.png",
           "archivo_copia": null,
@@ -11355,13 +11607,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.7784,
-                "DNI_PERU": 0.0388,
-                "DNI_USA": 0.0388,
-                "INFORME_MEDICO": 0.0388,
-                "UNKNOWN": 0.1053
+                "LAB_REPORT": 0.9052,
+                "DNI_PERU": 0.0166,
+                "DNI_USA": 0.0166,
+                "INFORME_MEDICO": 0.0166,
+                "UNKNOWN": 0.0451
               },
-              "confianza": 0.7784
+              "confianza": 0.9052
             },
             "alertas_detectadas": []
           },
@@ -11369,7 +11621,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:30:34.358452",
-      "actualizado_en": "2026-07-07T02:15:07.454969"
+      "actualizado_en": "2026-07-07T20:30:07.821452"
     },
     "946192": {
       "ciu": "946192",
@@ -11490,8 +11742,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:15:26.140015",
-          "timestamp": "2026-07-07T02:15:26.140015",
+          "id": "ocr_2026-07-07T20:30:24.107357",
+          "timestamp": "2026-07-07T20:30:24.107357",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\GUR-0425-PA-0058042_F-KYC_PC_BHUMI_1_250427_1830@G.pdf_page_18.png",
           "archivo_copia": null,
@@ -11630,7 +11882,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:30:51.438292",
-      "actualizado_en": "2026-07-07T02:15:26.140015"
+      "actualizado_en": "2026-07-07T20:30:24.107357"
     },
     "264165": {
       "ciu": "264165",
@@ -11653,8 +11905,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:15:34.556367",
-          "timestamp": "2026-07-07T02:15:34.556367",
+          "id": "ocr_2026-07-07T20:30:32.480713",
+          "timestamp": "2026-07-07T20:30:32.480713",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\HYD-0425-PA-0007281_Q-QUERYREPLYOFPT.GTSRINIVASARAO_250427_0957@F.pdf_page_8.png",
           "archivo_copia": null,
@@ -11694,7 +11946,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:31:00.943629",
-      "actualizado_en": "2026-07-07T02:15:34.556367"
+      "actualizado_en": "2026-07-07T20:30:32.480713"
     },
     "987270": {
       "ciu": "987270",
@@ -11766,8 +12018,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:15:48.280639",
-          "timestamp": "2026-07-07T02:15:48.280639",
+          "id": "ocr_2026-07-07T20:30:52.587753",
+          "timestamp": "2026-07-07T20:30:52.587753",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\IND-0425-PA-0032901_E-H2658992802126194907ilovepdfmerged15compressed_250427_1710@E.pdf_page_66.png",
           "archivo_copia": null,
@@ -11858,7 +12110,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:31:19.762590",
-      "actualizado_en": "2026-07-07T02:15:48.280639"
+      "actualizado_en": "2026-07-07T20:30:52.587753"
     },
     "185003": {
       "ciu": "185003",
@@ -11888,8 +12140,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:15:56.784660",
-          "timestamp": "2026-07-07T02:15:56.784660",
+          "id": "ocr_2026-07-07T20:31:05.288185",
+          "timestamp": "2026-07-07T20:31:05.288185",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\IND-0425-PA-0032901_E-H2658992802126194907ilovepdfmerged15compressed_250427_1710@E.pdf_page_67.png",
           "archivo_copia": null,
@@ -11938,7 +12190,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:31:27.348778",
-      "actualizado_en": "2026-07-07T02:15:56.784660"
+      "actualizado_en": "2026-07-07T20:31:05.288185"
     },
     "401006": {
       "ciu": "401006",
@@ -12024,8 +12276,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:16:05.149728",
-          "timestamp": "2026-07-07T02:16:05.149728",
+          "id": "ocr_2026-07-07T20:31:17.052077",
+          "timestamp": "2026-07-07T20:31:17.052077",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\IND-0425-PA-0032901_E-H2658992802126194907ilovepdfmerged15compressed_250427_1710@E.pdf_page_90.png",
           "archivo_copia": null,
@@ -12115,13 +12367,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.9052,
-                "DNI_PERU": 0.0166,
-                "DNI_USA": 0.0166,
-                "INFORME_MEDICO": 0.0166,
-                "UNKNOWN": 0.0451
+                "LAB_REPORT": 0.7784,
+                "DNI_PERU": 0.0388,
+                "DNI_USA": 0.0388,
+                "INFORME_MEDICO": 0.0388,
+                "UNKNOWN": 0.1053
               },
-              "confianza": 0.9052
+              "confianza": 0.7784
             },
             "alertas_detectadas": []
           },
@@ -12129,7 +12381,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:31:35.107226",
-      "actualizado_en": "2026-07-07T02:16:05.149728"
+      "actualizado_en": "2026-07-07T20:31:17.052077"
     },
     "824212": {
       "ciu": "824212",
@@ -12179,8 +12431,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:16:11.698343",
-          "timestamp": "2026-07-07T02:16:11.698343",
+          "id": "ocr_2026-07-07T20:31:25.133769",
+          "timestamp": "2026-07-07T20:31:25.133769",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\IND-0425-PA-0033745_SANTOSH334_27-04-2025_0431-24_PM@F.pdf_page_3.png",
           "archivo_copia": null,
@@ -12249,7 +12501,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:31:41.294872",
-      "actualizado_en": "2026-07-07T02:16:11.698343"
+      "actualizado_en": "2026-07-07T20:31:25.133769"
     },
     "767488": {
       "ciu": "767488",
@@ -12279,8 +12531,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:16:19.718279",
-          "timestamp": "2026-07-07T02:16:19.718279",
+          "id": "ocr_2026-07-07T20:31:33.602701",
+          "timestamp": "2026-07-07T20:31:33.602701",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\JPR-0425-PA-0005044_H_26671_9290939312_57_59_YUDHAANICPANDREPORTS001_27-04-2025_0101-02_PM.pdf_page_4.png",
           "archivo_copia": null,
@@ -12328,7 +12580,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:31:47.682147",
-      "actualizado_en": "2026-07-07T02:16:19.718279"
+      "actualizado_en": "2026-07-07T20:31:33.602701"
     },
     "328746": {
       "ciu": "328746",
@@ -12351,8 +12603,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:16:33.179856",
-          "timestamp": "2026-07-07T02:16:33.179856",
+          "id": "ocr_2026-07-07T20:31:50.264250",
+          "timestamp": "2026-07-07T20:31:50.264250",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\JPR-0425-PA-0005076_H_36220_9294528109_59_40_MANMOHAN_28-04-2025_1036-30_AM@G.pdf_page_9.png",
           "archivo_copia": null,
@@ -12393,7 +12645,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:32:04.502922",
-      "actualizado_en": "2026-07-07T02:16:33.179856"
+      "actualizado_en": "2026-07-07T20:31:50.264250"
     },
     "964220": {
       "ciu": "964220",
@@ -12507,8 +12759,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:16:40.465298",
-          "timestamp": "2026-07-07T02:16:40.465298",
+          "id": "ocr_2026-07-07T20:31:58.879376",
+          "timestamp": "2026-07-07T20:31:58.879376",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\JPR-0425-PA-0005079_PA_FILE_OF_PT_BIMALA_DEVI_304_28-04-2025_1132-59_AM@G.pdf_page_9.png",
           "archivo_copia": null,
@@ -12639,7 +12891,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:32:13.883055",
-      "actualizado_en": "2026-07-07T02:16:40.465298"
+      "actualizado_en": "2026-07-07T20:31:58.879376"
     },
     "890776": {
       "ciu": "890776",
@@ -12697,8 +12949,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:16:49.749365",
-          "timestamp": "2026-07-07T02:16:49.749365",
+          "id": "ocr_2026-07-07T20:32:12.504527",
+          "timestamp": "2026-07-07T20:32:12.504527",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\KOC-0425-PA-0009630_Q-AnilCasesheet_250427_1458@F.pdf_page_21.png",
           "archivo_copia": null,
@@ -12774,7 +13026,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:32:21.916939",
-      "actualizado_en": "2026-07-07T02:16:49.749365"
+      "actualizado_en": "2026-07-07T20:32:12.504527"
     },
     "994854": {
       "ciu": "994854",
@@ -12846,8 +13098,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:17:06.521781",
-          "timestamp": "2026-07-07T02:17:06.521781",
+          "id": "ocr_2026-07-07T20:32:33.319763",
+          "timestamp": "2026-07-07T20:32:33.319763",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\KOL-0425-PA-0004210_REPORT_27-04-2025_0729-34_PM.pdf_page_7.png",
           "archivo_copia": null,
@@ -12938,7 +13190,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:32:36.874506",
-      "actualizado_en": "2026-07-07T02:17:06.521781"
+      "actualizado_en": "2026-07-07T20:32:33.319763"
     },
     "376616": {
       "ciu": "376616",
@@ -12961,8 +13213,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:17:13.296460",
-          "timestamp": "2026-07-07T02:17:13.296460",
+          "id": "ocr_2026-07-07T20:32:42.747340",
+          "timestamp": "2026-07-07T20:32:42.747340",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0125-PA-0001141_W2500438UNADKAT ASHWIN_27-04-2025_1001-12_AM.pdf_page_74.png",
           "archivo_copia": null,
@@ -12990,13 +13242,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.7784,
-                "DNI_PERU": 0.0388,
-                "DNI_USA": 0.0388,
-                "INFORME_MEDICO": 0.0388,
-                "UNKNOWN": 0.1053
+                "LAB_REPORT": 0.5637,
+                "DNI_PERU": 0.0763,
+                "DNI_USA": 0.0763,
+                "INFORME_MEDICO": 0.0763,
+                "UNKNOWN": 0.2074
               },
-              "confianza": 0.7784
+              "confianza": 0.5637
             },
             "alertas_detectadas": []
           },
@@ -13004,7 +13256,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:32:42.975752",
-      "actualizado_en": "2026-07-07T02:17:13.296460"
+      "actualizado_en": "2026-07-07T20:32:42.747340"
     },
     "847137": {
       "ciu": "847137",
@@ -13034,8 +13286,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:17:20.807609",
-          "timestamp": "2026-07-07T02:17:20.807609",
+          "id": "ocr_2026-07-07T20:32:51.543149",
+          "timestamp": "2026-07-07T20:32:51.543149",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0125-PA-0001141_W2500438UNADKAT ASHWIN_27-04-2025_1001-12_AM.pdf_page_80.png",
           "archivo_copia": null,
@@ -13070,13 +13322,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.7784,
-                "DNI_PERU": 0.0388,
-                "DNI_USA": 0.0388,
-                "INFORME_MEDICO": 0.0388,
-                "UNKNOWN": 0.1053
+                "LAB_REPORT": 0.5637,
+                "DNI_PERU": 0.0763,
+                "DNI_USA": 0.0763,
+                "INFORME_MEDICO": 0.0763,
+                "UNKNOWN": 0.2074
               },
-              "confianza": 0.7784
+              "confianza": 0.5637
             },
             "alertas_detectadas": []
           },
@@ -13084,7 +13336,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:32:48.537193",
-      "actualizado_en": "2026-07-07T02:17:20.807609"
+      "actualizado_en": "2026-07-07T20:32:51.543149"
     },
     "388693": {
       "ciu": "388693",
@@ -13219,8 +13471,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:17:28.614298",
-          "timestamp": "2026-07-07T02:17:28.614298",
+          "id": "ocr_2026-07-07T20:33:04.242865",
+          "timestamp": "2026-07-07T20:33:04.242865",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0125-PA-0001141_W2500438UNADKAT ASHWIN_27-04-2025_1001-12_AM.pdf_page_83.png",
           "archivo_copia": null,
@@ -13359,13 +13611,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.986,
-                "DNI_PERU": 0.0024,
-                "DNI_USA": 0.0024,
-                "INFORME_MEDICO": 0.0024,
-                "UNKNOWN": 0.0066
+                "LAB_REPORT": 0.9629,
+                "DNI_PERU": 0.0065,
+                "DNI_USA": 0.0065,
+                "INFORME_MEDICO": 0.0065,
+                "UNKNOWN": 0.0176
               },
-              "confianza": 0.986
+              "confianza": 0.9629
             },
             "alertas_detectadas": []
           },
@@ -13373,7 +13625,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:32:54.904654",
-      "actualizado_en": "2026-07-07T02:17:28.614298"
+      "actualizado_en": "2026-07-07T20:33:04.242865"
     },
     "366396": {
       "ciu": "366396",
@@ -13403,8 +13655,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:17:36.454759",
-          "timestamp": "2026-07-07T02:17:36.454759",
+          "id": "ocr_2026-07-07T20:33:15.601379",
+          "timestamp": "2026-07-07T20:33:15.601379",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0125-PA-0001141_W2500438UNADKAT ASHWIN_27-04-2025_1002-19_AM.pdf_page_80.png",
           "archivo_copia": null,
@@ -13439,13 +13691,13 @@
             "cnn_prediccion": {
               "clase_predicha": "LAB_REPORT",
               "probabilidades": {
-                "LAB_REPORT": 0.7784,
-                "DNI_PERU": 0.0388,
-                "DNI_USA": 0.0388,
-                "INFORME_MEDICO": 0.0388,
-                "UNKNOWN": 0.1053
+                "LAB_REPORT": 0.5637,
+                "DNI_PERU": 0.0763,
+                "DNI_USA": 0.0763,
+                "INFORME_MEDICO": 0.0763,
+                "UNKNOWN": 0.2074
               },
-              "confianza": 0.7784
+              "confianza": 0.5637
             },
             "alertas_detectadas": []
           },
@@ -13453,7 +13705,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:33:00.549885",
-      "actualizado_en": "2026-07-07T02:17:36.454759"
+      "actualizado_en": "2026-07-07T20:33:15.601379"
     },
     "781260": {
       "ciu": "781260",
@@ -13468,8 +13720,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:17:59.918021",
-          "timestamp": "2026-07-07T02:17:59.918021",
+          "id": "ocr_2026-07-07T20:33:51.047164",
+          "timestamp": "2026-07-07T20:33:51.047164",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0425-PA-0004284_E-1745743986041ARCHANARANAFINALBILLO_250427_1425@E.pdf_page_4.png",
           "archivo_copia": null,
@@ -13503,7 +13755,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:33:20.298360",
-      "actualizado_en": "2026-07-07T02:17:59.918021"
+      "actualizado_en": "2026-07-07T20:33:51.047164"
     },
     "535851": {
       "ciu": "535851",
@@ -13568,8 +13820,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:18:07.718571",
-          "timestamp": "2026-07-07T02:18:07.718571",
+          "id": "ocr_2026-07-07T20:34:04.780760",
+          "timestamp": "2026-07-07T20:34:04.780760",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\MUM-0425-PA-0004300_REPORTS_27-04-2025_0134-06_PM@G.pdf_page_11.png",
           "archivo_copia": null,
@@ -13652,7 +13904,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:33:26.138859",
-      "actualizado_en": "2026-07-07T02:18:07.718571"
+      "actualizado_en": "2026-07-07T20:34:04.780760"
     },
     "624898": {
       "ciu": "624898",
@@ -13738,8 +13990,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:18:15.517313",
-          "timestamp": "2026-07-07T02:18:15.517313",
+          "id": "ocr_2026-07-07T20:34:16.596357",
+          "timestamp": "2026-07-07T20:34:16.596357",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\PUN-0425-PA-0011414_Lab Report_27-04-2025_0949-24_PM.pdf_page_1.png",
           "archivo_copia": null,
@@ -13843,7 +14095,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:33:32.198668",
-      "actualizado_en": "2026-07-07T02:18:15.517313"
+      "actualizado_en": "2026-07-07T20:34:16.596357"
     },
     "863924": {
       "ciu": "863924",
@@ -13887,8 +14139,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:18:23.321458",
-          "timestamp": "2026-07-07T02:18:23.321458",
+          "id": "ocr_2026-07-07T20:34:29.668840",
+          "timestamp": "2026-07-07T20:34:29.668840",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\PUN-0425-PA-0011414_Lab Report_27-04-2025_0949-24_PM.pdf_page_11.png",
           "archivo_copia": null,
@@ -13950,7 +14202,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:33:39.283949",
-      "actualizado_en": "2026-07-07T02:18:23.321458"
+      "actualizado_en": "2026-07-07T20:34:29.668840"
     },
     "632919": {
       "ciu": "632919",
@@ -13965,8 +14217,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:18:31.647080",
-          "timestamp": "2026-07-07T02:18:31.647080",
+          "id": "ocr_2026-07-07T20:34:42.433991",
+          "timestamp": "2026-07-07T20:34:42.433991",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\PUN-0425-PA-0011414_Lab Report_27-04-2025_0949-24_PM.pdf_page_2.png",
           "archivo_copia": null,
@@ -14000,7 +14252,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:33:45.835853",
-      "actualizado_en": "2026-07-07T02:18:31.647080"
+      "actualizado_en": "2026-07-07T20:34:42.433991"
     },
     "807216": {
       "ciu": "807216",
@@ -14079,8 +14331,8 @@
       "alertas_clinicas": [],
       "documentos_ocr": [
         {
-          "id": "ocr_2026-07-07T02:18:39.724833",
-          "timestamp": "2026-07-07T02:18:39.724833",
+          "id": "ocr_2026-07-07T20:34:52.451775",
+          "timestamp": "2026-07-07T20:34:52.451775",
           "fuente": "LAB_ALDIMI",
           "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\LAB_ALDIMI\\PUN-0425-PA-0011414_Lab Report_27-04-2025_0949-24_PM@F.pdf_page_10.png",
           "archivo_copia": null,
@@ -14177,7 +14429,7 @@
         }
       ],
       "creado_en": "2026-07-06T19:33:52.175339",
-      "actualizado_en": "2026-07-07T02:18:39.724833"
+      "actualizado_en": "2026-07-07T20:34:52.451775"
     },
     "12345678": {
       "ciu": "12345678",
@@ -14301,6 +14553,96 @@
       ],
       "creado_en": "2026-07-07T02:26:00.311351",
       "actualizado_en": "2026-07-07T02:26:00.266048"
+    },
+    "74747580": {
+      "datos_personales": {
+        "ciu": "74747580",
+        "tipo_documento": "DNI",
+        "nombres": "JUAN FELIPE",
+        "apellidos": "GRANADOS ALLENDE",
+        "fecha_nacimiento": ""
+      },
+      "documentos_ocr": [
+        {
+          "id": "ocr_2026-07-08T03:35:55.401052",
+          "timestamp": "2026-07-08T03:35:55.401052",
+          "fuente": "upload",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\ocr_b991ef1d1fc74f8b8fd5e72664c8bb5e.png",
+          "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260708_033555_ocr_b991ef1d1fc74f8b8fd5e72664c8bb5e.png",
+          "tipo_documento": "DNI_PERU",
+          "texto_crudo": "So CLINICA ANGLO AMERICANA\nNombre: JUAN FELIPE\nInforme Medico Apellidos: GRANADOS ALLENDE\n22/11/2018 16:37 RA MARIA r\n° 2 MRISLUSASTIGUCHWATSON | Fecha Nac.: 9-dic-2004  Edad:13 Sexo: M\nN° Doc.: 74747580 H.C Papel: 0643691\ney 22/11/2018 1639 DRA MARIA LUISA STIGLICH WATSON\na. Ea\nFECHA EVALUACION 08 DE NOVIEMBRE 2018\nFECHA INFORME: 22 DE NOVIEMBRE 2018\nMotivo de Consulta’\nJuan Felipe es traido por sus padres por haber episodios de tics desde los 3 afios. En esa primera oportunidad,\npresento episodios de parpadeo que se autollimitaron en unos meses. A los 8 ajios, también presento episodios\nrepetidos de parpadeo e igualmente desaparecieron. En el 2018, desde marzo, presenta no solo episodios de\nparpadeo sino también movimientos repetitivos esteotipados de la nariz y boca. No presenta tics sonoros 0 motores\nde mayor complejidad. Estos episodios se presentan sin causa y son de frecuencia variable, sin embargo, preocupan\na ambos padres. Ni en el colegio ni otros familiares han notado o mostrado preocupacién por estos movimientos\ninvoluntarios.\nAntecedentes de Importancia\nPerinatales: No significativo.\nPatolégicos:  Niega\nFamiliar Primo paterno epilepsia de lactante. Madre es migrafiosa.\nDesarrollo Cursa segundo de media con rendimiento adecuado para la edad. Su desarrollo también ha sido\nadecuado.\nAl examen fisico y neurolégico preferencial\nPC 54cm\nNo dismorfias ni lesiones en piel.\nSe relaciona de manera esperada para su edad cronolégica\nEl examen fisico general y el examen neurolégico en si han sido adecuados para la edad.\nImpresién diagnéstica\n1 Tics motores crénicos\nComentario\nPaciente con historia de tics motores simples cronicos que incrementan levemente con ansiedad. No considero\nrequieran manejo farmacol6gico, se ha sugerido terapia psicolégica de tipo emocional. Control en 2 a 3 meses.\nAggie\n(a ant) sk\n3. 08? = 169\na wenn 26389\n8\nue\nbeta a si 7 (a) a ite 4000 2ayat# Fontana 362 La Molina. 7(511) @108888 = MARIA LUISA STIGLICH WATSON\nPagina 1 det NEUROLOGIA PEDIATRICA\nCMP. 041806 RN.E: 26359",
+          "campos": {
+            "ciu": "74747580",
+            "nombres": "JUAN FELIPE",
+            "apellidos": "GRANADOS ALLENDE",
+            "fecha_nacimiento": "NO_DETECTADO",
+            "tipo": "DNI_PERU",
+            "cnn_prediccion": {
+              "clase_predicha": "INFORME_MEDICO",
+              "probabilidades": {
+                "LAB_REPORT": 0.1643,
+                "DNI_PERU": 0.1643,
+                "DNI_USA": 0.0604,
+                "INFORME_MEDICO": 0.4466,
+                "UNKNOWN": 0.1643
+              },
+              "confianza": 0.4466
+            }
+          },
+          "advertencia": null
+        },
+        {
+          "id": "ocr_2026-07-08T03:36:12.495679",
+          "timestamp": "2026-07-08T03:36:12.495679",
+          "fuente": "upload",
+          "archivo_origen": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\ocr_ac765f437a5a446f93834095a6c0beec.png",
+          "archivo_copia": "C:\\Users\\JUAN FELIPE\\Aldimi\\ALDIMI_DB\\imagenes_ocr\\20260708_033612_ocr_ac765f437a5a446f93834095a6c0beec.png",
+          "tipo_documento": "DNI_PERU",
+          "texto_crudo": "So CLINICA ANGLO AMERICANA\nNombre: JUAN FELIPE\nInforme Medico Apellidos: GRANADOS ALLENDE\n22/11/2018 16:37 RA MARIA r\n° 2 MRISLUSASTIGUCHWATSON | Fecha Nac.: 9-dic-2004  Edad:13 Sexo: M\nN° Doc.: 74747580 H.C Papel: 0643691\ney 22/11/2018 1639 DRA MARIA LUISA STIGLICH WATSON\na. Ea\nFECHA EVALUACION 08 DE NOVIEMBRE 2018\nFECHA INFORME: 22 DE NOVIEMBRE 2018\nMotivo de Consulta’\nJuan Felipe es traido por sus padres por haber episodios de tics desde los 3 afios. En esa primera oportunidad,\npresento episodios de parpadeo que se autollimitaron en unos meses. A los 8 ajios, también presento episodios\nrepetidos de parpadeo e igualmente desaparecieron. En el 2018, desde marzo, presenta no solo episodios de\nparpadeo sino también movimientos repetitivos esteotipados de la nariz y boca. No presenta tics sonoros 0 motores\nde mayor complejidad. Estos episodios se presentan sin causa y son de frecuencia variable, sin embargo, preocupan\na ambos padres. Ni en el colegio ni otros familiares han notado o mostrado preocupacién por estos movimientos\ninvoluntarios.\nAntecedentes de Importancia\nPerinatales: No significativo.\nPatolégicos:  Niega\nFamiliar Primo paterno epilepsia de lactante. Madre es migrafiosa.\nDesarrollo Cursa segundo de media con rendimiento adecuado para la edad. Su desarrollo también ha sido\nadecuado.\nAl examen fisico y neurolégico preferencial\nPC 54cm\nNo dismorfias ni lesiones en piel.\nSe relaciona de manera esperada para su edad cronolégica\nEl examen fisico general y el examen neurolégico en si han sido adecuados para la edad.\nImpresién diagnéstica\n1 Tics motores crénicos\nComentario\nPaciente con historia de tics motores simples cronicos que incrementan levemente con ansiedad. No considero\nrequieran manejo farmacol6gico, se ha sugerido terapia psicolégica de tipo emocional. Control en 2 a 3 meses.\nAggie\n(a ant) sk\n3. 08? = 169\na wenn 26389\n8\nue\nbeta a si 7 (a) a ite 4000 2ayat# Fontana 362 La Molina. 7(511) @108888 = MARIA LUISA STIGLICH WATSON\nPagina 1 det NEUROLOGIA PEDIATRICA\nCMP. 041806 RN.E: 26359",
+          "campos": {
+            "ciu": "74747580",
+            "nombres": "JUAN FELIPE",
+            "apellidos": "GRANADOS ALLENDE",
+            "fecha_nacimiento": "NO_DETECTADO",
+            "tipo": "DNI_PERU",
+            "cnn_prediccion": {
+              "clase_predicha": "INFORME_MEDICO",
+              "probabilidades": {
+                "LAB_REPORT": 0.1643,
+                "DNI_PERU": 0.1643,
+                "DNI_USA": 0.0604,
+                "INFORME_MEDICO": 0.4466,
+                "UNKNOWN": 0.1643
+              },
+              "confianza": 0.4466
+            }
+          },
+          "advertencia": null
+        }
+      ],
+      "actualizado_en": "2026-07-08T03:36:12.495679"
+    },
+    "42951703": {
+      "datos_personales": {
+        "ciu": "42951703",
+        "tipo_documento": "DNI",
+        "nombres": "ASENCION",
+        "apellidos": "ALLENDE ABARCA",
+        "fecha_nacimiento": "08/15/1951"
+      },
+      "informes_laboratorio": [
+        {
+          "fecha_carga": "2026-07-08T03:37:10.759365",
+          "registrado_en": "2026-07-08T03:37:10.759373",
+          "pruebas": [],
+          "alertas_detectadas": [],
+          "campos": {
+            "pruebas": [],
+            "alertas_detectadas": []
+          }
+        }
+      ],
+      "alertas_clinicas": []
     }
   }
 }

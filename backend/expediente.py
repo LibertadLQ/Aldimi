@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from . import ocr_robusto as ocr
+from .config import get_scan_limit
 from .db import cargar_bd, cargar_sesiones, guardar_bd, guardar_sesiones
 from .storage import DNI_DIR, LAB_DIR, OCR_IMAGES_DIR
 
@@ -60,11 +61,19 @@ def _normalizar_ciu(ciu: str) -> str:
 
 def _normalizar_campos_dni(campos: Optional[Dict[str, Any]]) -> Dict[str, Any]:
     campos = campos or {}
+    def clean(v: Any) -> str:
+        if v is None:
+            return ""
+        s = str(v).strip()
+        if s.upper() == "NO_DETECTADO":
+            return ""
+        return s
+
     return {
-        "ciu": _normalizar_ciu(campos.get("ciu", "")) or "",
-        "nombres": campos.get("nombres") or "NO_DETECTADO",
-        "apellidos": campos.get("apellidos") or "NO_DETECTADO",
-        "fecha_nacimiento": campos.get("fecha_nacimiento") or "NO_DETECTADO",
+        "ciu": _normalizar_ciu(clean(campos.get("ciu", ""))) or "",
+        "nombres": clean(campos.get("nombres", "")),
+        "apellidos": clean(campos.get("apellidos", "")),
+        "fecha_nacimiento": clean(campos.get("fecha_nacimiento", "")),
     }
 
 
@@ -77,6 +86,19 @@ def persistir_ocr_resultado(ruta_imagen: str, resultado: Dict[str, Any], fuente:
 
     tipo_documento = resultado.get("tipo_documento", "UNKNOWN")
     campos = resultado.get("campos", {}) or {}
+    if tipo_documento in {"LAB_REPORT", "INFORME_MEDICO"}:
+        try:
+            if not campos.get("pruebas") or not campos.get("alertas_detectadas"):
+                hallazgos = ocr.extraer_alertas_de_texto(resultado.get("texto_crudo", ""))
+                if hallazgos.get("pruebas"):
+                    campos["pruebas"] = hallazgos["pruebas"]
+                if hallazgos.get("alertas_detectadas"):
+                    campos["alertas_detectadas"] = hallazgos["alertas_detectadas"]
+                    campos.setdefault("alertas", hallazgos["alertas_detectadas"])
+                    print(f"[PERSIST] Fallback alertas robustas aplicadas: {len(hallazgos['alertas_detectadas'])} alertas")
+        except Exception as exc:
+            print(f"[PERSIST] Fallback alertas robustas falló: {exc}")
+
     ciu_raw = str(campos.get("ciu", "")).strip().upper() if isinstance(campos, dict) else ""
     ciu = _normalizar_ciu(ciu_raw) if ciu_raw and ciu_raw != "NO_DETECTADO" else ""
     key = ciu or ciu_raw
@@ -150,6 +172,7 @@ def persistir_ocr_resultado(ruta_imagen: str, resultado: Dict[str, Any], fuente:
                 "alertas_detectadas": campos.get("alertas_detectadas", []),
                 "registrado_en": timestamp,
             }
+            print(f"[PERSIST] LAB_REPORT: guardando {len(informe['pruebas'])} pruebas, {len(informe['alertas_detectadas'])} alertas")
             registro.setdefault("informes_laboratorio", []).append(informe)
             registro.setdefault("alertas_clinicas", []).extend(informe["alertas_detectadas"])
 
@@ -164,9 +187,11 @@ def sincronizar_carpetas(max_images_dni: int = 0, max_images_lab: int = 0) -> Di
 
     Si no se pasa límite positivo, no procesa nada por defecto para evitar cargar carpetas completas.
     """
-    if not max_images_dni and not max_images_lab:
-        print("[SYNC] No se procesan carpetas por defecto. Usa un límite mayor que 0 para escanear.")
-        return {"procesados": 0, "resultados": []}
+    # Usar el límite configurado en backend/config.py (SCAN_LIMIT = 1-100)
+    limit = get_scan_limit()
+    max_images_dni = limit
+    max_images_lab = limit
+    print(f"[SYNC] Límite de escaneo: {limit} archivo(s)")
 
     resultados = []
 
@@ -179,7 +204,7 @@ def sincronizar_carpetas(max_images_dni: int = 0, max_images_lab: int = 0) -> Di
             path = dni_images[index]
             nombre_carpeta = "DNI_ALDIMI"
             print(f"[SYNC] Procesando {nombre_carpeta}: {path.name}")
-            resultado = ocr.procesar_documento(str(path))
+            resultado = ocr.leer_documento(str(path), max_retries=3)
             print(f"[SYNC] Resultado preliminar: tipo={resultado.get('tipo_documento')} campos_keys={list((resultado.get('campos') or {}).keys())}")
             guardado = persistir_ocr_resultado(str(path), resultado, fuente=nombre_carpeta)
             print(f"[SYNC] Persistencia: paciente_actualizado={guardado.get('paciente_actualizado')}")
@@ -195,7 +220,7 @@ def sincronizar_carpetas(max_images_dni: int = 0, max_images_lab: int = 0) -> Di
             path = lab_images[index]
             nombre_carpeta = "LAB_ALDIMI"
             print(f"[SYNC] Procesando {nombre_carpeta}: {path.name}")
-            resultado = ocr.procesar_documento(str(path))
+            resultado = ocr.leer_documento(str(path), max_retries=3)
             print(f"[SYNC] Resultado preliminar: tipo={resultado.get('tipo_documento')} campos_keys={list((resultado.get('campos') or {}).keys())}")
             guardado = persistir_ocr_resultado(str(path), resultado, fuente=nombre_carpeta)
             print(f"[SYNC] Persistencia: paciente_actualizado={guardado.get('paciente_actualizado')}")

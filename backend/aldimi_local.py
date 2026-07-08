@@ -20,7 +20,7 @@ from backend.expediente import sincronizar_carpetas
 from backend.db import cargar_bd
 
 
-def ejecutar_local_scan(max_images: int = 0) -> dict:
+def ejecutar_local_scan(max_images: int = 1) -> dict:
     """Escanea DNI_ALDIMI y LAB_ALDIMI localmente."""
     resultado = sincronizar_carpetas(max_images_dni=max_images, max_images_lab=max_images)
     print(f'Escaneo local completado: {resultado["procesados"]} imágenes procesadas')
@@ -61,11 +61,11 @@ def main():
         opcion = input("\nSelecciona una opción (1-4): ").strip()
         
         if opcion == "1":
-            max_img = input("¿Máximo de imágenes por carpeta? (0 = sin límite): ").strip()
+            max_img = input("¿Máximo de imágenes por carpeta? (1 = por defecto, 0 = sin límite): ").strip()
             try:
-                max_images = int(max_img) if max_img else 0
+                max_images = int(max_img) if max_img else 1
             except ValueError:
-                max_images = 0
+                max_images = 1
             ejecutar_local_scan(max_images=max_images)
         
         elif opcion == "2":

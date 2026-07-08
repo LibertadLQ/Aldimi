@@ -1,9 +1,14 @@
-# run.ps1 - Script to set up .venv, install deps, start backend and static server, open index.html
-# Ejecutar desde la carpeta raíz del proyecto: .\run.ps1
+# run.ps1 - Script principal de ALDIMI
+# Ejecutar: .\run.ps1
+# Este script inicia el backend FastAPI y servidor estático
+
+Write-Host ""
+Write-Host "=====================================================" -ForegroundColor Cyan
+Write-Host "ALDIMI - Sistema de Alertas Clinicas" -ForegroundColor Cyan
+Write-Host "=====================================================" -ForegroundColor Cyan
+Write-Host ""
 
 $ErrorActionPreference = "Stop"
-
-Write-Host "Iniciando setup y ejecución del proyecto Aldimi..."
 
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path
 Set-Location -Path $root
@@ -20,12 +25,15 @@ $env:ALDIMI_DB_PATH = $aldbPath
 $env:DNI_ALDIMI_PATH = $dniPath
 $env:LAB_ALDIMI_PATH = $labPath
 
-Write-Host "Rutas de datos preparadas: ALDIMI_DB=$aldbPath | DNI_ALDIMI=$dniPath | LAB_ALDIMI=$labPath" -ForegroundColor Cyan
+Write-Host "Rutas de datos:" -ForegroundColor Cyan
+Write-Host "  ALDIMI_DB=$aldbPath" -ForegroundColor Gray
+Write-Host "  DNI_ALDIMI=$dniPath" -ForegroundColor Gray
+Write-Host "  LAB_ALDIMI=$labPath" -ForegroundColor Gray
 
-$env:USE_NOTEBOOK = "1"
+# El backend de producción usa el código de backend/, no el notebook Colab.
 $env:PYTHONUTF8 = "1"
-Write-Host "USE_NOTEBOOK=1 establecido para backend." -ForegroundColor Cyan
-Write-Host "PYTHONUTF8=1 establecido para asegurar que Python use UTF-8 en el proceso." -ForegroundColor Cyan
+Write-Host "Variables de entorno:" -ForegroundColor Cyan
+Write-Host "  PYTHONUTF8=1" -ForegroundColor Gray
 
 # Configurar startup scan para cargar datos antes de iniciar el chatbot.
 # ALDIMI_AUTO_SCAN=true    : Ejecuta el escaneo de carpetas al iniciar.
@@ -39,7 +47,12 @@ $env:ALDIMI_SCAN_LAB = "100"
 Write-Host "Startup scan HABILITADO: ALDIMI_AUTO_SCAN=true, ALDIMI_WAIT_FOR_SCAN=true, ALDIMI_SCAN_DNI=100, ALDIMI_SCAN_LAB=100 (TODAS LAS IMÁGENES)" -ForegroundColor Cyan
 
 # Check Python
-if (-not (Get-Command python -ErrorAction SilentlyContinue)) {
+$pythonCmd = $null
+if (Get-Command python -ErrorAction SilentlyContinue) {
+    $pythonCmd = "python"
+} elseif (Get-Command py -ErrorAction SilentlyContinue) {
+    $pythonCmd = "py"
+} else {
     Write-Host "ERROR: Python no está en PATH. Instala Python 3.8+ y reintenta." -ForegroundColor Red
     exit 1
 }
@@ -47,7 +60,7 @@ if (-not (Get-Command python -ErrorAction SilentlyContinue)) {
 $venvPath = Join-Path $root ".venv"
 if (-not (Test-Path $venvPath)) {
     Write-Host "Creando entorno virtual .venv..."
-    python -m venv .venv
+    & $pythonCmd -m venv .venv
 }
 
 # Activate venv in this session
@@ -111,61 +124,96 @@ if (-not $tessCmd) {
     Write-Host "Tesseract encontrado: $($tessCmd.Source)" -ForegroundColor Green
 }
 
-$staticPort = 5500
-$venvPython = Join-Path $venvPath "Scripts\python.exe"
-$psExe = Join-Path $PSHOME "powershell.exe"
-$backendLog = Join-Path $root "backend\backend.log"
+ $staticPort = 5500
+ $venvPython = Join-Path $venvPath "Scripts\python.exe"
+ $psExe = Join-Path $PSHOME "powershell.exe"
+ $backendLog = Join-Path $root "backend\backend.log"
 
-$backendCommand = "& '$activate'; Set-Location -LiteralPath '$root'; `$env:ALDIMI_AUTO_SCAN='true'; `$env:ALDIMI_WAIT_FOR_SCAN='false'; `$env:ALDIMI_SCAN_DNI='100'; `$env:ALDIMI_SCAN_LAB='100'; & '$venvPython' -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 2>&1 | Tee-Object -FilePath '$backendLog'"
-$staticCommand  = "& '$activate'; Set-Location -LiteralPath '$root'; & '$venvPython' -m http.server $staticPort"
+ $backendErrLog = Join-Path $root "backend\backend.err.log"
+
+ # Asegurar que el backend arranque desde el Python del entorno virtual.
+ $backendArgs = @("-m", "uvicorn", "backend.main:app", "--host", "127.0.0.1", "--port", "8000")
+ $staticArgs  = @("-m", "http.server", "$staticPort")
+
+ # Asegurar que exista el archivo de log y el log de errores
+ $logDir = Split-Path -Parent $backendLog
+ if (-not (Test-Path $logDir)) { New-Item -ItemType Directory -Path $logDir -Force | Out-Null }
+ if (-not (Test-Path $backendLog)) { New-Item -ItemType File -Path $backendLog -Force | Out-Null }
+ if (-not (Test-Path $backendErrLog)) { New-Item -ItemType File -Path $backendErrLog -Force | Out-Null }
 
 # Liberar puerto 8000 si hay algún listener huérfano.
 Write-Host "Liberando puerto 8000 si está ocupado..." -ForegroundColor Cyan
 try {
-    Get-NetTCPConnection -LocalPort 8000 -State Listen -ErrorAction SilentlyContinue | ForEach-Object {
-        Write-Host "Deteniendo proceso con PID=$($_.OwningProcess) que escucha en 8000" -ForegroundColor Yellow
-        Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue
+    $connections = Get-NetTCPConnection -LocalPort 8000 -State Listen -ErrorAction SilentlyContinue
+    if ($connections) {
+        $connections | ForEach-Object {
+            Write-Host "Deteniendo proceso con PID=$($_.OwningProcess) que escucha en 8000" -ForegroundColor Yellow
+            Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue
+            Start-Sleep -Milliseconds 500
+        }
+    } else {
+        Write-Host "Puerto 8000 disponible." -ForegroundColor Green
     }
 } catch {
     Write-Host "No se pudo liberar el puerto 8000 automáticamente: $_" -ForegroundColor Yellow
 }
 
-Write-Host "Iniciando backend (uvicorn) en nueva ventana de PowerShell..."
+Write-Host "Iniciando backend (uvicorn) en nueva ventana de PowerShell..." -ForegroundColor Cyan
 Write-Host "El autoscan se ejecutará automáticamente al iniciar el servidor FastAPI (evento 'startup')." -ForegroundColor Cyan
-Start-Process -FilePath $psExe -ArgumentList "-NoProfile","-ExecutionPolicy","Bypass","-NoExit","-Command",$backendCommand -WorkingDirectory $root -WindowStyle Normal
+Write-Host "Logs del backend se guardarán en: $backendLog" -ForegroundColor Gray
+
+ # Construir comando que se ejecutará en la nueva ventana de PowerShell y que además hace tee al log
+ $backendCommand = "Set-Location -LiteralPath '$root'; `$env:ALDIMI_AUTO_SCAN='true'; `$env:ALDIMI_WAIT_FOR_SCAN='false'; `$env:ALDIMI_SCAN_DNI='100'; `$env:ALDIMI_SCAN_LAB='100'; & '$venvPython' -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 2>&1 | Tee-Object -FilePath '$backendLog'"
+
+ $backendProcess = Start-Process -FilePath $psExe -ArgumentList "-NoProfile","-ExecutionPolicy","Bypass","-NoExit","-Command",$backendCommand -WorkingDirectory $root -WindowStyle Normal -PassThru
+ if ($backendProcess -ne $null) {
+     Write-Host "Backend iniciado con PID=$($backendProcess.Id)" -ForegroundColor Green
+ } else {
+     Write-Host "ERROR: No se pudo iniciar el proceso del backend." -ForegroundColor Red
+ }
+Start-Sleep -Seconds 2
 
 Write-Host "Iniciando servidor estático en puerto $staticPort en nueva ventana..."
-Start-Process -FilePath $psExe -ArgumentList "-NoProfile","-ExecutionPolicy","Bypass","-NoExit","-Command",$staticCommand -WorkingDirectory $root -WindowStyle Normal
+Start-Process -FilePath $venvPython -ArgumentList $staticArgs -WorkingDirectory $root -WindowStyle Normal -PassThru
 
 # Esperar a que el backend responda
 $backendUrl = "http://127.0.0.1:8000"
-Write-Host "Comprobando conectividad con el backend en $backendUrl ..."
-$maxRetries = 120
+Write-Host "Comprobando conectividad con el backend en $backendUrl ..." -ForegroundColor Cyan
+$maxRetries = 180
 $retry = 0
 $ok = $false
 while ($retry -lt $maxRetries) {
     try {
         $resp = Invoke-WebRequest -Uri $backendUrl -UseBasicParsing -TimeoutSec 2 -ErrorAction Stop
-        Write-Host "Backend respondió (HTTP $($resp.StatusCode)). Continuando..." -ForegroundColor Green
+        Write-Host "✅ Backend respondió (HTTP $($resp.StatusCode)). Continuando..." -ForegroundColor Green
         $ok = $true
         break
     } catch {
+        if ($retry % 10 -eq 0 -and $retry -gt 0) {
+            Write-Host "⏳ Aún esperando backend... ($retry/$maxRetries segundos)" -ForegroundColor Gray
+        }
         Start-Sleep -Seconds 1
         $retry++
     }
 }
 if (-not $ok) {
-    Write-Host "ADVERTENCIA: No se detectó el backend en $backendUrl después de $maxRetries segundos." -ForegroundColor Yellow
-    Write-Host "Verifica la ventana de PowerShell donde se inició uvicorn para ver errores." -ForegroundColor Yellow
-    Write-Host "También revisa el archivo de logs: $backendLog" -ForegroundColor Yellow
+    Write-Host "❌ ERROR: No se detectó el backend en $backendUrl después de $maxRetries segundos." -ForegroundColor Red
+    Write-Host "Posibles causas:" -ForegroundColor Yellow
+    Write-Host "  1. Error de importación en backend/main.py - revisa la ventana de uvicorn" -ForegroundColor Yellow
+    Write-Host "  2. Falta alguna dependencia - ejecuta: pip install -r backend/requirements.txt" -ForegroundColor Yellow
+    Write-Host "  3. Puerto 8000 no se liberó correctamente" -ForegroundColor Yellow
+    Write-Host "Soluciones:" -ForegroundColor Cyan
+    Write-Host "  • Revisa la ventana de PowerShell donde se inició uvicorn para ver el error exacto" -ForegroundColor Cyan
+    Write-Host "  • Archivo de logs: $backendLog" -ForegroundColor Cyan
+    Write-Host "  • Intenta: Stop-Process -Name python -Force; .\run.ps1" -ForegroundColor Cyan
     $listener = Get-NetTCPConnection -LocalPort 8000 -ErrorAction SilentlyContinue
     if ($listener) {
-        Write-Host "Hay un listener en el puerto 8000, pero el backend no responde correctamente." -ForegroundColor Yellow
+        Write-Host "⚠️  Hay un listener en el puerto 8000, pero el backend no responde correctamente." -ForegroundColor Yellow
     } else {
-        Write-Host "No hay ningún proceso escuchando en el puerto 8000. El backend probablemente falló al arrancar." -ForegroundColor Yellow
+        Write-Host "⚠️  No hay ningún proceso escuchando en el puerto 8000. El backend falló al arrancar." -ForegroundColor Yellow
     }
 } else {
-    Write-Host "Backend disponible. Abriendo frontend..." -ForegroundColor Green
+    Write-Host "✅ Backend disponible. Abriendo frontend..." -ForegroundColor Green
 }
 
 # Abrir la página principal de inicio de sesión solo si el backend respondió
