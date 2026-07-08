@@ -183,25 +183,66 @@ def persistir_ocr_resultado(ruta_imagen: str, resultado: Dict[str, Any], fuente:
 
 
 def sincronizar_carpetas(max_images_dni: int = 0, max_images_lab: int = 0) -> Dict[str, Any]:
-    """Procesa imágenes de DNI_ALDIMI y LAB_ALDIMI y las guarda en ALDIMI_DB.
+    """Procesa imágenes de DNI_ALDIMI, LAB_ALDIMI y OCR_IMAGES_DIR y las guarda en ALDIMI_DB.
 
-    Si no se pasa límite positivo, no procesa nada por defecto para evitar cargar carpetas completas.
+    Si no se pasa límite positivo, usa el valor configurado en backend/config.py (SCAN_LIMIT).
     """
-    # Usar el límite configurado en backend/config.py (SCAN_LIMIT = 1-100)
     limit = get_scan_limit()
-    max_images_dni = limit
-    max_images_lab = limit
-    print(f"[SYNC] Límite de escaneo: {limit} archivo(s)")
+    if max_images_dni <= 0:
+        max_images_dni = limit
+    if max_images_lab <= 0:
+        max_images_lab = limit
+    print(f"[SYNC] Límite de escaneo: DNI_ALDIMI={max_images_dni} archivo(s), LAB_ALDIMI={max_images_lab} archivo(s), OCR_IMAGES_DIR={limit} archivo(s)")
 
     resultados = []
 
-    dni_images = _listar_imagenes(DNI_DIR, max_images=max_images_dni)
-    lab_images = _listar_imagenes(LAB_DIR, max_images=max_images_lab)
+    # Construir conjunto de rutas ya procesadas leyendo sesiones y la BD
+    processed_paths = set()
+    try:
+        sesiones = cargar_sesiones()
+        for s in sesiones:
+            ao = s.get("archivo_origen")
+            if ao:
+                try:
+                    processed_paths.add(str(Path(ao).resolve()))
+                except Exception:
+                    processed_paths.add(str(ao))
+    except Exception:
+        sesiones = []
+
+    try:
+        bd = cargar_bd() or {}
+        for clave, registro in (bd.items() if isinstance(bd, dict) else []):
+            for doc in registro.get("documentos_ocr", []):
+                ao = doc.get("archivo_origen")
+                if ao:
+                    try:
+                        processed_paths.add(str(Path(ao).resolve()))
+                    except Exception:
+                        processed_paths.add(str(ao))
+    except Exception:
+        bd = {}
+
+    # Obtener todas las imágenes y filtrar las ya procesadas, luego aplicar los límites
+    dni_images_all = _listar_imagenes(DNI_DIR)
+    dni_images = [p for p in dni_images_all if str(p.resolve()) not in processed_paths]
+    if max_images_dni and max_images_dni > 0:
+        dni_images = dni_images[:max_images_dni]
+
+    lab_images_all = _listar_imagenes(LAB_DIR)
+    lab_images = [p for p in lab_images_all if str(p.resolve()) not in processed_paths]
+    if max_images_lab and max_images_lab > 0:
+        lab_images = lab_images[:max_images_lab]
+
     total = max(len(dni_images), len(lab_images))
 
     for index in range(total):
         if index < len(dni_images):
             path = dni_images[index]
+            resolved = str(path.resolve())
+            if resolved in processed_paths:
+                print(f"[SYNC] Omitiendo {path.name} (ya procesado, encontrado en sesiones/BD)")
+                continue
             nombre_carpeta = "DNI_ALDIMI"
             print(f"[SYNC] Procesando {nombre_carpeta}: {path.name}")
             resultado = ocr.leer_documento(str(path), max_retries=3)
@@ -218,7 +259,33 @@ def sincronizar_carpetas(max_images_dni: int = 0, max_images_lab: int = 0) -> Di
 
         if index < len(lab_images):
             path = lab_images[index]
+            resolved = str(path.resolve())
+            if resolved in processed_paths:
+                print(f"[SYNC] Omitiendo {path.name} (ya procesado, encontrado en sesiones/BD)")
+                continue
             nombre_carpeta = "LAB_ALDIMI"
+            print(f"[SYNC] Procesando {nombre_carpeta}: {path.name}")
+            resultado = ocr.leer_documento(str(path), max_retries=3)
+            print(f"[SYNC] Resultado preliminar: tipo={resultado.get('tipo_documento')} campos_keys={list((resultado.get('campos') or {}).keys())}")
+            guardado = persistir_ocr_resultado(str(path), resultado, fuente=nombre_carpeta)
+            print(f"[SYNC] Persistencia: paciente_actualizado={guardado.get('paciente_actualizado')}")
+            resultados.append({
+                "carpeta": nombre_carpeta,
+                "archivo": path.name,
+                "tipo_documento": resultado.get("tipo_documento"),
+                "ciu": (resultado.get("campos", {}) or {}).get("ciu"),
+                "guardado": guardado,
+            })
+
+    ocr_images = _listar_imagenes(OCR_IMAGES_DIR, max_images=limit)
+    if ocr_images:
+        print(f"[SYNC] Procesando OCR_IMAGES_DIR: {len(ocr_images)} archivo(s)")
+        for path in ocr_images:
+            resolved = str(path.resolve())
+            if resolved in processed_paths:
+                print(f"[SYNC] Omitiendo {path.name} (ya procesado, encontrado en sesiones/BD)")
+                continue
+            nombre_carpeta = "IMAGENES_OCR"
             print(f"[SYNC] Procesando {nombre_carpeta}: {path.name}")
             resultado = ocr.leer_documento(str(path), max_retries=3)
             print(f"[SYNC] Resultado preliminar: tipo={resultado.get('tipo_documento')} campos_keys={list((resultado.get('campos') or {}).keys())}")

@@ -4,7 +4,7 @@
 # ════════════════════════════════════════════════════════════════════════════════
 #  CAMBIAR AQUÍ: Límite de archivos a escanear (1-100, donde 100 = todos)
 # ════════════════════════════════════════════════════════════════════════════════
-SCAN_LIMIT = 4  
+SCAN_LIMIT = 2  
 
 
 # Los demás valores se derivan automáticamente de SCAN_LIMIT

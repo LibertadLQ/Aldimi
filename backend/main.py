@@ -22,7 +22,7 @@ from backend.chatbot import procesar_mensaje
 from backend.config import get_scan_limit
 from backend.db import cargar_bd, guardar_bd
 from backend.expediente import persistir_ocr_resultado, reparar_pacientes_desde_sesiones, sincronizar_carpetas
-from backend.ocr_robusto import procesar_documento as procesar_documento_ocr
+from backend.ocr_robusto import leer_documento as procesar_documento_ocr
 from backend.storage import OCR_IMAGES_DIR
 
 
@@ -94,8 +94,8 @@ async def startup_scan() -> None:
 
     # Usar el límite configurado en backend/config.py (SCAN_LIMIT = 1-100)
     limit = get_scan_limit()
-    max_images_dni = limit
-    max_images_lab = limit
+    max_images_dni = _read_limit_env("ALDIMI_SCAN_DNI", fallback=limit)
+    max_images_lab = _read_limit_env("ALDIMI_SCAN_LAB", fallback=limit)
     global_top = limit
 
     print(f"[STARTUP] ALDIMI_AUTO_SCAN={auto_scan}, ALDIMI_WAIT_FOR_SCAN={wait_env}, ALDIMI_SCAN_DNI={max_images_dni}, ALDIMI_SCAN_LAB={max_images_lab}, ALDIMI_MAX_IMAGES={global_top}")
@@ -144,6 +144,7 @@ async def startup_scan() -> None:
             asyncio.create_task(_run_sync_scan())
         except Exception as exc:
             print(f"[STARTUP] Error al programar escaneo: {exc}")
+            STARTUP_READY = True
 
 
 @app.get('/ready')

@@ -419,26 +419,37 @@ def predict_document_cnn(texto: str) -> Dict[str, Any]:
     }
 
 
-def _es_texto_dni_peru(texto: str) -> bool:
+def _score_texto_dni_peru(texto: str) -> int:
     t = (texto or "").lower()
-    return any(
-        k in t for k in [
-            "apellidos", "prenombres", "fecha de nacimiento", "documento nacional de identidad",
-            "reniec", "dni", "cui", "primer apellido", "segundo apellido",
-            "nacionalidad",
-        ]
-    )
+    keywords = [
+        "apellidos", "prenombres", "fecha de nacimiento", "fecha de caducidad", "documento nacional de identidad",
+        "documento nacional", "reniec", "dni", "cui", "primer apellido", "segundo apellido",
+        "nacionalidad", "estado civil", "sexo", "firma", "foto", "domicilio", "dirección",
+        "departamento", "provincia", "distrito",
+    ]
+    return sum(1 for k in keywords if k in t)
+
+
+def _score_texto_lab(texto: str) -> int:
+    t = (texto or "").lower()
+    keywords = [
+        "hemograma", "hematologia", "hematología", "hematocrito", "leucocit", "glucosa",
+        "creatinina", "urea", "colesterol", "triglicer", "proteina c reactiva",
+        "proteína c reactiva", "valor", "referencia", "laboratorio", "prueba", "resultado",
+        "unidad", "mg/dl", "mg/l", "%", "conteo", "diferencial", "neutrofil", "linfocit",
+        "eosinofil", "monocit", "basofil", "plaquet", "informe medico", "informe médico",
+        "diagnostico", "diagnóstico", "observacion", "observación", "analisis", "análisis",
+        "muestra", "biometria", "biometría", "sangre", "bioquimica", "bioquímica",
+    ]
+    return sum(1 for k in keywords if k in t)
+
+
+def _es_texto_dni_peru(texto: str) -> bool:
+    return _score_texto_dni_peru(texto) >= 2
 
 
 def _es_texto_lab(texto: str) -> bool:
-    t = (texto or "").lower()
-    return any(
-        k in t for k in [
-            "hemograma", "glucosa", "creatinina", "urea", "colesterol", "triglicer",
-            "proteína c reactiva", "proteina c reactiva", "valor", "referencia", "laboratorio",
-            "prueba", "resultado", "unidad", "mg/dl", "mg/l", "%",
-        ]
-    )
+    return _score_texto_lab(texto) >= 2
 
 
 def clasificar_documento(texto: str) -> str:
@@ -446,10 +457,22 @@ def clasificar_documento(texto: str) -> str:
     if not texto:
         return "UNKNOWN"
 
-    if extraer_ciu_dni(texto) and _es_texto_dni_peru(texto):
+    dni_score = _score_texto_dni_peru(texto)
+    lab_score = _score_texto_lab(texto)
+
+    if extraer_ciu_lab(texto) and lab_score >= 1:
+        return "LAB_REPORT"
+    if lab_score >= 3 and lab_score > dni_score:
+        return "LAB_REPORT"
+    if extraer_ciu_dni(texto) and dni_score >= 1 and dni_score >= lab_score:
         return "DNI_PERU"
+    if dni_score >= 3 and dni_score > lab_score:
+        return "DNI_PERU"
+
     if extraer_ciu_lab(texto) and _es_texto_lab(texto):
         return "LAB_REPORT"
+    if extraer_ciu_dni(texto) and _es_texto_dni_peru(texto):
+        return "DNI_PERU"
 
     cnn_prediction = predict_document_cnn(texto)
     return cnn_prediction.get("clase_predicha", "UNKNOWN")
@@ -969,6 +992,41 @@ def _detectar_alerta_por_rango(prueba: Dict[str, Any]) -> Optional[str]:
     return None
 
 
+# Referencias por defecto para casos donde el informe no incluye rango de referencia
+# Estas referencias son aproximadas y sirven como fallback para inferir flags
+_DEFAULT_REFERENCIAS = {
+    "glucosa": (70.0, 140.0),
+    "hemoglobina": (12.0, 17.5),
+    "hematocrito": (36.0, 50.0),
+    "leucocitos": (4.0, 11.0),
+    "plaquetas": (150.0, 450.0),
+    "colesterol": (0.0, 200.0),
+    "trigliceridos": (0.0, 150.0),
+    "creatinina": (0.5, 1.3),
+    "urea": (10.0, 50.0),
+    "proteína c reactiva": (0.0, 5.0),
+    "crp": (0.0, 5.0),
+    "potasio": (3.5, 5.2),
+    "sodio": (135.0, 145.0),
+}
+
+
+def _detectar_alerta_por_referencia_default(prueba: Dict[str, Any]) -> Optional[str]:
+    """Fallback: usa referencias por defecto si no hay rango en el informe."""
+    valor = _parse_float_valor(prueba.get("valor"))
+    if valor is None:
+        return None
+    nombre = str(prueba.get("nombre", "")).lower()
+    for clave, (low, high) in _DEFAULT_REFERENCIAS.items():
+        if clave in nombre:
+            if low is not None and valor < low:
+                return "BAJO"
+            if high is not None and valor > high:
+                return "ALTO"
+            return None
+    return None
+
+
 def _es_alerta_critica(prueba: Dict[str, Any], tipo_alerta: str) -> bool:
     valor = _parse_float_valor(prueba.get("valor"))
     if valor is None:
@@ -1077,6 +1135,11 @@ def detectar_alertas(pruebas_extraidas: List[Dict[str, Any]]) -> List[Dict[str, 
         if tipo is None:
             tipo = _detectar_alerta_por_rango(prueba)
             metodo = "rango" if tipo else ""
+        # Si no se detectó alerta por flag ni por rango explícito, intentar referencias por defecto
+        if tipo is None:
+            tipo = _detectar_alerta_por_referencia_default(prueba)
+            if tipo:
+                metodo = "default_ref"
         if not tipo:
             continue
         alerta = {
@@ -1227,20 +1290,20 @@ def procesar_lab(texto: str) -> Dict[str, Any]:
             # (ej: "Ref:", "Referencia", "Rango", "Resultado", "Page", etc.)
             if re.search(r"\b(?:ref(?:erencia)?|reference|rango|resultado|result|resultado:|ref\.?|page|página|pagina|pág)\b", m.group(1), re.I):
                 continue
-            
-        # GUARDIA 2: Rechaza si el "nombre" está compuesto solo por números/símbolos
-        # (ej: líneas que contienen únicamente rangos como "80-120" o referencias)
-        nombre_raw = m.group(1).strip()
-        if re.match(r"^[\d\.,\s\-–/°%µ\[\]\(\)]+(?:\s*\[[HLhl]+\])?\s*$", nombre_raw):
-            continue
-            
+
+            # GUARDIA 2: Rechaza si el "nombre" está compuesto solo por números/símbolos
+            # (ej: líneas que contienen únicamente rangos como "80-120" o referencias)
+            nombre_raw = m.group(1).strip()
+            if re.match(r"^[\d\.,\s\-–/°%µ\[\]\(\)]+(?:\s*\[[HLhl]+\])?\s*$", nombre_raw):
+                continue
+
             if len(nombre_raw) < 3 or _es_ruido_lab_nombre(nombre_raw):
                 continue
             nombre = _norm_nombre_lab(nombre_raw)
             key = nombre.lower()
             if key in seen:
                 continue
-            
+
             try:
                 valor = float(m.group(2).replace(",", "."))
             except ValueError:

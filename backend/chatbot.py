@@ -356,6 +356,11 @@ INTENCIONES: Dict[str, List[str]] = {
         "tengo miedo", "estoy asustado", "no se que hacer", "no aguanto",
         "estoy angustiado", "estoy triste", "me siento mal anímicamente"
     ],
+    "pregunta_otro_usuario": [
+        "como esta", "como está", "como se siente", "como es su salud", "cual es su salud",
+        "como va", "como esta esa persona", "que tal su salud", "como esta ella", "como esta el",
+        "como estan", "informacion de otro", "otro paciente", "como le va"
+    ],
 }
  
 # Preguntas de cierre que dispara el bot luego de responder una intención
@@ -669,9 +674,92 @@ def generar_recomendaciones(registro: Dict[str, Any]) -> List[str]:
             vistos.add(nombre_prueba)
  
     return recomendaciones
- 
- 
-def construir_respuesta_expediente(registro: Dict[str, Any], compacto: bool = False) -> str:
+
+
+def construir_respuesta_salud_otro_usuario(registro: Dict[str, Any], ciu: str) -> str:
+    """
+    Construye una respuesta tranquilizadora/equilibrada sobre la salud de otra persona.
+    Analiza alertas detectadas y NO detectadas para generar un mensaje que calme
+    sin ocultar la información relevante.
+    
+    La estrategia es:
+    1. Extraer datos personales.
+    2. Obtener último informe y alertas.
+    3. Listar lo que está BIEN (sin alertas).
+    4. Listar lo que REQUIERE ATENCIÓN (con alertas).
+    5. Redactar respuesta equilibrada y tranquilizadora.
+    """
+    datos = _extraer_datos_personales_desde_registro(registro, ciu)
+    nombre_legible = f"{datos.get('nombres', 'Paciente')} {datos.get('apellidos', '')}".strip() if datos else "Paciente"
+    
+    informes = _informes_ordenados(registro)
+    if not informes:
+        return (
+            f"Para {nombre_legible} (CIU {ciu}): Aún no hay informes de laboratorio registrados. "
+            "El equipo médico evaluará al paciente próximamente."
+        )
+    
+    ultimo_informe = informes[-1]
+    pruebas = ultimo_informe.get("pruebas", []) or []
+    fecha_informe = ultimo_informe.get("registrado_en", "fecha no disponible")[:10]
+    
+    # Separar pruebas normales de pruebas con alerta
+    pruebas_normales = []
+    pruebas_con_alerta = []
+    
+    for prueba in pruebas:
+        nombre = prueba.get("nombre", "")
+        flag = prueba.get("flag", "")
+        if flag in ("H", "L"):  # Hay alerta
+            tipo_alerta = "ALTO" if flag == "H" else "BAJO"
+            pruebas_con_alerta.append((nombre, prueba.get("valor"), prueba.get("unidad"), tipo_alerta))
+        elif nombre:  # Normal
+            pruebas_normales.append((nombre, prueba.get("valor"), prueba.get("unidad")))
+    
+    # Construir respuesta equilibrada
+    lineas = [
+        f"📋 Informe de salud de {nombre_legible} (CIU {ciu}) - {fecha_informe}:",
+        "",
+    ]
+    
+    # Sección POSITIVA (lo que está bien)
+    if pruebas_normales:
+        lineas.append(f"✅ BIEN (sin alertas - {len(pruebas_normales)} parámetros normales):")
+        for nombre, valor, unidad in pruebas_normales[:5]:  # Mostrar primeros 5
+            valor_str = f"{valor} {unidad}" if unidad else str(valor)
+            lineas.append(f"   • {nombre}: {valor_str}")
+        if len(pruebas_normales) > 5:
+            lineas.append(f"   ... y {len(pruebas_normales) - 5} más en rango normal.")
+        lineas.append("")
+    
+    # Sección ALERTA (lo que requiere atención)
+    if pruebas_con_alerta:
+        lineas.append(f"⚠️  REQUIERE ATENCIÓN ({len(pruebas_con_alerta)} parámetro(s)):")
+        for nombre, valor, unidad, tipo_alerta in pruebas_con_alerta:
+            valor_str = f"{valor} {unidad}" if unidad else str(valor)
+            icono = "⬆️" if tipo_alerta == "ALTO" else "⬇️"
+            lineas.append(f"   {icono} {nombre}: {valor_str} ({tipo_alerta})")
+        lineas.append("")
+    else:
+        lineas.append("✨ Todos los parámetros se encuentran dentro de rango normal. Buenas noticias.")
+        lineas.append("")
+    
+    # Conclusión tranquilizadora
+    nombre_corto = nombre_legible.split()[0] if nombre_legible else "la persona"
+    if not pruebas_con_alerta:
+        lineas.append(
+            f"Por el momento, los indicadores de salud de {nombre_corto} "
+            "son favorables. El equipo médico continuará monitoreando su evolución."
+        )
+    else:
+        lineas.append(
+            f"El equipo médico está atento a estos parámetros y proporcionará seguimiento "
+            f"para que {nombre_corto} mejore. Es normal que durante el tratamiento algunos valores se alteren; "
+            "lo importante es el monitoreo permanente."
+        )
+    
+    return "\n".join(lineas)
+
     """Arma el mensaje completo: datos básicos + evolución + recomendaciones."""
     ciu = registro.get("ciu", "")
     datos = _extraer_datos_personales_desde_registro(registro, ciu)
@@ -964,6 +1052,30 @@ def procesar_mensaje(mensaje: str, ciu: Optional[str] = None) -> Dict[str, Any]:
             "accion": "pedir_ciu_expediente",
         }
  
+    if intencion == "pregunta_otro_usuario":
+        # Usuario pregunta por salud de OTRO paciente (no es su CIU actual)
+        # Buscar el CIU en el contexto o solicitar que lo proporcione
+        if not ciu:
+            _actualizar_contexto(ciu, esperando="pedir_ciu_pregunta_otro")
+            return {
+                "respuesta": "Claro, por favor indícame el CIU del paciente cuya salud te interesa conocer.",
+                "accion": "pedir_ciu_expediente",
+            }
+        
+        # Buscar el registro del otro usuario
+        bd = cargar_bd()
+        registro = _buscar_registro_por_ciu(bd, ciu)
+        if not registro:
+            return {
+                "respuesta": f"No encontré un expediente registrado con CIU {ciu}. Verifica que el CIU sea correcto.",
+                "accion": None,
+            }
+        
+        # Construir respuesta tranquilizadora con análisis de alertas
+        respuesta = construir_respuesta_salud_otro_usuario(registro, ciu) + f"\n\n{PREGUNTA_OTRO_SERVICIO}"
+        _actualizar_contexto(ciu, esperando="confirmacion_otro_servicio")
+        return {"respuesta": respuesta, "accion": None}
+
     if intencion == "alertas_clinicas":
         # Si no tenemos CIU en el contexto, pedimos el CIU pero marcamos
         # el estado interno como `pedir_ciu_alertas` para distinguirlo

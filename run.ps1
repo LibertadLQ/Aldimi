@@ -41,10 +41,12 @@ Write-Host "  PYTHONUTF8=1" -ForegroundColor Gray
 # ALDIMI_SCAN_DNI=N        : Límite de imágenes a procesar en DNI_ALDIMI (0=skip).
 # ALDIMI_SCAN_LAB=N        : Límite de imágenes a procesar en LAB_ALDIMI (0=skip).
 $env:ALDIMI_AUTO_SCAN = "true"
-$env:ALDIMI_WAIT_FOR_SCAN = "true"
+# Dejar el escaneo automático activo, pero no bloquear el arranque del servidor.
+# Cambiado a 'false' para evitar que el evento de startup haga esperar demasiado.
+$env:ALDIMI_WAIT_FOR_SCAN = "false"
 $env:ALDIMI_SCAN_DNI = "100"
 $env:ALDIMI_SCAN_LAB = "100"
-Write-Host "Startup scan HABILITADO: ALDIMI_AUTO_SCAN=true, ALDIMI_WAIT_FOR_SCAN=true, ALDIMI_SCAN_DNI=100, ALDIMI_SCAN_LAB=100 (TODAS LAS IMÁGENES)" -ForegroundColor Cyan
+Write-Host "Startup scan HABILITADO: ALDIMI_AUTO_SCAN=true, ALDIMI_WAIT_FOR_SCAN=false, ALDIMI_SCAN_DNI=100, ALDIMI_SCAN_LAB=100 (escaneo en background)" -ForegroundColor Cyan
 
 # Check Python
 $pythonCmd = $null
@@ -163,7 +165,7 @@ Write-Host "El autoscan se ejecutará automáticamente al iniciar el servidor Fa
 Write-Host "Logs del backend se guardarán en: $backendLog" -ForegroundColor Gray
 
  # Construir comando que se ejecutará en la nueva ventana de PowerShell y que además hace tee al log
- $backendCommand = "Set-Location -LiteralPath '$root'; `$env:ALDIMI_AUTO_SCAN='true'; `$env:ALDIMI_WAIT_FOR_SCAN='false'; `$env:ALDIMI_SCAN_DNI='100'; `$env:ALDIMI_SCAN_LAB='100'; & '$venvPython' -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 2>&1 | Tee-Object -FilePath '$backendLog'"
+ $backendCommand = "Set-Location -LiteralPath '$root'; `$env:ALDIMI_DB_PATH='$aldbPath'; `$env:DNI_ALDIMI_PATH='$dniPath'; `$env:LAB_ALDIMI_PATH='$labPath'; `$env:ALDIMI_AUTO_SCAN='$($env:ALDIMI_AUTO_SCAN)'; `$env:ALDIMI_WAIT_FOR_SCAN='$($env:ALDIMI_WAIT_FOR_SCAN)'; `$env:ALDIMI_SCAN_DNI='$($env:ALDIMI_SCAN_DNI)'; `$env:ALDIMI_SCAN_LAB='$($env:ALDIMI_SCAN_LAB)'; & '$venvPython' -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 2>&1 | Tee-Object -FilePath '$backendLog'"
 
  $backendProcess = Start-Process -FilePath $psExe -ArgumentList "-NoProfile","-ExecutionPolicy","Bypass","-NoExit","-Command",$backendCommand -WorkingDirectory $root -WindowStyle Normal -PassThru
  if ($backendProcess -ne $null) {

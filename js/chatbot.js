@@ -11,15 +11,55 @@
    Si tu backend corre en otra URL/puerto, cambia API_BASE.
    ═══════════════════════════════════════════════════════════════ */
 
-const API_BASE = 'http://127.0.0.1:8000';
+let API_BASE = 'http://127.0.0.1:8000';
+let CHATBOT_CONFIG = {
+  apiBase: API_BASE,
+  endpoints: {
+    ready: '/ready',
+    chat: '/chat',
+    ocrProcesar: '/ocr/procesar',
+    pacientes: '/pacientes',
+    pacientesGuardar: '/pacientes/guardar',
+  },
+};
+
+function endpoint(name) {
+  const path = CHATBOT_CONFIG?.endpoints?.[name];
+  if (!path) {
+    throw new Error(`[ALDIMI] Endpoint no configurado: ${name}`);
+  }
+  if (path.startsWith('http://') || path.startsWith('https://')) {
+    return path;
+  }
+  return `${API_BASE}${path}`;
+}
+
+async function cargarChatbotConfig() {
+  try {
+    const res = await fetch('chatbot.json', { cache: 'no-store' });
+    if (!res.ok) return;
+    const cfg = await res.json();
+    if (cfg.apiBase) {
+      API_BASE = cfg.apiBase;
+      CHATBOT_CONFIG.apiBase = cfg.apiBase;
+    }
+    if (cfg.endpoints && typeof cfg.endpoints === 'object') {
+      CHATBOT_CONFIG.endpoints = { ...CHATBOT_CONFIG.endpoints, ...cfg.endpoints };
+    }
+    console.log('[ALDIMI] Configuración cargada desde chatbot.json', CHATBOT_CONFIG);
+  } catch (e) {
+    console.warn('[ALDIMI] No se pudo cargar chatbot.json, usando API_BASE por defecto', e);
+  }
+}
 
 /* Cache global de pacientes cargado desde la BD al iniciar */
 let pacientesCache = {};
 
 console.log('[ALDIMI] Inicializando aplicación...');
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   console.log('[ALDIMI] DOM loaded');
+  await cargarChatbotConfig();
   esperarBackendReady().then(() => {
     console.log('[ALDIMI] Backend ready, cargando datos...');
     cargarUsuario();
@@ -37,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
    Hace polling a `GET /ready` y muestra una capa de carga mientras tanto. */
 async function esperarBackendReady() {
   showLoadingOverlay('Cargando datos locales y escaneando imágenes…');
-  const url = `${API_BASE}/ready`;
+  const url = endpoint('ready');
   while (true) {
     try {
       const res = await fetch(url, { cache: 'no-store' });
@@ -134,7 +174,7 @@ async function actualizarContadorPacientes() {
   const stat = document.getElementById('stat-pacientes');
   if (!stat) return;
   try {
-    const res  = await fetch(`${API_BASE}/pacientes`);
+    const res  = await fetch(endpoint('pacientes'));
     if (!res.ok) return;
     const data = await res.json();
     stat.textContent = data.total ?? 0;
@@ -146,7 +186,7 @@ async function actualizarContadorPacientes() {
 async function cargarPacientesEnCache() {
   console.log('[CHATBOT] Iniciando carga de pacientes desde API...');
   try {
-    const res = await fetch(`${API_BASE}/pacientes`, { cache: 'no-store' });
+    const res = await fetch(endpoint('pacientes'), { cache: 'no-store' });
     if (!res.ok) {
       console.warn('[CHATBOT] API retornó error:', res.status);
       return;
@@ -349,7 +389,7 @@ async function procesarMensajeUsuario(mensaje) {
 
 async function consultarChat(mensaje, ciu) {
   try {
-    const res = await fetch(`${API_BASE}/chat`, {
+    const res = await fetch(endpoint('chat'), {
       method:  'POST',
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify({ mensaje, ciu }),
@@ -576,7 +616,7 @@ async function procesarOCR() {
   formData.append('archivo', archivoActual);
 
   try {
-    const res = await fetch(`${API_BASE}/ocr/procesar`, { method: 'POST', body: formData });
+    const res = await fetch(endpoint('ocrProcesar'), { method: 'POST', body: formData });
 
     if (!res.ok) {
       const detalle = await res.json().catch(() => ({}));
@@ -859,7 +899,7 @@ async function guardarDatos() {
   btnGuardar.textContent = 'Guardando...';
 
   try {
-    const res = await fetch(`${API_BASE}/pacientes/guardar`, {
+    const res = await fetch(endpoint('pacientesGuardar'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ ciu, tipo_documento: tipoDocumento, campos }),

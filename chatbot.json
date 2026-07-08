@@ -1,0 +1,10 @@
+{
+  "apiBase": "http://127.0.0.1:8000",
+  "endpoints": {
+    "ready": "/ready",
+    "chat": "/chat",
+    "ocrProcesar": "/ocr/procesar",
+    "pacientes": "/pacientes",
+    "pacientesGuardar": "/pacientes/guardar"
+  }
+}
