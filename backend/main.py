@@ -20,7 +20,7 @@ from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from chatbot import procesar_mensaje
+from chatbot import procesar_mensaje, normalizar_texto, detectar_intencion, es_riesgo_emocional
 from db import cargar_bd, guardar_bd
 from expediente import persistir_ocr_resultado, sincronizar_carpetas
 from storage import OCR_IMAGES_DIR
@@ -73,11 +73,31 @@ async def startup_scan() -> None:
 class ChatRequest(BaseModel):
     mensaje: str
     ciu: Optional[str] = None
+    debug: Optional[bool] = False
 
 
 @app.post("/chat")
 def chat(payload: ChatRequest) -> Dict[str, Any]:
-    return procesar_mensaje(payload.mensaje, payload.ciu)
+    """Endpoint de chat.
+
+    Si `payload.debug` es True, añade un bloque `debug` con:
+      - `intencion`: intención detectada
+      - `riesgo_emocional`: True/False
+      - `texto_norm`: texto normalizado (para diagnóstico)
+    """
+    respuesta = procesar_mensaje(payload.mensaje, payload.ciu)
+    if payload.debug:
+        texto_norm = normalizar_texto(payload.mensaje)
+        intent = detectar_intencion(texto_norm)
+        riesgo = es_riesgo_emocional(texto_norm)
+        debug_info = {"intencion": intent, "riesgo_emocional": riesgo, "texto_norm": texto_norm}
+        # Evitar colisión si la función ya devuelve debug
+        if isinstance(respuesta, dict):
+            respuesta = dict(respuesta)
+            respuesta["debug"] = debug_info
+        else:
+            respuesta = {"respuesta": respuesta, "debug": debug_info}
+    return respuesta
 
 
 @app.get("/")
